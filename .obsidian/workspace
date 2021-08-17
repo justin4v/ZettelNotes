@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "202108171011.md",
+            "file": "日常记录/ZettelKasten.md",
             "mode": "source"
           }
         }
@@ -60,7 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 142
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,13 +76,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "202108171011.md",
+                "file": "日常记录/ZettelKasten.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "202108171011.md"
+                "file": "日常记录/ZettelKasten.md"
               }
             }
           }
@@ -112,13 +112,13 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "e08ba377197ffee7",
   "lastOpenFiles": [
+    "日常记录/ZettelKasten.md",
+    "README.md",
     "202108171011.md",
-    "未命名.md",
-    "README.md"
+    "未命名.md"
   ]
 }
