@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/ZettelKasten.md",
+            "file": "日常记录/重点阅读.md",
             "mode": "source"
           }
         }
@@ -60,7 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 142
+    "width": 212
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/ZettelKasten.md",
+                "file": "日常记录/重点阅读.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/ZettelKasten.md"
+                "file": "日常记录/重点阅读.md"
               }
             }
           }
@@ -117,8 +117,8 @@
   },
   "active": "34910381bdf247b5",
   "lastOpenFiles": [
-    "日常记录/ZettelKasten.md",
     "日常记录/重点阅读.md",
+    "日常记录/ZettelKasten.md",
     "日常记录/重点阅读关键.png",
     "日常记录/杠铃式阅读.png",
     "日常记录/杠铃式阅读方法.md",
