@@ -7,11 +7,8 @@
         "id": "34910381bdf247b5",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "日常记录/ZettelKasten.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -76,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/ZettelKasten.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "日常记录/ZettelKasten.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -117,15 +111,15 @@
   },
   "active": "34910381bdf247b5",
   "lastOpenFiles": [
+    "2021-08-18.md",
     "日常记录/ZettelKasten.md",
     "日常记录/重点阅读.md",
+    "Database/未命名.md",
+    "Network/Hypertext.md",
+    "Network/未命名.md",
     "日常记录/重点阅读关键.png",
     "日常记录/杠铃式阅读.png",
     "日常记录/杠铃式阅读方法.md",
-    "日常记录/未命名.md",
-    "Pasted image 20210818140909.png",
-    "202108181359.md",
-    "202108181358.md",
-    "README.md"
+    "日常记录/未命名.md"
   ]
 }
