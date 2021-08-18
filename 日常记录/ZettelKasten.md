@@ -15,5 +15,6 @@ zettelKasten的工作流：
 
 参考文献：
 1. 阅读方法参考：[[重点阅读]]
-2. 
+2. [zettelKasten简介](https://mp.weixin.qq.com/s?src=11&timestamp=1629270214&ver=3259&signature=Iu1v0iVA4tP0zUvUTyLKQ643nGUuIKOcassvLJktlz61-WicgXiPPYfHp081-pbu8JHkQwfPYgDVr2VQ8po1QKkfR3wiOYHFMO0fUDY2Rp9EgEe6X5p7Dn*EraN0wy39&new=1)
+3. [真正的思考技术](https://mp.weixin.qq.com/s?biz=MzI3NDEzMjIyMQ==&mid=2649474090&idx=1&sn=bf2fcc5c3a909e939795eb36b1ec33ae&scene=21#wechat_redirect)
 
