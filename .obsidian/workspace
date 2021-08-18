@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "日常记录/ZettelKasten.md",
-            "mode": "preview"
+            "mode": "source"
           }
         }
       }
@@ -118,9 +118,9 @@
   "active": "34910381bdf247b5",
   "lastOpenFiles": [
     "日常记录/ZettelKasten.md",
-    "Network/Http protocol.md",
     "Network/Tcp-Ip protocols.md",
     "Network/Hypertext.md",
+    "Network/Http protocol.md",
     "Network/未命名.md",
     "2021-08-18.md",
     "日常记录/重点阅读.md",
