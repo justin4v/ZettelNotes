@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "1dc50fc74531499a",
+        "id": "34910381bdf247b5",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/杠铃式阅读方法.md",
+            "file": "日常记录/ZettelKasten.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/杠铃式阅读方法.md",
+                "file": "日常记录/ZettelKasten.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/杠铃式阅读方法.md"
+                "file": "日常记录/ZettelKasten.md"
               }
             }
           }
@@ -115,10 +115,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1dc50fc74531499a",
+  "active": "34910381bdf247b5",
   "lastOpenFiles": [
-    "日常记录/杠铃式阅读方法.md",
     "日常记录/ZettelKasten.md",
+    "日常记录/杠铃式阅读方法.md",
     "日常记录/杠铃式阅读.png",
     "Pasted image 20210818140909.png",
     "202108181359.md",
