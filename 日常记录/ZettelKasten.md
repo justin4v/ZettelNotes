@@ -13,6 +13,7 @@ zettelKasten的工作流：
 3. create permanent notes。思考当前笔记和已知knowledge、idea、interests、theories之间的**关联**，和其他知识**建立链接**；
 4. review notes。**复习**笔记。
 
-阅读方法参考：
-[[重点阅读]]
+参考文献：
+1. 阅读方法参考：[[重点阅读]]
+2. 
 
