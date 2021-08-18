@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e08ba377197ffee7",
+        "id": "266d110b48a6ef71",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "日常记录/ZettelKasten.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -76,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/ZettelKasten.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "日常记录/ZettelKasten.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -115,7 +109,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e08ba377197ffee7",
+  "active": "266d110b48a6ef71",
   "lastOpenFiles": [
     "日常记录/ZettelKasten.md",
     "README.md",
