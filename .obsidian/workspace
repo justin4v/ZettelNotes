@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/集合操作实现.md",
-            "mode": "source"
+            "file": "Algorithm/DataStructure/集合.md",
+            "mode": "preview"
           }
         }
       }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/集合操作实现.md",
+                "file": "Algorithm/DataStructure/集合.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/集合操作实现.md"
+                "file": "Algorithm/DataStructure/集合.md"
               }
             }
           }
@@ -117,8 +117,8 @@
   },
   "active": "34910381bdf247b5",
   "lastOpenFiles": [
-    "Language/Java/未命名.md",
     "Algorithm/DataStructure/集合.md",
+    "Language/Java/未命名.md",
     "日常记录/ZettelKasten.md",
     "附件/重点阅读关键.png",
     "日常记录/重点阅读.md",
