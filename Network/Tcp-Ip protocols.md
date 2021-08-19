@@ -6,5 +6,5 @@ Tcp/Ip是一个网络协议簇，包含了从**底层链路层（physical layer+
 
 1. 物理层 + 数据链路层 data link：internet 基础硬件，传输网络比特流信号。链路层：[[MAC]]寻址，信道[[复用-分用]]。PPP、Wifi、Ethernet；
 2. 网络层 network：IP、ARP；
-3. 传输层 transport：ICMP、TCP、UDP；
+3. 传输层 transport：ICMP、[[TCP Protocol]]、UDP；
 4. 应用层 application：[[HTTP Protocol]]、FTP、SMTP、PING、DNS
