@@ -7,8 +7,11 @@
         "id": "dad77875e39498fc",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Network/HTTP Protocol.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Network/HTTP Protocol.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Network/HTTP Protocol.md"
+              }
             }
           }
         ]
@@ -111,15 +117,15 @@
   },
   "active": "dad77875e39498fc",
   "lastOpenFiles": [
+    "Network/HTTP Protocol.md",
+    "Network/MAC.md",
     "README.md",
     "Network/TCP-IP Protocols.md",
-    "Network/HTTP Protocol.md",
     "Network/未命名.md",
     "Network/Hypertext.md",
     "Network/Http Protocol.md",
     "Network/Http protocol.md",
     "Network/Tcp-Ip protocols.md",
-    "附件/Pasted image 20210819103404.png",
-    "Algorithm/DataStructure/集合.md"
+    "附件/Pasted image 20210819103404.png"
   ]
 }
