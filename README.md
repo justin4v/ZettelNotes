@@ -1,2 +1,2 @@
-### ZettelNotes
-Zettelkasten 笔记系统
+## ZettelNotes
+[[ZettelKasten]] 笔记记录
