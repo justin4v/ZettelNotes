@@ -7,11 +7,8 @@
         "id": "34910381bdf247b5",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Network/TCP-IP Protocols.md",
-            "mode": "source"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -76,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/TCP-IP Protocols.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Network/TCP-IP Protocols.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -119,13 +113,13 @@
   "lastOpenFiles": [
     "Network/TCP-IP Protocols.md",
     "Network/HTTP Protocol.md",
+    "Network/未命名.md",
     "Network/Hypertext.md",
     "Network/Http Protocol.md",
     "Network/Http protocol.md",
     "Network/Tcp-Ip protocols.md",
     "附件/Pasted image 20210819103404.png",
     "Algorithm/DataStructure/集合.md",
-    "日常记录/ZettelKasten.md",
-    "日常记录/重点阅读.md"
+    "日常记录/ZettelKasten.md"
   ]
 }
