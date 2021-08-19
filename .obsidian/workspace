@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Network/Hypertext.md",
+            "file": "Language/集合.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/Hypertext.md",
+                "file": "Language/集合.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network/Hypertext.md"
+                "file": "Language/集合.md"
               }
             }
           }
@@ -117,6 +117,7 @@
   },
   "active": "34910381bdf247b5",
   "lastOpenFiles": [
+    "Language/集合.md",
     "Network/Hypertext.md",
     "Language/未命名.md",
     "Network/Tcp-Ip protocols.md",
@@ -125,7 +126,6 @@
     "日常记录/ZettelKasten.md",
     "Network/未命名.md",
     "2021-08-18.md",
-    "日常记录/重点阅读.md",
-    "Database/未命名.md"
+    "日常记录/重点阅读.md"
   ]
 }
