@@ -1,7 +1,7 @@
 ## ZettelKasten
 zettelKasten 是一种笔记方法，最初由德国社会学家 zettelKasten提出并实践，特点在于:
 - 笔记之间相互连接成网(相当于[[Hypertext]] 超文本)；
-- 有笔记索引([[Index]]；双链接；结构笔记)。
+- 有笔记索引([[Index]]；双链接；[[#structure note]] )。
 
 连接成网的特点决定了它适用于：
 1. 碎片化整理；
@@ -21,5 +21,5 @@ zettelKasten的工作流：
 
 
 
-### structure note
-为了更清晰的展示
+### Structure note
+为了更清晰的展示note之间的逻辑和便于索引，在zettelKasten中增加结构的笔记，类似于书籍的目录，用于链接逻辑上属于同层次的note。
