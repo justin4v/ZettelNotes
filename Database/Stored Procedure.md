@@ -7,7 +7,8 @@
 
 **DESCRIPTIONS**
 Stored Procedure(**storp,StoPro,sproc**)是**一组SQL语句集合**，存储在[[#Data Dictionary]]/Metadata Repository，以整体为单位在关系型数据库（[[RDBMS]]）中执行。类似于Java中Method(方法)，或者C语言中的Function(函数)，以一个Procedure Name标识。
-参考[[#Example]]。
+其一些[[#优缺点]]使得实际过程中不推荐使用来处理复杂逻辑。
+具体storp参考[[#Example]]。
 
 ### 优缺点
 优点
@@ -15,7 +16,10 @@ Stored Procedure(**storp,StoPro,sproc**)是**一组SQL语句集合**，存储在
 2. 可重复使用。
 缺点：
 1. 面向过程。难以处理复杂逻辑。
-2. 
+2. 难以调试。
+3. 可移植性差。和数据库绑定，难以跨库移植，如mysql难以移植到oracle。
+
+一般不推荐使用strop。
 
 
 ### Data Dictionary
