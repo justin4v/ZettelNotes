@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dad77875e39498fc",
+        "id": "e909024adfd0d5bc",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Database/Stored Procedure.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -76,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Stored Procedure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Database/Stored Procedure.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -115,7 +109,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "dad77875e39498fc",
+  "active": "e909024adfd0d5bc",
   "lastOpenFiles": [
     "Database/Stored Procedure.md",
     "Database/Index.md",
