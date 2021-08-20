@@ -6,7 +6,7 @@
 - 可带有parameter
 
 **DESCRIPTIONS**
-Stored Procedure是**一组SQL语句集合**，存储在[[#Data Dictionary]]/Metadata Repository，以整体为单位在关系型数据库（[[RDBMS]]）中执行。类似于Java中Method(方法)，或者C语言中的Function(函数)，以一个Procedure Name标识。
+Stored Procedure(**storp,StoPro,sproc**)是**一组SQL语句集合**，存储在[[#Data Dictionary]]/Metadata Repository，以整体为单位在关系型数据库（[[RDBMS]]）中执行。类似于Java中Method(方法)，或者C语言中的Function(函数)，以一个Procedure Name标识。
 参考[[#Example]]。
 
 ### Data Dictionary
@@ -79,4 +79,4 @@ CALL add_column('uih_system_config_db',null,'TENANT_ID',"bigint(20) DEFAULT NULL
 #### DELIMITER
 delimiter 语句重新定义 sql 语句的分割符，因为sql中默认语句分割符为
 ";"，sql解释器会直接将一个";"结尾的语句解释为一个完成的sql并执行。
-存储过程中可能存在多个关联语句，希望能够一次性存储执行，所以定义存储过程前一般会临时修改存储过程中的SQL语句分隔符，procedure结束
+存储过程中可能存在多个关联语句，希望能够一次性存储执行，所以定义存储过程前一般会临时修改存储过程中的SQL语句分隔符，procedure结束后再修改回默认的";".
