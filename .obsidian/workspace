@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "e909024adfd0d5bc",
+        "id": "0ae57b395ea2dd91",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -109,7 +109,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e909024adfd0d5bc",
+  "active": "0ae57b395ea2dd91",
   "lastOpenFiles": [
     "Database/Stored Procedure.md",
     "Database/Index.md",
