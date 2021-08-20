@@ -9,6 +9,15 @@
 Stored Procedure(**storp,StoPro,sproc**)是**一组SQL语句集合**，存储在[[#Data Dictionary]]/Metadata Repository，以整体为单位在关系型数据库（[[RDBMS]]）中执行。类似于Java中Method(方法)，或者C语言中的Function(函数)，以一个Procedure Name标识。
 参考[[#Example]]。
 
+### 优缺点
+优点
+1. 运行速度更快。执行一次后会保存，下次直接调用
+2. 可重复使用。
+缺点：
+1. 面向过程。难以处理复杂逻辑。
+2. 
+
+
 ### Data Dictionary
 data dictionary 或者 metadata repository 是指数据库的元数据(metadata)存储库，存储如relationships、origin、format等数据。这个定义于 *IBM Dictionary of Computing* 。
 
