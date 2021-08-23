@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Stored Procedure.md",
+            "file": "Algorithm/Algorithm.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Stored Procedure.md",
+                "file": "Algorithm/Algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Stored Procedure.md"
+                "file": "Algorithm/Algorithm.md"
               }
             }
           }
@@ -117,6 +117,7 @@
   },
   "active": "0ae57b395ea2dd91",
   "lastOpenFiles": [
+    "Algorithm/未命名.md",
     "Database/Stored Procedure.md",
     "Database/RDBMS.md",
     "Database/Index.md",
@@ -125,7 +126,6 @@
     "README.md",
     "Network/MAC.md",
     "Network/Hypertext.md",
-    "Network/复用-分用.md",
-    "Network/HTML.md"
+    "Network/复用-分用.md"
   ]
 }
