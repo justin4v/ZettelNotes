@@ -7,8 +7,10 @@
         "id": "c01629a9aab1a151",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "image",
+          "state": {
+            "file": "附件/Visitor模式UML类图.png"
+          }
         }
       }
     ],
@@ -73,6 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "附件/Visitor模式UML类图.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +102,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "附件/Visitor模式UML类图.png"
+              }
             }
           }
         ]
@@ -111,6 +116,7 @@
   },
   "active": "c01629a9aab1a151",
   "lastOpenFiles": [
+    "附件/Pasted image 20210825162320.png",
     "Design/Visitor模式.md",
     "Design/未命名.md",
     "Network/HTTP Protocol.md",
@@ -119,7 +125,6 @@
     "Algorithm/Algorithm.md",
     "Algorithm/未命名.md",
     "Database/Stored Procedure.md",
-    "Database/RDBMS.md",
-    "Database/Index.md"
+    "Database/RDBMS.md"
   ]
 }
