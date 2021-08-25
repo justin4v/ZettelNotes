@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Network/HTTP Protocol.md",
+            "file": "Design/Visitor模式.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Network/HTTP Protocol.md",
+                "file": "Design/Visitor模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Network/HTTP Protocol.md"
+                "file": "Design/Visitor模式.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "0ae57b395ea2dd91",
   "lastOpenFiles": [
+    "Design/Visitor模式.md",
+    "Design/未命名.md",
     "Network/HTTP Protocol.md",
     "README.md",
     "Language/Java/未命名.md",
-    "Design/未命名.md",
     "Algorithm/Algorithm.md",
     "Algorithm/未命名.md",
     "Database/Stored Procedure.md",
     "Database/RDBMS.md",
-    "Database/Index.md",
-    "附件/重点阅读关键.png"
+    "Database/Index.md"
   ]
 }
