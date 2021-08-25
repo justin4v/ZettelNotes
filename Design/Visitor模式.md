@@ -13,5 +13,5 @@
 5. ObjectStruture，多个Element的容器，一般用于遍历。
 
 
-
+UML类图如下：
 ![[Visitor模式UML类图.png]]
