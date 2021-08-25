@@ -7,8 +7,11 @@
         "id": "16203380d36b61b9",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Design/Visitor模式.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Design/Visitor模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Design/Visitor模式.md"
+              }
             }
           }
         ]
