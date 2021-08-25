@@ -26,3 +26,6 @@ UML类图如下：
 1. 不符合依赖倒置原则、Element具体细节对Visitor公开：visitor依赖于具体的Element实现类而不是接口；
 2. 元素结构难以改变：如果Element中增加属性，那么依赖于它的所有Visitor都需要修改。
 
+
+### 实例
+1. [java.nio.file.FileVisitor (Java Platform SE 8 ) ](https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitor.html)
