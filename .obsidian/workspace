@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c01629a9aab1a151",
+        "id": "16203380d36b61b9",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Design/Visitor模式.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -76,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/Visitor模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Design/Visitor模式.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -115,7 +109,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c01629a9aab1a151",
+  "active": "16203380d36b61b9",
   "lastOpenFiles": [
     "Design/Visitor模式.md",
     "附件/Pasted image 20210825162320.png",

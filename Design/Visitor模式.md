@@ -14,7 +14,7 @@
 4. Visitor，IVisitor具体实现，调用/组合Element方法与属性获取结果；
 5. ObjectStruture，多个Element的容器，一般用于遍历。
 
-visitor模式的最终结果是 visitor在调用/访问
+visitor模式的最终结果是 visitor 调用/访问各个element 属性/方法得到的。
 
 UML类图如下：
 ![[Visitor模式UML类图.png]]
