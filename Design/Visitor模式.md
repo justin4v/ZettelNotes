@@ -4,6 +4,8 @@
 - 适用于业务规则要求遍历多个元素，如统计；
 - 元素规则不变，对其操作可能变化。
 
+此外，Visitor还可用做拦截器（Interceptor）。
+
 **DES**
 角色有：
 1. IElement，元素接口，定义接受访问的规范方法： accept(IVisitor);
