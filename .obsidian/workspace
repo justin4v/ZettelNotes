@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Linux/bash/Source.md",
+            "file": "Linux/bash/Environment.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/bash/Source.md",
+                "file": "Linux/bash/Environment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/bash/Source.md"
+                "file": "Linux/bash/Environment.md"
               }
             }
           }
@@ -117,8 +117,8 @@
   },
   "active": "16203380d36b61b9",
   "lastOpenFiles": [
-    "Linux/bash/Source.md",
     "Linux/bash/Environment.md",
+    "Linux/bash/Source.md",
     "附件/Pasted image 20210827142643.png",
     "Linux/bash/未命名.md",
     "linux/bash/未命名.md",
