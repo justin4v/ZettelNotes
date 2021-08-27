@@ -117,6 +117,8 @@
   },
   "active": "16203380d36b61b9",
   "lastOpenFiles": [
+    "Linux/bash/Environment.md",
+    "附件/Pasted image 20210827142643.png",
     "Linux/bash/未命名.md",
     "linux/bash/未命名.md",
     "Algorithm/DataStructure/集合.md",
@@ -124,8 +126,6 @@
     "Design/Visitor模式.md",
     "Database/Stored Procedure.md",
     "Database/RDBMS.md",
-    "Language/Java/HashMap实现原理.md",
-    "Language/Java/集合操作实现.md",
-    "Network/复用-分用.md"
+    "Language/Java/HashMap实现原理.md"
   ]
 }
