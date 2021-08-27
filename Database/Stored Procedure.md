@@ -5,7 +5,7 @@
 - [[RDBMS]]
 - 可带有parameter
 
-**DESCRIPTIONS**
+**DES**
 Stored Procedure(**storp,StoPro,sproc**)是**一组SQL语句集合**，存储在[[#Data Dictionary]]/Metadata Repository，以整体为单位在关系型数据库（[[RDBMS]]）中执行。类似于Java中Method(方法)，或者C语言中的Function(函数)，以一个Procedure Name标识。
 其一些[[#优缺点]]使得实际过程中不推荐使用来处理复杂逻辑。
 具体storp参考[[#Example]]。
