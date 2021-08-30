@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "05818fec4898100a",
+        "id": "012889bd77f58b08",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "线程.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "线程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "线程.md"
+              }
             }
           }
         ]
@@ -109,17 +115,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "05818fec4898100a",
+  "active": "012889bd77f58b08",
   "lastOpenFiles": [
+    "未命名.md",
+    "进程.md",
+    "README.md",
     "Design/Visitor模式.md",
     "Linux/bash/Environment.md",
     "Linux/bash/Source命令.md",
     "Linux/bash/Export命令.md",
     "Linux/bash/Source.md",
     "Linux/bash/Export.md",
-    "Linux/bash/未命名.md",
-    "附件/Pasted image 20210827142643.png",
-    "linux/bash/未命名.md",
-    "Algorithm/DataStructure/集合.md"
+    "Linux/bash/未命名.md"
   ]
 }
