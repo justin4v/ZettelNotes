@@ -7,8 +7,11 @@
         "id": "05818fec4898100a",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Linux/bash/Source命令.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Linux/bash/Source命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Linux/bash/Source命令.md"
+              }
             }
           }
         ]
@@ -111,6 +117,8 @@
   },
   "active": "05818fec4898100a",
   "lastOpenFiles": [
+    "Linux/bash/Source命令.md",
+    "Linux/bash/Export命令.md",
     "Linux/bash/Environment.md",
     "Linux/bash/Source.md",
     "Linux/bash/Export.md",
@@ -118,8 +126,6 @@
     "附件/Pasted image 20210827142643.png",
     "linux/bash/未命名.md",
     "Algorithm/DataStructure/集合.md",
-    "Algorithm/Algorithm.md",
-    "Design/Visitor模式.md",
-    "Database/Stored Procedure.md"
+    "Algorithm/Algorithm.md"
   ]
 }
