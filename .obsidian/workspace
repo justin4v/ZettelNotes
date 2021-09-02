@@ -117,6 +117,7 @@
   },
   "active": "012889bd77f58b08",
   "lastOpenFiles": [
+    "线程.md",
     "未命名.md",
     "进程.md",
     "README.md",
@@ -125,7 +126,6 @@
     "Linux/bash/Source命令.md",
     "Linux/bash/Export命令.md",
     "Linux/bash/Source.md",
-    "Linux/bash/Export.md",
-    "Linux/bash/未命名.md"
+    "Linux/bash/Export.md"
   ]
 }
