@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "8d13ddae5991a3d7",
+        "id": "d95813f25e500761",
         "type": "leaf",
         "state": {
           "type": "empty",
@@ -109,8 +109,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8d13ddae5991a3d7",
+  "active": "d95813f25e500761",
   "lastOpenFiles": [
+    "Computer Low Layer/Hardware/继电器.md",
     "Computer Low Layer/Hardware/未命名.md",
     "OS/线程.md",
     "OS/程序性能的限制.md",
@@ -119,7 +120,6 @@
     "日常记录/ZettelKasten.md",
     "日常记录/重点阅读.md",
     "Linux/bash/Source命令.md",
-    "Linux/bash/Export命令.md",
-    "Linux/bash/Environment.md"
+    "Linux/bash/Export命令.md"
   ]
 }
