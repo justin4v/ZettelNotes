@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d95813f25e500761",
+        "id": "6bca245048b04f66",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Design/Command.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -76,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/Command.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Design/Command.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -115,17 +109,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "d95813f25e500761",
+  "active": "6bca245048b04f66",
   "lastOpenFiles": [
-    "Design/未命名.md",
+    "Design/Command.md",
     "Design/Visitor模式.md",
+    "Design/未命名.md",
     "Computer Low Layer/Hardware/继电器.md",
     "附件/Pasted image 20210906212548.png",
     "附件/Pasted image 20210906212149.png",
     "Computer Low Layer/Hardware/未命名.md",
     "OS/线程.md",
     "OS/程序性能的限制.md",
-    "OS/进程.md",
-    "Algorithm/DataStructure/集合.md"
+    "OS/进程.md"
   ]
 }
