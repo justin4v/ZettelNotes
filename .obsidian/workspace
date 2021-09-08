@@ -7,8 +7,11 @@
         "id": "61b6bac0f745170b",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "日常记录/Effective Study.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "日常记录/Effective Study.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "日常记录/Effective Study.md"
+              }
             }
           }
         ]
@@ -111,6 +117,7 @@
   },
   "active": "61b6bac0f745170b",
   "lastOpenFiles": [
+    "日常记录/未命名.md",
     "OS/进程.md",
     "OS/程序性能的限制.md",
     "Design/Visitor.md",
@@ -119,7 +126,6 @@
     "Design/未命名.md",
     "Computer Low Layer/Hardware/继电器.md",
     "附件/Pasted image 20210906212548.png",
-    "附件/Pasted image 20210906212149.png",
-    "Computer Low Layer/Hardware/未命名.md"
+    "附件/Pasted image 20210906212149.png"
   ]
 }
