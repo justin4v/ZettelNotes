@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/源码阅读.md",
+            "file": "日常记录/重点阅读.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/源码阅读.md",
+                "file": "日常记录/重点阅读.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/源码阅读.md"
+                "file": "日常记录/重点阅读.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "61b6bac0f745170b",
   "lastOpenFiles": [
+    "日常记录/重点阅读.md",
+    "日常记录/源码阅读.md",
+    "日常记录/信息与知识.md",
     "日常记录/未命名.md",
     "日常记录/Effective Study.md",
     "附件/Pasted image 20210908201930.png",
-    "日常记录/信息与知识.md",
     "日常记录/经验与规律.md",
     "OS/进程.md",
     "OS/程序性能的限制.md",
-    "Design/Visitor.md",
-    "Design/Command.md",
-    "Design/Visitor模式.md"
+    "Design/Visitor.md"
   ]
 }
