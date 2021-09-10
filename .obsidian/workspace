@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algorithm/Algorithm.md",
+            "file": "Algorithm/Binary Search Tree.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/Algorithm.md",
+                "file": "Algorithm/Binary Search Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/Algorithm.md"
+                "file": "Algorithm/Binary Search Tree.md"
               }
             }
           }
@@ -117,6 +117,7 @@
   },
   "active": "24da2d95044cffc6",
   "lastOpenFiles": [
+    "Algorithm/未命名.md",
     "Algorithm/Algorithm.md",
     "Language/JDK工具.md",
     "Algorithm/DataStructure/集合.md",
@@ -125,7 +126,6 @@
     "Language/JVM/代码块执行时机.md",
     "Language/Javap.md",
     "Language/Javac.md",
-    "Language/JVM/类的运行.md",
-    "Language/未命名.md"
+    "Language/JVM/类的运行.md"
   ]
 }
