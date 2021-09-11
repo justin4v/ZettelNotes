@@ -60,7 +60,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212
+    "width": 199.00078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -117,6 +118,7 @@
   },
   "active": "24da2d95044cffc6",
   "lastOpenFiles": [
+    "Language/JVM/字节码.md",
     "Language/JVM/未命名.md",
     "日常记录/重点阅读.md",
     "日常记录/经验与规律.md",
@@ -125,7 +127,6 @@
     "日常记录/信息与知识.md",
     "日常记录/源码阅读.md",
     "Algorithm/Binary Search Tree.md",
-    "Algorithm/未命名.md",
-    "Algorithm/Algorithm.md"
+    "Algorithm/未命名.md"
   ]
 }
