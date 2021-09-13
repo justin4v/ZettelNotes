@@ -12,7 +12,20 @@
             "file": "Language/JVM/JVM内存结构.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "13ce21333f5c67d4"
+      },
+      {
+        "id": "f2a0bb3d0ae77116",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/JVM/JVM内存结构.md",
+            "mode": "preview"
+          }
+        },
+        "group": "13ce21333f5c67d4"
       }
     ],
     "direction": "vertical"
