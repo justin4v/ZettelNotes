@@ -2,4 +2,4 @@
 ### JVM机构图
 ![[JVM架构图.png]]
 
-在《java 虚拟机规范》中使用的是 Runtime Data Area （运行时数据区）
+《java 虚拟机规范》中正式叫法是** Runtime Data Area** （运行时数据区），内存结构是为了方便的称呼。
