@@ -2,4 +2,4 @@
 ### JVM机构图
 ![[JVM架构图.png]]
 
-在《java 虚拟机规范》中使用的是 Runtime 
+在《java 虚拟机规范》中使用的是 Runtime Data Area （运行时数据区）
