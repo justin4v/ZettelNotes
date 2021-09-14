@@ -43,5 +43,6 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 Method Area stores **per-class structures** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
 
 Method Area 是JVM中所有线程共享的，JVM启动时创建，**主要存储类的结构信息（metadata）**。
-JDK1.8之前称为永久代，PermGen space。JDK1.8开始 Method Area 被称作 Metaspace(元空间)。
-
+JDK1.8之前称为永久代，PermGen space。
+1. JDK1.8开始 Method Area 被称作 Metaspace(元空间)；
+2. 存于本地内存中，最大为系统内存，不会出现内存溢出错误。
