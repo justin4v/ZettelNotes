@@ -32,7 +32,7 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 5. `-XX:NewRatio`: old/new 的比例。默认是2。
 **注意：建议将 -Xms 和 -Xmx 设为相同值，避免每次垃圾回收完成后JVM重新分配内存！**  
 
-具体 JVM 参数选项参考：[Java HotSpot VM Options](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html) 
+具体 JVM 参数选项参考：[java ](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html)
 
 ### Method Area
 **Conception**
