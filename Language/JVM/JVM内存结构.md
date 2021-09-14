@@ -11,9 +11,9 @@
 
 
 ### Heap
-- Heap 由所有 JVM 进程中的线程共享；
+- Heap 由所有 JVM 进程中的**线程共享**；
 - **类实例（对象）** 和**数组**空间从 heap 分配；
-- JVM 启动时创建 Heap.
+- JVM **启动时创建 Heap**。
 
 new 出来的对象空间都在 Heap 上分配，Heap 空间由 **GC（garbage collector）** 自动回收。
 **根据 GC 回收的规则**，可将 Heap 空间细分为 Young Generation 和 Old Generation（存活的时长不同），具体如下图：
@@ -32,8 +32,7 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 5. `-XX:NewRatio`: **old/new** 的比例。默认是2。
 **注意：建议将 -Xms 和 -Xmx 设为相同值，避免每次垃圾回收完成后JVM重新分配内存！**  
 
-当Heap 没有足够的空间分配给对象且到达最大容量，无法扩展时，会抛出 OOM 
-
+当 Heap **没有足够的空间分配给对象且到达最大容量**，无法扩展时，会抛出常见的 *OOM(OutOfMemoryError)* 异常
 
 具体 JVM 参数选项参考：
 1. [JDK 8](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html)
