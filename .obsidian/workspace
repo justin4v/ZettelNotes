@@ -12,20 +12,7 @@
             "file": "Language/JVM/JVM内存结构.md",
             "mode": "source"
           }
-        },
-        "group": "13ce21333f5c67d4"
-      },
-      {
-        "id": "f2a0bb3d0ae77116",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/JVM/JVM内存结构.md",
-            "mode": "preview"
-          }
-        },
-        "group": "13ce21333f5c67d4"
+        }
       }
     ],
     "direction": "vertical"
@@ -73,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 199.00078010559082,
-    "collapsed": true
+    "width": 199.00078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -132,6 +118,7 @@
   "active": "24da2d95044cffc6",
   "lastOpenFiles": [
     "Language/JVM/JVM内存结构.md",
+    "Language/JVM/未命名.md",
     "Language/JVM/Hotspot.md",
     "Language/JVM/类的运行.md",
     "Language/JVM/字节码.md",
@@ -139,7 +126,6 @@
     "Language/Javap.md",
     "Language/JDK source/Integer.md",
     "Language/Javac.md",
-    "Language/JDK工具.md",
-    "附件/Pasted image 20210913101435.png"
+    "Language/JDK工具.md"
   ]
 }

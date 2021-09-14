@@ -1,16 +1,6 @@
-## 定义
-在《 The Java® Virtual Machine Specification》 Java SE 8 Edition 中对 JVM 有如下定义：
-The Java Virtual Machine is the **cornerstone** of the Java platform. It is the component of the technology **responsible for its hardware- and operating system-independence, the small size of its compiled code, and its ability to protect users** from malicious programs.
-
-The Java Virtual Machine is an**abstract computing machine**. Like a real computing machine, it has an instruction set and manipulates various memory areas at run time. It is reasonably common to implement a programming language using a virtual machine; the best-known virtual machine may be the P-Code machine of UCSD Pascal.
-
-**Conception**
-1. JVM是Java平台的基石，使得 Java **独立于硬件和操作系统**；
-2. JVM是一台**抽象的计算机**，具有**指令集**，运行时管理一些**内存区域**。
-
-
 ## 内存结构
-### JVM机构图
+[[JVM]] 结构如下：
+
 ![[JVM架构图.png]]
 
 《java 虚拟机规范》中正式叫法是** Runtime Data Area** （运行时数据区），内存结构是为了方便的称呼。
@@ -23,3 +13,6 @@ The Java Virtual Machine is an**abstract computing machine**. Like a real comput
 ### Method Area
 **Conception**
 Method Area stores **per-class structures** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
+
+Method Area 是JVM中所有线程共享的，**主要存储类的结构信息**。
+JDK1.8开始 Method Area 被称作 
