@@ -12,6 +12,8 @@
 
 ### Heap
 - Heap 是所有线程共享；
+- 类实例（对象）和数组空间从 heap 分配；
+- JVM 启动时创建 Heap
 
 ### Method Area
 **Conception**
