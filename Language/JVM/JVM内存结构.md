@@ -15,7 +15,11 @@
 - **类实例（对象）** 和**数组**空间从 heap 分配；
 - JVM 启动时创建 Heap.
 
-new 出来的对象空间都在 Heap 上分配，Heap 空间由 GC（garbage collector）
+new 出来的对象空间都在 Heap 上分配，Heap 空间由 **GC（garbage collector）** 自动回收。
+**根据 GC 回收的规则**，可将 Heap 空间细分为 Young Generation 和 Old Generation（存活的时长不同），具体如下图：
+![[Heap的划分.png]]
+
+
 
 
 ### Method Area
