@@ -25,14 +25,16 @@ new 出来的对象空间都在 Heap 上分配，Heap 空间由 **GC（garbage c
 3. 默认：Eden：from ：to = 8:1:1。
 
 Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
-1. `-Xms`： 堆容量初始大小（堆包括新生代和老年代）。 例如：-Xms 20M ;
-2. `-Xmx`： 堆总共（最大）大小。 例如：-Xmx 30M ;
+1. `-Xms`： 堆初始（最小）容量（堆包括新生代和老年代）。 例如：-Xms 20M ;
+2. `-Xmx`： 堆（最大）容量。 例如：-Xmx 30M ;
 3. `-Xmn`： 新生代容量大小。例如：-Xmn 10M  ;
 4. `-XX:SurvivorRatio`: Eden/Survivor的比例。Eden:form:to的比例默认是8：1：1。例如：-XX： SurvivorRatio=8 代表比例8：1：1。
 5. `-XX:NewRatio`: old/new 的比例。默认是2。
 **注意：建议将 -Xms 和 -Xmx 设为相同值，避免每次垃圾回收完成后JVM重新分配内存！**  
 
-具体 JVM 参数选项参考：[java ](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html)
+具体 JVM 参数选项参考：
+1. [JDK 8](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html)
+2. [JDK7 HotSpot VM Options](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html)
 
 ### Method Area
 **Conception**
