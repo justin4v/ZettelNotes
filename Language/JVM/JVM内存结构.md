@@ -19,8 +19,17 @@ new 出来的对象空间都在 Heap 上分配，Heap 空间由 **GC（garbage c
 **根据 GC 回收的规则**，可将 Heap 空间细分为 Young Generation 和 Old Generation（存活的时长不同），具体如下图：
 ![[Heap的划分.png]]
 
+不同区域的关系如下：
+1. Java堆 = 老年代 + 新生代；
+2. 新生代 = Eden + S0 + S1；
+3. 默认：Eden：from ：to = 8:1:1。
 
-
+Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
+1. `-Xms`： 堆容量初始大小（堆包括新生代和老年代）。 例如：-Xms 20M ;
+2. `-Xmx`： 堆总共（最大）大小。 例如：-Xmx 30M ;
+3. `-Xmn`： 新生代容量大小。例如：-Xmn 10M  ;
+4. `-XX： SurvivorRatio` 设置Eden:form:to的比例，默认是8：1：1。例如：-XX： SurvivorRatio=8 代表比例8：1：1。
+**注意：建议将 -Xms 和 -Xmx 设为相同值，避免每次垃圾回收完成后JVM重新分配内存！**  
 
 ### Method Area
 **Conception**
