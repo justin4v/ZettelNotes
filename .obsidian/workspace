@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/JVM内存结构.md",
+            "file": "Language/JVM/JVM.md",
             "mode": "source"
           }
         }
@@ -60,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 199.00078010559082,
-    "collapsed": true
+    "width": 199.00078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/JVM内存结构.md",
+                "file": "Language/JVM/JVM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/JVM内存结构.md"
+                "file": "Language/JVM/JVM.md"
               }
             }
           }
@@ -118,8 +117,8 @@
   },
   "active": "24da2d95044cffc6",
   "lastOpenFiles": [
-    "Language/JVM/JVM内存结构.md",
     "Language/JVM/JVM.md",
+    "Language/JVM/JVM内存结构.md",
     "Language/JVM/Hotspot.md",
     "附件/Pasted image 20210914161535.png",
     "Language/JVM/未命名.md",
