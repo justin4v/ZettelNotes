@@ -18,3 +18,8 @@ The Java Virtual Machine is an**abstract computing machine**. Like a real comput
 ### 分类
 - **Method Area** 和 **Heap Area** 是线程共享的。
 - **Stack Area** 、**PC Registers** 和 **Native Method Area**是每个线程独有的。
+
+
+### Method Area
+**Conception**
+Method Area stores **per-class structures** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
