@@ -7,8 +7,11 @@
         "id": "24da2d95044cffc6",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Language/JVM/JVM内存结构.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Language/JVM/JVM内存结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Language/JVM/JVM内存结构.md"
+              }
             }
           }
         ]
@@ -111,8 +117,8 @@
   },
   "active": "24da2d95044cffc6",
   "lastOpenFiles": [
-    "Language/JVM/JVM.md",
     "Language/JVM/JVM内存结构.md",
+    "Language/JVM/JVM.md",
     "Language/JVM/Java线程的实现.md",
     "附件/Pasted image 20210914173912.png",
     "Language/JVM/Hotspot字节码结构.md",
