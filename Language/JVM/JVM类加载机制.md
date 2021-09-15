@@ -7,5 +7,14 @@ JVM架构图如下：
 **KEYS**
 - Loading：加载 .class JMV（结构信息=>Metaspace、class对象=>Heap）; 
 - Linking：准备 class对象（校验class，变量赋予初始值，符号引用解析=>静态链接）；
-- Initialization：初始化（）
+- Initialization：初始化（初始化变量，动态链接）。
+
+
+
+
+
+
+### 符号引用
+符号引用是指 
+
 
