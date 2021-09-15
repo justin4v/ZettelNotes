@@ -55,7 +55,8 @@ JDK1.8之前称为永久代，PermGen space。
 > 注意，程序计数器是唯一 一个在Java虚拟机规范中**没有规定任何 `OutOfMemoryError` 情况**的区域。
 
 ### Native Method Stacks
-和虚拟栈相似，只不过它服务于Native方法，**线程私有**。当 Java 虚拟机使用其他语言（例如 C 语言）来实现指令集解释器时，也会使用到本地方法栈。如果 Java 虚拟机不支持 natvie 方法，并且自己也不依赖传统栈的话，可以无需支持本地方法栈。
+和虚拟栈相似，只不过它服务于Native方法，**线程私有**。当 Java 虚拟机使用其他语言（例如 C 语言）来实现指令集解释器时，也会使用到本地方法栈。
+如果 Java 虚拟机不支持 natvie 方法，并且自己也不依赖传统栈的话，可以无需支持本地方法栈。
 
 本地方法栈区域会抛出 `StackOverflowError` 和 `OutOfMemoryError` 异常。
 
