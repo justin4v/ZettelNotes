@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "24da2d95044cffc6",
+        "id": "f0c85f4b818ff1b0",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "日常记录/Git.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -76,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/Git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "日常记录/Git.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -115,8 +109,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "24da2d95044cffc6",
+  "active": "f0c85f4b818ff1b0",
   "lastOpenFiles": [
+    "2021-09-15.md",
     "日常记录/未命名.md",
     "Algorithm/Binary Search Tree.md",
     "conflict-files-obsidian-git.md",
@@ -125,7 +120,6 @@
     "Language/JDK工具.md",
     "Algorithm/DataStructure/集合.md",
     "Network/复用-分用.md",
-    "日常记录/信息与知识.md",
-    "Language/JVM/代码块执行时机.md"
+    "日常记录/信息与知识.md"
   ]
 }
