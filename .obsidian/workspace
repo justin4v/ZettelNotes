@@ -12,7 +12,20 @@
             "file": "Language/JVM/JVM类加载机制.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "a23373e6929270bc"
+      },
+      {
+        "id": "ae27bccaf74e4af3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/JVM/JVM类加载机制.md",
+            "mode": "preview"
+          }
+        },
+        "group": "a23373e6929270bc"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 199.00078010559082
+    "width": 199.00078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
