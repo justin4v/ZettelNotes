@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/JVM简介.md",
+            "file": "Language/JVM/JVM类加载机制.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/JVM简介.md",
+                "file": "Language/JVM/JVM类加载机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/JVM简介.md"
+                "file": "Language/JVM/JVM类加载机制.md"
               }
             }
           }
@@ -117,6 +117,7 @@
   },
   "active": "24da2d95044cffc6",
   "lastOpenFiles": [
+    "Language/JVM/JVM类加载机制.md",
     "Language/JVM/JVM简介.md",
     "Language/JVM/未命名.md",
     "Language/JVM/JVM内存结构.md",
@@ -125,7 +126,6 @@
     "附件/Pasted image 20210914173912.png",
     "Language/JVM/Hotspot字节码结构.md",
     "Language/JVM/字节码示例.md",
-    "Language/JVM/字节码.md",
-    "Language/JVM/Hotspot字节码.md"
+    "Language/JVM/字节码.md"
   ]
 }
