@@ -117,6 +117,7 @@
   },
   "active": "24da2d95044cffc6",
   "lastOpenFiles": [
+    "Algorithm/Binary Search Tree.md",
     "Algorithm/未命名.md",
     "Algorithm/Algorithm.md",
     "Language/JDK工具.md",
@@ -125,7 +126,6 @@
     "日常记录/信息与知识.md",
     "Language/JVM/代码块执行时机.md",
     "Language/Javap.md",
-    "Language/Javac.md",
-    "Language/JVM/类的运行.md"
+    "Language/Javac.md"
   ]
 }
