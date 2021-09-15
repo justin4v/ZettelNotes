@@ -10,7 +10,8 @@ JVM架构图如下：
 - Initialization：初始化（初始化变量，动态链接）。
 
 ### Loading
-加载 .class 到 Metaspace，同时在 Heap 中创建
+1. 加载 .class 到 Metaspace，
+2. 在 Heap 中创建 java.lang.class 对象并指向 Metaspace 中的 class 结构。
 
 
 ### 解析
