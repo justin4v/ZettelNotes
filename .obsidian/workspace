@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/Git.md",
+            "file": "Git/Rebase 和 Merge.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/Git.md",
+                "file": "Git/Rebase 和 Merge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/Git.md"
+                "file": "Git/Rebase 和 Merge.md"
               }
             }
           }
@@ -117,15 +117,13 @@
   },
   "active": "f0c85f4b818ff1b0",
   "lastOpenFiles": [
+    "Git/Rebase 和 Merge.md",
     "日常记录/Git.md",
     "2021-09-15.md",
     "日常记录/未命名.md",
     "Algorithm/Binary Search Tree.md",
-    "conflict-files-obsidian-git.md",
     "Algorithm/未命名.md",
     "Algorithm/Algorithm.md",
-    "Language/JDK工具.md",
-    "Algorithm/DataStructure/集合.md",
-    "Network/复用-分用.md"
+    "Language/JDK工具.md"
   ]
 }
