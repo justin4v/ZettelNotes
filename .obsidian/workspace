@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "f0c85f4b818ff1b0",
+        "id": "24da2d95044cffc6",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "日常记录/Git.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -57,7 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 212
+    "width": 199.00078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "日常记录/Git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "日常记录/Git.md"
+              }
             }
           }
         ]
@@ -109,17 +115,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f0c85f4b818ff1b0",
+  "active": "24da2d95044cffc6",
   "lastOpenFiles": [
-    "2021-09-15.md",
-    "日常记录/未命名.md",
-    "Algorithm/Binary Search Tree.md",
-    "conflict-files-obsidian-git.md",
-    "Algorithm/未命名.md",
-    "Algorithm/Algorithm.md",
-    "Language/JDK工具.md",
-    "Algorithm/DataStructure/集合.md",
-    "Network/复用-分用.md",
-    "日常记录/信息与知识.md"
+    "日常记录/Git.md",
+    "Language/JVM/JVM类加载机制.md",
+    "Language/JVM/JVM内存结构.md",
+    "Language/JVM/代码块执行时机.md",
+    "Language/JVM/类的运行.md",
+    "Language/JVM/字节码示例.md",
+    "Language/JVM/Hotspot字节码结构.md",
+    "Language/JVM/Java线程的实现.md",
+    "Language/JVM/JVM简介.md",
+    "Language/JVM/未命名.md"
   ]
 }
