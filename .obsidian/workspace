@@ -12,7 +12,20 @@
             "file": "Git/Conflict 解决.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "3fe40658571472eb"
+      },
+      {
+        "id": "551b2c5c2b88fe78",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Git/Conflict 解决.md",
+            "mode": "preview"
+          }
+        },
+        "group": "3fe40658571472eb"
       }
     ],
     "direction": "vertical"
@@ -117,6 +130,7 @@
   },
   "active": "24da2d95044cffc6",
   "lastOpenFiles": [
+    "Git/Conflict 解决.md",
     "Git/未命名.md",
     "Git/Rebase 和 Merge.md",
     "Computer Low Layer/Hardware/继电器.md",
@@ -125,7 +139,6 @@
     "OS/程序性能的限制.md",
     "日常记录/Git.md",
     "Language/JVM/JVM类加载机制.md",
-    "Language/JVM/JVM内存结构.md",
-    "Language/JVM/代码块执行时机.md"
+    "Language/JVM/JVM内存结构.md"
   ]
 }
