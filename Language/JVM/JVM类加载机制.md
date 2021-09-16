@@ -9,12 +9,13 @@ JVM架构图如下：
 - Linking：准备 class对象（校验class，变量赋予初始值，符号引用解析=>静态链接）；
 - Initialization：初始化（初始化变量，动态链接）。
 
-类jia'ai
+类加载过程：
+![[类加载过程.png]]
 
 ### Loading
-1. 加载 .class 到 Metaspace，
-2. 在 Heap 中创建**java.lang.class 对象** 并指向 Metaspace 中的 class 结构。
-
+1. 通过类的全限定名获取类的二进制字节流；
+2.  加载类的静态存储结构 到 Metaspace；
+3. 在 Heap 中创建**java.lang.class 对象** 并指向 Metaspace 中的 class 结构。
 
 ### 解析
 **conception**
