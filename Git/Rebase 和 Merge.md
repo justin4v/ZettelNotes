@@ -10,7 +10,7 @@ git merge [brach] 对两个分支最新提交和公共祖先进行三方合并�
 - 历史记录按时间顺序。
 
 ### merge的三种参数
--   -ff Fast-forward 模式：**当合并的分支为当前分支的后代，没有分叉**，实际没有合并直接移动 HEAD 指针到，那么会自动执行 `--ff (Fast-forward)` 模式，如果不匹配则执行 `--no-ff（non-Fast-forward）` 合并模式；
+-   -ff Fast-forward 模式：**当合并的分支为当前分支的后代，没有分叉**，实际没有合并直接移动 HEAD 指针到最新提交，那么会自动执行 `--ff (Fast-forward)` 模式，如果不匹配则执行 `--no-ff（non-Fast-forward）` 合并模式；
 -   --no-ff : 非 Fast-forward 模式, 在任何情况下都会创建新的 commit 进行多方合并（及时被合并的分支为自己的直接后代）
 -   --ff-only ：只会 `Fast-forward` 模式进行合并，如果不符合条件（并非当前分支的直接后代），则会拒绝合并请求并且退出。
 
