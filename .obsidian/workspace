@@ -7,8 +7,11 @@
         "id": "6d67206f1b8a2d43",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Git/Rebase 和 Merge.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -57,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 199.00078010559082,
-    "collapsed": true
+    "width": 199.00078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -74,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Git/Rebase 和 Merge.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Git/Rebase 和 Merge.md"
+              }
             }
           }
         ]
@@ -112,9 +117,9 @@
   },
   "active": "6d67206f1b8a2d43",
   "lastOpenFiles": [
+    "Git/Rebase 和 Merge.md",
     "Git/Conflict 解决.md",
     "Git/未命名.md",
-    "Git/Rebase 和 Merge.md",
     "Computer Low Layer/Hardware/继电器.md",
     "OS/线程.md",
     "OS/进程.md",
