@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Git/Rebase 和 Merge.md",
+            "file": "Git/Conflict 解决.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Rebase 和 Merge.md",
+                "file": "Git/Conflict 解决.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Rebase 和 Merge.md"
+                "file": "Git/Conflict 解决.md"
               }
             }
           }
@@ -117,8 +117,8 @@
   },
   "active": "6d67206f1b8a2d43",
   "lastOpenFiles": [
-    "Git/Rebase 和 Merge.md",
     "Git/Conflict 解决.md",
+    "Git/Rebase 和 Merge.md",
     "Git/未命名.md",
     "Computer Low Layer/Hardware/继电器.md",
     "OS/线程.md",
