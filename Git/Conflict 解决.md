@@ -4,8 +4,17 @@ git 分支经过 [[Rebase 和 Merge]]合并后，二者可能会产生冲突(con
 
 ## 指向
 ours 和 theirs 在使用不同命令时指向的分支不同：
-如执行乳
-1. **merge** 时，`ours`指的是当前分支，即`branch_a`，`theirs`指的是要被合并的分支，即`branch_b`；
+如有两个分支：my_branch 和 master
+执行如下命令：
+```bash
+git checkout my_branch
+git rebase origin master
+....
+git checkout master
+git merge master
+```
+
+1. **merge** 时，`ours`指的是当前分支，即`my_branch`，`theirs`指的是需要合并到当前的分支，即`master`；
 2.  **rebase**时，`theirs`指的是当前分支，即`branch_a`，`ours`指向修改参考分支
 
 
