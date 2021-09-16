@@ -7,16 +7,16 @@ ours 和 theirs 在使用不同命令时指向的分支不同：
 如有两个分支：my_branch 和 master
 执行如下命令：
 ```bash
-// rebase my_branch 变基为master
-git checkout my_branch
-git rebase master
-....
 // merge master 到 my_branch
 git checkout master
 git merge master
+....
+// rebase my_branch 变基为master
+git checkout my_branch
+git rebase master
 ```
 
-1. **merge** 时，`ours`指的是当前分支，即`master`，`theirs`指的是需要合并到当前的分支，即`master`；
+1. **merge**时，`ours`指的是当前分支，即`master`，`theirs`指的是需要合并到当前的分支的branch，即`master`；
 2.  **rebase**时，`theirs`指的是当前分支，即`my_branch`，`ours`指向将成为 base 的分支，即`master`
 
 

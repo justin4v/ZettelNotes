@@ -4,28 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "24da2d95044cffc6",
+        "id": "6d67206f1b8a2d43",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Git/Conflict 解决.md",
-            "mode": "source"
-          }
-        },
-        "group": "3fe40658571472eb"
-      },
-      {
-        "id": "551b2c5c2b88fe78",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Git/Conflict 解决.md",
-            "mode": "preview"
-          }
-        },
-        "group": "3fe40658571472eb"
+          "type": "empty",
+          "state": {}
+        }
       }
     ],
     "direction": "vertical"
@@ -90,7 +74,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Conflict 解决.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,9 +100,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Git/Conflict 解决.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -129,7 +110,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "24da2d95044cffc6",
+  "active": "6d67206f1b8a2d43",
   "lastOpenFiles": [
     "Git/Conflict 解决.md",
     "Git/未命名.md",
