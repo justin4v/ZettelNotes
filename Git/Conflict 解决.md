@@ -15,6 +15,8 @@ $ git status //查看当前冲突状态
 在解决冲突过程中：
 - 如果遇到某个提交记录不需要应用，可以用`git rebase --skip`
 - 取消本次 rebase： `git rebase --abort`
+
+
 ## ours 和 theirs
 git 分支经过 [[Rebase 和 Merge]]合并后，二者可能会产生冲突(conflict)，很多时候希望只使用其中一方的修改。
 `--ours`和 `--theirs`选项可用于解决**both added、both deleted、both modified**等类型的冲突，**只保留一方的修改**。
