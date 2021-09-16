@@ -9,6 +9,8 @@ JVM架构图如下：
 - Linking：准备 class对象（校验class，变量赋予初始值，符号引用解析=>静态链接）；
 - Initialization：初始化（初始化变量，动态链接）。
 
+类jia'ai
+
 ### Loading
 1. 加载 .class 到 Metaspace，
 2. 在 Heap 中创建**java.lang.class 对象** 并指向 Metaspace 中的 class 结构。
