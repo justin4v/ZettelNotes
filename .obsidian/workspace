@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/JVM类加载机制.md",
+            "file": "Language/JVM/JVM内存结构.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/JVM类加载机制.md",
+            "file": "Language/JVM/JVM内存结构.md",
             "mode": "preview"
           }
         },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/JVM类加载机制.md",
+                "file": "Language/JVM/JVM内存结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/JVM类加载机制.md"
+                "file": "Language/JVM/JVM内存结构.md"
               }
             }
           }
@@ -132,15 +132,15 @@
   },
   "active": "6d67206f1b8a2d43",
   "lastOpenFiles": [
+    "Language/JVM/JVM内存结构.md",
     "Language/JVM/JVM类加载机制.md",
+    "Language/JVM/Class 文件结构.md",
     "Language/JVM/未命名.md",
     "Git/Rebase 和 Merge.md",
     "Git/Conflict 解决.md",
     "Git/未命名.md",
     "Computer Low Layer/Hardware/继电器.md",
     "OS/线程.md",
-    "OS/进程.md",
-    "OS/程序性能的限制.md",
-    "日常记录/Git.md"
+    "OS/进程.md"
   ]
 }

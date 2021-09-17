@@ -32,6 +32,10 @@ JVM架构图如下：
 4. **符号引用验证**：确保解析动作能正确执行。
 
 ### Preparation
+**Target**
+在 Metaspace 中为
+static 变量在方法区分配内存并初始化为默认值，使用的是方法区的内存
+
 
 ### Resolution
 **conception**

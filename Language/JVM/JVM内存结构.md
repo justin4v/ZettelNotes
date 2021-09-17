@@ -38,7 +38,7 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 1. [JDK 8](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html)
 2. [JDK7 HotSpot VM Options](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html)
 
-### Method Area
+### Method Area(Metaspace)
 **Conception**
 Method Area stores **per-class structures** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
 
