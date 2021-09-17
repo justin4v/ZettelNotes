@@ -3,7 +3,19 @@ JVM架构图如下：
 
 ![[JVM架构图.png]]
 
+# 完整流程
+**JVM 实际启动到 JVM 销毁的完整流程**如下图：
 
+![[class加载的实际流程.png]]
+**DES**
+1. 启动虚拟机 （C++负责创建）[windows : bin/java.exe调用 jvm.dll。 Linux: java 调用 libjvm.so] ;
+2. 创建一个引导类加载器实例 （C++实现）; 
+3. C++ 调用Java代码，创建JVM启动器和sun.misc.Launcher实例 [调用引导加载器负责加载创建其他类加载器]
+4. sun.misc.Launcher.getLauncher() 获取运行类自己的加载器ClassLoader --> 是AppClassLoader  
+5. 获取到ClassLoader后调用loadClass(“A”)方法加载运行的类A  
+6. 加载完成执行A类的main方法  
+7. 程序运行结束  
+8. JVM销毁
 
 # ClassLoader SubSystem
 **conception**
