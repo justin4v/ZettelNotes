@@ -32,10 +32,12 @@ JVM架构图如下：
 4. **符号引用验证**：确保解析动作能正确执行。
 
 ### Preparation
-**Target**
-在 Metaspace 中为
-static 变量在方法区分配内存并初始化为默认值，使用的是方法区的内存
+1.**Target**
+在 **Metaspace 中为类变量默认初始化**
 
+2.**Attention**
+-   Preparation进行内存分配的仅包括类变量（static），而不包括实例变量。实例变量会在对象实例化时随着对象一块分配在 Java 堆中。
+-   默认初始值通常情况下是数据类型默认的零值（如 `0`、`0L`、`null`、`false` 等），而不是被在 Java 代码中被显式地赋予的值。
 
 ### Resolution
 **conception**

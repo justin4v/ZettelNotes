@@ -40,7 +40,7 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 
 ### Method Area(Metaspace)
 **Conception**
-Method Area stores **per-class structures** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
+Method Area stores **per-class structures（类结构信息）** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
 
 Method Area 是JVM中所有线程共享的，JVM启动时创建，**主要存储类的结构信息（metadata）**。
 JDK1.8之前称为永久代，PermGen space。
@@ -63,31 +63,28 @@ JDK1.8之前称为永久代，PermGen space。
 **HotSpot虚拟机直接就把本地方法栈和虚拟机栈合二为一。**
 
 ### JVM Stacks
-Stack Frame 特点：
+1.**Target**
+**所执行方法的存储结构**。
+
+2.Stack Frame 特点：
 -  **Java 方法执行的内存模型**：**每个方法在执行时都会创建一个Stack Frame**，用于存储局部变量表、操作数栈、动态链接、方法出口等信息。每一个方法从调用直至执行完成的过程，就对应着一个栈帧在虚拟机栈中入栈到出栈的过程。
 -   存储**数据和部分过程结果**，也用来处理**动态链接(Dynamic Linking)、 方法返回值和异常分派（ Dispatch Exception）**。栈帧随着方法调用而创建，随着方法结束（正常或异常）而销毁。
 -   **栈上分配**：对于小对象（一般几十个bytes），在没有**逃逸**的情况下，可以直接分配在栈上（直接分配在栈上，可以自动回收，减轻GC压力）；大对象或者逃逸对象无法栈上分配
 
-
-
-Stack Frame 结构：
+3.Stack Frame 结构：
 
 ![[JVM Stack Frame结构.png]]
 
 **局部变量表**
-
 -   存储方法中的局部变量值或地址（包括方法中的**非静态变量以及函数形参**）；
 -   编译时确定大小，**程序执行期间大小不变**。
 
 **操作数栈**
-
 -   程序中的所有计算过程都在操作数栈上完成；
 -   最典型的一个应用就是对表达式求值。
 
 **指向运行时常量池的引用**
-
 指向在方法执行的过程中使用的常量。  
   
 **方法返回地址**
-
 方法执行完后，返回之前调用它的位置，因此在栈帧中保存一个方法返回地址。

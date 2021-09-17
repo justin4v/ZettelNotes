@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/JVM内存结构.md",
+            "file": "Language/JVM/JVM类加载机制.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/JVM内存结构.md",
+            "file": "Language/JVM/JVM类加载机制.md",
             "mode": "preview"
           }
         },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/JVM内存结构.md",
+                "file": "Language/JVM/JVM类加载机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/JVM内存结构.md"
+                "file": "Language/JVM/JVM类加载机制.md"
               }
             }
           }
@@ -132,8 +132,8 @@
   },
   "active": "6d67206f1b8a2d43",
   "lastOpenFiles": [
-    "Language/JVM/JVM内存结构.md",
     "Language/JVM/JVM类加载机制.md",
+    "Language/JVM/JVM内存结构.md",
     "Language/JVM/Class 文件结构.md",
     "Language/JVM/未命名.md",
     "Git/Rebase 和 Merge.md",
