@@ -9,13 +9,13 @@ JVM架构图如下：
 ![[class加载的实际流程.png]]
 **DES**
 1. 启动虚拟机 （C++负责创建）[windows : bin/java.exe调用 jvm.dll。 Linux: java 调用 libjvm.so] ;
-2. 创建一个引导类加载器实例 （C++实现）; 
-3. C++ 调用Java代码，创建JVM启动器和sun.misc.Launcher实例 [调用引导加载器负责加载创建其他类加载器]
-4. sun.misc.Launcher.getLauncher() 获取运行类自己的加载器ClassLoader --> 是AppClassLoader  
-5. 获取到ClassLoader后调用loadClass(“A”)方法加载运行的类A  
-6. 加载完成执行A类的main方法  
-7. 程序运行结束  
-8. JVM销毁
+2. 创建一个引导类加载器（**Bootstrap** class loader）实例 （C++实现）; 
+3. C++ 调用Java代码，创建JVM启动器和sun.misc.Launcher实例 [调用引导类加载器，加载创建 **Extend classloader** 和 **Application classloader**]；
+4. sun.misc.Launcher.getLauncher() 获取运行类的加载器 ClassLoader ( 实际是AppClassLoader );  
+5. 获取到ClassLoader后调用 loadClass(“A”) 方法加载运行的类A ；
+6. 加载完成执行A类的main方法 ；
+7. 程序运行结束 ；
+8. JVM销毁；
 
 # ClassLoader SubSystem
 **conception**
@@ -87,7 +87,7 @@ JVM规定了**6种主动调用**：
 3.  使用或对类/接口的`static`属性进行赋值时（这不包括`final`的与在编译期确定的常量表达式）；
 4.  当调用 API 中的某些反射方法时；
 5.  子类被初始化（会先初始化父类）；
-6.  被设定为 JVM 启动时的启动类（具有`main`方法的类）。
+6.  被设定为 JVM 启动时的启动类（具有`main`方法的类，总是首先初始化）。
 
 **其他被动调用不会初始化类**，如：
 
