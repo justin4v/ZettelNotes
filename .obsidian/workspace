@@ -117,6 +117,7 @@
   },
   "active": "8b34f39eac6950b8",
   "lastOpenFiles": [
+    "Language/JVM/JVM ClassLoader.md",
     "Language/JVM/未命名.md",
     "Language/JVM/JVM类加载机制.md",
     "Language/JVM/JVM内存结构.md",
@@ -125,7 +126,6 @@
     "Git/Conflict 解决.md",
     "Git/未命名.md",
     "Computer Low Layer/Hardware/继电器.md",
-    "OS/线程.md",
-    "OS/进程.md"
+    "OS/线程.md"
   ]
 }
