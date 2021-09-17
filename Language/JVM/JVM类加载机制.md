@@ -51,7 +51,7 @@ JVM架构图如下：
 
 2.**Attention**
 -   Preparation进行内存分配的**仅包括类变量（static），分配在 Metaspace**，而不包括实例变量。实例变量会在对象实例化时随着对象一块分配在 Java 堆中；
--   默认初始值是指**初始化为数据类型默认的零值**（如 `0`、`0L`、`null`、`false` 等），而不是在 Java 代码中被显式地赋予的值；
+-   默认初始值是指**初始化为数据类型默认的零值**（如 `0`、`0L`、`null`、`false` 等），不执行Java 代码；
 -   类字段**同时被 final 和 static 修饰（不允许修改，类似于常量，必须初始化时赋予值）**，称为`ConstantValue`属性，Preparation 阶段变量就会被初始化为指定的值。
 
 ### Resolution
