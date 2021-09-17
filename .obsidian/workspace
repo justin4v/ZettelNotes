@@ -6,6 +6,7 @@
       {
         "id": "6d67206f1b8a2d43",
         "type": "leaf",
+        "dimension": 60.60606060606061,
         "state": {
           "type": "markdown",
           "state": {
@@ -18,6 +19,7 @@
       {
         "id": "67a0a8c0a3b25b8d",
         "type": "leaf",
+        "dimension": 39.39393939393939,
         "state": {
           "type": "markdown",
           "state": {
@@ -73,8 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 199.00078010559082,
-    "collapsed": true
+    "width": 199.00078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -132,6 +133,7 @@
   "active": "6d67206f1b8a2d43",
   "lastOpenFiles": [
     "Language/JVM/JVM类加载机制.md",
+    "Language/JVM/未命名.md",
     "Git/Rebase 和 Merge.md",
     "Git/Conflict 解决.md",
     "Git/未命名.md",
@@ -139,7 +141,6 @@
     "OS/线程.md",
     "OS/进程.md",
     "OS/程序性能的限制.md",
-    "日常记录/Git.md",
-    "Language/JVM/JVM内存结构.md"
+    "日常记录/Git.md"
   ]
 }
