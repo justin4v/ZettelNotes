@@ -6,28 +6,13 @@
       {
         "id": "6d67206f1b8a2d43",
         "type": "leaf",
-        "dimension": 60.60606060606061,
         "state": {
           "type": "markdown",
           "state": {
             "file": "Language/JVM/JVM类加载机制.md",
             "mode": "source"
           }
-        },
-        "group": "2888f3f8bc2e5192"
-      },
-      {
-        "id": "67a0a8c0a3b25b8d",
-        "type": "leaf",
-        "dimension": 39.39393939393939,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/JVM/JVM类加载机制.md",
-            "mode": "preview"
-          }
-        },
-        "group": "2888f3f8bc2e5192"
+        }
       }
     ],
     "direction": "vertical"
