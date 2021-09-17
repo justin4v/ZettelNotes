@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/类加载示例.md",
+            "file": "Language/JVM/JVM类加载机制.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/类加载示例.md",
+            "file": "Language/JVM/JVM类加载机制.md",
             "mode": "preview"
           }
         },
@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/类加载示例.md",
+                "file": "Language/JVM/JVM类加载机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/类加载示例.md"
+                "file": "Language/JVM/JVM类加载机制.md"
               }
             }
           }
@@ -131,9 +130,9 @@
   },
   "active": "8b34f39eac6950b8",
   "lastOpenFiles": [
+    "Language/JVM/JVM类加载机制.md",
     "Language/JVM/类加载示例.md",
     "Language/JVM/未命名.md",
-    "Language/JVM/JVM类加载机制.md",
     "Algorithm/Binary Search Tree.md",
     "Algorithm/Algorithm.md",
     "Design/未命名.md",
