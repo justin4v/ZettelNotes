@@ -1,9 +1,9 @@
-## JVM架构
+# JVM架构
 JVM架构图如下：
 
 ![[JVM架构图.png]]
 
-## ClassLoader SubSystem
+# ClassLoader SubSystem
 **KEYS**
 - Loading：加载 .class JMV（结构信息=>Metaspace、class对象=>Heap）; 
 - Linking：准备 class对象（校验class，变量赋予初始值，符号引用解析=>静态链接）；
@@ -12,12 +12,26 @@ JVM架构图如下：
 类加载过程：
 ![[类加载过程.png]]
 
-### Loading
+## Loading
 1. 通过类的**全限定名**获取类的二进制字节流；
 2.  加载类的**静态结构到元空间**(Metaspace)；
 3. 在 Heap 中创建**java.lang.class 对象** 并指向 Metaspace 中的 class 结构。
 
-### 解析
+
+## Linking
+### Verification
+**Target**
+**保证 Class 字节流符合虚拟机规范**
+
+**DES**
+1. **文件格式验证**：验证字节流是否符合Class文件格式的规范；例如：是否以 `0xCAFEBABE`开头、主次版本号是否在当前虚拟机的处理范围之内、常量池中的常量是否有不被支持的类型。
+2. **元数据验证**：对字节码描述的信息进行语义分析（注意：对比javac编译阶段的语义分析），以保证其描述的信息符合Java语言规范的要求；例如：这个类是否有父类，除了 `java.lang.Object`之外。
+3. **字节码验证**：通过数据流和控制流分析，确定程序语义是合法的、符合逻辑的。
+4. **符号引用验证**：确保解析动作能正确执行。
+
+### Preparation
+
+### Resolution
 **conception**
 - **符号引用替换成直接引用**
 符号引用是指**一组指明需要引用对象的符号**，是一个唯一标识，但不是实际内存地址，如静态方法、类变量等（类加载过程中只能确定属于类的属性）。 
