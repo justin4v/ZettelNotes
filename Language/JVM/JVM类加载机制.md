@@ -159,6 +159,13 @@ public static void main(String[] args) {
 
 **DES**
 1. \<init> 是实例构造器方法，在程序**执行 new 一个对象**调用该对象类的 constructor 方法时才会执行init方法;
-在[[字节码示例#Bytecode]] 的第 7 行 `7 invokespecial #4 <java/lang/StringBuilder.<init> : ()V>` 可以看到在new StringBuilder 时调用了 StringBuilder 的 <
+在 [[字节码示例#Bytecode]] 的第 7 行 `7 invokespecial #4 <java/lang/StringBuilder.<init> : ()V>` 可以看到*在new StringBuilder 时调用了 StringBuilder 的 \<init> 实例初始化方法*。
+参考： [[字节码示例]]
 
 3. \<clinit> 是类构造器方法，也就是在jvm进行类的 *[[#Initialization]]阶段jvm会调用clinit* 方法。
+
+**Attention**
+ Jvm 中可以有**零个或多个实例初始化\<init>方法**，一个方法称为实例初始化方法的条件是:
+-   It is **defined in a class**;
+-   Its name is *\<init>*;
+-   It returns *void*。
