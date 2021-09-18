@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/代码块执行时机.md",
+            "file": "Language/JVM/类加载示例.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/代码块执行时机.md",
+                "file": "Language/JVM/类加载示例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/代码块执行时机.md"
+                "file": "Language/JVM/类加载示例.md"
               }
             }
           }
@@ -117,9 +117,9 @@
   },
   "active": "41c386ff99c51aff",
   "lastOpenFiles": [
+    "Language/JVM/类加载示例.md",
     "Language/JVM/代码块执行时机.md",
     "Language/JVM/字节码示例.md",
-    "Language/JVM/类加载示例.md",
     "Language/JVM/Class 文件结构.md",
     "Language/JVM/Hotspot字节码结构.md",
     "Language/JVM/Java线程的实现.md",
