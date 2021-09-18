@@ -87,7 +87,7 @@ JVM规定了**6种主动调用**：
 3.  使用或对类/接口的`static`属性进行赋值时（这不包括`final`和与在编译期确定的常量表达式）；
 4.  当调用 API 中的某些反射方法时；
 5.  子类被初始化（会先初始化父类）；
-6.  被设定为 JVM 启动时的启动类（具有`main`方法的类，总是首先初始化）。
+6.  被设定为 JVM 启动时的启动类（Main方法的类首先初始化）。
 
 **Attention**
 对于第3点，如果使用或赋值**编译期间能确定**的常量，不会对类进行初始化。
@@ -164,7 +164,7 @@ public static void main(String[] args) {
 - **\<clinit>** are the *static initialization blocks for the class, and static field initialization*。
 
 **DES**
-1. \<init> 是实例构造器方法，在程序**执行 new 一个对象**调用该对象类的 constructor 方法时才会执行init方法;
+1. \<init> 是实例构造器方法，在程序**执行类的 constructor 时才会执行init方法**;
 在 [[字节码示例#Bytecode]] 的第 7 行 `7 invokespecial #4 <java/lang/StringBuilder.<init> : ()V>` 可以看到*在new StringBuilder 时调用了 StringBuilder 的 \<init> 实例初始化方法*。
 参考： [[字节码示例]]
 
