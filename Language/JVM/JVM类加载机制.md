@@ -109,9 +109,10 @@ System.out.println(ConstClass.HELLOWORLD);
 ```
 
 ### 2.3 **初始化顺序**
-1.  先初始化 static，后初始化非static的；
-2.  同类（static 或非static）按源码中顺序初始化；
-3.  最后调用构造函数初始化。
+1.  先调用 \<clinit> 进行类初始化；
+2.  
+3.  同类（static 或非static）按源码中顺序初始化；
+4.  最后调用构造函数初始化。
 
 ### 2.4  类初始化`<clinit>()` 
 
