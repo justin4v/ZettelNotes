@@ -115,9 +115,9 @@ System.out.println(ConstClass.HELLOWORLD);
 4.  最后调用构造函数初始化。
 
 
-### 4 类初始化`<clinit>()` 
-
--   `<clinit>()` 是*编译器自动收集类中所有类变量的赋值动作和静态语句块（static{} 块）中的语句合并产生*。编译器收集的顺序*由语句在源文件中出现的顺序决定*。特别注意的是，静态语句块只能访问到定义在它之前的类变量，定义在它*之后的类变量只能赋值，不能访问*。例如以下代码：
+### 4 类初始化`<clinit>` 
+-  *`<clinit>`只会执行一次*；
+-   `<clinit>` 是*编译器自动收集类中所有类变量的赋值动作和静态语句块（static{} 块）中的语句合并产生*。编译器收集的顺序*由语句在源文件中出现的顺序决定*。特别注意的是，静态语句块只能访问到定义在它之前的类变量，定义在它*之后的类变量只能赋值，不能访问*。例如以下代码：
 
 ```java
 public class Test {
@@ -149,15 +149,15 @@ public static void main(String[] args) {
 }
 ```
 
--   `<clinit>()` 方法*对于类或接口不是必须的*，如果一个类中不包含静态语句块，也没有对类变量的赋值操作，编译器可以不为该类生成 `<clinit>()` 方法。
--   接口中不可以使用静态语句块，但仍然有类变量初始化的赋值操作，因此接口与类一样都会生成 `<clinit>()` 方法。但接口与类不同的是，执行*接口的 `<clinit>()` 方法不需要先执行父接口的 `<clinit>()` 方法*。只有当*父接口中定义的变量使用时，父接口才会初始化*。另外，*接口的实现类在初始化时也不会执行接口的 `<clinit>()` 方法*。
--   *JVM 保证一个类的 `<clinit>()` 方法在多线程环境下被正确的加锁和同步*，如果多个线程同时初始化一个类，只会有一个线程执行这个类的 `<clinit>()` 方法，其它线程都会阻塞等待，直到活动线程执行 `<clinit>()` 方法完毕。如果在一个类的 `<clinit>()` 方法中有耗时的操作，就可能造成多个线程阻塞，在实际过程中此种阻塞很隐蔽。
+-   `<clinit>` 方法*对于类或接口不是必须的*，如果一个类中不包含静态语句块，也没有对类变量的赋值操作，编译器可以不为该类生成 `<clinit>` 方法。
+-   接口中不可以使用静态语句块，但仍然有类变量初始化的赋值操作，因此接口与类一样都会生成 `<clinit>` 方法。但接口与类不同的是，执行*接口的 `<clinit>` 方法不需要先执行父接口的 `<clinit>` 方法*。只有当*父接口中定义的变量使用时，父接口才会初始化*。另外，*接口的实现类在初始化时也不会执行接口的 `<clinit>` 方法*。
+-   *JVM 保证一个类的 `<clinit>` 方法在多线程环境下被正确的加锁和同步*，如果多个线程同时初始化一个类，只会有一个线程执行这个类的 `<clinit>` 方法，其它线程都会阻塞等待，直到活动线程执行 `<clinit>` 方法完毕。如果在一个类的 `<clinit>` 方法中有耗时的操作，就可能造成多个线程阻塞，在实际过程中此种阻塞很隐蔽。
 
-### 5 实例初始化`<init()>`
+### 5 实例初始化`<init>`
 **conception**
 
-- **<init()>** is the (or one of the) *constructor(s) for the instance, and non-static field initialization*.  
-- **<clinit()>** are the *static initialization blocks for the class, and static field initialization*.
+- **\<init>** is the (or one of the) *constructor(s) for the instance, and non-static field initialization*.  
+- **\<clinit>** are the *static initialization blocks for the class, and static field initialization*.
 
 **DES**
 1. \<init> 是实例构造器方法，在程序**执行 new 一个对象**调用该对象类的 constructor 方法时才会执行init方法;

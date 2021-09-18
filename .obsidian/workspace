@@ -7,8 +7,11 @@
         "id": "8b34f39eac6950b8",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Language/JVM/类加载示例.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -57,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -74,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Language/JVM/类加载示例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Language/JVM/类加载示例.md"
+              }
             }
           }
         ]
