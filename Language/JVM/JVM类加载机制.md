@@ -91,8 +91,8 @@ JVM规定了**6种主动调用**：
 
 **Attention**
 对于第3点，如果使用或赋值**编译期间能确定**的常量，不会对类进行初始化。
-但是如果编译期间无法确定，则需要正常初始化、运行以确定值。
-如 `public static final double str=Math.random();//运行期间确定`，如果使用了 str 变量，需要对类初始化后
+但是*如果编译期间无法确定，则需要正常初始化、运行以确定值*。
+如 `public static final double str=Math.random();//编译期间不能确定`，如果使用了 str 变量，需要对类初始化。
 
 **其他被动调用不会初始化类**，如：
 -   *子类引用父类的静态字段，不会导致子类初始化*
@@ -159,9 +159,9 @@ public static void main(String[] args) {
 
 ### 5 实例初始化`<init>`
 **conception**
-
-- **\<init>** is the (or one of the) *constructor(s) for the instance, and non-static field initialization*.  
-- **\<clinit>** are the *static initialization blocks for the class, and static field initialization*.
+- 编译器按照出现顺序收集*成员变量赋值语句、普通代码块，最后收集构造函数*的代码，最终组成\<init>；
+- **\<init>** is the (or one of the) *constructor(s) for the instance, and non-static field initialization*；
+- **\<clinit>** are the *static initialization blocks for the class, and static field initialization*。
 
 **DES**
 1. \<init> 是实例构造器方法，在程序**执行 new 一个对象**调用该对象类的 constructor 方法时才会执行init方法;
