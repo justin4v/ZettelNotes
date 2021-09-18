@@ -118,14 +118,14 @@
   "active": "4119f50d32025207",
   "lastOpenFiles": [
     "Language/JVM/JVM ClassLoader.md",
+    "Language/JVM/NameSpace.md",
+    "Language/JVM/未命名.md",
     "Language/JVM/JVM内存结构.md",
     "Language/JVM/JVM类加载机制.md",
     "Language/JVM/JVM简介.md",
     "Language/JVM/Java线程的实现.md",
     "Language/JVM/Hotspot字节码结构.md",
     "Language/JVM/Class 文件结构.md",
-    "Language/JVM/代码块执行时机.md",
-    "Language/JVM/类加载示例.md",
-    "Language/JVM/字节码示例.md"
+    "Language/JVM/代码块执行时机.md"
   ]
 }
