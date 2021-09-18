@@ -151,8 +151,12 @@ public static void main(String[] args) {
 -   接口中不可以使用静态语句块，但仍然有类变量初始化的赋值操作，因此接口与类一样都会生成 `<clinit>()` 方法。但接口与类不同的是，执行*接口的 `<clinit>()` 方法不需要先执行父接口的 `<clinit>()` 方法*。只有当*父接口中定义的变量使用时，父接口才会初始化*。另外，*接口的实现类在初始化时也不会执行接口的 `<clinit>()` 方法*。
 -   *JVM 保证一个类的 `<clinit>()` 方法在多线程环境下被正确的加锁和同步*，如果多个线程同时初始化一个类，只会有一个线程执行这个类的 `<clinit>()` 方法，其它线程都会阻塞等待，直到活动线程执行 `<clinit>()` 方法完毕。如果在一个类的 `<clinit>()` 方法中有耗时的操作，就可能造成多个线程阻塞，在实际过程中此种阻塞很隐蔽。
 
-### 2.5 实例初始化`init()`
+### 2.5 实例初始化`<init()`
 **conception**
 
 - **init()** is the (or one of the) *constructor(s) for the instance, and non-static field initialization*.  
-- **clinit()** are the static initialization blocks for the class, and static field initialization.
+- **clinit()** are the *static initialization blocks for the class, and static field initialization*.
+
+**DES**
+1. init是实例构造器方法，在程序**执行 new 一个对象**调用该对象类的 constructor 方法时才会执行init方法
+2. clinit是类构造器方法，也就是在jvm进行类的 *[[#Initialization]]阶段jvm会调用clinit* 方法。
