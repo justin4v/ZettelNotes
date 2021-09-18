@@ -1,16 +1,16 @@
-## 内存结构
+# 内存结构
 [[JVM简介]] 结构如下：
 
 ![[JVM架构图.png]]
 
 《java 虚拟机规范》中正式叫法是** Runtime Data Area** （运行时数据区），内存结构是为了方便的称呼。
 
-### 分类
+## 分类
 - **Method Area** 和 **Heap Area** 是线程共享的。
 - **Stack Area** 、**PC Registers** 和 **Native Method Area**是每个线程独有的。
 
 
-### Heap
+## Heap
 - Heap 由所有 JVM 进程中的**线程共享**；
 - **类实例（对象）** 和**数组**空间从 heap 分配；
 - JVM **启动时创建 Heap**。
@@ -38,7 +38,7 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 1. [JDK 8](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html)
 2. [JDK7 HotSpot VM Options](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html)
 
-### Method Area(Metaspace)
+## Method Area(Metaspace)
 **Conception**
 Method Area stores **per-class structures（类结构信息）** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
 
@@ -49,12 +49,12 @@ JDK1.8之前称为永久代，PermGen space。
 3. 大小通过`–XX:MetaspaceSize`设置，默认21M。
 
 
-### PC Registers
+## PC Registers
 当前线程所执行的字节码的行号指示器，用于记录正在执行的虚拟机字节指令地址，线程私有。
 
 > 注意，程序计数器是唯一 一个在Java虚拟机规范中**没有规定任何 `OutOfMemoryError` 情况**的区域。
 
-### Native Method Stacks
+## Native Method Stacks
 和虚拟栈相似，只不过它服务于Native方法，**线程私有**。当 Java 虚拟机使用其他语言（例如 C 语言）来实现指令集解释器时，也会使用到本地方法栈。
 如果 Java 虚拟机不支持 natvie 方法，并且自己也不依赖传统栈的话，可以无需支持本地方法栈。
 
@@ -62,7 +62,7 @@ JDK1.8之前称为永久代，PermGen space。
 
 **HotSpot虚拟机直接就把本地方法栈和虚拟机栈合二为一。**
 
-### JVM Stacks
+## JVM Stacks
 1.**Target**
 **所执行方法的存储结构**。
 
@@ -74,6 +74,8 @@ JDK1.8之前称为永久代，PermGen space。
 3.Stack Frame 结构：
 
 ![[JVM Stack Frame结构.png]]
+
+其中，*指向运行时常量池的引用* 就是**动态链接**
 
 **局部变量表**
 -   存储方法中的局部变量值或地址（包括方法中的**非静态变量以及函数形参**）；
