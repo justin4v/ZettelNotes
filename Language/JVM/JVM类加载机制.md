@@ -165,7 +165,9 @@ public static void main(String[] args) {
 3. \<clinit> 是类构造器方法，也就是在jvm进行类的 *[[#Initialization]]阶段jvm会调用clinit* 方法。
 
 **Attention**
- Jvm 中可以有**零个或多个实例初始化\<init>方法**，一个方法称为实例初始化方法的条件是:
+JVM 中可以有**零个或多个实例初始化\<init>方法**，一个方法称为实例初始化方法的条件是:
 -   It is **defined in a class**;
 -   Its name is *\<init>*;
 -   It returns *void*。
+
+JVM中**自动收集 static 生成一个 \<clinit>**。
