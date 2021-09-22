@@ -12,20 +12,7 @@
             "file": "Language/Java/java.lang.Class.md",
             "mode": "source"
           }
-        },
-        "group": "5eaa3370ee972993"
-      },
-      {
-        "id": "6f5378592332c35c",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/java.lang.Class.md",
-            "mode": "preview"
-          }
-        },
-        "group": "5eaa3370ee972993"
+        }
       }
     ],
     "direction": "vertical"
