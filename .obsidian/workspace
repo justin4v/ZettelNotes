@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/java.lang.Class.md",
+            "file": "Language/Java/RTTI.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/java.lang.Class.md",
+            "file": "Language/Java/RTTI.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/java.lang.Class.md",
+                "file": "Language/Java/RTTI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/java.lang.Class.md"
+                "file": "Language/Java/RTTI.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "48c69ad54aa1fe57",
   "lastOpenFiles": [
+    "Language/Java/未命名.md",
     "Language/Java/java.lang.Class.md",
     "Language/Java/反射.md",
     "Language/JVM/对象.md",
@@ -138,7 +139,6 @@
     "Language/JVM/JVM ClassLoader.md",
     "Language/JVM/JVM简介.md",
     "Language/JVM/JVM类加载机制.md",
-    "Language/Java/未命名.md",
     "Git/Rebase 和 Merge.md"
   ]
 }
