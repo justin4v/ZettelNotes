@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/JVM ClassLoader.md",
+            "file": "Language/Java/java.lang.Class.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/JVM ClassLoader.md",
+                "file": "Language/Java/java.lang.Class.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/JVM ClassLoader.md"
+                "file": "Language/Java/java.lang.Class.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "4fe0d9315df040ba",
   "lastOpenFiles": [
+    "Language/Java/java.lang.Class.md",
+    "附件/类对象和Class的关系.png",
+    "附件/Class文件结构.png",
+    "附件/class加载的实际流程.png",
+    "附件/Pasted image 20210917104141.png",
+    "附件/Pasted image 20210922110144.png",
     "Language/JVM/JVM ClassLoader.md",
     "Language/Java/未命名.md",
     "Language/Java/final 和 static.md",
-    "Language/Java/集合操作实现.md",
-    "Language/Java/HashMap实现原理.md",
-    "Language/JVM/NameSpace.md",
-    "Language/JVM/未命名.md",
-    "Language/JVM/JVM内存结构.md",
-    "Language/JVM/JVM类加载机制.md",
-    "Language/JVM/JVM简介.md"
+    "Language/Java/集合操作实现.md"
   ]
 }
