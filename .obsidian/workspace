@@ -7,8 +7,11 @@
         "id": "16df5991288b2b22",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Language/JVM/Class 文件结构.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Language/JVM/Class 文件结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Language/JVM/Class 文件结构.md"
+              }
             }
           }
         ]
@@ -111,13 +117,13 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Language/JVM/Class 文件结构.md",
     "Language/Java/Java基础.md",
     "Language/Java/未命名.md",
     "Language/Java/java.lang.Class.md",
     "Language/Java/反射.md",
     "Language/JVM/对象.md",
     "Language/JVM/字节码示例.md",
-    "Language/JVM/Class 文件结构.md",
     "Language/JVM/JVM ClassLoader.md",
     "Language/JVM/JVM简介.md",
     "Language/JVM/JVM类加载机制.md"
