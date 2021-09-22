@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/对象.md",
-            "mode": "preview"
+            "file": "Language/JVM/Class 文件结构.md",
+            "mode": "source"
           }
         }
       }
@@ -60,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/对象.md",
+                "file": "Language/JVM/Class 文件结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/对象.md"
+                "file": "Language/JVM/Class 文件结构.md"
               }
             }
           }
@@ -118,15 +117,15 @@
   },
   "active": "3c0cfc78084ba387",
   "lastOpenFiles": [
-    "Language/JVM/对象.md",
-    "附件/对象的内存布局.png",
-    "Language/Java/java.lang.Class.md",
-    "Language/JVM/JVM类加载机制.md",
-    "Language/JVM/JVM ClassLoader.md",
-    "附件/句柄访问对象.png",
-    "Language/JVM/未命名.md",
     "Language/JVM/Class 文件结构.md",
-    "附件/类对象和Class的关系.png",
-    "附件/Class文件结构.png"
+    "Language/JVM/对象.md",
+    "Language/JVM/类加载示例.md",
+    "Language/JVM/JVM简介.md",
+    "Language/JVM/JVM内存结构.md",
+    "Language/JVM/NameSpace.md",
+    "Language/JVM/字节码示例.md",
+    "Language/JVM/Hotspot字节码.md",
+    "Language/JVM/Java线程的实现.md",
+    "Language/JVM/Hotspot字节码结构.md"
   ]
 }
