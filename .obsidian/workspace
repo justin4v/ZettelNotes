@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/反射.md",
+            "file": "Language/Java/java.lang.Class.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/反射.md",
+            "file": "Language/Java/java.lang.Class.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/反射.md",
+                "file": "Language/Java/java.lang.Class.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/反射.md"
+                "file": "Language/Java/java.lang.Class.md"
               }
             }
           }
@@ -130,8 +130,8 @@
   },
   "active": "48c69ad54aa1fe57",
   "lastOpenFiles": [
-    "Language/Java/反射.md",
     "Language/Java/java.lang.Class.md",
+    "Language/Java/反射.md",
     "Language/JVM/对象.md",
     "Language/JVM/字节码示例.md",
     "Language/JVM/Class 文件结构.md",
