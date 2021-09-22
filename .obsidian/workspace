@@ -118,14 +118,14 @@
   "active": "4fe0d9315df040ba",
   "lastOpenFiles": [
     "Language/Java/final 和 static.md",
+    "Language/Java/集合操作实现.md",
+    "Language/Java/HashMap实现原理.md",
     "Language/Java/未命名.md",
     "Language/JVM/JVM ClassLoader.md",
     "Language/JVM/NameSpace.md",
     "Language/JVM/未命名.md",
     "Language/JVM/JVM内存结构.md",
     "Language/JVM/JVM类加载机制.md",
-    "Language/JVM/JVM简介.md",
-    "Language/JVM/Java线程的实现.md",
-    "Language/JVM/Hotspot字节码结构.md"
+    "Language/JVM/JVM简介.md"
   ]
 }
