@@ -117,15 +117,15 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
-    "OS/未命名.md",
+    "Language/Java/并发.md",
     "OS/程序性能的限制与解决.md",
+    "OS/未命名.md",
     "OS/线程.md",
     "OS/程序性能的限制.md",
     "Language/Java/未命名.md",
     "Language/JVM/Class 文件结构.md",
     "Language/Java/Java基础.md",
     "Language/Java/java.lang.Class.md",
-    "Language/Java/反射.md",
-    "Language/JVM/对象.md"
+    "Language/Java/反射.md"
   ]
 }
