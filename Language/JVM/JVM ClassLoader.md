@@ -16,3 +16,9 @@ JVM 加载 `class` 文件到内存有两种方式：
 
 ## 分类
 ![[ClassLoader分类.png]]
+
+
+# 创建实例对象
+当new 一个新对象或者引用静态成员变量时:
+1. JVM 中 ClassLoader SubSystem 将 java.lang.Class 对象加载到JVM中;
+2. JVM **根据类型信息创建实例对象或者静态变量的引用值**。
