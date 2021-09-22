@@ -60,7 +60,9 @@ public class RTTI
         }
         int lines=0;
         try {
-            Class c = Class.forName(args[0]);//看这里类的名字在编译的时候是无法得知的，只有在运行的时候动态传进去
+		   // 这里类的名字在编译的时候是无法得知的，只有在运行的时候动态传进去
+		   // 用了反射机制
+            Class c = Class.forName(args[0]);
             Method[] method = c.getMethods();
             Constructor[] constructors = c.getConstructors();
             if (args.length==1){
