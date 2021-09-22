@@ -41,13 +41,13 @@ public final native Class<?> getClass();
 `Class.forName(目标类名)`内部通过反射 API 根据目标类名将类**手动加载**到内存中，注意此时尚未创建对象实例。
 
 ## Example
-### 创建目标类对象实例
+#### 创建目标类对象实例
 
-`Object newInstance()`：调用默认构造器创建一个对象实例，
+`Object newInstance()`：调用默认构造器创建一个对象实例。
 
 > *反射机制只能调用无参的构造器*
 
-### 获得构造器
+#### 获得构造器
 
 -   `Constructor[] getConstructors()`：获得**所有public**构造器；
     
@@ -58,7 +58,7 @@ public final native Class<?> getClass();
 -   `Constructor getDeclaredConstructor(Class[] params)`：根据指定参数获得对应构造器。
     
 
-### 获得方法
+#### 获得方法
 
 -   `Method[] getMethods()`：获得**所有public**方法；
     
@@ -69,7 +69,7 @@ public final native Class<?> getClass();
 -   `Method getDeclaredMethod(String name, Class[] params)`：根据方法签名获得对应的**类自身声明方法**，**访问权限不限**。
     
 
-### 获得变量
+#### 获得变量
 
 -   `Field[] getFields()`：获得类中**所有public**变量
     
