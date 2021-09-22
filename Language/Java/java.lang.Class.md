@@ -17,4 +17,4 @@ RTTI（Run-Time Type Identification）运行时类型识别，其作用是**在�
 
 # 反射
 Class 对象记录了类的结构信息，如 static 变量和非static变量（类加载过程初始化）、方法（运行时）等。
-Class 提供了可以获取结构信息的方法主要用于反射。
+
