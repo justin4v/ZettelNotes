@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/Class 文件结构.md",
+            "file": "Language/Java/java.lang.Class.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/Class 文件结构.md",
+            "file": "Language/Java/java.lang.Class.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/Class 文件结构.md",
+                "file": "Language/Java/java.lang.Class.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/Class 文件结构.md"
+                "file": "Language/Java/java.lang.Class.md"
               }
             }
           }
@@ -128,17 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "6f5378592332c35c",
+  "active": "b9ca1101f250d78b",
   "lastOpenFiles": [
-    "Language/JVM/Class 文件结构.md",
-    "Language/JVM/对象.md",
-    "Language/JVM/类加载示例.md",
+    "Language/Java/java.lang.Class.md",
+    "Git/Rebase 和 Merge.md",
+    "Git/Conflict 解决.md",
     "Language/JVM/JVM简介.md",
-    "Language/JVM/JVM内存结构.md",
-    "Language/JVM/NameSpace.md",
-    "Language/JVM/字节码示例.md",
-    "Language/JVM/Hotspot字节码.md",
+    "Language/JVM/Class 文件结构.md",
+    "Language/JVM/类加载示例.md",
+    "Language/JVM/对象.md",
     "Language/JVM/Java线程的实现.md",
-    "Language/JVM/Hotspot字节码结构.md"
+    "Language/JVM/JVM ClassLoader.md",
+    "Language/JVM/JVM类加载机制.md"
   ]
 }
