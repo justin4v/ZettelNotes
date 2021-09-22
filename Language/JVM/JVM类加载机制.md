@@ -120,6 +120,7 @@ System.out.println(ConstClass.HELLOWORLD);
 4.  最后调用构造函数初始化；
 5.  main方法的类首先初始化。
 
+![[类初始化顺序示意.png]]
 
 ### 4 类初始化`<clinit>` 
 -  *`<clinit>`只会执行一次*；

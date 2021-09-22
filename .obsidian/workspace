@@ -12,20 +12,7 @@
             "file": "Language/JVM/对象.md",
             "mode": "source"
           }
-        },
-        "group": "b30fc657cf208d9b"
-      },
-      {
-        "id": "bc7fbf11b89e7208",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/JVM/对象.md",
-            "mode": "preview"
-          }
-        },
-        "group": "b30fc657cf208d9b"
+        }
       }
     ],
     "direction": "vertical"
@@ -130,15 +117,15 @@
   },
   "active": "4fe0d9315df040ba",
   "lastOpenFiles": [
+    "Language/JVM/对象.md",
+    "Language/Java/java.lang.Class.md",
+    "Language/JVM/JVM类加载机制.md",
+    "Language/JVM/JVM ClassLoader.md",
+    "附件/句柄访问对象.png",
     "Language/JVM/未命名.md",
     "Language/JVM/Class 文件结构.md",
-    "Language/Java/java.lang.Class.md",
     "附件/类对象和Class的关系.png",
     "附件/Class文件结构.png",
-    "附件/class加载的实际流程.png",
-    "附件/Pasted image 20210917104141.png",
-    "附件/Pasted image 20210922110144.png",
-    "Language/JVM/JVM ClassLoader.md",
-    "Language/Java/未命名.md"
+    "附件/class加载的实际流程.png"
   ]
 }
