@@ -12,20 +12,7 @@
             "file": "Language/Java/RTTI.md",
             "mode": "source"
           }
-        },
-        "group": "2826c8c52379009f"
-      },
-      {
-        "id": "7af4731a029c7eee",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/RTTI.md",
-            "mode": "preview"
-          }
-        },
-        "group": "2826c8c52379009f"
+        }
       }
     ],
     "direction": "vertical"

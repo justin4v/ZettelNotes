@@ -11,35 +11,42 @@ RTTI 和 反射的区别：
 ## Example
 
 ### RTTI
-有以下两种方式可以获取到Class对象：
+有两种方式可以获取到 Class 对象：
+```java
+public static void main(String[] args)
+{
+	try {
+		//第一种方式
+		Class rtti = Class.forName("com.jomoo.test.rtti.RTTI");
+		//第二种方式
+		Class type=RTTI.class;
+	} catch (ClassNotFoundException e) {
+		e.printStackTrace();
+	}
+}
+```
 
-    public static void main(String[] args)
-    {
-        try {
-            //第一种方式
-            Class rtti = Class.forName("com.jomoo.test.rtti.RTTI");
-            //第二种方式
-            Class type=RTTI.class;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
- 可以看到，采用RTTI的方式必须在写程序的时候就知道了类的名字，才能获取到Class对象对这个类的引用，并利用这个引用，得到大量关于这个类的信息，包括接口，父类，方法，静态成员，甚至是像newInstance()方法这样的一个实现“虚拟构造器”的一种方式。
-
+RTTI 的方式必须在*写程序的时候就知道了类的名字*，才能获取到Class对象对这个类的引用。利用这个引用，得到大量关于这个类的信息，包括接口，父类，方法，静态成员，甚至是像newInstance() 方法这样的一个实现“虚拟构造器”的一种方式。
+ 
+```java
 RTTI r =(RTTI)rtti.newInstance();//newInstance的类必须要有一个缺省构造器
+```
 
-         另外需要提一个经常用到 instanceof 该关键字的调用其实就是使用了Class对象，并且返回一个布尔值。
+ 另外，instanceof 关键字其实使用了 Class 对象比较，并且返回一个布尔值。
 
-            Object o = rtti.newInstance();
-            if (o instanceof RTTI){
-                System.out.println(true);//这里需要注意的是，如果 o 是 RTTI的子类的话，返回的也会true;
-            }
+```java
+Object o = rtti.newInstance();
+if (o instanceof RTTI){
+	System.out.println(true);//这里需要注意的是，如果 o 是 RTTI的子类的话，返回的也会true;
+}
+```
 
-三、反射
+### 反射
 
-Java中有时候在编译器为程序生成代码很久之后才会出现要处理的那个类，那么这个时候怎么才能处理这个类呢，即在编译的时候根本无法获知这个对象所属的类。答案就是利用Java的反射机制。废话不多说，看完下面这个代码你就很清楚的明白 RTTI 和 反射的区别在哪里了。
+Java 中有时候在编译的时候根本无法获知这个对象所属的类，需要利用Java的反射机制。
+示例如下：
 
+```java
 public class RTTI
 {
     private  static final String usage="usage";
@@ -83,3 +90,4 @@ public class RTTI
         }
     }
 }
+```
