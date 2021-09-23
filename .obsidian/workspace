@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/Java线程模型.md",
+            "file": "OS/线程模型.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "72d1ab0c9f94f70d"
+      },
+      {
+        "id": "700e46df016d6910",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "OS/线程模型.md",
+            "mode": "preview"
+          }
+        },
+        "group": "72d1ab0c9f94f70d"
       }
     ],
     "direction": "vertical"
@@ -76,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/Java线程模型.md",
+                "file": "OS/线程模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/Java线程模型.md"
+                "file": "OS/线程模型.md"
               }
             }
           }
@@ -115,17 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "16df5991288b2b22",
+  "active": "700e46df016d6910",
   "lastOpenFiles": [
-    "Language/JVM/Java线程的实现.md",
-    "OS/进程.md",
-    "OS/程序性能的限制与解决.md",
+    "OS/线程模型.md",
     "OS/线程.md",
+    "Language/JVM/Java线程模型.md",
+    "Language/JVM/未命名.md",
+    "Language/JVM/Hotspot字节码.md",
+    "OS/程序性能的限制与解决.md",
+    "OS/进程.md",
+    "Language/JVM/Java线程的实现.md",
     "README.md",
-    "Language/Java/并发.md",
-    "OS/未命名.md",
-    "OS/程序性能的限制.md",
-    "Language/Java/未命名.md",
-    "Language/JVM/Class 文件结构.md"
+    "Language/Java/并发.md"
   ]
 }
