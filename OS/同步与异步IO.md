@@ -1,7 +1,7 @@
 # 同步与异步
 POSIX 定义如下：
-- 同步 I/O 操作（synchronous I/O operation）：导致请求进程阻塞，直到 I/O 操作完成；
-- 异步 I/O 操作（asynchronous I/O operation）：不会导致请求进程阻塞。
+- 同步 I/O 操作（synchronous I/O operation）：An I/O operation that **causes the thread requesting the I/O to be blocked** from further use of the processor until that I/O operation completes；
+- 异步 I/O 操作（asynchronous I/O operation）：An I/O operation that does not of itself cause the thread requesting the I/O to be blocked from further use of the processor.。
 
 # 阻塞与非阻塞
 ## Blocking
