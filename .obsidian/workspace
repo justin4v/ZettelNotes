@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/阻塞和非阻塞.md",
+            "file": "OS/IO模型.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/阻塞和非阻塞.md",
+                "file": "OS/IO模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/阻塞和非阻塞.md"
+                "file": "OS/IO模型.md"
               }
             }
           }
@@ -117,11 +117,11 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
-    "OS/阻塞和非阻塞.md",
+    "OS/IO模型.md",
     "OS/同步与异步.md",
+    "OS/阻塞和非阻塞.md",
     "OS/未命名.md",
     "OS/同步与异步IO.md",
-    "OS/IO模型.md",
     "附件/Pasted image 20210923152246.png",
     "附件/Pasted image 20210923152204.png",
     "OS/线程模型.md",
