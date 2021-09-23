@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发.md",
+            "file": "Language/JVM/Java线程模型.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发.md",
+                "file": "Language/JVM/Java线程模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发.md"
+                "file": "Language/JVM/Java线程模型.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
-    "Language/Java/并发.md",
+    "Language/JVM/Java线程的实现.md",
+    "OS/进程.md",
     "OS/程序性能的限制与解决.md",
-    "OS/未命名.md",
     "OS/线程.md",
+    "README.md",
+    "Language/Java/并发.md",
+    "OS/未命名.md",
     "OS/程序性能的限制.md",
     "Language/Java/未命名.md",
-    "Language/JVM/Class 文件结构.md",
-    "Language/Java/Java基础.md",
-    "Language/Java/java.lang.Class.md",
-    "Language/Java/反射.md"
+    "Language/JVM/Class 文件结构.md"
   ]
 }
