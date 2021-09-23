@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/IO模型.md",
+            "file": "OS/同步与异步IO.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/IO模型.md",
+                "file": "OS/同步与异步IO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/IO模型.md"
+                "file": "OS/同步与异步IO.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
-    "OS/IO模型.md",
     "OS/同步与异步IO.md",
+    "OS/IO模型.md",
+    "附件/Pasted image 20210923152246.png",
+    "附件/Pasted image 20210923152204.png",
     "OS/未命名.md",
     "OS/线程模型.md",
     "OS/线程.md",
     "Language/JVM/Java线程模型.md",
     "Language/JVM/未命名.md",
-    "Language/JVM/Hotspot字节码.md",
-    "OS/程序性能的限制与解决.md",
-    "OS/进程.md"
+    "Language/JVM/Hotspot字节码.md"
   ]
 }
