@@ -6,15 +6,12 @@
 
 
 ## 异步
-发出功能调用后，立即从功能调用中返回（没有得到实际操作结果），并可。实际处理这个调用的部件在完成后，通过状态、通知和回调来通知调用者。
-
-
-POSIX 定义如下：
-- 同步 I/O 操作（synchronous I/O operation）：An I/O operation that **causes the thread requesting the I/O to be blocked** from further use of the processor until that I/O operation completes；
-- 异步 I/O 操作（asynchronous I/O operation）：An I/O operation that **does not of itself cause the thread requesting the I/O to be blocked** from further use of the processor. This implies that the process and the I/O operation may be running concurrently.。
+发出功能调用后，*立即从功能调用中返回（没有得到实际操作结果），并可进行下一步操作*。
+如将调用交给 worker 处理后即可从调用中返回。worker 完成处理后，通过状态、通知和回调来通知原调用者处理结果。
 
 # 阻塞与非阻塞
 ## Blocking
-
+阻塞调用是指调用结果返回之前，当前线程会被挂起（线程进入非可执行状态，在这个状态下，cpu不会给线程分配时间片，即线程暂停运行）。函数只有在得到结果之后才会返回。
 
 ## Non-Blocking
+在不能立刻得到结果之前，该函数不会阻塞当前线程，而会立刻返回。
