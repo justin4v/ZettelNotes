@@ -6,3 +6,7 @@ POSIX 定义如下：
 ## Blocking
 POSIX 定义：
 A property of an open file description that causes function calls associated with it to wait for the requested action to be performed before returning.
+
+## Non-Blocking
+POSIX 定义：
+A property of an open file description that causes function calls involving it to return without delay when it is detected that the requested action associated with the function call cannot be completed without unknown delay.
