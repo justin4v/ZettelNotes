@@ -1,7 +1,11 @@
 # Conception
-bat 脚本实际是 DOS 批处理脚本，是将一系列 [[#DOS]] 命令按顺序排列而形成的集合，运行在 windows 命令行环境上。
+bat 脚本实际是 DOS下的批处理脚本（Batch Script File ），是将一系列 [[#DOS]] 命令按顺序排列而形成的集合，运行在 windows 命令行环境上。
 
 # 基本语法
+batch 脚本语法特点：
+1. 大小写不敏感；
+2. 
+
 ## 注释
 - rem 标记注释语句
 
@@ -10,6 +14,8 @@ rem 这是注释语句
 echo hello
 ```
 
+
+## 输出
 
 
 # DOS
