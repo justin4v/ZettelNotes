@@ -6,3 +6,5 @@ bat 脚本实际是 DOS 批处理脚本，是将一系列 DOS 命令按顺序排
 
 
 # DOS
+## Conception
+- DOS（Disk Operating System）是一款早期的操作系统。
