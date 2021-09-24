@@ -12,7 +12,20 @@
             "file": "OS/IO模型.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "4fb973b5bbd513f2"
+      },
+      {
+        "id": "969047817add14f6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "OS/IO模型.md",
+            "mode": "preview"
+          }
+        },
+        "group": "4fb973b5bbd513f2"
       }
     ],
     "direction": "vertical"
@@ -115,7 +128,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "16df5991288b2b22",
+  "active": "969047817add14f6",
   "lastOpenFiles": [
     "OS/IO模型.md",
     "OS/同步与异步.md",
