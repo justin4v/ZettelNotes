@@ -5,7 +5,7 @@ bat 脚本实际是 DOS 批处理脚本，是将一系列 [[#DOS]] 命令按顺�
 ## 注释
 - rem 标记注释语句
 
-```BAT
+```batch
 rem 这是注释语句
 echo hello
 ```
