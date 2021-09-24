@@ -20,6 +20,13 @@ echo hello
 echo hello world
 ```
 将会输出 “hello world”
+
+## 变量
+使用 `SET` 命令定义变量并为赋值
+```batch
+SET name=justin
+```
+
 # DOS
 
 - DOS（Disk Operating System）是一款早期的操作系统；
