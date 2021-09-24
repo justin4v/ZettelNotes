@@ -11,6 +11,7 @@ batch 脚本语法特点：
 
 ```batch
 rem 这是注释语句
+::  这也是注释
 echo hello
 ```
 
@@ -26,6 +27,13 @@ echo hello world
 ```batch
 SET name=justin
 ```
+
+### SET /P
+用于提示用户输入
+```batch
+set /p name=请输入你的名字:
+```
+
 
 # DOS
 
