@@ -4,7 +4,7 @@ bat 脚本实际是 DOS下的批处理脚本（Batch Script File ），是将一
 # 基本语法
 batch 脚本语法特点：
 1. 大小写不敏感，不论是变量名还是命令，大小写是一样的；
-2. 命令的前后空格会被忽略，set 
+2. 命令的前后空格会被忽略，set 变量的前后尽量不要有空格，set 字符值会将空格当成值。
 
 ## 注释
 - rem 标记注释语句
@@ -16,8 +16,10 @@ echo hello
 
 
 ## 输出
-
-
+```batch
+echo hello world
+```
+将会输出 “hello world”
 # DOS
 
 - DOS（Disk Operating System）是一款早期的操作系统；
