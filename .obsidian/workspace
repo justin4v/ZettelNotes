@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/BAT脚本.md",
+            "file": "Language/Java/集合操作实现.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/BAT脚本.md",
+                "file": "Language/Java/集合操作实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/BAT脚本.md"
+                "file": "Language/Java/集合操作实现.md"
               }
             }
           }
@@ -117,6 +117,8 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Language/Java/集合操作实现.md",
+    "Language/Java/并发.md",
     "日常记录/BAT脚本.md",
     "日常记录/未命名.md",
     "Linux/bash/Source命令.md",
@@ -124,8 +126,6 @@
     "Linux/bash/Environment.md",
     "OS/IO模型.md",
     "OS/同步与异步.md",
-    "OS/阻塞和非阻塞.md",
-    "OS/未命名.md",
-    "OS/同步与异步IO.md"
+    "OS/阻塞和非阻塞.md"
   ]
 }
