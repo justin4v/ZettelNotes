@@ -33,6 +33,18 @@ SET name=justin
 ```batch
 set /p name=请输入你的名字:
 ```
+用户会看到“请输入你的名字:”的提示，用户输入后，会赋值给name 变量。
+
+### SET /A
+可进行表达式运算后赋值
+```batch
+set /a sum=2+2+2
+```
+结果 a=6
+
+### 访问变量
+使用 *%varName%* 访问变量
+ 
 
 
 # DOS
