@@ -6,28 +6,13 @@
       {
         "id": "16df5991288b2b22",
         "type": "leaf",
-        "dimension": 39.00789177001127,
         "state": {
           "type": "markdown",
           "state": {
             "file": "日常记录/BAT脚本.md",
             "mode": "source"
           }
-        },
-        "group": "4fb973b5bbd513f2"
-      },
-      {
-        "id": "969047817add14f6",
-        "type": "leaf",
-        "dimension": 60.99210822998873,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "日常记录/BAT脚本.md",
-            "mode": "preview"
-          }
-        },
-        "group": "4fb973b5bbd513f2"
+        }
       }
     ],
     "direction": "vertical"
@@ -132,6 +117,7 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "日常记录/BAT脚本.md",
     "日常记录/未命名.md",
     "Linux/bash/Source命令.md",
     "Linux/bash/Export命令.md",
@@ -140,7 +126,6 @@
     "OS/同步与异步.md",
     "OS/阻塞和非阻塞.md",
     "OS/未命名.md",
-    "OS/同步与异步IO.md",
-    "附件/Pasted image 20210923152246.png"
+    "OS/同步与异步IO.md"
   ]
 }
