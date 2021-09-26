@@ -20,14 +20,18 @@ echo hello
 ```batch
 rem 输出echo命令行和“hello world”
 echo hello world
+
 rem 只输出“hello world”
 @echo hello world
 
-rem 打开命令行回显，同时本命令行回显
+rem 打开（以后的）命令行回显，但是本命令行回显
 echo on
 
+rem 关闭（以后的）命令行回显，但是本命令行回显
+echo off
 ```
-将会输出 “hello world”
+
+使用 '@' 关闭本命令行回显
 
 ## 变量
 使用 `SET` 命令定义变量并为赋值
