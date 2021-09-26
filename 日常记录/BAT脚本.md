@@ -69,8 +69,8 @@ echo wait a moment.. & pause > nul 输出"wait a moment.."并等待操作
 
 ## errorlevel
 程序返回码：
-- 成功返回0
-- 失败返回为1
+- *成功返回 0；*
+- *失败返回为 1*。
 
 ## start
 打开一个单独的窗口以运行指定的程序或命令，*主程序继续向下执行*
@@ -84,6 +84,16 @@ start [command/program] [parameters]
 ```batch
 EXIT [/B] [exitCode]
 ```
+
+*'/B'参数指定退出当前 batch 脚本*。
+直接执行
+```batch
+rem 退出 CMD 程序并标记为成功状态
+exit 0
+rem 退出 CMD 程序并标记为失败状态
+exit 1
+```
+
 
 # DOS
 
