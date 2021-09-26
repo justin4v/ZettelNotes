@@ -94,7 +94,55 @@ rem 退出 CMD 程序并标记为失败状态
 exit 1
 ```
 
+## cls
+清除当前屏幕
 
+# 文件操作命令
+
+（1）copy 文件复制命令
+
+copy d:\temp1\file1.txt d:\temp2 将文件file1.txt复制到temp2目录，有相同文件提示 copy d:\temp1\file1.txt d:\temp2 /y 将文件file1.txt复制到temp2目录,有相同文件覆盖原文件，不提示 copy d:\temp1\* d:\temp2 /y 将temp1目录下的所有文件复制到temp2目录,有相同文件覆盖原文件，不提示
+
+（2）xcopy 目录复制命令
+
+xcopy temp1 d:\temp2 /y 将temp1目录下的文件复制到temp2目录，不包括temp1子目录下的文件。 xcopy temp1 d:\temp2 /s /e /y 将temp1目录下的文件复制到temp2目录，包括temp1子目录下的文件
+
+（3）type 显示文件内容命令
+
+type file1.txt 查看file1文件内容 type file1.txt file2.txt  #查看file1和file2文件内容 type file1.txt > file2.txt  #将file1.txt文件内容重定向到file2.txt type nul > file1.txt #创建文件
+
+（4）ren 重命名文件命令
+
+ren d:\temp1\file1.txt file2.txt 修改temp目录下的file1.txt文件名为file2.txt
+
+（5）del 删除文件命令
+
+del d:\temp1\file1.txt 删除temp目录下的file1.txt文件 del d:\temp\*.txt  删除temp目录下的后缀为.txt的文件
+
+# 目录操作命令
+
+（1） cd 显示当前目录或切换目录
+
+cd d:\temp1 切换到temp1目录，当前目录是d盘 cd /d d:\temp1 切换到temp1目录，当前目录非d盘 cd .. 切换到上一级目录
+
+（2）mkdir 创建目录
+
+mkdir test 在当前目录下创建test目录 mkdir d:\temp1\test 在temp1目录下创建test目录，如果temp1目录不存在，自动创建
+
+（3）rmdir 删除目录
+
+rmdir d:\temp1 删除空目录temp1，非空则删除失败 rmdir d:\temp1 /s /q 删除temp1目录，包括子目录(/s)，并且删除时不提示(/q)
+
+（4）dir 显示目录下的子目录和文件
+
+dir d:\temp1 显示temp1目录下的文件和目录信息，显示信息包含日期、时间、文件类型和文件名 dir d:\temp1 /a:a /b 只显示temp1目录下（不包括子目录）的文件的绝对路径，不显示日期、时间、文件类型和文件名 dir d:\temp1 /b /s /o:n /a:a 显示temp1路径下（包括子目录）的所有文件的绝对路径。输出文件按照文件名数字顺序排序 dir d:\temp1\*.txt /a:a /b /o:n 显示.txt后缀文件，并且按照文件名顺序排序(/on),其他排序方法查看help dir
+
+ 说明：
+
+ （1）/b表示去除摘要信息，仅显示完整路径、/s表示循环列举文件夹中的内容、/o:n 表示根据文件名排序、/a:a 表示只枚举文件而不枚举其他。
+
+ （2）单独dir /b与dir /s 都不会显示完整路径，只有这两个组合才会显示完整路径。
+ 
 # DOS
 
 - DOS（Disk Operating System）是一款早期的操作系统；
