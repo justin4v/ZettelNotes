@@ -321,9 +321,19 @@ FOR /F ["options"] %variable IN ("string") DO command [command-parameters]
 FOR /F ["options"] %variable IN ('command') DO command [command-parameters]
 ```
 
- 说明：可以处理
- - 文件内容（file-set）、
- - 字符串("string") 以及执行指定命令('command') 返回回的值。
+
+**/f 可以处理的内容：**
+ - 文件内容（file-set）;
+ - 字符串("string") ;
+ - 执行指定命令('command') 返回回的值。
+
+**\["options"] 选项:**
+1. eol=c 处理时跳过起始为c字符的行，通常用于跳过注释行。
+2. skip=n  跳过文件开始的n行
+3. delims=xxx  指定分隔符集。这个替换了空格和制表符的默认分隔符集。
+4. tokens=x,y,m-n  被分隔各字段的处理。
+5. usebackq   需使用双引号包含文件名时考虑，具体使用执行help for查看
+
 
 # DOS
 
