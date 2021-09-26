@@ -66,6 +66,25 @@ echo wait a moment.. & pause > nul 输出"wait a moment.."并等待操作
 
 *pause 命令可以保持当前窗口不会立即关闭*
 
+
+## errorlevel
+程序返回码：
+- 成功返回0
+- 失败返回为1
+
+## start
+打开一个单独的窗口以运行指定的程序或命令，*主程序继续向下执行*
+```batch
+start [command/program] [parameters]
+```
+
+
+## exit
+退出CMD.EXE程序或当前批处理脚本
+```batch
+EXIT [/B] [exitCode]
+```
+
 # DOS
 
 - DOS（Disk Operating System）是一款早期的操作系统；
