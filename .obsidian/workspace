@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Script/batch/BATCH 脚本.md",
+            "file": "Design/未命名.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Script/batch/BATCH 脚本.md",
+                "file": "Design/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Script/batch/BATCH 脚本.md"
+                "file": "Design/未命名.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Design/未命名.md",
+    "Design/Command.md",
+    "Design/Visitor.md",
+    "Design/设计模式.md",
+    "Big Data/HDFS.md",
+    "Big Data/未命名.md",
     "Script/batch/BATCH 脚本.md",
     "Script/batch/BAT脚本.md",
     "Linux/未命名.md",
-    "OS/IO模型.md",
-    "日常记录/BAT脚本.md",
-    "日常记录/未命名.md",
-    "Linux/bash/Source命令.md",
-    "Linux/bash/Export命令.md",
-    "Linux/bash/Environment.md",
-    "OS/同步与异步.md"
+    "OS/IO模型.md"
   ]
 }
