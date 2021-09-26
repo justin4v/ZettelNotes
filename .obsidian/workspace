@@ -7,8 +7,11 @@
         "id": "16df5991288b2b22",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Script/batch/BAT脚本.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Script/batch/BAT脚本.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Script/batch/BAT脚本.md"
+              }
             }
           }
         ]
@@ -111,6 +117,7 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Script/batch/BAT脚本.md",
     "Linux/未命名.md",
     "OS/IO模型.md",
     "日常记录/BAT脚本.md",
@@ -119,7 +126,6 @@
     "Linux/bash/Export命令.md",
     "Linux/bash/Environment.md",
     "OS/同步与异步.md",
-    "OS/阻塞和非阻塞.md",
-    "OS/未命名.md"
+    "OS/阻塞和非阻塞.md"
   ]
 }
