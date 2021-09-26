@@ -266,7 +266,8 @@ IF DEFINED variable command
  3. command  指定对每个文件执行的命令；
  4. command-parameters 为特定命令指定参数或命令行开关。
  
-  for语句还有4个参数，分别是 /d /r /l /f
+  
+  for语句还有4个参数，*指定 (set) 的形式和匹配规则*，分别是 /d /r /l /f
   
   ### /d
   /d: Directory set 中与目录名匹配
@@ -284,6 +285,45 @@ pause
 
 ### /r
 /r: recursive 递归查询指定目录下的匹配文件
+
+实例：打印D盘目录及子目录下的后缀为.txt和.py的文件
+```batch
+@echo off
+for /r d:/temp %%i in ( *.txt *.py ) do (
+  echo %%i 
+  )
+pause
+```
+
+
+### /L
+/L: list 表示以增量形式从开始到结束的一个数字序列。
+(1,1,5) 将产生序列1 2 3 4 5，(5,-1,1)将产生序列(5 4 3 2 1)
+
+实例：打印10以内的奇数
+```batch
+@echo off
+for /l %%i in (1,2,10) do (
+  echo %%i 
+  )
+pause
+```
+
+
+### /f
+三种形式:
+
+```batch
+FOR /F ["options"] %variable IN (file-set) DO command [command-parameters] 
+
+FOR /F ["options"] %variable IN ("string") DO command [command-parameters] 
+
+FOR /F ["options"] %variable IN ('command') DO command [command-parameters]
+```
+
+ 说明：可以处理
+ - 文件内容（file-set）、
+ - 字符串("string") 以及执行指定命令('command') 返回回的值。
 
 # DOS
 
