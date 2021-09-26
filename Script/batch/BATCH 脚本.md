@@ -238,8 +238,12 @@ IF [NOT] string1==string2 command
 IF [NOT] EXIST filename command
 
 rem 扩展
+
+::  /I 说明字符串比较不分大小写
 IF [/I] string1 compare-op string2 command
 IF CMDEXTVERSION number command
+
+rem 变量是否被定义
 IF DEFINED variable command
 ```
 
@@ -248,8 +252,19 @@ IF DEFINED variable command
 2. ERRORLEVEL number：如果最后运行的程序返回*一个等于或大于number*的退出代码，条件为 true；
 3. string1\==string2：字符串相等；
 4.  EXIST filename：如果指定的文件名存在，指定条件为 true；
-5.  compare-op：EQU - 等于、NEQ - 不等于、LSS - 小于、LEQ - 小于或等于、GTR - 大于、GEQ - 大于或等于。
+5.  compare-op：EQU - 等于、NEQ - 不等于、LSS - 小于、LEQ - 小于或等于、GTR - 大于、GEQ - 大于或等于；
 
+ ## for
+ 
+ ```batch
+ FOR %variable IN (set) DO command [command-parameters]
+ ```
+ 
+ 说明：
+ 1. \%variable  指定一个单一字母可替换的参数。注意：批处理脚本中使用 %%variable；
+ 2. (set)  指定一个或一组文件。可以使用通配符；
+ 3. command  指定对每个文件执行的命令；
+ 4. command-parameters 为特定命令指定参数或命令行开关。
  
 # DOS
 
