@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Script/batch/BATCH 脚本.md",
+            "file": "Design/Framework.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Script/batch/BATCH 脚本.md",
+                "file": "Design/Framework.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Script/batch/BATCH 脚本.md"
+                "file": "Design/Framework.md"
               }
             }
           }
@@ -117,13 +117,13 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Design/Framework.md",
     "Script/batch/BATCH 脚本.md",
     "Design/设计模式/设计模式.md",
     "Design/设计模式.md",
     "Design/Architect.md",
     "Big Data/Spark RDD.md",
     "Big Data/HDFS.md",
-    "Design/Framework.md",
     "Design/Software Framework.md",
     "Design/未命名.md",
     "Design/Command.md"
