@@ -57,6 +57,14 @@ set /a sum=2+2+2
 使用 *%varName%* 访问变量
  
 
+## pause
+```batch
+pause 等待并输出"请按任意键继续. . ."
+pause > nul 等待但不输出提示语（输出到名为 null 的文件）
+echo wait a moment.. & pause > nul 输出指定输出语"wait a moment.."并等待操作
+```
+
+*pause 命令可以保持当前窗口不会立即关闭*
 
 # DOS
 
