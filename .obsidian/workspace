@@ -12,7 +12,20 @@
             "file": "Script/batch/BATCH 脚本.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "359a2f0a2ff05d57"
+      },
+      {
+        "id": "802d9bce05e2376a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Script/batch/BATCH 脚本.md",
+            "mode": "preview"
+          }
+        },
+        "group": "359a2f0a2ff05d57"
       }
     ],
     "direction": "vertical"

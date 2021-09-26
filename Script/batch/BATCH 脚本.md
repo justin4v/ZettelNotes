@@ -261,11 +261,30 @@ IF DEFINED variable command
  ```
  
  说明：
- 1. \%variable  指定一个单一字母可替换的参数。注意：批处理脚本中使用 %%variable；
+ 1. \%variable  指定一个单一字母可替换的参数。注意：批处理脚本中使用 \%%variable；
  2. (set)  指定一个或一组文件。可以使用通配符；
  3. command  指定对每个文件执行的命令；
  4. command-parameters 为特定命令指定参数或命令行开关。
  
+  for语句还有4个参数，分别是 /d /r /l /f
+  
+  ### /d
+  /d: Directory set 中与目录名匹配
+  
+实例：打印C盘根目录下的目录名
+   
+```batch
+@echo off
+for /d %%i in (c:/*) do (
+  echo %%i 
+  )
+pause
+```
+
+
+### /r
+/r: recursive 递归查询指定目录下的匹配文件
+
 # DOS
 
 - DOS（Disk Operating System）是一款早期的操作系统；
