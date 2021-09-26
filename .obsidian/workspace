@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Script/batch/BAT脚本.md",
+            "file": "Script/batch/BATCH 脚本.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "f5223ed321bcb59a"
+      },
+      {
+        "id": "c276a2e5bfd12591",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Script/batch/BATCH 脚本.md",
+            "mode": "preview"
+          }
+        },
+        "group": "f5223ed321bcb59a"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082
+    "width": 205.50078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Script/batch/BAT脚本.md",
+                "file": "Script/batch/BATCH 脚本.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Script/batch/BAT脚本.md"
+                "file": "Script/batch/BATCH 脚本.md"
               }
             }
           }
@@ -117,6 +131,7 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Script/batch/BATCH 脚本.md",
     "Script/batch/BAT脚本.md",
     "Linux/未命名.md",
     "OS/IO模型.md",
@@ -125,7 +140,6 @@
     "Linux/bash/Source命令.md",
     "Linux/bash/Export命令.md",
     "Linux/bash/Environment.md",
-    "OS/同步与异步.md",
-    "OS/阻塞和非阻塞.md"
+    "OS/同步与异步.md"
   ]
 }

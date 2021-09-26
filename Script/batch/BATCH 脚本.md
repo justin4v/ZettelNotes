@@ -99,13 +99,27 @@ exit 1
 
 # 文件操作命令
 
-（1）copy 文件复制命令
+## copy
+```batch
+rem 将文件file1.txt复制到temp2目录，有相同文件提示
+copy d:\temp1\file1.txt d:\temp2 
 
-copy d:\temp1\file1.txt d:\temp2 将文件file1.txt复制到temp2目录，有相同文件提示 copy d:\temp1\file1.txt d:\temp2 /y 将文件file1.txt复制到temp2目录,有相同文件覆盖原文件，不提示 copy d:\temp1\* d:\temp2 /y 将temp1目录下的所有文件复制到temp2目录,有相同文件覆盖原文件，不提示
+rem 将文件复制到目录,有相同文件覆盖原文件，不提示
+copy d:\temp1\file1.txt d:\temp2 /y  
 
-（2）xcopy 目录复制命令
+rem 将目录下的所有文件复制到目录,有相同文件覆盖原文件，不提示
+copy d:\temp1\* d:\temp2 /y 
+```
 
-xcopy temp1 d:\temp2 /y 将temp1目录下的文件复制到temp2目录，不包括temp1子目录下的文件。 xcopy temp1 d:\temp2 /s /e /y 将temp1目录下的文件复制到temp2目录，包括temp1子目录下的文件
+
+## xcopy
+```batch
+rem 将temp1目录下的文件复制到temp2目录，不包括temp1子目录下的文件
+xcopy temp1 d:\temp2 /y  
+
+rem 将temp1目录下的文件复制到temp2目录，包括temp1子目录下的文件
+xcopy temp1 d:\temp2 /s /e /y 
+```
 
 （3）type 显示文件内容命令
 
