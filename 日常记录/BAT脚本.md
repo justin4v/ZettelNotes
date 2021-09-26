@@ -18,7 +18,14 @@ echo hello
 
 ## 输出
 ```batch
+rem 输出echo命令行和“hello world”
 echo hello world
+rem 只输出“hello world”
+@echo hello world
+
+rem 打开命令行回显，同时本命令行回显
+echo on
+
 ```
 将会输出 “hello world”
 
