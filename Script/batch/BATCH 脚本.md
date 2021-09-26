@@ -232,7 +232,23 @@ dir d:\temp1\*.txt /a:a /b /o:n
 # 控制流
 
 ## if/else
+```batch
+IF [NOT] ERRORLEVEL number command
+IF [NOT] string1==string2 command
+IF [NOT] EXIST filename command
 
+rem 扩展
+IF [/I] string1 compare-op string2 command
+IF CMDEXTVERSION number command
+IF DEFINED variable command
+```
+
+说明：
+1. NOT: 逻辑非；
+2. ERRORLEVEL number：如果最后运行的程序返回*一个等于或大于number*的退出代码，条件为 true；
+3. string1\==string2：字符串相等；
+4.  EXIST filename：如果指定的文件名存在，指定条件为 true；
+5.  compare-op：EQU - 等于、NEQ - 不等于、LSS - 小于、LEQ - 小于或等于、GTR - 大于、GEQ - 大于或等于。
 
  
 # DOS
