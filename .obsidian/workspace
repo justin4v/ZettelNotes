@@ -12,20 +12,7 @@
             "file": "日常记录/BAT脚本.md",
             "mode": "source"
           }
-        },
-        "group": "4e44420adf27c7fd"
-      },
-      {
-        "id": "7a27092651ce1c77",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "日常记录/BAT脚本.md",
-            "mode": "preview"
-          }
-        },
-        "group": "4e44420adf27c7fd"
+        }
       }
     ],
     "direction": "vertical"
@@ -131,14 +118,14 @@
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
     "日常记录/BAT脚本.md",
+    "日常记录/未命名.md",
+    "Linux/bash/Source命令.md",
+    "Linux/bash/Export命令.md",
+    "Linux/bash/Environment.md",
     "OS/IO模型.md",
-    "Language/Java/反射.md",
-    "Language/Java/java.lang.Class.md",
-    "Language/Java/final 和 static.md",
-    "Language/JVM/JVM类加载机制.md",
-    "Language/JVM/对象.md",
-    "Language/Javac.md",
-    "Language/Java/集合操作实现.md",
-    "Language/Java/并发.md"
+    "OS/同步与异步.md",
+    "OS/阻塞和非阻塞.md",
+    "OS/未命名.md",
+    "OS/同步与异步IO.md"
   ]
 }
