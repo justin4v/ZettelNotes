@@ -117,25 +117,47 @@ copy d:\temp1\* d:\temp2 /y
 rem 将temp1目录下的文件复制到temp2目录，不包括temp1子目录下的文件
 xcopy temp1 d:\temp2 /y  
 
-rem 将temp1目录下的文件复制到temp2目录，包括temp1子目录下的文件
+rem 将目录下的文件复制到目录，包括子目录下的文件
 xcopy temp1 d:\temp2 /s /e /y 
 ```
 
-（3）type 显示文件内容命令
+xcopy 可以忽略子目录
 
-type file1.txt 查看file1文件内容 type file1.txt file2.txt  #查看file1和file2文件内容 type file1.txt > file2.txt  #将file1.txt文件内容重定向到file2.txt type nul > file1.txt #创建文件
+## type 
+显示文件内容命令
+```batch
+rem 查看file1文件内容
+type file1.txt  
+type file1.txt file2.txt  
 
-（4）ren 重命名文件命令
 
-ren d:\temp1\file1.txt file2.txt 修改temp目录下的file1.txt文件名为file2.txt
+rem 将file1.txt文件内容重定向到file2.txt
+type file1.txt > file2.txt   
 
-（5）del 删除文件命令
+rem 创建文件
+type nul > file1.txt 
+```
 
-del d:\temp1\file1.txt 删除temp目录下的file1.txt文件 del d:\temp\*.txt  删除temp目录下的后缀为.txt的文件
+## ren 
+重命名文件命令
+```batch
+rem 修改file1.txt文件名为file2.txt
+ren d:\temp1\file1.txt file2.txt 
+```
+
+## del 
+删除文件命令
+```batch
+rem 删除temp目录下的file1.txt文件
+del d:\temp1\file1.txt  
+
+rem 删除temp目录下的后缀为.txt的文件
+del d:\temp\*.txt  
+```
 
 # 目录操作命令
 
-（1） cd 显示当前目录或切换目录
+##  cd 显示当前目录或切换目录
 
 cd d:\temp1 切换到temp1目录，当前目录是d盘 cd /d d:\temp1 切换到temp1目录，当前目录非d盘 cd .. 切换到上一级目录
 
