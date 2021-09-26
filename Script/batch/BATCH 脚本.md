@@ -139,14 +139,14 @@ type nul > file1.txt
 ```
 
 ## ren 
-重命名文件命令
+Rename 重命名文件命令
 ```batch
 rem 修改file1.txt文件名为file2.txt
 ren d:\temp1\file1.txt file2.txt 
 ```
 
 ## del 
-删除文件命令
+Delete 删除文件命令
 ```batch
 rem 删除temp目录下的file1.txt文件
 del d:\temp1\file1.txt  
@@ -157,17 +157,41 @@ del d:\temp\*.txt
 
 # 目录操作命令
 
-##  cd 显示当前目录或切换目录
+##  cd 
+Change Directory 切换目录
 
-cd d:\temp1 切换到temp1目录，当前目录是d盘 cd /d d:\temp1 切换到temp1目录，当前目录非d盘 cd .. 切换到上一级目录
+```batch
+:: 切换到temp1目录，当前目录是d盘
+cd d:\temp1 
 
-（2）mkdir 创建目录
+:: 切换到d盘，然后切换到temp1目录，当前目录非d盘
+cd /d d:\temp1  
 
-mkdir test 在当前目录下创建test目录 mkdir d:\temp1\test 在temp1目录下创建test目录，如果temp1目录不存在，自动创建
+:: 切换到上一级目录
+cd .. 
+```
 
-（3）rmdir 删除目录
+## mkdir 
+Make Directory 创建目录
 
-rmdir d:\temp1 删除空目录temp1，非空则删除失败 rmdir d:\temp1 /s /q 删除temp1目录，包括子目录(/s)，并且删除时不提示(/q)
+```batch
+:: 在当前目录下创建test目录
+mkdir test  
+
+:: 在temp1目录下创建test目录；
+:: 如果temp1目录不存在，先自动创建temp1，再创建test目录
+mkdir d:\temp1\test 
+```
+
+## rmdir
+Remove Directory 删除目录
+```batch
+:: 删除空目录temp1，非空则删除失败 
+rmdir d:\temp1 rmdir 
+
+d:\temp1 /s /q 删除temp1目录，包括子目录(/s)，并且删除时不提示(/q)
+```
+
 
 （4）dir 显示目录下的子目录和文件
 
