@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/字符集和字符编码.md",
+            "file": "Language/Java/集合操作实现.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/字符集和字符编码.md",
+                "file": "Language/Java/集合操作实现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/字符集和字符编码.md"
+                "file": "Language/Java/集合操作实现.md"
               }
             }
           }
@@ -117,6 +117,7 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Language/Java/集合操作实现.md",
     "Database/字符集和字符编码.md",
     "Database/Mysql/utf8mb4.md",
     "Database/Mysql/排序规则.md",
@@ -125,7 +126,6 @@
     "Database/Stored Procedure.md",
     "Design/Framework.md",
     "Design/未命名.md",
-    "Script/batch/BATCH 脚本.md",
-    "Design/设计模式/设计模式.md"
+    "Script/batch/BATCH 脚本.md"
   ]
 }
