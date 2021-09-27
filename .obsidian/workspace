@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/字符集和字符编码.md",
+            "file": "Database/Mysql/排序规则.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/字符集和字符编码.md",
+                "file": "Database/Mysql/排序规则.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/字符集和字符编码.md"
+                "file": "Database/Mysql/排序规则.md"
               }
             }
           }
@@ -117,8 +117,8 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
-    "Database/未命名.md",
     "Database/Mysql/排序规则.md",
+    "Database/未命名.md",
     "Database/Mysql/未命名.md",
     "Database/Stored Procedure.md",
     "Design/Framework.md",
