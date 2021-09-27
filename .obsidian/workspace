@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mysql/排序规则.md",
+            "file": "Database/Mysql/utf8mb4.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mysql/排序规则.md",
+                "file": "Database/Mysql/utf8mb4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mysql/排序规则.md"
+                "file": "Database/Mysql/utf8mb4.md"
               }
             }
           }
@@ -117,13 +117,13 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Database/Mysql/utf8mb4.md",
     "Database/Mysql/排序规则.md",
     "Database/字符集和字符编码.md",
     "Design/Framework.md",
     "Design/Architect.md",
     "Design/可重用级别.md",
     "Language/Java/集合操作实现.md",
-    "Database/Mysql/utf8mb4.md",
     "Database/Mysql/未命名.md",
     "Database/未命名.md",
     "Database/Stored Procedure.md"
