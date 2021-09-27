@@ -1,4 +1,4 @@
-## 存储过程
+# 存储过程
 **KEYS**
 - SQL语句集合
 - 存储在Metadata Repository/Data Dictionary
@@ -10,7 +10,7 @@ Stored Procedure(**storp,StoPro,sproc**)是**一组SQL语句集合**，存储在
 其一些[[#优缺点]]使得实际过程中不推荐使用来处理复杂逻辑。
 具体storp参考[[#Example]]。
 
-### 优缺点
+## 优缺点
 **优点**：
 1. 运行速度更快。执行一次后会保存，下次直接调用
 2. 可重复使用。
@@ -23,10 +23,10 @@ Stored Procedure(**storp,StoPro,sproc**)是**一组SQL语句集合**，存储在
 一般不推荐使用strop。
 
 
-### Data Dictionary
+## Data Dictionary
 data dictionary 或者 metadata repository 是指数据库的元数据(metadata)存储库，存储如relationships、origin、format等数据。这个定义于 *IBM Dictionary of Computing* 。
 
-### Example
+## Example
 
 ```SQl
 ---------------  
@@ -90,7 +90,7 @@ DELIMITER ;
 CALL add_column('uih_system_config_db',null,'TENANT_ID',"bigint(20) DEFAULT NULL COMMENT '租户ID'");
 ```
 
-#### DELIMITER
+### DELIMITER
 delimiter 语句重新定义 sql 语句的分割符，因为sql中默认语句分割符为
 ";"，sql解释器会直接将一个";"结尾的语句解释为一个完成的sql并执行。
 存储过程中可能存在多个关联语句，希望能够一次性存储执行，所以定义存储过程前一般会临时修改存储过程中的SQL语句分隔符，storp 结束后再修改回默认的";".
