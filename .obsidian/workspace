@@ -12,7 +12,20 @@
             "file": "Database/Mysql/排序规则.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "f220ab70181f12a7"
+      },
+      {
+        "id": "cf875dedafe2476f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Database/Mysql/排序规则.md",
+            "mode": "preview"
+          }
+        },
+        "group": "f220ab70181f12a7"
       }
     ],
     "direction": "vertical"
