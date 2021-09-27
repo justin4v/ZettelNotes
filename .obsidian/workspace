@@ -12,7 +12,20 @@
             "file": "Base Knowledge/UTF-8.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "0be0ba2806748824"
+      },
+      {
+        "id": "7b658e919797ec79",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Base Knowledge/UTF-8.md",
+            "mode": "preview"
+          }
+        },
+        "group": "0be0ba2806748824"
       }
     ],
     "direction": "vertical"
@@ -117,6 +130,7 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Base Knowledge/UTF-8.md",
     "Base Knowledge/未命名.md",
     "Database/Mysql/utf8mb4.md",
     "Database/字符集和字符编码.md",
@@ -125,7 +139,6 @@
     "Design/Architect.md",
     "Design/可重用级别.md",
     "Language/Java/集合操作实现.md",
-    "Database/Mysql/未命名.md",
-    "Database/未命名.md"
+    "Database/Mysql/未命名.md"
   ]
 }
