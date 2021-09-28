@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/UTF-8.md",
+            "file": "Base Knowledge/字符集和字符编码.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base Knowledge/UTF-8.md",
+                "file": "Base Knowledge/字符集和字符编码.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Base Knowledge/UTF-8.md"
+                "file": "Base Knowledge/字符集和字符编码.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Base Knowledge/字符集和字符编码.md",
     "Base Knowledge/UTF-8.md",
+    "Base Knowledge/markdown/未命名.md",
     "Base Knowledge/未命名.md",
     "Database/Mysql/utf8mb4.md",
     "Database/字符集和字符编码.md",
     "Database/Mysql/排序规则.md",
     "Design/Framework.md",
     "Design/Architect.md",
-    "Design/可重用级别.md",
-    "Language/Java/集合操作实现.md",
-    "Database/Mysql/未命名.md"
+    "Design/可重用级别.md"
   ]
 }
