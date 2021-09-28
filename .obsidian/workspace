@@ -12,7 +12,20 @@
             "file": "Base Knowledge/UTF-8.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "9f5fadccc955647a"
+      },
+      {
+        "id": "92afe1940f1b6c15",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Base Knowledge/UTF-8.md",
+            "mode": "preview"
+          }
+        },
+        "group": "9f5fadccc955647a"
       }
     ],
     "direction": "vertical"
@@ -115,7 +128,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "16df5991288b2b22",
+  "active": "92afe1940f1b6c15",
   "lastOpenFiles": [
     "Base Knowledge/UTF-8.md",
     "Base Knowledge/未命名.md",
