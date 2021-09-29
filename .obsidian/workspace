@@ -117,15 +117,15 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
-    "Language/Java/未命名.md",
+    "Language/Java/线程安全.md",
     "Language/Java/并发.md",
+    "Language/Java/未命名.md",
     "OS/未命名.md",
     "OS/线程.md",
     "OS/进程.md",
     "OS/同步异步与阻塞非阻塞对比.md",
     "Language/Java/反射.md",
     "OS/阻塞和非阻塞.md",
-    "OS/同步与异步.md",
-    "Language/Java/java.lang.Class.md"
+    "OS/同步与异步.md"
   ]
 }
