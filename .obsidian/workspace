@@ -12,7 +12,20 @@
             "file": "Language/Java/线程安全.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "47952c3914bdfe42"
+      },
+      {
+        "id": "ef90bfe625828eff",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/线程安全.md",
+            "mode": "preview"
+          }
+        },
+        "group": "47952c3914bdfe42"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082
+    "width": 205.50078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
