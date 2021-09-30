@@ -1,8 +1,8 @@
 {
   "commitMessage": "backup: {{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
-  "autoSaveInterval": 5,
-  "autoPullInterval": 50,
+  "autoSaveInterval": 3,
+  "autoPullInterval": 10,
   "autoPullOnBoot": true,
   "disablePush": false,
   "pullBeforePush": true,
