@@ -70,16 +70,8 @@ synchronized(obj) {
 ```
 
 实际：
-1. *对象先上锁*，锁住对象0xb3885f60；
-2. 然后释放该对象锁，*进入waiting状态*。
-
-线程的执行过程，**先用 synchronized 获得了这个对象的 Monitor（对应于 locked <0xb3885f60> ）**。**当执行到 obj.wait()，线程即放弃了 Monitor的所有权，进入 “wait set”队列（对应于 waiting on <0xb3885f60> ）**。
-
-  
-作者：猿码架构  
-链接：https://juejin.cn/post/6844903625228025864  
-来源：稀土掘金  
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+1. *对象先上锁*，锁住对象0xb3885f60，用 synchronized 获得对象的 **Monitor**；
+2. 然后释放该对象锁，*进入waiting状态*，执行到 obj.wait()，线程即放弃了 Monitor的所有权，进入 “wait set”队列。
 
 在第 2 行信息中，进一步标明了线程在代码级的状态：
 
