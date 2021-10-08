@@ -80,29 +80,87 @@ java.lang.Thread.State: TIMED_WAITING (parking)
 ```
 
 ## 线程状态
+
+Java 中线程的状态在Thread.State这个枚举类型中定义：
+```java
+public enum State   
+{  
+       /** 
+        * Thread state for a thread which has not yet started. 
+        */  
+       NEW,  
+         
+       /** 
+        * Thread state for a runnable thread.  A thread in the runnable 
+        * state is executing in the Java virtual machine but it may 
+        * be waiting for other resources from the operating system 
+        * such as processor. 
+        */  
+       RUNNABLE,  
+         
+       /** 
+        * Thread state for a thread blocked waiting for a monitor lock. 
+        * A thread in the blocked state is waiting for a monitor lock 
+        * to enter a synchronized block/method or  
+        * reenter a synchronized block/method after calling 
+        * {@link Object#wait() Object.wait}. 
+        */  
+       BLOCKED,  
+     
+       /** 
+        * Thread state for a waiting thread. 
+        * A thread is in the waiting state due to calling one of the  
+        * following methods: 
+        * <ul> 
+        *   <li>{@link Object#wait() Object.wait} with no timeout</li> 
+        *   <li>{@link #join() Thread.join} with no timeout</li> 
+        *   <li>{@link LockSupport#park() LockSupport.park}</li> 
+        * </ul> 
+        *  
+        * <p>A thread in the waiting state is waiting for another thread to 
+        * perform a particular action.   
+        * 
+        * For example, a thread that has called <tt>Object.wait()</tt> 
+        * on an object is waiting for another thread to call  
+        * <tt>Object.notify()</tt> or <tt>Object.notifyAll()</tt> on  
+        * that object. A thread that has called <tt>Thread.join()</tt>  
+        * is waiting for a specified thread to terminate. 
+        */  
+       WAITING,  
+         
+       /** 
+        * Thread state for a waiting thread with a specified waiting time. 
+        * A thread is in the timed waiting state due to calling one of  
+        * the following methods with a specified positive waiting time: 
+        * <ul> 
+        *   <li>{@link #sleep Thread.sleep}</li> 
+        *   <li>{@link Object#wait(long) Object.wait} with timeout</li> 
+        *   <li>{@link #join(long) Thread.join} with timeout</li> 
+        *   <li>{@link LockSupport#parkNanos LockSupport.parkNanos}</li>  
+        *   <li>{@link LockSupport#parkUntil LockSupport.parkUntil}</li> 
+        * </ul> 
+        */  
+       TIMED_WAITING,  
+  
+       /** 
+        * Thread state for a terminated thread. 
+        * The thread has completed execution. 
+        */  
+       TERMINATED;  
+}
 ```
-1. |blocked|
-
-> This thread tried to enter asynchronized block, but the lock was taken by another thread. This thread is blocked until the lock gets released.
 
 
-2. |blocked (on thin lock)|
+## 关键状态分析
 
-> This is the same state as blocked, but the lock in question is a thin lock.
-
-3. |waiting|
-
-> This thread called Object.wait() on an object. The thread will remain there until some otherthread sends a notification to that object.
-
-4. |sleeping|
-
-> This thread called java.lang.Thread.sleep().
-
-5. |parked|
-
-> This thread called java.util.concurrent.locks.LockSupport.park().
-
-6. |suspended|
-
-> The thread's execution was suspended by java.lang.Thread.suspend() or a JVMTI agent call.
-```
+1.  **Wait on condition**：_The thread is either sleeping or waiting to be notified by another thread._ 该状态说明它在等待另一个条件的发生，来把自己唤醒，或者干脆它是调用了 sleep(n)。
+    
+    **此时线程状态大致为以下几种：**
+    
+    > 1.  java.lang.Thread.State: WAITING (parking)：一直等那个条件发生；
+    > 2.  java.lang.Thread.State: TIMED_WAITING (parking或sleeping)：定时的，那个条件不到来，也将定时唤醒自己。
+    
+2.  **Waiting for Monitor Entry 和 in Object.wait()**：_The thread is waiting to get the lock for an object (some other thread may be holding the lock). This happens if two or more threads try to execute synchronized code. Note that the lock is always for an object and not for individual methods._
+    
+    在多线程的JAVA程序中，实现线程之间的同步，就要说说 Monitor。 **Monitor是Java中用以实现线程之间的互斥与协作的主要手段，它可以看成是对象或者Class的锁**。每一个对象都有，也仅有一个 Monitor。下面这个图，描述了线程和 Monitor之间关系，以及线程的状态转换图：
+    ![[Pasted image 20211008215947.png]]
