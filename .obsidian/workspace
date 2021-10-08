@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/基础/继承的本质.md",
+            "file": "日常记录/专业词汇.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/基础/继承的本质.md",
+            "file": "日常记录/专业词汇.md",
             "mode": "preview"
           }
         },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/基础/继承的本质.md",
+                "file": "日常记录/专业词汇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/基础/继承的本质.md"
+                "file": "日常记录/专业词汇.md"
               }
             }
           }
@@ -132,6 +132,7 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "日常记录/未命名.md",
     "Language/Java/基础/继承的本质.md",
     "Language/Java/基础/未命名.md",
     "Language/Java/并发编程/未命名.md",
@@ -140,7 +141,6 @@
     "Language/Java/RTTI.md",
     "Language/Java/反射.md",
     "Language/Java/HashMap实现原理.md",
-    "Language/Java/java.lang.Class.md",
-    "Language/Java/基础/Java基础.md"
+    "Language/Java/java.lang.Class.md"
   ]
 }
