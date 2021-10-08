@@ -2,7 +2,7 @@
 Thread Dump 是一个 Java 工具。
 Thread Dump 常用于诊断 java 问题。
 
-thread dump 是一个文本文件，打开后可以看到每一个线程的执行栈，以stacktrace 的方式显示。
+thread dump 是一个文本文件，打开后可以看到每一个**线程的执行栈的快照**，以stacktrace 的方式显示。
 通过对多个 thread dump 的分析可以得到应用是否“卡”在某一点上，即在某一点运行的时间太长，如数据库查询，长期得不到响应，最终导致系统崩溃。
 
 参见：
@@ -35,7 +35,9 @@ Full thread dump Java HotSpot(TM) Server VM (16.3-b01 mixed mode):
 
 ```java
 1. "Timer-0" daemon prio=10 tid=0xac190c00 nid=0xaef in Object.wait() [0xae77d000] 
-# 线程名称：Timer-0；线程类型：daemon；优先级: 10，默认是5；
+# 线程名称：Timer-0；
+# 线程类型：daemon；
+# 优先级: 10，默认是5；
 # JVM thread-id：tid=0xac190c00，JVM内部线程的唯一标识（通过java.lang.Thread.getId()获取，通常用自增方式实现）。
 # 对应系统线程id（NativeThread ID）：nid=0xaef，和top命令查看的线程pid对应，不过一个是10进制，一个是16进制。（通过命令：top -H -p pid，可以查看该进程的所有线程信息）
 # 线程状态：in Object.wait()；
@@ -47,3 +49,5 @@ Full thread dump Java HotSpot(TM) Server VM (16.3-b01 mixed mode):
 6.  -locked <0xb3885f60> (a java.util.TaskQueue)         # 已经locked
 7.  at java.util.TimerThread.run(Timer.java:462)
 ```
+
+2-7 行是 Java thread statck trace 的信息，由于是一种 stack 结构，所以实际代码执行顺序是从下到上(7 -> 2)。
