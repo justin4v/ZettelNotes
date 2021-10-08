@@ -51,3 +51,24 @@ Full thread dump Java HotSpot(TM) Server VM (16.3-b01 mixed mode):
 ```
 
 2-7 行是 Java thread statck trace 的信息，由于是一种 stack 结构，所以实际代码执行顺序是从下到上(7 -> 2)。
+
+
+## Java thread statck trace
+4、6 行 stack trace 如下：
+```java
+4. - waiting on <0xb3885f60> (a java.util.ArrayList)
+6. - locked <0xb3885f60> (a java.util.ArrayList)
+```
+
+代码如下：
+```java
+synchronized(obj) {  
+   .........  
+   obj.wait();  
+   .........  
+}
+```
+
+实际：
+1. *对象先上锁*，锁住对象0xb3885f60；
+2. 然后释放该对象锁，*进入waiting状态*。
