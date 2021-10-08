@@ -72,3 +72,45 @@ synchronized(obj) {
 实际：
 1. *对象先上锁*，锁住对象0xb3885f60；
 2. 然后释放该对象锁，*进入waiting状态*。
+
+线程的执行过程，**先用 synchronized 获得了这个对象的 Monitor（对应于 locked <0xb3885f60> ）**。**当执行到 obj.wait()，线程即放弃了 Monitor的所有权，进入 “wait set”队列（对应于 waiting on <0xb3885f60> ）**。
+
+  
+作者：猿码架构  
+链接：https://juejin.cn/post/6844903625228025864  
+来源：稀土掘金  
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+在第 2 行信息中，进一步标明了线程在代码级的状态：
+
+```java
+java.lang.Thread.State: TIMED_WAITING (parking)
+```
+
+## 线程状态
+```
+1. |blocked|
+
+> This thread tried to enter asynchronized block, but the lock was taken by another thread. This thread is blocked until the lock gets released.
+
+
+2. |blocked (on thin lock)|
+
+> This is the same state as blocked, but the lock in question is a thin lock.
+
+3. |waiting|
+
+> This thread called Object.wait() on an object. The thread will remain there until some otherthread sends a notification to that object.
+
+4. |sleeping|
+
+> This thread called java.lang.Thread.sleep().
+
+5. |parked|
+
+> This thread called java.util.concurrent.locks.LockSupport.park().
+
+6. |suspended|
+
+> The thread's execution was suspended by java.lang.Thread.suspend() or a JVMTI agent call.
+```
