@@ -153,14 +153,18 @@ public enum State
 
 ## 关键状态分析
 
-1.  **Wait on condition**：_The thread is either sleeping or waiting to be notified by another thread._ 该状态说明它在等待另一个条件的发生，来把自己唤醒，或者干脆它是调用了 sleep(n)。
+1.  **Wait on condition**：_The thread is either sleeping or waiting to be notified by another thread._ 
+	等待另一个条件的发生，来把自己唤醒，或者自己是调用了 sleep(n)。
     
     **此时线程状态大致为以下几种：**
     
-    > 1.  java.lang.Thread.State: WAITING (parking)：一直等那个条件发生；
-    > 2.  java.lang.Thread.State: TIMED_WAITING (parking或sleeping)：定时的，那个条件不到来，也将定时唤醒自己。
+    > 1.  java.lang.Thread.State: WAITING (parking)：一直等条件发生；
+    > 2.  java.lang.Thread.State: TIMED_WAITING (parking或sleeping)：定时的，条件不到来，也将定时唤醒自己。
     
 2.  **Waiting for Monitor Entry 和 in Object.wait()**：_The thread is waiting to get the lock for an object (some other thread may be holding the lock). This happens if two or more threads try to execute synchronized code. Note that the lock is always for an object and not for individual methods._
     
-    在多线程的JAVA程序中，实现线程之间的同步，就要说说 Monitor。 **Monitor是Java中用以实现线程之间的互斥与协作的主要手段，它可以看成是对象或者Class的锁**。每一个对象都有，也仅有一个 Monitor。下面这个图，描述了线程和 Monitor之间关系，以及线程的状态转换图：
-    ![[Pasted image 20211008215947.png]]
+    在多线程的 JAVA 程序中， Monitor是Java中用以实现线程之间的**互斥与协作/同步**的主要手段，它可以看成是对象或者Class的锁。
+	每一个对象都有且仅有一个 Monitor。
+	下面这个图，描述了线程和 Monitor之间关系，以及线程的状态转换图：
+	
+    ![[monitor与线程关系图.png]]
