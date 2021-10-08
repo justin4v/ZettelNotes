@@ -7,19 +7,25 @@
         "id": "16df5991288b2b22",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Language/Thread Dump.md",
+            "mode": "source"
+          }
         },
-        "group": "4e44420adf27c7fd"
+        "group": "ad3d4a632cebf0ed"
       },
       {
-        "id": "7a27092651ce1c77",
+        "id": "26397be6808877cb",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Language/Thread Dump.md",
+            "mode": "preview"
+          }
         },
-        "group": "4e44420adf27c7fd"
+        "group": "ad3d4a632cebf0ed"
       }
     ],
     "direction": "vertical"
@@ -83,6 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Language/Thread Dump.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Language/Thread Dump.md"
+              }
             }
           }
         ]
@@ -119,17 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "16df5991288b2b22",
+  "active": "26397be6808877cb",
   "lastOpenFiles": [
+    "Language/Thread Dump.md",
+    "Language/JVM/Class 文件结构.md",
+    "日常记录/专业词汇.md",
     "日常记录/BAT脚本.md",
     "OS/IO模型.md",
     "Language/Java/反射.md",
     "Language/Java/java.lang.Class.md",
     "Language/Java/final 和 static.md",
     "Language/JVM/JVM类加载机制.md",
-    "Language/JVM/对象.md",
-    "Language/Javac.md",
-    "Language/Java/集合操作实现.md",
-    "Language/Java/并发.md"
+    "Language/JVM/对象.md"
   ]
 }
