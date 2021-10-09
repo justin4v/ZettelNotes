@@ -1,9 +1,6 @@
 # 重要线程
 
+JVM运行过程中产生的一些比较重要的线程罗列如下：
 
-```
-| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
-```
+
+
