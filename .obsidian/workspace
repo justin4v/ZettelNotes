@@ -4,28 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "16df5991288b2b22",
+        "id": "399d6db1d4da0bf7",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/class 文件结构.md",
+            "file": "日常记录/大端和小端模式.md",
             "mode": "source"
           }
-        },
-        "group": "5a1ae1e2d4ba06af"
-      },
-      {
-        "id": "f11a65ae748f71b0",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/JVM/class 文件结构.md",
-            "mode": "preview"
-          }
-        },
-        "group": "5a1ae1e2d4ba06af"
+        }
       }
     ],
     "direction": "vertical"
@@ -89,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/class 文件结构.md",
+                "file": "日常记录/大端和小端模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/class 文件结构.md"
+                "file": "日常记录/大端和小端模式.md"
               }
             }
           }
@@ -128,17 +115,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "16df5991288b2b22",
+  "active": "399d6db1d4da0bf7",
   "lastOpenFiles": [
+    "日常记录/大端和小端模式.md",
+    "日常记录/感悟/规律.md",
+    "日常记录/Effective Study.md",
+    "日常记录/信息.md",
+    "日常记录/规律.md",
+    "日常记录/未命名.md",
     "Language/JVM/class 文件结构.md",
     "Message Queue/未命名.md",
     "Language/JVM/Class 文件结构.md",
-    "Language/JVM/JVM简介.md",
-    "Language/JVM/JVM ClassLoader.md",
-    "Language/JVM/JVM 重要线程.md",
-    "Language/JVM/未命名.md",
-    "Language/Thread Dump.md",
-    "日常记录/专业词汇.md",
-    "Language/JVM/NameSpace.md"
+    "Language/JVM/JVM简介.md"
   ]
 }
