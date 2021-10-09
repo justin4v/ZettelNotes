@@ -20,16 +20,26 @@ JVM运行过程中产生的一些比较重要的线程罗列如下：
 通常，JVM会启动多个线程来处理这部分工作，线程名称后面的数字也会累加，例如：`CompilerThread1`。
 
 ## Concurrent Mark-Sweep GC Thread
-- 并发标记清除垃圾回收器（就是通常所说的CMS GC）线程；
--  该线程主要针对于老年代垃圾回收。ps：启用该垃圾回收器，需要在JVM启动参数中加上：`-XX:+UseConcMarkSweepGC`。
+-**并发标记清除垃圾回收器**（就是通常所说的CMS GC）线程；
+- 主要针对于**老年代（old generation）**垃圾回收。
 
+启用该垃圾回收器，需要在JVM启动参数中加上：`-XX:+UseConcMarkSweepGC`。
 
 ## DestroyJavaVM
-执行main()的线程，在main执行完后调用JNI中的 jni_DestroyJavaVM() 方法唤起DestroyJavaVM 线程，处于等待状态，等待其它线程（Java线程和Native线程）退出时通知它卸载JVM。每个线程退出时，都会判断自己当前是否是整个JVM中最后一个非deamon线程，如果是，则通知DestroyJavaVM 线程卸载JVM。
+- **卸载 JVM**；
+- 执行 main() 的线程，*在 main 执行完后调用 JNI 中的 jni_DestroyJavaVM() 方法唤起DestroyJavaVM 线程*；
+- DestroyJavaVM一开始处于等待状态，等待*其它线程（Java线程和Native线程）退出时通知它卸载JVM*；
+- 每个线程退出时，都会判断自己当前是否是整个 JVM 中*最后一个非 deamon 线程*，如果是，则通知 DestroyJavaVM 线程卸载JVM。
 
 
 ## Finalizer Thread
-这个线程也是在main线程之后创建的，其优先级为10，主要用于在垃圾收集前，调用对象的finalize()方法；关于Finalizer线程的几点：1) 只有当开始一轮垃圾收集时，才会开始调用finalize()方法；因此并不是所有对象的finalize()方法都会被执行；2) 该线程也是daemon线程，因此如果虚拟机中没有其他非daemon线程，不管该线程有没有执行完finalize()方法，JVM也会退出；3) JVM在垃圾收集时会将失去引用的对象包装成Finalizer对象（Reference的实现），并放入ReferenceQueue，由Finalizer线程来处理；最后将该Finalizer对象的引用置为null，由垃圾收集器来回收；4) JVM为什么要单独用一个线程来执行finalize()方法呢？如果JVM的垃圾收集线程自己来做，很有可能由于在finalize()方法中误操作导致GC线程停止或不可控，这对GC线程来说是一种灾难；
+- 垃圾收集前，调用对象的finalize()方法；
+这个线程也是在main线程之后创建的，其优先级为10，主要用于在
+关于Finalizer线程的几点：
+1) 只有当开始一轮垃圾收集时，才会开始调用finalize()方法；因此并不是所有对象的finalize()方法都会被执行；
+2) 该线程也是daemon线程，因此如果虚拟机中没有其他非daemon线程，不管该线程有没有执行完finalize()方法，JVM也会退出；
+3) JVM在垃圾收集时会将失去引用的对象包装成Finalizer对象（Reference的实现），并放入ReferenceQueue，由Finalizer线程来处理；最后将该Finalizer对象的引用置为null，由垃圾收集器来回收；
+4) JVM为什么要单独用一个线程来执行finalize()方法呢？如果JVM的垃圾收集线程自己来做，很有可能由于在finalize()方法中误操作导致GC线程停止或不可控，这对GC线程来说是一种灾难；
 
 ## Low Memory Detector
 这个线程是负责对可使用内存进行检测，如果发现可用内存低，分配新的内存空间。
