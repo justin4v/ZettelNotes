@@ -3,7 +3,11 @@
 JVM运行过程中产生的一些比较重要的线程罗列如下：
 
 ## Attach Listener
-Attach Listener 线程是负责接收到外部的命令，而对该命令进行执行的并把结果返回给发送者。通常我们会用一些命令去要求JVM给我们一些反馈信息，如：java -version、jmap、jstack等等。 如果该线程在JVM启动的时候没有初始化，那么，则会在用户第一次执行JVM命令时，得到启动。
+Attach Listener 线程是负责:
+- 接收到外部的命令;
+- 执行命令并返回结果。
+
+通常我们会用一些命令去要求JVM给我们一些反馈信息，如：java -version、jmap、jstack等等。 如果该线程在JVM启动的时候没有初始化，那么，则会在用户第一次执行JVM命令时，得到启动。
 
 ## Signal Dispatcher
 前面提到`Attach Listener`线程的职责是接收外部JVM命令，当命令接收成功后，会交给`signal dispather`线程去进行分发到各个不同的模块处理命令，并且返回处理结果。`signal dispather`线程也是在第一次接收外部JVM命令时，进行初始化工作。
