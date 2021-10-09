@@ -131,6 +131,7 @@
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
     "Language/Thread Dump.md",
+    "日常记录/专业词汇.md",
     "Language/JVM/NameSpace.md",
     "Language/JVM/java.lang.Class.md",
     "Language/Java/反射/RTTI.md",
@@ -138,7 +139,6 @@
     "Language/Java/并发编程/加锁机制.md",
     "Language/Java/并发编程/Synchronize.md",
     "Language/Java/并发编程/线程安全.md",
-    "Language/Java/并发编程/并发.md",
-    "Language/Java/并发编程/性能问题.md"
+    "Language/Java/并发编程/并发.md"
   ]
 }
