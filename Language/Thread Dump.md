@@ -177,12 +177,12 @@ public enum State
 
 ### Entry Set
 
-当线程申请**进入临界区**时，就进入了 "Entry Set" 队列中，有两种可能性：
+当线程申请**进入临界区时，就进入了 "Entry Set" 队列**中，有两种可能性：
 
--   *该Monitor 不被其他线程拥有*。"Entry Set"里面也没有其他等待的线程。本线程即成为相应类或者对象的Monitor的Owner，执行临界区里面的代码；此时在Thread Dump中显示线程处于 "Runnable" 状态。
+-   *Monitor 不被其他线程拥有*。"Entry Set"里面也没有其他等待的线程。本线程即成为相应类或者对象的Monitor的Owner，执行临界区里面的代码；此时在Thread Dump中显示线程处于 "Runnable" 状态。
 -   *Monitor已经被其他线程拥有*。本线程在 "Entry Set" 队列中等待。此时在Thread Dump中显示线程处于 "waiting for monity entry" 状态。
 
-临界区的设置是为了保证其内部的代码执行的原子性和完整性，但因为临界区在任何时间只允许线程串行通过。如果在多线程程序中大量使用synchronized，或者不适当的使用它，会造成大量线程在临界区的入口等待，造成系统的性能大幅下降。
+临界区的设置是为了保证其内部的代码执行的原子性和完整性，但因为临界区在任何时间只允许线程串行通过。如果在多线程程序中大量使用synchronized，或者不适当的使用，会造成大量线程在临界区的入口等待，造成系统的性能大幅下降。
 如果在Thread Dump中发现这个情况，应该审视源码并对其进行改进。
 
 ### Wait Set
@@ -190,3 +190,19 @@ public enum State
 当线程获得了Monitor，进入了临界区之后，如果*发现线程继续运行的**条件没有满足**，它则调用对象的wait()方法，放弃Monitor，进入 "Wait Set"队列*。
 只有当别的线程在该对象上调用了** notify() 或者 notifyAll()** 方法，"Wait Set"队列中的线程才得到机会去竞争，但是只有一个线程获得对象的Monitor，恢复到运行态。
 "Wait Set"中的线程在Thread Dump中显示的状态为 in Object.wait()。
+
+
+## 分析案例
+问题场景
+### CPU飙高，load高，响应很慢
+一个请求过程中多次dump；
+对比多次dump文件的runnable线程，如果执行的方法有比较大变化，说明比较正常。如果在执行同一个方法，就有一些问题了；
+
+### 查找占用CPU最多的线程
+使用命令：top -H -p pid（pid为被测系统的进程号），找到导致CPU高的线程ID，对应thread dump信息中线程的nid ，只不过一个是十进制，一个是十六进制； 在thread
+dump中，根据top命令查找的线程id，查找对应的线程堆栈信息；
+CPU使用率不高但是响应很慢
+进行dump，查看是否有很多thread struck在了i/o、数据库等地方 ，定位瓶颈原因；
+
+请求无法响应
+多次dump，对比是否所有的runnable线程都一直在执行相同的方法， 如果是的，恭喜你，锁住了！
