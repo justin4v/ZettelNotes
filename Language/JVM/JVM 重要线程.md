@@ -33,19 +33,22 @@ JVM运行过程中产生的一些比较重要的线程罗列如下：
 
 
 ## Finalizer Thread
-- 垃圾收集前，调用对象的finalize()方法；
-这个线程也是在main线程之后创建的，其优先级为10，主要用于在
+- 垃圾收集前，**调用对象的 finalize() 方法**；
+- 在main线程之后创建的，其优先级为10。
+
 关于Finalizer线程的几点：
-1) 只有当开始一轮垃圾收集时，才会开始调用finalize()方法；因此并不是所有对象的finalize()方法都会被执行；
-2) 该线程也是daemon线程，因此如果虚拟机中没有其他非daemon线程，不管该线程有没有执行完finalize()方法，JVM也会退出；
-3) JVM在垃圾收集时会将失去引用的对象包装成Finalizer对象（Reference的实现），并放入ReferenceQueue，由Finalizer线程来处理；最后将该Finalizer对象的引用置为null，由垃圾收集器来回收；
-4) JVM为什么要单独用一个线程来执行finalize()方法呢？如果JVM的垃圾收集线程自己来做，很有可能由于在finalize()方法中误操作导致GC线程停止或不可控，这对GC线程来说是一种灾难；
+1) 只有当开始一轮垃圾收集时，才会开始调用 finalize() 方法；因此*并不是所有对象的finalize()方法都会被执行*；
+2) 该线程*是 daemon 线程*，因此如果虚拟机中没有其他非 daemon线程，不管该线程有没有执行完 finalize()方法，JVM也会退出；
+3) JVM 在垃圾收集时会将*失去引用的对象包装成 Finalizer 对象*（Reference的实现），并放入*ReferenceQueue*，由 Finalizer 线程来处理；最后将该 Finalizer 对象的引用置为null，由垃圾收集器来回收；
+4) JVM 为什么要单独用一个线程来执行 finalize() 方法呢？如果 JVM 的垃圾收集线程自己来做，很有*可能由于 finalize() 方法中误操作导致GC线程停止或不可控*，这对GC线程来说是一种灾难；
 
 ## Low Memory Detector
-这个线程是负责对可使用内存进行检测，如果发现可用内存低，分配新的内存空间。
+- **对可用内存进行检测**，如果发现可用内存低，分配新的内存空间。
 
 ## Reference Handler
-JVM在创建`main`线程后就创建`Reference Handler`线程，其优先级最高，为10，它主要用于处理引用对象本身（软引用、弱引用、虚引用）的垃圾回收问题 。
+- 处理*引用对象本身（软引用、弱引用、虚引用）的垃圾回收问题*；
+- JVM在创建 `main` 线程后就创建 `Reference Handler` 线程，其优先级最高，为10。
 
 ## VM Thread
-这个线程是JVM里面的线程母体，根据hotspot源码（`vmThread.hpp`）里面的注释，它是一个单个的对象（最原始的线程）会产生或触发所有其他的线程，这个单个的VM线程是会被其他线程所使用来做一些VM操作（如：清扫垃圾等）
+- JVM里面的线程母体；
+- 根据hotspot源码（`vmThread.hpp`）里面的注释，它是最原始的线程会产生或触发所有其他的线程，这个单个的VM线程是会被其他线程所使用来做一些 VM 操作（如：清扫垃圾等）
