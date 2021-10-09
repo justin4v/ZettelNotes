@@ -3,20 +3,25 @@
 JVM运行过程中产生的一些比较重要的线程罗列如下：
 
 ## Attach Listener
-Attach Listener 线程是负责:
-- 接收到外部的命令;
-- 执行命令并返回结果。
+`Attach Listener` 线程:
+- **监听/接收外部的命令**;
+- 分发命令并返回结果。
 
-通常我们会用一些命令去要求JVM给我们一些反馈信息，如：java -version、jmap、jstack等等。 如果该线程在JVM启动的时候没有初始化，那么，则会在用户第一次执行JVM命令时，得到启动。
+`java -version、jmap、jstack`等等都是由`Attach Listener`线程接收。
+如果该线程在JVM启动的时候没有初始化，会在用户第一次执行JVM命令时启动。
 
 ## Signal Dispatcher
-前面提到`Attach Listener`线程的职责是接收外部JVM命令，当命令接收成功后，会交给`signal dispather`线程去进行分发到各个不同的模块处理命令，并且返回处理结果。`signal dispather`线程也是在第一次接收外部JVM命令时，进行初始化工作。
+- `Attach Listener`线程监听外部JVM命令；
+- 之后由`signal dispather`线程**分发到各个模块处理**，并且返回处理结果。
+`signal dispather`线程也是在第一次接收外部 JVM 命令时，进行初始化工作。
 
 ## CompilerThread0
-用来调用`JITing`，实时编译装卸class 。 通常，JVM会启动多个线程来处理这部分工作，线程名称后面的数字也会累加，例如：`CompilerThread1`。
+- 调用`JITing`，实时编译装卸 class 。
+通常，JVM会启动多个线程来处理这部分工作，线程名称后面的数字也会累加，例如：`CompilerThread1`。
 
 ## Concurrent Mark-Sweep GC Thread
-并发标记清除垃圾回收器（就是通常所说的CMS GC）线程， 该线程主要针对于老年代垃圾回收。ps：启用该垃圾回收器，需要在JVM启动参数中加上：`-XX:+UseConcMarkSweepGC`。
+- 并发标记清除垃圾回收器（就是通常所说的CMS GC）线程；
+-  该线程主要针对于老年代垃圾回收。ps：启用该垃圾回收器，需要在JVM启动参数中加上：`-XX:+UseConcMarkSweepGC`。
 
 
 ## DestroyJavaVM
