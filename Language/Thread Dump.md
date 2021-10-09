@@ -199,10 +199,13 @@ public enum State
 
 ### 查找占用CPU最多的线程
 - 分析方法：top -H -p pid（pid为被测系统的进程号）
-> 致CPU高的线程ID，对应thread dump信息中线程的nid ，只不过一个是十进制，一个是十六进制； 在thread dump中，根据top命令查找的线程id，查找对应的线程堆栈信息；
+> 占用 CPU 高的线程 ID，对应 thread dump 信息中线程的 nid ，只不过一个是十进制，一个是十六进制； 
+> 在thread dump中，根据top命令查找的线程 id，查找对应的线程堆栈信息；
 
 ### CPU使用率不高但是响应很慢
-进行dump，查看是否有很多thread struck在了i/o、数据库等地方 ，定位瓶颈原因；
+- 分析方法：进行dump
+>查看是否有很多thread struck在了i/o、数据库等地方 ，定位瓶颈原因；
 
 ### 请求无法响应
-多次dump，对比是否所有的runnable线程都一直在执行相同的方法， 如果是的，恭喜你，锁住了！
+- 分析方法：多次dump
+> 对比是否有 runnable 线程都一直在执行相同的方法， 如果是的，可能发生了死锁。
