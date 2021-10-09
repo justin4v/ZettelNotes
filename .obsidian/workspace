@@ -9,23 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Message Queue/JMS.md",
+            "file": "Language/JVM/class 文件结构.md",
             "mode": "source"
           }
         },
-        "group": "e8bee8cfce44ca1a"
+        "group": "5a1ae1e2d4ba06af"
       },
       {
-        "id": "ef2af018f60b9fc7",
+        "id": "f11a65ae748f71b0",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Message Queue/JMS.md",
-            "mode": "source"
+            "file": "Language/JVM/class 文件结构.md",
+            "mode": "preview"
           }
         },
-        "group": "e8bee8cfce44ca1a"
+        "group": "5a1ae1e2d4ba06af"
       }
     ],
     "direction": "vertical"
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Message Queue/JMS.md",
+                "file": "Language/JVM/class 文件结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Message Queue/JMS.md"
+                "file": "Language/JVM/class 文件结构.md"
               }
             }
           }
@@ -130,8 +130,8 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
-    "Message Queue/未命名.md",
     "Language/JVM/class 文件结构.md",
+    "Message Queue/未命名.md",
     "Language/JVM/Class 文件结构.md",
     "Language/JVM/JVM简介.md",
     "Language/JVM/JVM ClassLoader.md",
