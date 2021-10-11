@@ -71,41 +71,24 @@ LDAP名称 `cn=Rosanna Lee, o=Sun, c=US`命名了一个LDAP条目 `cn=Rosanna Le
 3. LDAP名称绑定到LDAP条目。
 
 # References and Addresses
-
-Depending on the naming service, some objects cannot be stored directly by the naming service; that is, a copy of the object cannot be placed inside the naming service. Instead, they must be stored by reference; that is, a _pointer_ or _reference_ to the object is placed inside the naming service.
-
-A reference represents information about how to access an object. Typically, it is a compact representation that can be used to communicate with the object, while the object itself might contain more state information. Using the reference, you can contact the object and obtain more information about the object.
-
-For example, an airplane object might contain a list of the airplane's passengers and crew, its flight plan, and fuel and instrument status, and its flight number and departure time. 
-
-By contrast, an airplane object reference might contain only its flight number and departure time. The reference is a much more compact representation of information about the airplane object and can be used to obtain additional information. 
-
-A file object, for example, is accessed using a _file reference_. A printer object, for example, might contain the state of the printer, such as its current queue and the amount of paper in the paper tray. A printer object reference, on the other hand, might contain only information on how to reach the printer, such as its print server name and printing protocol.
-
-Although in general a reference can contain any arbitrary information, it is useful to refer to its contents as _addresses_ (or communication end points): specific information about how to access the object.
-
-For simplicity, this tutorial uses "object" to refer to both objects and object references when a distinction between the two is not required.
 命名服务中，有些对象不能直接由命名服务存储;
 也就是说，对象的副本不能放在命名服务中。
-相反，它们必须通过引用来存储;
-也就是说，对象的_pointer_或_reference_被放置在命名服务中。
+相反，它们必须通过引用来存储;也就是说，对象的_pointer_或_reference_被放置在命名服务中。
 
 引用表示关于如何访问对象的信息。
 通常，它是一种紧凑的表示，可用于与对象通信，而对象本身可能包含更多的状态信息。
 使用引用，您可以联系对象并获得关于对象的更多信息。
 
-例如，飞机物体可能包含飞机乘客和机组人员、飞行计划、燃料和仪器状态、航班号和起飞时间的列表。
+如：
+1. 飞机：
+	- 飞机物体可能包含飞机乘客和机组人员、飞行计划、燃料和仪器状态、航班号和起飞时间的列表；
+	- 飞机对象引用可能只包含它的航班号和起飞时间。
+2. 使用_file引用来访问文件对象。
+3. 打印机
+	- 打印机对象可能包含打印机的状态，比如它的当前队列和纸盒中的纸量。
+	- 打印机对象引用可能只包含如何访问打印机的信息，比如使用打印服务器名称和打印协议。
 
-相比之下，一个飞机对象引用可能只包含它的航班号和起飞时间。
-参考是关于飞机对象信息的一种更紧凑的表示，可以用来获取附加信息。
-
-例如，使用_file引用来访问文件对象。
-例如，打印机对象可能包含打印机的状态，比如它的当前队列和纸盒中的纸量。
-另一方面，打印机对象引用可能只包含如何访问打印机的信息，比如打印服务器名称和打印协议。
-
-尽管通常引用可以包含任何信息，但将其内容引用为_addresses_(或通信端点)是很有用的:关于如何访问对象的特定信息。
-
-为简单起见，本教程在不需要区分对象和对象引用时使用“object”来指代对象和对象引用。
+尽管通常引用可以包含任何信息，但将其内容引用为 _addresses_（如何访问对象） 是很有用的。
 
 # Context
 

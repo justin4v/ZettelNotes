@@ -131,6 +131,7 @@
   "active": "312ecfe334378ec2",
   "lastOpenFiles": [
     "Base Knowledge/Naming.md",
+    "Base Knowledge/Directory.md",
     "Language/Java/基础/JNDI.md",
     "Base Knowledge/未命名.md",
     "日常记录/常识/专业词汇.md",
@@ -138,7 +139,6 @@
     "Language/JDK工具.md",
     "Language/Thread Dump.md",
     "日常记录/常识/API vs. SPI.md",
-    "日常记录/常识/大端和小端模式.md",
-    "Language/Java/基础/未命名.md"
+    "日常记录/常识/大端和小端模式.md"
   ]
 }
