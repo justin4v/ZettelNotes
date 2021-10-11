@@ -1,5 +1,5 @@
 # Naming Concepts
-在任何计算系统中，一个基本的设施就是命名服务（**_naming service_**）
+**在任何计算系统中，一个基本的设施就是命名服务**（**_naming service_**）
 
 naming service:
 - **名字和对象关联;**
@@ -47,17 +47,15 @@ UNIX文件系统的命名约定是：
 DNS命名约定要求：
 - DNS名称中的组件按从右到左的顺序排列，并由点字符(".")分隔。
 
-Thus the DNS name sales.Wiz.COM names a DNS entry with the name sales, relative to the DNS entry Wiz.COM. The DNS entry Wiz.COM, in turn, names an entry with the name Wiz in the COM entry.
-因此，相对于DNS条目Wiz.COM, DNS名称sales.Wiz.COM使用名称sales来命名DNS条目。而DNS条目Wiz.COM则使用COM条目中的名称Wiz来命名一个条目。
 
-
+因此，DNS 目 `sales.Wiz.COM`名称为 sales，属于条目中`Wiz.COM`的条目。而DNS条目`Wiz.COM`则使用名称Wiz来命名 `COM`中的一个条目。
 
 ## LDAP
 [轻量级目录访问协议(LDAP)](http://www.ietf.org/rfc/rfc2251.txt)命名约定：
 - 按从右到左的顺序排列组件，由逗号("，")分隔；
 - 名称的每个组件必须是一个名称/值对，名称和值由一个等号字符("=")分隔。
 
-LDAP名称 `cn=Rosanna Lee, o=Sun, c=US`命名了一个LDAP条目 `cn=Rosanna Lee`，改条目相对于条目 `o=Sun`，而`o=Sun`条目又相对于 `c=US`。
+LDAP名称 `cn=Rosanna Lee, o=Sun, c=US`命名了一个LDAP条目 `cn=Rosanna Lee`，该条目相对于条目 `o=Sun`，而`o=Sun`条目又相对于 `c=US`。
 
 # Bindings
 
