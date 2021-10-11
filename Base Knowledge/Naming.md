@@ -25,41 +25,44 @@ the [Internet Domain Name System (DNS)](http://www.ietf.org/rfc/rfc1034.txt) 将
 www.example.com ==> 192.0.2.5
 
 ## 文件系统
-A file system maps a filename to a file reference that a program can use to access the contents of the file.
+文件系统将**文件名映射到一个文件引用**，程序可以使用该文件引用来访问文件的内容。
 
 c:\bin\autoexec.bat ==> File Reference
 
-These two examples also illustrate the wide range of scale at which naming services exist—from naming an object on the Internet to naming a file on the local file system.
-
-## Names
+# Names
 
 To look up an object in a naming system, you supply it the _name_ of the object.
+要在命名系统中查找一个对象，您需要向它提供对象的 _name_。
 
-The naming system determines the syntax that the name must follow. This syntax is sometimes called the naming systems _naming convention_（命名约定）. 
+The naming system determines the syntax that the name must follow. This syntax is sometimes called the naming systems _naming convention_（命名约定）.
+naming system （命名系统）定义了 name 必须遵循的语法。这种语法被称为命名系统 的 _命名约定_
 
 A name is made up components. A name's representation consist of a component separator marking the components of the name.
 
 ![[命名服务示例.png]]
 
+## Unix 文件系统
 The UNIX file system's naming convention is that a file is named from its path relative to the root of the file system, with each component in the path separated from left to right using the forward slash character ("/"). 
 
 The UNIX _pathname_, /usr/hello, for example, names a file hello in the file directory usr, which is located in the root of the file system.
 
+## DNS 
 DNS naming convention calls for components in the DNS name to be ordered from right to left and delimited by the dot character ("."). 
 
 Thus the DNS name sales.Wiz.COM names a DNS entry with the name sales, relative to the DNS entry Wiz.COM. The DNS entry Wiz.COM, in turn, names an entry with the name Wiz in the COM entry.
 
 The [Lightweight Directory Access Protocol (LDAP)](http://www.ietf.org/rfc/rfc2251.txt) naming convention orders components from right to left, delimited by the comma character (","). 
 
+## LDAP
 Thus the LDAP name cn=Rosanna Lee, o=Sun, c=US names an LDAP entry cn=Rosanna Lee, relative to the entry o=Sun, which in turn, is relative to c=us. LDAP has the further rule that each component of the name must be a name/value pair with the name and value separated by an equals character ("=").
 
-## Bindings
+# Bindings
 
 The association of a name with an object is called a _binding_. A file name is _bound_ to a file.
 
 The DNS contains bindings that map machine names to IP addresses. An LDAP name is bound to an LDAP entry.
 
-## References and Addresses
+# References and Addresses
 
 Depending on the naming service, some objects cannot be stored directly by the naming service; that is, a copy of the object cannot be placed inside the naming service. Instead, they must be stored by reference; that is, a _pointer_ or _reference_ to the object is placed inside the naming service.
 
@@ -75,9 +78,10 @@ Although in general a reference can contain any arbitrary information, it is use
 
 For simplicity, this tutorial uses "object" to refer to both objects and object references when a distinction between the two is not required.
 
-## Context
+# Context
 
 A _context_ is **a set of name-to-object bindings**. Every context has an associated naming convention. 
+_context_ 是一个 **name-to-object 绑定的集合**。每个 _context_ 都有一个相关的命名约定。
 
 A context always provides a lookup (_resolution_ 解析) operation that returns the object, it typically also provides operations such as those for binding names, unbinding names, and listing bound names. A name in one context object can be bound to another context object (called a _subcontext_) that has the same naming convention.
 
@@ -89,7 +93,7 @@ That is, in a file directory /usr/bin, the directory bin is a subcontext of usr.
 
 Finally, an LDAP entry, such as c=us, represents a context. An LDAP entry named relative to another LDAP entry represents a subcontext. For the LDAP entry o=sun,c=us, the entry o=sun is a subcontext of c=us.
 
-## Naming Systems and Namespaces
+# Naming Systems and Namespaces
 
 A _naming system_ is a connected set of contexts of the same type (they have the same naming convention) and provides a common set of operations.
 
