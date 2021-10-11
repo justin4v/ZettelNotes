@@ -1,13 +1,11 @@
 # Naming Concepts
-
-A **fundamental facility** in any computing system is the **_naming service_**
+在任何计算系统中，一个基本的设施就是命名服务（**_naming service_**）
 
 naming service:
 - **名字和对象关联;**
 - **根据名称找到对象. **
 
-
-When using almost any computer program or system, you are always naming one object or another. 
+当使用几乎任何计算机程序或系统时，你总是在命名一个对象或另一个对象。
 例如：
 - 使用电子邮件的时候，需要填写收件人. 
 - 要访问计算机中的文件，必须提供它的名称. 
@@ -30,8 +28,6 @@ www.example.com ==> 192.0.2.5
 c:\bin\autoexec.bat ==> File Reference
 
 # Names
-
-To look up an object in a naming system, you supply it the _name_ of the object.
 要在命名系统中查找一个对象，您需要向它提供对象的 _name_。
 
 **naming system （命名系统）定义了 name 必须遵循的语法**。这种语法被称为命名系统 的** _命名约定_（_naming convention_）**
@@ -45,13 +41,14 @@ UNIX文件系统的命名约定是：
 - 根据文件相对于文件系统根路径来命名文件；
 - 路径中的每个组件使用正斜杠字符("/")从左到右分开。
 
-The UNIX _pathname_, /usr/hello, for example, names a file hello in the file directory usr, which is located in the root of the file system.
+例如，UNIX _pathname_， /usr/hello 将文件目录usr 中的一个文件命名为 hello，该文件目录 user 位于文件系统的根目录中。
 
 ## DNS 
 DNS命名约定要求：
 - DNS名称中的组件按从右到左的顺序排列，并由点字符(".")分隔。
 
 Thus the DNS name sales.Wiz.COM names a DNS entry with the name sales, relative to the DNS entry Wiz.COM. The DNS entry Wiz.COM, in turn, names an entry with the name Wiz in the COM entry.
+因此，相对于DNS条目Wiz.COM, DNS名称sales.Wiz.COM使用名称sales来命名DNS条目。而DNS条目Wiz.COM则使用COM条目中的名称Wiz来命名一个条目。
 
 
 
@@ -91,12 +88,12 @@ LDAP名称 `cn=Rosanna Lee, o=Sun, c=US`命名了一个LDAP条目 `cn=Rosanna Le
 尽管通常引用可以包含任何信息，但将其内容引用为 _addresses_（如何访问对象） 是很有用的。
 
 # Context
-_context_ 是一个 **name-to-object 绑定的集合**。每个 _context_ 都有一个相关的命名约定。
+## 概念
+_context_ 是一个 **name-to-object 绑定的集合**。每个 _context_ 都有一个相关的**命名约定**。
 
 ## 特点
-context 总是提供了一个查找( _resolution_ 解析)操作，返回对象。
-通常还提供绑定名称、解绑、列出所有已绑定名称等操作。
-一个 context 中的名称可以绑定到另一个具有相同命名约定（naming convention）的 context (称为_subcontext_)。
+1. context **总是提供了一个查找( _resolution_ 解析)操作，返回对象**。通常还提供 *绑定名称、解绑、列出所有已绑定名称* 等操作。
+2. 一个 context 中的名称**可以绑定到另一个具有相同命名约定**（naming convention）的 context (称为_subcontext_)。
 
 ![[context实例.png]]
 
