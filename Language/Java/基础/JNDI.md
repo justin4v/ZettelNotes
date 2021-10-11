@@ -39,35 +39,32 @@ env        // sub-context
 jdbc       // sub-context
 ```
 
- `/`是 _Name_ 中 sub-contexts. Now, let's add a sub-context:
+ `/`是 _Name_ 中 sub-contexts 的分隔符. 
+增加一个 sub-context:
 
 ```java
 objectName.add("example");
 ```
 
-Then we test our addition:
-
-```java
-assertEquals("example", objectName.get(objectName.size() - 1));
-```
-
 ###  _Context_ Interface
 
-_Context_ contains the properties for the naming and directory service_._ Here, let's use some helper code from Spring for convenience to build a _Context_:
+_Context_ 包含 naming 和 directory 服务的属性。
+使用 spring 的工具类构建 _Context_:
 
 ```java
 SimpleNamingContextBuilder builder = new SimpleNamingContextBuilder(); 
 builder.activate();
 ```
 
-Spring's _SimpleNamingContextBuilder_ creates a JNDI provider and then activates the builder with the [_NamingManager_](https://docs.oracle.com/en/java/javase/11/docs/api/java.naming/javax/naming/spi/NamingManager.html):
+Spring 的 _SimpleNamingContextBuilder_ 创建一个 JNDI provider 且用[_NamingManager_](https://docs.oracle.com/en/java/javase/11/docs/api/java.naming/javax/naming/spi/NamingManager.html)激活 builder。
+
+最后，通过 _JndiTemplate_ 得到  _InitialContext_.
 
 ```java
 JndiTemplate jndiTemplate = new JndiTemplate();
 ctx = (InitialContext) jndiTemplate.getContext();
 ```
 
-Finally, _JndiTemplate_ helps us access the _InitialContext_.
 
 ##  JNDI Object Binding and Lookup
 
