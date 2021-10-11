@@ -110,3 +110,4 @@ DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/datasource");
 4. [Directory and LDAP Packages](https://docs.oracle.com/javase/tutorial/jndi/overview/dir.html)
 5. [[API vs. SPI]]
 6. [JNDI - Baeldung](https://www.baeldung.com/jndi)
+7. [[JMS]]
