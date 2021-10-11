@@ -1,8 +1,11 @@
 # 概念
-The Java Naming and Directory Interface™ (JNDI)  提供一些列*命名（naming）和目录（directory）服务* 的 Java *API*，可用于绑定（binding）对象，查找对象或者检测对象上的改动。
+The Java Naming and Directory Interface™ (JNDI)  提供一些列*命名（naming）和目录（directory）服务* 的 Java *API*，可用于绑定（binding）对象，查找（look up）对象或者检测对象上的改动。
 
 # 架构
 The JNDI architecture consists of an API and a service provider interface (SPI). 
+- 包含 JNDI API 和 SPI；
+- application 通过 API 使用 naming 和 directory 服务；
+- SPI允许透明地插入（plug）各种命名和目录服务，从而允许使用JNDI API的Java应用程序访问它们的服务
 Java applications use the JNDI API to access a variety of naming and directory services.
 The SPI enables a variety of naming and directory services to be plugged in transparently, thereby allowing the Java application using the JNDI API to access their services. 
 
