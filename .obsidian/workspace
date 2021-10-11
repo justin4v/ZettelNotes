@@ -4,28 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "399d6db1d4da0bf7",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Thread Dump.md",
-            "mode": "source"
-          }
-        },
-        "group": "a0d815c6eec921da"
-      },
-      {
         "id": "312ecfe334378ec2",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Thread Dump.md",
+            "file": "Language/JDK工具.md",
             "mode": "preview"
           }
-        },
-        "group": "a0d815c6eec921da"
+        }
       }
     ],
     "direction": "vertical"
@@ -89,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Thread Dump.md",
+                "file": "Language/JDK工具.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Thread Dump.md"
+                "file": "Language/JDK工具.md"
               }
             }
           }
@@ -128,8 +115,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "399d6db1d4da0bf7",
+  "active": "312ecfe334378ec2",
   "lastOpenFiles": [
+    "Language/JDK工具.md",
     "Language/Thread Dump.md",
     "Language/Java/基础/JNDI.md",
     "日常记录/常识/API vs. SPI.md",
@@ -138,7 +126,6 @@
     "日常记录/常识/专业词汇.md",
     "Language/Java/基础/未命名.md",
     "Message Queue/JMS.md",
-    "日常记录/大端和小端模式.md",
-    "日常记录/感悟/规律.md"
+    "日常记录/大端和小端模式.md"
   ]
 }
