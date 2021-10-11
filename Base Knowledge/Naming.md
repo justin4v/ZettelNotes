@@ -103,12 +103,17 @@ A file directory, such as /usr, in the UNIX file system represents a context. A 
 That is, in a file directory /usr/bin, the directory bin is a subcontext of usr. A DNS domain, such as COM, represents a context. A DNS domain named relative to another DNS domain represents a subcontext. For the DNS domain Sun.COM, the DNS domain Sun is a subcontext of COM.
 
 Finally, an LDAP entry, such as c=us, represents a context. An LDAP entry named relative to another LDAP entry represents a subcontext. For the LDAP entry o=sun,c=us, the entry o=sun is a subcontext of c=us.
-## 示例：Unix 文件系统
-UNIX文件系统中的文件目录(例如/usr)表示一个 context。相对于另一个文件目录命名的文件目录表示一个子上下文(UNIX称为_subdirectory_)。
+## 示例
+### Unix 文件系统
+UNIX文件系统中的文件目录(例如/usr)表示一个 context。相对于该文件目录的文件目录为 sub-context (UNIX称为 _subdirectory_)。
+在文件目录/usr/bin中：目录 bin 是 usr 的 sub-context。
 
-也就是说，在文件目录/usr/bin中，目录bin是usr的子上下文。一个DNS域，例如COM，代表一个上下文。一个相对于另一个DNS域命名的DNS域代表一个子上下文。对于DNS域Sun.COM, DNS域Sun是COM的子上下文。
+### DNS
+一个 DNS 域，例如 COM，代表一个 context。
+相对于该域命名的 DNS 域是一个 sub-context 。对于DNS域 Sun.COM：Sun 是 COM 的子上下文。
 
-最后，一个LDAP条目(例如c=us)表示一个上下文。相对于另一个LDAP条目命名的LDAP条目表示子上下文。对于LDAP条目o=sun,c=us，条目o=sun是c=us的子上下文。
+### LDAP
+一个LDAP条目(例如c=us)表示一个 context。相对于一个LDAP条目的LDAP条目表示该条目的 sub-。对于LDAP条目o=sun,c=us，条目o=sun是c=us的子上下文。
 
 # Naming Systems and Namespaces
 
