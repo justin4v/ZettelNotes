@@ -34,10 +34,9 @@ c:\bin\autoexec.bat ==> File Reference
 To look up an object in a naming system, you supply it the _name_ of the object.
 要在命名系统中查找一个对象，您需要向它提供对象的 _name_。
 
-The naming system determines the syntax that the name must follow. This syntax is sometimes called the naming systems _naming convention_（命名约定）.
-naming system （命名系统）定义了 name 必须遵循的语法。这种语法被称为命名系统 的 _命名约定_
+**naming system （命名系统）定义了 name 必须遵循的语法**。这种语法被称为命名系统 的** _命名约定_（_naming convention_）**
 
-A name is made up components. A name's representation consist of a component separator marking the components of the name.
+名称是由组件和组件分割符组成的。
 
 ![[命名服务示例.png]]
 

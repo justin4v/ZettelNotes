@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -132,12 +131,12 @@
   "active": "312ecfe334378ec2",
   "lastOpenFiles": [
     "Base Knowledge/Naming.md",
+    "Language/Java/基础/JNDI.md",
     "Base Knowledge/未命名.md",
     "日常记录/常识/专业词汇.md",
     "日常记录/常识/未命名.md",
     "Language/JDK工具.md",
     "Language/Thread Dump.md",
-    "Language/Java/基础/JNDI.md",
     "日常记录/常识/API vs. SPI.md",
     "日常记录/常识/大端和小端模式.md",
     "Language/Java/基础/未命名.md"
