@@ -22,6 +22,7 @@ Name objectName = new CompositeName("java:comp/env/jdbc");
 ```
 
 The _Name_ interface provides the ability to manage the component names and syntax for JNDI names. 
+_Name_接口提供了管理组件名称和JNDI名称语法的能力。
 The first token of the string represents the *global context*, after that each string added represents the next sub-context:
 
 ```java
