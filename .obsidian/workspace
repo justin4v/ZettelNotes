@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/大端和小端模式.md",
+            "file": "日常记录/常识/专业词汇.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/大端和小端模式.md",
+            "file": "日常记录/常识/专业词汇.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/大端和小端模式.md",
+                "file": "日常记录/常识/专业词汇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/大端和小端模式.md"
+                "file": "日常记录/常识/专业词汇.md"
               }
             }
           }
@@ -130,6 +130,8 @@
   },
   "active": "399d6db1d4da0bf7",
   "lastOpenFiles": [
+    "日常记录/常识/专业词汇.md",
+    "Message Queue/JMS.md",
     "日常记录/大端和小端模式.md",
     "日常记录/感悟/规律.md",
     "日常记录/Effective Study.md",
@@ -137,8 +139,6 @@
     "日常记录/规律.md",
     "日常记录/未命名.md",
     "Language/JVM/class 文件结构.md",
-    "Message Queue/未命名.md",
-    "Language/JVM/Class 文件结构.md",
-    "Language/JVM/JVM简介.md"
+    "Message Queue/未命名.md"
   ]
 }
