@@ -15,6 +15,6 @@ The SPI enables a variety of naming and directory services to be plugged in tran
 
 ## 参考
 1. [Naming Concepts ](https://docs.oracle.com/javase/tutorial/jndi/concepts/index.html)
-
-[[API vs. SPI]]
-[JNDI - Baeldung](https://www.baeldung.com/jndi)
+2. [Directory Concepts](https://docs.oracle.com/javase/tutorial/jndi/concepts/directory.html)
+3. [[API vs. SPI]]
+4. [JNDI - Baeldung](https://www.baeldung.com/jndi)
