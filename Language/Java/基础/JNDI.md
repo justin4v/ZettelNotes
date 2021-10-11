@@ -1,5 +1,5 @@
 # 概念
-The Java Naming and Directory Interface™ (JNDI)  提供一些列*命名（naming）和目录（directory）服务* 的 Java *API*，可用于绑定（binding）对象，查找（look up）对象或者检测对象上的改动。
+The Java Naming and Directory Interface™ (JNDI)  提供一些列**命名（naming）和目录（directory）服务的 Java API**，可用于绑定（binding）对象，查找（look up）对象或者检测对象上的改动。
 
 # 架构
 The JNDI architecture consists of an API and a service provider interface (SPI). 
@@ -84,25 +84,23 @@ ctx.bind("java:comp/env/jdbc/datasource", ds);
 ```
 
 In general, services should store an object reference, serialized data, or attributes in a directory context. It all depends on the needs of the application.
-通常，服务应该在目录上下文中存储对象引用、序列化数据或属性。这完全取决于应用程序的需要。
+通常，服务应该在 directory context 中存储对象引用、序列化数据或属性。不过这取决于应用程序的需要。
 
-Note that using JNDI this way is less common. Typically, JNDI interfaces with data that is managed outside the application runtime.
+### 查找 JNDI 对象
 
-However, if the application can already create or find its _DataSource_, it might be easier to wire that using Spring. In contrast, if something outside of our application bound objects in JNDI, then the application could consume them.
-
-### Looking Up JNDI Objects
-
-Let's look up our _DataSource_:
+查找 _DataSource_:
 
 ```java
 DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/datasource");
 ```
 
-And then let's test to ensure that _DataSource_ is as expected:
+## Role of JNDI in Modern Application Architecture
 
-```java
-assertNotNull(ds.getConnection());
-```
+虽然JNDI在**轻量级、容器化**的Java应用程序(如Spring Boot)中扮演的角色较小，但还有其他用途。
+如：
+1. [JDBC](https://www.baeldung.com/java-jdbc)；
+2. [EJB](https://www.baeldung.com/ejb-intro)；
+3. [JMS](https://www.baeldung.com/spring-jms). 
 
 
 ## 参考文献
