@@ -91,11 +91,10 @@ LDAP名称 `cn=Rosanna Lee, o=Sun, c=US`命名了一个LDAP条目 `cn=Rosanna Le
 尽管通常引用可以包含任何信息，但将其内容引用为 _addresses_（如何访问对象） 是很有用的。
 
 # Context
-
-A _context_ is **a set of name-to-object bindings**. Every context has an associated naming convention. 
 _context_ 是一个 **name-to-object 绑定的集合**。每个 _context_ 都有一个相关的命名约定。
-
-A context always provides a lookup (_resolution_ 解析) operation that returns the object, it typically also provides operations such as those for binding names, unbinding names, and listing bound names. A name in one context object can be bound to another context object (called a _subcontext_) that has the same naming convention.
+context 总是提供了一个查找( _resolution_ 解析)操作，返回对象。
+通常还提供绑定名称、解绑、列出所有已绑定名称等操作。
+一个 context 中的名称可以绑定到另一个具有相同命名约定（naming convention）的 context (称为_subcontext_)。
 
 ![[context实例.png]]
 
@@ -104,6 +103,12 @@ A file directory, such as /usr, in the UNIX file system represents a context. A 
 That is, in a file directory /usr/bin, the directory bin is a subcontext of usr. A DNS domain, such as COM, represents a context. A DNS domain named relative to another DNS domain represents a subcontext. For the DNS domain Sun.COM, the DNS domain Sun is a subcontext of COM.
 
 Finally, an LDAP entry, such as c=us, represents a context. An LDAP entry named relative to another LDAP entry represents a subcontext. For the LDAP entry o=sun,c=us, the entry o=sun is a subcontext of c=us.
+## 示例：Unix 文件系统
+UNIX文件系统中的文件目录(例如/usr)表示一个 context。相对于另一个文件目录命名的文件目录表示一个子上下文(UNIX称为_subdirectory_)。
+
+也就是说，在文件目录/usr/bin中，目录bin是usr的子上下文。一个DNS域，例如COM，代表一个上下文。一个相对于另一个DNS域命名的DNS域代表一个子上下文。对于DNS域Sun.COM, DNS域Sun是COM的子上下文。
+
+最后，一个LDAP条目(例如c=us)表示一个上下文。相对于另一个LDAP条目命名的LDAP条目表示子上下文。对于LDAP条目o=sun,c=us，条目o=sun是c=us的子上下文。
 
 # Naming Systems and Namespaces
 
