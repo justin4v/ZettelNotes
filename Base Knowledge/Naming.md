@@ -1,12 +1,15 @@
 # Naming Concepts
 
-A fundamental facility in any computing system is the _naming service_--the means by which names are associated with objects and objects are found based on their names. 
+A **fundamental facility** in any computing system is the **_naming service_**
 
-A naming service allows you to look up an object given its name.
+naming service:
+- names are associated with objects;
+- objects are found based on their names. 
+
 
 When using almost any computer program or system, you are always naming one object or another. 
 For example：
-- when you use an electronic mail system, you must provide the name of the recipient. 
+- . 
 - To access a file in the computer, you must supply its name. 
 
 ![[Naming System.png]]
@@ -33,7 +36,7 @@ The naming system determines the syntax that the name must follow. This syntax i
 
 A name is made up components. A name's representation consist of a component separator marking the components of the name.
 
-![[命名服务实例.png]]
+![[命名服务示例.png]]
 
 The UNIX file system's naming convention is that a file is named from its path relative to the root of the file system, with each component in the path separated from left to right using the forward slash character ("/"). 
 

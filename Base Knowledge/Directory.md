@@ -6,7 +6,7 @@ directory service = naming service + objects containing attributes
 
 You not only can look up an object by its name but also get the object's attributes or _search_ for the object based on its attributes.
 
-[Diagram showing a directory system: a name references a directory object which contains attributes.]
+![[directory示例.png]]
 
 An example is the telephone company's directory service. It maps a subscriber's name to his address and phone number. A computer's directory service is very much like a telephone company's directory service in that both can be used to store information such as telephone numbers and addresses. The computer's directory service is much more powerful, however, because it is available online and can be used to store a variety of information that can be utilized by users, programs, and even the computer itself and other computers.
 
