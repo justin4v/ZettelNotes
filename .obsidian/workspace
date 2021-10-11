@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/基础/JNDI.md",
+            "file": "Language/Thread Dump.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/基础/JNDI.md",
+            "file": "Language/Thread Dump.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/基础/JNDI.md",
+                "file": "Language/Thread Dump.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/基础/JNDI.md"
+                "file": "Language/Thread Dump.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "399d6db1d4da0bf7",
   "lastOpenFiles": [
+    "Language/Thread Dump.md",
     "Language/Java/基础/JNDI.md",
     "日常记录/常识/API vs. SPI.md",
     "日常记录/常识/大端和小端模式.md",
@@ -138,7 +139,6 @@
     "Language/Java/基础/未命名.md",
     "Message Queue/JMS.md",
     "日常记录/大端和小端模式.md",
-    "日常记录/感悟/规律.md",
-    "日常记录/Effective Study.md"
+    "日常记录/感悟/规律.md"
   ]
 }
