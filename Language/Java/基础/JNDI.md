@@ -21,9 +21,8 @@ JNDI 核心功能：
 Name objectName = new CompositeName("java:comp/env/jdbc");
 ```
 
-The _Name_ interface provides the ability to manage the component names and syntax for JNDI names. 
-_Name_接口提供了管理组件名称和JNDI名称语法的能力。
-The first token of the string represents the *global context*, after that each string added represents the next sub-context:
+_Name_ 接口提供了管理组件名称和 JNDI 名称语法的能力。
+字符串的第一个标记表示 **全局上下文（global context）**，之后添加的字符串表示下一个**子上下文（sub-context）**:
 
 ```java
 Enumeration<String> elements = objectName.getAll();
@@ -32,15 +31,15 @@ while(elements.hasMoreElements()) {
 }
 ```
 
-Our output looks like:
+输出:
 
 ```plaintext
-java:comp
-env
-jdbc
+java:comp  // gobal context
+env        // sub-context
+jdbc       // sub-context
 ```
 
-As we can see, `/` is the delimiter for _Name_ sub-contexts. Now, let's add a sub-context:
+ `/`是 _Name_ 中 sub-contexts. Now, let's add a sub-context:
 
 ```java
 objectName.add("example");
