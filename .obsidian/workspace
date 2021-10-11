@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/常识/专业词汇.md",
+            "file": "Base Knowledge/Naming.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/常识/专业词汇.md",
+                "file": "Base Knowledge/Naming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/常识/专业词汇.md"
+                "file": "Base Knowledge/Naming.md"
               }
             }
           }
@@ -117,6 +117,7 @@
   },
   "active": "312ecfe334378ec2",
   "lastOpenFiles": [
+    "Base Knowledge/未命名.md",
     "日常记录/常识/专业词汇.md",
     "日常记录/常识/未命名.md",
     "Language/JDK工具.md",
@@ -125,7 +126,6 @@
     "日常记录/常识/API vs. SPI.md",
     "日常记录/常识/大端和小端模式.md",
     "Language/Java/基础/未命名.md",
-    "Message Queue/JMS.md",
-    "日常记录/大端和小端模式.md"
+    "Message Queue/JMS.md"
   ]
 }
