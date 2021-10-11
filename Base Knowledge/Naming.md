@@ -3,21 +3,24 @@
 A **fundamental facility** in any computing system is the **_naming service_**
 
 naming service:
-- names are associated with objects;
-- objects are found based on their names. 
+- **名字和对象关联;**
+- **根据名称找到对象. **
 
 
 When using almost any computer program or system, you are always naming one object or another. 
-For example：
-- . 
-- To access a file in the computer, you must supply its name. 
+例如：
+- 使用电子邮件的时候，需要填写收件人. 
+- 要访问计算机中的文件，必须提供它的名称. 
 
 ![[Naming System.png]]
 
-A naming service's primary function is to map people friendly names to objects, such as addresses, identifiers, or objects typically used by computer programs.
+命名服务的**主要功能是将对人类友好的名称映射到对象**，如
+- 地址；
+- 标识符；
+- 计算机程序通常使用的对象。
 
 ## DNS
-the [Internet Domain Name System (DNS)](http://www.ietf.org/rfc/rfc1034.txt) maps machine names to IP Addresses:
+the [Internet Domain Name System (DNS)](http://www.ietf.org/rfc/rfc1034.txt) 将机器名 映射到 IP Addresses :
 
 www.example.com ==> 192.0.2.5
 
