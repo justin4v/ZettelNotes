@@ -47,3 +47,6 @@ For example, you can query the directory service to find:
 ## Combining Naming and Directory Services
 
 Directories often arrange their objects in a hierarchy. For example, the LDAP arranges all directory objects in a tree, called a _directory information tree (DIT)_. Within the DIT, an organization object, for example, might contain group objects that might in turn contain person objects. When directory objects are arranged in this way, they play the role of naming contexts in addition to that of containers of attributes.
+
+# 参考
+[Directory Concepts](https://docs.oracle.com/javase/tutorial/jndi/concepts/directory.html)

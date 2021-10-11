@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/Naming.md",
+            "file": "Base Knowledge/Directory.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/Naming.md",
+            "file": "Base Knowledge/Directory.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base Knowledge/Naming.md",
+                "file": "Base Knowledge/Directory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Base Knowledge/Naming.md"
+                "file": "Base Knowledge/Directory.md"
               }
             }
           }
@@ -130,8 +130,8 @@
   },
   "active": "312ecfe334378ec2",
   "lastOpenFiles": [
-    "Base Knowledge/Naming.md",
     "Base Knowledge/Directory.md",
+    "Base Knowledge/Naming.md",
     "Language/Java/基础/JNDI.md",
     "Base Knowledge/未命名.md",
     "日常记录/常识/专业词汇.md",

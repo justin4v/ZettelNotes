@@ -133,3 +133,7 @@ _namespace_ 是命名系统中所有可能的名称的集合。
 1. UNIX文件系统有一个名称空间，由该文件系统中所有文件和目录的名称组成。
 2. DNS命名空间包含DNS域和表项的名称。
 3. LDAP命名空间包含LDAP条目的名称。
+
+
+# 参考
+1. [Naming Concepts ](https://docs.oracle.com/javase/tutorial/jndi/concepts/index.html)
