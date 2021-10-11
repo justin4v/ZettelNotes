@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Message Queue/JMS.md",
+            "file": "Base Knowledge/编程/Stop The World.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Message Queue/JMS.md",
+            "file": "Base Knowledge/编程/Stop The World.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Message Queue/JMS.md",
+                "file": "Base Knowledge/编程/Stop The World.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Message Queue/JMS.md"
+                "file": "Base Knowledge/编程/Stop The World.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "312ecfe334378ec2",
   "lastOpenFiles": [
+    "Base Knowledge/编程/未命名.md",
     "Message Queue/JMS.md",
     "Language/Java/基础/JNDI.md",
     "Base Knowledge/编程/Naming.md",
@@ -138,7 +139,6 @@
     "Base Knowledge/未命名.md",
     "日常记录/常识/专业词汇.md",
     "日常记录/常识/未命名.md",
-    "Language/JDK工具.md",
-    "Language/Thread Dump.md"
+    "Language/JDK工具.md"
   ]
 }
