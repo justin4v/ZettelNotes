@@ -41,19 +41,26 @@ To look up an object in a naming system, you supply it the _name_ of the object.
 ![[命名服务示例.png]]
 
 ## Unix 文件系统
-The UNIX file system's naming convention is that a file is named from its path relative to the root of the file system, with each component in the path separated from left to right using the forward slash character ("/"). 
+UNIX文件系统的命名约定是：
+- 根据文件相对于文件系统根路径来命名文件；
+- 路径中的每个组件使用正斜杠字符("/")从左到右分开。
 
 The UNIX _pathname_, /usr/hello, for example, names a file hello in the file directory usr, which is located in the root of the file system.
 
 ## DNS 
-DNS naming convention calls for components in the DNS name to be ordered from right to left and delimited by the dot character ("."). 
+DNS命名约定要求：
+- DNS名称中的组件按从右到左的顺序排列，并由点字符(".")分隔。
 
 Thus the DNS name sales.Wiz.COM names a DNS entry with the name sales, relative to the DNS entry Wiz.COM. The DNS entry Wiz.COM, in turn, names an entry with the name Wiz in the COM entry.
 
-The [Lightweight Directory Access Protocol (LDAP)](http://www.ietf.org/rfc/rfc2251.txt) naming convention orders components from right to left, delimited by the comma character (","). 
+
 
 ## LDAP
-Thus the LDAP name cn=Rosanna Lee, o=Sun, c=US names an LDAP entry cn=Rosanna Lee, relative to the entry o=Sun, which in turn, is relative to c=us. LDAP has the further rule that each component of the name must be a name/value pair with the name and value separated by an equals character ("=").
+[轻量级目录访问协议(LDAP)](http://www.ietf.org/rfc/rfc2251.txt)命名约定：
+- 按从右到左的顺序排列组件，由逗号("，")分隔；
+- 名称的每个组件必须是一个名称/值对，名称和值由一个等号字符("=")分隔。
+
+LDAP名称 `cn=Rosanna Lee, o=Sun, c=US`命名了一个LDAP条目cn=Rosanna Lee，相对于条目o=Sun，而该条目又相对于c=US。
 
 # Bindings
 
