@@ -98,11 +98,7 @@ context 总是提供了一个查找( _resolution_ 解析)操作，返回对象�
 
 ![[context实例.png]]
 
-A file directory, such as /usr, in the UNIX file system represents a context. A file directory named relative to another file directory represents a subcontext (UNIX users refer to this as a _subdirectory_). 
 
-That is, in a file directory /usr/bin, the directory bin is a subcontext of usr. A DNS domain, such as COM, represents a context. A DNS domain named relative to another DNS domain represents a subcontext. For the DNS domain Sun.COM, the DNS domain Sun is a subcontext of COM.
-
-Finally, an LDAP entry, such as c=us, represents a context. An LDAP entry named relative to another LDAP entry represents a subcontext. For the LDAP entry o=sun,c=us, the entry o=sun is a subcontext of c=us.
 ## 示例
 ### Unix 文件系统
 UNIX文件系统中的文件目录(例如/usr)表示一个 context。相对于该文件目录的文件目录为 sub-context (UNIX称为 _subdirectory_)。
@@ -113,14 +109,23 @@ UNIX文件系统中的文件目录(例如/usr)表示一个 context。相对于�
 相对于该域命名的 DNS 域是一个 sub-context 。对于DNS域 Sun.COM：Sun 是 COM 的子上下文。
 
 ### LDAP
-一个LDAP条目(例如c=us)表示一个 context。相对于一个LDAP条目的LDAP条目表示该条目的 sub-。对于LDAP条目o=sun,c=us，条目o=sun是c=us的子上下文。
+一个LDAP条目(例如c=us)表示一个 context。相对于一个LDAP条目的LDAP条目表示该条目的 sub-context 。、
+对于LDAP条目`o=sun,c=us`：条目 `o=sun` 是 `c=us` 的 sub-context。
 
 # Naming Systems and Namespaces
 
-A _naming system_ is a connected set of contexts of the same type (they have the same naming convention) and provides a common set of operations.
+## Naming Systems
+命名系统是**同一类型（相同的命名约定） context 的相互关联的集合**，并提供了一组公共操作。
 
-A system that implements the DNS is a naming system. A system that communicates using the LDAP is a naming system.
+例如：
+- 实现 DNS 的系统称为命名系统；
+- 实现 LDAP 进行通信的系统称为命名系统。
 
-A naming system provides a _naming service_ to its customers for performing naming-related operations. A naming service is accessed through its own interface. The DNS offers a naming service that maps machine names to IP addresses. LDAP offers a naming service that maps LDAP names to LDAP entries. A file system offers a naming service that maps filenames to files and directories.
+命名系统为客户提供命名服务，用于执行命名相关的操作。
+例如：
+- DNS 提供了将机器名称映射到IP地址的命名服务。
+- LDAP 提供了将 LDAP 名称映射到LDAP条目的命名服务。
+- 文件系统提供了将文件名映射到文件和目录的命名服务。
 
-A _namespace_ is the set of all possible names in a naming system. The UNIX file system has a namespace consisting of all of the names of files and directories in that file system. The DNS namespace contains names of DNS domains and entries. The LDAP namespace contains names of LDAP entries.
+## Namespaces
+_namespace_ 是命名系统中所有可能的名称的集合。UNIX文件系统有一个名称空间，由该文件系统中所有文件和目录的名称组成。DNS命名空间包含DNS域和表项的名称。LDAP命名空间包含LDAP条目的名称。
