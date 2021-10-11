@@ -80,7 +80,8 @@ Queue returnQueue = (Queue) initialCtx.lookup ("Return_Queue");
 
 ## Destination
 
-目的地指明消息被发送的目的地以及客户端接收消息的来源。JMS使用两种目的地，队列和话题。如下代码指定了一个队列和话题：
+Destination 指明*消息被发送的目的地以及客户端接收消息的来源*。
+JMS 使用两种目的地：*queue和 topic*。如下代码指定了一个队列：
 
 创建一个队列Session：
 ```java
@@ -91,7 +92,8 @@ QueueReceiver receiver = ses.createReceiver(t);
 
 ## Connection
 
-Connection表示在客户端和JMS系统之间建立的链接（对TCP/IP socket的包装）。Connection可以产生一个或多个Session。跟ConnectionFactory一样，Connection也有两种类型：QueueConnection和TopicConnection。
+*Connection 表示在客户端和 JMS 系统之间建立的链接（对TCP/IP socket的包装）*。
+Connection可以产生一个或多个Session。跟ConnectionFactory 一样，Connection也有两种类型：QueueConnection 和 TopicConnection。
 
 连接对象封装了与JMS提供者之间的虚拟连接，如果我们有一个ConnectionFactory对象，可以使用它来创建一个连接。
 ```java
@@ -100,7 +102,9 @@ Connection connection = connectionFactory.createConnection();
 
 ## Session
 
-Session 是我们对消息进行操作的接口，可以通过session创建生产者、消费者、消息等。Session 提供了事务的功能，如果需要使用session发送/接收多个消息时，可以将这些发送/接收动作放到一个事务中。
+*Session 是我们对消息进行操作的接口*，可以通过session *创建生产者、消费者、消息等*。
+
+Session 提供了事务的功能，如果需要使用session发送/接收多个消息时，可以将这些发送/接收动作放到一个事务中。
 
 我们可以在连接创建完成之后创建session：
 ```java
@@ -111,7 +115,8 @@ Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
 ## Producter
 
-消息生产者由Session创建，用于往目的地发送消息。生产者实现MessageProducer接口，我们可以为目的地、队列或话题创建生产者；
+*消息生产者由Session创建，用于往目的地发送消息。*
+生产者实现MessageProducer接口，我们可以为目的地、队列或话题创建生产者；
 
 ```java
 MessageProducer producer = session.createProducer(dest);
@@ -121,7 +126,7 @@ MessageProducer producer = session.createProducer(topic);
 
 ## Consumer
 
-消息消费者由Session创建，用于接收被发送到Destination的消息。
+*消息消费者由Session创建，用于接收被发送到Destination的消息。*
 ```java
 MessageConsumer consumer = session.createConsumer(dest);
 MessageConsumer consumer = session.createConsumer(queue);
@@ -130,4 +135,6 @@ MessageConsumer consumer = session.createConsumer(topic);
 
 ## MessageListener
 
-消息监听器。如果注册了消息监听器，一旦消息到达，将自动调用监听器的onMessage方法。EJB中的MDB（Message-Driven Bean）就是一种MessageListener。
+*如果注册了消息监听器，一旦消息到达，将自动调用监听器的onMessage方法*。
+
+EJB中的MDB（Message-Driven Bean）就是一种MessageListener。
