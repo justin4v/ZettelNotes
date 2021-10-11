@@ -1,6 +1,6 @@
 # 概念
-The Java Naming and Directory Interface™ (JNDI) is an *application programming interface (API)* that provides [naming](https://docs.oracle.com/javase/tutorial/jndi/overview/naming.html) and [directory](https://docs.oracle.com/javase/tutorial/jndi/overview/dir.html) functionality to applications written using the Java™ programming language.
-
+The Java Naming and Directory Interface™ (JNDI) **provides consistent use of naming and/or directory services as a Java API.** This interface can be used for binding objects, looking up or querying objects, as well as detecting changes on the same objects.
+The Java Naming and Directory Interface™ (JNDI)  提供一些列*命名（naming）和目录（directory）服务* 的 Java *API*，可用于绑定对象，查找对象或者检测对象上的改动。
 
 
 # 架构
@@ -10,6 +10,10 @@ The SPI enables a variety of naming and directory services to be plugged in tran
 
 ![[JNDI 结构.png]]
 
+# 使用
+
+
 
 ## 参考
 [[API vs. SPI]]
+[JNDI - Baeldung](https://www.baeldung.com/jndi)
