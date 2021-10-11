@@ -60,60 +60,70 @@ JMS 定义了这两种消息发送模型的规范，它们相互独立。
 5.  消息消费者（Message Consumers）
 6.  消息监听者（Message Listeners）
 
-
+![[JMS 编程模型.png]]
 
 ## Connection Factories
 
-创建Connection对象的工厂，针对两种不同的jms消息模型，分别有QueueConnectionFactory和TopicConnectionFactory两种。可以通过JNDI来查找ConnectionFactory对象。客户端使用一个连接工厂对象连接到JMS服务提供者，它创建了JMS服务提供者和客户端之间的连接。JMS客户端（如发送者或接受者）会在JNDI名字空间中搜索并获取该连接。使用该连接，客户端能够与目的地通讯，往队列或话题发送/接收消息。
+创建Connection对象的工厂，针对两种不同的 jms 消息模型，分别有 `QueueConnectionFactory` 和 `TopicConnectionFactory` 两种。可以通过JNDI来查找 ConnectionFactory 对象。
+客户端使用一个连接工厂对象连接到JMS服务提供者，它创建了JMS服务提供者和客户端之间的连接。
+JMS客户端（如发送者或接受者）会在 [[JNDI]] 名字空间中搜索并获取该连接。使用该连接，客户端能够与目的地通讯，往队列或话题发送/接收消息。
 
+```java
 QueueConnectionFactory queueConnFactory = (QueueConnectionFactory) initialCtx.lookup ("primaryQCF");
 Queue purchaseQueue = (Queue) initialCtx.lookup ("Purchase_Queue");
 Queue returnQueue = (Queue) initialCtx.lookup ("Return_Queue");
+```
 
 ## Destination
 
 目的地指明消息被发送的目的地以及客户端接收消息的来源。JMS使用两种目的地，队列和话题。如下代码指定了一个队列和话题：
 
-　　　　创建一个队列Session：
-
+创建一个队列Session：
+```java
 QueueSession ses = con.createQueueSession (false, Session.AUTO_ACKNOWLEDGE);  //get the Queue object 
 Queue t = (Queue) ctx.lookup ("myQueue");  //create QueueReceiver 
 QueueReceiver receiver = ses.createReceiver(t); 
+```
 
-　　　　（3）、Connection
+## Connection
 
-　　　　　　Connection表示在客户端和JMS系统之间建立的链接（对TCP/IP socket的包装）。Connection可以产生一个或多个Session。跟ConnectionFactory一样，Connection也有两种类型：QueueConnection和TopicConnection。
+Connection表示在客户端和JMS系统之间建立的链接（对TCP/IP socket的包装）。Connection可以产生一个或多个Session。跟ConnectionFactory一样，Connection也有两种类型：QueueConnection和TopicConnection。
 
-　　　　　　连接对象封装了与JMS提供者之间的虚拟连接，如果我们有一个ConnectionFactory对象，可以使用它来创建一个连接。
-
+连接对象封装了与JMS提供者之间的虚拟连接，如果我们有一个ConnectionFactory对象，可以使用它来创建一个连接。
+```java
 Connection connection = connectionFactory.createConnection();
+```
 
-　　　　（4）、Session
+## Session
 
-　　　　　　Session 是我们对消息进行操作的接口，可以通过session创建生产者、消费者、消息等。Session 提供了事务的功能，如果需要使用session发送/接收多个消息时，可以将这些发送/接收动作放到一个事务中。
+Session 是我们对消息进行操作的接口，可以通过session创建生产者、消费者、消息等。Session 提供了事务的功能，如果需要使用session发送/接收多个消息时，可以将这些发送/接收动作放到一个事务中。
 
-　　　　　　我们可以在连接创建完成之后创建session：
-
+我们可以在连接创建完成之后创建session：
+```java
 Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+```
 
-　　　　　　这里面提供了参数两个参数，第一个参数是是否支持事务，第二个是事务的类型
+这里面提供了参数两个参数，第一个参数是是否支持事务，第二个是事务的类型
 
-　　　　（5）、Producter
+## Producter
 
-　　　　　　消息生产者由Session创建，用于往目的地发送消息。生产者实现MessageProducer接口，我们可以为目的地、队列或话题创建生产者；
+消息生产者由Session创建，用于往目的地发送消息。生产者实现MessageProducer接口，我们可以为目的地、队列或话题创建生产者；
 
+```java
 MessageProducer producer = session.createProducer(dest);
 MessageProducer producer = session.createProducer(queue);
 MessageProducer producer = session.createProducer(topic);
+```
 
-　　　　（6）、Consumer
+## Consumer
 
-　　　　　　消息消费者由Session创建，用于接收被发送到Destination的消息。
-
+消息消费者由Session创建，用于接收被发送到Destination的消息。
+```java
 MessageConsumer consumer = session.createConsumer(dest);
 MessageConsumer consumer = session.createConsumer(queue);
 MessageConsumer consumer = session.createConsumer(topic);
+```
 
-　　　　（7）、MessageListener
+## MessageListener
 
-　　　　　　消息监听器。如果注册了消息监听器，一旦消息到达，将自动调用监听器的onMessage方法。EJB中的MDB（Message-Driven Bean）就是一种MessageListener。
+消息监听器。如果注册了消息监听器，一旦消息到达，将自动调用监听器的onMessage方法。EJB中的MDB（Message-Driven Bean）就是一种MessageListener。
