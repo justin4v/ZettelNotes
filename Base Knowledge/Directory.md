@@ -2,7 +2,7 @@
 
 Many naming services are extended with a _directory service_. A directory service associates names with objects and also associates such objects with _attributes_.
 
-directory service = naming service + objects containing attributes
+**directory service = naming service + objects containing attributes**
 
 You not only can look up an object by its name but also get the object's attributes or _search_ for the object based on its attributes.
 
