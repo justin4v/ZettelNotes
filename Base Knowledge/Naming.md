@@ -18,7 +18,7 @@ the [Internet Domain Name System (DNS)](http://www.ietf.org/rfc/rfc1034.txt) map
 
 www.example.com ==> 192.0.2.5
 
-## 
+## 文件系统
 A file system maps a filename to a file reference that a program can use to access the contents of the file.
 
 c:\bin\autoexec.bat ==> File Reference
@@ -27,37 +27,25 @@ These two examples also illustrate the wide range of scale at which naming servi
 
 ## Names
 
-To look up an object in a naming system, you supply it the _name_ of the object. The naming system determines the syntax that the name must follow. This syntax is sometimes called the naming systems _naming convention_. A name is made up components. A name's representation consist of a component separator marking the components of the name.
+To look up an object in a naming system, you supply it the _name_ of the object.
 
-Naming System
+The naming system determines the syntax that the name must follow. This syntax is sometimes called the naming systems _naming convention_（命名约定）. 
 
-Component Separator
+A name is made up components. A name's representation consist of a component separator marking the components of the name.
 
-Names
+![[命名服务实例.png]]
 
-UNIX file system
+The UNIX file system's naming convention is that a file is named from its path relative to the root of the file system, with each component in the path separated from left to right using the forward slash character ("/"). 
 
-"/"
+The UNIX _pathname_, /usr/hello, for example, names a file hello in the file directory usr, which is located in the root of the file system.
 
-/usr/hello
+DNS naming convention calls for components in the DNS name to be ordered from right to left and delimited by the dot character ("."). 
 
-DNS
+Thus the DNS name sales.Wiz.COM names a DNS entry with the name sales, relative to the DNS entry Wiz.COM. The DNS entry Wiz.COM, in turn, names an entry with the name Wiz in the COM entry.
 
-"."
+The [Lightweight Directory Access Protocol (LDAP)](http://www.ietf.org/rfc/rfc2251.txt) naming convention orders components from right to left, delimited by the comma character (","). 
 
-sales.Wiz.COM
-
-LDAP
-
-"," and "="
-
-cn=Rosanna Lee, o=Sun, c=US
-
-The UNIX file system's naming convention is that a file is named from its path relative to the root of the file system, with each component in the path separated from left to right using the forward slash character ("/"). The UNIX _pathname_, /usr/hello, for example, names a file hello in the file directory usr, which is located in the root of the file system.
-
-DNS naming convention calls for components in the DNS name to be ordered from right to left and delimited by the dot character ("."). Thus the DNS name sales.Wiz.COM names a DNS entry with the name sales, relative to the DNS entry Wiz.COM. The DNS entry Wiz.COM, in turn, names an entry with the name Wiz in the COM entry.
-
-The [Lightweight Directory Access Protocol (LDAP)](http://www.ietf.org/rfc/rfc2251.txt) naming convention orders components from right to left, delimited by the comma character (","). Thus the LDAP name cn=Rosanna Lee, o=Sun, c=US names an LDAP entry cn=Rosanna Lee, relative to the entry o=Sun, which in turn, is relative to c=us. LDAP has the further rule that each component of the name must be a name/value pair with the name and value separated by an equals character ("=").
+Thus the LDAP name cn=Rosanna Lee, o=Sun, c=US names an LDAP entry cn=Rosanna Lee, relative to the entry o=Sun, which in turn, is relative to c=us. LDAP has the further rule that each component of the name must be a name/value pair with the name and value separated by an equals character ("=").
 
 ## Bindings
 
@@ -67,9 +55,15 @@ The DNS contains bindings that map machine names to IP addresses. An LDAP name i
 
 ## References and Addresses
 
-Depending on the naming service, some objects cannot be stored directly by the naming service; that is, a copy of the object cannot be placed inside the naming service. Instead, they must be stored by reference; that is, a _pointer_ or _reference_ to the object is placed inside the naming service. A reference represents information about how to access an object. Typically, it is a compact representation that can be used to communicate with the object, while the object itself might contain more state information. Using the reference, you can contact the object and obtain more information about the object.
+Depending on the naming service, some objects cannot be stored directly by the naming service; that is, a copy of the object cannot be placed inside the naming service. Instead, they must be stored by reference; that is, a _pointer_ or _reference_ to the object is placed inside the naming service.
 
-For example, an airplane object might contain a list of the airplane's passengers and crew, its flight plan, and fuel and instrument status, and its flight number and departure time. By contrast, an airplane object reference might contain only its flight number and departure time. The reference is a much more compact representation of information about the airplane object and can be used to obtain additional information. A file object, for example, is accessed using a _file reference_. A printer object, for example, might contain the state of the printer, such as its current queue and the amount of paper in the paper tray. A printer object reference, on the other hand, might contain only information on how to reach the printer, such as its print server name and printing protocol.
+A reference represents information about how to access an object. Typically, it is a compact representation that can be used to communicate with the object, while the object itself might contain more state information. Using the reference, you can contact the object and obtain more information about the object.
+
+For example, an airplane object might contain a list of the airplane's passengers and crew, its flight plan, and fuel and instrument status, and its flight number and departure time. 
+
+By contrast, an airplane object reference might contain only its flight number and departure time. The reference is a much more compact representation of information about the airplane object and can be used to obtain additional information. 
+
+A file object, for example, is accessed using a _file reference_. A printer object, for example, might contain the state of the printer, such as its current queue and the amount of paper in the paper tray. A printer object reference, on the other hand, might contain only information on how to reach the printer, such as its print server name and printing protocol.
 
 Although in general a reference can contain any arbitrary information, it is useful to refer to its contents as _addresses_ (or communication end points): specific information about how to access the object.
 
@@ -77,11 +71,15 @@ For simplicity, this tutorial uses "object" to refer to both objects and object 
 
 ## Context
 
-A _context_ is a set of name-to-object bindings. Every context has an associated naming convention. A context always provides a lookup (_resolution_) operation that returns the object, it typically also provides operations such as those for binding names, unbinding names, and listing bound names. A name in one context object can be bound to another context object (called a _subcontext_) that has the same naming convention.
+A _context_ is **a set of name-to-object bindings**. Every context has an associated naming convention. 
 
-![Several examples of contexts, bound to subcontexts.](https://docs.oracle.com/javase/tutorial/figures/jndi/context.gif)
+A context always provides a lookup (_resolution_ 解析) operation that returns the object, it typically also provides operations such as those for binding names, unbinding names, and listing bound names. A name in one context object can be bound to another context object (called a _subcontext_) that has the same naming convention.
 
-A file directory, such as /usr, in the UNIX file system represents a context. A file directory named relative to another file directory represents a subcontext (UNIX users refer to this as a _subdirectory_). That is, in a file directory /usr/bin, the directory bin is a subcontext of usr. A DNS domain, such as COM, represents a context. A DNS domain named relative to another DNS domain represents a subcontext. For the DNS domain Sun.COM, the DNS domain Sun is a subcontext of COM.
+![[context实例.png]]
+
+A file directory, such as /usr, in the UNIX file system represents a context. A file directory named relative to another file directory represents a subcontext (UNIX users refer to this as a _subdirectory_). 
+
+That is, in a file directory /usr/bin, the directory bin is a subcontext of usr. A DNS domain, such as COM, represents a context. A DNS domain named relative to another DNS domain represents a subcontext. For the DNS domain Sun.COM, the DNS domain Sun is a subcontext of COM.
 
 Finally, an LDAP entry, such as c=us, represents a context. An LDAP entry named relative to another LDAP entry represents a subcontext. For the LDAP entry o=sun,c=us, the entry o=sun is a subcontext of c=us.
 
