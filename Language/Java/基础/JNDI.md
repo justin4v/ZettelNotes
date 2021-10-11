@@ -66,23 +66,25 @@ ctx = (InitialContext) jndiTemplate.getContext();
 ```
 
 
-##  JNDI Object Binding and Lookup
+##  JNDI 对象绑定与查找
 
-Now that we've seen how to use _Name_ and _Context_, let’s use JNDI to store a JDBC _DataSource_:
+ _Name_ and _Context_ 的使用：
+使用 JNDI 存储一个 JDBC _DataSource_:
 
 ```java
 ds = new DriverManagerDataSource("jdbc:h2:mem:mydb");
 ```
 
-### Binding JNDI Objects
+### 绑定 JNDI 对象
 
-As we have a context, let's bind the object to it:
+获得 context 之后, 将对象绑定到context:
 
 ```java
 ctx.bind("java:comp/env/jdbc/datasource", ds);
 ```
 
 In general, services should store an object reference, serialized data, or attributes in a directory context. It all depends on the needs of the application.
+通常，服务应该在目录上下文中存储对象引用、序列化数据或属性。这完全取决于应用程序的需要。
 
 Note that using JNDI this way is less common. Typically, JNDI interfaces with data that is managed outside the application runtime.
 
