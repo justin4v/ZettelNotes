@@ -13,13 +13,14 @@ The SPI enables a variety of naming and directory services to be plugged in tran
 a database connection service calls for specific properties and exception handling.However, JNDI’s abstraction decouples the connection configuration from the application.
 Let's explore _Name_ and _Context_, which contain the core functionality of JNDI.
 
-### 2.1. _Name_ Interface
+### _Name_ Interface
 
 ```java
 Name objectName = new CompositeName("java:comp/env/jdbc");
 ```
 
-The _Name_ interface provides the ability to manage the component names and syntax for JNDI names. The first token of the string represents the global context, after that each string added represents the next sub-context:
+The _Name_ interface provides the ability to manage the component names and syntax for JNDI names. 
+The first token of the string represents the *global context*, after that each string added represents the next sub-context:
 
 ```java
 Enumeration<String> elements = objectName.getAll();
@@ -36,7 +37,7 @@ env
 jdbc
 ```
 
-As we can see, _/_ is the delimiter for _Name_ sub-contexts. Now, let's add a sub-context:
+As we can see, `/` is the delimiter for _Name_ sub-contexts. Now, let's add a sub-context:
 
 ```java
 objectName.add("example");
@@ -48,7 +49,7 @@ Then we test our addition:
 assertEquals("example", objectName.get(objectName.size() - 1));
 ```
 
-### 2.2. _Context_ Interface[](https://www.baeldung.com/jndi#2-context-interface)
+###  _Context_ Interface
 
 _Context_ contains the properties for the naming and directory service_._ Here, let's use some helper code from Spring for convenience to build a _Context_:
 
@@ -66,7 +67,7 @@ ctx = (InitialContext) jndiTemplate.getContext();
 
 Finally, _JndiTemplate_ helps us access the _InitialContext_.
 
-## 3. JNDI Object Binding and Lookup[](https://www.baeldung.com/jndi#jndi-object-binding-lookup)
+##  JNDI Object Binding and Lookup
 
 Now that we've seen how to use _Name_ and _Context_, let’s use JNDI to store a JDBC _DataSource_:
 
@@ -74,7 +75,7 @@ Now that we've seen how to use _Name_ and _Context_, let’s use JNDI to store a
 ds = new DriverManagerDataSource("jdbc:h2:mem:mydb");
 ```
 
-### 3.1. Binding JNDI Objects[](https://www.baeldung.com/jndi#1-binding-jndi-objects)
+### Binding JNDI Objects
 
 As we have a context, let's bind the object to it:
 
@@ -88,7 +89,7 @@ Note that using JNDI this way is less common. Typically, JNDI interfaces with da
 
 However, if the application can already create or find its _DataSource_, it might be easier to wire that using Spring. In contrast, if something outside of our application bound objects in JNDI, then the application could consume them.
 
-### 3.2. Looking Up JNDI Objects[](https://www.baeldung.com/jndi#2-looking-up-jndi-objects)
+### Looking Up JNDI Objects
 
 Let's look up our _DataSource_:
 
@@ -103,7 +104,7 @@ assertNotNull(ds.getConnection());
 ```
 
 
-## 参考
+## 参考文献
 1. [Naming Concepts ](https://docs.oracle.com/javase/tutorial/jndi/concepts/index.html)
 2. [Naming Package](https://docs.oracle.com/javase/tutorial/jndi/overview/naming.html)
 3. [Directory Concepts](https://docs.oracle.com/javase/tutorial/jndi/concepts/directory.html)
