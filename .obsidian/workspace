@@ -6,28 +6,13 @@
       {
         "id": "399d6db1d4da0bf7",
         "type": "leaf",
-        "dimension": 59.41375422773394,
         "state": {
           "type": "markdown",
           "state": {
             "file": "Language/Java/基础/JNDI.md",
             "mode": "source"
           }
-        },
-        "group": "08e3171e11cdd3d5"
-      },
-      {
-        "id": "dd203f31c20d679f",
-        "type": "leaf",
-        "dimension": 40.58624577226607,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/基础/JNDI.md",
-            "mode": "preview"
-          }
-        },
-        "group": "08e3171e11cdd3d5"
+        }
       }
     ],
     "direction": "vertical"
@@ -131,7 +116,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "dd203f31c20d679f",
+  "active": "399d6db1d4da0bf7",
   "lastOpenFiles": [
     "Language/Java/基础/JNDI.md",
     "日常记录/常识/API vs. SPI.md",
