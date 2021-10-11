@@ -4,16 +4,16 @@ The Java Naming and Directory Interface™ (JNDI)  提供一些列*命名（nami
 # 架构
 The JNDI architecture consists of an API and a service provider interface (SPI). 
 - 包含 JNDI API 和 SPI；
-- application 通过 API 使用 naming 和 directory 服务；
-- SPI允许透明地插入（plug）各种命名和目录服务，从而允许使用JNDI API的Java应用程序访问它们的服务
-Java applications use the JNDI API to access a variety of naming and directory services.
-The SPI enables a variety of naming and directory services to be plugged in transparently, thereby allowing the Java application using the JNDI API to access their services. 
+-  SPI 允许透明地插入（类似 plugins）各种 naming 和 directory 服务；
+-  java application 通过 API 使用 naming 和 directory 服务（plugins）；
 
 ![[JNDI 结构.png]]
 
 # 使用
-a database connection service calls for specific properties and exception handling.However, JNDI’s abstraction decouples the connection configuration from the application.
-Let's explore _Name_ and _Context_, which contain the core functionality of JNDI.
+JNDI abstraction 解耦了 database connection 配置和使用。
+JNDI 核心功能：
+1. *Name*
+2. *Context*
 
 ### _Name_ Interface
 
