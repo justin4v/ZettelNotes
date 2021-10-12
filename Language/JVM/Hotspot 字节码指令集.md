@@ -66,13 +66,12 @@ iload 4：将局部变量表中索引为4位置上的数据压入操作数栈中
 
 -   **局部变量压栈指令将给定的局部变量表中的数据压入操作数栈**。
 -   这类指令大体可以分为：
-    -   xload_<n>（x为i、1、f、d、a，n为0到3）
-	-  xload（x为i、1、f、d、a）
-    -   说明：在这里，x的取值表示数据类型。
+	-   xload_\<n>（x为i、1、f、d、a，n为0到3
+	-   xload（x为i、1、f、d、a）
+	-  说明：在这里，x的取值表示数据类型。
 -   指令xload_n表示将第n个局部变量压入操作数栈，比如iload_1、fload_0、aload_0等指令。其中aload_n表示将一个对象引用压栈。
 -   指令xload通过指定参数的形式，把局部变量压入操作数栈，当使用这个命令时，表示局部变量的数量可能超过了4个，比如指令iload、fload等。
-
-代码示例
+	
 ```java
 // 1 局部变量入栈命令
 public void load(int num,Object obj,long count,boolean flag,short[] arr){
@@ -83,12 +82,8 @@ public void load(int num,Object obj,long count,boolean flag,short[] arr){
         System.out.println(arr);
 }
 ```
-	
-	
-![[Pasted image 20211012114329.png]]
 
-所对应的局部变量表
-
-![[Pasted image 20211012114345.png]]
+字节码如下：
+![[load()的字节码.png]]
 
 	
