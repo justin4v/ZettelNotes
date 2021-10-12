@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/GC 算法.md",
+            "file": "Base Knowledge/编程/Stop The World.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/GC 算法.md",
+                "file": "Base Knowledge/编程/Stop The World.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/GC 算法.md"
+                "file": "Base Knowledge/编程/Stop The World.md"
               }
             }
           }
@@ -113,15 +113,16 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "312ecfe334378ec2",
   "lastOpenFiles": [
+    "Base Knowledge/编程/Stop The World.md",
     "Language/JVM/未命名.md",
     "Message Queue/JMS.md",
     "Language/JVM/JVM ClassLoader.md",
     "Language/Thread Dump.md",
-    "Base Knowledge/编程/Stop The World.md",
     "Base Knowledge/编程/未命名.md",
     "Language/Java/基础/JNDI.md",
     "Base Knowledge/编程/Naming.md",
