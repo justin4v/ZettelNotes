@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/Hotspot字节码.md",
+            "file": "Language/JVM/Hotspot 字节码指令集.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/Hotspot字节码.md",
+                "file": "Language/JVM/Hotspot 字节码指令集.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/Hotspot字节码.md"
+                "file": "Language/JVM/Hotspot 字节码指令集.md"
               }
             }
           }
