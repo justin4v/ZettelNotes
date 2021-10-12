@@ -16,8 +16,8 @@ JMS 定义了**消息发送模型的规范**：
 1. Point-to-Point Messaging Domain （点对点）
 2. Publish/Subscribe Messaging Domain （发布/订阅模式）
 
-## Point-to-Point Messaging Domain
-点对点消息模型
+## 点对点消息模型
+Point-to-Point Messaging Domain
 
 ![[p2p 消息模型.png]]
 
@@ -32,8 +32,8 @@ JMS 定义了**消息发送模型的规范**：
 -    发送者发送消息到消息队列和接收者接收消息是**独立的**；
 -    接收方在接收完消息之后，要向消息队列应答。
 
-## Publish/Subscribe Messaging Domain
-发布/订阅消息模型
+## 发布/订阅消息模型
+Publish/Subscribe Messaging Domain
 
 ![[发布-订阅模型.png]]
 
@@ -64,8 +64,9 @@ JMS 定义了**消息发送模型的规范**：
 
 ## Connection Factories
 
-针对两种不同的 jms 消息模型，分别有 `QueueConnectionFactory` 和 `TopicConnectionFactory` 两种。
-可以通过 **JNDI 来查找 ConnectionFactory 对象。**
+1. `QueueConnectionFactory` 适用于[[#点对点消息模型]]；
+2. `TopicConnectionFactory` 适用于 [[#发布 订阅消息模型]];
+3. **通过 [[JNDI]] 查找 ConnectionFactory 对象。**
 
 客户端创建一个连接对象连接到 JMS 服务提供者。
 JMS 客户端（如发送者或接受者）在 [[JNDI]] namespace 中查找并获取该连接。
