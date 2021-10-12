@@ -43,9 +43,9 @@
 
 **常用指令**
 
--   **【局部变量压栈指令】**将一个局部变量加载到操作数栈：xload、xload_（其中x为i、l、f、d、a，n为0到3）
--   **【常量入栈指令】**将一个常量加载到操作数栈：bipush、sipush、ldc、ldc_w、ldc2_w、aconst_null、iconst_ml、iconst、lconst、fconst、dconst
--   **【出栈装入局部变量表指令】**将一个数值从操作数栈存储到局部变量表：xstore、xstore_（其中x为i、l、f、d、a，n为0到3）；xastore（其中x为i、1、f、d、a、b、c、s）
+-   **【局部变量压栈指令】**将一个局部变量加载到操作数栈：xload、xload_（其中x为i、l、f、d、a，n为0到3）**
+-   **【常量入栈指令】**将一个常量加载到操作数栈：bipush、sipush、ldc、ldc_w、ldc2_w、aconst_null、iconst_ml、iconst、lconst、fconst、dconst**
+-   **【出栈装入局部变量表指令】**将一个数值从操作数栈存储到局部变量表：xstore、xstore_（其中x为i、l、f、d、a，n为0到3）；xastore（其中x为i、1、f、d、a、b、c、s）**
 
 上面所列举的指令助记符中，有一部分是以尖括号结尾的（例如iload）。这些指令助记符实际上代表了一组指令（例如iload代表了iload0、iload1、iload2和iload3这几个指令）。这几组指令都是某个带有一个操作数的通用指令（例如iload）的特殊形式，**对于这若干组特殊指令来说，它们表面上没有操作数，不需要进行取操作数的动作，但操作数都隐含在指令中。**
 
@@ -86,4 +86,50 @@ public void load(int num,Object obj,long count,boolean flag,short[] arr){
 字节码如下：
 ![[load()的字节码.png]]
 
-	
+所对应的局部变量表
+
+![[load()的局部变量表.png]]
+
+## 常量入栈指令
+
+常量入栈指令的功能是将常数压入操作数栈，根据数据类型和入栈内容的不同，又可以分为const系列、push系列和ldc指令。
+
+### 指令const系列
+用于对特定的常量入栈，入栈的常量隐含在指令本身里。指令有：`iconst_<i>`（i从-1到5）、`lconst_<1>`（1从0到1）、`fconst_<f>`（f从0到2）、`dconst_<d>`（d从0到1）、`aconst_null`。
+
+-   比如:
+    
+    -   iconst_m1将-1压入操作数栈；
+    -   iconst_x（x为0到5）将x压入栈；
+    -   lconst_0、lconst_1分别将长整数0和1压入栈；
+    -   fconst_0、fconst_1、fconst_2分别将浮点数0、1、2压入栈；
+    -   dconst_0和dconst_1分别将double型0和1压入栈；
+    -   aconst_null将null压入操作数栈；
+-   从指令的命名上不难找出规律，指令助记符的第一个字符总是喜欢表示数据类型，i表示整数，l表示长整数，f表示浮点数，d表示双精度浮点，习惯上用a表示对象引用。如果指令隐含操作的参数，会以下划线形式给出。
+
+> const_x，是变量值，并且是有范围，比如int大于5，就要使用push系列
+
+### 指令push系列
+主要包括**bipush**和**sipush**。它们的区别在于接收数据类型的不同，bipush接收8位整数作为参数，sipush接收16位整数，它们都将参数压入栈。
+
+### 指令ldc系列
+如果以上指令都不能满足需求，那么可以使用万能的**ldc**指令，它可以接收一个8位的参数，该参数指向常量池中的int、float或者String的索引，将指定的内容压入堆栈。
+
+-   类似的还有ldc_w，它接收两个8位数，能支持的索引范围大于ldc。
+-   如果要压入的元素是long或者double类型的，则使用**ldc2_w**指令，使用方式都是类似的。
+
+### 代码示例
+```java
+public void pushConstLdc() {
+        int i = -1;
+        int a = 5;
+        int b = 6;
+        int c = 127;
+        int d = 128;
+        int e = 32767;
+        int f = 32768;
+}
+```
+所对应的字节码指令如下：
+
+![[Pasted image 20211012133730.png]]
