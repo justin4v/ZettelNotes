@@ -52,3 +52,4 @@ JVM运行过程中产生的一些比较重要的线程罗列如下：
 ## VM Thread
 - JVM里面的线程母体；
 - 根据 hotspot 源码（`vmThread.hpp`）里面的注释，它是最原始的线程，会产生或触发所有其他的线程。
+- VM Thread 会专门用来执行一些特殊的VM Operation，比如分派GC，thread dump等，这些任务，都需要整个Heap，以及所有线程的状态是静止的，一致的才能进行。所以JVM引入了安全点(Safe Point)的概念，想办法在需要进行VM Operation时，通知所有的线程进入一个静止的安全点。
