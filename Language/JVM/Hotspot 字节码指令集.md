@@ -561,7 +561,7 @@ public float returnFloat() {
 
 **这些指令属于通用型，对栈的压入或者弹出无需指明数据类型。**
 
-说明：
+## 说明
 
 -   不带x的指令是复制栈顶数据并压入栈顶。包括两个指令，dup和dup2。dup的系数代表要复制的Slot个数。
     
@@ -672,7 +672,7 @@ public void compare() {
 
 ### 代码示例
 ```java
-public void compare() {
+public void compare2() {
         int i = 10;
         int j = 20;
         System.out.println(i > j);
@@ -680,3 +680,90 @@ public void compare() {
 ```
 
 字节码
+![[compare 2 字节码.png]]
+
+```java
+public void compare3() {
+    Object obj1 = new Object();
+    Object obj2 = new Object(); // new 指向堆内存地址不一样
+    System.out.println(obj1 == obj2); //false
+    System.out.println(obj1 != obj2);//true
+}
+```
+
+![[compare3 字节码.png]]
+
+
+## 多条件分支跳转指令
+
+多条件分支跳转指令是专为switch-case语句设计的，主要有tableswitch和lookupswitch。
+
+从助记符上看，两者都是switch语句的实现，它们的区别：
+
+-   tableswitch要求多个**条件分支值是连续的**，它内部只存放起始值和终止值，以及若干个跳转偏移量，通过给定的操作数index，可以立即定位到跳转偏移量位置，因此**效率比较高**
+-   指令lookupswitch内部**存放着各个离散的case-offset对**，每次执行都要搜索全部的case-offset对，找到匹配的case值，并根据对应的offset计算跳转地址，因此**效率较低**。
+
+指令tableswitch的示意图如下图所示。由于tableswitch的case值是连续的，因此只需要记录最低值和最高值，以及每一项对应的offset偏移量，根据给定的index值通过简单的计算即可直接定位到offset。
+
+![[table switch.png]]
+
+指令lookupswitch处理的是离散的case值，但是出于效率考虑，将case-offset对按照case值大小排序，给定index时，需要查找与index相等的case，获得其offset，如果找不到则跳转到default。指令lookupswitch如下图所示。
+
+![[lookupswitch.png]]
+
+### 代码示例
+```java
+public void switchTest(int select) {
+    int num;
+    switch (select) {
+        case 1:
+            num = 10;
+            break;
+        case 2:
+            num = 20;
+            // break; 
+        case 3:
+            num = 30;
+            break;
+        default:
+            num = 40;
+    }
+}
+```
+字节码
+![[switchTest.png]]
+
+```java
+public void switchTest2(int select) {
+        int num;
+        switch (select) {
+            case 100:
+                num = 10;
+                break;
+            case 500:
+                num = 20;
+                break;
+            case 200:
+                num = 30;
+                break;
+            default:
+                num = 40;
+        }
+}
+```
+![[switchtest2.png]]
+
+## 无条件跳转指令
+
+-   目前主要的无条件跳转指令为goto。指令goto接收两个字节的操作数，共同组成一个带符号的整数，用于指定指令的偏移量，指令执行的目的就是跳转到偏移量给定的位置处。
+-   如果指令偏移量太大，超过双字节的带符号整数的范围，则可以使用指令goto_w，它和goto有相同的作用，但是它接收4个字节的操作数，可以表示更大的地址范围。
+-   指令jsr、jsr_w、ret虽然也是无条件跳转的，但主要用于try-finally语句，且已经被虚拟机逐渐废弃。
+```java
+public void whileInt() {
+        int i = 0;
+        while (i < 100) {
+            String s = "Jack";
+            i++;
+        }
+}
+```
