@@ -29,30 +29,3 @@ Java 字节码由操作码和操作数组成。
 
 
 # 字节码指令
-## 1 加载与存储指令
-
-加载（load）和存储（store）相关的指令是使用最频繁的指令，用于将数据从栈帧的局部变量表和操作数栈之间来回传递。
-
-### 1.1 将局部变量表中的变量压入操作数栈中
-
--   xload_n（x 为 i、l、f、d、a，n 默认为 0 到 3），表示将第 n 个局部变量压入操作数栈中。
--   xload #p （x 为 i、l、f、d、a），通过指定参数 p 的形式，将局部变量压入操作数栈中，当使用这个指令时，表示局部变量的数量可能超过了 4 个
-
-x 为操作码助记符，表明是哪一种数据类型：
-![[操作码助记符.png]]
-
-#### 注意
-1. 大部分的指令都不支持 byte、short 和 char，甚至没有任何指令支持 boolean 类型。
-2. 编译器会将 byte 和 short 类型的数据带符号扩展（Sign-Extend）为 int 类型
-3. boolean 和 char 零位扩展（Zero-Extend）为 int 类型。
-
-#### 示例
-```java
-private void load(int age, String name, long birthday, boolean sex) {  
- System.out.println(age + name + birthday + sex);  
-}
-```
-
-通过 jclasslib 看一下 `load()` 方法（4 个参数）的字节码指令。
-
-
