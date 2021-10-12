@@ -1,4 +1,4 @@
-# 结构
+# Hotspot 结构
 基于栈的特点：
 - Hotspot 是**基于栈**的，而不是基于寄存器的；
  - **可移植性更好、指令更短**、实现起来简单；
@@ -776,7 +776,7 @@ public void whileInt() {
 
 ## 抛出异常指令
 
-**athrow指令**
+### athrow指令
 
 -   在Java程序中显示抛出异常的操作（throw语句）都是由athrow指令来实现。
 -   除了使用throw语句显示抛出异常情况之外，**JVM规范还规定了许多运行时异常会在其他Java虚拟机指令检测到异常状况时自动抛出**。例如，在之前介绍的整数运算时，当除数为零时，虚拟机会在idiv或ldiv指令中抛出ArithmeticException异常。
@@ -863,11 +863,11 @@ public synchronized void test() {}
 -   指令monitorenter和monitorexit在执行时，都需要在操作数栈顶压入对象，之后monitorenter和monitorexit的锁定和释放都是针对这个对象的监视器进行的。
 -   下图展示了监视器如何保护临界区代码不同时被多个线程访问，只有当线程4离开临界区后，线程1、2、3才有可能进入。
 
-![线程图](https://segmentfault.com/img/remote/1460000037628906 "线程图")
+![[synchronize线程图.png]]
 
-代码示例：
+### 代码示例
 ```java
-private int i = 0;
+	private int i = 0;
     private Object obj = new Object();
 
     public void subtract() {
@@ -877,4 +877,4 @@ private int i = 0;
 }
 ```
 
-![字节码](https://segmentfault.com/img/remote/1460000037628908 "字节码")
+![[synchronize 字节码.png]]
