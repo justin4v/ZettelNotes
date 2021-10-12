@@ -758,6 +758,8 @@ public void switchTest2(int select) {
 -   目前主要的无条件跳转指令为goto。指令goto接收两个字节的操作数，共同组成一个带符号的整数，用于指定指令的偏移量，指令执行的目的就是跳转到偏移量给定的位置处。
 -   如果指令偏移量太大，超过双字节的带符号整数的范围，则可以使用指令goto_w，它和goto有相同的作用，但是它接收4个字节的操作数，可以表示更大的地址范围。
 -   指令jsr、jsr_w、ret虽然也是无条件跳转的，但主要用于try-finally语句，且已经被虚拟机逐渐废弃。
+
+
 ```java
 public void whileInt() {
         int i = 0;
@@ -767,3 +769,112 @@ public void whileInt() {
         }
 }
 ```
+
+![[whileInt字节码.png]]
+
+# 异常处理指令
+
+## 抛出异常指令
+
+**athrow指令**
+
+-   在Java程序中显示抛出异常的操作（throw语句）都是由athrow指令来实现。
+-   除了使用throw语句显示抛出异常情况之外，**JVM规范还规定了许多运行时异常会在其他Java虚拟机指令检测到异常状况时自动抛出**。例如，在之前介绍的整数运算时，当除数为零时，虚拟机会在idiv或ldiv指令中抛出ArithmeticException异常。
+
+注意：
+
+正常情况下，操作数栈的压入弹出都是一条条指令完成的。唯一的例外情况是**在抛异常时，Java虚拟机会清除操作数栈上的所有内容，而后将异常实例压入调用者操作数栈上**。
+
+### 代码示例
+```java
+public void throwZero(int i) {
+        if (i == 0) {
+            throw new RuntimeException("参数错误");
+        }
+}
+```
+
+
+![[throwZero字节码.png]]
+
+## 异常处理与异常表
+
+### 处理异常
+
+-   在Java虚拟机中，**处理异常**（catch语句）不是由字节码指令来实现的（早期使用jsr、ret指令），而是**采用异常表**来完成的。
+
+## 异常表
+
+-   如果一个方法定义了一个try-catch或者try-finally的异常处理，就会创建一个异常表。它包含了每个异常处理或者finally块的信息。异常表保存了每个异常处理信息。比如：
+-   起始位置·结束位置
+-   程序计数器记录的代码处理的偏移地址
+-   被捕获的异常类在常量池中的索引
+
+**当一个异常被抛出时，JVM会在当前的方法里寻找一个匹配的处理，如果没有找到，这个方法会强制结束并弹出当前栈帧，并且异常会重新抛给上层调用的方法（在调用方法栈帧）**。
+
+如果在所有栈帧弹出前仍然没有找到合适的异常处理，这个线程将终止。如果这个异常在最后一个非守护线程里抛出，将会导致JVM自己终止，比如这个线程是个main线程。
+
+**不管什么时候抛出异常，如果异常处理最终匹配了所有异常类型，代码就会继续执行。**在这种情况下，如果方法结束后没有抛出异常，仍然执行finally块，在return前，它直接跳到finally块来完成目标**
+
+### 代码示例
+```java
+public void tryCatch() {
+    try {
+        File file = new File("hello.txt");
+        FileInputStream fis = new FileInputStream(file);
+        String info = "hello!";
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    } catch (RuntimeException e) {
+        e.printStackTrace();
+    }
+}
+```
+
+![[trycatch字节码.png]]
+
+
+# 同步控制指令
+
+java虚拟机支持两种同步结构：**方法级的同步**和**方法内部一段指令序列的同步**，这两种同步都是使用**monitor**来支持的。
+
+## 方法级的同步
+
+-   方法级的同步：是**隐式**的，即无须通过字节码指令来控制，它实现在方法调用和返回操作之中。虚拟机可以从方法常量池的方法表结构中的ACC_SYNCHRONIZED访问标志得知一个方法是否声明为同步方法。
+-   当调用方法时，调用指令将会检查方法的ACC_SYNCHRONIZED访问标志是否设置。
+    
+    -   如果设置了，执行线程将先持有同步锁，然后执行方法。最后在方法完成（无论是正常完成还是非正常完成）时释放同步锁
+    -   在方法执行期间，执行线程持有了同步锁，其他任何线程都无法再获得同一个锁。
+    -   如果一个同步方法执行期间抛出了异常，并且在方法内部无法处理此异常，那这个同步方法所持有的锁将在异常抛到同步方法之外时自动释放。
+
+```java
+public synchronized void test() {}
+```
+
+![[访问标志.png]]
+
+![[synchronize字节码.png]]
+
+## 方法内指定指令序列的同步
+
+-   同步一段指令集序列： 通常是由java中的synchronized语句块来表示的。jvm的指令集有monitorenter和monitorexit两条指令来支持synchronized关键字的语义。
+-   当一个线程进入同步代码块时，它使用monitorenter指令请求进入。如果当前对象的监视器计数器为0，则它会被准许进入，若为1，则判断持有当前监视器的线程是否为自己，如果是，则进入，否则进行等待，直到对象的监视器计数器为0，才会被允许进入同步块。
+-   当线程退出同步块时，需要使用monitorexit声明退出。在Java虚拟机中，任何对象都有一个监视器与之相关联，用来判断对象是否被锁定，当监视器被持有后，对象处于锁定状态。
+-   指令monitorenter和monitorexit在执行时，都需要在操作数栈顶压入对象，之后monitorenter和monitorexit的锁定和释放都是针对这个对象的监视器进行的。
+-   下图展示了监视器如何保护临界区代码不同时被多个线程访问，只有当线程4离开临界区后，线程1、2、3才有可能进入。
+
+![线程图](https://segmentfault.com/img/remote/1460000037628906 "线程图")
+
+代码示例：
+```java
+private int i = 0;
+    private Object obj = new Object();
+
+    public void subtract() {
+        synchronized (obj) {
+            i--;
+        }
+}
+```
+
+![字节码](https://segmentfault.com/img/remote/1460000037628908 "字节码")
