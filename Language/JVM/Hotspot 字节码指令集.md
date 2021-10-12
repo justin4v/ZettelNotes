@@ -132,4 +132,6 @@ public void pushConstLdc() {
 ```
 所对应的字节码指令如下：
 
-![[Pasted image 20211012133730.png]]
+![[pushConstLdc()的字节码.png]]
+
+
