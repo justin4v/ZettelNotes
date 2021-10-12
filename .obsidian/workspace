@@ -13,19 +13,19 @@
             "mode": "source"
           }
         },
-        "group": "a94469792c81364a"
+        "group": "c16654274be991f5"
       },
       {
-        "id": "a762ec5fa40169a6",
+        "id": "ea41278635df3111",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "Language/JVM/Hotspot 字节码指令集.md",
-            "mode": "source"
+            "mode": "preview"
           }
         },
-        "group": "a94469792c81364a"
+        "group": "c16654274be991f5"
       }
     ],
     "direction": "vertical"
@@ -73,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082
+    "width": 205.50078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",

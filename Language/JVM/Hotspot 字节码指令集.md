@@ -134,4 +134,6 @@ public void pushConstLdc() {
 
 ![[pushConstLdc()的字节码.png]]
 
+### 总结
+![[常量入栈指令总结.png]]
 
