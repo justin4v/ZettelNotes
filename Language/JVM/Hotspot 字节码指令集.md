@@ -236,7 +236,140 @@ public void method2() {
 
 -   比较指令的作用是比较栈顶两个元素的大，并将比较结果入栈。
 -   比较指令有：dcmpg，dcmpl、fcmpg、fcmpl、lcmp。
-    -   与前面讲解的指令类似，首字符d表示double类型，f表示float，l表示long。
--   对于double和float类型的数字，由于NaN的存在，各有两个版本的比较指令。以float为例，**有fcmpg和fcmpl两个指令，它们的区别在于在数字比较时，若遇到NaN值，处理结果不同。**
+    -   首字符d表示double类型，f表示float，l表示long。
+-   对于double和float类型的数字，由于NaN的存在，各有两个版本的比较指令。以float为例，**有fcmpg和fcmpl两个指令，它们的区别在于在数字比较时，若遇到NaN值，处理结果不同: **
+	-   遇到NaN值， fcmpg会压入1
+	-   fcmpl会压入-1
 -   指令dcmpl和dcmpg也是类似的，根据其命名可以推测其含义，在此不再赘述。
 -   指令lcmp针对long型整数，由于long型整数没有NaN值，故无需准备两套指令。
+
+# 类型转换指令
+
+## 宽化类型转换转换规则
+
+Java虚拟机直支持以下数值的**宽化类型转换**（widening numeric conversion，**小范围类型向大范围类型**的安全转换）。也就是说，并不需要指令执行，包括：
+
+-   从int类型到long、float或者double类型。对应的指令为：i2l、i2f、i2d
+-   从long类型到float、double类型。对应的指令为：l2f、l2d
+-   从float类型到double类型。对应的指令为：f2d
+
+> 简化为：int–>long–>float–>double
+
+// 宽化类型转换
+public void test() {
+    int i = 10;
+    long l = i; // i2l
+    float f = i; // i2f
+    double d = i; // i2d
+
+    float f1 = l; // l2f
+    double d1 = l; // l2d
+    double d2 = f1; // f2d
+}
+
+### 精度损失问题
+
+-   宽化类型转换是不会因为超过目标类型最大值而丢失信息的，例如，从int转换到long，或者从int转换到double，都不会丢失任何信息，转换前后的值是精确相等的。
+-   从int、long类型数值转换到float，或者long类型数值转换到double时，将可能发生精度丢失——可能丢失掉几个最低有效位上的值，转换后的浮点数值是根据IEEE754最接近舍入模式所得到的正确整数值。
+-   尽管宽化类型转换实际上是可能发生精度丢失的，但是这种转换永远不会导致Java虚拟机抛出运行时异常。
+
+### 代码示例：
+```java
+ public void upCast2() {
+        int i = 123123123;
+        float f = i;
+        System.out.println(f); // 1.2312312E8 = 123123120 精度丢失
+        long l = 123123123123123123L; //1.2312312312312312E17 
+        double d = l; //123123123123123120 精度丢失
+        System.out.println(d);
+}
+```
+
+### 补充说明
+
+**从byte、char和short类型到int类型的宽化类型转换实际上是不存在的**。对于byte类型转为int，虚拟机并没有做实质性的转化处理，只是简单地通过操作数栈交换了两个数据。而将byte转为long时，使用的是i2l，可以看到在内部byte在这里已经等同于int类型处理，类似的还有short类型，这种处理方式有两个特点：
+
+-   一方面可以减少实际的数据类型，如果为short和byte都准备一套指令，那么指令的数量就会大增，而虚拟机目前的设计上，只愿意使用一个字节表示指令，因此指令总数不能超过256个，为了节省指令资源，将short和byte当做int处理也在情理之中。
+-   另一方面，由于局部变量表中的槽位固定为32位，无论是byte或者short存入局部变量表，都会占用32位空间。从这个角度说，也没有必要特意区分这几种数据类型。
+
+## 窄化类型转换(强制转换)规则
+
+Java虚拟机也直接支持以下**窄化类型转换**：
+
+-   从int类型至byte、short或者char类型。对应的指令有：i2b、i2s、i2c
+-   从long类型到int类型。对应的指令有：l2i
+-   从float类型到int或者long类型。对应的指令有：f2i、f2l
+-   从double类型到int、long或者float类型。对应的指令有：d2i、d2l、d2f
+
+### 代码示例
+```java
+public void downCastl() {
+        int i = 10;
+        byte b = (byte) i; // i2b
+        short s = (short) i; // i2s
+        char c = (char) i; // i2c
+        long l = 10L;
+        int il = (int) l; // l2i
+        byte b1 = (byte) l; // l2i i2b
+    }
+
+public void downCast2() {
+    float f = 10;
+    long l = (long) f; // f2l
+    int i = (int) f; // f2i
+    byte b = (byte) f; // f2i i2b 
+    double d = 10;
+    byte b1 = (byte) d; // d2i i2b
+}
+```
+
+### 精度损失问题
+
+-   窄化类型转换可能会导致转换结果具备不同的正负号、不同的数量级，因此，转换过程很可能会导致数值丢失精度。
+-   尽管数据类型窄化转换可能会发生上限溢出、下限溢出和精度丢失等情况，但是Java虚拟机规范中明确规定数值类型的窄化转换指令永远不可能导致虚拟机抛出运行时异常。
+
+### 补充说明
+
+-   当将一个浮点值窄化转换为整数类型T（T限于int或long类型之一）的时候，将遵循以下转换规则：
+    
+    -   如果浮点值是NaN，那转换结果就是int或long类型的0。
+    -   如果浮点值不是无穷大的语浮点值使用IEEE754的向零舍入模式取整，获得整数值v，如果v在目标类型T（int或long）的表示范围之内，那转换结果就是v。否则，将根据v的符号，转换为T所能表示的最大或者最小正数
+-   当将一个double类型窄化转换为float类型时，将遵循以下转换规则：通过向最接近数舍入模式舍入一个可以使用float类型表示的数字。最后结果根据下面这3条规则判断：
+    
+    -   如果转换结果的绝对值太小而无法使用float来表示，将返回float类型的正负零。
+    -   如果转换结果的绝对值太大而无法使用float来表示，将返回float类型的正负无穷大。
+    -   对于double类型的NaN值将按规定转换为float类型的NaN值。
+
+
+# 对象的创建与访问指令
+
+Java是面向对象的程序设计语言，虚拟机平台从字节码层面就对面向对象做了深层次的支。有一系列指令专门用于对象操作，可进一步细分为创建指令、字段访问指令、数组操作指令、类型检查指令。
+
+## 创建指令
+
+-   虽然类实例和数组都是对象，但Java虚拟机对类实例和数组的创建与操作使用了不同的字节码指令：
+-   **创建类实例的指令：**
+    
+    -   创建类实例的指令：**new**
+        
+        -   它接收一个操作数，为指向常量池的索引，表示要创建的类型，执行完成后，将对象的引用压入栈。
+-   **创建数组的指令：**
+    
+    -   创建数组的指令：**newarray、anewarray、multianewarray。**
+        
+        -   newarray：创建基本类型数组
+        -   anewarray：创建引用类型数组
+        -   multianewarray：创建多维数组
+
+上述创建指令可以用于创建对象或者数组，由于对象和数组在Java中的广泛使用，这些指令的使用频率也非常高。
+
+**代码示例：**
+
+// 创建对象
+public void newInstance() {
+    Object obj = new Object();
+
+    File file = new File("Hello.txt");
+}
+
+对应的字节码如下：
