@@ -60,4 +60,54 @@ GC Roots 实际上是**当前 JVM 中必须存活的对象（不会被回收）*
 -   本地方法栈中JNI（即一般说的Native方法）的引用的对象；
 
 
-## 
+## 实际存活判断
+不可达的对象也并非“非死不可”的，这时候它们暂时处于“缓刑”阶段，要真正宣告一个对象的死亡，只是要经历两次标记过程：
+
+1. 如果对象在进行根搜索后发现没有与 GC Roots 相连接的引用链，那它会被第一次标记并且进行一次筛选，筛选的条件是此对象**是否有必要执行finalize（）方法**。当对象没有覆盖 finalize（）方法，或者 finalize（） 方法已经被虚拟机调用过，则不会再执行 finalize（）。此时对象再也没有“自救”机会。
+
+2. 如果对象被判定为有必要执行finalize（）方法，那么这个对象将会被放在名为 F-Queue 的队列中，并在稍后一条由虚拟机自动建立的、低优先级的 [[JVM 重要线程]]去执行。这里所谓的执行是指虚拟机会触发这个方法，但并不承诺会等待进行结束。 
+3. **finalize（）方法是对象逃脱死亡的最后一次机会**，并且只会有一次。稍后GC将对F-Queue中的对象进行第二次小规模的标记，如果对象要想在finalize（）中成功拯救自己，只要**重新与引用链上任何一个对象建立关联**，譬如把自己（this关键字）赋值给某个类变量或对象的成员变量，那在第二次标记时它将被移除出“即将回收”的集合。
+
+## 示例
+```java
+public class FinalizeEscapeGC {
+ 
+    private static FinalizeEscapeGC SAVE_HOOK = null;
+ 
+    private void isAlive() {
+        System.out.println("Yes,I am still alive!");
+    }
+ 
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        System.out.println("finalize() method executed!");
+        FinalizeEscapeGC.SAVE_HOOK = this;
+    }
+ 
+    public static void main(String args[]) throws Throwable {
+        SAVE_HOOK = new FinalizeEscapeGC();
+        // 对象第一次成功拯救自己
+        SAVE_HOOK = null;
+        // 调用该方法建议系统执行垃圾清理，但也并不一定执行
+        System.gc();
+        // 因为Finalize线程优先级较低，暂停0.5秒以等待它
+        Thread.sleep(500);
+        if (SAVE_HOOK != null) {
+            SAVE_HOOK.isAlive();
+        } else {
+            System.out.println("No, I am dead!");
+        }
+        // 下面这段代码与上面完全相同，但这次却自救失败了
+        SAVE_HOOK = null;
+        System.gc();
+        Thread.sleep(500);
+        if (SAVE_HOOK != null) {
+            SAVE_HOOK.isAlive();
+        } else {
+            System.out.println("No, I am dead!");
+        }
+    }
+}
+```
+

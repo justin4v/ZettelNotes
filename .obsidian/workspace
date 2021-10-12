@@ -119,14 +119,14 @@
   "active": "312ecfe334378ec2",
   "lastOpenFiles": [
     "Language/JVM/GC 算法.md",
+    "Language/JVM/字节码示例.md",
+    "Language/JVM/Hotspot字节码.md",
     "Language/JVM/JVM 重要线程.md",
     "Base Knowledge/编程/Stop The World.md",
     "Language/JVM/未命名.md",
     "Message Queue/JMS.md",
     "Language/JVM/JVM ClassLoader.md",
     "Language/Thread Dump.md",
-    "Base Knowledge/编程/未命名.md",
-    "Language/Java/基础/JNDI.md",
-    "Base Knowledge/编程/Naming.md"
+    "Base Knowledge/编程/未命名.md"
   ]
 }
