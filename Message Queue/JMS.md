@@ -68,7 +68,7 @@ Publish/Subscribe Messaging Domain
 -   连接工厂（ConnectionFactory）
 -   目的地（Destination）
 
-这两个管理对象由JMS系统管理员通过使用 Application Server 管理控制台创建，存储在应用程序服务器的 JNDI namespace 或JNDI注册表。
+由JMS系统管理员通过使用 Application Server 管理控制台创建，存储在应用程序服务器的 *JNDI namespace 或 JNDI 注册表*。
 
 ## Connection Factories
 
@@ -164,3 +164,45 @@ consumer.setMessageListener(myListener);
 ```
 
 EJB中的MDB（Message-Driven Bean）就是一种MessageListener。
+
+
+# JMS消息结构
+
+JMS客户端使用JMS消息与系统通讯，JMS消息虽然格式简单但是非常灵活， JMS消息由三部分组成：
+
+## 消息头
+
+JMS消息头预定义了若干字段用于**客户端与JMS提供者之间识别和发送消息**，如下：
+
+- JMSDestination 
+- JMSDeliveryMode  
+- JMSMessageID  
+- JMSTimestamp  
+- JMSCorrelationID  
+- JMSReplyTo  
+- JMSRedelivered  
+- JMSType  
+- JMSExpiration  
+- JMSPriority
+
+## 消息属性
+
+可以给消息*设置自定义属性*，可用于实现*消息过滤功能*，消息属性非常有用，JMS API定义了一些*标准属性*，JMS服务提供者可以选择性的提供部分标准属性。
+
+## 消息体
+
+在消息体中，JMS API定义了五种类型的消息格式：
+
+**Text message** : javax.jms.TextMessage，表示一个文本对象。  
+**Object message** : javax.jms.ObjectMessage，表示一个JAVA对象。  
+**Bytes message** : javax.jms.BytesMessage，表示字节数据。  
+**Stream message** :javax.jms.StreamMessage，表示java原始值数据流。  
+**Map message** : javax.jms.MapMessage，表示键值对。
+
+
+## 应用
+常见的开源JMS服务的提供者：
+-   JBoss 社区所研发的 HornetQ
+-   Joram
+-   Coridan的MantaRay
+-   The OpenJMS Group的OpenJMS
