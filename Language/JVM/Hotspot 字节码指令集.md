@@ -389,3 +389,53 @@ public void newArray() {
     String[][] strArray2 = new String[10][5]; // multianewarray
 }
 ```
+
+
+## 字段访问指令
+
+对象创建后，就可以通过对象访问指令获取对象实例或数组实例中的字段或者数组元素。
+
+-   访问类字段（static字段，或者称为类变量）的指令：getstatic、putstatic
+-   访问类实例字段（非static字段，或者称为实例变量）的指令：getfield、putfield
+
+## 数组操作指令
+
+数组操作指令主要有：xastore和xaload指令。
+
+具体为：
+
+-   把一个数组元素加载到操作数栈的指令：baload、caload、saload、iaload、laload、faload、daload、aaload
+-   将一个操作数栈的值存储到数组元素中的指令：rbastore、castore、sastore、iastore、lastore、fastore、dastore、aastore
+-   取数组长度的指令：arraylength
+    
+    -   该指令弹出栈顶的数组元素，获取数组的长度，将长度压入栈。
+
+| 数组类型      | 加载指令 | 存储指令 |
+| ------------- | -------- | -------- |
+| byte(boolean) | baload   | bastore  |
+| char          | caload   | castore  |
+| short         | saload   | sastore  |
+| int           | iaload   | iastore  |
+| long          | laload   | lastore  |
+| float         | faload   | fastore  |
+| double        | daload   | dastore  |
+| reference     | aaload   | aastore  |
+
+> *虚拟机栈中并不存储数组元素信息，所以astore改变的是堆中的实例数组*
+
+### 说明
+
+-   指令xaload表示将数组的元素压栈，比如saload、caload分别表示压入short数组和char数组。指令xaload在执行时，要求操作数中栈顶元素为数组索引i，栈顶顺位第2个元素为数组引用a，该指令会弹出栈顶这两个元素，并将a[i]重新压入堆栈。
+-   xastore则专门针对数组操作，以iastore为例，它用于给一个int数组的给定索引赋值。在iastore执行前，操作数栈顶需要以此准备3个元素：值、索引、数组引用，iastore会弹出这3个值，并将值赋给数组中指定索引的位置。
+
+### 代码示例
+```java
+public void text() {
+        int[] intArray = new int[10];
+        intArray[3] = 20;
+        System.out.println(intArray[1]);
+}
+```
+
+字节码
+![[Pasted image 20211012141239.png]]
