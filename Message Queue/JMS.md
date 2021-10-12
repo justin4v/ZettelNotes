@@ -63,12 +63,12 @@ Publish/Subscribe Messaging Domain
 ![[JMS 编程模型.png]]
 
 ## JMS管理对象
-管理对象（Administered objects）是预先配置的JMS对象，由系统管理员为使用JMS的客户端创建，主要有两个被管理的对象：
+管理对象（Administered objects）是**预先配置的JMS对象**，由系统管理员为了使用 JMS 的客户端创建，主要有两个被管理的对象：
 
 -   连接工厂（ConnectionFactory）
 -   目的地（Destination）
 
-这两个管理对象由JMS系统管理员通过使用Application Server管理控制台创建，存储在应用程序服务器的JNDI名字空间或JNDI注册表。
+这两个管理对象由JMS系统管理员通过使用 Application Server 管理控制台创建，存储在应用程序服务器的 JNDI namespace 或JNDI注册表。
 
 ## Connection Factories
 
@@ -123,7 +123,7 @@ connection.close();
 
 ## Session
 
-*Session 是我们对消息进行操作的接口*，可以通过session *创建生产者、消费者、消息等*。
+*Session是一个单线程 Context，Session 是我们对消息进行操作的接口*，可以通过session *创建生产者、消费者、消息等*。
 
 Session 提供了事务的功能，如果需要使用session发送/接收多个消息时，可以将这些发送/接收动作放到一个事务中。
 
@@ -157,5 +157,10 @@ MessageConsumer consumer = session.createConsumer(topic);
 ## MessageListener
 
 *如果注册了消息监听器，一旦消息到达，将自动调用监听器的onMessage方法*。
+
+```java
+Listener myListener = new Listener();
+consumer.setMessageListener(myListener);
+```
 
 EJB中的MDB（Message-Driven Bean）就是一种MessageListener。
