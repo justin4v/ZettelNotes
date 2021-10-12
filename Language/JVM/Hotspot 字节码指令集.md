@@ -438,4 +438,80 @@ public void text() {
 ```
 
 字节码
-![[Pasted image 20211012141239.png]]
+![[text()字节码.png]]
+
+## 类型检查指令
+
+检查类实例或数组类型的指令：instanceof、checkcast。
+
+-   指令cheqkcast用于检查类型强制转换是否可以进行。如果可以进行，那么checkcast指令不会改变操作数栈，否则它会抛出ClassCastException异常。|
+-   指令instanceof用来判断给定对象是否是某一个类的实例，它会将判断结果压入操作数栈。
+```java
+//类型检查指令
+public String checkcast(Object obj) {
+    if (obj instanceof String) {
+        return (String) obj;
+    } else {
+        return null;
+    }
+}
+```
+
+对应的字节码如下：
+![[checkcast()字节码.png]]
+
+# 方法的调用和返回指令
+
+## 方法调用指令
+
+方法调用指令：invokevirtual、invokeinterface、invokespecial、invokestatic、invokedynamic以下5条指令用于方法调用：
+
+-   **invokevirtual**：指令用于调用对象的实例方法，根据对象的实际类型进行分派（虚方法分派），支持多态。这也是Java语言中**最常见的方法分派方式**。
+-   **invokeinterface：**指令用于**调用接口方法**，它会在运行时搜索由特定对象所实现的这个接口方法，并找出适合的方法进行调用。
+-   **invokespecial：**指令用于调用一些需要特殊处理的实例方法，包括**实例初始化方法（构造器）、私有方法和父类方法**。这些方法都是**静态类型绑定**的，不会在调用时进行动态派发。
+-   **invokestatic：**指令用于调用命名类中`的类方法（static方法）`。这是**静态绑定**的。
+-   **invokedynamic：**：调用动态绑定的方法，这个是JDK1.7后新加入的指令。用于在运行时动态解析出调用点限定符所引用的方法，并执行该方法。前面4条调用指令的分派逻辑都固化在java虚拟机内部，而invokedynamic指令的分派逻辑是由用户所设定的引导方法决定的。
+
+> invokespecial 和invokestatic 都不可能重写
+
+### 代码示例
+```java
+public void invoke() {
+        //情况1：类实例构造器方法：<init>()
+        Date date = new Date();
+        Thread t1 = new Thread();
+        //情况2：父类的方法
+        super.toString();
+        //情况3：私有方法
+        methodPrivate();
+    }
+private void methodPrivate() {}
+```
+
+对应的字节码如下：
+![[invoke()字节码.png]]
+
+```java
+//方法调用指令：invokestatic
+public void invoke() {
+    methodstatic();
+    //0 invokestatic #2 <com/test/Demo.methodstatic>
+    //3 return
+}
+private static void methodstatic() {}
+```
+
+```java
+ //方法调用指令：invokeinterface
+public void invoke() {
+    Thread t1 = new Thread();
+
+    ((Runnable) t1).run(); 
+    Comparable<Integer> com = null;
+    com.compareTo(123); 
+}
+```
+
+对应的字节码如下：
+![[invokeinterface 字节码.png]]
+
