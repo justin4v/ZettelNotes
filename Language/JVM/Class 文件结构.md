@@ -66,8 +66,11 @@ demo 的字节码的前十个字节如下图所示，将十六进制的 17 转�
 ![[constant_info类型.png]]
 
 以 CONSTANT_Utf8_info 为例：
-1. 首先第一个字节 tag，它的取值对应图 7 中的 Tag，由于它的类型是 CONSTANT_Utf8_info，所以值为 01（十六进制）。
-2. 接下来两个字节标识该字符串的长度 length，然后 length 个字节为这个字符串具体的值。从图 3 的字节码中摘取一个 cp_info 结构，将它翻译过来后，其含义为: 该常量为 utf8 字符串，长度为 7 字节，数据为: numberA，如图 8 所示:
+1. 首先第一个字节 tag，它的取值对应上图中的 Tag 值。由上图知类型 CONSTANT_Utf8_info的 tag 值为 01（十六进制）；
+2. 接下来两个字节标识该字符串的长度 length
+3. 接着 length 个字节为这个字符串具体的值。
+
+从 demo 字节码中摘取一个 cp_info 结构，如下图解释后: 该常量为 utf8 字符串，长度为 7 字节，数据为: numberA，如图 8 所示:
 
 ![[CONSTANT_Utf8_info 结构.png]]
 
