@@ -62,6 +62,14 @@ Publish/Subscribe Messaging Domain
 
 ![[JMS 编程模型.png]]
 
+## JMS管理对象
+管理对象（Administered objects）是预先配置的JMS对象，由系统管理员为使用JMS的客户端创建，主要有两个被管理的对象：
+
+-   连接工厂（ConnectionFactory）
+-   目的地（Destination）
+
+这两个管理对象由JMS系统管理员通过使用Application Server管理控制台创建，存储在应用程序服务器的JNDI名字空间或JNDI注册表。
+
 ## Connection Factories
 
 1. `QueueConnectionFactory` 适用于[[#点对点消息模型]]；
@@ -84,11 +92,18 @@ Queue returnQueue = (Queue) initialCtx.lookup ("Return_Queue");
 Destination 指明*消息被发送的目的地以及客户端接收消息的来源*。
 JMS 使用两种目的地：*queue和 topic*。如下代码指定了一个队列：
 
-创建一个队列Session：
+**创建一个队列Session**
 ```java
 QueueSession ses = con.createQueueSession (false, Session.AUTO_ACKNOWLEDGE);  //get the Queue object 
 Queue t = (Queue) ctx.lookup ("myQueue");  //create QueueReceiver 
 QueueReceiver receiver = ses.createReceiver(t); 
+```
+
+**创建一个话题Session**
+```java
+TopicSession ses = con.createTopicSession (false, Session.AUTO_ACKNOWLEDGE); // get the Topic object 
+Topic t = (Topic) ctx.lookup ("myTopic");  //create TopicSubscriber 
+TopicSubscriber receiver = ses.createSubscriber(t);
 ```
 
 ## Connection
@@ -99,6 +114,11 @@ Connection可以产生一个或多个Session。跟ConnectionFactory 一样，Con
 连接对象封装了与JMS提供者之间的虚拟连接，如果我们有一个ConnectionFactory对象，可以使用它来创建一个连接。
 ```java
 Connection connection = connectionFactory.createConnection();
+```
+
+创建完连接后，需要在程序使用结束后关闭它：
+```java
+connection.close();
 ```
 
 ## Session
