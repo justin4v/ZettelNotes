@@ -9,23 +9,10 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md",
-            "mode": "source"
-          }
-        },
-        "group": "f291f9c002e6a802"
-      },
-      {
-        "id": "5a95b8e9c614a275",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md",
+            "file": "Language/Java/JVM/JVM内存结构.md",
             "mode": "preview"
           }
-        },
-        "group": "f291f9c002e6a802"
+        }
       }
     ],
     "direction": "vertical"
@@ -73,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md",
+                "file": "Language/Java/JVM/JVM内存结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md"
+                "file": "Language/Java/JVM/JVM内存结构.md"
               }
             }
           }
@@ -132,15 +118,15 @@
   },
   "active": "3783ba26a2b97775",
   "lastOpenFiles": [
+    "Language/Java/JVM/JVM内存结构.md",
+    "Language/Java/JVM/JVM简介.md",
+    "Language/Java/JVM/对象分配规则.md",
+    "Book Reading/Java.md",
     "Database/Mysql/Mysql事务隔离级别与实现原理.md",
     "附件/读提交.png",
     "Database/Sql 注入.md",
     "Database/Sql 预编译.md",
     "Database/未命名.md",
-    "Database/Sql注入.md",
-    "Book Reading/未命名.md",
-    "Language/Java/并发编程/Synchronize.md",
-    "Language/Java/并发编程/性能问题.md",
-    "Language/Java/并发编程/线程安全.md"
+    "Database/Sql注入.md"
   ]
 }
