@@ -14,8 +14,10 @@
 - Heap 由所有 JVM 进程中的**线程共享**；
 - **类实例（对象）** 和**数组**空间从 heap 分配；
 - JVM **启动时创建 Heap**。
+- new 出来的对象空间都在 Heap 上分配；
+- Heap 空间由 **GC（garbage collector）** 自动回收。
 
-new 出来的对象空间都在 Heap 上分配，Heap 空间由 **GC（garbage collector）** 自动回收。
+
 **根据 GC 回收的规则**，可将 Heap 空间细分为 Young Generation 和 Old Generation（存活的时长不同），具体如下图：
 ![[Heap的划分.png]]
 
@@ -42,10 +44,15 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 **Conception**
 Method Area stores **per-class structures（类结构信息）** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
 
-Method Area 是JVM中所有线程共享的，JVM启动时创建，**主要存储类的结构信息（metadata）**。
-JDK1.8之前称为永久代，PermGen space。
+Method Area ：
+1. 线程共享的；
+2. JVM启动时创建；
+3. **存储类的结构信息（metadata）**。
+
+
+JDK1.8之前称为永久代，**PermGen space**。
 1. JDK1.8开始 **Method Area 被称作 Metaspace(元空间，存放元数据)**；
-2. 存于本地内存中，最大为系统内存，不会出现内存溢出错误。
+2. 存于本地内存中，**最大为系统内存**，不会出现内存溢出错误。
 3. 大小通过`–XX:MetaspaceSize`设置，默认21M。
 
 
@@ -76,7 +83,7 @@ JDK1.8之前称为永久代，PermGen space。
 
 ![[JVM Stack Frame结构.png]]
 
-其中，*指向运行时常量池的引用* 就是**动态链接**
+其中，*指向运行时常量池的引用* 就是**动态绑定**
 
 **局部变量表**
 -   存储方法中的局部变量值或地址（包括方法中的**非静态变量以及函数形参**）；
