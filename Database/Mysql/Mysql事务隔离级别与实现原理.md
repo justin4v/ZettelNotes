@@ -28,29 +28,28 @@ MySQL 事务都是指在 **InnoDB 引擎**下，**MyISAM 引擎是不支持事�
 
 可重复读指的是在**一个事务内**，**最开始和事务结束前的任意时刻**读到的同一批数据都是一致的。通常针对数据**更新（UPDATE）**操作。
 
-### 不可重复读
+## 不可重复读
 
 对比可重复读，不可重复读指的是在**同一事务内，不同的时刻读到的同一批数据可能是不一样**。
 该数据可能会受到其他事务的影响，比如其他事务改了这批数据并提交了。通常针对数据**更新（UPDATE）**操作。
 
 
-### 幻读
-幻读是针对数据**插入（INSERT）**操作来说的。
+## 幻读
+幻读是针对数据**插入（INSERT）** 操作来说的。
 
-假设**事务A对某些行的内容作了更改，但是还未提交，此时事务B插入了与事务A更改前的记录相同的记录行，并且在事务A提交之前先提交了**。
+假设事务A对某些行的内容作了更改，但是还未提交，此时事务B插入了与事务A更改前的记录相同的记录行，并且在事务A提交之前先提交了。
 
-事务A中查询，会发现好像刚刚的更改对于某些数据未起作用，但其实是事务B刚插入进来的，让人感觉出现了幻觉，这就叫幻读。
+事务A中查询，会发现好像刚刚的**更改未起作用**，但其实是事务B刚插入进来的，让人感觉出现了幻觉，这就叫幻读。
 
 
-
-## 事务隔离级别
+# 事务隔离级别
 
 SQL 标准定义了四种隔离级别，MySQL 全都支持。这四种隔离级别分别是：
 
-1. **读未提交（READ UNCOMMITTED）**  RU
-2. 读**提交 （READ COMMITTED）** RC
-3. **可重复读 （REPEATABLE READ） **RR
-4. **串行化 （SERIALIZABLE）** SE
+1. **读未提交（READ UNCOMMITTED）** ——RU
+2. **读提交 （READ COMMITTED）** —— RC
+3. **可重复读 （REPEATABLE READ）** —— RR
+4. **串行化 （SERIALIZABLE）** ——SE
 
 从上往下，**隔离强度逐渐增强，性能逐渐变差**。采用哪种隔离级别要根据系统需求权衡决定，其中，**可重复读**是 MySQL 的默认级别。
 
@@ -66,14 +65,11 @@ SQL 标准定义了四种隔离级别，MySQL 全都支持。这四种隔离级�
 只有串行化的隔离级别解决了全部这 3 个问题，其他的 3 个隔离级别都有缺陷。
 
 
-
-## 四种隔离级别
-
-### 如何设置隔离级别
+## 如何设置隔离级别
 
 我们可以通过以下语句查看当前数据库的隔离级别，通过下面语句可以看出我使用的 MySQL 的隔离级别是 REPEATABLE-READ，也就是可重复读，这也是 MySQL 的默认级别。
 
-```mysql
+```sql
 # 查看事务隔离级别 5.7.20 之前
 show variables like 'transaction_isolation';
 SELECT @@transaction_isolation
@@ -91,12 +87,12 @@ show variables like 'tx_isolation'
 ```
 
 
-
 **修改隔离级别的语句**：
-
+```sql
 set [作用域] transaction isolation level [事务隔离级别]
 
 SET [SESSION | GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE}。
+```
 
 其中作用于可以是 SESSION 或者 GLOBAL：GLOBAL 是全局的，而 SESSION 只针对当前回话窗口。
 
@@ -110,7 +106,7 @@ mysql> set global transaction isolation level read committed;
 
 
 
-### MySQL 中执行事务
+## MySQL 中执行事务
 
 事务的执行过程如下，以 begin 或者 start transaction 开始，然后执行一系列操作，最后要执行 commit 操作，事务才算结束。当然，如果进行回滚操作(rollback)，事务也会结束。
 
@@ -128,7 +124,7 @@ commit; -- 或者 rollback;
 select * from information_schema.innodb_trx;
 ```
 
-**好了，重点来了，开始分析这几个隔离级别了。**
+## 隔离级别的分析
 
 接下来我会用一张表来做一下验证，表结构简单如下：
 
@@ -151,8 +147,6 @@ mysql> SELECT * FROM user;
 |  1 | 古时的风筝       |  1   |
 +----+-----------------+------+
 ```
-
-
 
 ### 读未提交
 
