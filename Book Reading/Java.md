@@ -2,4 +2,4 @@
 《Java Concurrency in Practice》
 
 ## 源码
-[Java Concurrency in Practice - Code Listings (jcip.net)](https://jcip.net/listings.html)
+[Java Concurrency in Practice - Code Listings](https://jcip.net/listings.html)
