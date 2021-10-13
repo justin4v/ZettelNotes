@@ -78,7 +78,30 @@ UPDATE myTable SET c1 = ?, c2 = ?, c3 = ? WHERE c4 = ?
 ```
 实际上是采用了[[Sql 预编译]]；
 数据库服务器不会将参数的内容视为 SQL 语句的一部分来进行处理，而是在数据库完成**SQL 语句的编译**之后，才传入参数运行。
-因此就算参数中含有破坏性的指令，也不会被数据库所运行。  
+
+### 原理
+如采用拼接方式注入：
+原语句
+```sql
+select * from test where id= $user_id
+```
+
+传入参数 ``
+
+```sql
+select * from test where id= ' + x + ’x= 1’;delete from 'test
+```
+这样进入数据库就变成了
+select * from test where id= ’ 1 '；
+delete from 'test’
+会被数据库解析成两条sql
+
+但是预编译会让数据库跳过编译阶段，也就无法就进行词法分析，关键字不会被拆开，所有参数 直接 变成字符串 进入 数据库执行器执行。
+可能数据库执行的sql是这样（推测）
+select * from test where id= ’ 1 delete from test ’
+(没有词法分析 所有关键字都成为了字符串的一部分)
+也就失去了sql注入的能力
+
 
 ## 3. 安全测试、安全审计
 
