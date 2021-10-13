@@ -131,7 +131,7 @@ SET [SESSION | GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMM
 
 比如下面这个语句的意思是设置全局隔离级别为读提交级别。
 
-```mysql
+```sql
 mysql> set global transaction isolation level read committed; 
 ```
 
@@ -140,27 +140,30 @@ mysql> set global transaction isolation level read committed;
 ## MySQL 中执行事务
 
 事务的执行过程：
-1. 以 begin 或者 start transaction 开始事务；
+1. 以 begin 或者 start transaction 开始事务语句；
 2. 最后要执行 commit 或 rollback 操作，事务结束；
-3. begin 命令并不代表事务的开始，**事务开始于 begin 命令之后的第一条语句执行的时候**。例如下面示例中，select * from xxx 才是事务的开始，
+3. 事务*真正开始于 begin 命令之后的第一条语句*。
 
-```mysql
+例如下面示例中，select * from xxx 才是事务的开始，
+
+```sql
 begin;
 select * from xxx; 
 commit; -- 或者 rollback;
 ```
 
 另外，通过以下语句可以查询当前有多少事务正在运行。
-
-```mysql
+```sql
 select * from information_schema.innodb_trx;
 ```
 
-# 隔离级别的分析
+# 隔离级别的实现
+1. MySQL 事务隔离其实是依靠锁实现，但锁也会带来性能的损失；
+2. 读未提交隔离级别是不加锁的，性能最好。
 
-接下来我会用一张表来做一下验证，表结构简单如下：
+接下来用一张表验证事务，表结构如下：
 
-```mysql
+```sql
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) DEFAULT NULL,
@@ -181,8 +184,6 @@ mysql> SELECT * FROM user;
 ```
 
 ## 读未提交
-
-MySQL 事务隔离其实是依靠锁来实现的，加锁自然会带来性能的损失。而读未提交隔离级别是不加锁的，所以它的性能是最好的，没有加锁、解锁带来的性能开销。
 
 在读未提交中，**任何事务对数据的修改都会第一时间暴露给其他事务**，即使事务还没有提交。
 

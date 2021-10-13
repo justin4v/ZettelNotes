@@ -12,7 +12,20 @@
             "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "f291f9c002e6a802"
+      },
+      {
+        "id": "5a95b8e9c614a275",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md",
+            "mode": "preview"
+          }
+        },
+        "group": "f291f9c002e6a802"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082
+    "width": 205.50078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
