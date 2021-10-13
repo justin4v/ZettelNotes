@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/JVM内存结构.md",
+            "file": "Language/Java/基础/静态绑定和动态绑定.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/JVM/JVM内存结构.md",
+            "file": "Language/Java/基础/静态绑定和动态绑定.md",
             "mode": "preview"
           }
         },
@@ -69,8 +69,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/JVM/JVM内存结构.md",
+                "file": "Language/Java/基础/静态绑定和动态绑定.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/JVM/JVM内存结构.md"
+                "file": "Language/Java/基础/静态绑定和动态绑定.md"
               }
             }
           }
@@ -132,15 +131,15 @@
   },
   "active": "8e8d30106d31d63b",
   "lastOpenFiles": [
+    "Language/Java/基础/未命名.md",
+    "Language/Javac.md",
+    "Language/JDK工具.md",
     "Language/JVM/JVM内存结构.md",
     "Language/JVM/JVM类加载机制.md",
     "Language/JVM/class 文件结构.md",
     "Database/Index.md",
     "Language/JVM/JVM 重要线程.md",
     "Base Knowledge/编程/Stop The World.md",
-    "附件/Class文件结构.png",
-    "Language/JVM/Hotspot 字节码指令集.md",
-    "附件/iload指令.png",
-    "附件/Pasted image 20211012114345.png"
+    "附件/Class文件结构.png"
   ]
 }
