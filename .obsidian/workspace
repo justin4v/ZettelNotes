@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/基础/静态绑定和动态绑定.md",
+            "file": "Language/Java/JVM/JVM内存结构.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/基础/静态绑定和动态绑定.md",
+            "file": "Language/Java/JVM/JVM内存结构.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/基础/静态绑定和动态绑定.md",
+                "file": "Language/Java/JVM/JVM内存结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/基础/静态绑定和动态绑定.md"
+                "file": "Language/Java/JVM/JVM内存结构.md"
               }
             }
           }
@@ -131,6 +131,8 @@
   },
   "active": "8e8d30106d31d63b",
   "lastOpenFiles": [
+    "Language/Java/JVM/JVM内存结构.md",
+    "Language/Java/工具/Javac.md",
     "Language/Java/基础/静态绑定和动态绑定.md",
     "Base Knowledge/编程/专业词汇.md",
     "Language/Java/基础/未命名.md",
@@ -138,8 +140,6 @@
     "Language/JDK工具.md",
     "Language/JVM/JVM内存结构.md",
     "Language/JVM/JVM类加载机制.md",
-    "Language/JVM/class 文件结构.md",
-    "Database/Index.md",
-    "Language/JVM/JVM 重要线程.md"
+    "Language/JVM/class 文件结构.md"
   ]
 }
