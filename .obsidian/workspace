@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/基础/静态绑定和动态绑定.md",
+            "file": "Base Knowledge/编程/专业词汇.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/基础/静态绑定和动态绑定.md",
+            "file": "Base Knowledge/编程/专业词汇.md",
             "mode": "preview"
           }
         },
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "override",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -89,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/基础/静态绑定和动态绑定.md",
+                "file": "Base Knowledge/编程/专业词汇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/基础/静态绑定和动态绑定.md"
+                "file": "Base Knowledge/编程/专业词汇.md"
               }
             }
           }
@@ -131,6 +132,7 @@
   },
   "active": "8e8d30106d31d63b",
   "lastOpenFiles": [
+    "Base Knowledge/编程/专业词汇.md",
     "Language/Java/基础/未命名.md",
     "Language/Javac.md",
     "Language/JDK工具.md",
@@ -139,7 +141,6 @@
     "Language/JVM/class 文件结构.md",
     "Database/Index.md",
     "Language/JVM/JVM 重要线程.md",
-    "Base Knowledge/编程/Stop The World.md",
-    "附件/Class文件结构.png"
+    "Base Knowledge/编程/Stop The World.md"
   ]
 }
