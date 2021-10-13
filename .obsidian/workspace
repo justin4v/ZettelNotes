@@ -7,8 +7,11 @@
         "id": "a98deaea38cc6fba",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/基础/静态绑定和动态绑定.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -36,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "override",
+                "query": "静态",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,7 +56,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Language/Java/基础/静态绑定和动态绑定.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Language/Java/基础/静态绑定和动态绑定.md"
+              }
             }
           }
         ],
@@ -111,12 +118,12 @@
   },
   "active": "a98deaea38cc6fba",
   "lastOpenFiles": [
+    "Language/Java/基础/静态绑定和动态绑定.md",
     "Language/Java/JVM/JVM内存结构.md",
     "Language/Java/JVM/JVM类加载机制.md",
     "Language/Java/JVM/class 文件结构.md",
     "Language/Java/JVM/Hotspot 字节码指令集.md",
     "Language/Java/工具/Javac.md",
-    "Language/Java/基础/静态绑定和动态绑定.md",
     "Base Knowledge/编程/专业词汇.md",
     "Language/Java/基础/未命名.md",
     "Language/Javac.md",
