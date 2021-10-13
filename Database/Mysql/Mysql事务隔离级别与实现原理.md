@@ -59,7 +59,7 @@ update test set version=2 where id = 1 and version = 0;
 事务开始前查询`id`为1的数据`version=0`，在整个更新过程中直到提交之前，`version`都一直不变。
 
 **可能的原因**
-*当前事务更新提交之前，其他读事务读到的数据一直都是原始数据*。
+*当前事务更新的同时，允许有其他事务也在更新相同的数据*
 
 ## 幻读
 幻读是针对数据**插入（INSERT）** 操作来说的。
@@ -208,7 +208,7 @@ set global transaction isolation level read uncommitted;
 1. **一个事务只能读到其他事务已经提交过的数据**，可以解决脏读的问题。
 2. 读提交事务隔离级别是大多数流行数据库的默认事务隔离界别，比如 Oracle，但是不是 MySQL 的默认隔离界别。
 
-### 示例
+### 验证
 把事务隔离级别改为读提交级别。
 ```sql
 set global transaction isolation level read committed;
@@ -218,7 +218,8 @@ set global transaction isolation level read committed;
 2. 此时，在事务B中使用 select 语句进行查询，我们发现在事务A提交之前，事务B中查询到的记录 age 一直是1；
 3. 直到事务A提交，此时在事务B中 select 查询，发现 age 的值已经是 10 了。
 
-读提交隔离级别解决了脏读的问题。但是出现了另一个问题，在**同一事务中(本例中的事务B)，事务的不同时刻同样的查询条件，查询出来的记录内容是不一样的**，事务A的提交影响了事务B的查询结果，这就是不可重复读。
+- 读提交隔离级别解决了脏读的问题。
+- 但是**同一事务中(如本例中的查询事务B)在不同时刻，查询出来的内容是不一致的（更新事务A，）**。
 
 ![img](读提交.png)
 
