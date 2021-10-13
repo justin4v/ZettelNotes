@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "符号引用",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -130,7 +130,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cdf85a4302aa3330",
+  "active": "8e8d30106d31d63b",
   "lastOpenFiles": [
     "Language/JVM/JVM内存结构.md",
     "Language/JVM/JVM类加载机制.md",
