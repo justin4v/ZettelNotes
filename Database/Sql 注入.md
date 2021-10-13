@@ -10,7 +10,7 @@ SQL 注入（SQL Injection）是一种数据库层的安全漏洞。
 SELECT * FROM users WHERE user_id = $user_id
 ```
 
-其中，user_id 是传入的参数，如果传入的参数值为“1234; DELETE FROM users”，那么最终的查询语句会变为：
+其中，user_id 是传入的参数，如果传入的参数值为`“1234; DELETE FROM users”`，那么最终的查询语句会变为：
 ```sql
 SELECT * FROM users WHERE user_id = 1234; DELETE FROM users
 ```
@@ -86,17 +86,20 @@ UPDATE myTable SET c1 = ?, c2 = ?, c3 = ? WHERE c4 = ?
 select * from test where id= $user_id
 ```
 
-传入参数 ``
+传入参数 `'1;delete from test where 1=1;'`，SQL语句变为：
 
 ```sql
-select * from test where id= ' + x + ’x= 1’;delete from 'test
+select * from test where id= '1;delete from test where 1=1;'
 ```
-这样进入数据库就变成了
-select * from test where id= ’ 1 '；
-delete from 'test’
-会被数据库解析成两条sql
 
-但是预编译会让数据库跳过编译阶段，也就无法就进行词法分析，关键字不会被拆开，所有参数 直接 变成字符串 进入 数据库执行器执行。
+经过词法和语义分析之后 SQL 变成：
+```sql
+select * from test where id= '1';
+delete from test where 1=1;
+```
+会被解析成两条 sql，导致了 SQL 注入。
+
+预编译会让数据库跳过编译阶段，也就无法就进行词法分析，关键字不会被拆开，所有参数 直接 变成字符串 进入 数据库执行器执行。
 可能数据库执行的sql是这样（推测）
 select * from test where id= ’ 1 delete from test ’
 (没有词法分析 所有关键字都成为了字符串的一部分)
