@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "a98deaea38cc6fba",
+        "id": "3783ba26a2b97775",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Sql 预编译.md",
+            "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md",
             "mode": "source"
           }
         },
-        "group": "91a2a9c92644c4af"
+        "group": "0b6e2662ac4e2f9e"
       },
       {
-        "id": "dd3bcb42c85665b8",
+        "id": "81211393095fceb7",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Sql 预编译.md",
+            "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md",
             "mode": "preview"
           }
         },
-        "group": "91a2a9c92644c4af"
+        "group": "0b6e2662ac4e2f9e"
       }
     ],
     "direction": "vertical"
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Sql 预编译.md",
+                "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Sql 预编译.md"
+                "file": "Database/Mysql/Mysql事务隔离级别与实现原理.md"
               }
             }
           }
@@ -129,17 +129,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a98deaea38cc6fba",
+  "active": "3783ba26a2b97775",
   "lastOpenFiles": [
-    "Database/Sql 预编译.md",
+    "Database/Mysql/Mysql事务隔离级别与实现原理.md",
+    "附件/读提交.png",
     "Database/Sql 注入.md",
+    "Database/Sql 预编译.md",
     "Database/未命名.md",
     "Database/Sql注入.md",
     "Book Reading/未命名.md",
     "Language/Java/并发编程/Synchronize.md",
     "Language/Java/并发编程/性能问题.md",
-    "Language/Java/并发编程/线程安全.md",
-    "Language/Java/并发编程/加锁机制.md",
-    "Language/Java/并发编程/活跃性问题.md"
+    "Language/Java/并发编程/线程安全.md"
   ]
 }
