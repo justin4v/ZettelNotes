@@ -12,7 +12,20 @@
             "file": "Language/JVM/JVM内存结构.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "0bcf60b7a0b50bb5"
+      },
+      {
+        "id": "cdf85a4302aa3330",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/JVM/JVM内存结构.md",
+            "mode": "preview"
+          }
+        },
+        "group": "0bcf60b7a0b50bb5"
       }
     ],
     "direction": "vertical"
@@ -117,7 +130,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8e8d30106d31d63b",
+  "active": "cdf85a4302aa3330",
   "lastOpenFiles": [
     "Language/JVM/JVM内存结构.md",
     "Language/JVM/JVM类加载机制.md",
