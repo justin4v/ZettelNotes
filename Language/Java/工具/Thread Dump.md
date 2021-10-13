@@ -52,6 +52,9 @@ Full thread dump Java HotSpot(TM) Server VM (16.3-b01 mixed mode):
 
 2-7 行是 Java thread statck trace 的信息，由于是一种 stack 结构，所以实际代码执行顺序是从下到上(7 -> 2)。
 
+参考：
+[[Java线程模型]]
+
 
 ## Java thread statck trace
 4、6 行 stack trace 如下：
