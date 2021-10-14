@@ -118,6 +118,7 @@
   },
   "active": "3783ba26a2b97775",
   "lastOpenFiles": [
+    "Language/Java/并发编程/AQS原理.md",
     "Language/Java/并发编程/未命名.md",
     "Language/Java/JVM/Java线程模型.md",
     "Language/Java/工具/Thread Dump.md",
@@ -126,7 +127,6 @@
     "Language/Java/JVM/JVM简介.md",
     "Language/Java/JVM/对象分配规则.md",
     "Book Reading/Java.md",
-    "Database/Mysql/Mysql事务隔离级别与实现原理.md",
-    "附件/读提交.png"
+    "Database/Mysql/Mysql事务隔离级别与实现原理.md"
   ]
 }
