@@ -50,14 +50,14 @@
 4.  @Transactional(propagation=Propagation.MANDATORY)： 如果当前存在事务，则加入该事务；如果当前不存在事务，则抛出异常。
 5.  @Transactional(propagation=Propagation.NEVER) ：以非事务的方式运行，如果当前存在事务，则抛出异常。
 6.  @Transactional(propagation=Propagation.SUPPORTS) ：如果当前存在事务，则加入该事务；如果当前不存在事务，则以非事务的方式继续运行。
-7.  @Transactional(propagation=Propagation.SUPPORTS) ：如果当前存在事务，则加入该事务；如果当前不存在事务，则以非事务的方式继续运行。
+7.  @Transactional(propagation=Propagation.NESTED) ：同 Propagation.REQUIRED 。
 
 ## isolation
 设置底层数据库的事务隔离级别
 
 事务隔离级别介绍:
 
-1.  @Transactional(isolation = Isolation.READ_UNCOMMITTED)读取未提交数据(会出现脏读, 不可重复读) 基本不使用
-2.  @Transactional(isolation = Isolation.READ_COMMITTED)读取已提交数据(会出现不可重复读和幻读)
-3.  @Transactional(isolation = Isolation.REPEATABLE_READ)可重复读(会出现幻读)
-4.  @Transactional(isolation = Isolation.SERIALIZABLE)串行化
+1.  @Transactional(isolation = Isolation.READ_UNCOMMITTED)：读取未提交数据(会出现脏读, 不可重复读) 基本不使用
+2.  @Transactional(isolation = Isolation.READ_COMMITTED)：读取已提交数据(会出现不可重复读和幻读)
+3.  @Transactional(isolation = Isolation.REPEATABLE_READ)：可重复读(MySQL中不会出现幻读，其他数据库有可能)
+4.  @Transactional(isolation = Isolation.SERIALIZABLE)：串行化
