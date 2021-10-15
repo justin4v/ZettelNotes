@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象结构.md",
+            "file": "Base Knowledge/编程/专业词汇.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象结构.md",
+            "file": "Base Knowledge/编程/专业词汇.md",
             "mode": "preview"
           }
         },
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "专业",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,12 +69,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/对象结构.md",
+                "file": "Base Knowledge/编程/专业词汇.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/对象结构.md"
+                "file": "Base Knowledge/编程/专业词汇.md"
               }
             }
           }
@@ -132,6 +132,7 @@
   },
   "active": "3783ba26a2b97775",
   "lastOpenFiles": [
+    "Base Knowledge/编程/专业词汇.md",
     "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/对象分配规则.md",
     "Language/Java/JVM/对象.md",
@@ -140,7 +141,6 @@
     "日常记录/源码阅读.md",
     "Language/Java/并发编程/AQS原理.md",
     "Language/Java/并发编程/未命名.md",
-    "Language/Java/JVM/Java线程模型.md",
-    "Language/Java/工具/Thread Dump.md"
+    "Language/Java/JVM/Java线程模型.md"
   ]
 }
