@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/编程/专业词汇.md",
+            "file": "Language/Java/JVM/对象结构.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/编程/专业词汇.md",
+            "file": "Language/Java/JVM/对象结构.md",
             "mode": "preview"
           }
         },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base Knowledge/编程/专业词汇.md",
+                "file": "Language/Java/JVM/对象结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Base Knowledge/编程/专业词汇.md"
+                "file": "Language/Java/JVM/对象结构.md"
               }
             }
           }
@@ -132,8 +132,8 @@
   },
   "active": "3783ba26a2b97775",
   "lastOpenFiles": [
-    "Base Knowledge/编程/专业词汇.md",
     "Language/Java/JVM/对象结构.md",
+    "Base Knowledge/编程/专业词汇.md",
     "Language/Java/JVM/对象分配规则.md",
     "Language/Java/JVM/对象.md",
     "Architect/Spring/未命名.md",
