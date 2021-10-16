@@ -13,19 +13,19 @@
             "mode": "source"
           }
         },
-        "group": "ad3d4a632cebf0ed"
+        "group": "410a970f4aa85b62"
       },
       {
-        "id": "26397be6808877cb",
+        "id": "55adb70085486d16",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "Language/Java/JVM/对象结构.md",
-            "mode": "source"
+            "mode": "preview"
           }
         },
-        "group": "ad3d4a632cebf0ed"
+        "group": "410a970f4aa85b62"
       }
     ],
     "direction": "vertical"
@@ -129,9 +129,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "26397be6808877cb",
+  "active": "55adb70085486d16",
   "lastOpenFiles": [
     "Language/Java/JVM/对象结构.md",
+    "Language/Java/JVM/JVM ClassLoader.md",
     "Language/Java/JVM/对象分配规则.md",
     "Language/JVM/对象.md",
     "Language/Thread Dump.md",
@@ -139,7 +140,6 @@
     "日常记录/专业词汇.md",
     "Language/JVM/Java线程模型.md",
     "Language/JVM/JVM类加载机制.md",
-    "Language/JVM/JVM简介.md",
-    "Language/JVM/JVM内存结构.md"
+    "Language/JVM/JVM简介.md"
   ]
 }
