@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象结构.md",
+            "file": "Base Knowledge/大端 vs. 小端模式.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象结构.md",
+            "file": "Base Knowledge/大端 vs. 小端模式.md",
             "mode": "preview"
           }
         },
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "临界区",
+                "query": "大端",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,12 +69,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/对象结构.md",
+                "file": "Base Knowledge/大端 vs. 小端模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/对象结构.md"
+                "file": "Base Knowledge/大端 vs. 小端模式.md"
               }
             }
           }
@@ -131,15 +131,15 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
-    "Language/Java/JVM/对象结构.md",
+    "Base Knowledge/大端 vs. 小端模式.md",
     "Language/Java/工具/查看对象头信息.md",
+    "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/未命名.md",
     "Base Knowledge/编程/专业词汇.md",
     "Language/Java/JVM/JVM ClassLoader.md",
     "Language/Java/JVM/对象分配规则.md",
     "Language/JVM/对象.md",
     "Language/Thread Dump.md",
-    "Language/Java/并发编程/并发.md",
-    "日常记录/专业词汇.md"
+    "Language/Java/并发编程/并发.md"
   ]
 }
