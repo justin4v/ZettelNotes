@@ -63,4 +63,9 @@ public class SynchronizedTest02 {
 
 
 
+参考
+[Synchronize底层优化](https://www.cnblogs.com/paddix/p/5405678.html)
+
+
+
 
