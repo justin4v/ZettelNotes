@@ -7,8 +7,11 @@
         "id": "16df5991288b2b22",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/JVM/对象结构.md",
+            "mode": "source"
+          }
         },
         "group": "ad3d4a632cebf0ed"
       },
@@ -16,8 +19,11 @@
         "id": "26397be6808877cb",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/JVM/对象结构.md",
+            "mode": "source"
+          }
         },
         "group": "ad3d4a632cebf0ed"
       }
@@ -83,6 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Language/Java/JVM/对象结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Language/Java/JVM/对象结构.md"
+              }
             }
           }
         ]
@@ -121,6 +130,8 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Language/Java/JVM/对象结构.md",
+    "Language/Java/JVM/对象分配规则.md",
     "Language/JVM/对象.md",
     "Language/Thread Dump.md",
     "Language/Java/并发编程/并发.md",
@@ -128,8 +139,6 @@
     "Language/JVM/Java线程模型.md",
     "Language/JVM/JVM类加载机制.md",
     "Language/JVM/JVM简介.md",
-    "Language/JVM/JVM内存结构.md",
-    "Language/JVM/NameSpace.md",
-    "Language/JVM/java.lang.Class.md"
+    "Language/JVM/JVM内存结构.md"
   ]
 }
