@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/轻量级锁.md",
+            "file": "Language/Java/并发编程/Java 锁状态.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/轻量级锁.md",
+            "file": "Language/Java/并发编程/Java 锁状态.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/轻量级锁.md",
+                "file": "Language/Java/并发编程/Java 锁状态.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/轻量级锁.md"
+                "file": "Language/Java/并发编程/Java 锁状态.md"
               }
             }
           }
