@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Thread Dump.md",
+            "file": "Language/JVM/对象.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Thread Dump.md",
+            "file": "Language/JVM/对象.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Thread Dump.md",
+                "file": "Language/JVM/对象.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Thread Dump.md"
+                "file": "Language/JVM/对象.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Language/JVM/对象.md",
     "Language/Thread Dump.md",
     "Language/Java/并发编程/并发.md",
     "日常记录/专业词汇.md",
@@ -138,7 +139,6 @@
     "Language/JVM/JVM简介.md",
     "Language/JVM/JVM内存结构.md",
     "Language/JVM/NameSpace.md",
-    "Language/JVM/java.lang.Class.md",
-    "Language/JVM/JVM ClassLoader.md"
+    "Language/JVM/java.lang.Class.md"
   ]
 }
