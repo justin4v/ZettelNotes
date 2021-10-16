@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/偏向锁.md",
+            "file": "Language/Java/并发编程/轻量级锁.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/偏向锁.md",
+            "file": "Language/Java/并发编程/轻量级锁.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/偏向锁.md",
+                "file": "Language/Java/并发编程/轻量级锁.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/偏向锁.md"
+                "file": "Language/Java/并发编程/轻量级锁.md"
               }
             }
           }
@@ -130,9 +130,9 @@
   },
   "active": "16df5991288b2b22",
   "lastOpenFiles": [
+    "Language/Java/并发编程/未命名.md",
     "Language/Java/并发编程/偏向锁.md",
     "Language/Java/JVM/对象结构.md",
-    "Language/Java/并发编程/未命名.md",
     "Language/Java/工具/查看对象头信息.md",
     "Language/Java/JVM/Java线程模型.md",
     "Base Knowledge/大端 vs. 小端模式.md",
