@@ -1,2 +1,3 @@
 ## ZettelNotes
-[[ZettelKasten]] 笔记记录
+Justin 的笔记
+
