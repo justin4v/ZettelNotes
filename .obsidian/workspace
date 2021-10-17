@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/编译/JIT 编译器.md",
+            "file": "Language/Java/并发编程/加锁机制.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/编译/JIT 编译器.md",
+            "file": "Language/Java/并发编程/加锁机制.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/编译/JIT 编译器.md",
+                "file": "Language/Java/并发编程/加锁机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/编译/JIT 编译器.md"
+                "file": "Language/Java/并发编程/加锁机制.md"
               }
             }
           }
@@ -130,15 +130,15 @@
   },
   "active": "55adb70085486d16",
   "lastOpenFiles": [
+    "Language/Java/并发编程/加锁机制.md",
+    "Language/Java/基础/JDK 动态代理.md",
+    "Language/Java/编译/Javac 编译.md",
+    "Language/Java/编译/JIT 编译器.md",
     "Language/Java/编译/未命名.md",
     "Language/Java/JVM/class 文件结构.md",
     "Language/Java/JVM/对象分配规则.md",
     "Language/Java/JVM/对象结构.md",
     "Language/Java/并发编程/Synchronize.md",
-    "Language/Java/并发编程/Java 锁状态.md",
-    "Language/Java/并发编程/轻量级锁.md",
-    "Language/Java/并发编程/重量级锁.md",
-    "Language/Java/并发编程/未命名.md",
-    "Language/Java/并发编程/偏向锁.md"
+    "Language/Java/并发编程/Java 锁状态.md"
   ]
 }
