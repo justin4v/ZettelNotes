@@ -9,23 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Language/Java/JVM/对象分配规则.md",
             "mode": "source"
           }
         },
-        "group": "9debb395b12d679e"
+        "group": "1f9e14ea69ec054b"
       },
       {
-        "id": "e84169df5ba528a2",
+        "id": "ca0a94f46bf11f5c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Language/Java/JVM/对象分配规则.md",
             "mode": "preview"
           }
         },
-        "group": "9debb395b12d679e"
+        "group": "1f9e14ea69ec054b"
       }
     ],
     "direction": "vertical"
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Language/Java/JVM/对象分配规则.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Language/Java/JVM/对象分配规则.md"
               }
             }
           }
@@ -130,14 +130,14 @@
   },
   "active": "55adb70085486d16",
   "lastOpenFiles": [
+    "Language/Java/JVM/对象分配规则.md",
+    "Language/Java/编译/未命名.md",
     "README.md",
     "Language/Java/并发编程/加锁机制.md",
     "Language/Java/基础/JDK 动态代理.md",
     "Language/Java/编译/Javac 编译.md",
     "Language/Java/编译/JIT 编译器.md",
-    "Language/Java/编译/未命名.md",
     "Language/Java/JVM/class 文件结构.md",
-    "Language/Java/JVM/对象分配规则.md",
     "Language/Java/JVM/对象结构.md",
     "Language/Java/并发编程/Synchronize.md"
   ]
