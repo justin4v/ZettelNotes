@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象结构.md",
+            "file": "Language/Java/JVM/对象分配规则.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象结构.md",
+            "file": "Language/Java/JVM/对象分配规则.md",
             "mode": "preview"
           }
         },
@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/对象结构.md",
+                "file": "Language/Java/JVM/对象分配规则.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/对象结构.md"
+                "file": "Language/Java/JVM/对象分配规则.md"
               }
             }
           }
@@ -131,6 +130,7 @@
   },
   "active": "55adb70085486d16",
   "lastOpenFiles": [
+    "Language/Java/JVM/对象分配规则.md",
     "Language/Java/JVM/对象结构.md",
     "Language/Java/并发编程/Synchronize.md",
     "Language/Java/并发编程/Java 锁状态.md",
@@ -139,7 +139,6 @@
     "Language/Java/并发编程/未命名.md",
     "Language/Java/并发编程/偏向锁.md",
     "Language/Java/工具/查看对象头信息.md",
-    "Language/Java/JVM/Java线程模型.md",
-    "Base Knowledge/大端 vs. 小端模式.md"
+    "Language/Java/JVM/Java线程模型.md"
   ]
 }
