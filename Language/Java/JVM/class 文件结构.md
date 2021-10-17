@@ -116,7 +116,7 @@ java/lang/Object."<init>":()V
 
 #### 注意
 1. **数组类型**：每一位使用一个*前置的"["字符来表示*。如定义一个java.lang.String[][]类型的维数组，将被记录为"[[Ljava/lang/String;"
-2. **方法描述符描述方法**：按照*先参数后返回值的顺序描述*，参数要按照严格的顺序放在一组小括号内。如方法 `int getIndex(String name,char[] tgc,int start,int end,char target)` 的描述符为 `“(Ljava/lang/String[CIIC)I”`
+2. **方法描述符描述方法**：按照*先参数后返回值的顺序描述*，*参数要按照严格的顺序放在一组小括号内*。如方法 `int getIndex(String name,char[] tgc,int start,int end,char target)` 的描述符为 `“(Ljava/lang/String[CII)I”`。其中，`Ljava/lang/String`表示 `String name`、`[C`表示 `char[] tgc`、`II`表示 ``
 
 
 
