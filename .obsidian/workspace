@@ -12,20 +12,7 @@
             "file": "Language/Java/JVM/GC 算法.md",
             "mode": "source"
           }
-        },
-        "group": "9eda4a74aca20caf"
-      },
-      {
-        "id": "8c0d1986ac660f10",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/JVM/GC 算法.md",
-            "mode": "preview"
-          }
-        },
-        "group": "9eda4a74aca20caf"
+        }
       }
     ],
     "direction": "vertical"
@@ -69,12 +56,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
