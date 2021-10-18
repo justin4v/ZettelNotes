@@ -9,23 +9,10 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/编程/字节码访问标志.md",
+            "file": "Language/Java/JVM/字节码示例.md",
             "mode": "source"
           }
-        },
-        "group": "4058b6b338b92094"
-      },
-      {
-        "id": "6eeffecd9fd27cd7",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Base Knowledge/编程/字节码访问标志.md",
-            "mode": "preview"
-          }
-        },
-        "group": "4058b6b338b92094"
+        }
       }
     ],
     "direction": "vertical"
@@ -89,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base Knowledge/编程/字节码访问标志.md",
+                "file": "Language/Java/JVM/字节码示例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Base Knowledge/编程/字节码访问标志.md"
+                "file": "Language/Java/JVM/字节码示例.md"
               }
             }
           }
@@ -131,15 +118,15 @@
   },
   "active": "3783ba26a2b97775",
   "lastOpenFiles": [
-    "Base Knowledge/编程/未命名.md",
-    "Language/Java/JVM/class 文件结构.md",
     "Language/Java/JVM/字节码示例.md",
+    "Language/Java/JVM/类加载示例.md",
+    "Language/Java/JVM/class 文件结构.md",
+    "Base Knowledge/编程/字节码字段描述符.md",
+    "Base Knowledge/编程/未命名.md",
     "Language/Java/JVM/对象结构.md",
     "Base Knowledge/编程/Java 和 Major 版本对照表.md",
     "Language/Java/JVM/Hotspot 字节码指令集.md",
     "Base Knowledge/编程/专业词汇.md",
-    "Language/Java/JVM/对象分配规则.md",
-    "Language/Java/JVM/对象.md",
-    "Architect/Spring/未命名.md"
+    "Language/Java/JVM/对象分配规则.md"
   ]
 }

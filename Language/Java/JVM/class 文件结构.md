@@ -114,6 +114,8 @@ java/lang/Object."<init>":()V
 | V        | 特殊类型void                               |
 | L        | 对象类型，以分号结尾，如`Ljava/lang/String;` |
 
+参考：
+[[字节码字段描述符]]
 
 #### 注意
 1. **数组类型**：每一位使用一个*前置的"["字符来表示*。如定义一个java.lang.String[][]类型的维数组，将被记录为"[[Ljava/lang/String;"
@@ -122,7 +124,7 @@ java/lang/Object."<init>":()V
 ## 访问标志（access_flag）
 常量池结束之后的两个字节，描述了该 Class 是类还是接口，以及是否被 **Public**、**Abstract**、**Final** 等修饰符修饰。
 
-JVM 规范规定了如下 9 种访问标志（参考：[The class File Format](https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-4.html#jvms-4.1-200-B.2)）
+JVM 规范规定了如下 9 种访问标志（参考：[[字节码访问标志]]）
 
 | 标志名称    | 标志值 | 含义                                          |
 | -------------------------- | ------ | ------------------------------ |
