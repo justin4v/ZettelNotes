@@ -126,14 +126,14 @@ java/lang/Object."<init>":()V
 
 JVM 规范规定了如下 9 种访问标志。
 
-| 标志名称                   | 标志值 | 含义                                          |
-| -------------------------- | ------ | --------------------------------------------- |
-| ACC_PUBLIC                 | 0x0001 | 是否为Public类型                              |
-| ACC_FINAL                  | 0x0010 | 是否被声明为final，只有类可以设置             |
-| ACC_SUPER                  | 0x0020 | 是否允许使用invokespecial 字节码指令的新语义． |
-| ACC_INTERFACE              | 0x0200 | 标志这是一个接口                              |
-| ACC_ABSTRACT               | 0x0400 | 是否为abstract类型。接口或者抽象类的该标志值为真，其他类型为假  |
-| ACC_SYNTHETIC              | 0x1000 | 标志这个类并非由用户代码产生                  |
+| 标志名称    | 标志值 | 含义                                          |
+| -------------------------- | ------ | ------------------------------ |
+| ACC_PUBLIC   | 0x0001 | Public ；可从外部访问   |
+| ACC_FINAL   | 0x0010 | final；不允许继承 |
+| ACC_SUPER  | 0x0020 | 调用invokespecial 时特别处理父类的方法 |
+| ACC_INTERFACE   | 0x0200 | 接口   |
+| ACC_ABSTRACT | 0x0400 | abstract类型。接口或者抽象类的该标志值为真，其他类型为假  |
+| ACC_SYNTHETIC    | 0x1000 | 标志这个类并非由用户代码产生                  |
 | ACC_ANNOTATION             | 0x2000 | 标志这是一个注解                              |
 | ACC_ENUM              | 0x4000 | 标志这是一个枚举                              |
 
