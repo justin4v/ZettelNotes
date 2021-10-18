@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "CMS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,8 +56,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -120,14 +119,14 @@
   "active": "85cf5f6acb3c566f",
   "lastOpenFiles": [
     "Language/Java/JVM/GC 算法.md",
+    "Language/Java/JVM/对象结构.md",
+    "Language/Java/JVM/JVM 重要线程.md",
     "Language/Java/编译/JIT 编译器.md",
     "Language/Java/编译/Javac 编译.md",
     "Language/Java/编译/逃逸分析.md",
     "Language/Java/基础/Java 基础.md",
     "Language/Java/基础/JDK 动态代理.md",
     "Language/Java/基础/Java基础.md",
-    "Language/Java/JVM/对象结构.md",
-    "Language/Java/JVM/对象分配规则.md",
-    "Language/Java/JVM/class 文件结构.md"
+    "Language/Java/JVM/对象分配规则.md"
   ]
 }
