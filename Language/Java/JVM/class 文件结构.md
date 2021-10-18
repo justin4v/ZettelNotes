@@ -42,6 +42,10 @@ Class 文件格式采用类似于 **C 语言结构体**的伪结构来存储数�
 
 demo 中版本号为: “00 00 00 34”，次版本号转化为十进制为 0，主版本号转化为十进制 52，在 Oracle 官网中查询序号 52 对应的 JDK 版本为 1.8，所以编译该源代码文件的 Java 版本为 1.8.0。
 
+**参考：**
+[The class File Format](https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-4.html#jvms-4.1-200-B.2)
+
+
 ## 常量池（Constant Pool）
 紧接着主版本号之后的字节是常量池入口。
 
