@@ -10,22 +10,9 @@
           "type": "markdown",
           "state": {
             "file": "Language/Java/JVM/GC 算法.md",
-            "mode": "source"
-          }
-        },
-        "group": "c04d5d7472716068"
-      },
-      {
-        "id": "90be532a24b8db78",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/JVM/GC 算法.md",
             "mode": "preview"
           }
-        },
-        "group": "c04d5d7472716068"
+        }
       }
     ],
     "direction": "vertical"
