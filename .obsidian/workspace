@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:",
+                "query": "file:Stop",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
