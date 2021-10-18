@@ -4,28 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "55adb70085486d16",
+        "id": "3783ba26a2b97775",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象分配规则.md",
+            "file": "Language/Java/JVM/对象结构.md",
             "mode": "source"
           }
-        },
-        "group": "1f9e14ea69ec054b"
-      },
-      {
-        "id": "ca0a94f46bf11f5c",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/JVM/对象分配规则.md",
-            "mode": "preview"
-          }
-        },
-        "group": "1f9e14ea69ec054b"
+        }
       }
     ],
     "direction": "vertical"
@@ -52,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "大端",
+                "query": "专业",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +56,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -89,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/对象分配规则.md",
+                "file": "Language/Java/JVM/对象结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +94,7 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "useHierarchy": false
               }
             }
@@ -117,28 +105,29 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/对象分配规则.md"
+                "file": "Language/Java/JVM/对象结构.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "55adb70085486d16",
+  "active": "3783ba26a2b97775",
   "lastOpenFiles": [
-    "Language/Java/JVM/对象分配规则.md",
-    "Language/Java/编译/未命名.md",
-    "README.md",
-    "Language/Java/并发编程/加锁机制.md",
-    "Language/Java/基础/JDK 动态代理.md",
-    "Language/Java/编译/Javac 编译.md",
-    "Language/Java/编译/JIT 编译器.md",
-    "Language/Java/JVM/class 文件结构.md",
     "Language/Java/JVM/对象结构.md",
-    "Language/Java/并发编程/Synchronize.md"
+    "Base Knowledge/编程/专业词汇.md",
+    "Language/Java/JVM/对象分配规则.md",
+    "Language/Java/JVM/对象.md",
+    "Architect/Spring/未命名.md",
+    "Language/Java/基础/未命名.md",
+    "日常记录/源码阅读.md",
+    "Language/Java/并发编程/AQS原理.md",
+    "Language/Java/并发编程/未命名.md",
+    "Language/Java/JVM/Java线程模型.md"
   ]
 }
