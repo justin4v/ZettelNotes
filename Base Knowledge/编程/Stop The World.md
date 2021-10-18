@@ -19,3 +19,11 @@ Stop一the一World，简称STW，指的是Gc事件发生过程中，会产生应
 垃圾回收是根据可达性分析算法，搜索GC Root根的引用链，将不在引用链上的对象当做垃圾回收，设想我们执行某个方法的时候，此时产生了很多局部变量，刚好老年代满了需要进行Full gc，如果不停止线程，垃圾回收正在根据这些局部变量也就是GC Root根搜索引用链，此时这个方法结束了，那么这些局部变量就都会被销毁，这些引用链的GC Root根都销毁了，这些引用当然也成了垃圾对象，这样就会导致在垃圾回收的过程中还会不断的产生新的垃圾。
 
 但是Stop-The-World的结果是比较严重的，如果用户正在浏览你的网站，应用程序突然Stop-The-World，所有线程被挂起，那么用户就会感觉你的网站卡住了，尽管gc时间是比较快的，但是如果并发量比较大，用户感知是比较明显的，会影响用户体验。
+
+## 参考
+[JVM internals basics - Stop-the-world phase (safepoints) - how it works?](https://krzysztofslusarski.github.io/2020/11/13/stw.html)
+
+
+
+
+
