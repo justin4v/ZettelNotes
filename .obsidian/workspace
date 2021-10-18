@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "STW",
+                "query": "file:",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
