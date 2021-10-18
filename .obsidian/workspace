@@ -69,8 +69,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -130,7 +129,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3783ba26a2b97775",
+  "active": "90be532a24b8db78",
   "lastOpenFiles": [
     "Language/Java/JVM/字节码示例.md",
     "Language/Java/JVM/class 文件结构.md",
