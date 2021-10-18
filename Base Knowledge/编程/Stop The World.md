@@ -19,9 +19,20 @@ Stop一the一World，简称STW，指的是Gc事件发生过程中，会产生应
 垃圾回收是根据可达性分析算法，搜索GC Root根的引用链，将不在引用链上的对象当做垃圾回收，设想我们执行某个方法的时候，此时产生了很多局部变量，刚好老年代满了需要进行Full gc，如果不停止线程，垃圾回收正在根据这些局部变量也就是GC Root根搜索引用链，此时这个方法结束了，那么这些局部变量就都会被销毁，这些引用链的GC Root根都销毁了，这些引用当然也成了垃圾对象，这样就会导致在垃圾回收的过程中还会不断的产生新的垃圾。
 
 但是Stop-The-World的结果是比较严重的，如果用户正在浏览你的网站，应用程序突然Stop-The-World，所有线程被挂起，那么用户就会感觉你的网站卡住了，尽管gc时间是比较快的，但是如果并发量比较大，用户感知是比较明显的，会影响用户体验。
+Key reason why compaction leads to STW pause is as follows, JVM needs to move object and update references to it. now if you move object before updating the references and application that is running access it from old reference than there is trouble. if you update reference first and than try to move object the updated reference is wrong till object is moved and any access while object has not moved will cause issue.
+
+For both CMS and Parallel collecter the young generation collection algorithm is similar and it is stop the world ie application is stopped when collection is happening Stuff JVM is doing is, marking all objects reachable from root set, moving the objects from Eden to survivor space and moving objects that have survived collections beyond tenuring threshold to the old generation. Of course JVM has to update all the references to the objects that have moved.
+
+For old generation parallel collector is doing all marking, compaction and reference updates in a single stop the world(STW) phase, this leads to pauses in seconds for heaps in GBs. This was painful for the applications that have strict response time requirements. Till date Paralle collector is still the best collectors(among Oracle Java) for throughput or batch processing. In fact we have seen for same scenario even if time spent in pauses is more in parallel collector than CMS still we get a higher throughput, this I think has to do with better spatial locality due to compaction.
+
+CMS solved the problem of high pauses in major collection by doing the Marking concurrently. There are 2 STW parts, Initial marking (getting the references from root set) and Remark Pause (a small STW pause at the end of marking to deal with changes in the object graph while marking and application was working concurrently). Both these pauses are in range of 100 -200 milliseconds for few GB of heap sizes and reasonable number of application threads(remember more active threads more roots)
+
+G1GC is planned to be a replacement of CMS and accept goals for pauses. takes care of fragmentation by incrementally compacting the heap.Though the work is incremental so you can get smaller pauses but that may come at the cost of more frequent pauses
+
+None of the above can compact heap(CMS does not compact at all) while application is running. AZUL GPGC garbage collection can even compact without stopping the application and also handle reference update. So if you want to go deep into how GCs work it will be worth reading the algorithm for GPGC. AZUL markets it as a pause-less collector.
 
 ## 参考
-[JVM internals basics - Stop-the-world phase (safepoints) - how it works?](https://krzysztofslusarski.github.io/2020/11/13/stw.html)
+[Does Java Garbage Collect always has to "Stop-the-World"?](https://stackoverflow.com/questions/40182392/does-java-garbage-collect-always-has-to-stop-the-world)
 
 
 
