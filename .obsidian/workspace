@@ -13,10 +13,10 @@
             "mode": "source"
           }
         },
-        "group": "de22fe9efeaef9d1"
+        "group": "100a68fea83aad98"
       },
       {
-        "id": "5a2893f99d304614",
+        "id": "24e0865ae3a6b65a",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -25,7 +25,7 @@
             "mode": "preview"
           }
         },
-        "group": "de22fe9efeaef9d1"
+        "group": "100a68fea83aad98"
       }
     ],
     "direction": "vertical"
@@ -133,6 +133,7 @@
   "active": "85cf5f6acb3c566f",
   "lastOpenFiles": [
     "Language/Java/JVM/GC 算法.md",
+    "标记-压缩算法.png.md",
     "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/JVM 重要线程.md",
     "Language/Java/编译/JIT 编译器.md",
@@ -140,7 +141,6 @@
     "Language/Java/编译/逃逸分析.md",
     "Language/Java/基础/Java 基础.md",
     "Language/Java/基础/JDK 动态代理.md",
-    "Language/Java/基础/Java基础.md",
-    "Language/Java/JVM/对象分配规则.md"
+    "Language/Java/基础/Java基础.md"
   ]
 }
