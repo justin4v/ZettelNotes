@@ -33,7 +33,8 @@
 
 5. 由Eden区、From Space区向To Space区复制时，对象大小大于To Space可用内存，则把该对象转存到老年代，且老年代的可用内存小于该对象大小
 
-
+# 注意
+Minor 和 Major GC 都会触发 [[Stop The World]].
 
 # 参考
 [Java Garbage Collection Basics](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html)
