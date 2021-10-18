@@ -12,7 +12,20 @@
             "file": "Language/Java/JVM/字节码示例.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "4058b6b338b92094"
+      },
+      {
+        "id": "6eeffecd9fd27cd7",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/JVM/字节码示例.md",
+            "mode": "preview"
+          }
+        },
+        "group": "4058b6b338b92094"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082
+    "width": 205.50078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -113,7 +127,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "3783ba26a2b97775",
   "lastOpenFiles": [
