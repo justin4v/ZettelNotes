@@ -40,10 +40,7 @@ Class 文件格式采用类似于 **C 语言结构体**的伪结构来存储数�
 ## 版本号（Version）
 版本号为魔数之后的 4 个字节，**前两个字节表示次版本号（Minor Version），后两个字节表示主版本号（Major Version）**。
 
-demo 中版本号为: “00 00 00 34”，次版本号转化为十进制为 0，主版本号转化为十进制 52，在 Oracle 官网中查询序号 52 对应的 JDK 版本为 1.8，所以编译该源代码文件的 Java 版本为 1.8.0。
-
-**参考：**
-[The class File Format](https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-4.html#jvms-4.1-200-B.2)
+demo 中版本号为: “00 00 00 34”，次版本号转化为十进制为 0，主版本号转化为十进制 52，在 [[Java 和 Major 版本对照表]] 中查询序号 52 对应的 JDK 版本为 1.8，所以编译该源代码文件的 Java 版本为 1.8.0。
 
 
 ## 常量池（Constant Pool）
@@ -104,8 +101,8 @@ java/lang/Object."<init>":()V
 
 ### 字节码中变量类型
 
-| 标识字符 | 含义                                       |
-| -------- | ------------------------------------------ |
+| 标识字符   | 含义                                       |
+| :-------: | :-------------------------------------: |
 | B        | 基本类型byte                               |
 | C        | 基本类型char                               |
 | D        | 基本类型double                             |
@@ -115,7 +112,7 @@ java/lang/Object."<init>":()V
 | S        | 基本类型short                              |
 | Z        | 基本类型boolean                            |
 | V        | 特殊类型void                               |
-| L        | 对象类型，以分号结尾，如`Ljava/lang/Object;`和`Ljava/lang/String;` |
+| L        | 对象类型，以分号结尾，如`Ljava/lang/String;` |
 
 
 #### 注意
@@ -133,7 +130,7 @@ JVM 规范规定了如下 9 种访问标志。
 | -------------------------- | ------ | --------------------------------------------- |
 | ACC_PUBLIC                 | 0x0001 | 是否为Public类型                              |
 | ACC_FINAL                  | 0x0010 | 是否被声明为final，只有类可以设置             |
-| ACC_SUPER                  | 0x0020 | 是否允许使用invokespecial字节码指令的新语义． |
+| ACC_SUPER                  | 0x0020 | 是否允许使用invokespecial 字节码指令的新语义． |
 | ACC_INTERFACE              | 0x0200 | 标志这是一个接口                              |
 | ACC_ABSTRACT               | 0x0400 | 是否为abstract类型。接口或者抽象类的该标志值为真，其他类型为假  |
 | ACC_SYNTHETIC              | 0x1000 | 标志这个类并非由用户代码产生                  |
