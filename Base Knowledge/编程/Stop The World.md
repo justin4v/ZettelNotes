@@ -1,14 +1,12 @@
 # Stop The World
 1. Stop-The-World，简称STW，指某个 JVM 事件，如 GC（参考[[GC 算法]]）JIT编译（参考[[JIT 编译器]]）发生过程中，整个 JVM 所有线程暂停的现象。
 2、所有的 GC 都有这个事件。
-3、G1也不能完全避免stop-the-world情况发生，尽可能地缩短了暂停时间。
-4、STW是JVM在后台自动发起和自动完成的。在用户不可见的情况下，把用户正常的工作线程全部停掉。开发中不要用System.gc() ;会导致stop-the-world的发生。
+3、G1也不能完全避免 STW 情况发生，只是尽可能地缩短了暂停时间。
+4、STW 是 JVM 在后台自动发起和自动完成的。
 
 # 为什么需要STW(stop the world)
-垃圾回收是根据可达性分析算法，搜索GC Root根的引用链，将不在引用链上的对象当做垃圾回收，如果回收过程中程序重新引用了待回收对象，将会造成错误。
-
 Key reason why compaction leads to STW pause is as follows：
-**JVM needs to move object and update references to it**. 
+**JVM needs to move object and update references to it**。如进行可达性性分析时（参考[[GC 算法#对象存活判断]]）需要 STW。
 1. if you move object before updating the references and application that is running access it from old reference , there will be trouble.
 2. if you update reference first and than try to move object the updated reference is wrong till object is moved and any access while object has not moved will cause issue.
 
