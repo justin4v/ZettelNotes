@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/class 文件结构.md",
+            "file": "Base Knowledge/编程/字节码访问标志.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/class 文件结构.md",
+            "file": "Base Knowledge/编程/字节码访问标志.md",
             "mode": "preview"
           }
         },
@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/class 文件结构.md",
+                "file": "Base Knowledge/编程/字节码访问标志.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/class 文件结构.md"
+                "file": "Base Knowledge/编程/字节码访问标志.md"
               }
             }
           }
@@ -132,11 +131,11 @@
   },
   "active": "3783ba26a2b97775",
   "lastOpenFiles": [
+    "Base Knowledge/编程/未命名.md",
     "Language/Java/JVM/class 文件结构.md",
     "Language/Java/JVM/字节码示例.md",
     "Language/Java/JVM/对象结构.md",
     "Base Knowledge/编程/Java 和 Major 版本对照表.md",
-    "Base Knowledge/编程/未命名.md",
     "Language/Java/JVM/Hotspot 字节码指令集.md",
     "Base Knowledge/编程/专业词汇.md",
     "Language/Java/JVM/对象分配规则.md",

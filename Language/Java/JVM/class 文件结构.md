@@ -119,12 +119,10 @@ java/lang/Object."<init>":()V
 1. **数组类型**：每一位使用一个*前置的"["字符来表示*。如定义一个java.lang.String[][]类型的维数组，将被记录为"[[Ljava/lang/String;"
 2. **方法描述符描述方法**：按照*先参数后返回值的顺序描述*，*参数要按照严格的顺序放在一组小括号内*。如方法 `int getIndex(String name,char[] tgc,int start,int end,char target)` 的描述符为 `“(Ljava/lang/String[CIIC)I”`。其中，`Ljava/lang/String`表示 `String name`、`[C`表示 `char[] tgc`、`II`表示 `int start,int end`、最后一个 `C`表示 `char target`、括号后面的 `I` 表示返回值类型为 `int`。
 
-
-
 ## 访问标志（access_flag）
 常量池结束之后的两个字节，描述了该 Class 是类还是接口，以及是否被 **Public**、**Abstract**、**Final** 等修饰符修饰。
 
-JVM 规范规定了如下 9 种访问标志（）
+JVM 规范规定了如下 9 种访问标志（参考：[The class File Format](https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-4.html#jvms-4.1-200-B.2)）
 
 | 标志名称    | 标志值 | 含义                                          |
 | -------------------------- | ------ | ------------------------------ |
