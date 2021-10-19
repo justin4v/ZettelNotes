@@ -7,9 +7,25 @@
         "id": "55adb70085486d16",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
-        }
+          "type": "markdown",
+          "state": {
+            "file": "Base Knowledge/编程/Naming.md",
+            "mode": "source"
+          }
+        },
+        "group": "e4f87df77212509d"
+      },
+      {
+        "id": "69527a8e341750de",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Base Knowledge/编程/Naming.md",
+            "mode": "preview"
+          }
+        },
+        "group": "e4f87df77212509d"
       }
     ],
     "direction": "vertical"
@@ -73,6 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Base Knowledge/编程/Naming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Base Knowledge/编程/Naming.md"
+              }
             }
           }
         ]
@@ -111,6 +130,8 @@
   },
   "active": "55adb70085486d16",
   "lastOpenFiles": [
+    "Base Knowledge/编程/Naming.md",
+    "Database/Mysql/Mysql事务隔离级别与实现原理.md",
     "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/对象分配规则.md",
     "Base Knowledge/编程/字节码字段描述符.md",
@@ -118,8 +139,6 @@
     "Language/Java/JVM/class 文件结构.md",
     "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
     "Language/Java/JVM/JVM内存结构.md",
-    "Base Knowledge/编程/未命名.md",
-    "Language/Java/JVM/未命名.md",
-    "Language/Java/JVM/GC 算法.md"
+    "Base Knowledge/编程/未命名.md"
   ]
 }
