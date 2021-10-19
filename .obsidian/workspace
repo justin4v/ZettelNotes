@@ -4,28 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "55adb70085486d16",
+        "id": "afbe858c5a7db149",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Script/Java 调用 JavaScript.md",
+            "file": "Script/JS vs. JSP.md",
             "mode": "source"
           }
-        },
-        "group": "e4f87df77212509d"
-      },
-      {
-        "id": "69527a8e341750de",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Script/Java 调用 JavaScript.md",
-            "mode": "preview"
-          }
-        },
-        "group": "e4f87df77212509d"
+        }
       }
     ],
     "direction": "vertical"
@@ -89,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Script/Java 调用 JavaScript.md",
+                "file": "Script/JS vs. JSP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Script/Java 调用 JavaScript.md"
+                "file": "Script/JS vs. JSP.md"
               }
             }
           }
@@ -128,8 +115,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "55adb70085486d16",
+  "active": "afbe858c5a7db149",
   "lastOpenFiles": [
+    "Script/JavaScript/未命名.md",
+    "Script/Java 调用 JavaScript.md",
     "Script/未命名.md",
     "Base Knowledge/编程/Naming.md",
     "Database/Mysql/Mysql事务隔离级别与实现原理.md",
@@ -137,8 +126,6 @@
     "Language/Java/JVM/对象分配规则.md",
     "Base Knowledge/编程/字节码字段描述符.md",
     "Base Knowledge/编程/专业词汇.md",
-    "Language/Java/JVM/class 文件结构.md",
-    "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
-    "Language/Java/JVM/JVM内存结构.md"
+    "Language/Java/JVM/class 文件结构.md"
   ]
 }

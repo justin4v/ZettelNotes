@@ -1,6 +1,5 @@
 # Java 调用 JavaScript
 ## 简介
-JavaScript 调用 Java 方法比较常见。
 Java 调用 JavaScript 比较少见（java 功能比较齐全），可以实现 java 中复杂的算数计算
 
 ## 步骤
