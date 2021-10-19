@@ -1,5 +1,5 @@
 # Visitor
-Represent an operation to be performed on the elements of an object structure. 
+Represent an operation to be performed on the elements of an objectstructure. 
 Visitor lets you define a new operation without changing the classes of the elements on which it operates
 
 ## 适用场景
