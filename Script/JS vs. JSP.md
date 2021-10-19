@@ -8,9 +8,9 @@
 # JSP
 1. JSP（Java Server Pages），是 Java 服务器页面，其根本是一个简化的Servlet设计，它是由 Sun Microsystems公司倡导、许多公司参与一起建立的一种动态网页技术标准。
 2. JSP 技术是 web 网站的**服务端技术**，可以简单理解为jsp技术说是用来生成动态网页的。
-3. 普通的网页是html的，它是静态的，需要事先用html语言编写好。那么我们在html页面中加入一些java代码，用java代码部分动态的内容插入到原来的html页面中，那么，这个页面就可以成为jsp页面。即，**jsp=html+java**。
+3. 普通的网页是 html 的，它是静态的，需要事先用 html 语言编写好。在 html 页面中加入一些 java 代码，用 java 代码部分动态的内容插入到原来的html页面中。页面就可以成为 JSP 页面，即**JSP=Html+Java**。
 
 # 区别
-1. 位置上的不同，Javascript一般在前台运行，要求浏览器要支持js，而 JSP 是在后台服务器上的，主要用于控制 html。
-2.  JSP 是在 html 中以\<%\%>的形式出现，而 JS 是在HTML中以\<script>\</script>来实现。
-3.  JSP 和 JS 相比，一般情况下，js在客户端生成html，但是不太容易和服务器进行交互，更不能提供复杂的服务。
+1. 位置上的不同，**Javascript 一般在前台运行**，要求浏览器要支持js；而 **JSP 运行在后台服务器上**，主要用于控制 html。
+2. **JSP 在 html 中以\<%\%>的形式出现**；而 **JS 是在HTML中以\<script>\</script>来实现**。
+3.  JSP 和 JS 相比，一般情况下，**JS 在客户端生成html**，但是不太容易和服务器进行交互，更不能提供复杂的服务。
