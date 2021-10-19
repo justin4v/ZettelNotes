@@ -118,6 +118,7 @@
   "active": "37e6b40b10181e63",
   "lastOpenFiles": [
     "Design/Framework.md",
+    "Design/可重用级别.md",
     "Language/Java/基础/JNDI.md",
     "Base Knowledge/编程/Naming.md",
     "Script/JS vs. JSP.md",
@@ -125,7 +126,6 @@
     "Script/Java 调用 JavaScript.md",
     "Script/未命名.md",
     "Database/Mysql/Mysql事务隔离级别与实现原理.md",
-    "Language/Java/JVM/对象结构.md",
-    "Language/Java/JVM/对象分配规则.md"
+    "Language/Java/JVM/对象结构.md"
   ]
 }
