@@ -7,8 +7,11 @@
         "id": "37e6b40b10181e63",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Design/设计模式/Visitor.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Design/设计模式/Visitor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Design/设计模式/Visitor.md"
+              }
             }
           }
         ]
@@ -111,15 +117,15 @@
   },
   "active": "37e6b40b10181e63",
   "lastOpenFiles": [
+    "Design/设计模式/Visitor.md",
+    "Design/设计模式/Command.md",
+    "Design/设计模式/设计模式.md",
     "标记-压缩算法.png.md",
     "附件/Pasted image 20211018164958.png",
     "附件/Pasted image 20211012142112.png",
     "Design/Framework.md",
     "Design/可重用级别.md",
     "Language/Java/基础/JNDI.md",
-    "Base Knowledge/编程/Naming.md",
-    "Script/JS vs. JSP.md",
-    "Script/JavaScript/未命名.md",
-    "Script/Java 调用 JavaScript.md"
+    "Base Knowledge/编程/Naming.md"
   ]
 }

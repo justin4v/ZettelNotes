@@ -1,4 +1,7 @@
 # Visitor
+Represent an operation to be performed on the elements of an object structure. 
+Visitor lets you define a new operation without changing the classes of the elements on which it operates
+
 ## 适用场景
 - 多个元素；
 - 适用于业务规则**要求遍历多个元素，如统计**；
