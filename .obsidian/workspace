@@ -12,7 +12,20 @@
             "file": "Script/JS vs. JSP.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "bb26956a7bc534cb"
+      },
+      {
+        "id": "22f4aaa6f6900b3b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Script/JS vs. JSP.md",
+            "mode": "preview"
+          }
+        },
+        "group": "bb26956a7bc534cb"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082
+    "width": 205.50078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -117,6 +131,7 @@
   },
   "active": "afbe858c5a7db149",
   "lastOpenFiles": [
+    "Script/JS vs. JSP.md",
     "Script/JavaScript/未命名.md",
     "Script/Java 调用 JavaScript.md",
     "Script/未命名.md",
@@ -125,7 +140,6 @@
     "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/对象分配规则.md",
     "Base Knowledge/编程/字节码字段描述符.md",
-    "Base Knowledge/编程/专业词汇.md",
-    "Language/Java/JVM/class 文件结构.md"
+    "Base Knowledge/编程/专业词汇.md"
   ]
 }
