@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/设计模式/设计模式.md",
+            "file": "Design/设计模式/Chain of Responsibility.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/设计模式/设计模式.md",
+                "file": "Design/设计模式/Chain of Responsibility.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/设计模式/设计模式.md"
+                "file": "Design/设计模式/Chain of Responsibility.md"
               }
             }
           }
@@ -117,6 +117,7 @@
   },
   "active": "37e6b40b10181e63",
   "lastOpenFiles": [
+    "Design/设计模式/未命名.md",
     "Design/设计模式/设计模式.md",
     "Design/设计模式/Command.md",
     "Design/设计模式/Visitor.md",
@@ -125,7 +126,6 @@
     "附件/Pasted image 20211012142112.png",
     "Design/Framework.md",
     "Design/可重用级别.md",
-    "Language/Java/基础/JNDI.md",
-    "Base Knowledge/编程/Naming.md"
+    "Language/Java/基础/JNDI.md"
   ]
 }
