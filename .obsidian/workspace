@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/编程/Naming.md",
+            "file": "Script/Java 调用 JavaScript.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/编程/Naming.md",
+            "file": "Script/Java 调用 JavaScript.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base Knowledge/编程/Naming.md",
+                "file": "Script/Java 调用 JavaScript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Base Knowledge/编程/Naming.md"
+                "file": "Script/Java 调用 JavaScript.md"
               }
             }
           }
@@ -130,6 +130,7 @@
   },
   "active": "55adb70085486d16",
   "lastOpenFiles": [
+    "Script/未命名.md",
     "Base Knowledge/编程/Naming.md",
     "Database/Mysql/Mysql事务隔离级别与实现原理.md",
     "Language/Java/JVM/对象结构.md",
@@ -138,7 +139,6 @@
     "Base Knowledge/编程/专业词汇.md",
     "Language/Java/JVM/class 文件结构.md",
     "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
-    "Language/Java/JVM/JVM内存结构.md",
-    "Base Knowledge/编程/未命名.md"
+    "Language/Java/JVM/JVM内存结构.md"
   ]
 }
