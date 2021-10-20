@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/设计模式/设计模式.md",
+            "file": "Design/设计模式/Abstract Factory.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/设计模式/设计模式.md",
+                "file": "Design/设计模式/Abstract Factory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/设计模式/设计模式.md"
+                "file": "Design/设计模式/Abstract Factory.md"
               }
             }
           }
@@ -117,9 +117,9 @@
   },
   "active": "275687ebfbd212e1",
   "lastOpenFiles": [
+    "Design/设计模式/Abstract Factory.md",
     "Design/设计模式/设计模式.md",
     "Design/设计模式/Chain of Responsibility.md",
-    "Design/设计模式/未命名.md",
     "Design/设计模式/Command.md",
     "Design/设计模式/Visitor.md",
     "标记-压缩算法.png.md",
