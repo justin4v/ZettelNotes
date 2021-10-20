@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "37e6b40b10181e63",
+        "id": "275687ebfbd212e1",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/设计模式/Chain of Responsibility.md",
-            "mode": "source"
+            "file": "Design/设计模式/设计模式.md",
+            "mode": "preview"
           }
         }
       }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/设计模式/Chain of Responsibility.md",
+                "file": "Design/设计模式/设计模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/设计模式/Chain of Responsibility.md"
+                "file": "Design/设计模式/设计模式.md"
               }
             }
           }
@@ -115,11 +115,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "37e6b40b10181e63",
+  "active": "275687ebfbd212e1",
   "lastOpenFiles": [
+    "Design/设计模式/设计模式.md",
     "Design/设计模式/Chain of Responsibility.md",
     "Design/设计模式/未命名.md",
-    "Design/设计模式/设计模式.md",
     "Design/设计模式/Command.md",
     "Design/设计模式/Visitor.md",
     "标记-压缩算法.png.md",
