@@ -5,13 +5,14 @@ Provide an **interface** for **creating families** of related or dependent objec
 Kit
 
 # 动机
-Consider a user interface *toolkit* that supports multiple look-and-feel standards, such as Motif and Presentation Manager. Different look-and-feels define different appearances and behaviors for user interface `"widgets"` like scroll bars, windows, and buttons. 
+Consider a user interface *toolkit*  that supports multiple look-and-feel standards, such as Motif and Presentation Manager. Different look-and-feels define different appearances and behaviors for user interface `"widgets"` like scroll bars, windows, and buttons. 
 
 To be portable across look-and-feel standards, an application should not hard-code its widgets for a particular look and feel. Instantiating look-and-feel-specific classes of widgets throughout the application makesit hard to change the look and feel later.
 
-We can solve this problem by defining an abstract `WidgetFactory` class that declares an interface for creating each basic kind of widget. There's also an abstract class for each kind of widget, and concrete subclasses implement widgets for specific look-and-feel standards. 
+We can solve this problem by defining an abstract `WidgetFactory` class that declares an interface for creating each basic kind of `widget`. There's also an abstract class for each kind of widget, and concrete subclasses implement widgets for specific look-and-feel standards. 
 
-WidgetFactory's interface has an operation that returns a new widget object for each abstract widget class. Clients call these operations to obtain widget instances, but clients aren't aware of the concrete classes they're using. 
+`WidgetFactory`'s interface has an operation that returns a new widget object for each abstract widget class.
+Clients call these operations to obtain widget instances, but clients aren't aware of the concrete classes they're using. 
 Thus *clients stay independen* of the prevailing look and feel.
 
 UML类图如下：
@@ -31,24 +32,28 @@ Use the *Abstract Factory* pattern when ：
 ![[Abstract Factory一般结构.png]]
 
 ## 解释
-- AbstractFactory (WidgetFactory) 
+- `AbstractFactory (WidgetFactory)`
 	- declares an interface for operations that create abstract product objects. 
-- ConcreteFactory (MotifWidgetFactory, PMWidgetFactory)
+- `ConcreteFactory (MotifWidgetFactory, PMWidgetFactory)`
 	-  implements the operations to create concrete product objects. 
--  AbstractProduct (Window, ScrollBar) 
+-  `AbstractProduct (Window, ScrollBar)`
 	- declares an interfacefor a type of product object. 
--  ConcreteProduct (MotifWindow, MotifScrollBar) 
+-  `ConcreteProduct (MotifWindow, MotifScrollBar)`
 	-  defines a product objecttobecreated bythe corresponding concrete factory. 
 	-  implements theAbstractProduct interface. 
-- Client
+- `Client`
 	- uses *only interfaces declared by AbstractFactory and AbstractProduct* classes
 
 
 # 协作
-- Normally a single instance of a ConcreteFactory class is created at run-time.
-- AbstractFactory defers creation of product objects to its ConcreteFactory subclass.
+- Normally a single instance of a `ConcreteFactory` class is created at run-time.
+- `AbstractFactory` defers creation of product objects to its ConcreteFactory subclass.
 
 # 效果
 ## 优点
-1. It isolates concrete classes.
-2. It makes exchanging product families easy
+1. It isolates concrete classes: The Abstract Factory pattern helps you control the classes of objectsthat an application creates. Because a factory encapsulates the responsibility and the process of creating product objects,it isolates clients from implementation classes. Clients manipulate instances through their abstract interfaces. Product class names are isolated in the implementation of the concrete factory;they do not appear in client code.
+2. It makes exchanging product families easy.
+3. It promotes consistency among products : When product objects in a family are designed towork together,it's important that an application use objects from only one family at a time. AbstractFactory makes this easy to enforce.
+	
+## 缺点
+- Supporting new kinds of `Products` is difficult : Extending abstract factories to produce new kinds of Products isn't easy.That's because theAbstractFactory interface fixesthe set of products that can be created.Supporting new kindsof products requires extending the factory interface, which involves changing the AbstractFactoryclass and all of its subclasses. Wediscuss one solution to this problem in the Implementation section
