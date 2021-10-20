@@ -13,5 +13,19 @@ We can solve this problem by defining an abstract `WidgetFactory` class that dec
 
 WidgetFactory's interface has an operation that returns a new widget object for each abstract widget class. Clients call these operations to obtain widget instances, but clients aren't aware of the concrete classes they're using. 
 Thus *clients stay independen* of the prevailing look and feel.
+
 UML类图如下：
-![[Pasted image 20211020195555.png]]
+
+![[Abstract Factory示例UML类图.png]]
+
+# 适用性
+Use the *Abstract Factory* pattern when ：
+- a system should be independent of how its products are created, composed, and represented. 
+- a system should be configured with one of multiple families of products. 
+- a family of related product objects is designed to be used together, and you need to enforce this constraint. 
+- you want to provide a class library of products, and you want to reveal just their interfaces, not their implementations.
+
+# 结构
+*Abstract Factory* 一般结构如下：
+
+![[Pasted image 20211020200019.png]]
