@@ -20,10 +20,10 @@ UML类图如下：
 
 # 适用性
 Use the *Abstract Factory* pattern when ：
-- a system should be *independent of how its products are created*, composed, and represented. 
-- a system should be configured with one of multiple families of products. 
-- a family of related product objects is designed to be used together, and you need to enforce this constraint. 
-- you want to provide a class library of products, and you want to reveal just their interfaces, not their implementations.
+>- a system should *be independent of how its products are created, composed, and represented*. 
+>- a system should *be configured with one of multiple families of products.* 
+>- *a family of related product objects is designed to be used together*, and you need to enforce this constraint. 
+>- you want to* provide a class library of products*, and you want to reveal just their interfaces, not their implementations.
 
 # 结构
 *Abstract Factory* 一般结构如下：
@@ -42,3 +42,13 @@ Use the *Abstract Factory* pattern when ：
 	-  implements theAbstractProduct interface. 
 - Client
 	- uses *only interfaces declared by AbstractFactory and AbstractProduct* classes
+
+
+# 协作
+- Normally a single instance of a ConcreteFactory class is created at run-time.
+- AbstractFactory defers creation of product objects to its ConcreteFactory subclass.
+
+# 效果
+## 优点
+1. It isolates concrete classes.
+2. It makes exchanging product families easy
