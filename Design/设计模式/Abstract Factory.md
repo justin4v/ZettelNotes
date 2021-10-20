@@ -19,6 +19,8 @@ UML类图如下：
 
 ![[Abstract Factory示例UML类图.png]]
 
+`WidgetFactory` also **enforces dependencies between the concrete widget classes**. A Motif scroll bar should be used with a Motif button and a Motif text editor, and that constraint is enforced automatically as a consequence of using a `MotifWidgetFactory`.
+
 # 适用性
 Use the *Abstract Factory* pattern when ：
 >- a system should *be independent of how its products are created, composed, and represented*. 
@@ -47,13 +49,13 @@ Use the *Abstract Factory* pattern when ：
 
 # 协作
 - Normally a single instance of a `ConcreteFactory` class is created at run-time.
-- `AbstractFactory` defers creation of product objects to its ConcreteFactory subclass.
+- `AbstractFactory` defers creation of product objects to its `ConcreteFactory` subclass.
 
 # 效果
 ## 优点
-1. It isolates concrete classes: The Abstract Factory pattern helps you control the classes of objectsthat an application creates. Because a factory encapsulates the responsibility and the process of creating product objects,it isolates clients from implementation classes. Clients manipulate instances through their abstract interfaces. Product class names are isolated in the implementation of the concrete factory;they do not appear in client code.
-2. It makes exchanging product families easy.
-3. It promotes consistency among products : When product objects in a family are designed towork together,it's important that an application use objects from only one family at a time. AbstractFactory makes this easy to enforce.
+1. **It isolates concrete classes**: The Abstract Factory pattern helps you control the classes of objectsthat an application creates. Because a *factory encapsulates the responsibility and the process of creating product objects, it isolates clients from implementation classes.* Clients manipulate instances through their abstract interfaces. Product class names are isolated in the implementation of the concrete factory; they do not appear in client code.
+2. **It makes exchanging product families easy**.
+3. **It promotes consistency among products**: When product objects in a family are designed towork together,it's important that an application use objects from only one family at a time. AbstractFactory makes this easy to enforce.
 	
 ## 缺点
-- Supporting new kinds of `Products` is difficult : Extending abstract factories to produce new kinds of Products isn't easy.That's because theAbstractFactory interface fixesthe set of products that can be created.Supporting new kindsof products requires extending the factory interface, which involves changing the AbstractFactoryclass and all of its subclasses. Wediscuss one solution to this problem in the Implementation section
+- Supporting new kinds of `Products` is difficult : Extending abstract factories to produce new kinds of `Products` isn't easy. That's because the AbstractFactory interface *fixes the set of products that can be created.(对外提供的接口：create)* Supporting new kinds of products requires extending the factory interface, which *involves changing the `AbstractFactory` class and all of its subclasses*. 
