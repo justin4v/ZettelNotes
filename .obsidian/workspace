@@ -12,7 +12,20 @@
             "file": "Design/设计模式/Abstract Factory.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "7fd4c26aafceb39d"
+      },
+      {
+        "id": "8a388cc71b82e93f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Design/设计模式/Abstract Factory.md",
+            "mode": "preview"
+          }
+        },
+        "group": "7fd4c26aafceb39d"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082
+    "width": 205.50078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
