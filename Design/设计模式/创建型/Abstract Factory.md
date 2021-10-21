@@ -74,6 +74,7 @@ Use the *Abstract Factory* pattern when ：
 	2. A more flexible but less safe design is to *add a parameter to operations that create objects*. This parameter specifies the kind of object to be created. It could be a class identifier, an integer, a string, or anything else that identifies the kind of product. 
 	3. In fact with this approach, *AbstractFactory only needs a single `"Make"` operation with a parameter indicating the kind of object to create.* This technique can be used in the Prototype-based  and the class-based abstract factories discussed earlier.
 
+# 已知应用
 
 # 相关模式
 1. AbstractFactory classes are often implemented with factory methods （Factory Method）, but they can also be implemented using Prototype. 

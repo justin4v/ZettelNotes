@@ -131,6 +131,7 @@
   "active": "275687ebfbd212e1",
   "lastOpenFiles": [
     "Design/设计模式/创建型/Abstract Factory.md",
+    "Design/设计模式/创建型/Builder.md",
     "Design/设计模式/创建型/Singleton.md",
     "Design/设计模式/创建型/Prototype.md",
     "Design/设计模式/创建型/Factoty Method.md",
@@ -138,7 +139,6 @@
     "Design/设计模式/Chain of Responsibility.md",
     "Design/设计模式/Command.md",
     "Design/设计模式/Visitor.md",
-    "标记-压缩算法.png.md",
-    "附件/Pasted image 20211018164958.png"
+    "标记-压缩算法.png.md"
   ]
 }
