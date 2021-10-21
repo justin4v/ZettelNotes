@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/设计模式/Abstract Factory.md",
+            "file": "Design/设计模式/创建型/Singleton.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/设计模式/Abstract Factory.md",
+            "file": "Design/设计模式/创建型/Singleton.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/设计模式/Abstract Factory.md",
+                "file": "Design/设计模式/创建型/Singleton.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/设计模式/Abstract Factory.md"
+                "file": "Design/设计模式/创建型/Singleton.md"
               }
             }
           }
@@ -130,10 +130,10 @@
   },
   "active": "275687ebfbd212e1",
   "lastOpenFiles": [
-    "Design/设计模式/Abstract Factory.md",
-    "Design/设计模式/Prototype.md",
-    "Design/设计模式/Singleton.md",
-    "Design/设计模式/Factoty Method.md",
+    "Design/设计模式/创建型/Singleton.md",
+    "Design/设计模式/创建型/Prototype.md",
+    "Design/设计模式/创建型/Factoty Method.md",
+    "Design/设计模式/创建型/Abstract Factory.md",
     "Design/设计模式/设计模式.md",
     "Design/设计模式/Chain of Responsibility.md",
     "Design/设计模式/Command.md",
