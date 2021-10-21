@@ -4,8 +4,6 @@ Here are some commoncauses ofredesign along with the design pattern(s)that addre
 1. **Creating an object by specifying a class explicitly.** Specifying a class name when you create an object commits you to a particular implementation instead of a particular interface. This commitment can complicate future changes. Toavoid it, create objectsindirectly. 
 	   - **Design patterns**: Abstract Factory ,Factory Method ,Prototype 
 
-
-
 2. **Dependence on specific operations.** When you specify a particular operation, you commit to one way ofsatisfying a request. Byavoiding hard-coded requests, you make it easier to change the way a request getssatisfied both at compile-time and at run-time. 
 	   - **Design patterns**: Chain of Responsibility ,Command . 
 
@@ -28,4 +26,4 @@ Here are some commoncauses ofredesign along with the design pattern(s)that addre
 
 
 8. ** Inability to alter classes conveniently**. Sometimes you have to modify a class that can't be modified conveniently.Perhaps you need the source code and don't have it (as may be the case with a commercial class library). Or maybe any change would require modifying lots of existing subclasses.Design patterns  offer ways to modify classes in such circumstances. 
-       - Design patterns: Adapter ,Decorator,Visitor
+       - **Design patterns**: Adapter ,Decorator,Visitor
