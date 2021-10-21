@@ -61,6 +61,8 @@ Use the *Abstract Factory* pattern when ：
 - Supporting new kinds of `Products` is difficult : Extending abstract factories to produce new kinds of `Products` isn't easy. That's because the AbstractFactory interface *fixes the set of products that can be created.(对外提供的接口已经确定：createProductA/createProductB)* Supporting new kinds of products requires extending the factory interface, which *involves changing the `AbstractFactory` class and all of its subclasses*. 
 
 # 实现
-1. **Factories as singletons.** An application typically needs only one instance of a ConcreteFactory per product family. So it's usually best implemented as a *Singleton*
+1. **Factories as singletons.** An application typically needs only one instance of a ConcreteFactory per product family. So it's usually best implemented as a *[[Singleton]]*
 
-3. *Creating the products*.
+3. *Creating the products*.It's up to ConcreteProduct subclasses to actually create them. 
+	1. The most common way to do this is to define a factory method (see *[[Factory Method]]*) for each product. A concrete factory will specify its products by *overriding the factory method* for each. While this implementation is simple, it requires a new concrete factory subclass for each product family.
+	2. If *many product families are possible（不适用 Factory Method）*, the concrete factory can be implemented using the *[[Prototype]]*  pattern. The concrete factory is initialized with a prototypical instance of each product in the family, and it *creates a new product by cloning its prototype*.

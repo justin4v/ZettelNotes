@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082,
-    "collapsed": true
+    "width": 205.50078010559082
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -132,14 +131,14 @@
   "active": "275687ebfbd212e1",
   "lastOpenFiles": [
     "Design/设计模式/Abstract Factory.md",
+    "Design/设计模式/Prototype.md",
+    "Design/设计模式/Singleton.md",
+    "Design/设计模式/Factoty Method.md",
     "Design/设计模式/设计模式.md",
     "Design/设计模式/Chain of Responsibility.md",
     "Design/设计模式/Command.md",
     "Design/设计模式/Visitor.md",
     "标记-压缩算法.png.md",
-    "附件/Pasted image 20211018164958.png",
-    "附件/Pasted image 20211012142112.png",
-    "Design/Framework.md",
-    "Design/可重用级别.md"
+    "附件/Pasted image 20211018164958.png"
   ]
 }
