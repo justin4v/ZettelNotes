@@ -75,6 +75,7 @@ Use the *Abstract Factory* pattern when ：
 	3. In fact with this approach, *AbstractFactory only needs a single `"Make"` operation with a parameter indicating the kind of object to create.* This technique can be used in the Prototype-based  and the class-based abstract factories discussed earlier.
 
 # 已知应用
+Interviews uses the "Kit" suffix to denote AbstractFactory classes。
 
 # 相关模式
 1. AbstractFactory classes are often implemented with factory methods （Factory Method）, but they can also be implemented using Prototype. 
