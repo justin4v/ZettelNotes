@@ -19,3 +19,19 @@ The Builder pattern captures all these relationships. *Each converter class is c
 Use the Builder pattern when：
 - *the algorithm for creating a complex object should be independent of the parts that make up the object and how they're assembled*. 
 - *the construction process must allow different representations for the object that's constructed*.
+
+# 结构
+![[Builder结构.png]]
+
+## 解释
+- Builder (TextConverter) 
+	-  specifies an abstract *interface* for creating parts of a Product object. 
+-  ConcreteBuilder (ASCIIConverter, TeXConverter, TextWidgetConverter) 
+	-  constructs and assembles parts of the product by *implementing* the Builder interface. 
+	-  defines and keeps track ofthe representation it creates. 
+	-  provides an interface for retrieving the product (e.g., GetASCIIText, GetTextWidget). 
+-  Director (RTFReader) 
+	-  constructs an object using theBuilderinterface. 
+-  Product (ASCIIText, TeXText, TextWidget) 
+	-  represents the complex object under construction. ConcreteBuilder builds the product's internal representation and definesthe process by which it's assembled. 
+	-  includes classes that define the constituent parts, including interfaces for assembling the parts into the final result.
