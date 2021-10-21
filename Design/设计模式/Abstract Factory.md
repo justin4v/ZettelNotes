@@ -59,3 +59,5 @@ Use the *Abstract Factory* pattern when ：
 	
 ## 缺点
 - Supporting new kinds of `Products` is difficult : Extending abstract factories to produce new kinds of `Products` isn't easy. That's because the AbstractFactory interface *fixes the set of products that can be created.(对外提供的接口已经确定：createProductA/createProductB)* Supporting new kinds of products requires extending the factory interface, which *involves changing the `AbstractFactory` class and all of its subclasses*. 
+
+# 实现
