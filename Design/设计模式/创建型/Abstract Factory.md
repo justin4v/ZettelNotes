@@ -73,3 +73,8 @@ Use the *Abstract Factory* pattern when ：
 	1. AbstractFactory usually defines a different operation for each kind of product it can produce. The kinds of products are encoded in the operation signatures. *Adding a new kind of product requires changing the AbstractFactory interface and all the classes that depend on it*.
 	2. A more flexible but less safe design is to *add a parameter to operations that create objects*. This parameter specifies the kind of object to be created. It could be a class identifier, an integer, a string, or anything else that identifies the kind of product. 
 	3. In fact with this approach, *AbstractFactory only needs a single `"Make"` operation with a parameter indicating the kind of object to create.* This technique can be used in the Prototype-based  and the class-based abstract factories discussed earlier.
+
+
+# 相关模式
+1. AbstractFactory classes are often implemented with factory methods （Factory Method）, but they can also be implemented using Prototype. 
+2. A concrete factory is often a Singleton.
