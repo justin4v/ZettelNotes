@@ -66,3 +66,4 @@ Use the *Abstract Factory* pattern when ：
 3. *Creating the products*.It's up to ConcreteProduct subclasses to actually create them. 
 	1. The most common way to do this is to define a factory method (see *[[Factory Method]]*) for each product. A concrete factory will specify its products by *overriding the factory method* for each. While this implementation is simple, it requires a new concrete factory subclass for each product family.
 	2. If *many product families are possible（不适用 Factory Method）*, the concrete factory can be implemented using the *[[Prototype]]*  pattern. The concrete factory is initialized with a prototypical instance of each product in the family, and it *creates a new product by cloning its prototype*.
+	3. *可以将多个系列的 Prototype 存储在字典（Map）中，使用时搜索并复制 Prototype。* 
