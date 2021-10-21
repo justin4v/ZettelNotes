@@ -48,9 +48,9 @@ Use the Builder pattern when：
 
 
 # 效果
-1. It lets you vary a product's internal representation.
-2. It isolates code for construction and representation.
-3. It gives you finer control over the construction process.
+1. **It lets you vary a product's internal representation**.
+2. **It isolates code for construction and representation**.
+3. **It gives you finer control over the construction process**.
 
 
 # 实现
@@ -61,3 +61,13 @@ Use the Builder pattern when：
 2. **Why no abstract classfor products? **
 	1. In the common case, the *products produced by the concrete builders differ so greatly in their representation* that there is little to gain from giving different products a common parent class. 
 	2. In the RTF example, the ASCIIText and the TextWidget objects are unlikely to have a common interface, nor do they need one. Because the client usually configures the director with the proper concrete builder, the client is in a position to know which concrete subclass of Builder is in use and can handle its products accordingly.
+
+
+# 已知应用
+
+JDK – StringBuilder, StringBuffer*
+
+# 相关模式
+1. Abstract Factory  is similar to Builder in that it too may construct complex objects. The primary difference is that the **Builder pattern focuses on constructing a complex object step by step**. Abstract Factory's emphasis is on families of product objects (either simple or complex). Builder returns the product as a final step,but in AbstractFactory pattern product gets returned immediately. 
+2. A Composite is what the builder often build.
+
