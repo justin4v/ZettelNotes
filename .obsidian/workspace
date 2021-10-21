@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/设计模式/创建型/Builder.md",
+            "file": "Design/设计模式/设计模式.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/设计模式/创建型/Builder.md",
+            "file": "Design/设计模式/设计模式.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/设计模式/创建型/Builder.md",
+                "file": "Design/设计模式/设计模式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/设计模式/创建型/Builder.md"
+                "file": "Design/设计模式/设计模式.md"
               }
             }
           }
@@ -130,9 +130,9 @@
   },
   "active": "275687ebfbd212e1",
   "lastOpenFiles": [
+    "Design/设计模式/设计模式.md",
     "Design/设计模式/创建型/Builder.md",
     "Design/设计模式/创建型/Abstract Factory.md",
-    "Design/设计模式/设计模式.md",
     "Design/Framework.md",
     "Design/Architect.md",
     "Design/设计模式/创建型/Singleton.md",
