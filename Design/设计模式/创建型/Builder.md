@@ -28,10 +28,20 @@ Use the Builder pattern when：
 	-  specifies an abstract *interface* for creating parts of a Product object. 
 -  ConcreteBuilder (ASCIIConverter, TeXConverter, TextWidgetConverter) 
 	-  constructs and assembles parts of the product by *implementing* the Builder interface. 
-	-  defines and keeps track ofthe representation it creates. 
+	-  defines and keeps track of the representation it creates. 
 	-  provides an interface for retrieving the product (e.g., GetASCIIText, GetTextWidget). 
 -  Director (RTFReader) 
-	-  constructs an object using theBuilderinterface. 
+	- (recognize the token and) *constructs* an object using the Builder interface. 
 -  Product (ASCIIText, TeXText, TextWidget) 
-	-  represents the complex object under construction. ConcreteBuilder builds the product's internal representation and definesthe process by which it's assembled. 
+	-  represents the *complex object* under construction. ConcreteBuilder builds the product's internal representation and defines the process by which it's assembled. 
 	-  includes classes that define the constituent parts, including interfaces for assembling the parts into the final result.
+
+# 协作
+1. The client creates the Director object and configures it with the desired Builder object.
+2. Director notifies the builder whenever a part ofthe product should be built. 
+3. Builder handles requests from the director and adds parts to the product. 
+4. The client retrieves the product from the builder
+
+时序图如下：
+
+![[Builder模式时序图.png]]
