@@ -73,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082
+    "width": 205.50078010559082,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -131,9 +132,9 @@
   "active": "275687ebfbd212e1",
   "lastOpenFiles": [
     "Design/设计模式/设计模式.md",
+    "Design/设计模式/创建型/Factory Method.md",
     "Design/Redesign 的一般原因.md",
     "Design/设计模式/创建型/Prototype.md",
-    "Design/设计模式/创建型/Factoty Method.md",
     "Design/设计模式/创建型/Builder.md",
     "Design/设计模式/创建型/Abstract Factory.md",
     "Design/Framework.md",
