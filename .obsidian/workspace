@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Sql 预编译.md",
+            "file": "Design/设计模式如何解决设计问题.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Sql 预编译.md",
+                "file": "Design/设计模式如何解决设计问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Sql 预编译.md"
+                "file": "Design/设计模式如何解决设计问题.md"
               }
             }
           }
@@ -117,10 +117,10 @@
   },
   "active": "8b18c75fe8298f6f",
   "lastOpenFiles": [
+    "Design/设计模式如何解决设计问题.md",
     "Database/Sql 预编译.md",
     "Database/RDBMS.md",
     "Database/Index.md",
-    "Design/设计模式如何解决设计问题.md",
     "Design/Redesign 的一般原因.md",
     "Design/设计模式/设计模式.md",
     "Design/设计模式/创建型/Factory Method.md",
