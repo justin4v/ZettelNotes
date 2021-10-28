@@ -4,7 +4,7 @@ Here are some commoncauses ofredesign along with the design pattern(s)that addre
 1. **Creating an object by specifying a class explicitly.** Specifying a class name when you create an object commits you to a particular implementation instead of a particular interface. This commitment can complicate future changes. To avoid it, create objects indirectly. 
 	   - **Design patterns**: Abstract Factory ,Factory Method ,Prototype 
 
-2. **Dependence on specific operations.** When you specify a particular operation, you commit to one way ofsatisfying a request. Byavoiding hard-coded requests, you make it easier to change the way a request getssatisfied both at compile-time and at run-time. 
+2. **Dependence on specific operations.** When you specify a particular operation, you commit to one way of satisfying a request. By avoiding hard-coded requests, you make it easier to change the way a request gets satisfied both at compile-time and at run-time. 
 	   - **Design patterns**: Chain of Responsibility ,Command . 
 
 3. **Dependence on hardware and software platform.** External operating system interfaces and application programming interfaces (APIs) are different on different hardware and software platforms.Software that depends on a particular platform will be harder to port to other platforms.It may even be difficult to keep it up to date on its native platform.It's important therefore to design your system to limit its platform dependencies.
