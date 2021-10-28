@@ -1,7 +1,7 @@
 # 一般原因
 Here are some commoncauses ofredesign along with the design pattern(s)that address them:
 
-1. **Creating an object by specifying a class explicitly.** Specifying a class name when you create an object commits you to a particular implementation instead of a particular interface. This commitment can complicate future changes. To avoid it, create objects indirectly. 
+1. **Creating an object by specifying a class explicitly.（）** Specifying a class name when you create an object commits you to a particular implementation instead of a particular interface. This commitment can complicate future changes. To avoid it, create objects indirectly. 
 	   - **Design patterns**: Abstract Factory ,Factory Method ,Prototype 
 
 2. **Dependence on specific operations.** When you specify a particular operation, you commit to one way of satisfying a request. By avoiding hard-coded requests, you make it easier to change the way a request gets satisfied both at compile-time and at run-time. 

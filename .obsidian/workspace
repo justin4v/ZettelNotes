@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/设计模式/创建型/Abstract Factory.md",
-            "mode": "preview"
+            "file": "Design/Redesign 的一般原因.md",
+            "mode": "source"
           }
         }
       }
@@ -60,7 +60,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287
+    "width": 287,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/设计模式/创建型/Abstract Factory.md",
+                "file": "Design/Redesign 的一般原因.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/设计模式/创建型/Abstract Factory.md"
+                "file": "Design/Redesign 的一般原因.md"
               }
             }
           }
@@ -117,15 +118,15 @@
   },
   "active": "8b18c75fe8298f6f",
   "lastOpenFiles": [
-    "Design/设计模式/创建型/Abstract Factory.md",
     "Design/Redesign 的一般原因.md",
-    "Design/设计模式如何解决设计问题.md",
-    "Base Knowledge/大端 vs. 小端模式.md",
+    "Design/Framework.md",
     "Design/Architect.md",
+    "Design/设计模式如何解决设计问题.md",
     "Design/如何选择设计模式.md",
     "Design/如何使用设计模式.md",
-    "Design/Framework.md",
-    "Database/Sql 预编译.md",
-    "Database/RDBMS.md"
+    "Design/设计模式/创建型/Builder.md",
+    "Design/设计模式/创建型/Factory Method.md",
+    "Design/设计模式/创建型/Abstract Factory.md",
+    "Base Knowledge/大端 vs. 小端模式.md"
   ]
 }
