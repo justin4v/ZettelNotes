@@ -58,7 +58,7 @@ Use the Builder pattern when：
 1. Assembly and construction interface. 
 	1. A key design issue concerns the *model for the construction and assembly process*. A model *where the results of construction requests are simply appended to the product is usually sufficient*. In the RTF example, the builder converts and appends the next token to the text it has converted so far. 
 	2. But sometimes you might need access to parts of the product constructed earlier.
-2. **Why no abstract classfor products? **
+2. **Why no abstract class for products? **
 	1. In the common case, the *products produced by the concrete builders differ so greatly in their representation* that there is little to gain from giving different products a common parent class. 
 	2. In the RTF example, the ASCIIText and the TextWidget objects are unlikely to have a common interface, nor do they need one. Because the client usually configures the director with the proper concrete builder, the client is in a position to know which concrete subclass of Builder is in use and can handle its products accordingly.
 
