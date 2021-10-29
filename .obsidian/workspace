@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/并发.md",
+            "file": "OS/程序性能的限制与解决.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/并发.md",
+                "file": "OS/程序性能的限制与解决.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/并发.md"
+                "file": "OS/程序性能的限制与解决.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "8b18c75fe8298f6f",
   "lastOpenFiles": [
-    "Language/Java/并发编程/并发.md",
+    "OS/程序性能的限制与解决.md",
     "Language/Java/并发编程/线程安全.md",
-    "Language/Java/编译/JIT 编译器.md",
-    "Language/Java/编译/Javac 编译.md",
-    "Design/设计模式解析/功能分解.md",
-    "Design/软件开发过程中的三个视角.md",
-    "Design/设计模式/创建型/Singleton.md",
-    "Design/设计模式/创建型/Prototype.md",
-    "Design/设计模式/创建型/Builder.md",
-    "Design/设计模式/创建型/Factory Method.md"
+    "Language/Java/并发编程/轻量级锁.md",
+    "Language/Java/并发编程/偏向锁.md",
+    "Language/Java/并发编程/Synchronize 底层优化.md",
+    "Language/Java/并发编程/Java 锁状态.md",
+    "Language/Java/并发编程/AQS原理.md",
+    "Language/Java/并发编程/重量级锁.md",
+    "Language/Java/并发编程/并发.md",
+    "Design/设计模式解析/功能分解.md"
   ]
 }
