@@ -118,14 +118,14 @@
   "active": "8b18c75fe8298f6f",
   "lastOpenFiles": [
     "OS/程序性能的限制与解决.md",
+    "OS/进程.md",
+    "OS/线程.md",
     "Language/Java/并发编程/线程安全.md",
     "Language/Java/并发编程/轻量级锁.md",
     "Language/Java/并发编程/偏向锁.md",
     "Language/Java/并发编程/Synchronize 底层优化.md",
     "Language/Java/并发编程/Java 锁状态.md",
     "Language/Java/并发编程/AQS原理.md",
-    "Language/Java/并发编程/重量级锁.md",
-    "Language/Java/并发编程/并发.md",
-    "Design/设计模式解析/功能分解.md"
+    "Language/Java/并发编程/重量级锁.md"
   ]
 }
