@@ -12,20 +12,7 @@
             "file": "Book Reading/设计模式解析/面向对象.md",
             "mode": "source"
           }
-        },
-        "group": "f54cc8af582ea2f5"
-      },
-      {
-        "id": "fc88f937b95238c9",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Book Reading/设计模式解析/面向对象.md",
-            "mode": "preview"
-          }
-        },
-        "group": "f54cc8af582ea2f5"
+        }
       }
     ],
     "direction": "vertical"
