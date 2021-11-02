@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/面向对象.md",
+            "file": "Design/设计模式/Chain of Responsibility.md",
             "mode": "source"
           }
         }
@@ -60,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287,
-    "collapsed": true
+    "width": 287
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象.md",
+                "file": "Design/设计模式/Chain of Responsibility.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象.md"
+                "file": "Design/设计模式/Chain of Responsibility.md"
               }
             }
           }
@@ -118,6 +117,8 @@
   },
   "active": "8b18c75fe8298f6f",
   "lastOpenFiles": [
+    "Design/设计模式/Chain of Responsibility.md",
+    "Design/设计模式/设计模式.md",
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Book Reading/设计模式解析/功能分解.md",
@@ -125,8 +126,6 @@
     "Base Knowledge/字符集和字符编码.md",
     "Book Reading/设计模式解析/耦合性.md",
     "Book Reading/设计模式解析/内聚性.md",
-    "Book Reading/Java.md",
-    "Network/TCP-IP Protocols.md",
-    "Language/Java/工具/JDK工具.md"
+    "Book Reading/Java.md"
   ]
 }
