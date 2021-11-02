@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/功能分解.md",
+            "file": "Book Reading/设计模式解析/面向对象.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/功能分解.md",
+                "file": "Book Reading/设计模式解析/面向对象.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/功能分解.md"
+                "file": "Book Reading/设计模式解析/面向对象.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "8b18c75fe8298f6f",
   "lastOpenFiles": [
+    "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/功能分解.md",
+    "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Book Reading/设计模式解析/耦合性.md",
     "Book Reading/设计模式解析/内聚性.md",
     "Book Reading/Java.md",
     "Network/TCP-IP Protocols.md",
     "Language/Java/工具/JDK工具.md",
     "OS/程序性能的限制与解决.md",
-    "Language/Java/反射/反射.md",
-    "Language/Java/并发编程/轻量级锁.md",
-    "Language/Java/JVM/对象分配规则.md"
+    "Language/Java/反射/反射.md"
   ]
 }
