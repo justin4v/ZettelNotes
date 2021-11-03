@@ -50,6 +50,6 @@ Personal Access Token 参考
 
 ## Personal Access Token
 2022年2月 失效
-```plaintext
-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
+```
+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
 ```
