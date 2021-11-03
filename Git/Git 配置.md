@@ -49,7 +49,7 @@ Personal Access Token 参考
 [github docs](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
 
 ## Personal Access Token
-2022年2月2日 失效
+2022年2月 失效
 ```plaintext
 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
 ```
