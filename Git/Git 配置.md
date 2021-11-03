@@ -51,5 +51,4 @@ Personal Access Token 参考
 ## Personal Access Token
 2022年2月 失效
 ```
-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
 ```
