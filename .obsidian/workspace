@@ -12,20 +12,7 @@
             "file": "Git/Git 配置.md",
             "mode": "source"
           }
-        },
-        "group": "c00209c6fa0eb004"
-      },
-      {
-        "id": "c24a5237f0675209",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Git/Git 配置.md",
-            "mode": "preview"
-          }
-        },
-        "group": "c00209c6fa0eb004"
+        }
       }
     ],
     "direction": "vertical"
