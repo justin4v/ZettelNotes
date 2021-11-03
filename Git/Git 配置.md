@@ -10,4 +10,30 @@ local >> global >> system
 
 
 
-# 
+# 记住密码
+https方式每次都要输入密码，按照如下设置即可输入一次就不用再手输入密码
+
+## 远程地址带有密码
+增加远程地址的时候带上密码
+
+如在 config 文件中
+```shell
+[remote "origin"]
+	url = https://github.com/justin4v/ZettelNotes.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+```
+修改 url 增加用户名和密码
+http://yourname:password@git.oschina.net/name/project.git
+
+```shell
+[remote "origin"]
+	url = https://justin4v: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@github.com/justin4v/ZettelNotes.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
+
+## Access Token
+2022年2
+```plaintext
+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
+```
