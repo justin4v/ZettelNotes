@@ -12,7 +12,20 @@
             "file": "Book Reading/设计模式解析/面向对象实例.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "6415553ffe581af6"
+      },
+      {
+        "id": "db4f0c17364e66fd",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/设计模式解析/面向对象实例.md",
+            "mode": "preview"
+          }
+        },
+        "group": "6415553ffe581af6"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287
+    "width": 287,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -118,8 +132,8 @@
   "active": "8b18c75fe8298f6f",
   "lastOpenFiles": [
     "Book Reading/设计模式解析/面向对象实例.md",
-    "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Book Reading/设计模式解析/面向对象.md",
+    "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Book Reading/设计模式解析/耦合性.md",
     "Book Reading/设计模式解析/内聚性.md",
     "Book Reading/设计模式解析/功能分解.md",
