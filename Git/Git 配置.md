@@ -32,8 +32,26 @@ http://yourname:password@git.oschina.net/name/project.git
 ```
 
 
-## Access Token
-2022年2
+# 报错
+```
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+```
+
+## 原因
+
+> 原因：自2021年8月13日起，github不再支持使用密码push的方式
+> 解决方案：
+> 一、 使用SSH  
+> 二、使用Personal access token
+
+
+Personal Access Token 参考
+[github docs](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
+
+## Personal Access Token
+2022年2月2日 失效
 ```plaintext
 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
 ```
+
+## 报错
