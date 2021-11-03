@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/面向对象.md",
-            "mode": "source"
+            "file": "Book Reading/设计模式解析/耦合性.md",
+            "mode": "preview"
           }
         }
       }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象.md",
+                "file": "Book Reading/设计模式解析/耦合性.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象.md"
+                "file": "Book Reading/设计模式解析/耦合性.md"
               }
             }
           }
@@ -117,15 +117,15 @@
   },
   "active": "8b18c75fe8298f6f",
   "lastOpenFiles": [
+    "Book Reading/设计模式解析/耦合性.md",
+    "Book Reading/设计模式解析/内聚性.md",
+    "Book Reading/设计模式解析/功能分解.md",
     "Book Reading/设计模式解析/面向对象.md",
+    "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Language/Java/JVM/对象结构.md",
     "Base Knowledge/Effective Study.md",
     "Base Knowledge/字符集和字符编码.md",
     "Base Knowledge/UTF-8.md",
-    "Design/设计模式/设计模式.md",
-    "Design/设计模式/行为型/Chain of Responsibility.md",
-    "Book Reading/设计模式解析/开发过程中的三个视角.md",
-    "Book Reading/设计模式解析/功能分解.md",
-    "Base Knowledge/大端 vs. 小端模式.md"
+    "Design/设计模式/设计模式.md"
   ]
 }
