@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Book Reading/设计模式解析/面向对象概念.md",
-            "mode": "preview"
+            "mode": "source"
           }
         }
       }
@@ -60,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287,
-    "collapsed": true
+    "width": 287
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -119,8 +118,8 @@
   "active": "ca358b791fe4ec90",
   "lastOpenFiles": [
     "Book Reading/设计模式解析/面向对象概念.md",
-    "Git/Git 配置.md",
     "Book Reading/设计模式解析/面向对象.md",
+    "Git/Git 配置.md",
     "Book Reading/设计模式解析/功能分解.md",
     "Book Reading/并发编程实践/Java并发编程实践.md",
     "Git/Conflict 解决.md",
