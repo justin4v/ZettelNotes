@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/Java.md",
+            "file": "Book Reading/并发编程实践/Java并发编程实践.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/Java.md",
+                "file": "Book Reading/并发编程实践/Java并发编程实践.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/Java.md"
+                "file": "Book Reading/并发编程实践/Java并发编程实践.md"
               }
             }
           }
@@ -117,7 +117,7 @@
   },
   "active": "db4f0c17364e66fd",
   "lastOpenFiles": [
-    "Book Reading/Java.md",
+    "Book Reading/并发编程实践/Java并发编程实践.md",
     "Git/Git 配置.md",
     "Git/Conflict 解决.md",
     "Book Reading/设计模式解析/面向对象概念.md",
