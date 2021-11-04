@@ -4,18 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "db4f0c17364e66fd",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Book Reading/设计模式解析/面向对象概念.md",
-            "mode": "source"
-          }
-        },
-        "group": "f16b76ef5876e990"
-      },
-      {
         "id": "ca358b791fe4ec90",
         "type": "leaf",
         "state": {
@@ -24,8 +12,7 @@
             "file": "Book Reading/设计模式解析/面向对象概念.md",
             "mode": "preview"
           }
-        },
-        "group": "f16b76ef5876e990"
+        }
       }
     ],
     "direction": "vertical"
@@ -129,7 +116,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "db4f0c17364e66fd",
+  "active": "ca358b791fe4ec90",
   "lastOpenFiles": [
     "Book Reading/设计模式解析/面向对象概念.md",
     "Git/Git 配置.md",
