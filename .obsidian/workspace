@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/面向对象概念.md",
+            "file": "Git/Git 配置.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/面向对象概念.md",
+            "file": "Git/Git 配置.md",
             "mode": "preview"
           }
         },
@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287,
-    "collapsed": true
+    "width": 287
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象概念.md",
+                "file": "Git/Git 配置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象概念.md"
+                "file": "Git/Git 配置.md"
               }
             }
           }
@@ -131,11 +130,11 @@
   },
   "active": "db4f0c17364e66fd",
   "lastOpenFiles": [
+    "Git/Git 配置.md",
     "Book Reading/设计模式解析/面向对象概念.md",
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/功能分解.md",
     "Book Reading/并发编程实践/Java并发编程实践.md",
-    "Git/Git 配置.md",
     "Git/Conflict 解决.md",
     "Book Reading/设计模式解析/面向对象实例.md",
     "Book Reading/设计模式解析/开发过程中的三个视角.md",
