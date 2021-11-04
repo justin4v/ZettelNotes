@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Git/Git 配置.md",
+            "file": "Book Reading/Java.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Git 配置.md",
+                "file": "Book Reading/Java.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Git 配置.md"
+                "file": "Book Reading/Java.md"
               }
             }
           }
@@ -117,6 +117,7 @@
   },
   "active": "db4f0c17364e66fd",
   "lastOpenFiles": [
+    "Book Reading/Java.md",
     "Git/Git 配置.md",
     "Git/Conflict 解决.md",
     "Book Reading/设计模式解析/面向对象概念.md",
@@ -125,7 +126,6 @@
     "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Book Reading/设计模式解析/耦合性.md",
     "Book Reading/设计模式解析/内聚性.md",
-    "Book Reading/设计模式解析/功能分解.md",
-    "Language/Java/JVM/对象结构.md"
+    "Book Reading/设计模式解析/功能分解.md"
   ]
 }
