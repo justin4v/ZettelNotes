@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Git/Git 配置.md",
+            "file": "Book Reading/设计模式解析/面向对象概念.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "f16b76ef5876e990"
+      },
+      {
+        "id": "ca358b791fe4ec90",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/设计模式解析/面向对象概念.md",
+            "mode": "preview"
+          }
+        },
+        "group": "f16b76ef5876e990"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287
+    "width": 287,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git/Git 配置.md",
+                "file": "Book Reading/设计模式解析/面向对象概念.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git/Git 配置.md"
+                "file": "Book Reading/设计模式解析/面向对象概念.md"
               }
             }
           }
@@ -117,8 +131,8 @@
   },
   "active": "db4f0c17364e66fd",
   "lastOpenFiles": [
-    "Git/Git 配置.md",
     "Book Reading/设计模式解析/面向对象概念.md",
+    "Git/Git 配置.md",
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/功能分解.md",
     "Book Reading/并发编程实践/Java并发编程实践.md",

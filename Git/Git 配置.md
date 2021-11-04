@@ -49,6 +49,4 @@ Personal Access Token 参考
 [github docs](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
 
 ## Personal Access Token
-2022年2月 失效
-```
-```
+在 github 配置生成
