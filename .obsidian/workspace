@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
+            "file": "Book Reading/设计模式解析/为啥阅读本书.md",
             "mode": "preview"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
+                "file": "Book Reading/设计模式解析/为啥阅读本书.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md"
+                "file": "Book Reading/设计模式解析/为啥阅读本书.md"
               }
             }
           }
@@ -117,8 +117,8 @@
   },
   "active": "ca358b791fe4ec90",
   "lastOpenFiles": [
-    "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
     "Book Reading/设计模式解析/为啥阅读本书.md",
+    "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
     "Book Reading/设计模式解析/共性和可变性分析.md",
     "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Book Reading/设计模式解析/面向对象概念.md",
