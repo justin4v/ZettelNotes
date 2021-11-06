@@ -14,11 +14,26 @@
 
 在 John McCarthy 所作的 history of lisp 中这样写到： 
 > Then mathematical neatness became a goal and led to pruning some features from the core of the language.（保证数学上的简洁性成为我们的目标，并因此拒绝了将一些特性加入到语言核心中。） 
+> 
 > This was partly motivated by esthetic reasons and partly by the belief that it would be easier to devise techniques for proving programs correct if the semantics were compact and without exceptions.（这部分是基于美学上的考虑，部分是因为我们相信，紧凑而没有特例的语法才更有可能设计出一种从数学上证明程序正确的方法。）
 
 
+# 核心哲学
+以*数学*举例解释计算机程序中的核心哲学：**抽象**
 
+整个数学史，就是一个不断抽象的历史。
+1. 古希腊人将字母引入计算，使数学不再只是算术，而且具有表达抽象规则的能力。
+2. 近代数学对函数和微积分的探求中，用 f(x) 替代了多项式表达式，函数更一般了，
+3.  n 维空间、复分析、映射、泛函，抽象代数、群论，等等等等，直到集合论，摧毁了数学的基石，使数学界再次陷入沉思。
 
+构造程序的方法也是抽象。
+1. 从最简单的元素开始，基本元素(自演算表达式，包括数字，字符串和布尔值）；
+2. 然后定义基本过程（基本运算符，四则运算和布尔运算）；
+3. 进一步，自定义标识符（如同代数），再自定义过程（函数）；
+4. 再将过程作为值参与运算（高阶过程）。
+一步步的抽象，形成了整个程序的结构。而我们编程，无非就是从现实世界抽象出模型，再将模型不断的提炼抽象，属性、方法、类、继承、层次、框架。
+
+编程就是一个不断抽象的过程。
 
 参考
 [向热爱计算机科学的你推荐SICP](http://www.nowamagic.net/librarys/veda/detail/1905)
