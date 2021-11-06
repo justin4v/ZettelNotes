@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/功能分解.md",
+            "file": "Book Reading/计算机程序的构造和解释/LISP.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/功能分解.md",
+                "file": "Book Reading/计算机程序的构造和解释/LISP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/功能分解.md"
+                "file": "Book Reading/计算机程序的构造和解释/LISP.md"
               }
             }
           }
@@ -117,12 +117,12 @@
   },
   "active": "ca358b791fe4ec90",
   "lastOpenFiles": [
+    "Book Reading/计算机程序的构造和解释/LISP.md",
+    "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
     "Book Reading/设计模式解析/功能分解.md",
     "Book Reading/设计模式解析/面向对象概念.md",
     "Book Reading/设计模式解析/面向对象实例.md",
     "Book Reading/设计模式解析/为啥阅读本书.md",
-    "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
-    "Book Reading/计算机程序的构造和解释/LISP.md",
     "Book Reading/设计模式解析/共性和可变性分析.md",
     "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Book Reading/设计模式解析/UML 类图.md",
