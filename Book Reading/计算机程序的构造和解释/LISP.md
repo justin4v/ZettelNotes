@@ -29,5 +29,10 @@ Lisp 名字来自于**列表处理（LISt Processing）**，其设计是为了�
 
 
 # 特性
-计算过程的Lisp 描述（称为过程）本身又可以作为 Lisp 的数据进行表示和操作。
+**计算过程的Lisp 描述（称为过程）本身又可以作为 Lisp 的数据进行表示和操作。**
+Lisp descriptions of processes,called *procedures* , can themselves be represented and manipulated as Lisp data. 
 
+这一特性的重要性在于：
+1. 现存的许多强大的设计技术，都依赖于**填平*被动的数据*和*主动的过程*之间的传统划分的能力**，LISP可将过程作为数据进行处理的灵活性，使其成为探索这些技术的最方便的语言之一。
+	The importance of this is that there are powerful program-design techniques that rely on the ability to blur the traditional distinction between “passive” data and “active” processes。
+2. 能将过程表示为数据的能力，也使 Lisp 成为编写哪些必须将其他程勋
