@@ -9,7 +9,6 @@ local >> global >> system
 当 git commit 时，会依次从local、global、system 里读取用户信息。
 
 
-
 # 记住密码
 https方式每次都要输入密码，按照如下设置即可输入一次就不用再手输入密码
 
