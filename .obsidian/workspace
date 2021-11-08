@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/软件工程师推荐路线.md",
+            "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base Knowledge/软件工程师推荐路线.md",
+                "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Base Knowledge/软件工程师推荐路线.md"
+                "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md"
               }
             }
           }
@@ -118,13 +118,13 @@
   },
   "active": "74262ae2a21b5e4f",
   "lastOpenFiles": [
-    "Base Knowledge/软件工程师推荐路线.md",
-    "附件/后端工程师推荐学习路线.png",
-    "Base Knowledge/Vim/Vim键盘图.md",
     "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
+    "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
+    "Base Knowledge/软件工程师推荐路线.md",
+    "Base Knowledge/Vim/Vim键盘图.md",
+    "附件/后端工程师推荐学习路线.png",
     "Base Knowledge/Markdown/Markdown 公式手册.md",
     "Book Reading/计算机程序的构造和解释/LISP.md",
-    "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
     "Algorithm/DataStructure/树有关术语.md",
     "Git/Git 配置.md",
     "Git/Conflict 解决.md"
