@@ -10,7 +10,7 @@
 正如 SICP 中希望表达的一种观点：语言会影响思维。
 如果数学推理过程中最频繁应用到的泛函，在计算机语言中却没有对应的表达，换言之数学思维不能很自然地表述为计算机语言的话，那么计算机对于数学研究的意义就显得很可疑了。
 
-所以这里就有了两拨人，*务实的一拨人开发出了 fortran ，力主解决数值计算*；务虚的一拨人则*创造了 lisp ，试图一举解决符号计算的难题*。
+所以这里就有了两拨人，*务实的一拨人开发出了 fortran ，力主解决数值计算*；务虚的一拨人则*创造了 lisp ，试图一举解决符号（symbol）计算的难题*。
 
 在 John McCarthy 所作的 history of lisp 中这样写到： 
 > Then mathematical neatness became a goal and led to pruning some features from the core of the language.（保证*数学上的简洁性*成为我们的目标，并因此拒绝了将一些特性加入到语言核心中。） 
