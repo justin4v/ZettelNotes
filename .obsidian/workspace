@@ -7,8 +7,11 @@
         "id": "74262ae2a21b5e4f",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/JVM/JVM类加载机制.md",
+            "mode": "preview"
+          }
         }
       }
     ],
@@ -57,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287,
-    "collapsed": true
+    "width": 287
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -74,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Language/Java/JVM/JVM类加载机制.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Language/Java/JVM/JVM类加载机制.md"
+              }
             }
           },
           {
@@ -121,15 +126,15 @@
   },
   "active": "74262ae2a21b5e4f",
   "lastOpenFiles": [
+    "Language/Java/JVM/JVM类加载机制.md",
+    "Language/Java/JVM/JVM ClassLoader.md",
+    "Language/Java/JVM/class 文件结构.md",
+    "Language/Java/JVM/java.lang.Class.md",
     "Base Knowledge/编程/API vs. SPI.md",
     "日常记录/源码阅读.md",
     "日常记录/Anki test.md",
     "Git/Conflict 解决.md",
     "Architect/Spring/@Transactional.md",
-    "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
-    "Database/Stored Procedure.md",
-    "Database/Sql 注入.md",
-    "Database/Sql 预编译.md",
-    "Database/RDBMS.md"
+    "Book Reading/计算机程序的构造和解释/1.1 基本元素.md"
   ]
 }
