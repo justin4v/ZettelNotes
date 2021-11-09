@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/感悟记录/日常感悟列表.md",
-            "mode": "source"
+            "file": "Base Knowledge/网络编程/跨域问题.md",
+            "mode": "preview"
           }
         }
       }
@@ -60,7 +60,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287
+    "width": 287,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/感悟记录/日常感悟列表.md",
+                "file": "Base Knowledge/网络编程/跨域问题.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/感悟记录/日常感悟列表.md"
+                "file": "Base Knowledge/网络编程/跨域问题.md"
               }
             }
           },
@@ -121,11 +122,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "e99b3a0f9c3ba19e",
   "lastOpenFiles": [
+    "Base Knowledge/网络编程/跨域问题.md",
+    "Base Knowledge/编程/未命名.md",
     "日常记录/感悟记录/日常感悟列表.md",
     "日常记录/重点阅读.md",
     "日常记录/感悟记录/规律.md",
@@ -133,8 +135,6 @@
     "日常记录/感悟记录/知识.md",
     "Language/Java/编译/Javac 编译.md",
     "Language/Java/JVM/JVM内存结构.md",
-    "Language/Java/JVM/JVM类加载机制.md",
-    "Language/Java/JVM/JVM ClassLoader.md",
-    "Language/Java/JVM/class 文件结构.md"
+    "Language/Java/JVM/JVM类加载机制.md"
   ]
 }
