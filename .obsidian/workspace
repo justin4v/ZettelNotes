@@ -57,7 +57,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287
+    "width": 287,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -120,15 +121,15 @@
   },
   "active": "74262ae2a21b5e4f",
   "lastOpenFiles": [
+    "OS/OS Notes.md",
+    "OS/程序性能的限制与解决.md",
+    "OS/IO模型.md",
+    "OS/阻塞和非阻塞.md",
+    "OS/线程模型.md",
+    "Script/JavaScript/JavaScript Notes.md",
+    "Script/bash/Bash Notes.md",
+    "Git/Git Notes.md",
     "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
-    "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
-    "Base Knowledge/软件工程师推荐路线.md",
-    "Base Knowledge/Vim/Vim键盘图.md",
-    "附件/后端工程师推荐学习路线.png",
-    "Base Knowledge/Markdown/Markdown 公式手册.md",
-    "Book Reading/计算机程序的构造和解释/LISP.md",
-    "Algorithm/DataStructure/树有关术语.md",
-    "Git/Git 配置.md",
-    "Git/Conflict 解决.md"
+    "Book Reading/计算机程序的构造和解释/1.1 基本元素.md"
   ]
 }
