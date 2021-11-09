@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "file:jvm",
+  "search": "",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -17,6 +17,6 @@
   "repelStrength": 10,
   "linkStrength": 0.481196581196581,
   "linkDistance": 250,
-  "scale": 0.8137713085498849,
+  "scale": 0.5334257528756705,
   "close": false
 }
