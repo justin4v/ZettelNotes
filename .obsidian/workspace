@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/JVM类加载机制.md",
-            "mode": "preview"
+            "file": "Language/Java/JVM/JVM内存结构.md",
+            "mode": "source"
           }
         }
       }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/JVM类加载机制.md",
+                "file": "Language/Java/JVM/JVM内存结构.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/JVM类加载机制.md"
+                "file": "Language/Java/JVM/JVM内存结构.md"
               }
             }
           },
@@ -126,6 +126,7 @@
   },
   "active": "74262ae2a21b5e4f",
   "lastOpenFiles": [
+    "Language/Java/JVM/JVM内存结构.md",
     "Language/Java/JVM/JVM类加载机制.md",
     "Language/Java/JVM/JVM ClassLoader.md",
     "Language/Java/JVM/class 文件结构.md",
@@ -134,7 +135,6 @@
     "日常记录/源码阅读.md",
     "日常记录/Anki test.md",
     "Git/Conflict 解决.md",
-    "Architect/Spring/@Transactional.md",
-    "Book Reading/计算机程序的构造和解释/1.1 基本元素.md"
+    "Architect/Spring/@Transactional.md"
   ]
 }

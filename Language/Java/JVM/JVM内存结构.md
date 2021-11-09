@@ -21,10 +21,14 @@
 **根据 GC 回收的规则**，可将 Heap 空间细分为 Young Generation 和 Old Generation（存活的时长不同），具体如下图：
 ![[Heap的划分.png]]
 
+Eden: 
+
 不同区域的关系如下：
 1. Java堆 = 老年代 + 新生代；
 2. 新生代 = Eden + S0 + S1；
 3. 默认：Eden：from ：to = 8:1:1。
+
+
 
 Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 1. `-Xms`： 堆**初始（最小）**容量（堆包括新生代和老年代）。 例如：-Xms20M ;
