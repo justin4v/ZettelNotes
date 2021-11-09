@@ -4,10 +4,10 @@
     "type": "split",
     "children": [
       {
-        "id": "74262ae2a21b5e4f",
+        "id": "e99b3a0f9c3ba19e",
         "type": "leaf",
         "state": {
-          "type": "graph",
+          "type": "empty",
           "state": {}
         }
       }
@@ -119,7 +119,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "74262ae2a21b5e4f",
+  "active": "e99b3a0f9c3ba19e",
   "lastOpenFiles": [
     "Language/Java/编译/Javac 编译.md",
     "Language/Java/JVM/JVM内存结构.md",
