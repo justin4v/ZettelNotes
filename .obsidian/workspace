@@ -10,9 +10,22 @@
           "type": "markdown",
           "state": {
             "file": "Base Knowledge/网络编程/跨域问题.md",
+            "mode": "source"
+          }
+        },
+        "group": "c076b7e6baead236"
+      },
+      {
+        "id": "c125803ec01e2a34",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Base Knowledge/网络编程/跨域问题.md",
             "mode": "preview"
           }
-        }
+        },
+        "group": "c076b7e6baead236"
       }
     ],
     "direction": "vertical"
