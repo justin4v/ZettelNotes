@@ -121,6 +121,7 @@
   },
   "active": "74262ae2a21b5e4f",
   "lastOpenFiles": [
+    "Base Knowledge/编程/API vs. SPI.md",
     "日常记录/源码阅读.md",
     "日常记录/Anki test.md",
     "Git/Conflict 解决.md",
@@ -129,7 +130,6 @@
     "Database/Stored Procedure.md",
     "Database/Sql 注入.md",
     "Database/Sql 预编译.md",
-    "Database/RDBMS.md",
-    "Database/Index.md"
+    "Database/RDBMS.md"
   ]
 }
