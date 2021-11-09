@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
+            "file": "日常记录/Anki test.md",
             "mode": "source"
           }
         }
@@ -60,7 +60,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287
+    "width": 287,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
+                "file": "日常记录/Anki test.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md"
+                "file": "日常记录/Anki test.md"
               }
             }
           },
@@ -126,15 +127,15 @@
   },
   "active": "74262ae2a21b5e4f",
   "lastOpenFiles": [
+    "日常记录/Anki test.md",
+    "Git/Conflict 解决.md",
+    "Architect/Spring/@Transactional.md",
     "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
     "Database/Stored Procedure.md",
     "Database/Sql 注入.md",
     "Database/Sql 预编译.md",
     "Database/RDBMS.md",
     "Database/Index.md",
-    "OS/OS Notes.md",
-    "OS/程序性能的限制与解决.md",
-    "OS/IO模型.md",
-    "OS/阻塞和非阻塞.md"
+    "OS/OS Notes.md"
   ]
 }
