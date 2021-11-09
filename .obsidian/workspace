@@ -107,14 +107,21 @@
                 "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md"
               }
             }
+          },
+          {
+            "id": "e73816ba8b281899",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "74262ae2a21b5e4f",
   "lastOpenFiles": [
