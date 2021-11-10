@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/面向对象.md",
+            "file": "Language/Java/JMM/Java Memory Model.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象.md",
+                "file": "Language/Java/JMM/Java Memory Model.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象.md"
+                "file": "Language/Java/JMM/Java Memory Model.md"
               }
             }
           },
@@ -126,15 +126,15 @@
   },
   "active": "e99b3a0f9c3ba19e",
   "lastOpenFiles": [
+    "Language/Java/JMM/Java Memory Model.md",
+    "Language/Java/JDK source/Integer.md",
+    "Language/Java/JMM/Happens-Before.md",
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/面向对象概念.md",
     "Book Reading/设计模式解析/功能分解.md",
     "Base Knowledge/网络编程/跨域问题.md",
     "Base Knowledge/编程/未命名.md",
     "日常记录/感悟记录/日常感悟列表.md",
-    "日常记录/重点阅读.md",
-    "日常记录/感悟记录/规律.md",
-    "日常记录/感悟记录/信息.md",
-    "日常记录/感悟记录/知识.md"
+    "日常记录/重点阅读.md"
   ]
 }
