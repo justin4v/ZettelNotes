@@ -1,1 +1,14 @@
 # JMM
+## JSR 133
+在 Java Specification Request 133（JSR 133，2004）中，定义如下：
+- Java’s memory model works by examining **each read in an execution trace and checking that the write observed by that read is valid**；
+- A high level, informal overview of the memory model shows it to **be a set of rules for when writes by one thread are visible to another thread**；
+- The memory semantics **determine what values can be read** at every point in the program。
+
+The actions of each thread in isolation must behave as governed by the semantics of that thread, with the exception that the values seen by each read are *determined by the memory model*。We say that the program obeys *intra-thread semantics*.
+When threads interact, reads can return values written by writes from different threads.
+
+## Wiki
+The Java Memory Model describes how 
+
+
