@@ -1,7 +1,7 @@
 
 # JSR 133
 在 Java Specification Request 133（JSR 133，2004）中，定义如下：
-- Java’s memory model works by examining **each read in an execution trace and checking that the write observed by that read is valid**；
+- Java’s memory model works by examining *each read in an execution trace and checking that the write observed by that read is valid*；
 - A high level, informal overview of the memory model shows it to **be a set of rules for when writes by one thread are visible to another thread**；
 - The memory semantics **determine what values can be read** at every point in the program。
 
@@ -14,9 +14,10 @@ When threads interact, reads can return values written by writes from different 
 - By doing this , it makes it possible to **reason about  code exection in a multithreaded enviroment** , even in the face of **optimizations performed by the dynamic complier** ,the **processor** and the **caches**.
 
 # 其他
-JMM决定一个线程对共享变量的写入何时对另一个线程可见。
-总之，**JMM 是一套Java 规范**，不同平台上的 Java 实现（JVM等）需要*遵守这套 JMM 规范*，因此正确应用这套规范的（并发）程序能够**表现出正确的行为**。
+JMM决定一个**线程对共享变量的写入何时对另一个线程可见**。
 
+总之，**JMM 是一套Java 规范（提出了一系列规则）**，不同平台上的 Java 实现（JVM等）需要**遵守 JMM 规范**，因此正确应用这套规范的（并发）程序能够**表现出正确的行为**。
+所以说 JMM 对程序而言屏蔽了不同硬件处理器架构等底层细节，只需要遵循 JMM 规范即可。
 
 # 为什么需要JMM
 ## Reordering
