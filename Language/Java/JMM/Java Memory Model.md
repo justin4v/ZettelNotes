@@ -10,6 +10,7 @@ When threads interact, reads can return values written by writes from different 
 
 ## Wiki
 - The Java Memory Model describes **how threads in the Java programming Language interact through memory**.
-- The Java Memory Model(JMM) defines the allowable behavior of multithreaded programs, and therefore describes when such reorderings are possible. It places execution-time constraints on thee relationship between threads and main memory order to achieve consistent and reliable Java applications. 
+- The Java Memory Model(JMM) defines the allowable behavior of multithreaded programs, and therefore describes when such reorderings are possible. It **places execution-time constraints on the relationship between threads and main memory** order to achieve consistent and reliable Java applications. 
+- By doing this , it makes it possible to **reason about  code exection in a multithreaded enviroment** , even in the face of **optimizations performed by the dynamic complier** ,the **processor** and the **caches**.
 
 
