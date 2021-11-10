@@ -15,9 +15,16 @@ When threads interact, reads can return values written by writes from different 
 
 # 其他
 JMM决定一个线程对共享变量的写入何时对另一个线程可见。
+总之，**JMM 是一套Java 规范**，不同平台上的 Java 实现（JVM等）需要*遵守这套 JMM 规范*，因此正确应用这套规范的（并发）程序能够**表现出正确的行为**。
+
 
 # 为什么需要JMM
 ## Reordering
 重排序
 
 ## Happens-before
+
+
+# 参考
+1. [JSR 133 (Java Memory Model) FAQ](https://blog.csdn.net/lemon89/article/details/73695204)
+2. [JSR 133 (Java Memory Model) FAQ-上](https://blog.csdn.net/u012005313/article/details/81226956)
