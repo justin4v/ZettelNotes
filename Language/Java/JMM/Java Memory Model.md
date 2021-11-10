@@ -16,3 +16,8 @@ When threads interact, reads can return values written by writes from different 
 # 其他
 JMM决定一个线程对共享变量的写入何时对另一个线程可见。
 
+# 为什么需要JMM
+## Reordering
+重排序
+
+## Happens-before
