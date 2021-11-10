@@ -9,6 +9,7 @@ The actions of each thread in isolation must behave as governed by the semantics
 When threads interact, reads can return values written by writes from different threads.
 
 ## Wiki
-The Java Memory Model describes how 
+- The Java Memory Model describes **how threads in the Java programming Language interact through memory**.
+- The Java Memory Model(JMM) defines the allowable behavior of multithreaded programs, and therefore describes when such reorderings are possible. It places execution-time constraints on thee relationship between threads and main memory order to achieve consistent and reliable Java applications. 
 
 
