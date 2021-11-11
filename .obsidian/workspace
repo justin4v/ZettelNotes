@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JMM/Happens-before.md",
+            "file": "Language/Java/JMM/相关概念.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "aa78b7ad02c58485"
+      },
+      {
+        "id": "cb9b0050ba3743f1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/JMM/相关概念.md",
+            "mode": "preview"
+          }
+        },
+        "group": "aa78b7ad02c58485"
       }
     ],
     "direction": "vertical"
@@ -76,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JMM/Happens-before.md",
+                "file": "Language/Java/JMM/相关概念.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JMM/Happens-before.md"
+                "file": "Language/Java/JMM/相关概念.md"
               }
             }
           },
@@ -126,15 +139,15 @@
   },
   "active": "e99b3a0f9c3ba19e",
   "lastOpenFiles": [
-    "Language/Java/JMM/Happens-before.md",
     "Language/Java/JMM/相关概念.md",
-    "Language/Java/JMM/Java Memory Model.md",
     "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
+    "Base Knowledge/Markdown/Markdown 公式手册.md",
+    "Language/Java/JMM/Happens-before.md",
+    "Language/Java/JMM/Java Memory Model.md",
     "Book Reading/并发编程实践/Java并发编程实践.md",
     "Language/Java/JDK source/Integer.md",
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/面向对象概念.md",
-    "Book Reading/设计模式解析/功能分解.md",
-    "Base Knowledge/网络编程/跨域问题.md"
+    "Book Reading/设计模式解析/功能分解.md"
   ]
 }
