@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JMM/相关概念.md",
+            "file": "Language/Java/JMM/Happens-before.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JMM/相关概念.md",
+                "file": "Language/Java/JMM/Happens-before.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JMM/相关概念.md"
+                "file": "Language/Java/JMM/Happens-before.md"
               }
             }
           },
@@ -126,9 +126,9 @@
   },
   "active": "e99b3a0f9c3ba19e",
   "lastOpenFiles": [
+    "Language/Java/JMM/Happens-before.md",
     "Language/Java/JMM/相关概念.md",
     "Language/Java/JMM/Java Memory Model.md",
-    "Language/Java/JMM/Happens-before.md",
     "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
     "Book Reading/并发编程实践/Java并发编程实践.md",
     "Language/Java/JDK source/Integer.md",
