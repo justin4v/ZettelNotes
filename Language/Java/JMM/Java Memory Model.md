@@ -1,9 +1,8 @@
 # 内存模型
 - 给定一个程序和该程序的执行过程，**内存模型描述了该执行过程是否是该程序的一次合法执行**。A memory model describes, given a program and an execution trace of that program, whether the execution trace is a legal execution of the program. 
-- 对于 Java，内存模型检查执行轨迹中的每次读操作，然后根据特定规则，检验该读操作观察到的写是否合法。Java’s memory model works by examining each read in an execution trace and checking that the write observed by that read is valid.
-- 内存模型描述了某个程序的可能行为。JVM 的实现可以自由地生成想要的代码，只要该程序所有最终执行产生的结果能通过内存模型进行预测。
-
-
+- 对于 Java，内存模型检查执行过程中的每次读操作，然后根据特定规则，检验该读操作观察到的写是否合法。Java’s memory model works by examining each read in an execution trace and checking that the write observed by that read is valid.
+- 内存模型描述了某个程序的可能行为。JVM 的实现可以自由地生成想要的代码，只要该程序最终执行的结果都能通过内存模型进行预测。
+- 内存模型的一个更高级、非正式的描述是：JMM 是一组规定了一个线程的写操作何时会对另一个线程可见的规则。
 
 # Wiki
 - The Java Memory Model describes **how threads in the Java programming Language interact through memory** JMM描述了 java 程序中**线程之间如何通过内存交互**；
@@ -21,6 +20,7 @@ JMM决定一个**线程对共享变量的写入何时对另一个线程可见**�
 重排序
 
 ## Happens-before
+[[Happens-before]]
 
 
 # 参考
