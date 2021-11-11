@@ -1,11 +1,9 @@
+# 内存模型
+- 给定一个程序和该程序的执行过程，**内存模型描述了该执行过程是否是该程序的一次合法执行**。A memory model describes, given a program and an execution trace of that program, whether the execution trace is a legal execution of the program. 
+- 对于 Java，内存模型检查执行轨迹中的每次读操作，然后根据特定规则，检验该读操作观察到的写是否合法。Java’s memory model works by examining each read in an execution trace and checking that the write observed by that read is valid.
+- 内存模型描述了某个程序的可能行为。JVM 的实现可以自由地生成想要的代码，只要该程序所有最终执行产生的结果能通过内存模型进行预测。
 
-# JSR 133
-在 Java Specification Request 133（JSR 133，2004）中，定义如下：
-- The Java Memory Model describes what behaviors are legal in multithreaded code, and how threads may interact through memory，Java 内存模型描述了**在多线程代码中，哪些行为是合法的，以及线程之间如何通过内存交互**；
-- A high level, informal overview of the memory model shows it to **be a set of rules for when writes by one thread are visible to another thread**，从一个更高、非正式的视角看，内存模型是**一系列描述线程的写入何时对另一个线程可见的规则**；
-- The memory semantics **determine what values can be read** at every point in the program，内存语义决定了*程序中每一时刻哪些值可以被读取*。
 
-The actions of each thread in isolation must behave as governed by the semantics of that thread, with the exception that the values seen by each read are *determined by the memory model*。We say that the program obeys *intra-thread semantics*.
 
 # Wiki
 - The Java Memory Model describes **how threads in the Java programming Language interact through memory** JMM描述了 java 程序中**线程之间如何通过内存交互**；
