@@ -8,9 +8,9 @@
 The actions of each thread in isolation must behave as governed by the semantics of that thread, with the exception that the values seen by each read are *determined by the memory model*。We say that the program obeys *intra-thread semantics*.
 
 # Wiki
-- The Java Memory Model describes **how threads in the Java programming Language interact through memory** JMM描述了 java 程序中线程之间如何通过内存交互；
-- The Java Memory Model(JMM) defines the allowable behavior of multithreaded programs, and therefore describes when such reorderings are possible. It **places execution-time constraints on the relationship between threads and main memory** order to achieve consistent and reliable Java applications. 
-- By doing this , it makes it possible to **reason about  code exection in a multithreaded enviroment** , even in the face of **optimizations performed by the dynamic complier** ,the **processor** and the **caches**.
+- The Java Memory Model describes **how threads in the Java programming Language interact through memory** JMM描述了 java 程序中**线程之间如何通过内存交互**；
+- The Java Memory Model(JMM) defines the allowable behavior of multithreaded programs, and therefore describes when such reorderings are possible. It **places execution-time constraints on the relationship between threads and main memory** ，in order to achieve consistent and reliable Java applications，JMM 定义了多线程程序允许的行为，进一步，描述了何时可能进行重排序。JMM 约束了**运行时线程和内存间关系**，以获得持续可靠的Java 应用程序. 
+- By doing this , it makes it possible to **reason about  code exection in a multithreaded enviroment** , even in the face of **optimizations performed by the dynamic complier** ,the **processor** and the **caches**，通过约束线程和内存的关系， JMM 使得**多线程环境下对代码执行的推演成为可能**，即使面临动态编译器优化、处理器和缓存等因素。
 
 # 其他
 JMM决定一个**线程对共享变量的写入何时对另一个线程可见**。
