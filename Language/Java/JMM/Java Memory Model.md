@@ -2,14 +2,13 @@
 # JSR 133
 在 Java Specification Request 133（JSR 133，2004）中，定义如下：
 - The Java Memory Model describes what behaviors are legal in multithreaded code, and how threads may interact through memory，Java 内存模型描述了**在多线程代码中，哪些行为是合法的，以及线程之间如何通过内存交互**；
-- A high level, informal overview of the memory model shows it to **be a set of rules for when writes by one thread are visible to another thread**，从一个更高非正式的视角看，内存模型是一系列描述一个线程的写入何时对另一个线程可见的；
-- The memory semantics **determine what values can be read** at every point in the program。
+- A high level, informal overview of the memory model shows it to **be a set of rules for when writes by one thread are visible to another thread**，从一个更高、非正式的视角看，内存模型是**一系列描述一个线程的写入何时对另一个线程可见的规则**；
+- The memory semantics **determine what values can be read** at every point in the program，内存语义决定了*程序中每一时刻哪些值可以被读取*。
 
 The actions of each thread in isolation must behave as governed by the semantics of that thread, with the exception that the values seen by each read are *determined by the memory model*。We say that the program obeys *intra-thread semantics*.
-When threads interact, reads can return values written by writes from different threads.
 
 # Wiki
-- The Java Memory Model describes **how threads in the Java programming Language interact through memory**.
+- The Java Memory Model describes **how threads in the Java programming Language interact through memory** JMM描述了 java 程序中线程之间如何通过内存交互；
 - The Java Memory Model(JMM) defines the allowable behavior of multithreaded programs, and therefore describes when such reorderings are possible. It **places execution-time constraints on the relationship between threads and main memory** order to achieve consistent and reliable Java applications. 
 - By doing this , it makes it possible to **reason about  code exection in a multithreaded enviroment** , even in the face of **optimizations performed by the dynamic complier** ,the **processor** and the **caches**.
 
