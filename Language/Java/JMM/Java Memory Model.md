@@ -16,8 +16,16 @@ JMM决定一个**线程对共享变量的写入何时对另一个线程可见**�
 总之，**JMM 是一套Java 规范（提出了一系列规则）**，不同平台上的 Java 实现（JVM等）需要**遵守 JMM 规范**，因此正确应用这套规范的（并发）程序能够**表现出正确的行为**。
 所以说 JMM 对程序而言屏蔽了不同硬件处理器架构等底层细节，只需要遵循 JMM 规范即可。
 
-# 为什么需要JMM
+# JMM理解
+尽管JMM实现起来相当复杂，而且底层的重新排序问题也常常会令人感到难以理解，不过， 得益于JMM对于对于线程与内存模型的交互行为的明确定义，只要我们的程序做到了正确同步，在正确支持了JMM的虚拟机实现上运行，就将是线程安全的。
 
+## Data Race 
+
+- there is a write in one thread, 
+- a read of the same variable by another thread, 
+- and the write and read are not ordered by synchronization.
+
+；When this occurs, it is called a data race. When code contains a data race, counterintuitive results are often possible.
 
 
 
