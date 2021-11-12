@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "91e2d0b8a34fbc28",
+        "id": "305e0f21d7510240",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -13,10 +13,10 @@
             "mode": "source"
           }
         },
-        "group": "1946693320b8a97a"
+        "group": "07eb6c12b1412c6e"
       },
       {
-        "id": "305e0f21d7510240",
+        "id": "7d1bde306dcf08d0",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -25,7 +25,7 @@
             "mode": "preview"
           }
         },
-        "group": "1946693320b8a97a"
+        "group": "07eb6c12b1412c6e"
       }
     ],
     "direction": "vertical"
@@ -138,7 +138,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "91e2d0b8a34fbc28",
+  "active": "305e0f21d7510240",
   "lastOpenFiles": [
     "Language/Java/JMM/Java 同步语义.md",
     "Language/Java/JMM/代码重排与乱序执行.md",
