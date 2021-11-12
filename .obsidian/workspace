@@ -12,20 +12,7 @@
             "file": "OS/CPU/代码重排与乱序执行.md",
             "mode": "source"
           }
-        },
-        "group": "63267386657e2f9e"
-      },
-      {
-        "id": "437f65076e490c7d",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "OS/CPU/代码重排与乱序执行.md",
-            "mode": "preview"
-          }
-        },
-        "group": "63267386657e2f9e"
+        }
       }
     ],
     "direction": "vertical"
