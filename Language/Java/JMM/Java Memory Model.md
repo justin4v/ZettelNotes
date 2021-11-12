@@ -19,13 +19,23 @@ JMM决定一个**线程对共享变量的写入何时对另一个线程可见**�
 # JMM理解
 尽管JMM实现起来相当复杂，而且底层的重新排序问题也常常会令人感到难以理解，不过， 得益于JMM对于对于线程与内存模型的交互行为的明确定义，只要我们的程序做到了正确同步，在正确支持了JMM的虚拟机实现上运行，就将是线程安全的。
 
-## Data Race 
+## 冲突访问
+Conflicting Accesses：
+- **Two accesses (reads of or writes ) to the same shared field or array element are said to be conflicting if at least one of the accesses is a write.**
+- 对于同一变量的两个并行的访问（读或者写）中如果至少有一个是写入操作，则称它们是冲突的。
 
+## Happens-Before Relationship
+- Two actions can be ordered by a happens-before relationship. 
+- If one action happens before another, then the first is visible to and ordered before the second
+
+## Data Race 
 - there is a write in one thread, 
 - a read of the same variable by another thread, 
 - and the write and read are not ordered by synchronization.
 
-；When this occurs, it is called a data race. When code contains a data race, counterintuitive results are often possible.
+When a program contains two conflicting accesses that are not ordered by a happens-before relationship, it is said to contain a data race. A correctly synchronized program is one that has no data races
+
+
 
 
 
