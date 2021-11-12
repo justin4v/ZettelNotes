@@ -28,15 +28,25 @@ Conflicting Accesses：
 - Two actions can be ordered by a happens-before relationship. 
 - If one action happens before another, then the first is visible to and ordered before the second
 
+- Each action in a thread happens before every subsequent action in that thread. 
+- An unlock on a monitor happens before every subsequent lock on that monitor. 
+- A write to a volatile field happens before every subsequent read of that volatile. 
+- A call to start() on a thread happens before any actions in the started thread. 
+- All actions in a thread happen before any other thread successfully returns from a join() on that thread. 
+- If an action a happens before an action b, and b happens before an action c, then a happens before c.
+
 ## Data Race 
 - there is a write in one thread, 
 - a read of the same variable by another thread, 
 - and the write and read are not ordered by synchronization.
 
-When a program contains two conflicting accesses that are not ordered by a happens-before relationship, it is said to contain a data race. A correctly synchronized program is one that has no data races
+When a program contains two conflicting accesses that are not ordered by a happens-before relationship, it is said to contain a data race. 
 
+## Correctly Synchronized
+在JMM当中对正确同步的定义是这样的: 
+“**A program is correctly synchronized if and only if all sequentially consistent executions are free of data races**”，一个程序如果在它的所有的串行一致的执行当中都不存在数据竞争就是正确同步。
 
-
+If a program is not correctly synchronized, then three types of problems can appear: **visibility, ordering and atomicity.**
 
 
 # 参考
