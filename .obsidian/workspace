@@ -140,9 +140,9 @@
   "active": "305e0f21d7510240",
   "lastOpenFiles": [
     "Language/Java/JMM/Java 同步语义.md",
-    "Language/Java/JMM/相关概念.md",
-    "Language/Java/JMM/代码重排与乱序执行.md",
     "Language/Java/JMM/Java Memory Model.md",
+    "Language/Java/JMM/代码重排与乱序执行.md",
+    "Language/Java/JMM/相关概念.md",
     "Language/Java/JMM/Happens-before.md",
     "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
     "Base Knowledge/Markdown/Markdown 公式手册.md",

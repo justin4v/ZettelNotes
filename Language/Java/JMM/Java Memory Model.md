@@ -52,4 +52,4 @@ If a program is not correctly synchronized, then three types of problems can app
 # 参考
 1. [JSR 133 (Java Memory Model) FAQ](https://blog.csdn.net/lemon89/article/details/73695204)
 2. [JSR 133 (Java Memory Model) FAQ-上](https://blog.csdn.net/u012005313/article/details/81226956)
-3. [闲话Java内存模型](https://mp.weixin.qq.com/s?src=11&timestamp=1636688069&ver=3431&signature=WUpverIXBIGztegpRtx*DQAVohvnZHBv0WvV7GjDkUbwr6Fk7SzHdsMDsbHCfMKB7UzAW-OGCI3RudaaHU3kRgeYByXX52ZA15jMEFeCrgVdG8WsLbsbPgjaqRLUEmox&new=1)
+3.  闲话Java内存模型-微信文章
