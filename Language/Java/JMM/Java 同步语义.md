@@ -146,19 +146,19 @@ class VolatileDemo{
 
 ## Happends-before 顺序
 在同步顺序的基础上，再辅助以下面的一些基本逻辑和规则定义的 HB 关系，将会得到程序在一次执行过程中的所有活动间的一个*偏序集*：
-> - 同一个线程内的每一个活动都发生在依代码顺序排在其后其他活动之前
-> - 一个对象的构造函数结束发生在该对象的析构函数开始之前；
-> - 如果活动a与活动b同步，则a先于b发生；
-> - 一个线程的首活动发生在线程内的其他活动之前， 线程内的其他活动都发生在线程的尾活动之前；
-> - HB关系可以传递 （记a先于b发生为 hb(a, b)， 有hb(a,b)且hb(b,c) 则， hb(a,c))
+> - Each action in a thread happens before every subsequent action in that thread.  
+> - An unlock on a monitor happens before every subsequent lock on that monitor. 
+> - A write to a volatile field happens before every subsequent read of that volatile. • A call to start() on a thread happens before any actions in the started thread. • All actions in a thread happen before any other thread successfully returns from a join() on that thread. • If an action a happens before an action b, and b happens before an action c, then a happens before c.
 这个偏序集称为**HB顺序**。
 - 之所以称这是一个偏序集合，是因为在HB顺序的排序准则中，会允许存在着*两个活动间没有明确的顺序指定*的情况， 如前面图中的 A,B,C的赋值与r1, r2的赋值之间就没有明确的HB顺序。
 
 ## Happends-before 一致
-如果*某一变量的读取操作（r）读到了对该变量的写操作（w）的结果*，那么:
-1.* w 不能在 HB 关系中排在 r 之后 (hb(r, w))*；
-2. 也*不能有另一个对该变量的写操作(w')，在HB关系上介于 r 与 w 之间*（hb(w, w') 且 hb(w', r))。
+*某一变量的读取操作（r）可以读取到对该变量的写操作（w）的结果*，只要:
+1. *r 不在 HB 关系中排在 w 之前*；
+2. *没有另一个对该变量的写操作(w')，在HB关系上介于 r 与 w 之间*（hb(w, w') 且 hb(w', r))。
 3. 但是对于与之没有直接HB关系的写操作，是否允许看到，未作定义。
+Informally, a read r is allowed to see the result of a write w if there is no happens-before ordering to prevent that read.
+An execution is *happens-before consistent* if each read sees a write that it is allowed to see by the happens-before ordering.
 
 > **JMM 要求 JVM 在运行时提供 HB 一致的保证**， 不得产生违背上述原则的行为。
 > 在不违背HB一致要求的前提下，JVM 可以使用任意的方式来进行程序的优化。
