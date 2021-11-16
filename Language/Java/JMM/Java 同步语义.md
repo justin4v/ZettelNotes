@@ -126,7 +126,6 @@ class VolatileDemo{
 在SW关系中：
 1. 同步活动的起点（writing a volatile variable, unlocking a monitor, starting a thread）有*释放语义（release semantics）*：**允许 release 之前的 action 对 release 之后的 action 可见，且排序在 release 之后的 action 的前面**；
 2. 同步活动的终点（reading a volatile variable, locking a monitor）有*获取语义（acquire semantics）*：**允许其他线程中的 action 可以看到 acquire 之前的 action，且排序在 acquire 之前 action 的后面** 。
-3. 一般来说，重新排序一个正常的内存访问和一个后续的获取操作，或一个释放操作和一个后续的正常内存访问是合法的。
 
 由这些带有SW关系的活动，再结合上程序顺序，可以得到线程间的基本逻辑顺序要求。
 
