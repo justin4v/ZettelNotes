@@ -124,11 +124,9 @@ class VolatileDemo{
 > - 一个线程 t1 Interrupt 另一个线程 t2 的活动与检测 t2 线程被中断的活动同步
 
 在SW关系中：
-1. 同步活动的起点有*释放语义（release semantics）*：允许release 之前的 action ；
-2. 同步活动的终点有*获取语义（acquire semantics）*。
-
-一些操作(例如，写一个volatile变量，解锁一个监视器，启动一个线程)具有释放语义:它们允许在释放之前发生的动作在接下来的动作之前是可见的和有序的。其他操作(例如，读取volatile变量，锁定监视器)具有acquire语义:它们允许不同线程中的操作看到并在之前的操作之后排序。
-
+1. 同步活动的起点（writing a volatile variable, unlocking a monitor, starting a thread）有*释放语义（release semantics）*：**允许 release 之前的 action 对 release 之后的 action 可见，且排序在 release 之后的 action 的前面**；
+2. 同步活动的终点（reading a volatile variable, locking a monitor）有*获取语义（acquire semantics）*：**允许其他线程中的 action 可以看到 acquire 之前的 action，且排序在 acquire 之前 action 的后面** 。
+3. 一般来说，重新排序一个正常的内存访问和一个后续的获取操作，或一个释放操作和一个后续的正常内存访问是合法的。
 
 由这些带有SW关系的活动，再结合上程序顺序，可以得到线程间的基本逻辑顺序要求。
 
