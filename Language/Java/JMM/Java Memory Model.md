@@ -25,15 +25,7 @@ Conflicting Accesses：
 - 对于同一变量的两个并行的访问（读或者写）中如果至少有一个是写入操作，则称它们是冲突的。
 
 ## Happens-Before Relationship
-- Two actions can be ordered by a happens-before relationship. 
-- If one action happens before another, then the first is visible to and ordered before the second
 
-- Each action in a thread happens before every subsequent action in that thread. 
-- An unlock on a monitor happens before every subsequent lock on that monitor. 
-- A write to a volatile field happens before every subsequent read of that volatile. 
-- A call to start() on a thread happens before any actions in the started thread. 
-- All actions in a thread happen before any other thread successfully returns from a join() on that thread. 
-- If an action a happens before an action b, and b happens before an action c, then a happens before c.
 
 ## Data Race 
 - there is a write in one thread, 

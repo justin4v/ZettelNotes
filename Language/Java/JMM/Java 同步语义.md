@@ -124,12 +124,12 @@ class VolatileDemo{
 > - 一个线程 t1 Interrupt 另一个线程 t2 的活动与检测 t2 线程被中断的活动同步
 
 在SW关系中：
-1. 同步活动的起点（writing a volatile variable, unlocking a monitor, starting a thread）有*释放语义（release semantics）*：write instruction is guaranteed to flush and write to RAM。
+1. 同步活动的起点（**writing a volatile variable, unlocking a monitor, starting a thread**）有*释放语义（release semantics）*：write instruction is guaranteed to flush and write to RAM。
 	1. release 前面的写结果操作对后面读可见；
-	2. release 前面的操作不能重排序（reorder）到后面。
-2. 同步活动的终点（reading a volatile variable, locking a monitor）有*获取语义（acquire semantics）*： read instruction is guaranteed to see any writes cached by any processors。
+	2. release 前面的操作不能重排序（reorder）到后面。反向的重排序不阻止。
+2. 同步活动的终点（**reading a volatile variable, locking a monitor**）有*获取语义（acquire semantics）*： read instruction is guaranteed to see any writes cached by any processors。
 	1. acquire 后面的读操作能读到前面的写结果；
-	2. acquire 后面的操作不能重排序到前面。
+	2. acquire 后面的操作不能重排序（reorder）到前面。
 
 由这些带有SW关系的活动，再结合上程序顺序，可以得到线程间的基本逻辑顺序要求。
 
