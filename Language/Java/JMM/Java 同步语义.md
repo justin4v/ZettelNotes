@@ -148,7 +148,10 @@ class VolatileDemo{
 在同步顺序的基础上，再辅助以下面的一些基本逻辑和规则定义的 HB 关系，将会得到程序在一次执行过程中的所有活动间的一个*偏序集*：
 > - Each action in a thread happens before every subsequent action in that thread.  
 > - An unlock on a monitor happens before every subsequent lock on that monitor. 
-> - A write to a volatile field happens before every subsequent read of that volatile. • A call to start() on a thread happens before any actions in the started thread. • All actions in a thread happen before any other thread successfully returns from a join() on that thread. • If an action a happens before an action b, and b happens before an action c, then a happens before c.
+> - A write to a volatile field happens before every subsequent read of that volatile. 
+> - A call to start() on a thread happens before any actions in the started thread. 
+> - All actions in a thread happen before any other thread successfully returns from a join() on that thread. 
+> - If an action a happens before an action b, and b happens before an action c, then a happens before c.
 这个偏序集称为**HB顺序**。
 - 之所以称这是一个偏序集合，是因为在HB顺序的排序准则中，会允许存在着*两个活动间没有明确的顺序指定*的情况， 如前面图中的 A,B,C的赋值与r1, r2的赋值之间就没有明确的HB顺序。
 
