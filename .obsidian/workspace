@@ -12,7 +12,20 @@
             "file": "Language/Java/JMM/Java 同步语义.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "a376614fc2f35971"
+      },
+      {
+        "id": "40ba0658e0a6c024",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/JMM/Java 同步语义.md",
+            "mode": "preview"
+          }
+        },
+        "group": "a376614fc2f35971"
       }
     ],
     "direction": "vertical"
