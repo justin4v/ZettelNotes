@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
+            "file": "Language/Java/JMM/代码重排与乱序执行.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
+                "file": "Language/Java/JMM/代码重排与乱序执行.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JMM/正确的同步与安全的多线程.md"
+                "file": "Language/Java/JMM/代码重排与乱序执行.md"
               }
             }
           },
@@ -126,11 +126,11 @@
   },
   "active": "eeeae8e64d433bd3",
   "lastOpenFiles": [
+    "Language/Java/JMM/代码重排与乱序执行.md",
+    "Language/Java/JMM/Java 同步语义.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
     "Language/Java/JMM/相关概念.md",
     "Language/Java/JMM/Java Memory Model.md",
-    "Language/Java/JMM/Java 同步语义.md",
-    "Language/Java/JMM/代码重排与乱序执行.md",
     "Language/Java/JMM/Happens-before.md",
     "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
     "Base Knowledge/Markdown/Markdown 公式手册.md",
