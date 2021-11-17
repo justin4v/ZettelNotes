@@ -16,32 +16,12 @@ JMM决定一个**线程对共享变量的写入何时对另一个线程可见**�
 总之，**JMM 是一套Java 规范（提出了一系列规则）**，不同平台上的 Java 实现（JVM等）需要**遵守 JMM 规范**，因此正确应用这套规范的（并发）程序能够**表现出正确的行为**。
 所以说 JMM 对程序而言屏蔽了不同硬件处理器架构等底层细节，只需要遵循 JMM 规范即可。
 
-# JMM理解
-尽管JMM实现起来相当复杂，而且底层的重新排序问题也常常会令人感到难以理解，不过， 得益于JMM对于对于线程与内存模型的交互行为的明确定义，只要我们的程序做到了正确同步，在正确支持了JMM的虚拟机实现上运行，就将是线程安全的。
-
-## 冲突访问
-Conflicting Accesses：
-- **Two accesses (reads of or writes ) to the same shared field or array element are said to be conflicting if at least one of the accesses is a write.**
-- 对于同一变量的两个并行的访问（读或者写）中如果至少有一个是写入操作，则称它们是冲突的。
-
-## Happens-Before Relationship
-
-
-## Data Race 
-- there is a write in one thread, 
-- a read of the same variable by another thread, 
-- and the write and read are not ordered by synchronization.
-
-When a program contains two conflicting accesses that are not ordered by a happens-before relationship, it is said to contain a data race. 
-
-## Correctly Synchronized
-在JMM当中对正确同步的定义是这样的: 
-“**A program is correctly synchronized if and only if all sequentially consistent executions are free of data races**”，一个程序如果在它的所有的串行一致的执行当中都不存在数据竞争就是正确同步。
-
-If a program is not correctly synchronized, then three types of problems can appear: **visibility, ordering and atomicity.**
-
 
 # 参考
-1. [JSR 133 (Java Memory Model) FAQ](https://blog.csdn.net/lemon89/article/details/73695204)
-2. [JSR 133 (Java Memory Model) FAQ-上](https://blog.csdn.net/u012005313/article/details/81226956)
-3.  闲话Java内存模型-微信文章
+
+1. [[代码重排与乱序执行]]
+2. [[Java 同步语义]]
+3. [[正确的同步与安全的多线程]]
+4. [JSR 133 (Java Memory Model) FAQ](https://blog.csdn.net/lemon89/article/details/73695204)
+5. [JSR 133 (Java Memory Model) FAQ-上](https://blog.csdn.net/u012005313/article/details/81226956)
+6.  闲话Java内存模型-微信文章

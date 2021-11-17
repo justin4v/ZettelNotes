@@ -133,7 +133,7 @@ class VolatileDemo{
 
 由这些带有SW关系的活动，再结合上程序顺序，可以得到线程间的基本逻辑顺序要求。
 
-# Happens-Before 和 Happens-Before Order
+# Happens-Before Relationship 和 Happens-Before Order
 还有一种称为“先于...发生”（Happens-before，HB）的关系。
 - 非正式地，一个活动先于另一个活动发生，是指这个活动的**执行的结果对另一个活动可见**。
 - JMM 并*不要求两个有 HB 关系的活动的实际执行顺序一定与 HB 顺序一致*，因为两个活动可能是完全互相独立的，此时是允许重排的；
