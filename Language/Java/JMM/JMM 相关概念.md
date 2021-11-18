@@ -179,6 +179,7 @@ Sequential consistency is a very strong guarantee that is made about visibility 
 - Each individual action is atomic and is immediately visible to every thread.
 - If a program has no data races, then all executions of the program will appear to be sequentially consistent。
 - As noted before, sequential consistency and/or freedom from data races still allows errors arising from groups of operations that need to be perceived atomically, as shown in 原子性代码示例 。
+- If we were to use sequential consistency as our memory model, many of the compiler and processor optimizations that we have discussed would be illegal.
 
 
 # 参考
