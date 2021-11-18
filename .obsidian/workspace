@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/CAS.md",
+            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/CAS.md",
+            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
             "mode": "preview"
           }
         },
@@ -73,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363
+    "width": 363,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -89,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/CAS.md",
+                "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/CAS.md"
+                "file": "Language/Java/JMM/正确的同步与安全的多线程.md"
               }
             }
           },
@@ -139,6 +140,7 @@
   },
   "active": "f682de4ac6103171",
   "lastOpenFiles": [
+    "Language/Java/JMM/正确的同步与安全的多线程.md",
     "Language/Java/并发编程/CAS.md",
     "Language/Java/并发编程/并发相关概念.md",
     "Language/Java/并发编程/锁/Java 锁升级概述.md",
@@ -147,7 +149,6 @@
     "Language/Java/并发编程/锁/重量级锁.md",
     "Language/Java/并发编程/锁/轻量级锁.md",
     "Language/Java/并发编程/锁/Synchronize 底层优化.md",
-    "Language/Java/JVM/对象结构.md",
-    "Base Knowledge/CSV.md"
+    "Language/Java/JVM/对象结构.md"
   ]
 }
