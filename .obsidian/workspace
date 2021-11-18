@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/锁/Java 锁升级.md",
+            "file": "Language/Java/JVM/对象结构.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/锁/Java 锁升级.md",
+            "file": "Language/Java/JVM/对象结构.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/锁/Java 锁升级.md",
+                "file": "Language/Java/JVM/对象结构.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/锁/Java 锁升级.md"
+                "file": "Language/Java/JVM/对象结构.md"
               }
             }
           },
@@ -139,15 +139,15 @@
   },
   "active": "eeeae8e64d433bd3",
   "lastOpenFiles": [
-    "Language/Java/并发编程/锁/Java 锁升级.md",
-    "Language/Java/并发编程/锁/Synchronize 底层优化.md",
-    "Language/Java/并发编程/锁/轻量级锁.md",
-    "Language/Java/并发编程/锁/偏向锁.md",
-    "Language/Java/JVM/JVM类加载机制.md",
-    "Language/Java/JVM/JVM内存结构.md",
     "Language/Java/JVM/对象结构.md",
-    "Language/Java/JVM/类加载示例.md",
-    "Language/Java/JVM/字节码示例.md",
-    "Language/Java/JVM/class 文件结构.md"
+    "Language/Java/并发编程/锁/偏向锁.md",
+    "Language/Java/并发编程/锁/Java 锁升级.md",
+    "Language/Java/并发编程/锁/AQS原理.md",
+    "Language/Java/并发编程/锁/重量级锁.md",
+    "Language/Java/并发编程/锁/轻量级锁.md",
+    "Language/Java/JVM/class 文件结构.md",
+    "Language/Java/并发编程/锁/Synchronize 底层优化.md",
+    "Language/Java/JVM/JVM类加载机制.md",
+    "Language/Java/JVM/JVM内存结构.md"
   ]
 }
