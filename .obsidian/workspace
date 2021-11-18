@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象结构.md",
+            "file": "Base Knowledge/编程/专业词汇.md",
             "mode": "source"
           }
         },
@@ -21,8 +21,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象结构.md",
-            "mode": "preview"
+            "file": "Base Knowledge/编程/专业词汇.md",
+            "mode": "source"
           }
         },
         "group": "cff82cd8e47b33c8"
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "CAS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -89,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/对象结构.md",
+                "file": "Base Knowledge/编程/专业词汇.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/对象结构.md"
+                "file": "Base Knowledge/编程/专业词汇.md"
               }
             }
           },
@@ -139,15 +140,15 @@
   },
   "active": "eeeae8e64d433bd3",
   "lastOpenFiles": [
-    "Language/Java/JVM/对象结构.md",
-    "Language/Java/并发编程/锁/偏向锁.md",
+    "Base Knowledge/编程/专业词汇.md",
+    "附件/checkcast()字节码.png",
+    "附件/轻量级锁CAS操作之前堆栈与对象的状态.png",
+    "附件/轻量级锁CAS操作之后堆栈与对象的状态.png",
     "Language/Java/并发编程/锁/Java 锁升级.md",
+    "Language/Java/并发编程/锁/偏向锁.md",
+    "Language/Java/JVM/对象结构.md",
     "Language/Java/并发编程/锁/AQS原理.md",
     "Language/Java/并发编程/锁/重量级锁.md",
-    "Language/Java/并发编程/锁/轻量级锁.md",
-    "Language/Java/JVM/class 文件结构.md",
-    "Language/Java/并发编程/锁/Synchronize 底层优化.md",
-    "Language/Java/JVM/JVM类加载机制.md",
-    "Language/Java/JVM/JVM内存结构.md"
+    "Language/Java/并发编程/锁/轻量级锁.md"
   ]
 }
