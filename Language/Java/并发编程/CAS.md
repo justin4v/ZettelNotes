@@ -22,7 +22,7 @@ Java 中调用 Unsafe 的 compareAndSwapInt 的方法实现 CAS。
 public final native boolean compareAndSwapInt(Object var1, long var2, int var4, int var5);
 ```
 
-实际使用了汇编代码：
+实际使用了内核API `cmpxchg`：
 ```c
 inline jint Atomic::cmpxchg (jint exchange_value, volatile jint* dest, jint compare_value) {  // 判断是否是多核 CPU
   int mp = os::is_MP();
