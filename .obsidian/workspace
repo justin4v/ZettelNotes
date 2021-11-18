@@ -91,7 +91,7 @@
               "state": {
                 "file": "Language/Java/JMM/JMM 相关概念.md",
                 "collapseAll": true,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -106,8 +106,8 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
+                "sortOrder": "alphabetical",
+                "useHierarchy": false
               }
             }
           },
@@ -130,11 +130,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 197,
     "collapsed": true
   },
   "active": "eeeae8e64d433bd3",

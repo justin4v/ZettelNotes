@@ -69,11 +69,12 @@ Conflicting Accesses：
 
 When a program **contains two conflicting accesses that are not ordered by a happens-before relationship**, it is said to contain a **data race**. 
 
-# Visibility
+# 可见性 Visibility
 - If an action in one thread is *visible* to another thread, then the result of that action can be observed by the second thread；
 - In order to guarantee that the results of one action are observable to a second action, then the first must *happen before* the second。
 
 ```java
+// 代码示例
 class LoopMayNeverEnd { 
 	boolean done = false; 
 
@@ -89,7 +90,7 @@ class LoopMayNeverEnd {
 }
 ```
 
-Consider the code in Figure 4. Now imagine that two threads are created, and that one thread calls work(), and at some point, the other thread calls stopWork(). 
+Now imagine that two threads are created, and that one thread calls work(), and at some point, the other thread calls stopWork(). 
 
 Because there is no happens-before relationship between the two threads, the thread in the loop may never see the update to *done* performed by the other thread. 
 
@@ -100,15 +101,46 @@ To ensure that this does not happen, there must be a happens-before relationship
 In LoopMayNeverEnd, this can be achieved by *declaring done to be volatile*. Conceptually, all actions on volatiles happen in a single order, and each write to a volatile field happens before any read of that volatile that occurs later in that order.
 
 
-# Ordering
-Ordering constraints govern the order in which multiple actions are seen to have happened. The ability to perceive ordering constraints among actions is only guaranteed to actions that share a happens-before relationship with them.
+# 有序性 Ordering
+Ordering constraints govern the order in which multiple actions are seen to have happened. 
+
+The ability to perceive ordering constraints among actions is only guaranteed to actions that share a happens-before relationship with them.
+
+```java
+class BadlyOrdered {
+	boolean a = false;
+	boolean b = false;
+	
+	void threadOne() {
+		a = true;
+		b = true;
+	}
+	boolean threadTwo() {
+		boolean r1 = b; // sees true
+		boolean r2 = a; // sees false
+		return r1 && !r2; // returns true
+	}
+}
+
+```
+
+The code in Figure 5 shows an example of where the lack of ordering constraints can produce surprising results. 
+Consider what happens if threadOne() gets executed in one thread and threadTwo() gets executed in another. Would it be possible for threadTwo() to return the value true?
 
 
-# Atomicity
+
+
+# 原子性 Atomicity
 If an action is (or a set of actions are) atomic, its result must be seen to happen “all at once”, or indivisibly.
 
 Atomicity can also be enforced on a sequence of actions. A program can be free from data races without having this form of atomicity. However, enforcing this kind of atomicity is frequently as important to program correctness as enforcing freedom from data races. Consider the code in Figure 6. Since all access to the shared variable balance is guarded by synchronization, the code is free of data races.
 
-# Sequential Consistency
-Sequential consistency is a very strong guarantee that is made about visibility and ordering in an execution of a program. Within a sequentially consistent execution, there is a total order over all individual actions (such as a read or a write) which is consistent with program order.
+# 串行一致 Sequential Consistency
+Sequential consistency is a very strong guarantee that is made about visibility and ordering in an execution of a program. 
+
+- Within a sequentially consistent execution, there is a total order over all individual actions (such as a read or a write) which is consistent with program order.
+- Each individual action is atomic and is immediately visible to every thread.
+- If a program has no data races, then all executions of the program will appear to be sequentially consistent。
+- As noted before, sequential consistency and/or freedom from data races still allows errors arising from groups of operations that need to be perceived atomically, as shown in Figure 6。
+
 
