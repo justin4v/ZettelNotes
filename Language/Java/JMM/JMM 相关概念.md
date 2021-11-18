@@ -74,7 +74,7 @@ When a program **contains two conflicting accesses that are not ordered by a hap
 - In order to guarantee that the results of one action are observable to a second action, then the first must *happen before* the second。
 
 ```java
-// 代码示例
+// 可见性代码示例
 class LoopMayNeverEnd { 
 	boolean done = false; 
 
@@ -107,6 +107,7 @@ Ordering constraints govern the order in which multiple actions are seen to have
 The ability to perceive ordering constraints among actions is only guaranteed to actions that share a happens-before relationship with them.
 
 ```java
+// 有序性代码示例
 class BadlyOrdered {
 	boolean a = false;
 	boolean b = false;
@@ -126,14 +127,50 @@ class BadlyOrdered {
 
 The code in Figure 5 shows an example of where the lack of ordering constraints can produce surprising results. 
 Consider what happens if threadOne() gets executed in one thread and threadTwo() gets executed in another. Would it be possible for threadTwo() to return the value true?
-
-
+The Java memory model allows this result.
 
 
 # 原子性 Atomicity
 If an action is (or a set of actions are) atomic, its result must be seen to happen “all at once”, or indivisibly.
 
-Atomicity can also be enforced on a sequence of actions. A program can be free from data races without having this form of atomicity. However, enforcing this kind of atomicity is frequently as important to program correctness as enforcing freedom from data races. Consider the code in Figure 6. Since all access to the shared variable balance is guarded by synchronization, the code is free of data races.
+Atomicity can also be enforced on a sequence of actions. A program can be free from data races without having this form of atomicity. However, enforcing this kind of atomicity is frequently as important to program correctness as enforcing freedom from data races. 
+
+Consider the code in Figure 6. Since all access to the shared variable balance is guarded by synchronization, the code is free of data races.
+
+```java
+// 原子性代码示例
+class BrokenBankAccount {
+	private int balance;
+	
+	synchronized int getBalance() {
+		return balance;
+	}
+	synchronized void setBalance(int x) throws IllegalStateException {
+		balance = x;
+		if (balance < 0) {
+		throw new IllegalStateException("Negative Balance");
+		}
+	}
+	void deposit(int x) {
+		int b = getBalance();
+		setBalance(b + x);
+	}
+	void withdraw(int x) {
+		int b = getBalance();
+		setBalance(b - x);
+	}
+}
+
+```
+
+Now assume that one thread calls deposit(5), while another calls withdraw(5); there is an initial balance of 10. Ideally, at the end of these two calls, there would still be a balance of 10. However, consider what would happen if:
+- The deposit() method sees a value of 10 for the balance, then
+- The withdraw() method sees a value of 10 for the balance and withdraws 5, leaving a balance of 5, and finally
+- The deposit() method uses the balance it originally saw to calculate the new balance.
+
+As a result of this lack of atomicity, the balance is 15 instead of 10. This effect is often referred to as a lost update because the withdrawal is lost. A programmer writing multi-threaded code must use synchronization carefully to avoid this sort of error
+
+For this example, making the deposit() and withdraw() methods synchronized will ensure that the actions of those methods take place atomically.
 
 # 串行一致 Sequential Consistency
 Sequential consistency is a very strong guarantee that is made about visibility and ordering in an execution of a program. 
@@ -141,6 +178,8 @@ Sequential consistency is a very strong guarantee that is made about visibility 
 - Within a sequentially consistent execution, there is a total order over all individual actions (such as a read or a write) which is consistent with program order.
 - Each individual action is atomic and is immediately visible to every thread.
 - If a program has no data races, then all executions of the program will appear to be sequentially consistent。
-- As noted before, sequential consistency and/or freedom from data races still allows errors arising from groups of operations that need to be perceived atomically, as shown in Figure 6。
+- As noted before, sequential consistency and/or freedom from data races still allows errors arising from groups of operations that need to be perceived atomically, as shown in 原子性代码示例 。
 
 
+# 参考
+[JSR-133: Java Memory Model and Thread Specification]
