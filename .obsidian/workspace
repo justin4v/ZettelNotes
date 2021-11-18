@@ -12,7 +12,20 @@
             "file": "Language/Java/并发编程/线程安全问题.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "cff82cd8e47b33c8"
+      },
+      {
+        "id": "1af39c09882612c0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/并发编程/线程安全问题.md",
+            "mode": "preview"
+          }
+        },
+        "group": "cff82cd8e47b33c8"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 287
+    "width": 207
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -127,14 +140,14 @@
   "active": "eeeae8e64d433bd3",
   "lastOpenFiles": [
     "Language/Java/并发编程/线程安全问题.md",
+    "Language/Java/并发编程/并发相关概念.md",
     "Language/Java/并发编程/活跃性问题.md",
+    "Language/Java/JMM/JMM 相关概念.md",
     "Language/Java/并发编程/锁/偏向锁.md",
     "Language/Java/并发编程/锁/轻量级锁.md",
     "Language/Java/并发编程/性能问题.md",
     "Language/Java/并发编程/加锁机制.md",
-    "Language/Java/并发编程/相关概念.md",
     "Language/Java/并发编程/锁/Java 锁升级.md",
-    "Language/Java/JMM/正确的同步与安全的多线程.md",
-    "Language/Java/JMM/相关概念.md"
+    "Language/Java/JMM/正确的同步与安全的多线程.md"
   ]
 }

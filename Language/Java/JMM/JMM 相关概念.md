@@ -60,6 +60,9 @@ Conflicting Accesses：
 - 对于同一变量的两个并行的访问（读或者写）中如果至少有一个是写入操作，则称它们是冲突的。
 
 # 数据竞争
+
+^7a5c5d
+
 - *there is a write in one thread*, 
 - *a read of the same variable by another thread*, 
 - and the write and read are not ordered by synchronization.
