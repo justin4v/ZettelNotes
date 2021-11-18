@@ -9,23 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
+            "file": "Language/Java/JMM/JMM 相关概念.md",
             "mode": "source"
           }
         },
-        "group": "cff82cd8e47b33c8"
+        "group": "be0aa950ad3aad0c"
       },
       {
-        "id": "1af39c09882612c0",
+        "id": "f682de4ac6103171",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
-            "mode": "source"
+            "file": "Language/Java/JMM/JMM 相关概念.md",
+            "mode": "preview"
           }
         },
-        "group": "cff82cd8e47b33c8"
+        "group": "be0aa950ad3aad0c"
       }
     ],
     "direction": "vertical"
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
+                "file": "Language/Java/JMM/JMM 相关概念.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JMM/正确的同步与安全的多线程.md"
+                "file": "Language/Java/JMM/JMM 相关概念.md"
               }
             }
           },
@@ -139,6 +139,7 @@
   },
   "active": "eeeae8e64d433bd3",
   "lastOpenFiles": [
+    "Language/Java/JMM/JMM 相关概念.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
     "Language/Java/JMM/Java 同步语义.md",
     "Language/Java/JMM/Java Memory Model.md",
@@ -147,7 +148,6 @@
     "附件/checkcast()字节码.png",
     "附件/轻量级锁CAS操作之前堆栈与对象的状态.png",
     "附件/轻量级锁CAS操作之后堆栈与对象的状态.png",
-    "Language/Java/并发编程/锁/Java 锁升级.md",
-    "Language/Java/并发编程/锁/偏向锁.md"
+    "Language/Java/并发编程/锁/Java 锁升级.md"
   ]
 }
