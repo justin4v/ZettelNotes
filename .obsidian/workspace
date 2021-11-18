@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/Java 锁升级.md",
+            "file": "Language/Java/并发编程/线程安全问题.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/Java 锁升级.md",
+                "file": "Language/Java/并发编程/线程安全问题.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/Java 锁升级.md"
+                "file": "Language/Java/并发编程/线程安全问题.md"
               }
             }
           },
@@ -126,15 +126,15 @@
   },
   "active": "eeeae8e64d433bd3",
   "lastOpenFiles": [
-    "Language/Java/并发编程/Java 锁升级.md",
-    "Language/Java/并发编程/加锁机制.md",
+    "Language/Java/并发编程/线程安全问题.md",
     "Language/Java/并发编程/活跃性问题.md",
-    "Language/Java/并发编程/并发.md",
+    "Language/Java/并发编程/锁/偏向锁.md",
+    "Language/Java/并发编程/锁/轻量级锁.md",
+    "Language/Java/并发编程/性能问题.md",
+    "Language/Java/并发编程/加锁机制.md",
+    "Language/Java/并发编程/相关概念.md",
+    "Language/Java/并发编程/锁/Java 锁升级.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
-    "Language/Java/JMM/相关概念.md",
-    "Language/Java/JMM/代码重排与乱序执行.md",
-    "Language/Java/JMM/Java 同步语义.md",
-    "Language/Java/JMM/Java Memory Model.md",
-    "Language/Java/JMM/Happens-before.md"
+    "Language/Java/JMM/相关概念.md"
   ]
 }
