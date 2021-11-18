@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/CAS.md",
+            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/CAS.md",
+            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
             "mode": "source"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/CAS.md",
+                "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/CAS.md"
+                "file": "Language/Java/JMM/正确的同步与安全的多线程.md"
               }
             }
           },
@@ -139,15 +139,15 @@
   },
   "active": "eeeae8e64d433bd3",
   "lastOpenFiles": [
+    "Language/Java/JMM/正确的同步与安全的多线程.md",
+    "Language/Java/JMM/Java 同步语义.md",
+    "Language/Java/JMM/Java Memory Model.md",
     "Language/Java/并发编程/CAS.md",
     "Base Knowledge/编程/专业词汇.md",
     "附件/checkcast()字节码.png",
     "附件/轻量级锁CAS操作之前堆栈与对象的状态.png",
     "附件/轻量级锁CAS操作之后堆栈与对象的状态.png",
     "Language/Java/并发编程/锁/Java 锁升级.md",
-    "Language/Java/并发编程/锁/偏向锁.md",
-    "Language/Java/JVM/对象结构.md",
-    "Language/Java/并发编程/锁/AQS原理.md",
-    "Language/Java/并发编程/锁/重量级锁.md"
+    "Language/Java/并发编程/锁/偏向锁.md"
   ]
 }
