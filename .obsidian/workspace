@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/线程安全问题.md",
+            "file": "Language/Java/JVM/对象结构.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/线程安全问题.md",
+            "file": "Language/Java/JVM/对象结构.md",
             "mode": "preview"
           }
         },
@@ -73,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207
+    "width": 207,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -89,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/线程安全问题.md",
+                "file": "Language/Java/JVM/对象结构.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/线程安全问题.md"
+                "file": "Language/Java/JVM/对象结构.md"
               }
             }
           },
@@ -137,17 +138,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "eeeae8e64d433bd3",
+  "active": "1af39c09882612c0",
   "lastOpenFiles": [
-    "Language/Java/并发编程/线程安全问题.md",
-    "Language/Java/并发编程/并发相关概念.md",
-    "Language/Java/并发编程/活跃性问题.md",
-    "Language/Java/JMM/JMM 相关概念.md",
-    "Language/Java/并发编程/锁/偏向锁.md",
-    "Language/Java/并发编程/锁/轻量级锁.md",
-    "Language/Java/并发编程/性能问题.md",
-    "Language/Java/并发编程/加锁机制.md",
+    "Language/Java/JVM/对象结构.md",
     "Language/Java/并发编程/锁/Java 锁升级.md",
-    "Language/Java/JMM/正确的同步与安全的多线程.md"
+    "Language/Java/并发编程/锁/Synchronize 底层优化.md",
+    "Language/Java/并发编程/锁/重量级锁.md",
+    "Language/Java/并发编程/锁/AQS原理.md",
+    "Language/Java/并发编程/锁/轻量级锁.md",
+    "Language/Java/并发编程/锁/偏向锁.md",
+    "Language/Java/并发编程/并发相关概念.md",
+    "Language/Java/并发编程/性能问题.md",
+    "Language/Java/并发编程/活跃性问题.md"
   ]
 }
