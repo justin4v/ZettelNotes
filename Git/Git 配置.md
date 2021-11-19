@@ -26,7 +26,7 @@ http://yourname:password@git.oschina.net/name/project.git
 
 ```shell
 [remote "origin"]
-	url = https://justin4v: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@github.com/justin4v/ZettelNotes.git
+	url = https://justin4v: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@github.com/justin4v/ZettelNotes.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 ```
 
