@@ -12,20 +12,7 @@
             "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
             "mode": "source"
           }
-        },
-        "group": "fb825a5be5c4fe08"
-      },
-      {
-        "id": "58678bb342fd7503",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
-            "mode": "preview"
-          }
-        },
-        "group": "fb825a5be5c4fe08"
+        }
       }
     ],
     "direction": "vertical"
