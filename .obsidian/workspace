@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
+            "file": "Book Reading/设计模式解析/面向对象.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
+            "file": "Book Reading/设计模式解析/面向对象.md",
             "mode": "preview"
           }
         },
@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 185,
-    "collapsed": true
+    "width": 185
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
+                "file": "Book Reading/设计模式解析/面向对象.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md"
+                "file": "Book Reading/设计模式解析/面向对象.md"
               }
             }
           },
@@ -140,6 +139,8 @@
   },
   "active": "f682de4ac6103171",
   "lastOpenFiles": [
+    "Book Reading/设计模式解析/面向对象.md",
+    "Book Reading/设计模式解析/面向对象概念.md",
     "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
     "Language/Java/JMM/内存屏障.md",
     "Git/Git 配置.md",
@@ -147,8 +148,6 @@
     "Git/Rebase 和 Merge.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
     "Language/Java/并发编程/CAS.md",
-    "Language/Java/并发编程/并发相关概念.md",
-    "Language/Java/并发编程/锁/Java 锁升级概述.md",
-    "Language/Java/并发编程/锁/偏向锁.md"
+    "Language/Java/并发编程/并发相关概念.md"
   ]
 }
