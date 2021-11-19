@@ -12,7 +12,20 @@
             "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "ffba765881f2b689"
+      },
+      {
+        "id": "8203b749b05ec4e8",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
+            "mode": "preview"
+          }
+        },
+        "group": "ffba765881f2b689"
       }
     ],
     "direction": "vertical"
