@@ -9,23 +9,10 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/面向对象.md",
+            "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
             "mode": "source"
           }
-        },
-        "group": "afad2fcfdb7a309f"
-      },
-      {
-        "id": "0e288502553f49ed",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Book Reading/设计模式解析/面向对象.md",
-            "mode": "preview"
-          }
-        },
-        "group": "afad2fcfdb7a309f"
+        }
       }
     ],
     "direction": "vertical"
@@ -73,7 +60,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 185
+    "width": 185,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -89,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象.md",
+                "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/面向对象.md"
+                "file": "Book Reading/计算机程序的构造和解释/1.1 基本元素.md"
               }
             }
           },
@@ -139,9 +127,9 @@
   },
   "active": "f682de4ac6103171",
   "lastOpenFiles": [
+    "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/面向对象概念.md",
-    "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
     "Language/Java/JMM/内存屏障.md",
     "Git/Git 配置.md",
     "Git/Git Notes.md",
