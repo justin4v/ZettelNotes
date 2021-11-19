@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
+            "file": "Git/Git 配置.md",
             "mode": "source"
           }
         }
@@ -60,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 363,
-    "collapsed": true
+    "width": 363
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
+                "file": "Git/Git 配置.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JMM/正确的同步与安全的多线程.md"
+                "file": "Git/Git 配置.md"
               }
             }
           },
@@ -127,15 +126,15 @@
   },
   "active": "f682de4ac6103171",
   "lastOpenFiles": [
+    "Git/Git 配置.md",
+    "Git/Git Notes.md",
+    "Git/Rebase 和 Merge.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
     "Language/Java/并发编程/CAS.md",
     "Language/Java/并发编程/并发相关概念.md",
     "Language/Java/并发编程/锁/Java 锁升级概述.md",
     "Language/Java/并发编程/锁/偏向锁.md",
     "Language/Java/并发编程/锁/AQS原理.md",
-    "Language/Java/并发编程/锁/重量级锁.md",
-    "Language/Java/并发编程/锁/轻量级锁.md",
-    "Language/Java/并发编程/锁/Synchronize 底层优化.md",
-    "Language/Java/JVM/对象结构.md"
+    "Language/Java/并发编程/锁/重量级锁.md"
   ]
 }
