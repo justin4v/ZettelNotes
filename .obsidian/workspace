@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
+            "file": "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
+            "file": "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md",
             "mode": "preview"
           }
         },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
+                "file": "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md"
+                "file": "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md"
               }
             }
           },
@@ -140,7 +140,7 @@
   },
   "active": "8203b749b05ec4e8",
   "lastOpenFiles": [
-    "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
+    "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md",
     "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
     "Book Reading/计算机程序的构造和解释/LISP.md",
     "Book Reading/设计模式解析/共性和可变性分析.md",
