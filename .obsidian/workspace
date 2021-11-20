@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md",
+            "file": "^8b3208.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md",
+            "file": "^8b3208.md",
             "mode": "preview"
           }
         },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md",
+                "file": "^8b3208.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md"
+                "file": "^8b3208.md"
               }
             }
           },
@@ -140,6 +140,7 @@
   },
   "active": "8203b749b05ec4e8",
   "lastOpenFiles": [
+    "^8b3208.md",
     "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md",
     "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
     "Book Reading/计算机程序的构造和解释/LISP.md",
@@ -148,7 +149,6 @@
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/面向对象概念.md",
     "Book Reading/设计模式解析/面向对象实例.md",
-    "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
-    "Language/Java/JMM/内存屏障.md"
+    "Book Reading/计算机程序的构造和解释/1.1 基本元素.md"
   ]
 }
