@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
+            "file": "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
+            "file": "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
             "mode": "preview"
           }
         },
@@ -73,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 185
+    "width": 185,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -89,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
+                "file": "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md"
+                "file": "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md"
               }
             }
           },
@@ -137,8 +138,9 @@
     "width": 197,
     "collapsed": true
   },
-  "active": "d63119c7bf9613b2",
+  "active": "8203b749b05ec4e8",
   "lastOpenFiles": [
+    "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
     "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
     "Book Reading/计算机程序的构造和解释/LISP.md",
     "Book Reading/设计模式解析/共性和可变性分析.md",
@@ -146,7 +148,6 @@
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/面向对象概念.md",
     "Book Reading/设计模式解析/面向对象实例.md",
-    "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
     "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
     "Language/Java/JMM/内存屏障.md"
   ]
