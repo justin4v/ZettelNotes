@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/共性和可变性分析.md",
+            "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/共性和可变性分析.md",
+            "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/共性和可变性分析.md",
+                "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/共性和可变性分析.md"
+                "file": "Book Reading/计算机程序的构造和解释/为啥阅读本书.md"
               }
             }
           },
@@ -139,15 +139,15 @@
   },
   "active": "d63119c7bf9613b2",
   "lastOpenFiles": [
+    "Book Reading/计算机程序的构造和解释/为啥阅读本书.md",
+    "Book Reading/计算机程序的构造和解释/LISP.md",
     "Book Reading/设计模式解析/共性和可变性分析.md",
     "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/面向对象概念.md",
     "Book Reading/设计模式解析/面向对象实例.md",
     "Book Reading/计算机程序的构造和解释/1.2 过程及其所产生的计算.md",
-    "Book Reading/计算机程序的构造和解释/LISP.md",
     "Book Reading/计算机程序的构造和解释/1.1 基本元素.md",
-    "Language/Java/JMM/内存屏障.md",
-    "Git/Git 配置.md"
+    "Language/Java/JMM/内存屏障.md"
   ]
 }
