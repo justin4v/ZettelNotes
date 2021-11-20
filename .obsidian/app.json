@@ -3,5 +3,6 @@
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "附件",
   "spellcheck": false,
-  "communityPluginSortOrder": "download"
+  "communityPluginSortOrder": "download",
+  "communityThemeSortOrder": "download"
 }
