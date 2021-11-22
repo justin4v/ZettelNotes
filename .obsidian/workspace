@@ -12,20 +12,7 @@
             "file": "Language/Java/JVM/分代收集理论.md",
             "mode": "source"
           }
-        },
-        "group": "11af83410bee5a70"
-      },
-      {
-        "id": "ef7f88acb6c70749",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/JVM/分代收集理论.md",
-            "mode": "preview"
-          }
-        },
-        "group": "11af83410bee5a70"
+        }
       }
     ],
     "direction": "vertical"
@@ -52,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "age",
+                "query": "Minor GC",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,12 +56,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 185,
-    "collapsed": true
+    "width": 185
   },
   "right": {
     "id": "556fe6a48d657f05",
