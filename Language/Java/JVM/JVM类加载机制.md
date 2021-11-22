@@ -1,3 +1,4 @@
+#Java基础
 # JVM架构
 JVM架构图如下：
 
@@ -7,7 +8,8 @@ JVM架构图如下：
 **JVM 实际启动到 JVM 销毁的完整流程**如下图：
 
 ![[class加载的实际流程.png]]
-**DES**
+
+## JVM启动销毁流程
 1. 启动虚拟机 （C++负责创建。*windows : bin/java.exe调用 jvm.dll。 Linux: java 调用 libjvm.so*） ;
 2. 创建一个引导类加载器（**Bootstrap** class loader）实例 （C++实现）; 
 3. C++ 调用Java代码，创建JVM启动器和sun.misc.Launcher实例 [调用引导类加载器，加载创建 **Extend classloader** 和 **Application classloader**]；
@@ -18,7 +20,6 @@ JVM架构图如下：
 8. JVM销毁；
 
 # ClassLoader SubSystem
-**conception**
 - **Loading**：加载 .class（结构信息=>Metaspace、class对象=>Heap）; 
 - **Linking**：准备 class对象（校验class，变量赋予初始值，符号引用解析=>静态链接）；
 - **Initialization**：初始化（初始化变量，动态链接）。
@@ -30,7 +31,6 @@ JVM架构图如下：
 1. 通过类的**全限定名**获取类的二进制字节流；
 2.  加载类的**静态结构到元空间**(Metaspace)；
 3. 在 Heap 中创建**java.lang.class 对象** 并指向 Metaspace 中的 class 结构。
-
 
 # Linking
 ## Verification
@@ -67,8 +67,8 @@ JVM架构图如下：
 2. 直接引用
 **能确定数据在内存中的位置**的引用，如直接指针、相对偏移量、句柄
 
-在类加载过程（编译）中完成的解析称为**静态绑定**。
-在运行期间完成的解析称为**动态绑定**。
+- 在**类加载过程（编译）中完成的解析**称为**静态绑定**。
+- 在**运行期间完成的解析**称为**动态绑定**。
 参考：[[静态绑定和动态绑定]]
 
 # Initialization
@@ -93,36 +93,35 @@ JVM架构图如下：
 一般来说，只有在**==第一次主动调用==** 某个类时才会去进行类加载，JVM规定了**6种主动调用**：
 1.  一个类的实例被**创建**（`new`操作、反射Class.forName("")方法、`cloning`，反序列化）；
 2.  **调用类的`static`方法**；
-3.  **使用或对类/接口的`static`属性进行赋值**时（这不包括`final`和与在编译期确定的常量表达式）；
+3.  **使用或对类/接口的`static`属性进行赋值**时（这不包括`final`和与在编译期确定的常量表达式）； ^dded1d
 4.  当调用 API 中的某些**反射方法**时；
 5.  **子类被初始化**（会先初始化父类）；
 6.  被设定为 JVM 启动时的**启动类**（main方法的类首先初始化）。
 
 ### Attention
-1. 对于[[#第3点，如果使用或赋值**编译期间能确定**的常量，不会对类进行初始化。
-但是*如果编译期间无法确定，则需要正常初始化、运行以确定值*。
-如 `public static final double str=Math.random();//编译期间不能确定`，如果使用了 str 变量，需要对类初始化。
+1. 对于[[#^dded1d|第3点]]，如果使用或赋值**编译期间能确定**的常量，不会对类进行初始化；
+	1. 但是*如果编译期间无法确定，则需要正常初始化、运行以确定值*。
+	如 `public static final double str=Math.random();//编译期间不能确定`，如果使用了 str 变量，需要对类初始化。
 
-**其他被动调用不会初始化类**，如：
--   *子类引用父类的静态字段，不会导致子类初始化*
-```java
-System.out.println(SubClass.value); // value 字段在 SuperClass 中定义
-```
+2. **其他被动调用不会初始化类**，如：
+	-   **子类引用父类的静态字段**，不会导致子类初始化
+	```java
+	System.out.println(SubClass.value); // value 字段在 SuperClass 中定义
+	```
 
--   *通过数组定义来引用类，不会触发此类的初始化*。该过程**会对数组类进行初始化**，数组类是一个由虚拟机自动生成的、直接继承自 `Object` 的子类，其中包含了数组的属性和方法。
+	-   **通过数组定义来引用类**，不会触发此类的初始化。该过程**会对数组类进行初始化**，数组类是一个由虚拟机自动生成的、直接继承自 `Object` 的子类，其中包含了数组的属性和方法。
 
-```java
-SuperClass[] sca = new SuperClass[10];
-```
+	```java
+	SuperClass[] sca = new SuperClass[10];
+	```
 
--   常量在编译阶段会存入调用类的常量池中，本质上并没有直接引用到定义常量的类，因此*不会触发定义常量的类的初始化*。
+3. **调用类的常量**。常量在编译阶段会存入调用类的常量池中，本质上并没有直接引用到定义常量的类，因此*不会触发定义常量的类的初始化*。
+	```java
+	System.out.println(ConstClass.HELLOWORLD);
+	```
 
-```java
-System.out.println(ConstClass.HELLOWORLD);
-```
 
-
-### 4 类初始化`<clinit>` 
+### 4 类初始化方法`<clinit>` 
 -  *`<clinit>`只会执行一次*；
 -   `<clinit>` 是*编译器自动收集类中所有类变量的赋值动作和静态语句块（static{} 块）中的语句合并产生*。编译器收集的顺序*由语句在源文件中出现的顺序决定*。特别注意的是，静态语句块只能访问到定义在它之前的类变量，定义在它*之后的类变量只能赋值，不能访问*。例如以下代码：
 
@@ -160,23 +159,18 @@ public static void main(String[] args) {
 -   接口中不可以使用静态语句块，但仍然有类变量初始化的赋值操作，因此接口与类一样都会生成 `<clinit>` 方法。但接口与类不同的是，执行*接口的 `<clinit>` 方法不需要先执行父接口的 `<clinit>` 方法*。只有当*父接口中定义的变量使用时，父接口才会初始化*。另外，*接口的实现类在初始化时也不会执行接口的 `<clinit>` 方法*。
 -   *JVM 保证一个类的 `<clinit>` 方法在多线程环境下被正确的加锁和同步*，如果多个线程同时初始化一个类，只会有一个线程执行这个类的 `<clinit>` 方法，其它线程都会阻塞等待，直到活动线程执行 `<clinit>` 方法完毕。如果在一个类的 `<clinit>` 方法中有耗时的操作，就可能造成多个线程阻塞，在实际过程中此种阻塞很隐蔽。
 
-### 5 实例初始化`<init>`
-**conception**
-- 编译器按照出现顺序收集*成员变量赋值语句、普通代码块，最后收集构造函数*的代码，最终组成\<init>；
-- **\<init>** is the (or one of the) *constructor(s) for the instance, and non-static field initialization*；
-- **\<clinit>** are the *static initialization blocks for the class, and static field initialization*。
-
-**DES**
-1. \<init> 是实例构造器方法，在程序**执行类的 constructor 时才会执行init方法**;
-在 [[字节码示例#Bytecode]] 的第 7 行 `7 invokespecial #4 <java/lang/StringBuilder.<init> : ()V>` 可以看到*在new StringBuilder 时调用了 StringBuilder 的 \<init> 实例初始化方法*。
-参考： [[字节码示例]]
-
+### 5 实例初始化方法`<init>`
+1.  编译器按照出现顺序收集*成员变量赋值语句、普通代码块，最后收集构造函数*的代码，最终组成\<init>；
+	- **\<init>** is the (or one of the) *constructor(s) for the instance, and non-static field initialization*；
+	- **\<clinit>** are the *static initialization blocks for the class, and static field initialization*。
+2. \<init> 是实例构造器方法，在程序**执行类的 constructor 时才会执行 \<init> 方法**;
+	在![[字节码示例#Bytecode|字节码示例]] 的第 7 行 `7 invokespecial #4 <java/lang/StringBuilder.<init> : ()V>` 可以看到*在new StringBuilder 时调用了 StringBuilder 的 \<init> 实例初始化方法*。
 3. \<clinit> 是类构造器方法，也就是在jvm进行类的 *[[#Initialization]]阶段jvm会调用clinit* 方法。
 
-**Attention**
-JVM 中可以有**零个或多个实例初始化\<init>方法**，一个方法称为实例初始化方法的条件是:
--   It is **defined in a class**;
--   Its name is *\<init>*;
--   It returns *void*。
+## 注意
+1. JVM 中可以有**零个或多个实例初始化\<init>方法**，一个方法称为实例初始化方法的条件是:
+	-   It is **defined in a class**;
+	-   Its name is *\<init>*;
+	-   It returns *void*。
 
-JVM中**自动收集 static 生成一个 \<clinit>**。
+2. JVM中**自动收集 static 生成一个 \<clinit>**。
