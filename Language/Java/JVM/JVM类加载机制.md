@@ -8,7 +8,7 @@ JVM架构图如下：
 
 ![[class加载的实际流程.png]]
 **DES**
-1. 启动虚拟机 （C++负责创建）[windows : bin/java.exe调用 jvm.dll。 Linux: java 调用 libjvm.so] ;
+1. 启动虚拟机 （C++负责创建。*windows : bin/java.exe调用 jvm.dll。 Linux: java 调用 libjvm.so*） ;
 2. 创建一个引导类加载器（**Bootstrap** class loader）实例 （C++实现）; 
 3. C++ 调用Java代码，创建JVM启动器和sun.misc.Launcher实例 [调用引导类加载器，加载创建 **Extend classloader** 和 **Application classloader**]；
 4. sun.misc.Launcher.getLauncher() 获取运行类的加载器 ClassLoader ( 实际是AppClassLoader );  
@@ -19,52 +19,51 @@ JVM架构图如下：
 
 # ClassLoader SubSystem
 **conception**
-- **Loading**：加载 .class JMV（结构信息=>Metaspace、class对象=>Heap）; 
+- **Loading**：加载 .class（结构信息=>Metaspace、class对象=>Heap）; 
 - **Linking**：准备 class对象（校验class，变量赋予初始值，符号引用解析=>静态链接）；
 - **Initialization**：初始化（初始化变量，动态链接）。
 
 类加载过程：
 ![[类加载过程.png]]
 
-## Loading
+# Loading
 1. 通过类的**全限定名**获取类的二进制字节流；
 2.  加载类的**静态结构到元空间**(Metaspace)；
 3. 在 Heap 中创建**java.lang.class 对象** 并指向 Metaspace 中的 class 结构。
 
 
-## Linking
-### Verification
-1.**Target**
+# Linking
+## Verification
+### Target
  - **保证 Class 字节流符合虚拟机规范**
 
 参考：[[class 文件结构]]
 
-2.**DES**
+### 过程
 1. **文件格式验证**：验证字节流是否符合Class文件格式的规范。需以**魔数`0xCAFEBABE`开头（身份标识）**、**主次版本号**是否在当前虚拟机的处理范围之内、常量池中的常量是否有不被支持的类型。
 2. **元数据验证**：对字节码描述的信息进行语义分析（注意：对比javac编译阶段的语义分析），以保证其描述的信息符合Java语言规范的要求；例如：这个类是否有父类，除了 `java.lang.Object`之外。
 3. **字节码验证**：通过数据流和控制流分析，确定程序语义是合法的、符合逻辑的。
 4. **符号引用验证**：确保解析动作能正确执行。
 
-### Preparation
-1.**Target**
+## Preparation
+### Target
  - 在 **Metaspace 中为类变量默认初始化**
 
-2.**Attention**
+### Attention
 -   Preparation进行内存分配的**仅包括类变量（static），不含有静态构造块等，分配在 Metaspace**，而不包括实例变量。实例变量会在对象实例化时随着对象一块分配在 Java 堆中；
 -   默认初始值是指**初始化为数据类型默认的零值**（如 `0`、`0L`、`null`、`false` 等），不执行Java 代码；
 -   类字段**同时被 final 和 static 修饰（不允许修改，类似于常量，必须初始化时赋予值）**，称为`ConstantValue`属性，Preparation 阶段变量就会被初始化为指定的值。
 
-### Resolution
+## Resolution
 
-#### 目的
+### 目的
 -  **符号引用替换成直接引用**
 
-#### 符号引用和直接引用
+### 符号引用和直接引用
 1. 符号引用：
 **一组指明需要引用对象的符号**，是一个唯一标识，但不是实际内存地址，如静态方法、类变量等（类加载过程中只能确定属于类的属性）。 
 2. 直接引用
 **能确定数据在内存中的位置**的引用，如直接指针、相对偏移量、句柄
-
 
 在类加载过程（编译）中完成的解析称为**静态绑定**。
 在运行期间完成的解析称为**动态绑定**。
