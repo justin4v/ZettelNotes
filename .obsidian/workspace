@@ -12,7 +12,20 @@
             "file": "Language/Java/JVM/JVM类加载机制.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "3f4a78cb12a6538f"
+      },
+      {
+        "id": "206ce585c3554674",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/JVM/JVM类加载机制.md",
+            "mode": "preview"
+          }
+        },
+        "group": "3f4a78cb12a6538f"
       }
     ],
     "direction": "vertical"

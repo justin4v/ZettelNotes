@@ -19,9 +19,15 @@ JVM架构图如下：
 7. 程序运行结束 ；
 8. JVM销毁；
 
+# 类加载机制概念
+Java虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最
+终形成可以被虚拟机直接使用的Java类型，这个过程被称作虚拟机的类加载机制。
 # Class Loader SubSystem
 - **Loading**：**加载 .class**（结构信息=>Metaspace、class对象=>Heap）; 
 - **Linking**：**准备 class 对象**（校验class，变量赋予初始值，符号引用解析=>静态链接）；
+	- **Verification**
+	- **Preparation**
+	- **Resolution**
 - **Initialization**：**初始化**（初始化变量，动态链接）。
 
 类加载过程：
@@ -83,7 +89,7 @@ JVM架构图如下：
 
 ## 过程
 ### 1 步骤
-*Class Loader Subsystem 加载类（这里指包含 [[#Loading]]、[[#Linking]]、[[#Initialization]]三个阶段）的完整步骤*：
+*Class Loader 类加载（包含 [[#Loading]]、[[#Linking]]、[[#Initialization]]三个阶段）的完整步骤*：
 1. 满足[[#2 类 Initialization 时机|类加载时机]]要求，类加载开始；
 3.  如果该类的直接父类还没有被初始化，先初始化其父类。
 4. main 方法的类首先初始化；
@@ -102,11 +108,11 @@ JVM架构图如下：
 	- 使用 *new 关键字实例化对象*的时候。
 	- *读取或设置一个类型的静态字段*（被final修饰、已在编译期把结果放入常量池的静态字段除外）的时候。
 	- *调用一个类型的静态方法*的时候。
-2. 使用 java.lang.reflect 包的方法对类型进行反射调用的时候，如果类型没有进行过初始化，则需要先触发其初始化。
-3. 当初始化类的时候，如果发现其父类还没有进行过初始化，则需要先触发其父类的初始化。
-4. 当虚拟机启动时，用户需要指定一个要执行的主类（包含main()方法的那个类），虚拟机会先初始化这个主类。
-5. 当使用JDK 7新加入的动态语言支持时，如果一个java.lang.invoke.MethodHandle实例最后的解析结果为REF_getStatic、REF_putStatic、REF_invokeStatic、REF_newInvokeSpecial四种类型的方法句柄，并且这个方法句柄对应的类没有进行过初始化，则需要先触发其初始化。
-6. 当一个接口中定义了JDK 8新加入的默认方法（被default关键字修饰的接口方法）时，如果有这个接口的实现类发生了初始化，那该接口要在其之前被初始化。
+2. 使用 java.lang.reflect 包的方法对类型进行*反射调用*的时候，如果类型没有进行过初始化，则需要先触发其初始化。
+3. 当初始化类的时候，如果发现其父类还没有进行过初始化，则需要*先触发其父类的初始化*。
+4. 当虚拟机启动时，用户要指定要执行的主类（*包含 main() 方法的类*），虚拟机会先初始化这个主类。
+5. 当使用 JDK 7 新加入的动态语言支持时，如果一个 java.lang.invoke.MethodHandle 实例最后的解析结果为REF_getStatic、REF_putStatic、REF_invokeStatic、REF_newInvokeSpecial四种类型的方法句柄，并且这个方法句柄对应的类没有进行过初始化，则需要先触发其初始化。
+6. 当一个接口中定义了 JDK 8 新加入的*默认方法（被 default 关键字修饰的接口方法）*时，*如果接口的实现类发生了初始化，那该接口要在其之前被初始化*。
 
 
 ### Attention
@@ -134,40 +140,42 @@ JVM架构图如下：
 
 ### 4 类构造器`<clinit>` 
 -  *`<clinit>`只会执行一次*；
--   `<clinit>` 是*编译器自动收集类中所有类变量的赋值动作和静态语句块（static{} 块）中的语句合并产生*。编译器收集的顺序*由语句在源文件中出现的顺序决定*。特别注意的是，静态语句块只能访问到定义在它之前的类变量，定义在它*之后的类变量只能赋值，不能访问*。例如以下代码：
-
-```java
-public class Test {
-    static {
-        i = 0;                // 给变量赋值可以正常编译通过
-        System.out.print(i);  // 这句编译器会提示“非法向前引用”
-    }
-    static int i = 1;
-}
-```
+-   `<clinit>` 是*编译器自动收集类中所有类变量的赋值动作和静态语句块（static{} 块）中的语句合并产生*。
+-   编译器收集的顺序*由语句在源文件中出现的顺序决定*。
+-   注意，*静态语句块只能访问到定义在它之前的类变量*，定义在它*之后的类变量只能赋值，不能访问*。
+	例如以下代码：
+	```java
+	public class Test {
+		static {
+			i = 0;                // 给变量赋值可以正常编译通过
+			System.out.print(i);  // 这句编译器会提示“非法向前引用”
+		}
+		static int i = 1;
+	}
+	```
 
 -   与类的构造函数（或者说实例构造器 `<init>()`）不同，*不需要显式的调用父类的构造器*。虚拟机会自动保证在子类的 `<clinit>()` 方法运行之前，父类的 `<clinit>()` 方法已经执行结束。因此虚拟机中第一个执行 `<clinit>()` 方法的类肯定为 `java.lang.Object`。
--   由于父类的 `<clinit>()` 方法先执行，也就意味着*父类中定义的静态语句块要优于子类的*。例如以下代码：
+-   由于父类的 `<clinit>()` 方法先执行，也就意味着*父类中定义的静态语句块要优于子类的*。
+	例如以下代码：
+	```java
+	static class Parent {
+		public static int A = 1;
+		static {
+			A = 2;
+		}
+	}
 
-```java
-static class Parent {
-    public static int A = 1;
-    static {
-        A = 2;
-    }
-}
+	static class Sub extends Parent {
+		public static int B = A;
+	}
 
-static class Sub extends Parent {
-    public static int B = A;
-}
-
-public static void main(String[] args) {
-     System.out.println(Sub.B);  // 输出结果是父类中的静态变量 A 的值，也就是 2。
-}
-```
+	public static void main(String[] args) {
+		 System.out.println(Sub.B);  // 输出结果是父类中的静态变量 A 的值，也就是 2。
+	}
+	```
 
 -   `<clinit>` 方法*对于类或接口不是必须的*，如果一个类中不包含静态语句块，也没有对类变量的赋值操作，编译器可以不为该类生成 `<clinit>` 方法。
--   接口中不可以使用静态语句块，但仍然有类变量初始化的赋值操作，因此接口与类一样都会生成 `<clinit>` 方法。但接口与类不同的是，执行*接口的 `<clinit>` 方法不需要先执行父接口的 `<clinit>` 方法*。只有当*父接口中定义的变量使用时，父接口才会初始化*。另外，*接口的实现类在初始化时也不会执行接口的 `<clinit>` 方法*。
+-   *接口中不可以使用静态语句块，但仍然有类变量初始化的赋值操作*，因此接口与类一样都会生成 `<clinit>` 方法。但接口与类不同的是，执行*接口的 `<clinit>` 方法不需要先执行父接口的 `<clinit>` 方法*。只有当*父接口中定义的变量使用时，父接口才会初始化*。另外，*接口的实现类在初始化时也不会执行接口的 `<clinit>` 方法*。
 -   *JVM 保证一个类的 `<clinit>` 方法在多线程环境下被正确的加锁和同步*，如果多个线程同时初始化一个类，只会有一个线程执行这个类的 `<clinit>` 方法，其它线程都会阻塞等待，直到活动线程执行 `<clinit>` 方法完毕。如果在一个类的 `<clinit>` 方法中有耗时的操作，就可能造成多个线程阻塞，在实际过程中此种阻塞很隐蔽。
 
 ### 5 方法构造器`<init>`
