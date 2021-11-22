@@ -1,4 +1,4 @@
-#Java基础
+#Java基础 #JVM #ClassLoad
 # JVM架构
 JVM架构图如下：
 
@@ -164,7 +164,9 @@ public static void main(String[] args) {
 	- **\<init>** is the (or one of the) *constructor(s) for the instance, and non-static field initialization*；
 	- **\<clinit>** are the *static initialization blocks for the class, and static field initialization*。
 2. \<init> 是实例构造器方法，在程序**执行类的 constructor 时才会执行 \<init> 方法**;
-	在![[字节码示例#Bytecode|字节码示例]] 的第 7 行 `7 invokespecial #4 <java/lang/StringBuilder.<init> : ()V>` 可以看到*在new StringBuilder 时调用了 StringBuilder 的 \<init> 实例初始化方法*。
+	在![[字节码示例#^e8050d]] 中`main`方法的 `Code` 区第 7 行:
+	`7 invokespecial #4 <java/lang/StringBuilder.<init> : ()V>` 
+	可以看到*在new StringBuilder 时调用了 StringBuilder 的 \<init> 实例初始化方法*。
 3. \<clinit> 是类构造器方法，也就是在jvm进行类的 *[[#Initialization]]阶段jvm会调用clinit* 方法。
 
 ## 注意
