@@ -124,7 +124,7 @@ GC最基础的算法有四种：复制算法、标记 -清除算法、标记-压
 -   **Parallel 收集器**：Parallel Scavenge收集器类似ParNew收集器，Parallel 收集器更关注系统的吞吐量。
 -   **Parallel Old 收集器**：Parallel Old是Parallel Scavenge收集器的老年代版本，使用多线程和“标记－整理”算法
 -   **CMS 收集器**：**CMS（Concurrent Mark Sweep）** 收集器是一种以获取最短回收停顿时间（Stop-The-World）为目标的收集器。 ^e81d32
--   **G1收集器**：**G1 (Garbage-First)** 是一款面向服务器的垃圾收集器,主要针对配备多颗处理器及大容量内存的机器. 以极高概率满足GC停顿时间要求的同时,还具备高吞吐量性能特征
+-   **G1收集器**：**G1 (Garbage-First)** 是一款面向服务器的垃圾收集器，主要针对配备多颗处理器及大容量内存的机器。以极高概率满足GC停顿时间要求的同时,还具备高吞吐量性能特征。 ^d3fbb8
 
 参考：
 [JVM 的 CMS](https://www.cnblogs.com/plxx/p/4527065.html)

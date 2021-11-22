@@ -1,15 +1,19 @@
-# Minor GC
+# Minor GC/Young GC
 - 从年轻代空间（包括 Eden 和 Survivor 区域）回收内存被称为 Minor GC；
 
 ## 触发条件
 当 Eden 区满时，触发Minor GC。
 
-# Major GC
--   对老年代GC称为Major GC；
+# Major GC/Old GC
+-   对老年代 GC 称为Major GC；
+-   目前只有 [[GC 算法#^e81d32|CMS 收集器]]会有单独收集老年代的行为。
 
+# Mixed GC
+- 收集整个新生代以及部分老年代的垃圾收集；
+- 目前只有 [[GC 算法#^d3fbb8|G1收集器]]会有这种行为
 
 # Full GC
--   Full GC 是对整个 Heap 的 GC；
+-   Full GC 是对整个 Heap 和 Method Area的 GC；
 
 ## 触发条件
 

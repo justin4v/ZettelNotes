@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Minor GC",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,8 +56,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -128,6 +127,7 @@
   "active": "fdda81f72d3beba7",
   "lastOpenFiles": [
     "Language/Java/JVM/分代收集理论.md",
+    "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
     "Language/Java/JVM/GC 算法.md",
     "GC 算法^可.md",
     "Language/Java/工具/查看对象头信息示例.md",
@@ -135,7 +135,6 @@
     "Language/Java/JVM/对象分配规则.md",
     "Language/Java/JVM/JVM类加载机制.md",
     "Language/Java/JVM/类加载示例.md",
-    "Language/Java/JDK source/Character.md",
-    "Language/Java/JDK source/Integer.md"
+    "Language/Java/JDK source/Character.md"
   ]
 }
