@@ -4,15 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "5832e513f2572b4c",
+        "id": "186766d1dd435986",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JDK source/Character.md",
+            "file": "Language/Java/JVM/JVM类加载机制.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "c5f7c66a46ce8761"
+      },
+      {
+        "id": "66e022b9f6d0d79d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Language/Java/JVM/JVM类加载机制.md",
+            "mode": "preview"
+          }
+        },
+        "group": "c5f7c66a46ce8761"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 185
+    "width": 185,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JDK source/Character.md",
+                "file": "Language/Java/JVM/JVM类加载机制.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JDK source/Character.md"
+                "file": "Language/Java/JVM/JVM类加载机制.md"
               }
             }
           },
@@ -124,17 +138,17 @@
     "width": 197,
     "collapsed": true
   },
-  "active": "5832e513f2572b4c",
+  "active": "186766d1dd435986",
   "lastOpenFiles": [
+    "Language/Java/JVM/JVM类加载机制.md",
+    "Language/Java/JVM/类加载示例.md",
     "Language/Java/JDK source/Character.md",
     "Language/Java/JDK source/Integer.md",
     "Book Reading/计算机程序的构造和解释/Programming by poking.md",
     "Language/Java/JVM/NameSpace.md",
     "Language/Java/JVM/JVM ClassLoader.md",
     "Language/Java/JVM/GC 算法.md",
-    "Language/Java/JVM/JVM类加载机制.md",
     "Language/Java/JVM/字节码示例.md",
-    "Language/Java/JVM/类加载示例.md",
     "Language/Java/JVM/对象结构.md"
   ]
 }
