@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/计算机程序的构造和解释/Programming by poking.md",
+            "file": "Language/Java/JDK source/Character.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/Programming by poking.md",
+                "file": "Language/Java/JDK source/Character.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/计算机程序的构造和解释/Programming by poking.md"
+                "file": "Language/Java/JDK source/Character.md"
               }
             }
           },
@@ -126,9 +126,9 @@
   },
   "active": "5832e513f2572b4c",
   "lastOpenFiles": [
-    "Book Reading/计算机程序的构造和解释/Programming by poking.md",
     "Language/Java/JDK source/Character.md",
     "Language/Java/JDK source/Integer.md",
+    "Book Reading/计算机程序的构造和解释/Programming by poking.md",
     "Language/Java/JVM/NameSpace.md",
     "Language/Java/JVM/JVM ClassLoader.md",
     "Language/Java/JVM/GC 算法.md",
