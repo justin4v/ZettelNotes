@@ -50,12 +50,14 @@ JVM架构图如下：
  - 在 **Metaspace 中为类变量默认初始化**
 
 ### Attention
--   Preparation进行内存分配的**仅包括类变量（static），不含有静态构造块等，分配在 Metaspace**，而不包括实例变量。实例变量会在对象实例化时随着对象一块分配在 Java 堆中；
+-   Preparation 进行内存分配：
+	1. **仅包括类变量（static），分配在 Metaspace**
+	2. **不含有静态构造块（\<clinit>中初始化)** ；
+	3. **不包括实例变量**。*实例变量会在对象实例化时随着对象一块分配在 Java 堆中*；
 -   默认初始值是指**初始化为数据类型默认的零值**（如 `0`、`0L`、`null`、`false` 等），不执行Java 代码；
 -   类字段**同时被 final 和 static 修饰（不允许修改，类似于常量，必须初始化时赋予值）**，称为`ConstantValue`属性，Preparation 阶段变量就会被初始化为指定的值。
 
 ## Resolution
-
 ### 目的
 -  **符号引用替换成直接引用**
 
@@ -69,12 +71,12 @@ JVM架构图如下：
 在运行期间完成的解析称为**动态绑定**。
 参考：[[静态绑定和动态绑定]]
 
-## Initialization
-1.**Target**
- - **为类变量赋予正确的值**，赋值初始化；
- - 收集 static 初始化语句，放入**类初始化方法 clinit() **并执行。
+# Initialization
+## Target
+ - **为类变量赋予正确的值，赋值初始化**；
+ - **收集 static 初始化语句**，放入**类初始化方法 \<clinit>** 并执行。
 
-2.**DES**
+## 过程
  - 除了 ConstantValue 由 JVM 直接初始化外（[[#Preparation]]阶段），**其他的初始化代码被Java 编译器放入方法`<clinit>`中执行**。
  - 一般来说，只有在**==第一次主动调用==** 某个类时才会去进行类加载；
  - 如果有父类，先加载父类再加载自身。
@@ -116,13 +118,14 @@ SuperClass[] sca = new SuperClass[10];
 System.out.println(ConstClass.HELLOWORLD);
 ```
 
-
 ### 3 初始化顺序
-1.  先（调用 \<clinit> ）进行类初始化；
-2.  如果调用 Constructor，则会调用 \<init> 进行实例初始化；
-3.  同类（static 或非static）按源码中顺序初始化；
-4.  最后调用构造函数初始化；
-5.  main方法的类首先初始化。
+1. 首先对类变量（static）进行默认初始化
+2. 对 ConstantValue 
+3.   先（调用 \<clinit> ）进行类初始化；
+4.  如果调用 Constructor，则会调用 \<init> 进行实例初始化；
+5.  同类（static 或非static）按源码中顺序初始化；
+6.  最后调用构造函数初始化；
+7.  main方法的类首先初始化。
 
 ![[类初始化顺序示意.png]]
 
