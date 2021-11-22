@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象分配规则.md",
+            "file": "Language/Java/JVM/GC 算法.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/对象分配规则.md",
+            "file": "Language/Java/JVM/GC 算法.md",
             "mode": "preview"
           }
         },
@@ -73,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 185
+    "width": 185,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -89,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/对象分配规则.md",
+                "file": "Language/Java/JVM/GC 算法.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/对象分配规则.md"
+                "file": "Language/Java/JVM/GC 算法.md"
               }
             }
           },
@@ -139,8 +140,8 @@
   },
   "active": "66e022b9f6d0d79d",
   "lastOpenFiles": [
-    "Language/Java/JVM/对象分配规则.md",
     "Language/Java/JVM/GC 算法.md",
+    "Language/Java/JVM/对象分配规则.md",
     "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/JVM类加载机制.md",
     "Language/Java/JVM/类加载示例.md",
