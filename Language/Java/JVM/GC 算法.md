@@ -1,12 +1,7 @@
 #Java基础 #GC
 
 # 分代收集理论
-1. 当前商业虚拟机的垃圾收集器，大多数都遵循了 **分代收集（Generational Collection）** [1] 理论进行设计。
-2. 分代收集实质是一套*符合大多数程序运行实际情况的经验法则*，它建立在两个分代假说之上：
-	1. 弱分代假说（Weak Generational Hypothesis）：绝大多数对象都是朝生夕灭的。
-	2. 强分代假说（Strong Generational Hypothesis）：熬过越多次垃圾收集过程的对象就越难以消亡。
-
-
+[[分代收集理论]]
 
 # GC 算法
 ## 主要关注点
