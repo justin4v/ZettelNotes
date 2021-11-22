@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/工具/查看对象头信息示例.md",
+            "file": "Language/Java/JVM/分代收集理论.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/工具/查看对象头信息示例.md",
+            "file": "Language/Java/JVM/分代收集理论.md",
             "mode": "preview"
           }
         },
@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 185,
-    "collapsed": true
+    "width": 185
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/工具/查看对象头信息示例.md",
+                "file": "Language/Java/JVM/分代收集理论.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/工具/查看对象头信息示例.md"
+                "file": "Language/Java/JVM/分代收集理论.md"
               }
             }
           },
@@ -140,8 +139,8 @@
   },
   "active": "66e022b9f6d0d79d",
   "lastOpenFiles": [
-    "Language/Java/工具/查看对象头信息示例.md",
     "Language/Java/JVM/分代收集理论.md",
+    "Language/Java/工具/查看对象头信息示例.md",
     "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/GC 算法.md",
     "Language/Java/JVM/对象分配规则.md",
