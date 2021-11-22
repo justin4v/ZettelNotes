@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/JVM类加载机制.md",
+            "file": "Language/Java/JVM/对象分配规则.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/JVM类加载机制.md",
+            "file": "Language/Java/JVM/对象分配规则.md",
             "mode": "preview"
           }
         },
@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 185,
-    "collapsed": true
+    "width": 185
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/JVM类加载机制.md",
+                "file": "Language/Java/JVM/对象分配规则.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/JVM类加载机制.md"
+                "file": "Language/Java/JVM/对象分配规则.md"
               }
             }
           },
@@ -140,6 +139,8 @@
   },
   "active": "66e022b9f6d0d79d",
   "lastOpenFiles": [
+    "Language/Java/JVM/对象分配规则.md",
+    "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/JVM类加载机制.md",
     "Language/Java/JVM/类加载示例.md",
     "Language/Java/JDK source/Character.md",
@@ -147,8 +148,6 @@
     "Book Reading/计算机程序的构造和解释/Programming by poking.md",
     "Language/Java/JVM/NameSpace.md",
     "Language/Java/JVM/JVM ClassLoader.md",
-    "Language/Java/JVM/GC 算法.md",
-    "Language/Java/JVM/字节码示例.md",
-    "Language/Java/JVM/对象结构.md"
+    "Language/Java/JVM/GC 算法.md"
   ]
 }
