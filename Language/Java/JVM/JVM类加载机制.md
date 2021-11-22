@@ -20,15 +20,19 @@ JVM架构图如下：
 8. JVM销毁；
 
 # 类加载机制概念
-Java虚拟机把描述类的数据从Class文件加载到内存，并对数据进行校验、转换解析和初始化，最
-终形成可以被虚拟机直接使用的Java类型，这个过程被称作虚拟机的类加载机制。
-# Class Loader SubSystem
+1. JVM **把描述类的数据从Class文件加载到内存**；
+2. 并对数据进行**校验、转换解析和初始化**；
+3. 最终形成**可以被虚拟机直接使用的 Java 类型（用来实例化 object）**，这个过程被称作虚拟机的*类加载机制*。
+
+类加载（Class Loading）的主要步骤如下：
 - **Loading**：**加载 .class**（结构信息=>Metaspace、class对象=>Heap）; 
 - **Linking**：**准备 class 对象**（校验class，变量赋予初始值，符号引用解析=>静态链接）；
 	- **Verification**
 	- **Preparation**
 	- **Resolution**
 - **Initialization**：**初始化**（初始化变量，动态链接）。
+- **Using**
+- **Unloading**
 
 类加载过程：
 ![[类加载过程.png]]
@@ -91,15 +95,18 @@ Java虚拟机把描述类的数据从Class文件加载到内存，并对数据�
 ### 1 步骤
 *Class Loader 类加载（包含 [[#Loading]]、[[#Linking]]、[[#Initialization]]三个阶段）的完整步骤*：
 1. 满足[[#2 类 Initialization 时机|类加载时机]]要求，类加载开始；
-3.  如果该类的直接父类还没有被初始化，先初始化其父类。
-4. main 方法的类首先初始化；
-6. 首先对类变量（static）进行默认初始化（[[#Preparation]]阶段）；
-7. 对 ConstantValue 初始化（[[#Preparation]]阶段）；
-8.  调用 \<clinit> （同类型-static 或非static-按源码中顺序排序）进行类初始化；
-9.  如果调用 Constructor，则会调用 \<init> 进行实例初始化；
-10.  最后调用构造函数初始化。
+2.  如果该类的直接父类还没有被初始化，先初始化其父类。
+3. main 方法的类首先初始化；
+4. 首先对类变量（static）进行默认初始化（[[#Preparation]]阶段）；
+5. 对 ConstantValue 初始化（[[#Preparation]]阶段）；
+6.  调用 \<clinit> （同类型-static 或非static-按源码中顺序排序）进行类初始化；
 
-![[类初始化顺序示意.png]]
+如果类被实例化为对象（如 `new` 指令），则会有如下过程
+
+10.  如果调用 Constructor，则会调用 \<init> 进行实例初始化；
+11.  最后调用构造函数初始化。
+
+![[类实例化顺序示意.png]]
 
 ### 2 类 Initialization 时机
 什么情况下需要开始类加载过程的第一个阶段“加载（Loading）”，《Java虚拟机规范》中并没有进行强制约束，这点可以交给虚拟机的具体实现来自由把握。
