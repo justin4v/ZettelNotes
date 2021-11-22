@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JDK source/Integer.md",
+            "file": "Book Reading/计算机程序的构造和解释/未命名.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JDK source/Integer.md",
+                "file": "Book Reading/计算机程序的构造和解释/未命名.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JDK source/Integer.md"
+                "file": "Book Reading/计算机程序的构造和解释/未命名.md"
               }
             }
           },
@@ -126,6 +126,8 @@
   },
   "active": "5832e513f2572b4c",
   "lastOpenFiles": [
+    "Book Reading/计算机程序的构造和解释/未命名.md",
+    "Language/Java/JDK source/Character.md",
     "Language/Java/JDK source/Integer.md",
     "Language/Java/JVM/NameSpace.md",
     "Language/Java/JVM/JVM ClassLoader.md",
@@ -133,8 +135,6 @@
     "Language/Java/JVM/JVM类加载机制.md",
     "Language/Java/JVM/字节码示例.md",
     "Language/Java/JVM/类加载示例.md",
-    "Language/Java/JVM/对象结构.md",
-    "Book Reading/计算机程序的构造和解释/1.2 程序及其所产生的过程.md",
-    "^8b3208.md"
+    "Language/Java/JVM/对象结构.md"
   ]
 }
