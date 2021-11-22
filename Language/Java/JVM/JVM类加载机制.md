@@ -27,6 +27,11 @@ JVM架构图如下：
 类加载过程：
 ![[类加载过程.png]]
 
+## 注意
+1. 加载、验证、准备、初始化和卸载这五个阶段的顺序是确定的，类型的加载过程必须按照这种顺序按部就班地开始；
+2. 解析阶段则不一定：它在某些情况下可以在初始化阶段之后再开始，
+这是为了支持Java语言的运行时绑定特性（也称为动态绑定或晚期绑定）
+
 # Loading
 1. 通过类的**全限定名**获取类的二进制字节流；
 2.  加载类的**静态结构到元空间**(Metaspace)；
@@ -78,15 +83,15 @@ JVM架构图如下：
 
 ## 过程
 ### 1 步骤
-Class Loader 
+*Class Loader Subsystem 加载类（这里指包含 [[#Loading]]、[[#Linking]]、[[#Initialization]]三个阶段）的完整步骤*：
 1. 满足[[#2 类 Initialization 时机|类加载时机]]要求，类加载开始；
-2.  如果该类的直接父类还没有被初始化，先初始化其父类。
-3. main 方法的类首先初始化；
-4. 首先对类变量（static）进行默认初始化（[[#Preparation]]阶段）；
-5. 对 ConstantValue 初始化（[[#Preparation]]阶段）；
-6.  调用 \<clinit> （同类型-static 或非static-按源码中顺序排序）进行类初始化；
-7.  如果调用 Constructor，则会调用 \<init> 进行实例初始化；
-8.  最后调用构造函数初始化。
+3.  如果该类的直接父类还没有被初始化，先初始化其父类。
+4. main 方法的类首先初始化；
+6. 首先对类变量（static）进行默认初始化（[[#Preparation]]阶段）；
+7. 对 ConstantValue 初始化（[[#Preparation]]阶段）；
+8.  调用 \<clinit> （同类型-static 或非static-按源码中顺序排序）进行类初始化；
+9.  如果调用 Constructor，则会调用 \<init> 进行实例初始化；
+10.  最后调用构造函数初始化。
 
 ![[类初始化顺序示意.png]]
 
@@ -122,7 +127,7 @@ Class Loader
 	```
 
 
-### 4 类初始化方法`<clinit>` 
+### 4 类构造器`<clinit>` 
 -  *`<clinit>`只会执行一次*；
 -   `<clinit>` 是*编译器自动收集类中所有类变量的赋值动作和静态语句块（static{} 块）中的语句合并产生*。编译器收集的顺序*由语句在源文件中出现的顺序决定*。特别注意的是，静态语句块只能访问到定义在它之前的类变量，定义在它*之后的类变量只能赋值，不能访问*。例如以下代码：
 
@@ -160,7 +165,7 @@ public static void main(String[] args) {
 -   接口中不可以使用静态语句块，但仍然有类变量初始化的赋值操作，因此接口与类一样都会生成 `<clinit>` 方法。但接口与类不同的是，执行*接口的 `<clinit>` 方法不需要先执行父接口的 `<clinit>` 方法*。只有当*父接口中定义的变量使用时，父接口才会初始化*。另外，*接口的实现类在初始化时也不会执行接口的 `<clinit>` 方法*。
 -   *JVM 保证一个类的 `<clinit>` 方法在多线程环境下被正确的加锁和同步*，如果多个线程同时初始化一个类，只会有一个线程执行这个类的 `<clinit>` 方法，其它线程都会阻塞等待，直到活动线程执行 `<clinit>` 方法完毕。如果在一个类的 `<clinit>` 方法中有耗时的操作，就可能造成多个线程阻塞，在实际过程中此种阻塞很隐蔽。
 
-### 5 实例初始化方法`<init>`
+### 5 方法构造器`<init>`
 1.  编译器按照出现顺序收集*成员变量赋值语句、普通代码块，最后收集构造函数*的代码，最终组成\<init>；
 	- **\<init>** is the (or one of the) *constructor(s) for the instance, and non-static field initialization*；
 	- **\<clinit>** are the *static initialization blocks for the class, and static field initialization*。
