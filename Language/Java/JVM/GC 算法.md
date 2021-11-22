@@ -104,8 +104,8 @@ GC最基础的算法有四种：复制算法、标记 -清除算法、标记-压
 
 ## 垃圾回收器
 
--  **Serial 收集器**：串行收集器是最古老，最稳定以及效率高的收集器，可能会产生较长的停顿，只使用一个线程去回收。
--   **ParNew 收集器**：ParNew收集器其实就是Serial收集器的多线程版本。
+-  **Serial 收集器**：串行收集器是最古老，最稳定以及效率高的收集器，可能会产生较长的停顿，只使用一个线程去回收。 ^1b5410
+-   **ParNew 收集器**：ParNew收集器其实就是Serial收集器的多线程版本。 ^838a71
 -   **Parallel 收集器**：Parallel Scavenge收集器类似ParNew收集器，Parallel 收集器更关注系统的吞吐量。
 -   **Parallel Old 收集器**：Parallel Old是Parallel Scavenge收集器的老年代版本，使用多线程和“标记－整理”算法
 -   **CMS 收集器**：**CMS（Concurrent Mark Sweep）** 收集器是一种以获取最短回收停顿时间（Stop-The-World）为目标的收集器。
