@@ -4,28 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "fdda81f72d3beba7",
+        "id": "a06f3c6b34ef6fcf",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/JVM/分代收集理论.md",
-            "mode": "source"
-          }
-        },
-        "group": "bc7067d472c6b3fe"
-      },
-      {
-        "id": "023078bfd909ac35",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/JVM/分代收集理论.md",
-            "mode": "preview"
-          }
-        },
-        "group": "bc7067d472c6b3fe"
+          "type": "empty",
+          "state": {}
+        }
       }
     ],
     "direction": "vertical"
@@ -90,7 +74,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/分代收集理论.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,9 +100,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Language/Java/JVM/分代收集理论.md"
-              }
+              "state": {}
             }
           },
           {
@@ -138,7 +119,7 @@
     "width": 197,
     "collapsed": true
   },
-  "active": "fdda81f72d3beba7",
+  "active": "a06f3c6b34ef6fcf",
   "lastOpenFiles": [
     "Language/Java/JVM/分代收集理论.md",
     "Language/Java/JVM/JVM内存结构.md",
