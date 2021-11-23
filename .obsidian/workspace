@@ -127,14 +127,14 @@
   "active": "c6f8114924811d6f",
   "lastOpenFiles": [
     "Design/Framework.md",
-    "Design/Pattern.md",
-    "Design/设计模式/设计模式.md",
     "Design/Architect.md",
+    "Design/Pattern-Framework-Architect 对比.md",
+    "Design/Pattern.md",
     "Design/可重用级别.md",
+    "Design/设计模式/设计模式.md",
     "Design/设计模式/如何选择设计模式.md",
     "Design/设计模式/如何使用设计模式.md",
     "Design/设计模式/设计模式如何解决设计问题.md",
-    "Design/设计模式/创建型/Singleton.md",
-    "Design/设计模式/创建型/Prototype.md"
+    "Design/设计模式/创建型/Singleton.md"
   ]
 }

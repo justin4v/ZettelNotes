@@ -1,5 +1,6 @@
 #Design #Pattern
 
+# 模式
 模式（Pattern）的概念最早由建筑大师 Christopher Alexander 于二十世纪七十年代提出，八十年代中期由Ward Cunningham和Kent Beck将其思想引入到软件领域。
 Christopher Alexander将模式分为三个部分：
 1. **Context**（上下文）：指模式在何种状况下发生作用；

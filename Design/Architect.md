@@ -1,5 +1,6 @@
 #Design #Architect
 
+# 架构
 **软件体系结构通常被称为架构，指可以预制和可重构的软件框架结构**。
 
 Mary Shaw 和 David Garlan 认为软件体系结构是：
