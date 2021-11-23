@@ -18,16 +18,16 @@
 - Heap 空间由 **GC（garbage collector）** 自动回收。
 
 
-根据 GC 回收的规则，可将 Heap 空间细分为 :**Young Generation 和 Old Generation**（存活的时长不同）
+根据[[分代收集理论#两个假说|分代收集理论]]，可将 Heap 空间细分为 :**Young Generation 和 Old Generation**（存活的时长不同）
 具体如下图：
 ![[Heap的划分.png]]
 
 *Eden*: 指《圣经》中亚当和夏娃最初居住的地方，这里引申为对象最初存放的位置。参考[[对象分配规则]]
 
 不同区域的关系如下：
-1. Java堆 = 老年代 + 新生代；
-2. 新生代 = Eden + S0 + S1；
-3. 默认：Eden：from ：to = 8:1:1。
+1. *Java Heap* = 老年代 + 新生代；
+2. *Young Generation* = Eden + Survivor 0 + Survivor 1；
+3. 默认比例=> Eden：from ：to = 8:1:1。
 
 
 
