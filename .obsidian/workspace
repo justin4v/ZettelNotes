@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Computer Low Layer/Hardware/继电器.md",
+            "file": "Design/Framework.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Computer Low Layer/Hardware/继电器.md",
+                "file": "Design/Framework.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Computer Low Layer/Hardware/继电器.md"
+                "file": "Design/Framework.md"
               }
             }
           },
@@ -126,15 +126,15 @@
   },
   "active": "c6f8114924811d6f",
   "lastOpenFiles": [
-    "Computer Low Layer/Hardware/继电器.md",
-    "Language/Java/JVM/分代收集理论.md",
-    "Language/Java/JVM/JVM内存结构.md",
-    "Language/Java/JVM/GC 算法.md",
-    "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
-    "GC 算法^可.md",
-    "Language/Java/工具/查看对象头信息示例.md",
-    "Language/Java/JVM/对象结构.md",
-    "Language/Java/JVM/对象分配规则.md",
-    "Language/Java/JVM/JVM类加载机制.md"
+    "Design/Framework.md",
+    "Design/Architect.md",
+    "Design/设计模式/创建型/Singleton.md",
+    "Design/设计模式/创建型/Prototype.md",
+    "Design/设计模式/创建型/Factory Method.md",
+    "Design/设计模式/创建型/Builder.md",
+    "Design/设计模式/创建型/Abstract Factory.md",
+    "Design/设计模式/如何使用设计模式.md",
+    "Design/可重用级别.md",
+    "Architect/Spring/@Transactional.md"
   ]
 }
