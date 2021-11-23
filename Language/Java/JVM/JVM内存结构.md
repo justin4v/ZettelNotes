@@ -50,8 +50,8 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 Method Area stores **per-class structures（类结构信息）** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
 
 Method Area ：
-1. 线程共享的；
-2. JVM启动时创建；
+1. *线程共享的*；
+2. *JVM 启动时创建*；
 3. **存储类的结构信息（metadata）**。
 
 

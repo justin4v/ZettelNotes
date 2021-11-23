@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/JVM内存结构.md",
+            "file": "Language/Java/JVM/分代收集理论.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/JVM内存结构.md",
+            "file": "Language/Java/JVM/分代收集理论.md",
             "mode": "preview"
           }
         },
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/JVM内存结构.md",
+                "file": "Language/Java/JVM/分代收集理论.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/JVM内存结构.md"
+                "file": "Language/Java/JVM/分代收集理论.md"
               }
             }
           },
@@ -140,8 +140,8 @@
   },
   "active": "fdda81f72d3beba7",
   "lastOpenFiles": [
-    "Language/Java/JVM/JVM内存结构.md",
     "Language/Java/JVM/分代收集理论.md",
+    "Language/Java/JVM/JVM内存结构.md",
     "Language/Java/JVM/GC 算法.md",
     "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
     "GC 算法^可.md",
