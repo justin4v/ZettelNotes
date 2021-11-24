@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/Framework.md",
+            "file": "Base Knowledge/编程/Cron 表达式.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/Framework.md",
+                "file": "Base Knowledge/编程/Cron 表达式.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/Framework.md"
+                "file": "Base Knowledge/编程/Cron 表达式.md"
               }
             }
           },
@@ -126,6 +126,8 @@
   },
   "active": "c6f8114924811d6f",
   "lastOpenFiles": [
+    "Base Knowledge/编程/Cron 表达式.md",
+    "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
     "Design/Framework.md",
     "Design/Architect.md",
     "Design/Pattern-Framework-Architect 对比.md",
@@ -133,8 +135,6 @@
     "Design/可重用级别.md",
     "Design/设计模式/设计模式.md",
     "Design/设计模式/如何选择设计模式.md",
-    "Design/设计模式/如何使用设计模式.md",
-    "Design/设计模式/设计模式如何解决设计问题.md",
-    "Design/设计模式/创建型/Singleton.md"
+    "Design/设计模式/如何使用设计模式.md"
   ]
 }

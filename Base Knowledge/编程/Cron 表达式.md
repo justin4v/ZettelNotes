@@ -1,0 +1,2 @@
+*Cron expressions* are used to configure instances of CronTrigger, a subclass of org.quartz.Trigger. 
+A cron expression is a string consisting of six or seven subexpressions (fields) that describe individual details of the schedule.
