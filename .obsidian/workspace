@@ -12,7 +12,20 @@
             "file": "Book Reading/人月神话/概要总结.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "7fe8797fce1f9175"
+      },
+      {
+        "id": "932eb793532db7a6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/人月神话/概要总结.md",
+            "mode": "preview"
+          }
+        },
+        "group": "7fe8797fce1f9175"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279
+    "width": 279,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
