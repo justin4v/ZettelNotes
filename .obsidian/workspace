@@ -7,8 +7,11 @@
         "id": "0a190670fe5d3b02",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/人月神话/概要总结.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Book Reading/人月神话/概要总结.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Book Reading/人月神话/概要总结.md"
+              }
             }
           },
           {
@@ -120,6 +126,7 @@
   },
   "active": "0a190670fe5d3b02",
   "lastOpenFiles": [
+    "Book Reading/人月神话/概要总结.md",
     "Base Knowledge/编程/Cron 表达式.md",
     "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
     "Design/Framework.md",
@@ -128,7 +135,6 @@
     "Design/Pattern.md",
     "Design/可重用级别.md",
     "Design/设计模式/设计模式.md",
-    "Design/设计模式/如何选择设计模式.md",
-    "Design/设计模式/如何使用设计模式.md"
+    "Design/设计模式/如何选择设计模式.md"
   ]
 }
