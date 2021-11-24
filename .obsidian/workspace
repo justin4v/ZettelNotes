@@ -9,23 +9,10 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/人月神话/没有银弹.md",
+            "file": "Book Reading/人月神话/概要总结.md",
             "mode": "source"
           }
-        },
-        "group": "3f27e635535d7666"
-      },
-      {
-        "id": "54a7b1581a47267b",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Book Reading/人月神话/没有银弹.md",
-            "mode": "preview"
-          }
-        },
-        "group": "3f27e635535d7666"
+        }
       }
     ],
     "direction": "vertical"
@@ -73,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279,
-    "collapsed": true
+    "width": 279
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/人月神话/没有银弹.md",
+                "file": "Book Reading/人月神话/概要总结.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/人月神话/没有银弹.md"
+                "file": "Book Reading/人月神话/概要总结.md"
               }
             }
           },
@@ -140,8 +126,8 @@
   },
   "active": "0634dc6be5b8f7ef",
   "lastOpenFiles": [
-    "Book Reading/人月神话/没有银弹.md",
     "Book Reading/人月神话/概要总结.md",
+    "Book Reading/人月神话/没有银弹.md",
     "Base Knowledge/编程/Cron 表达式.md",
     "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
     "Design/Framework.md",
