@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "0a190670fe5d3b02",
+        "id": "0634dc6be5b8f7ef",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/人月神话/概要总结.md",
+            "file": "Book Reading/人月神话/没有银弹.md",
             "mode": "source"
           }
         },
-        "group": "7fe8797fce1f9175"
+        "group": "20ab1006e354bada"
       },
       {
-        "id": "932eb793532db7a6",
+        "id": "a1d4d9a7e19bc3f2",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/人月神话/概要总结.md",
+            "file": "Book Reading/人月神话/没有银弹.md",
             "mode": "preview"
           }
         },
-        "group": "7fe8797fce1f9175"
+        "group": "20ab1006e354bada"
       }
     ],
     "direction": "vertical"
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/人月神话/概要总结.md",
+                "file": "Book Reading/人月神话/没有银弹.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/人月神话/概要总结.md"
+                "file": "Book Reading/人月神话/没有银弹.md"
               }
             }
           },
@@ -138,8 +138,9 @@
     "width": 197,
     "collapsed": true
   },
-  "active": "0a190670fe5d3b02",
+  "active": "0634dc6be5b8f7ef",
   "lastOpenFiles": [
+    "Book Reading/人月神话/没有银弹.md",
     "Book Reading/人月神话/概要总结.md",
     "Base Knowledge/编程/Cron 表达式.md",
     "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
@@ -148,7 +149,6 @@
     "Design/Pattern-Framework-Architect 对比.md",
     "Design/Pattern.md",
     "Design/可重用级别.md",
-    "Design/设计模式/设计模式.md",
-    "Design/设计模式/如何选择设计模式.md"
+    "Design/设计模式/设计模式.md"
   ]
 }
