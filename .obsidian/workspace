@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式GoF/创建型/Factory Method.md",
+            "file": "Book Reading/设计模式解析/UML 类图.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "d1b3d9d45a7a2e9b"
+      },
+      {
+        "id": "bd693fedf4b0a012",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/设计模式解析/UML 类图.md",
+            "mode": "preview"
+          }
+        },
+        "group": "d1b3d9d45a7a2e9b"
       }
     ],
     "direction": "vertical"
@@ -39,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "UML",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -56,11 +69,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 279
+    "width": 279,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式GoF/创建型/Factory Method.md",
+                "file": "Book Reading/设计模式解析/UML 类图.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式GoF/创建型/Factory Method.md"
+                "file": "Book Reading/设计模式解析/UML 类图.md"
               }
             }
           },
@@ -126,6 +141,7 @@
   },
   "active": "cd3aea1021c7ac9f",
   "lastOpenFiles": [
+    "Book Reading/设计模式解析/UML 类图.md",
     "Book Reading/设计模式GoF/创建型/Factory Method.md",
     "Book Reading/设计模式GoF/创建型/Abstract Factory.md",
     "Book Reading/设计模式GoF/创建型/Builder.md",
@@ -134,7 +150,6 @@
     "Book Reading/设计模式GoF/创建型/Singleton.md",
     "Design/Architect/架构设计方法.md",
     "Design/Architect.md",
-    "Design/Framework.md",
-    "Design/Pattern-Framework-Architect 对比.md"
+    "Design/Framework.md"
   ]
 }
