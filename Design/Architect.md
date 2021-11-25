@@ -1,4 +1,4 @@
-#Design #Architect
+#Design #Architect #架构设计要素
 
 *架构还没有统一的定义*
 
@@ -46,12 +46,53 @@
 
 # 架构设计方法
 -   架构模式：顶层模型的设计方法
--   设计模式：框架类结构的设计方法
+-   框架的设计模式：框架类结构的设计方法
 -   架构设计目标：非功能性的约束
 
 ![[软件架构设计要素.png]]
 
+## Architecture Pattern
+### 领域驱动设计(Domain Driven Design)
 
+Eric Evans在《领域驱动设计－软件核心复杂性应对之道》这本书中提出了传统的DDD四层架构模式。
+
+### 六边形架构（Haxagonal Architecture）
+
+六边形架构是Alistair Cockburn在2005年提出的，解决了传统的分层架构所带来的问题。Vaughn Vernon 在《实现领域驱动设计》一书中，作者将六边形架构应用到领域驱动设计的实现。将传统的分层架构变成了内部和外部，内部实现领域模型，外部实现适配器。
+
+### 洋葱架构（Onion Architecture）
+
+ Jeffrey Palermo在2008年提出了洋葱架构。它是从六边形架构发展而来，将六边形改为圆环，层层依赖。
+
+### 干净架构（Clean Architecture）
+
+Robert C. Martin在2012年提出了干净架构（Clean Architecture），这是六边形架构的一个变体。
+
+### DCI架构
+
+DCI代表Data, Context, Interaction。ames O. Coplien和Trygve Reenskaug在2009年发表了一篇论文《DCI架构：面向对象编程的新构想》
+
+重点是关注数据的不同场景的交互行为， 核心思想是将面向对象系统的数据模型和动态的行为模型区分开来，用不同的对象复用同一段交互行为。
+
+
+## 框架的设计模式
+### MVC框架模式
+
+MVC即模型(model)、视图(view)、控制器(controller)设计模式可谓是无人不知不人不晓。它的缺点是比较重，各部分没有解耦。
+
+### MVP框架模式
+
+Model-View-Presenter设计模式是在MVC基础上发展而来，将模型与视图完全分离，可以修改视图而不影响模型。
+
+### MVVM框架模式
+
+Model-View-ViewModel设计模式是MVP的进一步改进，使用双向绑定将View与ViewModel的数据传输自动化。
+
+### VIPER框架模式
+
+VIPER模式最初是在2013年由Jeff Gilbert 和 Conrad Stoll 提出，随后在《Architecting iOS Apps with VIPER》文中做了详细的介绍。
+
+由View+Interactor+Presenter+Entity+Routing组成，是Clean Architecture的一种实现模式。
 
 
 # 参考
