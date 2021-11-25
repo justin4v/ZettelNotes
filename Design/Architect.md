@@ -43,6 +43,17 @@
 1. 一个*蓝图*，一种*设计方案*；
 2. 将客户的不同*需求抽象成为抽象组件*，并且能够描述这些抽象组件之间的*通信和调用*。
 
+
+# 架构设计方法
+-   架构模式：顶层模型的设计方法
+-   设计模式：框架类结构的设计方法
+-   架构设计目标：非功能性的约束
+
+![[软件架构设计要素.png]]
+
+
+
+
 # 参考
 1. D Garlan, M Shaw. An introduction to software architecture[M]. Advances in software engineering and knowledge engineering, 1993: 1-39
 2. G Booch, J Rumbaugh, I Jacobson. The Unified Modeling Language User Guide [M]. 2nd ed. Addison Wesley, 1999.
