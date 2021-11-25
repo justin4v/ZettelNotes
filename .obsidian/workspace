@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/Architect.md",
+            "file": "Design/Pattern-Framework-Architect 对比.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/Architect.md",
+                "file": "Design/Pattern-Framework-Architect 对比.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/Architect.md"
+                "file": "Design/Pattern-Framework-Architect 对比.md"
               }
             }
           },
@@ -126,11 +126,11 @@
   },
   "active": "e5567fedecf852cd",
   "lastOpenFiles": [
-    "Design/Architect.md",
+    "Design/Pattern-Framework-Architect 对比.md",
     "Design/Pattern.md",
     "Design/Framework.md",
+    "Design/Architect.md",
     "Design/可重用级别.md",
-    "Design/Pattern-Framework-Architect 对比.md",
     "Design/设计模式/设计模式.md",
     "Book Reading/人月神话/没有银弹.md",
     "Book Reading/人月神话/概要总结.md",
