@@ -26,3 +26,4 @@ Use the Factory Method pattern when
 - classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate.
 
 # Structure
+![[FactoryMethod结构.png]]
