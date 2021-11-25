@@ -4,28 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "e5567fedecf852cd",
+        "id": "4d442cddf700ac44",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Design/Architect/架构设计方法.md",
-            "mode": "source"
-          }
-        },
-        "group": "68b10bac6f545ece"
-      },
-      {
-        "id": "7bac81257cbeed1b",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Design/Architect/架构设计方法.md",
-            "mode": "preview"
-          }
-        },
-        "group": "68b10bac6f545ece"
+          "type": "empty",
+          "state": {}
+        }
       }
     ],
     "direction": "vertical"
@@ -73,8 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279,
-    "collapsed": true
+    "width": 279
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/Architect/架构设计方法.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,9 +99,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Design/Architect/架构设计方法.md"
-              }
+              "state": {}
             }
           },
           {
@@ -138,7 +118,7 @@
     "width": 197,
     "collapsed": true
   },
-  "active": "e5567fedecf852cd",
+  "active": "4d442cddf700ac44",
   "lastOpenFiles": [
     "Design/Architect/架构设计方法.md",
     "Design/Architect.md",
@@ -146,7 +126,7 @@
     "Design/Pattern-Framework-Architect 对比.md",
     "Design/Pattern.md",
     "Design/可重用级别.md",
-    "Design/设计模式/设计模式.md",
+    "Book Reading/设计模式GoF/设计模式.md",
     "Book Reading/人月神话/没有银弹.md",
     "Book Reading/人月神话/概要总结.md",
     "Base Knowledge/编程/Cron 表达式.md"
