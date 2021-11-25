@@ -12,20 +12,7 @@
             "file": "Book Reading/设计模式GoF/创建型/Factory Method.md",
             "mode": "source"
           }
-        },
-        "group": "86fd959ac75e8a02"
-      },
-      {
-        "id": "717739f72e0a8e9a",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Book Reading/设计模式GoF/创建型/Factory Method.md",
-            "mode": "preview"
-          }
-        },
-        "group": "86fd959ac75e8a02"
+        }
       }
     ],
     "direction": "vertical"

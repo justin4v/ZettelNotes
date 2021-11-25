@@ -1,7 +1,8 @@
 #Design-Pattern
 # Intent
 Define an interface for creating an object, but let subclasses decide which class to
-instantiate. Factory Method lets a class defer instantiation to subclasses.
+instantiate. 
+Factory Method lets a class defer instantiation to subclasses.
 
 # Also Known As
 Virtual Constructor
@@ -13,7 +14,9 @@ Consider a framework for applications that can present multiple documents to the
 
 Both classes are abstract, and clients have to subclass them to realize their application-specific implementations. To create a drawing application, for example,we define the classes DrawingApplication and DrawingDocument.
 
-The Application classis responsible for managing Documents and will create them as required—when the user selects Open or New from a menu, for example. Because the particular Document subclass to instantiate is application-specific,the Application class can't predict the subclass of Document to instantiate—the Application class only knows when a new document should be created, not what kind of Document to create. This creates a dilemma: The framework must instantiate classes, but it only knows about abstract classes, which it cannot instantiate. The Factory Method pattern offers a solution. It encapsulates the knowledge of which Document subclass to create and moves this knowledge out of the framework
+The Application classis responsible for managing Documents and will create them as required—when the user selects Open or New from a menu, for example. Because the particular Document subclass to instantiate is application-specific,the Application class can't predict the subclass of Document to instantiate—the Application class only knows when a new document should be created, not what kind of Document to create. 
+
+This creates a dilemma: The framework must instantiate classes, but it only knows about abstract classes, which it cannot instantiate. The Factory Method pattern offers a solution. It encapsulates the knowledge of which Document subclass to create and moves this knowledge out of the framework
 
 Application subclasses redefine an abstract CreateDocument operation on Application to return the appropriate Document subclass.
 Once an Application subclass is instantiated, it can then instantiate application-specific Documents without knowing their class. We call CreateDocument a factory method because it's responsible for "manufacturing" an object.
@@ -61,4 +64,7 @@ Consider the following issues when applying the FactoryMethod pattern:
 	2.  the case when the Creator is a concrete class and provides a default implementation for the factory method. It's also possible to have an abstract class that defines a default implementation, but this is less common. 
 
 The first case requires subclasses to define an implementation,because there's no reasonable default. It gets around the dilemma of having to instantiate unforeseeable classes. In the second case, the concrete Creator uses the factory method primarily for flexibility. It's following a rule that says, "Create objects in a separate operation so that subclasses can override the way they're created." This rule ensures that designers of subclasses can change the class of objects their parent class instantiates if necessary. 
-1. Parameterized factory methods. Another variation on the pattern lets the factory method create multiple kinds of products. The factory method takes a
+
+2. Parameterized factory methods. Another variation on the pattern lets the factory method create multiple kinds of products. The factory method takes a parameter that identifies the kind of object to create. All objects the factory method creates will share the Product interface. In the Document example, Application might support different kinds of Documents. You pass CreateDocument an extra parameter to specify the kind of document to create
+3. Language-specific variants and issues. Different languages lend themselves to other interesting variations and caveats
+4. Using templates to avoid subclassing. As we've mentioned, another potential problem with factory methods is that they might force you to subclass just to create the appropriate Product objects. A
