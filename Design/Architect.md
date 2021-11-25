@@ -46,7 +46,7 @@
 
 # 架构设计方法
 -   架构模式：顶层模型的设计方法
--   框架的设计模式：框架类结构的设计方法
+-   框架的模式：框架结构的设计方法
 -   架构设计目标：非功能性的约束
 
 ![[软件架构设计要素.png]]
@@ -91,7 +91,6 @@ Model-View-ViewModel设计模式是MVP的进一步改进，使用双向绑定将
 ### VIPER框架模式
 
 VIPER模式最初是在2013年由Jeff Gilbert 和 Conrad Stoll 提出，随后在《Architecting iOS Apps with VIPER》文中做了详细的介绍。
-
 由View+Interactor+Presenter+Entity+Routing组成，是Clean Architecture的一种实现模式。
 
 
