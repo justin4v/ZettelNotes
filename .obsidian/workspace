@@ -127,14 +127,14 @@
   "active": "e5567fedecf852cd",
   "lastOpenFiles": [
     "Design/Architect.md",
-    "Design/Framework.md",
     "Design/Pattern.md",
+    "Design/Framework.md",
+    "Design/可重用级别.md",
     "Design/Pattern-Framework-Architect 对比.md",
     "Design/设计模式/设计模式.md",
     "Book Reading/人月神话/没有银弹.md",
     "Book Reading/人月神话/概要总结.md",
     "Base Knowledge/编程/Cron 表达式.md",
-    "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md",
-    "Design/可重用级别.md"
+    "Base Knowledge/编程/Minor GC vs. Major GC vs. Full GC.md"
   ]
 }
