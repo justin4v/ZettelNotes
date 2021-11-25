@@ -2,6 +2,7 @@
 # Intent
 Define an interface for creating an object, but let subclasses decide which class to
 instantiate. Factory Method lets a class defer instantiation to subclasses.
+
 # Also Known As
 Virtual Constructor
 
@@ -27,3 +28,37 @@ Use the Factory Method pattern when
 
 # Structure
 ![[FactoryMethod结构.png]]
+
+# Participants 
+- Product (Document)
+	- definesthe interface of objects the factory method creates. 
+- ConcreteProduct (MyDocument) 
+	- implements theProduct interface. 
+- Creator (Application) 
+	- declares the factory method, which returns an object oftype Product.
+	- Creator may also define a default implementation of the factory method that returns a default ConcreteProduct object. 
+	- may call the factory method to create a Product object
+- ConcreteCreator (MyApplication) 
+	- overrides the factory method to return an instance of a ConcreteProduct.
+
+# Collaborations 
+- Creator relies on its subclasses to define the factory method so that it returns an instance of the appropriate ConcreteProduct.
+
+
+# Consequences 
+Factory methods eliminate the need to bind application-specific classes into your code. The code only deals with the Product interface; therefore it can work with any user-defined ConcreteProduct classes.
+
+A potential disadvantage offactory methods is that clients might have to subclass the Creator classjust to create a particular ConcreteProduct object. Subclassing is fine when the client has to subclass the Creator class anyway, but otherwise the client now must deal with another point of evolution. 
+
+Here are two additional consequences of the FactoryMethod pattern: 
+1. Provides hooks for subclasses. Creating objects inside a class with a factory method is always more flexible than creating an object directly. Factory Method gives subclasses a hook for providing an extended version of an object. In the Document example, the Document class could define a factory method called CreateFileDialog that creates a default file dialog object for opening an existing document. A Document subclass can define an application-specific file dialog by overriding thisfactory method. In this case the factory method is not abstract but provides a reasonable default implementation. 
+2. Connects parallel class hierarchies. In the examples we've considered so far, the factory method is only called by Creators. But this doesn't have to be the case; clients can find factory methods useful, especially in the case of parallel class hierarchies.
+
+# Implementation 
+Consider the following issues when applying the FactoryMethod pattern: 
+1. Two major varieties。The two main variations of the FactoryMethod pattern are ：
+	1.  the case when the Creator class is an abstract class and does not provide an implementation for the factory method it declares, 
+	2.  the case when the Creator is a concrete class and provides a default implementation for the factory method. It's also possible to have an abstract class that defines a default implementation, but this is less common. 
+
+The first case requires subclasses to define an implementation,because there's no reasonable default. It gets around the dilemma of having to instantiate unforeseeable classes. In the second case, the concrete Creator uses the factory method primarily for flexibility. It's following a rule that says, "Create objects in a separate operation so that subclasses can override the way they're created." This rule ensures that designers of subclasses can change the class of objects their parent class instantiates if necessary. 
+1. Parameterized factory methods. Another variation on the pattern lets the factory method create multiple kinds of products. The factory method takes a
