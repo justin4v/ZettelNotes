@@ -6,11 +6,11 @@
       {
         "id": "b2c563c7d5f65dea",
         "type": "leaf",
-        "dimension": 56.776556776556774,
+        "dimension": 50.27442371020856,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式GoF/创建型/Factory Method.md",
+            "file": "Book Reading/设计模式GoF/创建型/Abstract Factory.md",
             "mode": "source"
           }
         },
@@ -19,11 +19,11 @@
       {
         "id": "d56baa7fd765ab11",
         "type": "leaf",
-        "dimension": 43.223443223443226,
+        "dimension": 49.72557628979144,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式GoF/创建型/Factory Method.md",
+            "file": "Book Reading/设计模式GoF/创建型/Abstract Factory.md",
             "mode": "preview"
           }
         },
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式GoF/创建型/Factory Method.md",
+                "file": "Book Reading/设计模式GoF/创建型/Abstract Factory.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式GoF/创建型/Factory Method.md"
+                "file": "Book Reading/设计模式GoF/创建型/Abstract Factory.md"
               }
             }
           },
@@ -141,15 +141,15 @@
   },
   "active": "b2c563c7d5f65dea",
   "lastOpenFiles": [
-    "Book Reading/设计模式GoF/创建型/Factory Method.md",
     "Book Reading/设计模式GoF/创建型/Abstract Factory.md",
     "Book Reading/设计模式GoF/创建型/Builder.md",
+    "Book Reading/设计模式GoF/创建型/Factory Method.md",
     "Book Reading/设计模式GoF/创建型/Prototype.md",
+    "Book Reading/设计模式GoF/行为型/Chain of Responsibility.md",
+    "Book Reading/设计模式GoF/行为型/Command.md",
+    "Book Reading/设计模式GoF/行为型/Visitor.md",
     "Book Reading/设计模式GoF/创建型/Singleton.md",
     "Book Reading/设计模式解析/UML 类图.md",
-    "Book Reading/设计模式GoF/设计模式.md",
-    "Design/Architect/架构设计方法.md",
-    "Design/Architect.md",
-    "Design/Framework.md"
+    "Book Reading/设计模式GoF/设计模式.md"
   ]
 }

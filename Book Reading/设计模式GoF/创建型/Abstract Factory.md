@@ -53,7 +53,7 @@ Use the *Abstract Factory* pattern when ：
 
 # 效果
 ## 优点
-1. **It isolates concrete classes**: The Abstract Factory pattern helps you control the classes of objectsthat an application creates. Because a *factory encapsulates the responsibility and the process of creating product objects, it isolates clients from implementation classes.* Clients manipulate instances through their abstract interfaces. Product class names are isolated in the implementation of the concrete factory; they do not appear in client code.
+1. **It isolates concrete classes**: The Abstract Factory pattern helps you control the classes of objects that an application creates. Because a *factory encapsulates the responsibility and the process of creating product objects, it isolates clients from implementation classes.* Clients manipulate instances through their abstract interfaces. Product class names are isolated in the implementation of the concrete factory; they do not appear in client code.
 2. **It makes exchanging product families easy**.
 3. **It promotes consistency among products**: When product objects in a family are designed towork together,it's important that an application use objects from only one family at a time. AbstractFactory makes this easy to enforce.
 	

@@ -45,7 +45,7 @@ Consider a framework for applications that can present multiple documents to the
 - Creator relies on its subclasses to define the factory method so that it returns an instance of the appropriate ConcreteProduct.
 
 # Consequences 
-Factory methods eliminate the need to bind application-specific classes into your code. The code only deals with the Product interface; therefore it can work with any user-defined ConcreteProduct classes.
+Factory methods *eliminate the need to bind application-specific classes into your code*. The code only deals with the Product interface; therefore it can work with any user-defined ConcreteProduct classes.
 
 A potential disadvantage of factory methods is that clients might have to subclass the Creator class just to create a particular ConcreteProduct object. 
 
@@ -66,4 +66,4 @@ Factory methods 主要应用于 toolkits and frameworks
 # Related Patterns
 1. *Abstract Factory* is often implemented with factory methods. The Motivation example in the Abstract Factory pattern illustrates Factory Method as well. 
 2. *Factory methods* are usually called within Template Methods . In the document example above, NewDocument is a template method. 
-3. Prototypes  don't require subclassing Creator. However, they often require an Initialize operation on the Product class.Creator uses Initialize to initialize the object. Factory Method doesn't require such an operation.
+3. *Prototypes*  don't require subclassing Creator. However, they often require an Initialize operation on the Product class.Creator uses Initialize to initialize the object. Factory Method doesn't require such an operation.
