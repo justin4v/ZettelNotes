@@ -3,11 +3,12 @@
 Specify the kinds of objects to create using a prototypical instance, and *create new objects by copying this prototype*
 
 # Motivation
-You could build an editor for music scores(乐谱) by customizing a general framework for graphical editors and adding new objects that represent notes(音符), rests(休止符), and staves(五线谱).
+1. You could build an editor for music scores(乐谱) by customizing a general framework for graphical editors and adding new *objects that represent notes(音符), rests(休止符), and staves(五线谱).*- 抽象概念：**Graphics**
+2. The editor framework may have a palette(画板) of tools for adding these music objects to the score. The palette would also include *tools for selecting, moving, and otherwise manipulating music objects.* -- 抽象概念：**GraphicTools**
 
-The editor framework may have a palette(画板) of tools for adding these music objects to the score. The palette would also include tools for selecting, moving, and otherwise manipulating music objects. Users will click on the quarter-note(四分音符) tool and use it to add quarter-notes to the score. Or they can use the move tool to move a note up or down on the staff, thereby changing its pitch（音调）. 
-
-Let's assume the framework provides an abstract Graphic class for graphical components, like notes and staves. Moreover, it'll provide an abstract Tool class for defining tools like those in the palette. The framework also predefines a GraphicTool subclass for tools that create instances of graphical objects and add them to the document. 
+- Let's assume the framework provides an abstract Graphic class for graphical components, like notes and staves. 
+- Moreover, it'll provide an abstract Tool class for defining tools like those in the palette. 
+- The framework also predefines a GraphicTool subclass for tools that create instances of graphical objects and add them to the document. 
 
 ## 问题
 But GraphicTool presents a problem to the framework designer.：
