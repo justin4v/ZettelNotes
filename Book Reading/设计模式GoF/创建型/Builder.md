@@ -1,7 +1,7 @@
 # 意图
 **Separate the construction of a complex object from its representation** so that the same construction process can create different representations.
 
-# 动机
+# 动机/示例
 A reader for the *RTF (Rich Text Format)* document exchange format should be able to convert RTF to many text formats. The reader might convert RTF documents into plain ASCII text or into a text widget that can be edited interactively. 
 The *problem*, however, is that the number of possible conversions is open-ended. So it should be easy to add a new conversion without modifying the reader. 
 

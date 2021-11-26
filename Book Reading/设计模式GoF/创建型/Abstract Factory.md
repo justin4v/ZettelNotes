@@ -4,7 +4,7 @@ Provide an **interface** for **creating families** of related or dependent objec
 # 别名
 Kit
 
-# 动机
+# 动机/示例
 Consider a user interface *toolkit*  that supports multiple look-and-feel standards, such as Motif and Presentation Manager. Different look-and-feels define different appearances and behaviors for user interface `"widgets"` like scroll bars, windows, and buttons. 
 
 To be portable across look-and-feel standards, an application should not hard-code its widgets for a particular look and feel. Instantiating look-and-feel-specific classes of widgets throughout the application makesit hard to change the look and feel later.

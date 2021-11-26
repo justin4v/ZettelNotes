@@ -6,7 +6,7 @@
 # Also Known As
 *Virtual Constructor*
 
-# Motivation 
+# Motivation/Example
 Frameworks use abstract classes to define and maintain relationships between objects. A framework is *often responsible for creating these objects* as well. 
 
 Consider a framework for applications that can present multiple documents to the user：
@@ -56,11 +56,14 @@ Here are two additional consequences of the FactoryMethod pattern:
 # Implementation 
 issues when applying the FactoryMethod pattern: 
 1. 两种情况
-	1. Creator class is an abstract class and does not provide an implementation for the factory method it declares, 
-	2.  the case when the Creator is a concrete class and provides a default implementation for the factory method. It's also possible to have an abstract class that defines a default implementation, but this is less common. 
+	1. *Creator class is an abstract class* and does not provide an implementation for the factory method it declares, 
+	2. *Creator is a concrete class* and provides a default implementation for the factory method. 
+2. *Parameterized factory methods*. Another variation on the pattern lets the factory method create multiple kinds of products. The factory method takes a parameter that identifies the kind of object to create. 
 
-The first case requires subclasses to define an implementation,because there's no reasonable default. It gets around the dilemma of having to instantiate unforeseeable classes. In the second case, the concrete Creator uses the factory method primarily for flexibility. It's following a rule that says, "Create objects in a separate operation so that subclasses can override the way they're created." This rule ensures that designers of subclasses can change the class of objects their parent class instantiates if necessary. 
+# Known Uses
+Factory methods 主要应用于 toolkits and frameworks
 
-2. Parameterized factory methods. Another variation on the pattern lets the factory method create multiple kinds of products. The factory method takes a parameter that identifies the kind of object to create. All objects the factory method creates will share the Product interface. In the Document example, Application might support different kinds of Documents. You pass CreateDocument an extra parameter to specify the kind of document to create
-3. Language-specific variants and issues. Different languages lend themselves to other interesting variations and caveats
-4. Using templates to avoid subclassing. As we've mentioned, another potential problem with factory methods is that they might force you to subclass just to create the appropriate Product objects. A
+# Related Patterns
+1. *Abstract Factory* is often implemented with factory methods. The Motivation example in the Abstract Factory pattern illustrates Factory Method as well. 
+2. *Factory methods* are usually called within Template Methods . In the document example above, NewDocument is a template method. 
+3. Prototypes  don't require subclassing Creator. However, they often require an Initialize operation on the Product class.Creator uses Initialize to initialize the object. Factory Method doesn't require such an operation.
