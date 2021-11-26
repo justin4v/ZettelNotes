@@ -13,16 +13,16 @@ Specify the kinds of objects to create using a prototypical instance, and *creat
 ## 问题
 But GraphicTool presents a problem to the framework designer.：
 - The classes for notes and staves are specific to our application, but the GraphicTool class belongs to the framework. 
-- GraphicTool doesn't know how to create instances of our music classes to add to the score. 
+- *GraphicTool doesn't know how to create instances of our music classes* to add to the score. 
+- We could *subclass GraphicTool for each kind of music object, but that would produce lots of subclasses* that differ only in the kind of music object they instantiate.
 
-We could *subclass GraphicTool for each kind of music object, but that would produce lots of subclasses* that differ only in the kind of music object they instantiate.
-
-We know *object composition* is a flexible alternative to subclassing. The question is, how can the framework use it to parameterize instances of GraphicTool by the class of Graphic they're supposed to create? 
+We know *object composition* is a flexible alternative to subclassing. 
+The question is, *how can the framework use it to parameterize instances of GraphicTool by the class of Graphic they're supposed to create*? 
 
 ## 解决
-The solution lies in *making GraphicTool create a new Graphic by copying or "cloning" an instance of a Graphic subclass*. We call this instance a prototype. 
+The solution lies in making *GraphicTool create a new Graphic by copying or "cloning" an instance of a Graphic subclass*. We call this instance a prototype. 
 
-GraphicTool is parameterized by the prototype it should clone and add to the document. If all Graphic subclasses support a *Clone* operation, then the GraphicTool can clone any kind of Graphic. 
+GraphicTool is parameterized by the prototype it should clone and add to the score. If all Graphic subclasses support a *Clone* operation, then the GraphicTool can clone any kind of Graphic. 
 
 So in our music editor, each tool for creating a music object is an instance of GraphicTool that's initialized with a different prototype. 
 Each GraphicTool instance will produce a music object by cloning its prototype and adding the clone to the score。
