@@ -69,7 +69,7 @@ Consider graphical figures that can be manipulated interactively(交互);
 
 1. Figure 类提供了一个 *CreateManipulator 工厂方法*；
 2. 使得用户可以*为每一个 Figure 子类创建一个对应的 Manipulator 子类*。
-3. 注意工厂方法如何连接两个类层次：它将哪些类应该一起工作的信息局部化（在具体子类的局部信息）
+3. 注意工厂方法如何连接两个类层次：*它将哪些类应该一起工作的信息局部化*（在具体子类的局部信息体现出来）。
 
 # Implementation 
 issues when applying the FactoryMethod pattern: 

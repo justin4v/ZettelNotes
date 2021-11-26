@@ -40,8 +40,30 @@ We can use the Prototype pattern to reduce the number of classes even further：
 Use the Prototype pattern **when a system should be independent of how its products are created, composed, and represented**; 
 and：
 1. when the classes to instantiate are **specified at run-time**, for example, by **dynamic loading**; or 
-2. to **avoid building a class hierarchy of factories that parallels the class hierarchy of products**; or 
+2. to **avoid building a class hierarchy of factories that [[Factory Method#Parallel Class Hierarchy|parallels the class hierarchy]] of products**; or 
 3. when **instances of a class only can have  one of a few different combinations of state**. It may be more convenient to install a corresponding number of prototypes and clone them rather than instantiating the class manually, each time with the appropriate state.
 
 # Structure
 ![[原型模式结构.png]]
+
+# Participants 
+- **Prototype** (Graphic) 
+	- declares an interface for cloning itself. 
+- **ConcretePrototype** (Staff, WholeNote, HalfNote) 
+	- implements an operation for cloning itself. 
+- **Client** (GraphicTool) 
+	- creates a new object by asking a prototype to clone itself
+
+# Collaborations 
+- A client asks a prototype to clone itself.
+
+# Consequences 
+Prototype has many of the same consequences that Abstract Factory (87) and Builder (97) have: 
+1. It hides the concrete product classes from the client, thereby reducing the number of names clients know about. 
+2. Moreover, these patterns let a client work with application-specific classes withoutmodification. 
+3. Additional benefits of the Prototype pattern are listed below. 
+	1. Adding and removing products at run-time. Prototypes let you incorporate a new concrete product class into a system simply by registering a prototypical instance with the client.
+	2. Specifying new objects by varying values. Highly dynamic systems let you define new behavior through object composition—by specifying values for an object's variables, for example—and not by defining new classes.
+	3. Specifying new objects by varying structure. Many applications build objects from parts and subparts. 
+	4. Reduced subclassing. FactoryMethod (107)often produces a hierarchy of Creator classes that parallels the product class hierarchy. The Prototype pattern lets you clone a prototype instead of asking a factory method to make a new object. Hence you don't need a Creator class hierarchy at all.
+	5. Configuring an application with classes dynamically.
