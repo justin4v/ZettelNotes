@@ -18,7 +18,8 @@ But GraphicTool presents a problem to the framework designer.：
 
 We know **object composition is a flexible alternative to subclassing**. 
 The question is, **how can the framework use *object composition* to parameterize instances of GraphicTool** by the class of Graphic they're supposed to create? 
-GraphicTool 中的动作需要使用 Graphic 具体类，如何在 GraphicTool 中参数化聚合 Graphic 具体类。
+
+GraphicTool 中的动作需要使用 Graphic 具体类（完成具体动作是 Graphic 的责任），如何在 GraphicTool 中参数化聚合 Graphic 具体类。
 
 ## 解决
 The solution lies in：
@@ -35,14 +36,12 @@ We can use the Prototype pattern to reduce the number of classes even further：
 1. We have separate classes for whole notes and half notes,but that's probably unnecessary.
 2. Instead they could be instances of the same class initialized with different bitmaps and durations. 
 
-A tool for creating whole notes becomes just a GraphicTool whose prototype is a MusicalNote initialized tobe a whole note. This can reduce the number of classes in the system dramatically.It also makesit easier to add a new kind of note to the music editor
-
 # Applicability
-Use the Prototype pattern
-1. when a system should be independent of how its products are created, composed, and represented; and：
-2. when the classes to instantiate are specified at run-time, for example, by dynamic loading; or 
-3. to avoid building a class hierarchy offactories that parallels the class hierarchy of products; or 
-4. when instances of a class can have one of only a few different combinations of state. It may be more convenient to install a corresponding number of prototypes and clone them rather than instantiating the class manually, each time with the appropriate state.
+Use the Prototype pattern **when a system should be independent of how its products are created, composed, and represented**; 
+and：
+1. when the classes to instantiate are **specified at run-time**, for example, by **dynamic loading**; or 
+2. to **avoid building a class hierarchy of factories that parallels the class hierarchy of products**; or 
+3. when **instances of a class only can have  one of a few different combinations of state**. It may be more convenient to install a corresponding number of prototypes and clone them rather than instantiating the class manually, each time with the appropriate state.
 
 # Structure
 ![[原型模式结构.png]]

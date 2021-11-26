@@ -54,11 +54,14 @@ Consider a framework for applications that can present multiple documents to the
 
 ## 缺点
 - clients might **have to subclass the Creator class just to create a particular ConcreteProduct object**. 
-## Parallel Example
+## Parallel  Hierarchies Example
+> *Parallel class hierarchies* result when **a class delegates some of its responsibilities to a separate class**.
+
 Consider graphical figures that can be manipulated interactively(交互); 
 - that is, they can be stretched, moved, or rotated using the mouse.
 - It often requires *storing and updating information that records the state of the manipulation at a given time*. This state is needed only during manipulation; therefore it needn't be kept in the figure object. Moreover, different figures behave differently when the user manipulates them.
 - With these constraints, it's better to *use a separate Manipulator object* that implements the interaction and keeps track of any manipulation-specific state that's needed. 
+- *Different figures will use different Manipulator subclasses* to handle particular interactions. The resulting Manipulator class hierarchy parallels (at least partially) the Figure class hierarchy.
 
 ![[FactoryMethod 连接平行类示例.png]]
 
