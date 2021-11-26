@@ -18,21 +18,22 @@ But GraphicTool presents a problem to the framework designer.：
 
 We know **object composition is a flexible alternative to subclassing**. 
 The question is, **how can the framework use *object composition* to parameterize instances of GraphicTool** by the class of Graphic they're supposed to create? 
-GraphicTool 中的动作在 GraphicTool 中聚合
+GraphicTool 中的动作需要使用 Graphic 具体类，如何在 GraphicTool 中参数化聚合 Graphic 具体类。
 
 ## 解决
-The solution lies in making *GraphicTool create a new Graphic by copying or "cloning" an instance of a Graphic subclass*. We call this instance a prototype. 
+The solution lies in：
+1. making **GraphicTool create a new Graphic by copying or "cloning" an instance of a Graphic subclass**. We call this instance a prototype. 
+2. GraphicTool is parameterized by the prototype it should clone and add to the score. 
+3. If all Graphic subclasses support a *Clone* operation, then the GraphicTool can clone any kind of Graphic. 
 
-GraphicTool is parameterized by the prototype it should clone and add to the score. If all Graphic subclasses support a *Clone* operation, then the GraphicTool can clone any kind of Graphic. 
-
-So in our music editor, each tool for creating a music object is an instance of GraphicTool that's initialized with a different prototype. 
+In music editor, each tool for creating a music object is an instance of GraphicTool that's *initialized with a different prototype*. 
 Each GraphicTool instance will produce a music object by cloning its prototype and adding the clone to the score。
 
 ![[原型模式音谱示例.png]]
 
-We can use the Prototype pattern to reduce the number of classes even further. 
-
-We have separate classes for whole notes and half notes, but that's probably unnecessary. Instead they could be instances of the same class initialized with different bitmaps and durations. 
+We can use the Prototype pattern to reduce the number of classes even further：
+1. We have separate classes for whole notes and half notes,but that's probably unnecessary.
+2. Instead they could be instances of the same class initialized with different bitmaps and durations. 
 
 A tool for creating whole notes becomes just a GraphicTool whose prototype is a MusicalNote initialized tobe a whole note. This can reduce the number of classes in the system dramatically.It also makesit easier to add a new kind of note to the music editor
 
