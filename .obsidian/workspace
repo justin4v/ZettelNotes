@@ -12,7 +12,20 @@
             "file": "Book Reading/设计模式GoF/创建型/Factory Method.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "0ae587a6677ad3aa"
+      },
+      {
+        "id": "d56baa7fd765ab11",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/设计模式GoF/创建型/Factory Method.md",
+            "mode": "preview"
+          }
+        },
+        "group": "0ae587a6677ad3aa"
       }
     ],
     "direction": "vertical"
@@ -125,7 +138,7 @@
     "width": 197,
     "collapsed": true
   },
-  "active": "b2c563c7d5f65dea",
+  "active": "d56baa7fd765ab11",
   "lastOpenFiles": [
     "Book Reading/设计模式GoF/创建型/Factory Method.md",
     "Book Reading/设计模式解析/UML 类图.md",
