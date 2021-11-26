@@ -51,7 +51,15 @@ A potential disadvantage of factory methods is that clients might have to subcla
 
 Here are two additional consequences of the FactoryMethod pattern: 
 1. *Provides hooks for subclasses*. Creating objects inside a class with a factory method is always more flexible than creating an object directly. Factory Method gives subclasses a hook for providing an extended version of an object. 
-2. *Connects parallel class hierarchies*. 
+2. *Connects parallel class hierarchies*. Parallel class hierarchies result when a class delegates some of its responsibilities to a separate class.
+
+Consider graphical figures that can be manipulated interactively; that is, they can be stretched, moved, or rotated using the mouse.
+
+Implementing such interactions isn't always easy. It often requires storing and updating informationthat records the state of the manipulation at a given time. This state is needed only during manipulation; therefore it needn't be kept in the figure object. Moreover, different figures behave differently when the user manipulates them.
+
+With these constraints, it's better to use a separate Manipulator object that implements the interaction and keeps track of any manipulation-specific state that's needed. Different figures will use different Manipulator subclasses to handle particular interactions.
+
+![[Pasted image 20211126103314.png]]
 
 # Implementation 
 issues when applying the FactoryMethod pattern: 
