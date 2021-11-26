@@ -6,8 +6,8 @@ Specify the kinds of objects to create using a prototypical instance, and *creat
 1. You could build an editor for music scores(乐谱) by customizing a general framework for graphical editors and adding new *objects that represent notes(音符), rests(休止符), and staves(五线谱).*- 抽象概念：**Graphics**
 2. The editor framework may have a palette(画板) of tools for adding these music objects to the score. The palette would also include *tools for selecting, moving, and otherwise manipulating music objects.* -- 抽象概念：**GraphicTools**
 
-- Let's assume the framework provides an abstract Graphic class for graphical components, like notes and staves. 
-- Moreover, it'll provide an abstract Tool class for defining tools like those in the palette. 
+- Let's assume the framework provides an *abstract Graphic class* for graphical components, like notes and staves. 
+- Moreover, it'll provide an *abstract Tool class* for defining tools like those in the palette. 
 - The framework also predefines a GraphicTool subclass for tools that create instances of graphical objects and add them to the document. 
 
 ## 问题
@@ -16,8 +16,9 @@ But GraphicTool presents a problem to the framework designer.：
 - *GraphicTool doesn't know how to create instances of our music classes* to add to the score. 
 - We could *subclass GraphicTool for each kind of music object, but that would produce lots of subclasses* that differ only in the kind of music object they instantiate.
 
-We know *object composition* is a flexible alternative to subclassing. 
-The question is, *how can the framework use it to parameterize instances of GraphicTool by the class of Graphic they're supposed to create*? 
+We know **object composition is a flexible alternative to subclassing**. 
+The question is, **how can the framework use *object composition* to parameterize instances of GraphicTool** by the class of Graphic they're supposed to create? 
+GraphicTool 中的动作在 GraphicTool 中聚合
 
 ## 解决
 The solution lies in making *GraphicTool create a new Graphic by copying or "cloning" an instance of a Graphic subclass*. We call this instance a prototype. 

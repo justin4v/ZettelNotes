@@ -1,7 +1,7 @@
 #Design-Pattern
 # Intent
-- Define an interface for creating an object, but *let subclasses decide which class to instantiate*. 
-- Factory Method lets a class *defer instantiation to subclasses*.
+- Define an interface for creating an object, but **let subclasses decide which class to instantiate**. 
+- Factory Method lets a class **defer instantiation to subclasses**.
 
 # Also Known As
 *Virtual Constructor*
@@ -44,14 +44,16 @@ Consider a framework for applications that can present multiple documents to the
 # Collaborations 
 - Creator relies on its subclasses to define the factory method so that it returns an instance of the appropriate ConcreteProduct.
 
-# Consequences 
-1. Factory methods ***eliminate the need to bind application-specific classes into your code***：
+# Consequences
+## 优点
+1. Factory methods **eliminate the need to bind application-specific classes into your code*：
 	1. The code only deals with the Product interface; 
 	2. therefore it can work with any user-defined ConcreteProduct classes.
-2. *Provides hooks(钩子) for subclasses*. Creating objects inside a class with a factory method is always more flexible than creating an object directly. Factory Method gives subclasses a hook for providing an extended version of an object. 
-3. *Connects parallel(平行) class hierarchies*. Parallel class hierarchies result when a class delegates some of its responsibilities to a separate class.
+2. **Provides hooks(钩子) for subclasses**. Creating objects inside a class with a factory method is always more flexible than creating an object directly. Factory Method gives subclasses a hook for providing an extended version of an object. 
+3. **Connects parallel(平行) class hierarchies**. Parallel class hierarchies result when a class delegates some of its responsibilities to a separate class.
 
-A potential disadvantage of factory methods is that clients might have to subclass the Creator class just to create a particular ConcreteProduct object. 
+## 缺点
+- clients might **have to subclass the Creator class just to create a particular ConcreteProduct object**. 
 ## Parallel Example
 Consider graphical figures that can be manipulated interactively(交互); 
 - that is, they can be stretched, moved, or rotated using the mouse.
