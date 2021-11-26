@@ -31,4 +31,10 @@ The Singleton pattern has several benefits:
 
 # Implementation
 1. Ensuring a unique instance
-2. 
+2. Subclassing the Singleton class.
+	1. The main issue is not so much defining the subclass but installing its unique instance so that clients will be able to use it.
+	2. A more flexible approach uses a **registry of singletons**.The registry maps between string names and singletons. When Instance needs a singleton, it consults the registry, asking for the singleton by name
+
+# Related Patterns
+Many patterns can **be implemented using the Singleton pattern**. 
+See *Abstract Factory , Builder , and Prototype*.
