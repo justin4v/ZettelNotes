@@ -54,7 +54,9 @@ Consider a framework for applications that can present multiple documents to the
 
 ## 缺点
 - clients might **have to subclass the Creator class just to create a particular ConcreteProduct object**. 
-## Parallel  Hierarchies Example
+
+
+## Parallel Class Hierarchy
 > *Parallel class hierarchies* result when **a class delegates some of its responsibilities to a separate class**.
 
 Consider graphical figures that can be manipulated interactively(交互); 
@@ -64,6 +66,10 @@ Consider graphical figures that can be manipulated interactively(交互);
 - *Different figures will use different Manipulator subclasses* to handle particular interactions. The resulting Manipulator class hierarchy parallels (at least partially) the Figure class hierarchy.
 
 ![[FactoryMethod 连接平行类示例.png]]
+
+1. Figure 类提供了一个 *CreateManipulator 工厂方法*；
+2. 使得用户可以*为每一个 Figure 子类创建一个对应的 Manipulator 子类*。
+3. 注意工厂方法如何连接两个类层次：它将哪些类应该一起工作的信息局部化（在具体子类的局部信息）
 
 # Implementation 
 issues when applying the FactoryMethod pattern: 
