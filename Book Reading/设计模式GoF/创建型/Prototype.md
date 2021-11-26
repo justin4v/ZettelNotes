@@ -76,5 +76,5 @@ The main liability of the Prototype pattern isthat each subclass of Prototype mu
 2. Implementing the Clone operation. The hardest part of the Prototype pattern is implementing the Clone operation correctly.
 
 # Related Patterns 
-1. Prototype and Abstract Factory (87)are competing patterns in some ways.They can also be used together, however. An Abstract Factory might store a set of prototypes from which to clone and return product objects
-2. . Designs that make heavy use of the Composite and Decorator patterns often can benefit from Prototype as well
+1. Prototype and Abstract Factory are competing patterns in some ways.They can also be used together, however. An Abstract Factory might store a set of prototypes from which to clone and return product objects
+2. Designs that make heavy use of the Composite and Decorator patterns often can benefit from Prototype as well
