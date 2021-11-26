@@ -63,7 +63,12 @@ Prototype has many of the same consequences that Abstract Factory (87) and Build
 2. Moreover, these patterns let a client work with application-specific classes withoutmodification. 
 3. Additional benefits of the Prototype pattern are listed below. 
 	1. Adding and removing products at run-time. Prototypes let you incorporate a new concrete product class into a system simply by registering a prototypical instance with the client.
-	2. Specifying new objects by varying values. Highly dynamic systems let you define new behavior through object composition—by specifying values for an object's variables, for example—and not by defining new classes.
+	2. Specifying new objects by varying values. Highly dynamic systems let you define new behavior through object composition—by specifying values for an object's variables, for example—and not by defining new classes.
+		1. You effectively define new kinds of objects by instantiating existing classes and registering the instances as prototypes of client objects. A client can exhibit new behavior by delegating responsibility to the prototype. 
+		2. This kind of design lets users define new "classes" without programming. In fact, cloning a prototype is similar to instantiating a class. 
 	3. Specifying new objects by varying structure. Many applications build objects from parts and subparts. 
-	4. Reduced subclassing. FactoryMethod (107)often produces a hierarchy of Creator classes that parallels the product class hierarchy. The Prototype pattern lets you clone a prototype instead of asking a factory method to make a new object. Hence you don't need a Creator class hierarchy at all.
+	4. Reduced subclassing. FactoryMethod often produces a hierarchy of Creator classes that parallels the product class hierarchy. The Prototype pattern lets you clone a prototype instead of asking a factory method to make a new object. Hence you don't need a Creator class hierarchy at all.
 	5. Configuring an application with classes dynamically.
+
+## 缺点
+The main liability of the Prototype pattern isthat each subclass of Prototype must implement the Clone operation, which may be difficult.
