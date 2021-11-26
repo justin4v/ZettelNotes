@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式GoF/创建型/Prototype.md",
+            "file": "Book Reading/设计模式GoF/创建型/Singleton.md",
             "mode": "source"
           }
         }
@@ -60,8 +60,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 182,
-    "collapsed": true
+    "width": 182
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式GoF/创建型/Prototype.md",
+                "file": "Book Reading/设计模式GoF/创建型/Singleton.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式GoF/创建型/Prototype.md"
+                "file": "Book Reading/设计模式GoF/创建型/Singleton.md"
               }
             }
           },
@@ -127,6 +126,7 @@
   },
   "active": "d56baa7fd765ab11",
   "lastOpenFiles": [
+    "Book Reading/设计模式GoF/创建型/Singleton.md",
     "Book Reading/设计模式GoF/创建型/Prototype.md",
     "Book Reading/设计模式GoF/创建型/Builder.md",
     "Book Reading/设计模式GoF/创建型/Factory Method.md",
@@ -134,7 +134,6 @@
     "Book Reading/设计模式GoF/行为型/Chain of Responsibility.md",
     "Book Reading/设计模式GoF/行为型/Command.md",
     "Book Reading/设计模式GoF/行为型/Visitor.md",
-    "Book Reading/设计模式GoF/创建型/Singleton.md",
     "Book Reading/设计模式解析/UML 类图.md",
     "Book Reading/设计模式GoF/设计模式.md"
   ]
