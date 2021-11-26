@@ -68,7 +68,13 @@ Prototype has many of the same consequences that Abstract Factory (87) and Build
 		2. This kind of design lets users define new "classes" without programming. In fact, cloning a prototype is similar to instantiating a class. 
 	3. Specifying new objects by varying structure. Many applications build objects from parts and subparts. 
 	4. Reduced subclassing. FactoryMethod often produces a hierarchy of Creator classes that parallels the product class hierarchy. The Prototype pattern lets you clone a prototype instead of asking a factory method to make a new object. Hence you don't need a Creator class hierarchy at all.
-	5. Configuring an application with classes dynamically.
-
 ## 缺点
 The main liability of the Prototype pattern isthat each subclass of Prototype must implement the Clone operation, which may be difficult.
+
+# 实现
+1. Using a prototype manager. When the number of prototypes in a system isn't fixed (thatis,they can be created and destroyed dynamically), keep a registry of available prototypes. Clients won't manageprototypes themselves but will store and retrieve them from the registry. A client will ask the registry for a prototype before cloning it. We call this registry a prototype manager.
+2. Implementing the Clone operation. The hardest part of the Prototype pattern is implementing the Clone operation correctly.
+
+# Related Patterns 
+1. Prototype and Abstract Factory (87)are competing patterns in some ways.They can also be used together, however. An Abstract Factory might store a set of prototypes from which to clone and return product objects
+2. . Designs that make heavy use of the Composite and Decorator patterns often can benefit from Prototype as well
