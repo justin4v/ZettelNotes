@@ -33,8 +33,9 @@ The Class Diagram 不仅描述了类，而且说明了类之间的关系
 1.  当一个类是“一种”另一个类时：is-a关系，**Generalization**。
 2.  当两个类之间存在关联时：
 	1.  一个类“包含”另一个类：has-a关系，**Composition** 或 **Aggregation**；
-	2.  一个类“使用”另一个类：use-a关系，**Dependency**；
+	2.  一个类“使用”另一个类：use-a 关系，**Dependency**；
 	3.  一个类“创建”另一类。
+	4.  一个类与另一个类关联。**Association**，调用和访问另外一方的元素。
 
 包含关系 has-a 还有两种类型：
 1. 被包含者是包含者的一部分（比如汽车中的发动机），称为**组合（composition）**。
