@@ -24,15 +24,15 @@ Use the Builder pattern when：
 ![[Builder结构.png]]
 
 ## 解释
-- Builder (TextConverter) 
+- **Builder** (TextConverter) 
 	-  specifies an abstract *interface* for creating parts of a Product object. 
--  ConcreteBuilder (ASCIIConverter, TeXConverter, TextWidgetConverter) 
+-  **ConcreteBuilder** (ASCIIConverter, TeXConverter, TextWidgetConverter) 
 	-  constructs and assembles parts of the product by *implementing* the Builder interface. 
 	-  defines and keeps track of the representation it creates. 
 	-  provides an interface for retrieving the product (e.g., GetASCIIText, GetTextWidget). 
--  Director (RTFReader) 
+-  **Director** (RTFReader) 
 	- (recognize the token and) *constructs* an object using the Builder interface. 
--  Product (ASCIIText, TeXText, TextWidget) 
+-  **Product** (ASCIIText, TeXText, TextWidget) 
 	-  represents the *complex object* under construction. ConcreteBuilder builds the product's internal representation and defines the process by which it's assembled. 
 	-  includes classes that define the constituent parts, including interfaces for assembling the parts into the final result.
 
