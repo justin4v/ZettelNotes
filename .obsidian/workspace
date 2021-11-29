@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:uml",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,12 +69,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 182
+    "width": 182,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -138,7 +138,7 @@
     "width": 197,
     "collapsed": true
   },
-  "active": "56c837766ed3fa6a",
+  "active": "d56baa7fd765ab11",
   "lastOpenFiles": [
     "Book Reading/设计模式解析/UML 类图.md",
     "附件/Visitor模式UML类图.png",
