@@ -30,21 +30,19 @@ UML是一种用来**创建程序模型的图形语言**（即带有语意的一�
 The Class Diagram 不仅描述了类，而且说明了类之间的关系
 
 ## 关系类型
-1.  当一个类是“一种”另一个类时：is-a关系，**Generalization**。
-2.  当两个类之间存在关联时：
-	1.  一个类“包含”另一个类：has-a关系，**Composition** 或 **Aggregation**，*箭头指向部件*；
-	2.  一个类“使用”另一个类：use-a 关系，**Dependency**，*箭头指向被使用者*；
-	3.  一个类“创建”另一类。
-	4.  一个类与另一个类关联。**Association**，调用和访问另外一方的元素，*箭头指向被关联者*。
+1.  *类级别（class-level）* ：一个类是一种另一个类时：**is-a** 关系，**Generalization**。
+2.  *实例级别（instance-level）*：
+	1.   一个类*使用*另一个类的实例：*use-a* 关系，**Dependency**，*箭头指向被使用者*；
+	2.  一个类与另一个类关联。**Association**，调用和访问另外一方的元素，*箭头指向被关联者*。
+	3.  一个类*包含*另一个类的实例：has-a 关系，**Composition** 或 **Aggregation**，*箭头指向部件*；
 
-![[类图中类与类的关系示意.png]]
 ![[类图含义示意.png]]
 
 包含关系 has-a 还有两种类型：
 1. 被包含者是包含者的一部分（比如汽车中的发动机），称为**组合（composition）**。
 2. 有一个集合，集合中东西可以独立存在（比如机场上的飞机），称为**聚合（aggregation）**。
 
-**类图示例**
+## 类图图例
 包含：
  1. The name of the class
 2. The data members of the class
