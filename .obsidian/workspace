@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/UML.md",
+            "file": "Medical/HIS.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/UML.md",
+                "file": "Medical/HIS.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/UML.md"
+                "file": "Medical/HIS.md"
               }
             }
           },
@@ -126,6 +126,7 @@
   },
   "active": "d56baa7fd765ab11",
   "lastOpenFiles": [
+    "Medical/HIS.md",
     "Book Reading/设计模式解析/UML.md",
     "Design/Pattern.md",
     "Design/Framework.md",
@@ -134,7 +135,6 @@
     "Base Knowledge/编程/字节码访问标志.md",
     "Book Reading/设计模式解析/Class Diagram.md",
     "附件/Visitor模式UML类图.png",
-    "Book Reading/设计模式GoF/结构型/Adapter.md",
-    "Book Reading/设计模式GoF/设计模式.md"
+    "Book Reading/设计模式GoF/结构型/Adapter.md"
   ]
 }
