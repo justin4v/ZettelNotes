@@ -12,7 +12,20 @@
             "file": "Book Reading/设计模式解析/UML 类图.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "bcb095106d99eab6"
+      },
+      {
+        "id": "4115a30b1cfe4a40",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/设计模式解析/UML 类图.md",
+            "mode": "preview"
+          }
+        },
+        "group": "bcb095106d99eab6"
       }
     ],
     "direction": "vertical"
