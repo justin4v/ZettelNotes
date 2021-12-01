@@ -12,7 +12,20 @@
             "file": "Book Reading/大象-Thinking in UML/1.1 面向过程.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "450ac4297a59450a"
+      },
+      {
+        "id": "462e21aefaf0734d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/大象-Thinking in UML/1.1 面向过程.md",
+            "mode": "preview"
+          }
+        },
+        "group": "450ac4297a59450a"
       }
     ],
     "direction": "vertical"
