@@ -12,7 +12,20 @@
             "file": "Book Reading/大象-Thinking in UML/1.3 为什么需要UML.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "69e81855fa6d9783"
+      },
+      {
+        "id": "2e30734f1ce058d2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/大象-Thinking in UML/1.3 为什么需要UML.md",
+            "mode": "preview"
+          }
+        },
+        "group": "69e81855fa6d9783"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 182
+    "width": 182,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
