@@ -1,6 +1,5 @@
-#运维 #Containerization
+#运维 #Containerization 
 
-# Linux Control Groups
 Truth be told, certain software applications in the wild may need to be controlled or limited—at least for the sake of stability and, to some degree, security. A bug or just bad code can disrupt an entire machine and potentially cripple an entire ecosystem. 
 Fortunately, a way exists to keep those same applications in check. Control groups (cgroups) is a kernel feature that limits, accounts for and isolates the CPU, memory, disk I/O and network's usage of one or more processes.
 
