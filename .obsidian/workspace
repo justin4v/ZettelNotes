@@ -9,23 +9,10 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/大象-Thinking in UML/1.3 为什么需要UML.md",
+            "file": "Language/Java/基础/集合操作实现.md",
             "mode": "source"
           }
-        },
-        "group": "69e81855fa6d9783"
-      },
-      {
-        "id": "2e30734f1ce058d2",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Book Reading/大象-Thinking in UML/1.3 为什么需要UML.md",
-            "mode": "preview"
-          }
-        },
-        "group": "69e81855fa6d9783"
+        }
       }
     ],
     "direction": "vertical"
@@ -52,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "交集",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,12 +56,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 182,
-    "collapsed": true
+    "width": 182
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/大象-Thinking in UML/1.3 为什么需要UML.md",
+                "file": "Language/Java/基础/集合操作实现.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/大象-Thinking in UML/1.3 为什么需要UML.md"
+                "file": "Language/Java/基础/集合操作实现.md"
               }
             }
           },
@@ -140,6 +127,7 @@
   },
   "active": "462e21aefaf0734d",
   "lastOpenFiles": [
+    "Language/Java/基础/集合操作实现.md",
     "Book Reading/大象-Thinking in UML/1.3 为什么需要UML.md",
     "未命名 1.md",
     "Book Reading/大象-Thinking in UML/1.2 面向对象.md",
@@ -148,7 +136,6 @@
     "Book Reading/未命名.md",
     "Medical/专业名词.md",
     "Book Reading/设计模式解析/UML.md",
-    "Design/Pattern.md",
-    "Design/Framework.md"
+    "Design/Pattern.md"
   ]
 }
