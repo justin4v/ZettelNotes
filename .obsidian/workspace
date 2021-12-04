@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/运维相关/Docker.md",
+            "file": "日常记录/运维相关/Docker 基本原理.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "8bcfea35afd30000"
+      },
+      {
+        "id": "061fbf2c29ac240f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "日常记录/运维相关/Docker 基本原理.md",
+            "mode": "preview"
+          }
+        },
+        "group": "8bcfea35afd30000"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 182
+    "width": 182,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/运维相关/Docker.md",
+                "file": "日常记录/运维相关/Docker 基本原理.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/运维相关/Docker.md"
+                "file": "日常记录/运维相关/Docker 基本原理.md"
               }
             }
           },
@@ -126,7 +140,7 @@
   },
   "active": "462e21aefaf0734d",
   "lastOpenFiles": [
-    "日常记录/运维相关/Docker.md",
+    "日常记录/运维相关/Docker 基本原理.md",
     "OS/Linux/Linux cgroups.md",
     "日常记录/运维相关/Kubectl 命令手册.md",
     "未命名.md",
