@@ -57,7 +57,7 @@ The Linux kernel provides access to a series of controllers or subsystems for th
 
 Linux 系统中，一切皆文件。*Linux 将 cgroups 实现成了文件系统*。
 ```shell
-[root@node7 ~]# mount -t cgroup
+[root@node7 ~]# mount -t cgroup  # 挂在到 linux 文件树上
 cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
 cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,hugetlb)
 cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,memory)
@@ -71,7 +71,7 @@ cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,secl
 cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,devices)
 
 [root@node7 ~]# lssubsys -m
-cpuset /sys/fs/cgroup/cpuset
+cpuset /sys/fs/cgroup/cpuset   # cgroup 的父级目录，可在在其中新建目录（子group），会自动生成配置文件
 cpu,cpuacct /sys/fs/cgroup/cpu,cpuacct
 memory /sys/fs/cgroup/memory
 devices /sys/fs/cgroup/devices
@@ -82,8 +82,27 @@ perf_event /sys/fs/cgroup/perf_event
 hugetlb /sys/fs/cgroup/hugetlb
 pids /sys/fs/cgroup/pids
 
-
+[root@node7 ~]# ll /sys/fs/cgroup/cpu,cpuacct
+total 0
+-rw-r--r--. 1 root root 0 Nov  6 14:05 cgroup.clone_children
+--w--w--w-. 1 root root 0 Nov  6 14:05 cgroup.event_control
+-rw-r--r--. 1 root root 0 Nov  6 14:05 cgroup.procs
+-r--r--r--. 1 root root 0 Nov  6 14:05 cgroup.sane_behavior
+-r--r--r--. 1 root root 0 Nov  6 14:05 cpuacct.stat
+-rw-r--r--. 1 root root 0 Nov  6 14:05 cpuacct.usage
+-r--r--r--. 1 root root 0 Nov  6 14:05 cpuacct.usage_percpu
+-rw-r--r--. 1 root root 0 Nov  6 14:05 cpu.cfs_period_us
+-rw-r--r--. 1 root root 0 Nov  6 14:05 cpu.cfs_quota_us
+-rw-r--r--. 1 root root 0 Nov  6 14:05 cpu.rt_period_us
+-rw-r--r--. 1 root root 0 Nov  6 14:05 cpu.rt_runtime_us
+-rw-r--r--. 1 root root 0 Nov  6 14:05 cpu.shares
+-r--r--r--. 1 root root 0 Nov  6 14:05 cpu.stat
+-rw-r--r--. 1 root root 0 Nov  6 14:05 notify_on_release
+-rw-r--r--. 1 root root 0 Nov  6 14:05 release_agent
+-rw-r--r--. 1 root root 0 Nov  6 14:05 tasks  # 
 ```
+
+
 
 # 进程和cgroup的关系
 - 限制一个进程的内存和CPU，会绑定进程到 CPU cgroup 和 Memory cgroup 的节点上；
