@@ -42,7 +42,6 @@ The Linux kernel provides access to a series of controllers or subsystems for th
 	-   一个子系统附加到某个层级以后，层级上的所有控制族群都受到这个子系统的控制。
 
 # 子系统
-
 -   `cpuset` - assigns individual processor(s) and memory nodes to task(s) in a group;
 -   `cpu` - uses the scheduler to provide cgroup tasks access to the processor resources;
 -   `cpuacct` - generates reports about processor usage by a group;
@@ -56,6 +55,35 @@ The Linux kernel provides access to a series of controllers or subsystems for th
 -   `hugetlb` - activates support for [huge pages](https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt) for a group;
 -   `pid` - sets limit to number of processes in a group.
 
+Linux 系统中，一切皆文件。*Linux 将 cgroups 实现成了文件系统*。
+```shell
+[root@node7 ~]# mount -t cgroup
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,hugetlb)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,memory)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,net_prio,net_cls)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,freezer)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,cpuacct,cpu)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,perf_event)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,pids)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,cpuset)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,blkio)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,devices)
+
+[root@node7 ~]# lssubsys -m
+cpuset /sys/fs/cgroup/cpuset
+cpu,cpuacct /sys/fs/cgroup/cpu,cpuacct
+memory /sys/fs/cgroup/memory
+devices /sys/fs/cgroup/devices
+freezer /sys/fs/cgroup/freezer
+net_cls,net_prio /sys/fs/cgroup/net_cls,net_prio
+blkio /sys/fs/cgroup/blkio
+perf_event /sys/fs/cgroup/perf_event
+hugetlb /sys/fs/cgroup/hugetlb
+pids /sys/fs/cgroup/pids
+
+
+```
 
 # 进程和cgroup的关系
 - 限制一个进程的内存和CPU，会绑定进程到 CPU cgroup 和 Memory cgroup 的节点上；
