@@ -54,5 +54,30 @@ The Linux kernel provides access to a series of controllers or subsystems for th
 -   `perf_event` - provides access to [perf events](https://en.wikipedia.org/wiki/Perf_/(Linux/)) to a group;
 -   `hugetlb` - activates support for [huge pages](https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt) for a group;
 -   `pid` - sets limit to number of processes in a group.
+
+
+# 进程和cgroup的关系
+- 限制一个进程的内存和CPU，会绑定进程到 CPU cgroup 和 Memory cgroup 的节点上；
+- Cpu cgroup 节点和 Memory cgroup节点属于两个不同的Hierarchy 层级。
+- 进程和 cgroup 节点是*多对多的关系*，因为一个进程涉及多个子系统，每个子系统可能属于不同的层次结构(Hierarchy)。
+
+示意图：
+![[进程和cgroup关系示意图.png]]
+
+- P 代表进程；
+- 多个进程可能共享相同的资源，所以会抽象出一个 `CSS_SET`, 每个进程会属于一个CSS_SET 链表
+- 同一个 `CSS_SET` 下的进程都被其管理；
+- 一个 `CSS_SET` 关联多个 cgroup节点，`CSS_SET`和 `Cgroup`节点就是多对多的关系(MxN 的关系)。
+
+## CSS_SET 
+```C
+#ifdef CONFIG_CGROUPS  
+	 /* Control Group info protected by css_set_lock */  
+	 struct css_set __rcu *cgroups; 关联的cgroup 节点  
+	 /* cg_list protected by css_set_lXock and tsk->alloc_lock */  
+	 struct list_head cg_list; // 关联所有的进程  
+#endif
+```
+
 # 参考
 1. [Everything You Need to Know about Linux Containers, Part I: Linux Control Groups and Process Isolation](https://www.linuxjournal.com/content/everything-you-need-know-about-linux-containers-part-i-linux-control-groups-and-process)
