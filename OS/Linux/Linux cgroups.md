@@ -42,6 +42,7 @@ The Linux kernel provides access to a series of controllers or subsystems for th
 	-   一个子系统附加到某个层级以后，层级上的所有控制族群都受到这个子系统的控制。
 
 # 子系统
+
 -   `cpuset` - assigns individual processor(s) and memory nodes to task(s) in a group;
 -   `cpu` - uses the scheduler to provide cgroup tasks access to the processor resources;
 -   `cpuacct` - generates reports about processor usage by a group;
@@ -82,3 +83,5 @@ The Linux kernel provides access to a series of controllers or subsystems for th
 # 参考
 1. [Everything You Need to Know about Linux Containers, Part I: Linux Control Groups and Process Isolation](https://www.linuxjournal.com/content/everything-you-need-know-about-linux-containers-part-i-linux-control-groups-and-process)
 2. [Linux Control Groups V1 和 V2 原理和区别](https://mikechengwei.github.io/2020/06/03/cgroup%E5%8E%9F%E7%90%86/)
+3. [理解Docker（4）：Docker 容器使用 cgroups 限制资源使用](https://www.cnblogs.com/sammyliu/p/5886833.html)
+4. [Docker基础技术：Linux CGroup ](https://coolshell.cn/articles/17049.html)
