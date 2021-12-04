@@ -4,9 +4,23 @@
 - 第二层是 root 文件系统（rootfs）；
 - 传统 Linux 引导过程中，rootfs 先以只读的方式加载，引导结束后，rootfs切换为读写模式；
 - Docker 中 rootfs 等都是只读。
-- Docker 利用联合加载（union mount，一次加载多个文件系统）一次同时加载所需要的文件系统，都是只读的。
+- Docker 利用联合加载（union mount，一次加载多个文件系统）一次同时加载所需要的文件系统，都是只读的，永远不会变化。
 
 1. Docker 称这样的文件系统为 Image 镜像；
 2. 从Image启动容器时，在 Image 的最顶层加载一个读写文件系统；
 3. Docker 中运行的程序就是在顶层的读写层中执行的。
 
+![[Docker文件系统层次示意.png]]
+
+# 特点
+## Image-Layering Framework
+- Docker 从镜像创建容器时，Docker 会构建出一个镜像栈（image stack）
+- 在栈的最顶层添加一个读写层
+
+
+## Copy-on-Write
+- Docker 启动容器时，读写层是空的。文件系统发生的变化都会应用到这一层。
+- 如需要修改一个文件：
+	- 从下方的只读层复制该文件到读写层；
+	- 对文件进行修改；
+	- 下方的只读版本被读写层的修改版本覆盖。
