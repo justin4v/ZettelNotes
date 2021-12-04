@@ -10,8 +10,9 @@
 2. 从Image启动容器时，在 Image 的最顶层加载一个读写文件系统；
 3. Docker 中运行的程序就是在顶层的读写层中执行的。
 
-![[Docker文件系统层次示意.png]]
+![[Docker文件系统分层示意.png]]
 
+![[Docker文件分层示意2.png]]
 # 特点
 ## Image-Layering Framework
 - Docker 从镜像创建容器时，Docker 会构建出一个镜像栈（image stack）
@@ -24,3 +25,14 @@
 	- 从下方的只读层复制该文件到读写层；
 	- 对文件进行修改；
 	- 下方的只读版本被读写层的修改版本覆盖。
+
+## Union Mount
+- 联合挂载技术可以在一个挂载点同时挂载多个文件系统，将挂载点的原目录与被挂载内容进行整合；
+- 联合挂载文件系统最终对外表现为一层。
+
+
+# Container
+- Docker容器(Container) 是独立运行的一个或一组应用。
+- Docker容器(Container) 是从[[#Image|镜像]] 创建的运行实例，它可以被启动、开始、停止、 删除。
+- 每个 Docker容器(Container) 都是相互隔离的、保证安全的平台。
+- Image 类似于 Container的模板。

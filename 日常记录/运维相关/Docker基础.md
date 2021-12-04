@@ -4,7 +4,7 @@ Docker 是一个：
 - 轻量级的容器引擎；
 - 主要运行于 Linux 和 Windows，用于创建、管理和编排容器。
 
-和 VMware 虚拟机相比，Docker 使用容器（Container）承载应用程序，而不使用操作系统，所以它的开销很少，性能很高。
+和 VMware 虚拟机相比，Docker 使用容器（[[Docker镜像与容器#Container|Container]]）承载应用程序，而不使用操作系统，所以它的开销很少，性能很高。
 但是，Docker 对应用程序的隔离不如虚拟机彻底，所以它并不能完全取代 VMware。
 
 # Container 状态机
