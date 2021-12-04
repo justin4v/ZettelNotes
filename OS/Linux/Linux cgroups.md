@@ -26,13 +26,33 @@ The Linux kernel provides access to a series of controllers or subsystems for th
 - The `memory` controller is what limits memory usage；
 - The `cpuacct` controller monitors CPU usage.
 
-
 # 术语
 
 -   **任务（Tasks）**：就是系统的一个**进程**。
--   **控制组（Control Group）**：按照**某种标准划分的一组进程**。比如官方文档中的 Professor 和Student，或是WWW和System之类的，其表示了某进程组。Cgroups中的资源控制都是以控制组为单位实现。一个进程可以加入到某个控制组。而资源的限制是定义在这个组上，就像上面示例中我用的 hello 一样。简单点说，cgroup的呈现就是一个目录带一系列的可配置文件。
--   **层级（Hierarchy）**：控制组可以组织成hierarchical的形式，既一颗控制组的树（目录结构）。控制组树上的子节点继承父结点的属性。简单点说，hierarchy就是在一个或多个子系统上的cgroups目录树。
--   **子系统（Subsystem）**：一个子系统就是一个资源控制器，比如CPU子系统就是控制CPU时间分配的一个控制器。子系统必须附加到一个层级上才能起作用，一个子系统附加到某个层级以后，这个层级上的所有控制族群都受到这个子系统的控制。Cgroup的子系统可以有很多，也在不断增加中。
+-   **控制组（Control Group）**：按照**某种标准划分的一组进程**。
+	-   比如官方文档中的 Professor 和Student，或是WWW和System之类的，其表示了某进程组。
+	-   cgroups 中的*资源控制单位是控制组*。
+	-   一个进程可以加入到某个控制组。
+-   **层级（Hierarchy）**：控制组可以组织成 **hierarchical 的形式**，一棵控制组的树（目录结构）。
+	-   控制组树上的子节点继承父结点的属性。
+	-   ![[cgroup层级示意图.png]]
+-   **子系统（Subsystem）**：一个子系统就是一个**资源控制器**。
+	-   比如 CPU 子系统就是控制 CPU 时间分配的一个控制器。
+	-   子系统必须附加到一个层级上才能起作用；
+	-   一个子系统附加到某个层级以后，层级上的所有控制族群都受到这个子系统的控制。
 
+# 子系统
+-   `cpuset` - assigns individual processor(s) and memory nodes to task(s) in a group;
+-   `cpu` - uses the scheduler to provide cgroup tasks access to the processor resources;
+-   `cpuacct` - generates reports about processor usage by a group;
+-   `io` - sets limit to read/write from/to [block devices](https://en.wikipedia.org/wiki/Device_file);
+-   `memory` - sets limit on memory usage by a task(s) from a group;
+-   `devices` - allows access to devices by a task(s) from a group;
+-   `freezer` - allows to suspend/resume for a task(s) from a group;
+-   `net_cls` - allows to mark network packets from task(s) from a group;
+-   `net_prio` - provides a way to dynamically set the priority of network traffic per network interface for a group;
+-   `perf_event` - provides access to [perf events](https://en.wikipedia.org/wiki/Perf_/(Linux/)) to a group;
+-   `hugetlb` - activates support for [huge pages](https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt) for a group;
+-   `pid` - sets limit to number of processes in a group.
 # 参考
 1. [Everything You Need to Know about Linux Containers, Part I: Linux Control Groups and Process Isolation](https://www.linuxjournal.com/content/everything-you-need-know-about-linux-containers-part-i-linux-control-groups-and-process)
