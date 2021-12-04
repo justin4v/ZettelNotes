@@ -99,9 +99,8 @@ total 0
 -r--r--r--. 1 root root 0 Nov  6 14:05 cpu.stat
 -rw-r--r--. 1 root root 0 Nov  6 14:05 notify_on_release
 -rw-r--r--. 1 root root 0 Nov  6 14:05 release_agent
--rw-r--r--. 1 root root 0 Nov  6 14:05 tasks  # 
+-rw-r--r--. 1 root root 0 Nov  6 14:05 tasks  # 将进程PID写入task文件，即可使得进程受控
 ```
-
 
 
 # 进程和cgroup的关系
