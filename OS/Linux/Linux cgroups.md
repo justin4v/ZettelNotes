@@ -1,15 +1,15 @@
 #运维 #Containerization 
 
-Truth be told, certain software applications in the wild may need to be controlled or limited—at least for the sake of stability and, to some degree, security. A bug or just bad code can disrupt an entire machine and potentially cripple an entire ecosystem. 
-Fortunately, a way exists to keep those same applications in check. **Control groups (cgroups)** is a kernel feature that limits, accounts for and isolates the CPU, memory, disk I/O and network's usage of one or more processes.
+Certain software applications in the wild may* need to be controlled or limited*—at least for the sake of stability and, to some degree, security.  
+**Control groups (cgroups)** is a *kernel feature* that **limits**, **accounts** for and **isolates** the *CPU, memory, disk I/O and network's usage* of one or more processes.
 
 ## History
-- Originally developed by Google；
+- *Originally developed by Google*；
 - First land in Linux kernel in version 2.6.24 (January 2008)；
 - Redesign would be merged into both the 3.15 and 3.16 kernels.
 
 The primary design **goal**:
-- provide a unified interface to **manage processes-level or whole operating-system-level virtualization**, including Linux Containers(LXC)
+- provide a unified interface to **manage processes-level or whole operating-system-level virtualization**, including *Linux Containers(LXC)*。
 
 ## Feature
 The cgroups framework provides the following features:
@@ -25,7 +25,6 @@ The cgroups framework provides the following features:
 The Linux kernel provides access to a series of controllers or subsystems for the cgroup technology. T
 - The `memory` controller is what limits memory usage；
 - The `cpuacct` controller monitors CPU usage.
-
 
 
 
