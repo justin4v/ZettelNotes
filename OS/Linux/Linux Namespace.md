@@ -64,4 +64,4 @@ int clone(int (*child_func)(void *), void *child_stack, int flags, void *arg);
 
 # 参考
 1. [Linux Namespace 入门：Namespace API](https://cloud.tencent.com/developer/article/1583922)
-2. [Linux Capabilities 入门：让普通进程获得 root 的洪荒之力]
+2. [[Linux Capabilities]]
