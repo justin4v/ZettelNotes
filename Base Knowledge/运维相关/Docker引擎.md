@@ -47,10 +47,10 @@ Docker 公司开发了 Libcontainer 用于替代 LXC：
 - runc 实质上是一个*轻量级的*、针对 Libcontainer 进行了包装的*命令行交互工具*。
 
 ## containerd
-- Docker daemon 的功能进行拆解后，容器执行逻辑被重构到名为 containerd的工具中；
+- Docker daemon 的功能进行拆解后，*容器执行逻辑被重构到 containerd*的工具中；
 - 主要任务：
-	- 容器管理——start | stop | pause | rm 等
-	- 镜像管理
+	- **容器管理**，如 start | stop | pause | rm 等
+	- **镜像管理**
 
 
 # 容器的创建过程
@@ -60,25 +60,30 @@ Docker 公司开发了 Libcontainer 用于替代 LXC：
 $ docker container run --name ctr1 -it alpine:latest sh
 ```
 
-1. 命令行工具执行命令时，Docker client 将其转换为合适的 API 格式，并发送到 Docker Host 中的 daemon；
-2. daemon 接收到创建新容器的命令，向 containerd 发出调用；
+1. 命令行工具执行命令时，Docker client 将其转换为合适的 API 格式，并*发送到 Docker Host 中的 daemon*；
+2. daemon 接收到创建新容器的命令，*向 containerd 发出调用*；
 	daemon 使用一种 CRUD 风格的 API，通过 gRPC 与 containerd 进行通信
-3. containerd 将 Docker 镜像转换为 OCI bundle，并调用 runc 创建一个新的容器；
-4. runc 与操作系统内核接口进行通信，基于所有必要的工具（Namespace、CGroup等）来创建容器。
-	容器进程作为 runc 的子进程启动，启动完毕后，runc 将会退出。
+3. containerd 将 Docker 镜像转换为 OCI bundle，并*调用 runc 创建一个新的容器*；
+4. *runc 与操作系统内核接口进行通信*，基于所有必要的工具（Namespace、CGroup等）来创建容器。
+	容器进程作为 runc 的子进程启动，*启动完毕后，runc 将会退出*。
 
 整体过程如下
 ![[docker 创建新容器示意图.png]]
 
 ## 创建容器过程的优点
-1. 容器运行时与 Docker daemon 是解耦的。所有的用于启动、管理容器的逻辑和代码都不在 daemon 中。
+1. **容器运行时与 Docker daemon 是解耦的**。所有的用于启动、管理容器的逻辑和代码都不在 daemon 中。
 2. 对 Docker daemon 的维护和升级工作不会影响到运行中的容器。
 3. 称之为*无守护进程的容器（daemonless container）*
 
 ## shim
 - containerd 调用 runc 来创建新容器。每次创建容器时都会 fork 一个新的 runc 实例；
 - 一旦容器创建完毕，对应的 runc 进程就会退出；
-- runc 退出后，对应 containerd-shim 进程就会成为容器的父进程；
+-* runc 退出后，对应 containerd-shim 进程就会成为容器的父进程*；
 - shim 职责如下：
-	- 保持 STDIN 和 STDOUT 流是开启状态，从而当 daemon 重启的时候，容器不会因为管道（pipe）的关闭而终止。
-	-  将容器的退出状态反馈给 daemon。
+	- **保持 STDIN 和 STDOUT 流是开启状态**，从而当 daemon 重启的时候，容器不会因为管道（pipe）的关闭而终止。
+	-  将容器的*退出状态反馈给 daemon*。
+
+
+# daemon 的作用
+随着越来越多的功能从 daemon 中拆解出来并被模块化，daemon的作用也会发生变化。  
+ daemon 的主要功能包括*镜像管理、镜像构建、REST API、身份验证、安全、核心网络以及编排*。
