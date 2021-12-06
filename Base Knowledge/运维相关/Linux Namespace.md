@@ -42,3 +42,26 @@ lrwxrwxrwx. 1 mtk mtk 0 Jan  8 04:12 uts -> uts:[4026531838]
 符号链接的用途之一是用来**确认两个不同的进程是否处于同一 namespace 中**。
 1. 如果两个进程指向的 namespace inode number 相同，就在同一个 namespace 下；
 2. 否则就在不同的 namespace 下。
+
+# API 详解
+## clone
+`clone()` 的原型如下：
+```c
+int clone(int (*child_func)(void *), void *child_stack, int flags, void *arg);
+```
+-   **child_func** : 传入子进程运行的程序主函数。
+-   **child_stack** : 传入子进程使用的栈空间。
+-   **flags** : 表示使用哪些 `CLONE_*` 标志位。
+-   **args** : 用于传入用户参数。
+
+特点
+1. `clone()` 与 `fork()` 类似，都相当于把当前进程复制了一份；
+2. `clone()` 可以更细粒度地控制与子进程共享的资源（其实就是通过 flags 来控制），包括虚拟内存、打开的文件描述符和信号量等等。
+3. 如果指定了标志位 `CLONE_NEW*`，相对应类型的 namespace 就会被创建，新创建的进程也会成为该 namespace 中的一员。
+
+### 注意
+- 除了 User namespace 之外，创建其他的 namespace 都需要特权，确切地说，是需要相应的 `Linux Capabilities`
+
+# 参考
+1. [Linux Namespace 入门：Namespace API](https://cloud.tencent.com/developer/article/1583922)
+2. [Linux Capabilities 入门：让普通进程获得 root 的洪荒之力]
