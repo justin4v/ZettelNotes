@@ -1,7 +1,9 @@
 #运维 #Containerization 
 
 Certain software applications in the wild may* need to be controlled or limited*—at least for the sake of stability and, to some degree, security.  
-**Control groups (cgroups)** is a *kernel feature* that **limits**, **accounts** for and **isolates** the *CPU, memory, disk I/O and network's usage* of one or more processes.
+- **Control groups (cgroups)** is a *kernel feature* that **limits**, **accounts** for and **isolates** the *CPU, memory, disk I/O and network's usage* of one or more processes.
+- 用于**资源限制**；
+
 
 ## History
 - *Originally developed by Google*；
