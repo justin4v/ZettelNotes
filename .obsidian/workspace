@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/Linux/Linux Capabilities.md",
+            "file": "Base Knowledge/运维相关/Docker 原理.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/Linux/Linux Capabilities.md",
+            "file": "Base Knowledge/运维相关/Docker 原理.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/Linux/Linux Capabilities.md",
+                "file": "Base Knowledge/运维相关/Docker 原理.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/Linux/Linux Capabilities.md"
+                "file": "Base Knowledge/运维相关/Docker 原理.md"
               }
             }
           },
@@ -139,15 +139,15 @@
   },
   "active": "3daa55a73871d9c1",
   "lastOpenFiles": [
+    "Base Knowledge/运维相关/Docker 原理.md",
+    "Base Knowledge/运维相关/Docker与cgroup.md",
+    "Base Knowledge/运维相关/Docker基础.md",
     "OS/Linux/Linux Capabilities.md",
     "OS/Linux/IO模型.md",
     "OS/Linux/Linux Namespace.md",
-    "Base Knowledge/运维相关/Docker与cgroup.md",
-    "Base Knowledge/运维相关/Docker基础.md",
     "OS/Linux/Linux cgroups.md",
     "Base Knowledge/运维相关/Docker镜像与容器.md",
     "Language/Java/JVM/JVM内存结构.md",
-    "Base Knowledge/编程/专业词汇.md",
-    "附件/编程系统的演进.png"
+    "Base Knowledge/编程/专业词汇.md"
   ]
 }
