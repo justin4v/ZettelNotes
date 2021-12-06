@@ -38,6 +38,10 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 5. `-XX:NewRatio`: **old/new** 的比例。默认是2。
 **注意：建议将 -Xms 和 -Xmx 设为相同值，避免每次垃圾回收完成后JVM重新分配内存！**  
 
+Heap 初始容量分配根据系统的配置而定（参考 [Ergonomics](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/ergonomics.html#sthref5)），一般系统（CPU 2 核以上、内存 2 GB 以上）Heap size **默认设置**：
+1. Heap size **初始容量为内存的 1/64，最大 1GB**；
+2. Heap size **最大容量为内存的 1/4，最大 1GB**。
+
 当 Heap **没有足够的空间分配给对象且到达最大容量**，无法扩展时，会抛出常见的 *OOM(OutOfMemoryError)* 异常
 
 具体 JVM 参数选项参考：
