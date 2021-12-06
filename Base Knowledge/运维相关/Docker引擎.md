@@ -46,5 +46,29 @@ Docker 公司开发了 Libcontainer 用于替代 LXC：
 ## runc
 - runc 是 OCI 容器运行时规范的参考实现；
 - runc 实质上是一个轻量级的、针对 Libcontainer 进行了包装的命令行交互工具；
-- runc 只有一个作用——创建容器
+- runc 实质是一个独立的容器运行时工具。
+
+## containerd
+- Docker daemon 的功能进行拆解后，容器执行逻辑被重构到名为 containerd的工具中；
+- 主要任务：
+	- 容器管理——start | stop | pause | rm 等
+	- 镜像管理
+
+
+# 容器的创建过程
+常用的启动容器的方法是使用 Docker 命令行工具。
+下面的`docker container run`命令基于 `alpine:latest` [[Docker镜像与容器#Image|镜像]]启动一个新容器。  
+```shell
+$ docker container run --name ctr1 -it alpine:latest sh
+```
+
+1. 命令行工具执行命令时，Docker client 将其转换为合适的 API 格式，并发送到 Docker Host 中的 daemon；
+2. daemon 接收到创建新容器的命令，向 containerd 发出调用；
+	daemon 使用一种 CRUD 风格的 API，通过 gRPC 与 containerd 进行通信
+3. containerd 将 Docker 镜像转换为 OCI bundle，并调用 runc 创建一个新的容器；
+4. runc 与操作系统内核接口进行通信，基于所有必要的工具（Namespace、CGroup等）来创建容器。
+	容器进程作为 runc 的子进程启动，启动完毕后，runc 将会退出。
+
+
+![[Pasted image 20211206140149.png]]
 
