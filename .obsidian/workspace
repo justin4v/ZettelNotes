@@ -12,7 +12,20 @@
             "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "2113d0103a843560"
+      },
+      {
+        "id": "ef3906381dbff4bb",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
+            "mode": "preview"
+          }
+        },
+        "group": "2113d0103a843560"
       }
     ],
     "direction": "vertical"
