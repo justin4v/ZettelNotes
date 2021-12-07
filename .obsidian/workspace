@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/为啥阅读本书.md",
+            "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/SICP/为啥阅读本书.md",
+                "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/SICP/为啥阅读本书.md"
+                "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md"
               }
             }
           },
@@ -120,12 +120,13 @@
       }
     ],
     "direction": "horizontal",
-    "width": 197
+    "width": 197,
+    "collapsed": true
   },
   "active": "3daa55a73871d9c1",
   "lastOpenFiles": [
-    "Book Reading/SICP/为啥阅读本书.md",
     "Book Reading/SICP/1.2 程序及其所产生的过程.md",
+    "Book Reading/SICP/为啥阅读本书.md",
     "Book Reading/SICP/1.1 基本元素.md",
     "Base Knowledge/Markdown/Markdown 公式手册.md",
     "Book Reading/大象-Thinking in UML/1.1 面向过程.md",
