@@ -9,23 +9,10 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
+            "file": "Book Reading/SICP/为啥阅读本书.md",
             "mode": "source"
           }
-        },
-        "group": "2113d0103a843560"
-      },
-      {
-        "id": "ef3906381dbff4bb",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
-            "mode": "preview"
-          }
-        },
-        "group": "2113d0103a843560"
+        }
       }
     ],
     "direction": "vertical"
@@ -52,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "演化",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,8 +56,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -90,9 +76,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
-                "collapseAll": true,
-                "extraContext": true,
+                "file": "Book Reading/SICP/为啥阅读本书.md",
+                "collapseAll": false,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -108,7 +94,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "alphabetical",
-                "useHierarchy": false
+                "useHierarchy": true
               }
             }
           },
@@ -118,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md"
+                "file": "Book Reading/SICP/为啥阅读本书.md"
               }
             }
           },
@@ -130,20 +116,18 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 197,
-    "collapsed": true
+    "width": 197
   },
   "active": "3daa55a73871d9c1",
   "lastOpenFiles": [
+    "Book Reading/SICP/为啥阅读本书.md",
     "Book Reading/SICP/1.2 程序及其所产生的过程.md",
     "Book Reading/SICP/1.1 基本元素.md",
     "Base Knowledge/Markdown/Markdown 公式手册.md",
-    "Book Reading/SICP/为啥阅读本书.md",
     "Book Reading/大象-Thinking in UML/1.1 面向过程.md",
     "Book Reading/大象-Thinking in UML/1.2 面向对象.md",
     "Book Reading/大象-Thinking in UML/1.3 为什么需要UML.md",
