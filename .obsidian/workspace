@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/软件工程师推荐路线.md",
+            "file": "Base Knowledge/编程/正则表达式.md",
+            "mode": "source"
+          }
+        },
+        "group": "8dd62d597d6550a6"
+      },
+      {
+        "id": "35b810602fd2097a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Base Knowledge/编程/正则表达式.md",
             "mode": "preview"
           }
-        }
+        },
+        "group": "8dd62d597d6550a6"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 182
+    "width": 182,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base Knowledge/软件工程师推荐路线.md",
+                "file": "Base Knowledge/编程/正则表达式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Base Knowledge/软件工程师推荐路线.md"
+                "file": "Base Knowledge/编程/正则表达式.md"
               }
             }
           },
@@ -126,9 +140,9 @@
   },
   "active": "3daa55a73871d9c1",
   "lastOpenFiles": [
+    "Base Knowledge/编程/正则表达式.md",
     "Base Knowledge/软件工程师推荐路线.md",
     "Base Knowledge/Vim/Vim键盘图.md",
-    "Base Knowledge/编程/正则表达式.md",
     "Book Reading/SICP/1.2 程序及其所产生的过程.md",
     "Book Reading/SICP/为啥阅读本书.md",
     "Book Reading/SICP/1.1 基本元素.md",
