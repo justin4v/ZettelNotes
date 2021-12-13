@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/Pattern-Framework-Architect 对比.md",
+            "file": "Cache/Redis/Redis 简介.md",
             "mode": "source"
           }
         }
@@ -76,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/Pattern-Framework-Architect 对比.md",
+                "file": "Cache/Redis/Redis 简介.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/Pattern-Framework-Architect 对比.md"
+                "file": "Cache/Redis/Redis 简介.md"
               }
             }
           },
@@ -126,6 +126,7 @@
   },
   "active": "ffcca187720348c9",
   "lastOpenFiles": [
+    "Cache/Redis/Redis 简介.md",
     "Design/Pattern-Framework-Architect 对比.md",
     "Medical/专业名词.md",
     "Base Knowledge/编程/正则表达式.md",
@@ -134,7 +135,6 @@
     "Book Reading/SICP/1.2 程序及其所产生的过程.md",
     "Book Reading/SICP/为啥阅读本书.md",
     "Book Reading/SICP/1.1 基本元素.md",
-    "Base Knowledge/Markdown/Markdown 公式手册.md",
-    "Book Reading/大象-Thinking in UML/1.1 面向过程.md"
+    "Base Knowledge/Markdown/Markdown 公式手册.md"
   ]
 }
