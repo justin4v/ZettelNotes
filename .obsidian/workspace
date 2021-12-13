@@ -7,8 +7,11 @@
         "id": "ffcca187720348c9",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Design/Pattern-Framework-Architect 对比.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Design/Pattern-Framework-Architect 对比.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +103,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Design/Pattern-Framework-Architect 对比.md"
+              }
             }
           },
           {
@@ -120,6 +126,7 @@
   },
   "active": "ffcca187720348c9",
   "lastOpenFiles": [
+    "Design/Pattern-Framework-Architect 对比.md",
     "Medical/专业名词.md",
     "Base Knowledge/编程/正则表达式.md",
     "Base Knowledge/软件工程师推荐路线.md",
@@ -128,7 +135,6 @@
     "Book Reading/SICP/为啥阅读本书.md",
     "Book Reading/SICP/1.1 基本元素.md",
     "Base Knowledge/Markdown/Markdown 公式手册.md",
-    "Book Reading/大象-Thinking in UML/1.1 面向过程.md",
-    "Book Reading/大象-Thinking in UML/1.2 面向对象.md"
+    "Book Reading/大象-Thinking in UML/1.1 面向过程.md"
   ]
 }
