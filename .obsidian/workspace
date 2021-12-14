@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/Redis/Redis 简介.md",
-            "mode": "source"
+            "file": "Base Knowledge/Vim/Vim键盘图.md",
+            "mode": "preview"
           }
         }
       }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "VIM",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -60,7 +60,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 182
+    "width": 182,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/Redis/Redis 简介.md",
+                "file": "Base Knowledge/Vim/Vim键盘图.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/Redis/Redis 简介.md"
+                "file": "Base Knowledge/Vim/Vim键盘图.md"
               }
             }
           },
@@ -126,12 +127,12 @@
   },
   "active": "ffcca187720348c9",
   "lastOpenFiles": [
+    "Base Knowledge/Vim/Vim键盘图.md",
     "Cache/Redis/Redis 简介.md",
     "Design/Pattern-Framework-Architect 对比.md",
     "Medical/专业名词.md",
     "Base Knowledge/编程/正则表达式.md",
     "Base Knowledge/软件工程师推荐路线.md",
-    "Base Knowledge/Vim/Vim键盘图.md",
     "Book Reading/SICP/1.2 程序及其所产生的过程.md",
     "Book Reading/SICP/为啥阅读本书.md",
     "Book Reading/SICP/1.1 基本元素.md",
