@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "ffcca187720348c9",
+        "id": "5e9062f80817b48d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/算法/Algorithm.md",
+            "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
             "mode": "source"
           }
         },
-        "group": "3b1e844f09cabbc5"
+        "group": "d02e4539cb82a8d3"
       },
       {
-        "id": "049705b4776cd58a",
+        "id": "0f1d4e5271f7ae91",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/算法/Algorithm.md",
+            "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
             "mode": "preview"
           }
         },
-        "group": "3b1e844f09cabbc5"
+        "group": "d02e4539cb82a8d3"
       }
     ],
     "direction": "vertical"
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/算法/Algorithm.md",
+                "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/算法/Algorithm.md"
+                "file": "Book Reading/SICP/1.2 程序及其所产生的过程.md"
               }
             }
           },
@@ -138,8 +138,9 @@
     "width": 197,
     "collapsed": true
   },
-  "active": "ffcca187720348c9",
+  "active": "5e9062f80817b48d",
   "lastOpenFiles": [
+    "Book Reading/SICP/1.2 程序及其所产生的过程.md",
     "Book Reading/算法/Algorithm.md",
     "Algorithm/DataStructure/树有关术语.md",
     "Algorithm/DataStructure/集合.md",
@@ -148,7 +149,6 @@
     "Base Knowledge/Vim/Vim键盘图.md",
     "Design/Pattern-Framework-Architect 对比.md",
     "Medical/专业名词.md",
-    "Base Knowledge/编程/正则表达式.md",
-    "Base Knowledge/软件工程师推荐路线.md"
+    "Base Knowledge/编程/正则表达式.md"
   ]
 }
