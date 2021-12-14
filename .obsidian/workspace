@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algorithm/DataStructure/树有关术语.md",
+            "file": "Algorithm/Algorithm.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algorithm/DataStructure/树有关术语.md",
+            "file": "Algorithm/Algorithm.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/DataStructure/树有关术语.md",
+                "file": "Algorithm/Algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/DataStructure/树有关术语.md"
+                "file": "Algorithm/Algorithm.md"
               }
             }
           },
@@ -139,10 +139,10 @@
   },
   "active": "ffcca187720348c9",
   "lastOpenFiles": [
+    "Algorithm/Algorithm.md",
     "Algorithm/DataStructure/树有关术语.md",
     "Algorithm/DataStructure/集合.md",
     "Algorithm/Binary Search Tree.md",
-    "Algorithm/Algorithm.md",
     "Cache/Redis/Redis 简介.md",
     "Base Knowledge/Vim/Vim键盘图.md",
     "Design/Pattern-Framework-Architect 对比.md",
