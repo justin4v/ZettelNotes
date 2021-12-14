@@ -12,7 +12,20 @@
             "file": "Cache/Redis/Redis 简介.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "3b1e844f09cabbc5"
+      },
+      {
+        "id": "049705b4776cd58a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Cache/Redis/Redis 简介.md",
+            "mode": "preview"
+          }
+        },
+        "group": "3b1e844f09cabbc5"
       }
     ],
     "direction": "vertical"
@@ -60,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 182
+    "width": 182,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
