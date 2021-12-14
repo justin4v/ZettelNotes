@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algorithm/Algorithm.md",
+            "file": "Book Reading/算法/Algorithm.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algorithm/Algorithm.md",
+            "file": "Book Reading/算法/Algorithm.md",
             "mode": "preview"
           }
         },
@@ -73,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 182
+    "width": 182,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -89,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/Algorithm.md",
+                "file": "Book Reading/算法/Algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/Algorithm.md"
+                "file": "Book Reading/算法/Algorithm.md"
               }
             }
           },
@@ -139,7 +140,7 @@
   },
   "active": "ffcca187720348c9",
   "lastOpenFiles": [
-    "Algorithm/Algorithm.md",
+    "Book Reading/算法/Algorithm.md",
     "Algorithm/DataStructure/树有关术语.md",
     "Algorithm/DataStructure/集合.md",
     "Algorithm/Binary Search Tree.md",
