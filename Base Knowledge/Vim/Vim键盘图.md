@@ -1,3 +1,5 @@
 ![[Vim键位图.png]]
 
-![[Pasted image 20211214104915.png]]
+![[Vim键位分类.png]]
+
+![[Vim键位示意图.png]]
