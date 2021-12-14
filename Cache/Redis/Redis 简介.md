@@ -19,6 +19,15 @@
 
 ![[计算机中各种延迟时间示意.png]]
 
+# 数据结构
+1. Redis 有 5 种**数据类型**，`String、List、Hash、Set、SortedSet`。
+2. 不同的数据类型底层有**一种或者多种数据结构实现**，不同情况下使用不同数据结构实现；
+3. 设计多种数据结构实现的目的是*追求更快的速度*。
+
+Redis *数据类型和底层数据结构的关系*如下：
+![[Redis数据类型和底层数据结构的关系.png]]
+
+
 
 # 参考
 1. [How fast is Redis? ](https://redis.io/topics/benchmarks)
