@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/Redis/Redis 简介.md",
+            "file": "Algorithm/DataStructure/树有关术语.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/Redis/Redis 简介.md",
+            "file": "Algorithm/DataStructure/树有关术语.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/Redis/Redis 简介.md",
+                "file": "Algorithm/DataStructure/树有关术语.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/Redis/Redis 简介.md"
+                "file": "Algorithm/DataStructure/树有关术语.md"
               }
             }
           },
@@ -139,15 +139,15 @@
   },
   "active": "ffcca187720348c9",
   "lastOpenFiles": [
+    "Algorithm/DataStructure/树有关术语.md",
+    "Algorithm/DataStructure/集合.md",
+    "Algorithm/Binary Search Tree.md",
+    "Algorithm/Algorithm.md",
     "Cache/Redis/Redis 简介.md",
     "Base Knowledge/Vim/Vim键盘图.md",
     "Design/Pattern-Framework-Architect 对比.md",
     "Medical/专业名词.md",
     "Base Knowledge/编程/正则表达式.md",
-    "Base Knowledge/软件工程师推荐路线.md",
-    "Book Reading/SICP/1.2 程序及其所产生的过程.md",
-    "Book Reading/SICP/为啥阅读本书.md",
-    "Book Reading/SICP/1.1 基本元素.md",
-    "Base Knowledge/Markdown/Markdown 公式手册.md"
+    "Base Knowledge/软件工程师推荐路线.md"
   ]
 }
