@@ -73,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 182,
-    "collapsed": true
+    "width": 182
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -141,6 +140,7 @@
   "active": "5e9062f80817b48d",
   "lastOpenFiles": [
     "Book Reading/SICP/1.2 程序及其所产生的过程.md",
+    "Book Reading/SICP/1.1 基本元素.md",
     "Book Reading/算法/Algorithm.md",
     "Algorithm/DataStructure/树有关术语.md",
     "Algorithm/DataStructure/集合.md",
@@ -148,7 +148,6 @@
     "Cache/Redis/Redis 简介.md",
     "Base Knowledge/Vim/Vim键盘图.md",
     "Design/Pattern-Framework-Architect 对比.md",
-    "Medical/专业名词.md",
-    "Base Knowledge/编程/正则表达式.md"
+    "Medical/专业名词.md"
   ]
 }
