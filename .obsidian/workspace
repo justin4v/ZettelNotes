@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "VIM",
+                "query": "markdo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -140,6 +141,7 @@
   "active": "5e9062f80817b48d",
   "lastOpenFiles": [
     "Book Reading/SICP/1.2 程序及其所产生的过程.md",
+    "Base Knowledge/Markdown/Markdown 公式手册.md",
     "Book Reading/SICP/1.1 基本元素.md",
     "Book Reading/算法/Algorithm.md",
     "Algorithm/DataStructure/树有关术语.md",
@@ -147,7 +149,6 @@
     "Algorithm/Binary Search Tree.md",
     "Cache/Redis/Redis 简介.md",
     "Base Knowledge/Vim/Vim键盘图.md",
-    "Design/Pattern-Framework-Architect 对比.md",
-    "Medical/专业名词.md"
+    "Design/Pattern-Framework-Architect 对比.md"
   ]
 }
