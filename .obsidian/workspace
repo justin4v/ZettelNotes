@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/1.2.4 实例.md",
+            "file": "Book Reading/SICP/1.1 基本元素.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/1.2.4 实例.md",
+            "file": "Book Reading/SICP/1.1 基本元素.md",
             "mode": "preview"
           }
         },
@@ -89,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/SICP/1.2.4 实例.md",
+                "file": "Book Reading/SICP/1.1 基本元素.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/SICP/1.2.4 实例.md"
+                "file": "Book Reading/SICP/1.1 基本元素.md"
               }
             }
           },
@@ -139,15 +139,15 @@
   },
   "active": "5e9062f80817b48d",
   "lastOpenFiles": [
+    "Book Reading/SICP/1.1 基本元素.md",
+    "Book Reading/SICP/1.1.1 表达式.md",
     "Book Reading/SICP/1.2.4 实例.md",
-    "Book Reading/SICP/1.2 程序及其所产生的过程.md",
     "Book Reading/SICP/1.2.1 线性递归和迭代.md",
     "Book Reading/SICP/1.2.2 树形递归.md",
     "Book Reading/SICP/1.2.3 增长的阶.md",
-    "Book Reading/SICP/1.1 基本元素.md",
+    "Book Reading/SICP/1.2 程序及其所产生的过程.md",
     "Base Knowledge/Markdown/Markdown 公式手册.md",
     "Book Reading/算法/Algorithm.md",
-    "Algorithm/DataStructure/树有关术语.md",
-    "Algorithm/DataStructure/集合.md"
+    "Algorithm/DataStructure/树有关术语.md"
   ]
 }
