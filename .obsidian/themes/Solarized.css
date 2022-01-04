@@ -193,6 +193,11 @@ a.tag {
     padding: 2px 5px;
 }
 
+/* Background color of tag when hover */
+a.tag:hover {
+    background-color: var(--text-accent-hover);
+}
+
 /* Frontmatter */
 .cm-s-obsidian span.cm-atom {
     color: var(--text-accent);
@@ -203,9 +208,49 @@ a.tag {
     color: var(--text-code);
 }
 
-/* Selection & search results */
-::selection {
-  color: var(--text-on-selection);
+/* Frontmatter tag colors, same as tags in main body */
+.frontmatter-container .tag {
+    background-color: var(--text-normal);
+}
+
+.frontmatter-container .tag:hover {
+    background-color: var(--text-accent-hover);
+}
+
+/* Selection - Edit */
+.CodeMirror-selected {
+    background: rgba(0, 0, 0, 0.25) !important;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.theme-dark .CodeMirror-selected {
+    background: rgba(255, 255, 255, 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+div[style="position: relative; z-index: 1;"] {
+    z-index: 99 !important;
+}
+
+/* Selection - Preview */
+::selection,
+.CodeMirror-line::selection,
+.CodeMirror-line>span::selection,
+.CodeMirror-line>span>span::selection,
+.HyperMD-codeblock.CodeMirror-line::selection,
+.HyperMD-codeblock.CodeMirror-line>span::selection,
+.HyperMD-codeblock.CodeMirror-line>span>span::selection {
+    background-color: rgba(0, 0, 0, 0.20) !important;
+}
+
+.theme-dark ::selection,
+.theme-dark .CodeMirror-line::selection,
+.theme-dark .CodeMirror-line>span::selection,
+.theme-dark .CodeMirror-line>span>span::selection,
+.theme-dark .HyperMD-codeblock.CodeMirror-line::selection,
+.theme-dark .HyperMD-codeblock.CodeMirror-line>span::selection,
+.theme-dark .HyperMD-codeblock.CodeMirror-line>span>span::selection {
+    background-color: rgba(255, 255, 255, 0.20) !important;
 }
 
 /* Search results */
@@ -213,4 +258,11 @@ a.tag {
 .cm-s-obsidian span.obsidian-search-match-highlight {
     color: var(--text-on-accent);
     background-color: var(--yellow);
+}
+
+/* Window title */
+.titlebar,
+.titlebar .titlebar-inner {
+    color: var(--text-on-selection);
+    background-color: var(--background-primary-alt);
 }

@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "55adb70085486d16",
+        "id": "5e9062f80817b48d",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md",
             "mode": "source"
           }
         },
-        "group": "9debb395b12d679e"
+        "group": "d02e4539cb82a8d3"
       },
       {
-        "id": "e84169df5ba528a2",
+        "id": "0f1d4e5271f7ae91",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md",
             "mode": "preview"
           }
         },
-        "group": "9debb395b12d679e"
+        "group": "d02e4539cb82a8d3"
       }
     ],
     "direction": "vertical"
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "大端",
+                "query": "markdo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +73,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205.50078010559082
+    "width": 201,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -89,14 +90,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": true
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -106,7 +107,7 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "useHierarchy": false
               }
             }
@@ -117,28 +118,37 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md"
               }
             }
+          },
+          {
+            "id": "e73816ba8b281899",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 141,
     "collapsed": true
   },
-  "active": "55adb70085486d16",
+  "active": "5e9062f80817b48d",
   "lastOpenFiles": [
-    "README.md",
-    "Language/Java/并发编程/加锁机制.md",
-    "Language/Java/基础/JDK 动态代理.md",
-    "Language/Java/编译/Javac 编译.md",
-    "Language/Java/编译/JIT 编译器.md",
-    "Language/Java/编译/未命名.md",
-    "Language/Java/JVM/class 文件结构.md",
-    "Language/Java/JVM/对象分配规则.md",
-    "Language/Java/JVM/对象结构.md",
-    "Language/Java/并发编程/Synchronize.md"
+    "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md",
+    "Book Reading/SICP/1.3高阶过程抽象/1.3 用高阶过程做抽象.md",
+    "Book Reading/SICP/1.3高阶过程抽象/1.3.1 过程作为参数.md",
+    "Book Reading/SICP/1.1基本元素/1.1.2 命名和环境.md",
+    "Book Reading/SICP/1.1基本元素/1.1.1 表达式.md",
+    "Book Reading/SICP/1.1基本元素/1.1 基本元素.md",
+    "Book Reading/SICP/1.2程序及其过程/1.2 程序及其所产生的过程.md",
+    "Book Reading/SICP/1.1基本元素/1.1.3 组合式求值.md",
+    "Book Reading/SICP/1.1基本元素/1.1.4 复合过程.md",
+    "Book Reading/SICP/1.1基本元素/1.1.5 过程应用的代换模型.md"
   ]
 }

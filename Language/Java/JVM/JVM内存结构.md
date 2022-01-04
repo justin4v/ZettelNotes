@@ -18,21 +18,29 @@
 - Heap 空间由 **GC（garbage collector）** 自动回收。
 
 
-**根据 GC 回收的规则**，可将 Heap 空间细分为 Young Generation 和 Old Generation（存活的时长不同），具体如下图：
+根据[[分代收集理论#两个假说|分代收集理论]]，可将 Heap 空间细分为 :**Young Generation 和 Old Generation**（存活的时长不同）
+具体如下图：
 ![[Heap的划分.png]]
 
+*Eden*: 指《圣经》中亚当和夏娃最初居住的地方，这里引申为对象最初存放的位置。参考[[对象分配规则]]
+
 不同区域的关系如下：
-1. Java堆 = 老年代 + 新生代；
-2. 新生代 = Eden + S0 + S1；
-3. 默认：Eden：from ：to = 8:1:1。
+1. *Java Heap* = 老年代 + 新生代；
+2. *Young Generation* = Eden + Survivor 0 + Survivor 1；
+3. 默认比例=> Eden：from ：to = 8:1:1。
+
 
 Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
-1. `-Xms`： 堆**初始（最小）**容量（堆包括新生代和老年代）。 例如：-Xms20M ;
+1. `-Xms`： 堆**初始（最小）** 容量（Heap 大小*默认为新生代和老年代容量之和*）。 例如：-Xms20M ;
 2. `-Xmx`： 堆最大容量。 例如：-Xmx30M ;
 3. `-Xmn`： 新生代**初始（最大）**容量。例如：-Xmn10M  ;
 4. `-XX:SurvivorRatio`: **Eden/Survivor** 的比例。Eden:form:to的比例默认是8：1：1。例如：-XX： SurvivorRatio=8 代表比例8：1：1。
 5. `-XX:NewRatio`: **old/new** 的比例。默认是2。
 **注意：建议将 -Xms 和 -Xmx 设为相同值，避免每次垃圾回收完成后JVM重新分配内存！**  
+
+Heap 初始容量分配根据系统的配置而定（参考 [Ergonomics](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/ergonomics.html#sthref5)），一般系统（CPU 2 核以上、内存 2 GB 以上）Heap size **默认设置**：
+1. Heap size **初始容量为内存的 1/64，最大 1GB**；
+2. Heap size **最大容量为内存的 1/4，最大 1GB**。
 
 当 Heap **没有足够的空间分配给对象且到达最大容量**，无法扩展时，会抛出常见的 *OOM(OutOfMemoryError)* 异常
 
@@ -45,14 +53,14 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 Method Area stores **per-class structures（类结构信息）** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
 
 Method Area ：
-1. 线程共享的；
-2. JVM启动时创建；
+1. *线程共享的*；
+2. *JVM 启动时创建*；
 3. **存储类的结构信息（metadata）**。
 
 
 JDK1.8之前称为永久代，**PermGen space**。
 1. JDK1.8开始 **Method Area 被称作 Metaspace(元空间，存放元数据)**；
-2. 存于本地内存中，**最大为系统内存**，不会出现内存溢出错误。
+2. **存于本地内存**中，最大默认无限制，**最大为系统内存**，不会出现内存溢出错误。
 3. 大小通过`–XX:MetaspaceSize`设置，默认21M。
 
 
@@ -70,8 +78,6 @@ JDK1.8之前称为永久代，**PermGen space**。
 **HotSpot虚拟机直接就把本地方法栈和虚拟机栈合二为一**
 
 # JVM Stacks
-**conception**
-
 **所执行方法的存储结构**。
 
 ## Stack Frame 特点
@@ -83,7 +89,7 @@ JDK1.8之前称为永久代，**PermGen space**。
 
 ![[JVM Stack Frame结构.png]]
 
-其中，*指向运行时常量池的引用* 就是**动态绑定**
+其中，*指向运行时常量池的引用* 是**动态绑定**
 
 **局部变量表**
 -   存储方法中的局部变量值或地址（包括方法中的**非静态变量以及函数形参**）；
