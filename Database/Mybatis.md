@@ -100,8 +100,8 @@ ps.setInt(1,id);
   timeout="20">
 
 ```
-- `useGeneratedKeys` : insert 和 update， 使用 JDBC 的 `getGeneratedKeys` 取出数据库内部生成的主键（比如自动递增），默认值：false
-- `keyProperty` ：insert 和 update，指定能唯一识别对象的属性，MyBatis 用 `getGeneratedKeys` 的返回值或 insert 语句的 `selectKey` 子元素设置值，默认值：未设置（`unset`）
+- `useGeneratedKeys` :  true /false ，仅限 insert 和 update， 使用 JDBC 的 `getGeneratedKeys` 取出数据库内部生成的主键（比如自动递增）。
+- `keyProperty` ：属性名，仅限 insert 和 update，指定能*唯一识别对象的属性*，MyBatis 用 `getGeneratedKeys` 的返回值或 insert 语句的 `selectKey` 子元素设置值，默认值：未设置（`unset`）
 
 示例：
 ```sql
@@ -123,5 +123,26 @@ ps.setInt(1,id);
   delete from Author where id = #{id}
 </delete>
 ```
+
+
+# ResultMap
+
+```sql
+## 将 column 映射到 map的key,row映射到 map的value
+<select id="selectUsers" resultType="map">
+  select id, username, hashedPassword
+  from some_table
+  where id = #{id}
+</select>
+
+## 映射为 JavaBean/POJO
+<select id="selectUsers" resultType="com.someapp.model.User">
+  select id, username, hashedPassword
+  from some_table
+  where id = #{id}
+</select>
+```
+
+
 # 参考
 1. [mybatis – MyBatis 3](https://mybatis.org/mybatis-3/zh/index.html)
