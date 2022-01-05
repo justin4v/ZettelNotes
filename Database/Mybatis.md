@@ -74,7 +74,54 @@ ps.setInt(1,id);
 | resultSets    | 仅适用于多结果集的情况。列出语句执行后返回的结果集并赋予每个结果集一个名称，以逗号分隔。 |
 
 # insert,update 和 delete
+```sql
+<insert
+  id="insertAuthor"
+  parameterType="domain.blog.Author"
+  flushCache="true"
+  statementType="PREPARED"
+  keyProperty=""
+  keyColumn=""
+  useGeneratedKeys=""
+  timeout="20">
 
+<update
+  id="updateAuthor"
+  parameterType="domain.blog.Author"
+  flushCache="true"
+  statementType="PREPARED"
+  timeout="20">
 
+<delete
+  id="deleteAuthor"
+  parameterType="domain.blog.Author"
+  flushCache="true"
+  statementType="PREPARED"
+  timeout="20">
+
+```
+- `useGeneratedKeys` : insert 和 update， 使用 JDBC 的 `getGeneratedKeys` 取出数据库内部生成的主键（比如自动递增），默认值：false
+- `keyProperty` ：insert 和 update，指定能唯一识别对象的属性，MyBatis 用 `getGeneratedKeys` 的返回值或 insert 语句的 `selectKey` 子元素设置值，默认值：未设置（`unset`）
+
+示例：
+```sql
+<insert id="insertAuthor">
+  insert into Author (id,username,password,email,bio)
+  values (#{id},#{username},#{password},#{email},#{bio})
+</insert>
+
+<update id="updateAuthor">
+  update Author set
+    username = #{username},
+    password = #{password},
+    email = #{email},
+    bio = #{bio}
+  where id = #{id}
+</update>
+
+<delete id="deleteAuthor">
+  delete from Author where id = #{id}
+</delete>
+```
 # 参考
 1. [mybatis – MyBatis 3](https://mybatis.org/mybatis-3/zh/index.html)
