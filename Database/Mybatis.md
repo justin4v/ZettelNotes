@@ -59,7 +59,7 @@ ps.setInt(1,id);
 | 属性          | 描述                                                         |
 | ------------- | ------------------------------------------------------------ |
 | id            | 命名空间中的唯一标识符，可被用来引用这条语句。           |
-| parameterType | 传入参数的类全限定名或别名。可选，MyBatis 可通过TypeHandler推断出参数类型，默认值为 unset |
+| parameterType | 传入参数的类全限定名(fully qualified class name)或别名。可选，MyBatis 可通过TypeHandler推断出参数类型，默认值为 unset |
 | parameterMap  | 引用外部 parameterMap，目前已被废弃 |
 | resultType    | 返回结果的类全限定名或别名。resultType和resultMap 只能同时使用一个。 |
 | resultMap     | 对外部 resultMap 的引用。resultType 和 resultMap 之间只能同时使用一个。 |
@@ -72,6 +72,9 @@ ps.setInt(1,id);
 | databaseId    | 数据库厂商标识（databaseIdProvider），MyBatis会加载所有带 databaseId；如果带和不带的语句都有，则不带的会被忽略。 |
 | resultOrdered | 仅针对嵌套结果 select 语句：默认值：false。 |
 | resultSets    | 仅适用于多结果集的情况。列出语句执行后返回的结果集并赋予每个结果集一个名称，以逗号分隔。 |
+
+# insert,update 和 delete
+
 
 # 参考
 1. [mybatis – MyBatis 3](https://mybatis.org/mybatis-3/zh/index.html)
