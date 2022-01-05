@@ -223,8 +223,54 @@ ps.setInt(1,id);
 </resultMap>
 ```
 
+
+其中涉及的属性如下：
 ## constructor
-- 初始化时传入到构造函数的参数
+- resultMap 初始化时传入到构造函数的参数；
+- `idArg` ：作为 resultMap ID的参数
+-  `arg` ：普通参数
+
+```sql
+!<--pojo-->
+public class User {
+   //...
+   public User(Integer id, String username, int age) {
+     //...
+  }
+//...
+}
+
+## constructor
+<constructor>
+   <idArg column="id" javaType="int"/>
+   <arg column="username" javaType="String"/>
+   <arg column="age" javaType="_int"/>
+</constructor>
+
+```
+
+
+##  id & result
+```sql
+<id property="id" column="post_id"/> 
+<result property="subject" column="post_subject"/>
+```
+
+- 都是将 `column` 的值映射到一个简单数据类型（String, int, double）的 `property`
+- _id_ 中 `property` 会被*标记为对象的标识符*，比较对象实例时使用。
+
+
+## association
+```sql
+<association property="author" column="blog_author_id" javaType="Author">
+  <id property="id" column="author_id"/>
+  <result property="username" column="author_username"/>
+</association>
+```
+- *use-a* 的关系；
+- 关联方式：
+	-   嵌套 Select 查询：执行另外一个 SQL 语句。
+	-   嵌套 resultmap；
 
 
 # 参考
