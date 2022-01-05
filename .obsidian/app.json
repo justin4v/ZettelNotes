@@ -4,5 +4,7 @@
   "attachmentFolderPath": "附件",
   "spellcheck": false,
   "communityPluginSortOrder": "download",
-  "communityThemeSortOrder": "download"
+  "communityThemeSortOrder": "download",
+  "legacyEditor": false,
+  "livePreview": true
 }
