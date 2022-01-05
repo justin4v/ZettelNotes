@@ -290,10 +290,54 @@ public class User {
 ```
 
 - 虽然很简单，但在大型数据集或大型数据表上表现不佳。
-- 称为 “N+1 Selects Problem” ：
-	-   执行单独的 SQL 语句`selectBlog`de结果列表（“+1”） 。
-	-   对列表返回的每条记录，执行一个 select 查询为每条记录加载详细信息（“N”）。
-- 会导致成百上千的 SQL 语句被执行
+- 称为 “*N+1 Selects Problem*” ：
+	-   执行单独的 SQL 语句`selectBlog` 得到查询结果（“+1”） 。
+	-   结果中每条记录，执行 `selectAuthor` 查询加载详细信息（“N”）。
+- 会导致成百上千的 SQL 语句被执行.
+
+### Nested Results
+```sql
+<resultMap id="blogResult" type="Blog">
+  <id property="id" column="blog_id" />
+  <result property="title" column="blog_title"/>
+  ## Nested Results 
+  <association property="author" column="blog_author_id" javaType="Author" resultMap="authorResult"/>
+</resultMap>
+
+<resultMap id="authorResult" type="Author">
+  <id property="id" column="author_id"/>
+  <result property="username" column="author_username"/>
+  <result property="password" column="author_password"/>
+  <result property="email" column="author_email"/>
+  <result property="bio" column="author_bio"/>
+</resultMap>
+```
+
+
+## collection
+- 集合元素和关联元素几乎一致；
+
+有属性
+```java
+private List<Post> posts;
+```
+
+### select
+```sql
+<resultMap id="blogResult" type="Blog">
+  <collection property="posts" javaType="ArrayList" column="id" ofType="Post" select="selectPostsForBlog"/>
+</resultMap>
+
+<select id="selectBlog" resultMap="blogResult">
+  SELECT * FROM BLOG WHERE ID = #{id}
+</select>
+
+<select id="selectPostsForBlog" resultType="Post">
+  SELECT * FROM POST WHERE BLOG_ID = #{id}
+</select>
+```
+- ofType 指定 `property` `posts` 中存放的类型是 `Post`
+
 
 # 参考
 1. [mybatis – MyBatis 3](https://mybatis.org/mybatis-3/zh/index.html)
