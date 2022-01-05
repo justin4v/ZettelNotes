@@ -269,9 +269,31 @@ public class User {
 ```
 - *use-a* 的关系；
 - 关联方式：
-	-   嵌套 Select 查询：执行另外一个 SQL 语句。
+	-   嵌套 Select：执行另外一个 SQL 语句。
 	-   嵌套 resultmap；
 
+### select 方式
+```sql
+<select id="selectAuthor" resultType="Author">
+  SELECT * FROM AUTHOR WHERE ID = #{id}
+</select>
+
+<resultMap id="blogResult" type="Blog">
+	## 嵌套 select：selectAuthor 得到 result map
+  <association property="author" column="author_id" javaType="Author" select="selectAuthor"/>
+</resultMap>
+
+<select id="selectBlog" resultMap="blogResult">
+  SELECT * FROM BLOG WHERE ID = #{id}
+</select>
+
+```
+
+- 虽然很简单，但在大型数据集或大型数据表上表现不佳。
+- 称为 “N+1 Selects Problem” ：
+	-   执行单独的 SQL 语句`selectBlog`de结果列表（“+1”） 。
+	-   对列表返回的每条记录，执行一个 select 查询为每条记录加载详细信息（“N”）。
+- 会导致成百上千的 SQL 语句被执行
 
 # 参考
 1. [mybatis – MyBatis 3](https://mybatis.org/mybatis-3/zh/index.html)
