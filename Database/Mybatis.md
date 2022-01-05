@@ -125,23 +125,106 @@ ps.setInt(1,id);
 ```
 
 
-# ResultMap
-
+# Result Maps
+具体见下代码：
 ```sql
-## 将 column 映射到 map的key,row映射到 map的value
+## 1.将 column 映射到 map的key,row映射到 map的value
 <select id="selectUsers" resultType="map">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
 </select>
 
-## 映射为 JavaBean/POJO
+## 2.映射为 JavaBean/POJO
 <select id="selectUsers" resultType="com.someapp.model.User">
   select id, username, hashedPassword
   from some_table
   where id = #{id}
 </select>
+
+## 3.为properties 设置别名 aliases
+<select id="selectUsers" resultType="User"> select
+    user_id             as "id",
+    user_name           as "userName",
+    hashed_password     as "hashedPassword"
+  from some_table
+  where id = #{id} </select>
 ```
+
+
+# Advanced Result Maps
+```sql
+<!-- 复杂的语句 --> 
+<select id="selectBlogDetails" resultMap="detailedBlogResultMap"> select
+       B.id as blog_id,
+       B.title as blog_title,
+       B.author_id as blog_author_id,
+       A.id as author_id,
+       A.username as author_username,
+       A.password as author_password,
+       A.email as author_email,
+       A.bio as author_bio,
+       A.favourite_section as author_favourite_section,
+       P.id as post_id,
+       P.blog_id as post_blog_id,
+       P.author_id as post_author_id,
+       P.created_on as post_created_on,
+       P.section as post_section,
+       P.subject as post_subject,
+       P.draft as draft,
+       P.body as post_body,
+       C.id as comment_id,
+       C.post_id as comment_post_id,
+       C.name as comment_name,
+       C.comment as comment_text,
+       T.id as tag_id,
+       T.name as tag_name
+  from Blog B
+       left outer join Author A on B.author_id = A.id
+       left outer join Post P on B.id = P.blog_id
+       left outer join Comment C on P.id = C.post_id
+       left outer join Post_Tag PT on PT.post_id = P.id
+       left outer join Tag T on PT.tag_id = T.id
+  where B.id = #{id} </select>
+```
+- 表示了一篇博客(blog)，由某位作者(author)所写;
+- 有多篇博文(post);
+- 每篇博文有多条的评论(comment)和标签(tag)；
+
+```sql
+<!-- 复杂的语句对应的映射 --> 
+<resultMap id="detailedBlogResultMap" type="Blog">
+  <constructor>
+    <idArg column="blog_id" javaType="int"/>
+  </constructor>
+  <result property="title" column="blog_title"/>
+  <association property="author" javaType="Author">
+    <id property="id" column="author_id"/>
+    <result property="username" column="author_username"/>
+    <result property="password" column="author_password"/>
+    <result property="email" column="author_email"/>
+    <result property="bio" column="author_bio"/>
+    <result property="favouriteSection" column="author_favourite_section"/>
+  </association>
+  <collection property="posts" ofType="Post">
+    <id property="id" column="post_id"/>
+    <result property="subject" column="post_subject"/>
+    <association property="author" javaType="Author"/>
+    <collection property="comments" ofType="Comment">
+      <id property="id" column="comment_id"/>
+    </collection>
+    <collection property="tags" ofType="Tag" >
+      <id property="id" column="tag_id"/>
+    </collection>
+    <discriminator javaType="int" column="draft">
+      <case value="1" resultType="DraftPost"/>
+    </discriminator>
+  </collection>
+</resultMap>
+```
+
+## constructor
+- 初始化时传入到构造函数的参数
 
 
 # 参考
