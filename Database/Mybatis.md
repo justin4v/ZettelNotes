@@ -295,7 +295,7 @@ public class User {
 	-   结果中每条记录，执行 `selectAuthor` 查询加载详细信息（“N”）。
 - 会导致成百上千的 SQL 语句被执行.
 
-### Nested Results
+### nested Results
 ```sql
 <resultMap id="blogResult" type="Blog">
   <id property="id" column="blog_id" />
@@ -336,7 +336,22 @@ private List<Post> posts;
   SELECT * FROM POST WHERE BLOG_ID = #{id}
 </select>
 ```
-- ofType 指定 `property` `posts` 中存放的类型是 `Post`
+- *ofType* 指定 `property` `posts` 中存放的类型是 `Post`；
+
+### nested Results
+```sql
+<resultMap id="blogResult" type="Blog">
+  <id property="id" column="blog_id" />
+  <result property="title" column="blog_title"/>
+  <collection property="posts" ofType="Post" resultMap="blogPostResult" columnPrefix="post_"/>
+</resultMap>
+
+<resultMap id="blogPostResult" type="Post">
+  <id property="id" column="id"/>
+  <result property="subject" column="subject"/>
+  <result property="body" column="body"/>
+</resultMap>
+```
 
 
 # 参考
