@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md",
+            "file": "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
             "mode": "source",
             "source": false
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md",
+            "file": "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
             "mode": "preview",
             "source": false
           }
@@ -71,13 +71,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 201,
-    "collapsed": true
+    "width": 201
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -93,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md",
+                "file": "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md"
+                "file": "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md"
               }
             }
           },
@@ -143,6 +141,7 @@
   },
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
+    "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
     "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md",
     "Base Knowledge/markdown/Markdown 公式手册.md",
     "Book Reading/SICP/1.2程序及其过程/1.2.4 实例.md",
@@ -151,7 +150,6 @@
     "Book Reading/SICP/2. 构造数据抽象.md",
     "Base Knowledge/运维相关/Docker基础.md",
     "Base Knowledge/运维相关/Kubectl 命令手册.md",
-    "Base Knowledge/运维相关/Docker与cgroup.md",
-    "Base Knowledge/运维相关/Docker镜像与容器.md"
+    "Base Knowledge/运维相关/Docker与cgroup.md"
   ]
 }
