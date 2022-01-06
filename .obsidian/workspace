@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5e9062f80817b48d",
+        "id": "6215662d683fb80c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md",
-            "mode": "source"
+            "file": "Base Knowledge/运维相关/Docker基础.md",
+            "mode": "preview",
+            "source": false
           }
-        },
-        "group": "d02e4539cb82a8d3"
-      },
-      {
-        "id": "0f1d4e5271f7ae91",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md",
-            "mode": "preview"
-          }
-        },
-        "group": "d02e4539cb82a8d3"
+        }
       }
     ],
     "direction": "vertical"
@@ -52,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "markdo",
+                "query": "exec",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201,
-    "collapsed": true
+    "width": 201
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -90,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md",
+                "file": "Base Knowledge/运维相关/Docker基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md"
+                "file": "Base Knowledge/运维相关/Docker基础.md"
               }
             }
           },
@@ -138,17 +125,17 @@
     "width": 141,
     "collapsed": true
   },
-  "active": "5e9062f80817b48d",
+  "active": "6215662d683fb80c",
   "lastOpenFiles": [
-    "Book Reading/SICP/1.3高阶过程抽象/1.3.2 用 lambda 构造过程.md",
-    "Book Reading/SICP/1.3高阶过程抽象/1.3 用高阶过程做抽象.md",
-    "Book Reading/SICP/1.3高阶过程抽象/1.3.1 过程作为参数.md",
-    "Book Reading/SICP/1.1基本元素/1.1.2 命名和环境.md",
-    "Book Reading/SICP/1.1基本元素/1.1.1 表达式.md",
-    "Book Reading/SICP/1.1基本元素/1.1 基本元素.md",
-    "Book Reading/SICP/1.2程序及其过程/1.2 程序及其所产生的过程.md",
-    "Book Reading/SICP/1.1基本元素/1.1.3 组合式求值.md",
-    "Book Reading/SICP/1.1基本元素/1.1.4 复合过程.md",
-    "Book Reading/SICP/1.1基本元素/1.1.5 过程应用的代换模型.md"
+    "Base Knowledge/运维相关/Docker基础.md",
+    "Base Knowledge/运维相关/Kubectl 命令手册.md",
+    "Base Knowledge/运维相关/Docker与cgroup.md",
+    "Base Knowledge/运维相关/Docker镜像与容器.md",
+    "Base Knowledge/运维相关/Docker引擎.md",
+    "Database/Mybatis.md",
+    "Database/Sql 预编译.md",
+    "Database/Sql 注入.md",
+    "日常记录/Idea.md",
+    "日常记录/感悟记录/日常感悟列表.md"
   ]
 }
