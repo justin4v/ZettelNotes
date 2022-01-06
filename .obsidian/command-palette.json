@@ -1,5 +1,8 @@
 {
   "pinned": [
-    "obsidian-git:commit-push-specified-message"
+    "obsidian-git:commit-push-specified-message",
+    "obsidian-git:pull",
+    "editor:toggle-code",
+    "editor:toggle-blockquote"
   ]
 }
