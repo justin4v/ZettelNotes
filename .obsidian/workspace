@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/运维相关/Kubectl 命令手册.md",
+            "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
             "mode": "source",
             "source": false
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Base Knowledge/运维相关/Kubectl 命令手册.md",
+            "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
             "mode": "preview",
             "source": false
           }
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base Knowledge/运维相关/Kubectl 命令手册.md",
+                "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Base Knowledge/运维相关/Kubectl 命令手册.md"
+                "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md"
               }
             }
           },
@@ -141,8 +141,8 @@
   },
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
-    "Base Knowledge/运维相关/Kubectl 命令手册.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
+    "Base Knowledge/运维相关/Kubectl 命令手册.md",
     "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
     "Book Reading/SICP/1.1基本元素/1.1.1 表达式.md",
     "Book Reading/SICP/1.1基本元素/1.1.3 组合式求值.md",

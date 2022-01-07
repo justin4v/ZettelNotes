@@ -56,6 +56,26 @@ kubectl describe pods my-pod
 kubectl api-resources
 ```
 
+5. 日志
+```bash
+kubectl logs my-pod                                 # 获取 pod 日志（标准输出）
+kubectl logs -l name=myLabel                        # 获取含 name=myLabel 标签的 Pods 的日志（标准输出）
+kubectl logs my-pod --previous                      # 获取上个容器实例的 pod 日志（标准输出）
+kubectl logs my-pod -c my-container                 # 获取 Pod 容器的日志（标准输出, 多容器场景）
+kubectl logs -l name=myLabel -c my-container        # 获取含 name=myLabel 标签的 Pod 容器日志（标准输出, 多容器场景）
+kubectl logs my-pod -c my-container --previous      # 获取 Pod 中某容器的上个实例的日志（标准输出, 多容器场景）
+kubectl logs -f my-pod                              # 流式输出 Pod 的日志（标准输出）
+kubectl logs -f my-pod -c my-container              # 流式输出 Pod 容器的日志（标准输出, 多容器场景）
+```
+
+6. 进入 pod(运行中) 进行交互
+```bash
+kubectl exec my-pod -- ls /                         # 在已有的 Pod 中运行命令（单容器场景）
+kubectl exec --stdin --tty my-pod -- /bin/sh        # 使用交互 shell 访问正在运行的 Pod (一个容器场景)
+kubectl exec my-pod -c my-container -- ls /         # 在已有的 Pod 中运行命令（多容器场景）
+kubectl top pod POD_NAME --containers               # 显示给定 Pod 和其中容器的监控数据
+kubectl top pod POD_NAME --sort-by=cpu              # 显示给定 Pod 的指标并且按照 'cpu' 或者 'memory' 排序
+```
 
 
 
