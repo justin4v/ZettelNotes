@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
+            "file": "Base Knowledge/运维相关/Kubectl 命令手册.md",
             "mode": "source",
             "source": false
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
+            "file": "Base Knowledge/运维相关/Kubectl 命令手册.md",
             "mode": "preview",
             "source": false
           }
@@ -75,8 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 201,
-    "collapsed": true
+    "width": 201
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -92,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
+                "file": "Base Knowledge/运维相关/Kubectl 命令手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md"
+                "file": "Base Knowledge/运维相关/Kubectl 命令手册.md"
               }
             }
           },
@@ -140,8 +139,9 @@
     "width": 141,
     "collapsed": true
   },
-  "active": "6215662d683fb80c",
+  "active": "ddf477c9fa3851b1",
   "lastOpenFiles": [
+    "Base Knowledge/运维相关/Kubectl 命令手册.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
     "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
     "Book Reading/SICP/1.1基本元素/1.1.1 表达式.md",
@@ -150,7 +150,6 @@
     "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md",
     "Base Knowledge/markdown/Markdown 公式手册.md",
     "Book Reading/SICP/1.2程序及其过程/1.2.4 实例.md",
-    "有理数实现抽象屏障结构.png.md",
-    "Book Reading/SICP/2.1抽象介绍/2.1.1 数据抽象导引.md"
+    "有理数实现抽象屏障结构.png.md"
   ]
 }
