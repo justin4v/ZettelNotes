@@ -32,5 +32,7 @@ kubectl [command] [TYPE] [NAME] [flags]
 - `kubectl --help`获取帮助
 
 
+# 常用命令
+
 # 参考
 1. [kubectl 备忘单](https://kubernetes.io/zh/docs/reference/kubectl/cheatsheet/)
