@@ -39,6 +39,24 @@ kubectl [command] [TYPE] [NAME] [flags]
 -   `default`
 -   `kube-system`：由 Kubernetes 系统创建的对象的Namespace
 
+2. 列出所有命名空间下的全部的 Pods
+```bash
+kubectl get pods --all-namespaces 
+```
+
+3. describe 命令的详细输出
+```bash
+kubectl describe nodes my-node
+kubectl describe pods my-pod
+```
+
+4. 列出所支持的全部资源类型和它们的简称
+
+```bash
+kubectl api-resources
+```
+
+
 
 
 # 参考
