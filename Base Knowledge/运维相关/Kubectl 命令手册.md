@@ -33,6 +33,9 @@ kubectl [command] [TYPE] [NAME] [flags]
 
 
 # 常用命令
+1. 列出群集中的 Namespace 列表
+`kubectl get namespaces`
+
 
 # 参考
 1. [kubectl 备忘单](https://kubernetes.io/zh/docs/reference/kubectl/cheatsheet/)
