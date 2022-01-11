@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
+            "file": "Cache/计算机三级缓存.md",
             "mode": "source",
             "source": false
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
+            "file": "Cache/计算机三级缓存.md",
             "mode": "preview",
             "source": false
           }
@@ -91,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
+                "file": "Cache/计算机三级缓存.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md"
+                "file": "Cache/计算机三级缓存.md"
               }
             }
           },
@@ -141,6 +141,7 @@
   },
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
+    "Cache/计算机三级缓存.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
     "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
@@ -149,7 +150,6 @@
     "Base Knowledge/运维相关/Kubectl 命令手册.md",
     "Book Reading/SICP/1.1基本元素/1.1.1 表达式.md",
     "Book Reading/SICP/1.1基本元素/1.1.3 组合式求值.md",
-    "Book Reading/SICP/1.1基本元素/1.1.4 复合程序.md",
-    "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md"
+    "Book Reading/SICP/1.1基本元素/1.1.4 复合程序.md"
   ]
 }
