@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/计算机三级缓存.md",
+            "file": "Cache/CPU 缓存.md",
             "mode": "source",
             "source": false
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/计算机三级缓存.md",
+            "file": "Cache/CPU 缓存.md",
             "mode": "preview",
             "source": false
           }
@@ -75,7 +75,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263
+    "width": 263,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -91,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/计算机三级缓存.md",
+                "file": "Cache/CPU 缓存.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/计算机三级缓存.md"
+                "file": "Cache/CPU 缓存.md"
               }
             }
           },
@@ -141,7 +142,7 @@
   },
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
-    "Cache/计算机三级缓存.md",
+    "Cache/CPU 缓存.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
     "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
