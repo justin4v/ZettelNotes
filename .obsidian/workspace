@@ -75,8 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263,
-    "collapsed": true
+    "width": 263
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -143,6 +142,7 @@
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
     "Cache/CPU 缓存.md",
+    "OS/程序性能的限制与解决.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
     "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
@@ -150,7 +150,6 @@
     "Language/Java/基础/集合操作实现.md",
     "Base Knowledge/运维相关/Kubectl 命令手册.md",
     "Book Reading/SICP/1.1基本元素/1.1.1 表达式.md",
-    "Book Reading/SICP/1.1基本元素/1.1.3 组合式求值.md",
-    "Book Reading/SICP/1.1基本元素/1.1.4 复合程序.md"
+    "Book Reading/SICP/1.1基本元素/1.1.3 组合式求值.md"
   ]
 }
