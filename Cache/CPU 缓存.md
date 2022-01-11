@@ -33,3 +33,9 @@
 - **L1 I-Cache 用于对操作数据的指令进行即时解码**；
 - **两者可以同时被 CPU 访问**，减少了争用 Cache 所造成的冲突，提高了处理器效能。
 - 大多数CPU *L1 D-Cache  和 L1 I-Cache 具有相同的容量*。
+
+
+# L2/L3 Cache
+- *L2 Cache 是 L1 Cache 的缓冲器*：L1 Cache 制造成本很高、容量有限，L2 Cache 存储那 CPU 处理时需要用到、L1 Cache 又无法存储的数据。
+- *L3 Cache 和 Memory 是 L2 Cache 的缓冲器*；
+- 
