@@ -34,7 +34,9 @@ kubectl [command] [TYPE] [NAME] [flags]
 
 # 常用命令
 1. 列出群集中的 Namespace 列表
-`kubectl get namespaces`
+```bash
+kubectl get namespaces
+```
 默认的两个 namespace
 -   `default`
 -   `kube-system`：由 Kubernetes 系统创建的对象的Namespace
