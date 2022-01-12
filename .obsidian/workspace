@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "基础知识/编程基础/SSH.md",
+            "file": "基础知识/编程基础/对称加密和非对称加密.md",
             "mode": "source",
             "source": false
           }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "基础知识/编程基础/SSH.md",
+                "file": "基础知识/编程基础/对称加密和非对称加密.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "基础知识/编程基础/SSH.md"
+                "file": "基础知识/编程基础/对称加密和非对称加密.md"
               }
             }
           },
@@ -128,6 +128,7 @@
   },
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
+    "基础知识/编程基础/对称加密和非对称加密.md",
     "基础知识/编程基础/SSH.md",
     "基础知识/编程/未命名.md",
     "基础知识/网络编程/跨域问题.md",
@@ -136,7 +137,6 @@
     "日常记录/ZettelKasten.md",
     "日常记录/Idea.md",
     "Cache/MESI 协议.md",
-    "Cache/CPU 缓存.md",
-    "OS/程序性能的限制与解决.md"
+    "Cache/CPU 缓存.md"
   ]
 }
