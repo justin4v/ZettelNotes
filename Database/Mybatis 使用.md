@@ -353,6 +353,19 @@ private List<Post> posts;
 </resultMap>
 ```
 
+# @select 传入 List
+
+```java
+@Select({
+            "<script>",
+                "select * from m_seller_index_banner where seller_id in ",
+                "<foreach collection='sellerIds' item='id' open='(' separator=',' close=')'>",
+                    "#{id}",
+                "</foreach>",
+            "</script>"
+    })
+    List<Map<String,Object>> getBannersBySellerId(@Param("sellerIds") List<Integer> sellerIds);
+```
 
 # 参考
 1. [mybatis – MyBatis 3](https://mybatis.org/mybatis-3/zh/index.html)
