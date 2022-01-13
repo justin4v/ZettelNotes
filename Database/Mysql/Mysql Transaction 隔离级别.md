@@ -16,6 +16,14 @@ MySQL 事务都是指在 **InnoDB 引擎**下，**MyISAM 引擎是不支持事�
 	3. 在储蓄账户余额中增加 200 美元。
 - 上述三个步骤必须打包在一个事务(transaction)中，任何一个步骤失败，必须回滚所有的步骤。
 
+```sql
+1. START TRANSACTION; 
+2. SELECT balance FROM checking WHERE customer_id = 10233276; 
+3. UPDATE checking SET balance = balance - 200.00 WHERE customer_id = 10233276; 
+4. UPDATE savings SET balance = balance + 200.00 WHERE customer_id = 10233276; 
+5. COMMIT;
+```
+
 ## 实际语句
 - 用 `START TRANSACTION` 语句开始一个事务;
 - 然后要么使用 `COMMIT` 提交事务将修改的数据持久保留;
