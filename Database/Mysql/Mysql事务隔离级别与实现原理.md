@@ -1,3 +1,4 @@
+#Mysql #Transaction
 # MySQL 事务
 
 MySQL 事务都是指在 **InnoDB 引擎**下，**MyISAM 引擎是不支持事务**。
