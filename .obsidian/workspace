@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "基础知识/运维相关/Kubectl 命令手册.md",
+            "file": "Database/Mysql/部分常用命令.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "基础知识/运维相关/Kubectl 命令手册.md",
+                "file": "Database/Mysql/部分常用命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "基础知识/运维相关/Kubectl 命令手册.md"
+                "file": "Database/Mysql/部分常用命令.md"
               }
             }
           },
@@ -127,12 +127,12 @@
   },
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
+    "Database/Mysql/部分常用命令.md",
     "基础知识/运维相关/Kubectl 命令手册.md",
     "日常记录/源码阅读.md",
     "Database/Mysql/Mysql Transaction 隔离级别.md",
     "Cache/CPU 缓存.md",
     "Database/Mybatis 使用.md",
-    "Database/Mysql/部分常用命令.md",
     "Database/Mysql/SQL Join.md",
     "基础知识/编程基础/对称加密和非对称加密.md",
     "基础知识/编程基础/SSH.md",
