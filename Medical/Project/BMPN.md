@@ -3,6 +3,7 @@
 - *业务流程建模符号（Business Process Modeling Notation, BPMN）*，OMG 组织在2011年推出 BPMN2.0标准
 - provides a *graphical notation for specifying business processes* in a Business Process Diagram. 
 - Its goal is to support Business Process Modeling by *providing a standard notation that is comprehensible to business users yet* represents complex process semantics for technical users.
+- 原有的**业务流程模型转换为执行模型**，对于业务流程拥有者和IT实施人员来说，都是容易出错且很艰难的过程；
 - 为了减少*业务建模与技术实现*的断层，开发 BPMN 的重要目标就是要创建一座桥梁，连接*业务流程建模标记到 IT实现语言*
 
 # 工作流与BPMN
