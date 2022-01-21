@@ -28,13 +28,13 @@
 BPMN2.0 规范规定的基础元素
 ## 顺序流（sequence flow）
 - 流程中*两个元素间的连接器*。
-- 在流程执行过程中，一个元素被访问后，会沿着其所有出口顺序流继续执行。
+- 在流程执行过程中，*一个元素被访问后，会沿着其所有出口顺序流继续*执行。
 - BPMN 2.0默认是*并行执行*的：两个出口顺序流就会创建两个独立的、并行的执行路径
 
 ![[BPMN sequence flow.png]]
 
-- 可以定义条件（conditional sequence flow），默认计算其每个出口顺序流上的条件。当条件计算为true时，选择该出口顺序流。
-- 条件顺序流的XML表示格式为含有 **conditionExpression** 子元素的普通顺序流。
+- 可以*定义条件（conditional sequence flow）*，默认计算其每个出口顺序流上的条件。当条件计算为true时，选择该出口顺序流。
+- 条件顺序流的XML为含有 **conditionExpression** 子元素的普通顺序流。
 
 ```xml
 <sequenceFlow id="flow" sourceRef="theStart" argetRef="theTask">  
@@ -47,11 +47,13 @@ BPMN2.0 规范规定的基础元素
 ## 活动任务
 
 ### 用户任务
-用户任务（user task）用于对需要人工执行的任务进行建模。当流程执行到达用户任务时，会为指派至该任务的用户或组的任务列表创建一个新任务。
+- 用户任务（user task）用于*对需要人工执行的任务进行建模*。
+- 当流程执行到达用户任务时，会*为指派至该任务的用户或组创建一个新任务*。
 
 ![[BPMN user task.png]]
 
-用户任务可以直接指派（assign）给用户，设置任务到期时间，设置任务的候选用户/候选用户组，并能设置任务的监听器与自定义指派。
+- 可以直接*指派（assign）给用户*；
+- 设置任务到期时间，设置任务的候选用户/候选用户组，并能设置任务的监听器与自定义指派。
 
 ```xml
 <userTask id="task1" name="My task" >  
@@ -63,7 +65,8 @@ BPMN2.0 规范规定的基础元素
 
 ## 服务任务
 
-服务任务（service task）用于调用Java类。流程执行到服务任务时，会自动运行Java程序中的代码流程。
+- 服务任务（service task）用于*调用Java类*。
+- 流程执行到服务任务时，会自动运行Java程序中的代码流程。
 ![[BPMN service task.png]]
 
 ```xml
@@ -74,7 +77,7 @@ BPMN2.0 规范规定的基础元素
 
 ## 网关
 ### 排他网关
-排他网关（exclusive gateway）（也叫异或网关 XOR gateway，或者更专业的，基于数据的排他网关 exclusive data-based gateway），用于对流程中的**决策**建模.
+- 排他网关（exclusive gateway）（异或网关 XOR gateway，或者基于数据的排他网关 exclusive data-based gateway），用于对流程中的**决策**建模.
 当执行到达这个网关时，会按照所有出口顺序流定义的顺序对它们进行计算。选择第一个条件计算为true的顺序流（当没有设置条件时，认为顺序流为_true_）继续流程
 
 ![[BPMN 网关.png]]
