@@ -77,8 +77,9 @@ BPMN2.0 规范规定的基础元素
 
 ## 网关
 ### 排他网关
-- 排他网关（exclusive gateway）（异或网关 XOR gateway，或者基于数据的排他网关 exclusive data-based gateway），用于对流程中的**决策**建模.
-当执行到达这个网关时，会按照所有出口顺序流定义的顺序对它们进行计算。选择第一个条件计算为true的顺序流（当没有设置条件时，认为顺序流为_true_）继续流程
+- 排他网关（exclusive gateway）（异或网关 XOR gateway，或者基于数据的排他网关 exclusive data-based gateway），用于*对流程中的**决策**建模*；
+- 当执行到达这个网关时，会对所有出口按顺序进行计算。
+- 选择第一个条件计算为 true 的顺序流（当没有设置条件时，默认为true）继续流程
 
 ![[BPMN 网关.png]]
 
