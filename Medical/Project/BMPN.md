@@ -25,11 +25,30 @@
 
 # BPMN2.0的基本元素
 
-BPMN2.0 规范。那么接下来，我们来看一看BPMN2.0都规定了哪些东西。（基础部分）
+BPMN2.0 规范规定的基础元素
+## 顺序流（sequence flow）
+- 流程中两个元素间的连接器。
+- 在流程执行过程中，一个元素被访问后，会沿着其所有出口顺序流继续执行。
+- BPMN 2.0的默认是并行执行的：两个出口顺序流就会创建两个独立的、并行的执行路径
 
-#### 顺序流（sequence flow）
+![[BPMN sequence flow.png]]
 
-顺序流是流程中两个元素间的连接器。在流程执行过程中，一个元素被访问后，会沿着其所有出口顺序流继续执行。这意味着BPMN 2.0的默认是并行执行的：两个出口顺序流就会创建两个独立的、并行的执行路径
+- 可以定义条件（conditional sequence flow），默认计算其每个出口顺序流上的条件。当条件计算为true时，选择该出口顺序流。
+- 条件顺序流的XML表示格式为含有 **conditionExpression** 子元素的普通顺序流。
+
+```xml
+<sequenceFlow id="flow" sourceRef="theStart" argetRef="theTask">  
+ <conditionExpression xsi:type="tFormalExpression">  
+ <![CDATA[${order.price > 100 && order.price < 250}]]>  
+ </conditionExpression>  
+</sequenceFlow>
+```
+
+## 活动任务
+
+### 用户任务
+用户任务（user task）用于对需要人工执行的任务进行建模。当流程执行到达用户任务时，会为指派至该任务的用户或组的任务列表创建一个新任务。
+![[Pasted image 20220121162029.png]]
 
 # 参考
 1. [深入浅出了解BPM、BPMN、BPMN2.0](https://www.cnblogs.com/amerkor/p/13728576.html)
