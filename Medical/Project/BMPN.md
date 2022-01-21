@@ -48,7 +48,33 @@ BPMN2.0 规范规定的基础元素
 
 ### 用户任务
 用户任务（user task）用于对需要人工执行的任务进行建模。当流程执行到达用户任务时，会为指派至该任务的用户或组的任务列表创建一个新任务。
-![[Pasted image 20220121162029.png]]
+![[BPMN user task.png]]
+
+用户任务可以直接指派（assign）给用户，设置任务到期时间，设置任务的候选用户/候选用户组，并能设置任务的监听器与自定义指派。
+
+```xml
+<userTask id="task1" name="My task" >  
+ <extensionElements>  
+ <flowable:taskListener event="create" class="org.flowable.MyAssignmentHandler" />  
+ </extensionElements>  
+</userTask>
+```
+
+## 服务任务
+
+服务任务（service task）用于调用Java类。流程执行到服务任务时，会自动运行Java程序中的代码流程。
+![[BPMN service task.png]]
+
+```xml
+<serviceTask id="javaService"  
+ name="My Java Service Task"  
+ flowable:class="com.inossem.MyJavaDelegate" />
+```
+
+## 网关
+### 排他网关
+\排他网关（exclusive gateway）（也叫异或网关 XOR gateway，或者更专业的，基于数据的排他网关 exclusive data-based gateway），用于对流程中的**决策**建模
+
 
 # 参考
 1. [深入浅出了解BPM、BPMN、BPMN2.0](https://www.cnblogs.com/amerkor/p/13728576.html)
