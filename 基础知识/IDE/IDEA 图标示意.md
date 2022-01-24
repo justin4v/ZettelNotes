@@ -25,3 +25,7 @@ abstract修饰的类或方法：
 抽象类：![[IDEA abstract class.png]]
 
 抽象方法：![[IDEA abstract method.png]]
+
+
+# 参考
+1. [IntelliJ IDEA各种图标的含义](https://blog.csdn.net/hu_belif/article/details/82688884)
