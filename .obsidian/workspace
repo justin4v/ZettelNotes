@@ -128,14 +128,14 @@
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
     "Book Reading/设计模式GoF/设计模式.md",
-    "Database/Mybatis/Interceptor.md",
     "Book Reading/设计模式GoF/结构型/Proxy.md",
+    "Database/Mybatis/Interceptor.md",
     "Book Reading/设计模式GoF/创建型/创建型模式的讨论.md",
+    "Book Reading/设计模式GoF/结构型/Adapter.md",
     "Database/未命名.md",
     "Database/Mysql/Transaction 隔离级别.md",
     "Database/Mysql/排序规则.md",
     "Database/Mysql/部分常用命令.md",
-    "Medical/Project/Activiti.md",
-    "Medical/Project/工作流.md"
+    "Medical/Project/Activiti.md"
   ]
 }
