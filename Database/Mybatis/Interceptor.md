@@ -59,4 +59,15 @@
 	}
 	```
 
-	- `com.github.pagehelper.PageInterceptor` 分页拦截器
+	- `com.github.pagehelper.PageInterceptor` 分页拦截器，拦截请求并进行分页查询
+	```java
+	// 注释指明 Executor 执行 query（MappedStatement，Object，RowBounds，ResultHandler）时进行拦截
+	@Intercepts(  
+	 { @Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}),  
+	        @Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class, CacheKey.class, BoundSql.class}),  
+	    }  
+	)  
+	public class PageInterceptor implements Interceptor {
+	......
+	}
+	```
