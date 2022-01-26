@@ -27,7 +27,7 @@
 	```
 	- Plugin
 	```java
-	// 包装为 动态代理类(Interceptor) 
+	// 包装 Intercepto r为动态代理类(Plugin),实现InvocationHandler
 	public static Object wrap(Object target, Interceptor interceptor) {  
 	 Map<Class<?>, Set<Method>> signatureMap = getSignatureMap(interceptor);  
 	  Class<?> type = target.getClass();  
