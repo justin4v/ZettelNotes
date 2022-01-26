@@ -25,7 +25,7 @@
 		 }  
 	}
 	```
-	- `org.apache.ibatis.plugin` 
+	- `org.apache.ibatis.plugin` 涉及到 
 	```java
 	// 为 Interceptor 生成动态代理类(InvocationHandler 为 Plugin)
 	public static Object wrap(Object target, Interceptor interceptor) {  
