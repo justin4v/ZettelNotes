@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mybatis/Interceptor.md",
+            "file": "Book Reading/设计模式GoF/结构型/Proxy.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mybatis/Interceptor.md",
+                "file": "Book Reading/设计模式GoF/结构型/Proxy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mybatis/Interceptor.md"
+                "file": "Book Reading/设计模式GoF/结构型/Proxy.md"
               }
             }
           },
@@ -127,8 +127,8 @@
   },
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
-    "Database/Mybatis/Interceptor.md",
     "Book Reading/设计模式GoF/结构型/Proxy.md",
+    "Database/Mybatis/Interceptor.md",
     "Book Reading/设计模式GoF/设计模式.md",
     "Book Reading/设计模式GoF/创建型/创建型模式的讨论.md",
     "Book Reading/设计模式GoF/结构型/Adapter.md",
