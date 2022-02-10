@@ -43,6 +43,8 @@
 
 
 # 流程变量
+- Every process instance needs and uses data to execute the steps it exists of。
+- 所有的变量存储在表 *ACT_RU_VARIABLE*
 
 
 # 参考
