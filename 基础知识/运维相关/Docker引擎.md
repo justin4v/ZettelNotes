@@ -4,7 +4,7 @@
 
 # 原始 Docker 引擎
 Docker 引擎由如下主要的组件构成：
-1. ** Docker 客户端（Docker Client）**；
+1. **Docker 客户端（Docker Client）**；
 2. **Docker 守护进程（Docker daemon）**；
 3. **containerd** 
 4. **runc**
