@@ -59,6 +59,23 @@ public void startProcess() throws Exception {
     }
 ```
 
+## 获取流程变量
+
+```java
+public void viewVar() throws Exception {
+        String processInstanceId = "1901";
+        Task task =taskService.createTaskQuery().taskAssignee("user").processInstanceId(processInstanceId ).singleResult();
+        System.out.println("taskName:" + task.getName());
+//        String variableName = "请假人";
+//        String val = (String)taskService.getVariable(task.getId(), variableName );
+        Map<String,Object> vars = taskService.getVariables(task.getId());
+        for (String variableName : vars.keySet()) {
+            String val = (String) vars.get(variableName);
+            System.out.println(variableName + " = " +val);
+        }
+    }
+```
+
 # 参考
 1. [ SpringBoot + Activiti 工作流引擎（一、基本概念与环境搭建）](https://blog.csdn.net/u014553029/article/details/111147223)
 2. [SpringBoot + Activiti 工作流引擎（二、流程&任务操作）](https://blog.csdn.net/u014553029/article/details/112438038)
