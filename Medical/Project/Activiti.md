@@ -43,9 +43,21 @@
 
 
 # 流程变量
-- Every process instance needs and uses data to execute the steps it exists of。
-- 所有的变量存储在表 *ACT_RU_VARIABLE*
+- Process variables are what make process instances differ from one another。
+- 所有的变量存储在表 *ACT_RU_VARIABLE*；
+- 流程变量的作用域范围是流程实例
 
+```java
+public void startProcess() throws Exception {
+        String processDefinitionKey ="varTest";
+        // 创建流程变量
+        Map<String,Object> variables = new HashMap<String,Object>();
+        variables.put("请假人", "冯小刚");
+        // 在启动时设置流程变量
+        ProcessInstance pi = processEngine.getRuntimeService().startProcessInstanceByKey(processDefinitionKey , variables );
+        System.out.println("pid:" + pi.getId());
+    }
+```
 
 # 参考
 1. [ SpringBoot + Activiti 工作流引擎（一、基本概念与环境搭建）](https://blog.csdn.net/u014553029/article/details/111147223)
