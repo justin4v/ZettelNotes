@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Medical/Project/Activiti.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
