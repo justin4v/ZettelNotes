@@ -15,8 +15,8 @@
 	- 流程定义由多种元素组成：[[BMPN#事件|Event]]、[[BMPN#活动任务|Task]]、[[BMPN#网关|Gateway]]、[[BMPN#顺序流（sequence flow）|SequenceFlow]] 等元素
 4. **启动一个流程实例（ProcessInstance）**
 	*流程实例表示一次业务流程的运行*，比如员工请假流程部署完成，如果张三要请假就可以启动一个流程实例，如果李四要请假也启动一个流程实例，两个流程的执行互相不影响。
-5. **用户查询待办任务(Task)**
-	通过 activiti 可以查询当前流程执行位置，当前用户待办任务，不需要在 sql语句中查询。
+5. **查询待办任务(Task)**
+	activiti 可以查询当前流程执行位置，当前用户待办任务，不需要在 sql语句中查询。
 6. **处理任务**
 	查询待办任务后，可以办理某个任务，并进行状态流转。
 7. **流程结束**
@@ -77,6 +77,28 @@ public void viewVar() throws Exception {
     }
 ```
 
+
+# 流程定义示例
+```xml
+<process id="holiday" isClosed="false" isExecutable="true" name="请假流程" processType="None">
+    <startEvent id="_2" name="StartEvent"/>
+
+    <userTask activiti:assignee="zhangsan" activiti:exclusive="true" id="_3" name="填写请假申请表"/>
+    <userTask activiti:assignee="lisi" activiti:exclusive="true" id="_4" name="部门经理审批"/>
+    <userTask activiti:assignee="wangwu" activiti:exclusive="true" id="_5" name="总经理审批"/>
+
+    <endEvent id="_6" name="EndEvent"/>
+
+    <sequenceFlow id="_7" sourceRef="_2" targetRef="_3"/>
+    <sequenceFlow id="_8" sourceRef="_3" targetRef="_4"/>
+    <sequenceFlow id="_9" sourceRef="_4" targetRef="_5"/>
+    <sequenceFlow id="_10" sourceRef="_5" targetRef="_6"/>
+</process>
+```
+
+对应图示
+
+![[activiti工作流示例.png]]
 # 参考
 1. [ SpringBoot + Activiti 工作流引擎（一、基本概念与环境搭建）](https://blog.csdn.net/u014553029/article/details/111147223)
 2. [SpringBoot + Activiti 工作流引擎（二、流程&任务操作）](https://blog.csdn.net/u014553029/article/details/112438038)
