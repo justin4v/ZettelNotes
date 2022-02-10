@@ -11,8 +11,8 @@
 2. **流程定义**
 	使用 activiti 流程建模工具(activity-designer)*定义业务流程*(.bpmn 文件) 。 .bpmn 文件就是业务流程定义件，通过 xml 定义业务流程。 一般都提供了可视化的建模工具(Process Designer)生成流程定义文件，一般都支持图形化拖拽方式、多窗口的用户界面等功能。
 3. **流程定义部署**
-	向 activiti 部署业务流程定义（.bpmn 文件）。 使用 activiti 提供的 api 向 activiti 中部署.bpmn 文件（一般情况还需要部署业务流程的图片.png）
-	流程定义主要
+	- 向 activiti 部署业务流程定义（.bpmn 文件）。 使用 activiti 提供的 api 向 activiti 中部署.bpmn 文件（一般情况还需要部署业务流程的图片.png）
+	- 流程定义由多种元素组成：[[BMPN#事件|Event]]、[[BMPN#活动任务|Task]]、[[BMPN#网关|Gateway]]、[[BMPN#顺序流（sequence flow）|SequenceFlow]] 等元素
 4. **启动一个流程实例（ProcessInstance）**
 	*流程实例表示一次业务流程的运行*，比如员工请假流程部署完成，如果张三要请假就可以启动一个流程实例，如果李四要请假也启动一个流程实例，两个流程的执行互相不影响。
 5. **用户查询待办任务(Task)**
