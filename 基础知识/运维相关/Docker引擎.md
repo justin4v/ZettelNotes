@@ -38,13 +38,14 @@ Docker 公司开发了 Libcontainer 用于替代 LXC：
 - 随着时间的推移，Docker daemon 变得难于变更、运行越来越慢
 - 需要拆解 Docker daemon 进程，将其模块化。  
 - 目标是尽可能拆解出其中的功能特性，并用*小而专的工具来实现它*。
-- 目前所有*容器执行和容器运行时*的代码已经完全从 daemon 中移除，并重构为小而专的工具
+- 目前（2016 年，Docker 1.11 版本开始）所有*容器执行和容器运行时*的代码已经完全从 daemon 中移除，并重构为小而专的工具
 
 ![[Docker引擎新的架构示意.png]]
 
 ## runc
 - runc 是 OCI 容器运行时规范的参考实现；
 - runc 实质上是一个*轻量级的*、针对 Libcontainer 进行了包装的*命令行交互工具*。
+- runc 生来只有一个作用——创建容器。
 
 ## containerd
 - Docker daemon 的功能进行拆解后，*容器执行逻辑被重构到 containerd*的工具中；
@@ -87,3 +88,8 @@ $ docker container run --name ctr1 -it alpine:latest sh
 # daemon 的作用
 随着越来越多的功能从 daemon 中拆解出来并被模块化，daemon的作用也会发生变化。  
  daemon 的主要功能包括*镜像管理、镜像构建、REST API、身份验证、安全、核心网络以及编排*。
+
+
+
+ # 参考
+1. [Docker引擎（engine）详解](http://c.biancheng.net/view/3137.html)
