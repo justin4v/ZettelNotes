@@ -1,7 +1,7 @@
 #Workflow #Activiti
 
 # 简介
-- process definition
+- process definition：遵循 
 - process deploy
 
 # 基本概念
@@ -13,6 +13,7 @@
 3. **流程定义部署**
 	- 向 activiti 部署业务流程定义（.bpmn 文件）。 使用 activiti 提供的 api 向 activiti 中部署.bpmn 文件（一般情况还需要部署业务流程的图片.png）
 	- 流程定义由多种元素组成：[[BMPN#事件|Event]]、[[BMPN#活动任务|Task]]、[[BMPN#网关|Gateway]]、[[BMPN#顺序流（sequence flow）|SequenceFlow]] 等元素
+	- 部署（deploy）：解析流程定义并存储到数据库中。
 4. **启动一个流程实例（ProcessInstance）**
 	*流程实例表示一次业务流程的运行*，比如员工请假流程部署完成，如果张三要请假就可以启动一个流程实例，如果李四要请假也启动一个流程实例，两个流程的执行互相不影响。
 5. **查询待办任务(Task)**
