@@ -1,8 +1,11 @@
 #Workflow #Activiti
 
 # 简介
-- process definition：遵循 
-- process deploy
+- process definition：遵循 bpmn 标准的 xml 文件，processDefKey 标识
+- process deploy：解析 bpmn 文件并存储
+- query task by user：查询被分配的待办任务
+- deal with task：处理任务
+- process end
 
 # 基本概念
 一般工作流的完整生命周期包括：*流程定义、部署、启动、任务查询、任务处理、流程结束*
