@@ -84,15 +84,21 @@ public void viewVar() throws Exception {
 
 # 流程定义示例
 ```xml
+<!--流程定义-->
 <process id="holiday" isClosed="false" isExecutable="true" name="请假流程" processType="None">
+    
+    <!--开始事件-->
     <startEvent id="_2" name="StartEvent"/>
 
+    <!--用户任务-->
     <userTask activiti:assignee="zhangsan" activiti:exclusive="true" id="_3" name="填写请假申请表"/>
     <userTask activiti:assignee="lisi" activiti:exclusive="true" id="_4" name="部门经理审批"/>
     <userTask activiti:assignee="wangwu" activiti:exclusive="true" id="_5" name="总经理审批"/>
 
+    <!--结束事件-->
     <endEvent id="_6" name="EndEvent"/>
 
+    <!--顺序流 由sourceRef 指向 targetRef-->
     <sequenceFlow id="_7" sourceRef="_2" targetRef="_3"/>
     <sequenceFlow id="_8" sourceRef="_3" targetRef="_4"/>
     <sequenceFlow id="_9" sourceRef="_4" targetRef="_5"/>
