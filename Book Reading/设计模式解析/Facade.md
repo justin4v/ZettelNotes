@@ -18,7 +18,14 @@ Facade 模式简化了对所需子系统的使用过程。但是，由于 Facade
 让新的类使用原有的系统。
 
 # 实践
-Facade 不仅可以用来通过方法调用创建更简单的接口，还能用来减少客户必须处理的对象数量。例如，假设有一个 Client 对象必须处理 Database 、 Model 、 Element 对象。Client 必须首先通过 Database 对象打开数据库，获取 Model 对象，然后再查询 Model 对象，获取 Element 对象，最后请求 Element 对象的信息。
-如果能够创建一个可供 Client 查询的 Database Facade，那么以上过程将容易得多
+- Facade 可以创建更简单的接口；
+- 还能减少用户必须处理的对象数量。
+
+假设有一个 Client 和 Database 、 Model 、 Element 对象。
+Client 需要：
+1. 首先通过 Database 连接数据库，得到 Model ；
+2. 然后再查询 Model ，获取 Element 对象；
+3. 最后得到 Element 对象的信息。
+如果能*创建一个 Client 查询的 Database Facade*，将容易得多
 
 ![[Facade模式示例.png]]
