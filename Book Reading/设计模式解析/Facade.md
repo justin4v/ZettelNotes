@@ -21,11 +21,11 @@ Facade 模式简化了对所需子系统的使用过程。但是，由于 Facade
 - Facade 可以创建更简单的接口；
 - 还能减少用户必须处理的对象数量。
 
-假设有一个 Client 和 Database 、 Model 、 Element 对象。
+假设有一个 *Client 和 Database 、 Model 、 Element* 对象。
 Client 需要：
 1. 首先通过 Database 连接数据库，得到 Model ；
 2. 然后再查询 Model ，获取 Element 对象；
 3. 最后得到 Element 对象的信息。
-如果能*创建一个 Client 查询的 Database Facade*，将容易得多
+如果能*创建一个统一的入口 Database Facade 供  Client 查询*，将容易得多
 
 ![[Facade模式示例.png]]
