@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "activiti",
+                "query": "file:对象",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -129,13 +129,13 @@
   "lastOpenFiles": [
     "Book Reading/设计模式解析/面向对象.md",
     "Book Reading/设计模式解析/面向对象实例.md",
-    "Book Reading/设计模式解析/功能分解.md",
-    "Book Reading/设计模式解析/共性和可变性分析.md",
-    "Book Reading/设计模式解析/开发过程中的三个视角.md",
-    "Book Reading/设计模式解析/内聚性.md",
-    "Book Reading/设计模式解析/耦合性.md",
-    "Book Reading/设计模式解析/面向对象概念.md",
-    "Book Reading/设计模式解析/部分模式理解/Facade.md",
-    "Book Reading/设计模式解析/部分模式理解/Adapter.md"
+    "附件/课堂示例中对象及其责任.png",
+    "附件/锁消除示例.png",
+    "附件/同步顺序，sw关系，hb关系示意图.png",
+    "附件/数量关系图示.png",
+    "附件/实例的结构.png",
+    "附件/面向对象的困难举例.png",
+    "附件/面向对象设计分析的完整过程示意.png",
+    "Book Reading/设计模式解析/功能分解.md"
   ]
 }
