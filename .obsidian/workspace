@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mysql/Transaction 隔离级别.md",
+            "file": "Database/build-my-own-database/Part I Building simple database.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mysql/Transaction 隔离级别.md",
+                "file": "Database/build-my-own-database/Part I Building simple database.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mysql/Transaction 隔离级别.md"
+                "file": "Database/build-my-own-database/Part I Building simple database.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
+    "Database/build-my-own-database/Part I Building simple database.md",
     "Database/Mysql/Transaction 隔离级别.md",
     "Database/Mysql/SQL Join.md",
     "Database/Mysql/部分常用命令.md",
@@ -135,7 +136,6 @@
     "Book Reading/设计模式解析/面向对象实例.md",
     "Book Reading/设计模式解析/内聚性.md",
     "附件/课堂示例中对象及其责任.png",
-    "附件/锁消除示例.png",
-    "附件/同步顺序，sw关系，hb关系示意图.png"
+    "附件/锁消除示例.png"
   ]
 }
