@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Book Reading/设计模式解析/面向对象范型.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -128,6 +128,7 @@
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
     "Book Reading/设计模式解析/面向对象范型.md",
+    "Book Reading/设计模式解析/面向对象概念.md",
     "Book Reading/设计模式解析/面向对象实例.md",
     "Book Reading/设计模式解析/内聚性.md",
     "附件/课堂示例中对象及其责任.png",
@@ -135,7 +136,6 @@
     "附件/同步顺序，sw关系，hb关系示意图.png",
     "附件/数量关系图示.png",
     "附件/实例的结构.png",
-    "附件/面向对象的困难举例.png",
-    "附件/面向对象设计分析的完整过程示意.png"
+    "附件/面向对象的困难举例.png"
   ]
 }
