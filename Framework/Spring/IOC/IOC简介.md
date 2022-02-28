@@ -8,10 +8,10 @@
 	- 如果获取过程要靠自身实现，那么将导致代码*高度耦合且难以测试*。
 - Spring IoC是Spring-Framework的核心。
 
-# Spring IoC 容器系列
+# Spring IoC 容器系列简介
 
 ## BeanFactory
 简单容器系列（概念层次），包含了容器的基本功能
 
 ## ApplicationContext
-应用上下文，高级容器系列，增加了面向
+应用上下文，高级容器系列，增加了面向框架特性
