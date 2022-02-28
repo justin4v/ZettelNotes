@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263,
-    "collapsed": true
+    "width": 263
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -129,9 +128,9 @@
   "active": "6215662d683fb80c",
   "lastOpenFiles": [
     "日常记录/日志/2022-02-28.md",
+    "日常记录/日志/2022-02-26.md",
     "Database/Mysql/SQL Join.md",
     "Database/Mybatis 使用.md",
-    "日常记录/日志/2022-02-26.md",
     "日常记录/记录.md",
     "运维相关/Docker与cgroup.md",
     "运维相关/k8s 资源对象.md",
