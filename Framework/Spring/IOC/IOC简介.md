@@ -15,3 +15,6 @@
 
 ## ApplicationContext
 应用上下文，高级容器系列，增加了面向框架特性
+
+## BeanDefinition
+- 表达容器中 Bean 的概念
