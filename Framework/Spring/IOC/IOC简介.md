@@ -11,5 +11,7 @@
 # Spring IoC 容器系列
 
 ## BeanFactory
+简单容器系列（概念层次），包含了容器的基本功能
 
 ## ApplicationContext
+应用上下文，高级容器系列，增加了面向
