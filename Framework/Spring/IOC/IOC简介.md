@@ -1,6 +1,6 @@
 #IoC #Spring
 # 控制反转
-- IoC：**Inversion of Control** 控制反转
+- IoC：**Inversion of Control** 控制反转，是一种设计原则。
 - 在2014年，Martin Fowler 提出“*哪些方面的控制被反转了？*"的问题。
 - 结论是：**依赖对象的*获得*被反转了**。
 - 他为控制反转创造了一个更好的名字：*依赖注入(DI, Dependency Injection)*。
