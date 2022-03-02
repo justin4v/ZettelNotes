@@ -15,7 +15,7 @@
 ## BeanFactory
 简单容器系列（概念层次），包含了容器的基本功能
 
-![[Pasted image 20220302144707.png]]
+![[BeanFactory结构.png]]
 
 ## ApplicationContext
 应用上下文，高级容器系列，增加了面向框架特性
