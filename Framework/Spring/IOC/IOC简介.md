@@ -34,4 +34,7 @@
 - *ApplicationContext* 通过继承 *MessageSource（解析Message）*、*ResourceLoader（加载文件资源）*、*ApplicationEventPublisher（注册 Listener）* ，在BeanFactory 的基础上添加了*高级容器的特性*。
 
 ## BeanDefinition
- 表达容器中 Bean 的概念
+ - 表达容器中 Bean 的概念
+
+# DefaultListableBeanFactory
+Spring 中默认的 IoC 完整功能实现
