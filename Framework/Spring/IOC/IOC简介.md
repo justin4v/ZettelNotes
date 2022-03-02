@@ -14,12 +14,16 @@
 
 ## BeanFactory
 简单容器工厂（概念层次），包含了容器的基本功能
-BeanFactory 的 Specification (规约)如下
+- BeanFactory 的 Specification (规约)如下
 
 ![[BeanFactory结构.png]]
+- 从 BeanFactory => HierarchicalBeanFactory => ConfigurableBeanFactory，是一条主要的 BeanFactory 设计路径。
+- BeanFactory 定义了基本的 IoC 容器的规范。包括了loC 容器的基本方法（ 如 getBean()，从容器中取得Bean）。
+- 而 HierarchicalBeanFactory 继承了 BeanFactory ，增加了getParentBeanFactory()的接口功能，使BeanFactory具备了双亲IoC容器的管理功能。在接下来的ConfigurableBeanFactory接
+口中，主要定义了一些对BeanFactory的配置功能，比如通过setParentBeanFactory()设置双亲I。C容器，通过addBeanPostProcessor()配置Bean后置处理器，等等。通过这些接口设计的叠加，定义了BeanFactory就是简单loc容器的基本功能。关于BeanFactory简单I容器的设计，我们会在后面的内容中详细介绍
 
 ## ApplicationContext
 应用上下文，高级容器系列，增加了面向框架特性
 
 ## BeanDefinition
-- 表达容器中 Bean 的概念
+ 表达容器中 Bean 的概念
