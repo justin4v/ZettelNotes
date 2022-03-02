@@ -13,7 +13,8 @@
 ![[IoC 容器接口设计图.png]]
 
 ## BeanFactory
-简单容器系列（概念层次），包含了容器的基本功能
+简单容器工厂（概念层次），包含了容器的基本功能
+BeanFactory 的 Specification (规约)如下
 
 ![[BeanFactory结构.png]]
 
