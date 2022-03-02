@@ -28,5 +28,12 @@
 ## ApplicationContext
 应用上下文，高级容器系列，增加了面向框架特性
 
+- 第二条设计主线：以 ApplicationContext(应用上下文) 为核心的接口设计，BeanFactory => ListableBeanFactory =>App]icationContext => WebApplicationContext 或者ConfigurableApplicationContext。
+- 常用的应用上下文是 ConfigurableApplicationContext 或者 WebApplicationContext 的实现。
+- 在 ListableBeanFactory 中，细化了许多BeanFacto的接口功能，比如定义了getBeanDefinitionNames()接口方法《
+对于ApplicationContext接口，它通过继承MessageSource、ResourceLoader、
+ApplicationEventPublisher接口，在BeanFactory简单IoC容器的基础上添加了许多对高
+级容器的特性的支持。
+
 ## BeanDefinition
  表达容器中 Bean 的概念
