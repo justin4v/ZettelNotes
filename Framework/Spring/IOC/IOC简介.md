@@ -18,11 +18,12 @@
 
 ![[BeanFactory结构.png]]
 - 从 *BeanFactory => HierarchicalBeanFactory => ConfigurableBeanFactory*，是一条主要的 BeanFactory 设计路径。
-- *BeanFactory* 体现了容器工厂的概念，定义了基本的 IoC 容器的规范。包含 loC 容器的基本方法（ 如 `getBean()`，从容器中取得Bean）。
-- *HierarchicalBeanFactory* 继承了 BeanFactory，增加了 `getParentBeanFactory()` 功能，容器工厂具备了双亲 IoC 容器的管理功能。
-- *ConfigurableBeanFactory* 主要定义了对 BeanFactory 的配置功能：
+- *BeanFactory* 体现了**容器工厂的概念**，定义了基本的 *IoC 容器规范*。包含 loC 容器的基本方法（ 如 `getBean()`，从容器中取得Bean）。
+- *HierarchicalBeanFactory* 继承了 BeanFactory，增加了 `getParentBeanFactory()` 功能，容器工厂具备了*双亲 IoC 容器管理功能*。
+- *ConfigurableBeanFactory* 主要定义了对 *BeanFactory 的配置功能*：
 	- `setParentBeanFactory()` 设置双亲 IoC 容器;
-	- `addBeanPostProcessor()` 配置 Bean 后置处理器，等等。通过这些接口设计的叠加，定义了BeanFactory就是简单loc容器的基本功能。关于BeanFactory简单I容器的设计，我们会在后面的内容中详细介绍
+	- `addBeanPostProcessor()` 配置 Bean 后置处理器。
+- 这些接口设计的叠加，定义了 BeanFactory 作为简单 loc容器的基本功能。
 
 ## ApplicationContext
 应用上下文，高级容器系列，增加了面向框架特性
