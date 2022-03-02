@@ -35,6 +35,7 @@
 
 ## BeanDefinition
  - 表达容器中 Bean 的概念
+ - 主要目的允许 BeanFactoryPostProcessor 内省和修改属性值和元数据。
 
 # DefaultListableBeanFactory
 *Spring 中默认的 IoC 完整功能实现*，继承关系如下：
