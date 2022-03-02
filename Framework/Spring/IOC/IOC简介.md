@@ -34,8 +34,8 @@
 - *ApplicationContext* 通过继承 *MessageSource（解析Message）*、*ResourceLoader（加载文件资源）*、*ApplicationEventPublisher（注册 Listener）* ，在BeanFactory 的基础上添加了*高级容器的特性*。
 
 ## BeanDefinition
- - 表达容器中 Bean 的概念
- - 主要目的允许 BeanFactoryPostProcessor 内省和修改属性值和元数据。
+ - Spring 中的一个 bean 实例，具有属性值、构造函数以及由实现提供的信息；
+ - 主要目的允许 BeanFactoryPostProcessor 查看和修改 Bean 的属性值和元数据；
 
 # DefaultListableBeanFactory
 *Spring 中默认的 IoC 完整功能实现*，继承关系如下：
