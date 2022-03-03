@@ -30,7 +30,7 @@
 
 - 第二条设计主线：以 *ApplicationContext*(应用上下文) 为核心的接口设计，*BeanFactory => ListableBeanFactory =>App]icationContext => WebApplicationContext 或者ConfigurableApplicationContext*。
 - 常用的应用上下文是 *ConfigurableApplicationContext* 或者 *WebApplicationContext* 的实现。
-- *ListableBeanFactory* 指*可列出所有 bean* 而不是当客户端请求时一个一个查找的 Bean-Factorty。 如一些预先加载所有 bean  定义的工厂（XML-based factories ）。
+- *ListableBeanFactory* 指*可列出所有 bean* 而不是当客户端请求时一个一个查找的 Bean-Factorty。 实现类一般都有**预先加载 bean-的definition 的功能**（XML-based factories ）。
 - *ApplicationContext* 通过继承 *MessageSource（解析Message）*、*ResourceLoader（加载文件资源）*、*ApplicationEventPublisher（注册 Listener）* ，在BeanFactory 的基础上添加了*高级容器的特性*。
 
 	- *支持不同的信息源*。扩展了 MessageSource ，这些信息源的扩展功能可以支持国际化的实现，为开发多语言版本的应用提供服务。
