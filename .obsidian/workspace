@@ -128,8 +128,8 @@
   "active": "2ca2c5ce667dd41c",
   "lastOpenFiles": [
     "Book Reading/设计模式GoF/结构型/Proxy.md",
-    "Framework/Spring/IOC/AutowireCapableBeanFactory.md",
     "Language/Java/基础/动态代理.md",
+    "Framework/Spring/IOC/AutowireCapableBeanFactory.md",
     "Language/Java/基础/final 和 static.md",
     "Framework/Spring/动态代理问题.md",
     "Framework/Spring/@Transactional.md",
