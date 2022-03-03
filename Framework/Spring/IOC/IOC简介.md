@@ -33,6 +33,19 @@
 - *ListableBeanFactory* 指*可列出所有 bean* 而不是当客户端请求时一个一个查找的 Bean-Factorty。 如一些预先加载所有 bean  定义的工厂（XML-based factories ）。
 - *ApplicationContext* 通过继承 *MessageSource（解析Message）*、*ResourceLoader（加载文件资源）*、*ApplicationEventPublisher（注册 Listener）* ，在BeanFactory 的基础上添加了*高级容器的特性*。
 
+	- 支持不同的信息源。扩展了 MessageSource ，这些信息源的扩展功能可以支持国际化的实现，为开发多语言版本的应用提供服务。
+	- 访问资源。体现在对ResourceLoader和Resource的支持上，可以从不同地方得到 Bean 定义资源。这种抽象使用户程序可以灵活地定义Bean定义信息，
+尤其是从不同的I℃途径得到Bean定义信息。这在接口关系上看不出来，不过一般来
+说，具体AppIicationContext都是继承了DefaultResourceLoader的子类。因为
+DefaultResourceLoader是AbstractApplicationContext的基类，关于Resource在IoC容器
+中的使用，后面会有详细的讲解。
+0支持应用事件。继承了接口ApplicationEventPublisher，从而在上下文中引人了事件
+机制。这些事件和Bean的生命周期的结合为Bean的管理提供了便利。
+0在ApplicationContext中提供的附加服务。这些服务使得基本IoC容器的功能更丰富。
+因为具备了这些丰富的附加功能，使得ApplicationContext与简单的BeanFactory相比，
+对它的使用是一种面向框架的使用风格，所以一般建议在开发应用时使用
+ApplicationContext作为I容器的基本形式。
+
 ## BeanDefinition
  - Spring 中的一个 bean 实例，具有属性值、构造函数以及由实现提供的信息；
  - 主要目的允许 BeanFactoryPostProcessor 查看和修改 Bean 的属性值和元数据；
