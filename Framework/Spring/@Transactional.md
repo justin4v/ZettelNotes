@@ -45,8 +45,8 @@
 
 事物传播行为介绍:
 1.  @Transactional(propagation=Propagation.REQUIRED)：*如果有事务, 那么加入事务, 没有的话新建一个(默认)*
-2.  @Transactional(propagation=Propagation.NOT_SUPPORTED)：容器不为这个方法开启事务
-3.  @Transactional(propagation=Propagation.REQUIRES_NEW) ：不管是否存在事务,都创建一个新的事务,原来的*挂起*,新的执行完毕,继续执行老的事务；
+2.  @Transactional(propagation=Propagation.NOT_SUPPORTED)：*不开启事务*
+3.  @Transactional(propagation=Propagation.REQUIRES_NEW) ：*总是新建一个事务*,原来的*挂起*,新的执行完毕,继续执行老的事务；
 4.  @Transactional(propagation=Propagation.MANDATORY)： 如果当前存在事务，则加入该事务；如果当前不存在事务，则抛出异常。
 5.  @Transactional(propagation=Propagation.NEVER) ：以非事务的方式运行，如果当前存在事务，则抛出异常。
 6.  @Transactional(propagation=Propagation.SUPPORTS) ：如果当前存在事务，则加入该事务；如果当前不存在事务，则以非事务的方式继续运行。
