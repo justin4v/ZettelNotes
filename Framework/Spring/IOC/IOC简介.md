@@ -31,8 +31,7 @@
 - 第二条设计主线：以 *ApplicationContext*(应用上下文) 为核心的接口设计，*BeanFactory => ListableBeanFactory =>App]icationContext => WebApplicationContext 或者ConfigurableApplicationContext*。
 - 常用的应用上下文是 *ConfigurableApplicationContext* 或者 *WebApplicationContext* 的实现。
 - *ListableBeanFactory* 指*可列出所有 bean* 而不是当客户端请求时一个一个查找的 Bean-Factorty。 实现类一般都有**预先加载 bean-的definition 的功能**（XML-based factories ）。
-	- 容器是有层级的，比如实现了[HierarchicalBeanFactory](https://segmentfault.com/a/1190000020896371)接口，返回值不考虑层级的信息，*只读取当前容器定义的信息*。
-	- 
+	- 容器 Bean 返回值不考虑层级(HierarchicalBeanFactory 接口)的 Bean，*只读取当前容器定义的信息*。
 	- 可以通过 BeanFactoryUtils 工具类来获取在父 BeanFactory 中的 Bean。
 - *ApplicationContext* 通过继承 *MessageSource（解析Message）*、*ResourceLoader（加载文件资源）*、*ApplicationEventPublisher（注册 Listener）* ，在BeanFactory 的基础上添加了*高级容器的特性*。
 
