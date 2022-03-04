@@ -35,7 +35,12 @@ undo log分为：**insert undo log** 和 **update undo log**
 - 会对已经存在的记录产生影响，因此 update undo log 不能在事务提交时就进行删除；
 - 将事务提交时放到入 history list 上，等待 purge 线程进行最后的删除操作。
 
-![[Pasted image 20220304142506.png]]
+数据第一次被修改时
+![[Update log第一次修改.png]]
+
+## ReadView
+ - MVCC 中**RC(READ COMMITTED)** 和 **RR(REPEATABLE READ)** 两种隔离级别的*核心是判断所有版本中哪个版本是当前事务可见*。
+ - 针对这个问题InnoDB在设计上增加了**ReadView**的设计，**ReadView**中主要包含当前系统中还有哪些活跃的读写事务，把它们的事务id放到一个列表中，我们把这个列表命名为为**m_ids**。
 
 
 ### 快照
