@@ -1,5 +1,11 @@
 # InnoDB MVCC 实现
-Mysql 实现依赖的是 *undo log* 与 *read view*
+Mysql 实现依赖的是 
+- *undo log* 
+- *read view* 
+- 每行数据的两个隐藏列：*事务ID（DB_TRX_ID，递增）*，*回滚指针（DB_ROLL_PT）*
+- 如果没有设置主键还会多添加： *主键（ROW_ID）*
+
+
 
 ### 快照
 - **快照**，又叫做**一致性视图**；
