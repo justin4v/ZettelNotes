@@ -1,9 +1,9 @@
 # 简介
 
 - MVCC 使得*数据库读不会对数据加锁*，*普通的 SELECT 请求不会加锁*，提高了数据库的并发处理能力。
-- MVCC只在 REPEATABLE READ 和 READ COMMITIED 两个隔离级别下工作。
-- READ UNCOMMITIED 总是读取最新的数据行，而不是符合当前事务版本的数据行。
-- 而 SERIALIZABLE 则会对所有读取的行都加锁。
+- MVCC只在 *REPEATABLE READ* 和 *READ COMMITIED* 两个隔离级别下工作。
+- READ UNCOMMITIED *总是读取最新的数据行*，而不是符合当前事务版本的数据行。
+- 而 SERIALIZABLE 则*会对所有读取的行都加锁*。
 
 
 # InnoDB MVCC 实现
