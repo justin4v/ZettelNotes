@@ -1,4 +1,4 @@
-### MVCC 实现
+# InnoDB MVCC 实现
 Mysql 实现依赖的是 *undo log* 与 *read view*
 
 ### 快照
