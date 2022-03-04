@@ -1,6 +1,6 @@
 # 设置隔离级别
 
-查看当前数据库的隔离级别
+1. 查看当前隔离级别
 ```sql
 # 查看事务隔离级别 5.7.20 之前
 show variables like 'transaction_isolation';
@@ -18,47 +18,31 @@ show variables like 'tx_isolation'
 +---------------+-----------------+
 ```
 
-
-*修改隔离级别
+2. 修改隔离级别
 ```sql
 set [作用域] transaction isolation level [事务隔离级别]
 
 SET [SESSION | GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE}。
 ```
-
 - 作用域是 SESSION 或者 GLOBAL：GLOBAL 是全局的，而 SESSION 只针对当前回话窗口。
 - 如设置全局隔离级别为读提交级别。
-
 ```sql
 mysql> set global transaction isolation level read committed; 
 ```
 
 
 
-## MySQL 中执行事务
+# MySQL 中执行事务
 
 事务的执行过程：
 1. 以 begin 或者 start transaction 开始事务语句；
 2. 最后要执行 commit 或 rollback 操作，事务结束；
 3. 事务*真正开始于 begin 命令之后的第一条语句*。
 
-例如下面示例中，select * from xxx 才是事务的开始，
-
-```sql
-begin;
-select * from xxx; 
-commit; -- 或者 rollback;
-```
-
-另外，通过以下语句可以查询当前有多少事务正在运行。
-```sql
-select * from information_schema.innodb_trx;
-```
-
 # 隔离级别的实现
-1. MySQL 事务隔离其实是**依靠锁实现**的，但锁也会带来性能的损失；
+1. MySQL 事务隔离**依靠锁实现**；
 
-接下来用一张表验证事务，表结构如下：
+用一张表验证事务，表结构如下：
 
 ```sql
 CREATE TABLE `user` (
@@ -69,7 +53,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8
 ```
 
-初始只有一条记录：
+初始只有一条记录
 
 ```shell
 mysql> SELECT * FROM user;
@@ -81,18 +65,16 @@ mysql> SELECT * FROM user;
 ```
 
 ## 读未提交
-**任何事务对数据的修改都会第一时间暴露给其他事务**，即使事务还没有提交。
-
-读未提交示意：
+- 任何事务*对数据的修改都会暴露*给其他事务，即便事务还没有提交。
+- 会出现*脏读*问题；
+- 读未提交过程示意
 ![img](读未提交.png)
 
 ## 读提交
 
-1. **一个事务只能读到其他事务已经提交过的数据**，可以解决脏读的问题。
+1. 一个事务*只能读到已经提交过的数据*，可以解决脏读的问题。
 2. 读提交事务隔离级别是大多数流行数据库的默认事务隔离界别，比如 Oracle，但是不是 MySQL 的默认隔离界别。
-
-
-读提交示意：
+3. 读提交示意
 ![img](读提交.png)
 
 
