@@ -115,7 +115,7 @@ MySQL 采用了 **MVCC (多版本并发控制，Multi-Version Concurrency Contro
 3. 事务 ID 记为 transaction id，它在事务开始的时候向事务系统申请，按时间先后顺序递增。
 
 ![img](MVCC示意.png)
-上图中一行记录现有 3 个版本，每一个版本都记录这使其产生的事务 ID，比如事务A的transaction id 是100，那么版本1的row trx_id 就是 100，同理版本2和版本3。
+上图中一行记录现有 3 个版本，每一个版本都记录使其产生的事务 ID，比如事务A的transaction id 是100，那么版本1的row trx_id 就是 100，同理版本2和版本3。
 
 ### 快照
 - **快照**，又叫做**一致性视图**；
