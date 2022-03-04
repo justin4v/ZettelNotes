@@ -1,10 +1,12 @@
-# 简介
+#MVCC #InnoDB
 
+# 总结
+- 使用*版本（InnoDB 中表现为 DB_TRX_ID）标记数据*，以控制数据查询可能会出现的问题。
+# 简介
 - MVCC 使得*数据库读不会对数据加锁*，*普通的 SELECT 请求不会加锁*，提高了数据库的并发处理能力。
 - MVCC只在 *REPEATABLE READ* 和 *READ COMMITIED* 两个隔离级别下工作。
 - READ UNCOMMITIED *总是读取最新的数据行*，而不是符合当前事务版本的数据行。
 - 而 SERIALIZABLE 则*会对所有读取的行都加锁*。
-
 - 借助MVCC，数据库可以实现RC，RR等隔离级别；
 - 用户可以查看当前数据的前一个或者前几个历史版本，保证了ACID中的I特性（隔离性）
 
