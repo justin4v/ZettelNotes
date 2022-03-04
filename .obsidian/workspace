@@ -128,6 +128,7 @@
   "active": "2ca2c5ce667dd41c",
   "lastOpenFiles": [
     "Database/Mysql/事务隔离级别.md",
+    "Database/Mysql/Mysql中事务.md",
     "Database/RDBMS.md",
     "Database/Mybatis 使用.md",
     "Database/Index.md",
@@ -135,7 +136,6 @@
     "Framework/Spring/@Transactional.md",
     "Framework/Spring/IOC/AutowireCapableBeanFactory.md",
     "Book Reading/设计模式解析/部分模式理解/Template Method.md",
-    "Book Reading/设计模式解析/部分模式理解/Strategy.md",
-    "Book Reading/设计模式解析/部分模式理解/Facade.md"
+    "Book Reading/设计模式解析/部分模式理解/Strategy.md"
   ]
 }
