@@ -17,6 +17,25 @@ Mysql 实现依赖的是
 保存这两个额外事务编号，使大多数读操作都可以不用加锁。
 使得读数据操作很简单，性能很好，并且也能保证只会读取到符合标准的行。不足之处是每行记录都需要额外的存储空间，需要做更多的行检查工作，以及一些额外的维护工作。
 
+## undo log
+undo log分为：**insert undo log** 和 **update undo log**
+### insert undo log
+- insert 操作中产生的 undo log；
+- insert 操作记录只对当前事务本身可见，对于其他事务不可见；
+- insert undo log 在事务提交后直接删除而不需要进行 purge 操作。
+
+> purge的主要任务是将数据库中已经 mark del 的数据删除，另外也会批量回收undo pages
+
+数据库 Insert时的数据初始状态：
+![[InnoDB Insert的MVCC状态.png]]
+
+### update undo log
+
+- update 或 delete 操作中产生的 undo log。
+- 会对已经存在的记录产生影响，因此 update undo log 不能在事务提交时就进行删除；
+- 将事务提交时放到入 history list 上，等待 purge 线程进行最后的删除操作。
+
+![[Pasted image 20220304142506.png]]
 
 
 ### 快照
