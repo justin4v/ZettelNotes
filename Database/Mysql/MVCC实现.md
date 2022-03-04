@@ -1,7 +1,12 @@
 #MVCC #InnoDB
 
 # 总结
-- 使用*版本（InnoDB 中表现为 DB_TRX_ID）标记数据*，以控制数据查询可能会出现的问题。
+- 使用*版本（InnoDB 中表现为 DB_TRX_ID）标记数据*：
+	- 以解决*并发*下数据查询可能会出现的问题（脏读、不可重复读、幻读）。
+	- 满足数据库事务的 ACID 特性（关键是一致性 consistency 和隔离性 Isolation）。
+- 版本选择逻辑转化为简单的 ID 数值比较。
+- 
+
 # 简介
 - MVCC 使得*数据库读不会对数据加锁*，*普通的 SELECT 请求不会加锁*，提高了数据库的并发处理能力。
 - MVCC只在 *REPEATABLE READ* 和 *READ COMMITIED* 两个隔离级别下工作。
