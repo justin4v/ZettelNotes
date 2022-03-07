@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mysql/Mysql中锁.md",
+            "file": "Database/Mysql/事务日志.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mysql/Mysql中锁.md",
+                "file": "Database/Mysql/事务日志.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mysql/Mysql中锁.md"
+                "file": "Database/Mysql/事务日志.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "2ca2c5ce667dd41c",
   "lastOpenFiles": [
+    "Database/Mysql/事务日志.md",
     "Database/Mysql/Mysql中锁.md",
     "OS/Linux/IO模型.md",
     "OS/同步与异步.md",
@@ -135,7 +136,6 @@
     "OS/阻塞和非阻塞.md",
     "OS/同步异步与阻塞非阻塞对比.md",
     "Database/Mybatis-plus/乐观锁以及问题.md",
-    "Database/Index.md",
-    "Database/Mysql/排序规则.md"
+    "Database/Index.md"
   ]
 }
