@@ -53,16 +53,16 @@
     
 ## 临键锁(Next-key Locks)
 - *记录锁与间隙锁的组合*，封锁范围既包含索引记录，又包含索引区间。
-- 主要目的，也是为了避免**幻读**(Phantom Read)。如果把事务的隔离级别降级为RC，临键锁则也会失效。
-    
-    Next-Key 可以理解为一种特殊的**间隙锁**，也可以理解为一种特殊的**算法**。通过**临建锁**可以解决幻读的问题。 每个数据行上的非唯一索引列上都会存在一把临键锁，当某个事务持有该数据行的临键锁时，会锁住一段左开右闭区间的数据。需要强调的一点是，`InnoDB` 中行级锁是基于索引实现的，临键锁只与非唯一索引列有关，在唯一索引列（包括主键列）上不存在临键锁。
-    
-    对于行的查询，都是采用该方法，主要目的是解决幻读的问题
+- 主要目的时候为了避免**幻读**(Phantom Read)。如果把事务的隔离级别降级为RC，临键锁则也会失效。
+- 可以理解为一种特殊的**间隙锁**，也可以理解为一种特殊的**算法**。
+-  每个数据行上的索引列（非唯一索引）上都会存在一把临键锁，当某个事务持有该数据行的临键锁时，会锁住一段左开右闭区间的数据。
+- `InnoDB` 中*行级锁是基于索引实现*，*临键锁只与非唯一索引列有关*，在*唯一索引列（包括主键列）上不存在临键锁*。
+- 对于行的查询，都是采用该方法
 
+### select for update 有什么含义，会锁表还是锁行还是其他？
 
-> select for update有什么含义，会锁表还是锁行还是其他
-
-for update 仅适用于InnoDB，且必须在事务块(BEGIN/COMMIT)中才能生效。在进行事务操作时，通过“for update”语句，MySQL会对查询结果集中每行数据都添加排他锁，其他线程对该记录的更新与删除操作都会阻塞。排他锁包含行锁、表锁。
+- for update 仅适用于InnoDB，且必须在事务块(BEGIN/COMMIT)中才能生效。
+- MySQL会对查询结果集中每行数据都添加排他锁，其他线程对该记录的更新与删除操作都会阻塞。排他锁包含行锁、表锁。
 
 InnoDB这种行锁实现特点意味着：只有通过索引条件检索数据，InnoDB才使用行级锁，否则，InnoDB将使用表锁！ 假设有个表单 products ，里面有id跟name二个栏位，id是主键。
 
@@ -71,28 +71,24 @@ InnoDB这种行锁实现特点意味着：只有通过索引条件检索数据�
 ```mysql
 SELECT * FROM products WHERE id='3' FOR UPDATE;
 SELECT * FROM products WHERE id='3' and type=1 FOR UPDATE;
-复制代码
 ```
 
 -   明确指定主键，若查无此笔资料，无lock
 
 ```mysql
 SELECT * FROM products WHERE id='-1' FOR UPDATE;
-复制代码
 ```
 
 -   无主键，table lock
 
 ```mysql
 SELECT * FROM products WHERE name='Mouse' FOR UPDATE;
-复制代码
 ```
 
 -   主键不明确，table lock
 
 ```mysql
 SELECT * FROM products WHERE id<>'3' FOR UPDATE;
-复制代码
 ```
 
 -   主键不明确，table lock
