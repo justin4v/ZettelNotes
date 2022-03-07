@@ -1,8 +1,8 @@
 #Mysql #Transaction 
 # 事务特性实现
-1. Isolation 特性由锁（写锁/独占锁）保证
-2. Automatic 和 Durability 由 redo log 保证
-3. Consistency 由 undo log 保证
+1. *Isolation: 加锁（写锁/独占锁）保证*
+2. *Automatic 和 Durability: redo log 保证* ;
+3. *Consistency: undo log 保证*
 
 # MySQL事务隔离级别实现
 1. *读未提交*：不加锁，可以理解为*没有隔离*。
