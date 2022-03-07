@@ -1,3 +1,4 @@
+#Java基础 #Lock 
 # 概念
 
 JDK中对Synchronized做的种种优化，其核心都是为了减少这种重量级锁的使用。
