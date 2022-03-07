@@ -33,15 +33,14 @@ mysql> set global transaction isolation level read committed;
 
 
 
-# MySQL 中执行事务
+# 执行事务
 
 事务的执行过程：
 1. 以 begin 或者 start transaction 开始事务语句；
 2. 最后要执行 commit 或 rollback 操作，事务结束；
 3. 事务*真正开始于 begin 命令之后的第一条语句*。
 
-# 隔离级别的实现
-1. MySQL 事务隔离**依靠锁实现**；
+# 隔离级别图示说明
 
 用一张表验证事务，表结构如下：
 
@@ -99,7 +98,10 @@ mysql> SELECT * FROM user;
 - 串行化解决了脏读、可重复读、幻读的问题，但是效率最差；
 - 它将事务的执行变为顺序执行，相当于**单线程**，后一个事务的执行必须等待前一个事务结束。
 
-# MySQL事务隔离实现
+# 事务特性实现
+1. Isolation 特性由锁
+
+# MySQL事务隔离级别实现
 
 1. *读未提交*，不加锁，可以理解为没有隔离。
 2. *串行化*：
