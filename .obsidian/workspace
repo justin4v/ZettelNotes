@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "动态代理",
+                "query": "tag:#Problem-and-Solutions",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
