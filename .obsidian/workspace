@@ -128,9 +128,9 @@
   "active": "2ca2c5ce667dd41c",
   "lastOpenFiles": [
     "Database/Mysql/Mysql中事务.md",
+    "Database/Mysql/Mysql中锁.md",
     "Database/Mysql/MVCC实现.md",
     "Database/Mysql/事务隔离级别.md",
-    "Database/Mysql/Mysql中锁.md",
     "Database/Index.md",
     "Database/Sql 注入.md",
     "Database/Sql 预编译.md",
