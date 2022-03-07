@@ -10,12 +10,7 @@
 3. *读提交和可重复读*。*MVCC + undo log/redo log*。
 
 ## MVCC
-1. 数据库表中一行记录实际上有**多个版本**；
-2. 每个版本的记录除了有数据本身外，还要有一个**表示版本的字段 row trx_id**，是对应的**事务 id**；
-3. 事务 ID 记为 transaction id，它在事务开始的时候向事务系统申请，按时间先后顺序递增。
-
-![img](MVCC示意.png)
-上图中一行记录现有 3 个版本，每一个版本都记录使其产生的事务 ID，比如事务A的transaction id 是100，那么版本1的row trx_id 就是 100，同理版本2和版本3。
+[[MVCC实现]]
 
 
 # 隔离级别图示说明
@@ -87,3 +82,7 @@ mysql> SELECT * FROM user;
 1. 以 begin 或者 start transaction 开始事务语句；
 2. 最后要执行 commit 或 rollback 操作，事务结束；
 3. 事务*真正开始于 begin 命令之后的第一条语句*。
+
+# 参考
+1. [[事务隔离级别]]
+2. [[MVCC实现]]
