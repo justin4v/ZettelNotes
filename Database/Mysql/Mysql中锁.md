@@ -15,6 +15,91 @@
 - 在整个数据处理过程中锁定数据，事务提交或回滚后才释放锁。
 
 
+## 锁模式(InnoDB有三种行锁的算法)
+
+-   **记录锁(Record Locks)**： 单个行记录上的锁。对索引项加锁，锁定符合条件的行。其他事务不能修改和删除加锁项；
+    ```mysql
+    SELECT * FROM table WHERE id = 1 FOR UPDATE;
+    ```
+    
+    它会在 id=1 的记录上加上记录锁，以阻止其他事务插入，更新，删除 id=1 这一行
+    在通过 主键索引 与 唯一索引 对数据行进行 UPDATE 操作时，也会对该行数据加记录锁：
+    
+    ```mysql
+    -- id 列为主键列或唯一索引列
+    UPDATE SET age = 50 WHERE id = 1;
+    复制代码
+    ```
+    
+-   **间隙锁（Gap Locks）**： 当我们使用范围条件而不是相等条件检索数据，并请求共享或排他锁时，InnoDB会给符合条件的已有数据记录的索引项加锁。对于键值在条件范围内但并不存在的记录，叫做“间隙”。
+    
+    InnoDB 也会对这个“间隙”加锁，这种锁机制就是所谓的间隙锁。
+    
+    对索引项之间的“间隙”加锁，锁定记录的范围（对第一条记录前的间隙或最后一条将记录后的间隙加锁），不包含索引项本身。其他事务不能在锁范围内插入数据，这样就防止了别的事务新增幻影行。
+    
+    间隙锁基于非唯一索引，它锁定一段范围内的索引记录。间隙锁基于下面将会提到的`Next-Key Locking` 算法，请务必牢记：**使用间隙锁锁住的是一个区间，而不仅仅是这个区间中的每一条数据**。
+    
+    ```mysql
+    SELECT * FROM table WHERE id BETWEN 1 AND 10 FOR UPDATE;
+    复制代码
+    ```
+    
+    即所有在`（1，10）`区间内的记录行都会被锁住，所有id 为 2、3、4、5、6、7、8、9 的数据行的插入会被阻塞，但是 1 和 10 两条记录行并不会被锁住。
+    
+    GAP锁的目的，是为了防止同一事务的两次当前读，出现幻读的情况
+    
+-   **临键锁(Next-key Locks)**： **临键锁**，是**记录锁与间隙锁的组合**，它的封锁范围，既包含索引记录，又包含索引区间。(临键锁的主要目的，也是为了避免**幻读**(Phantom Read)。如果把事务的隔离级别降级为RC，临键锁则也会失效。)
+    
+    Next-Key 可以理解为一种特殊的**间隙锁**，也可以理解为一种特殊的**算法**。通过**临建锁**可以解决幻读的问题。 每个数据行上的非唯一索引列上都会存在一把临键锁，当某个事务持有该数据行的临键锁时，会锁住一段左开右闭区间的数据。需要强调的一点是，`InnoDB` 中行级锁是基于索引实现的，临键锁只与非唯一索引列有关，在唯一索引列（包括主键列）上不存在临键锁。
+    
+    对于行的查询，都是采用该方法，主要目的是解决幻读的问题
+
+
+> select for update有什么含义，会锁表还是锁行还是其他
+
+for update 仅适用于InnoDB，且必须在事务块(BEGIN/COMMIT)中才能生效。在进行事务操作时，通过“for update”语句，MySQL会对查询结果集中每行数据都添加排他锁，其他线程对该记录的更新与删除操作都会阻塞。排他锁包含行锁、表锁。
+
+InnoDB这种行锁实现特点意味着：只有通过索引条件检索数据，InnoDB才使用行级锁，否则，InnoDB将使用表锁！ 假设有个表单 products ，里面有id跟name二个栏位，id是主键。
+
+-   明确指定主键，并且有此笔资料，row lock
+
+```mysql
+SELECT * FROM products WHERE id='3' FOR UPDATE;
+SELECT * FROM products WHERE id='3' and type=1 FOR UPDATE;
+复制代码
+```
+
+-   明确指定主键，若查无此笔资料，无lock
+
+```mysql
+SELECT * FROM products WHERE id='-1' FOR UPDATE;
+复制代码
+```
+
+-   无主键，table lock
+
+```mysql
+SELECT * FROM products WHERE name='Mouse' FOR UPDATE;
+复制代码
+```
+
+-   主键不明确，table lock
+
+```mysql
+SELECT * FROM products WHERE id<>'3' FOR UPDATE;
+复制代码
+```
+
+-   主键不明确，table lock
+
+```mysql
+SELECT * FROM products WHERE id LIKE '3' FOR UPDATE;
+```
+
+	
+
+
+
 # 并发写问题
 
 两个事务，对同一条数据做修改：
