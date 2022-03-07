@@ -1,49 +1,29 @@
+#Mysql #Transaction 
+# 事务特性实现
+1. Isolation 特性由锁（写锁/独占锁）保证
+2. Automatic 和 Durability 由 redo log 保证
+3. Consistency 由 undo log 保证
 
-# 设置隔离级别
+# MySQL事务隔离级别实现
+1. *读未提交*：不加锁，可以理解为*没有隔离*。
+2. *串行化*：所有操作都*加锁*实现
+3. *读提交和可重复读*。*MVCC + undo log/redo log*。
 
-1. 查看当前隔离级别
-```sql
-# 查看事务隔离级别 5.7.20 之前
-show variables like 'transaction_isolation';
-SELECT @@transaction_isolation
+## 实现可重复读
+MySQL 采用了 **MVCC (多版本并发控制，Multi-Version Concurrency Control)** 的方式实现可重复读。
 
-# 5.7.20 之后
-SELECT @@tx_isolation
-show variables like 'tx_isolation'
+### MVCC
+1. 数据库表中一行记录实际上有**多个版本**；
+2. 每个版本的记录除了有数据本身外，还要有一个**表示版本的字段row trx_id**，是对应的**事务 id**；
+3. 事务 ID 记为 transaction id，它在事务开始的时候向事务系统申请，按时间先后顺序递增。
 
-# 结果
-+---------------+-----------------+
-| Variable_name | Value           |
-+---------------+-----------------+
-| tx_isolation  | REPEATABLE-READ |
-+---------------+-----------------+
-```
+![img](MVCC示意.png)
+上图中一行记录现有 3 个版本，每一个版本都记录使其产生的事务 ID，比如事务A的transaction id 是100，那么版本1的row trx_id 就是 100，同理版本2和版本3。
 
-2. 修改隔离级别
-```sql
-set [作用域] transaction isolation level [事务隔离级别]
-
-SET [SESSION | GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE}。
-```
-- 作用域是 SESSION 或者 GLOBAL：GLOBAL 是全局的，而 SESSION 只针对当前回话窗口。
-- 如设置全局隔离级别为读提交级别。
-```sql
-mysql> set global transaction isolation level read committed; 
-```
-
-
-
-# 执行事务
-
-事务的执行过程：
-1. 以 begin 或者 start transaction 开始事务语句；
-2. 最后要执行 commit 或 rollback 操作，事务结束；
-3. 事务*真正开始于 begin 命令之后的第一条语句*。
 
 # 隔离级别图示说明
 
-用一张表验证事务，表结构如下：
-
+有一张表结构如下
 ```sql
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -54,7 +34,6 @@ CREATE TABLE `user` (
 ```
 
 初始只有一条记录
-
 ```shell
 mysql> SELECT * FROM user;
 +----+-----------------+------+
@@ -98,27 +77,8 @@ mysql> SELECT * FROM user;
 - 串行化解决了脏读、可重复读、幻读的问题，但是效率最差；
 - 它将事务的执行变为顺序执行，相当于**单线程**，后一个事务的执行必须等待前一个事务结束。
 
-# 事务特性实现
-1. Isolation 特性由锁（写锁/独占锁）保证
-2. Automatic 和 Durability 由 redo log 保证
-3. Consistency 由 undo log 保证
 
-# MySQL事务隔离级别实现
 
-1. *读未提交*：不加锁，可以理解为*没有隔离*。
-2. *串行化*：所有操作都*加锁*实现
-3. *读提交和可重复读*。*MVCC + undo log/redo log*。
-
-## 实现可重复读
-MySQL 采用了 **MVCC (多版本并发控制，Multi-Version Concurrency Control)** 的方式实现可重复读。
-
-### MVCC
-1. 数据库表中一行记录实际上有**多个版本**；
-2. 每个版本的记录除了有数据本身外，还要有一个**表示版本的字段row trx_id**，是对应的**事务 id**；
-3. 事务 ID 记为 transaction id，它在事务开始的时候向事务系统申请，按时间先后顺序递增。
-
-![img](MVCC示意.png)
-上图中一行记录现有 3 个版本，每一个版本都记录使其产生的事务 ID，比如事务A的transaction id 是100，那么版本1的row trx_id 就是 100，同理版本2和版本3。
 
 
 # 总结
@@ -127,3 +87,46 @@ MySQL 采用了 **MVCC (多版本并发控制，Multi-Version Concurrency Contro
 - 读提交解决了脏读问题；
 - **行锁**解决了并发更新的问题。
 -  MySQL 在可重复读级别解决了幻读问题，是通过行锁和间隙锁的组合 **Next-Key 锁**实现的。
+
+
+
+# 设置隔离级别
+
+1. 查看当前隔离级别
+```sql
+# 查看事务隔离级别 5.7.20 之前
+show variables like 'transaction_isolation';
+SELECT @@transaction_isolation
+
+# 5.7.20 之后
+SELECT @@tx_isolation
+show variables like 'tx_isolation'
+
+# 结果
++---------------+-----------------+
+| Variable_name | Value           |
++---------------+-----------------+
+| tx_isolation  | REPEATABLE-READ |
++---------------+-----------------+
+```
+
+2. 修改隔离级别
+```sql
+set [作用域] transaction isolation level [事务隔离级别]
+
+SET [SESSION | GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE}。
+```
+- 作用域是 SESSION 或者 GLOBAL：GLOBAL 是全局的，而 SESSION 只针对当前回话窗口。
+- 如设置全局隔离级别为读提交级别。
+```sql
+mysql> set global transaction isolation level read committed; 
+```
+
+
+
+# 执行事务
+
+事务的执行过程：
+1. 以 begin 或者 start transaction 开始事务语句；
+2. 最后要执行 commit 或 rollback 操作，事务结束；
+3. 事务*真正开始于 begin 命令之后的第一条语句*。
