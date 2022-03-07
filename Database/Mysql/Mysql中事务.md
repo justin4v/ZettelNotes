@@ -99,7 +99,8 @@ mysql> SELECT * FROM user;
 - 它将事务的执行变为顺序执行，相当于**单线程**，后一个事务的执行必须等待前一个事务结束。
 
 # 事务特性实现
-1. Isolation 特性由锁
+1. Isolation 特性由锁（写锁/独占锁）保证
+2. Automatic 和 
 
 # MySQL事务隔离级别实现
 
