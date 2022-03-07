@@ -100,7 +100,8 @@ mysql> SELECT * FROM user;
 
 # 事务特性实现
 1. Isolation 特性由锁（写锁/独占锁）保证
-2. Automatic 和 
+2. Automatic 和 Durability 由 redo log 保证
+3. Consistency 由 undo log 保证
 
 # MySQL事务隔离级别实现
 
