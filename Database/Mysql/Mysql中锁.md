@@ -62,57 +62,39 @@
 ### select for update 有什么含义，会锁表还是锁行还是其他？
 
 - for update 仅适用于InnoDB，且必须在事务块(BEGIN/COMMIT)中才能生效。
-- MySQL会对查询结果集中每行数据都添加排他锁，其他线程对该记录的更新与删除操作都会阻塞。排他锁包含行锁、表锁。
-
-InnoDB这种行锁实现特点意味着：只有通过索引条件检索数据，InnoDB才使用行级锁，否则，InnoDB将使用表锁！ 假设有个表单 products ，里面有id跟name二个栏位，id是主键。
-
--   明确指定主键，并且有此笔资料，row lock
-
+- MySQL会对查询结果集中每行数据都添加排他锁，其他线程对该记录的更新与删除操作都会阻塞。
+- 排他锁包含行锁、表锁。
+- InnoDB 这种实现特点意味着：
+	- 通过*索引条件检索数据*，InnoDB *才使用行级锁*；
+	- 否则，*InnoDB 将使用表锁*；
+1. 明确指定主键，并且有数据：row lock
 ```mysql
 SELECT * FROM products WHERE id='3' FOR UPDATE;
 SELECT * FROM products WHERE id='3' and type=1 FOR UPDATE;
 ```
 
--   明确指定主键，若查无此笔资料，无lock
-
+2. 明确指定主键，若无数据：无 lock
 ```mysql
 SELECT * FROM products WHERE id='-1' FOR UPDATE;
 ```
 
--   无主键，table lock
-
+3. 无主键：table lock
 ```mysql
 SELECT * FROM products WHERE name='Mouse' FOR UPDATE;
 ```
 
--   主键不明确，table lock
-
+4. 主键不明确：table lock
 ```mysql
 SELECT * FROM products WHERE id<>'3' FOR UPDATE;
 ```
 
--   主键不明确，table lock
-
+5. 主键不明确：table lock
 ```mysql
 SELECT * FROM products WHERE id LIKE '3' FOR UPDATE;
 ```
 
 	
-
-
-
-# 并发写问题
-
-两个事务，对同一条数据做修改：
-- 事务A会对所修改的行加**行锁**（独占锁），锁会在提交之后才释放；
-- 如下图
-![[并发写加锁.png]]
-
-加锁的过程分**有索引和无索引**两种情况，比如下面这条语句
-```sql
-update user set age=11 where id = 1
-```
-
+# 具体加锁情况
 ### 有索引加锁
 - id 是这张表的主键，是**有索引**；
 - **MySQL 直接在索引中找到这行数据，然后加上行锁**。
