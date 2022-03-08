@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "树",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263,
-    "collapsed": true
+    "width": 263
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -129,6 +128,7 @@
   "active": "2ca2c5ce667dd41c",
   "lastOpenFiles": [
     "Database/Index.md",
+    "Algorithm/DataStructure/树有关术语.md",
     "Language/Java/并发编程/锁/轻量级锁.md",
     "Language/Java/并发编程/锁/Java 锁升级概述.md",
     "Database/Mysql/Mysql中锁.md",
@@ -136,7 +136,6 @@
     "Language/Java/并发编程/锁/Synchronize 底层优化.md",
     "Language/Java/并发编程/锁/AQS原理.md",
     "Language/Java/并发编程/锁/重量级锁.md",
-    "Language/Java/并发编程/锁/偏向锁.md",
-    "OS/程序性能的限制与解决.md"
+    "Language/Java/并发编程/锁/偏向锁.md"
   ]
 }
