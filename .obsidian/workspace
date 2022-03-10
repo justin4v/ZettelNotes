@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/4.同步、异步阻塞、非阻塞.md",
+            "file": "OS/Linux/IO模型.md",
             "mode": "source",
             "source": false
           }
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263
+    "width": 211
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/4.同步、异步阻塞、非阻塞.md",
+                "file": "OS/Linux/IO模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/4.同步、异步阻塞、非阻塞.md"
+                "file": "OS/Linux/IO模型.md"
               }
             }
           },
@@ -127,8 +127,8 @@
   },
   "active": "2ca2c5ce667dd41c",
   "lastOpenFiles": [
-    "OS/4.同步、异步阻塞、非阻塞.md",
     "OS/Linux/IO模型.md",
+    "OS/4.同步、异步阻塞、非阻塞.md",
     "OS/3.线程模型.md",
     "同步与异步.md",
     "OS/1.进程.md",
