@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/Linux/IO模型.md",
+            "file": "OS/Linux/select poll epoll.md",
             "mode": "source",
             "source": false
           }
@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211,
-    "collapsed": true
+    "width": 211
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/Linux/IO模型.md",
+                "file": "OS/Linux/select poll epoll.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/Linux/IO模型.md"
+                "file": "OS/Linux/select poll epoll.md"
               }
             }
           },
@@ -128,6 +127,7 @@
   },
   "active": "3add05d01011d16f",
   "lastOpenFiles": [
+    "OS/Linux/select poll epoll.md",
     "OS/Linux/IO模型.md",
     "OS/Linux/Linux Capabilities.md",
     "日常记录/重点阅读.md",
@@ -136,7 +136,6 @@
     "日常记录/日志/2022-02-26.md",
     "日常记录/日志/2022-02-28.md",
     "日常记录/日志/2022-03-03.md",
-    "OS/4.同步、异步阻塞、非阻塞.md",
-    "OS/3.线程模型.md"
+    "OS/4.同步、异步阻塞、非阻塞.md"
   ]
 }
