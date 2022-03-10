@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "2ca2c5ce667dd41c",
+        "id": "3add05d01011d16f",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211,
-    "collapsed": true
+    "width": 211
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -126,7 +125,7 @@
     "width": 141,
     "collapsed": true
   },
-  "active": "2ca2c5ce667dd41c",
+  "active": "3add05d01011d16f",
   "lastOpenFiles": [
     "OS/Linux/IO模型.md",
     "OS/4.同步、异步阻塞、非阻塞.md",
