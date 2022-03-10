@@ -11,7 +11,7 @@ int select(int maxfdp, fd_set *readset, fd_set *writeset, fd_set *exceptset,stru
 	2. 或者超时（`timeout` 指定等待时间，如果立即返回设为 null 即可），函数返回。
 - 当 `select` 函数返回后，可以通过遍历 `fdset`，来找到就绪的描述符。
 - `select` 目前几乎在所有的平台上支持，其良好跨平台。
-- `select` 的缺点在于单个进程能够监视的文件描述符的数量存在最大限制，在 Linux 上一般为 1024
+- `select` 的缺点在于*单个进程能够监视的 fd 的数量存在限制*，在 Linux 上一般为 1024
 - 可以通过修改宏定义甚至重新编译内核的方式提升这一限制，但是这样也会造成效率的降低。
 
 # poll
@@ -28,7 +28,9 @@ struct pollfd {
 };  
 ```
 
-`pollfd` 结构包含了要监视的 event 和发生的 event，不再使用 select 那样“参数-值”传递的方式。同时，`pollfd` 并没有最大数量限制（但是数量过大后性能也是会下降）。 和 `select` 函数一样，`poll` 返回后，需要轮询 `pollfd` 来获取就绪的描述符。
+- `pollfd` 结构包含了要监视的 event 和发生的 event，不再使用 select 那样“参数-值”传递的方式
+- `pollfd` 并没有最大数量限制（但是数量过大后性能也是会下降）。 
+- 和 `select` 函数一样，`poll` 返回后，需要轮询 `pollfd` 来获取就绪的描述符。
 
 # epoll
 
