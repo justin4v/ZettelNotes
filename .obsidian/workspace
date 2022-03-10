@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263,
-    "collapsed": true
+    "width": 263
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -129,9 +128,9 @@
   "active": "2ca2c5ce667dd41c",
   "lastOpenFiles": [
     "OS/4.同步、异步阻塞、非阻塞.md",
+    "OS/Linux/IO模型.md",
     "OS/3.线程模型.md",
     "同步与异步.md",
-    "OS/Linux/IO模型.md",
     "OS/1.进程.md",
     "OS/2.线程.md",
     "OS/同步与异步.md",
