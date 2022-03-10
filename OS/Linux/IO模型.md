@@ -1,4 +1,4 @@
-#I/O-model #Problem-and-Solutions 
+#IO-model #Problem-and-Solutions 
 
 # 问题
 1. 如何突破原始 I/O 的效率限制？ 
@@ -62,18 +62,6 @@
 `select`缺点：
 - 监听的 *IO 最大连接数有限*，在Linux系统上一般为1024。
 - select 函数返回后，通过*遍历 `fdset`*，找到就绪的描述符`fd`。（仅知道有I/O事件发生，却不知是哪几个流）
-
-#### select
-```C
-int select(int maxfdp, fd_set *readset, fd_set *writeset, fd_set *exceptset,struct timeval *timeout);
-```
-- maxfdp：被监听的文件描述符的总数，linux上一般限制为 1024；
-- readfds、writefds、exceptset：分别指向*可读*、*可写*和*异常事件*对应的描述符集合。
-- timeout: 用于设置 *select 函数的超时时间*，即告诉内核select等待多长时间之后就放弃等待。NULL 表示等待无限长的时间
-- 调用后 `select` *函数会阻塞*，直到:
-	1. 有 fd 就绪（数据可读、可写、或者有 `except`）;
-	2. 或者超时（`timeout` 指定等待时间，如果立即返回设为 null 即可），函数返回。
-- 当 `select` 函数返回后，可以通过遍历 `fdset`，来找到就绪的描述符。
 
 ### poll
 - select **存在连接数限制**，又提出了**poll**。

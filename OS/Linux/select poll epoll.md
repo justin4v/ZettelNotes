@@ -1,4 +1,35 @@
-#Linux 
+#Linux #select-poll-epoll #IO-model 
+# select
+```C
+int select(int maxfdp, fd_set *readset, fd_set *writeset, fd_set *exceptset,struct timeval *timeout);
+```
+- maxfdp：被监听的文件描述符的总数，linux上一般限制为 1024；
+- readfds、writefds、exceptset：分别指向*可读*、*可写*和*异常事件*对应的描述符集合。
+- timeout: 用于设置 *select 函数的超时时间*，即告诉内核select等待多长时间之后就放弃等待。NULL 表示等待无限长的时间
+- 调用后 `select` *函数会阻塞*，直到:
+	1. 有 fd 就绪（数据可读、可写、或者有 `except`）;
+	2. 或者超时（`timeout` 指定等待时间，如果立即返回设为 null 即可），函数返回。
+- 当 `select` 函数返回后，可以通过遍历 `fdset`，来找到就绪的描述符。
+- `select` 目前几乎在所有的平台上支持，其良好跨平台。
+- `select` 的缺点在于单个进程能够监视的文件描述符的数量存在最大限制，在 Linux 上一般为 1024
+- 可以通过修改宏定义甚至重新编译内核的方式提升这一限制，但是这样也会造成效率的降低。
+
+# poll
+```C
+int poll (struct pollfd *fds, unsigned int nfds, int timeout);  
+```
+
+不同与 `select` 使用三个 set 三种 `fd` 集合，`poll` 使用一个 `pollfd` 的指针实现。
+```c
+struct pollfd {  
+ int fd;         /* file descriptor */  
+ short events;   /* events to watch */  
+ short revents;  /* events returned */  
+};  
+```
+
+`pollfd` 结构包含了要监视的 event 和发生的 event，不再使用 select 那样“参数-值”传递的方式。同时，`pollfd` 并没有最大数量限制（但是数量过大后性能也是会下降）。 和 `select` 函数一样，`poll` 返回后，需要轮询 `pollfd` 来获取就绪的描述符。
+
 # epoll
 
 `epoll` 操作过程需要三个接口，分别如下：
