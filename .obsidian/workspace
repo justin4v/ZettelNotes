@@ -129,9 +129,9 @@
   "lastOpenFiles": [
     "OS/4.同步、异步阻塞、非阻塞.md",
     "OS/3.线程模型.md",
+    "OS/Linux/IO模型.md",
     "OS/1.进程.md",
     "OS/2.线程.md",
-    "OS/Linux/IO模型.md",
     "OS/同步与异步.md",
     "OS/阻塞和非阻塞.md",
     "OS/0.程序性能的限制与解决.md",
