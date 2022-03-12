@@ -202,7 +202,7 @@ public class NioSelectorServer {
 }
 ```
 - 把需要探知的 SocketChannel 注册到 Selector，调用 select() 方法阻塞；
-- 当有事件发生时，Selector 传回一组 SelectionKey（linux 内核中的 rdlist 就绪事件列表）；
+- 当有事件发生时，Selector *传回一组 SelectionKey*（linux 内核中的 rdlist 就绪事件列表）；
 - 根据 Key 获得注册过的 SocketChannel，并从 Channel 中读取并处理这些数据。
 - Selector 实际对所注册的 Channel（SocketChannel）不断地轮询访问，一旦轮询到所注册的事情发生，返回 channel 的 可以。
 
@@ -226,10 +226,10 @@ selector.select()  //阻塞等待需要处理的事件发生
 
 
 # AIO(NIO 2.0)
-- 异步非阻塞， 由操作系统完成后回调通知服务端程序启动线程去处理，；
+- *异步非阻塞*， 由操作系统完成后回调通知服务端程序启动线程去处理，；
 - 一般适用于*连接数较多且连接时间较长*的应用；
 - 应用场景：
-- AIO方式适用于连接数目多且连接比较长(重操作)的架构，JDK7 开始支持。
+- AIO 方式适用于*连接数目多且连接比较长(重操作)的架构*，JDK7 开始支持。
 
 ```java
 /**
@@ -285,8 +285,9 @@ public class AioServer {
 
 ## 为什么Netty使用 NIO 而不是 AIO ？
 
-- 在 Linux 系统上，AIO 的底层实现仍使用 Epoll，因此在性能上没有明显的优势;
-- AIO被 JDK 封装了一层不容易深度优化，Linux 上 AIO 还不够成熟。Netty 是异步非阻塞框架，Netty 在 NIO 上做了很多异步的封装。
+- 在 Linux 系统上，AIO 的底层实现仍使用 Epoll，因此在性能上没有明显的优势，而且被 JDK 封装了一层不容易深度优化；
+- Linux 上 AIO 还不够成熟。
+- Netty 是异步非阻塞框架，Netty 在 NIO 上做了很多异步的封装。
 # 参考
 1. [Java IO 模型之 BIO，NIO，AIO](https://cloud.tencent.com/developer/article/1825524)
 2. [[IO模型]]
