@@ -110,7 +110,7 @@ package java.io;
 
 public class FilterInputStream extends InputStream {
     protected volatile InputStream in;
-    ...
+    ......
 }
 ```
 
@@ -133,5 +133,4 @@ Reader input = new BufferedReader(new FileReader("c:\\data\\input-file.txt"), 8 
 
 
 # 参考
-1. [Java IO 模型之 BIO，NIO，AIO](https://cloud.tencent.com/developer/article/1825524)
 2. [[IO模型]]
