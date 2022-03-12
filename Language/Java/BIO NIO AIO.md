@@ -15,7 +15,7 @@
 ## 流 Stream
 - 一个连续的数据流。
 - 可以从流中读取数据，也可以往流中写数据。
-- 一般只能顺序读写；
+- 一般只能*顺序读写*；
 - Java IO 中流既可以是*字节流*(以字节为单位进行读写)，也可以是*字符流*(以字符为单位进行读写)
 
 ## Stream/reader 和程序关系
@@ -39,8 +39,23 @@
 	9. 读写基本类型数据 (long, int etc.)
 	10. 读写对象
 
+## 组合流
+- 将*流整合*以便实现更高级的输入和输出操作。
+- 比如，一次读取一个字节是很慢的，所以可以从磁盘中一次读取块数据到缓冲中，然后从缓冲中获取字节。
+- 为了实现缓冲，把 *InputStream 包装到 BufferedInputStream 中*。
+```java
+InputStream input = new BufferedInputStream(new FileInputStream("c:\data\input-file.txt"));
+```
 
+整合Reader与InputStream
 
+一个Reader可以和一个InputStream相结合。如果你有一个InputStream输入流，并且想从其中读取字符，可以把这个InputStream包装到InputStreamReader中。把InputStream传递到InputStreamReader的构造函数中：
+
+```
+Reader reader = new InputStreamReader(inputStream);
+```
+
+在构造函数中可以指定解码方式。
 # 参考
 1. [Java IO 模型之 BIO，NIO，AIO](https://cloud.tencent.com/developer/article/1825524)
 2. [[IO模型]]
