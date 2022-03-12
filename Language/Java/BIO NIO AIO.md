@@ -19,6 +19,10 @@
 
 ## Stream/reader 和程序关系
 ![[IO中stream、reader和程序关系.png]]
+- InputStream（字节流）和Reader（字符流）与数据源相关联；
+- OutputStream（字节流）和writer（字符流）与目标媒介相关联
+
+
 # 参考
 1. [Java IO 模型之 BIO，NIO，AIO](https://cloud.tencent.com/developer/article/1825524)
 2. [[IO模型]]
