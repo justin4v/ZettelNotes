@@ -47,15 +47,66 @@
 InputStream input = new BufferedInputStream(new FileInputStream("c:\data\input-file.txt"));
 ```
 
-整合Reader与InputStream
+### 整合 Reader 与 InputStream
 
-一个Reader可以和一个InputStream相结合。如果你有一个InputStream输入流，并且想从其中读取字符，可以把这个InputStream包装到InputStreamReader中。把InputStream传递到InputStreamReader的构造函数中：
+- Reader 可以和 InputStream 相结合。
+- 如果你有一个 InputStream 输入流，想*从其中读取字符*，可以把 InputStream 包装到 InputStreamReader 中：
 
-```
+```java
 Reader reader = new InputStreamReader(inputStream);
 ```
+- 构造函数中*可以指定解码方式*。
 
-在构造函数中可以指定解码方式。
+## IO管道
+- Java IO 中的管道为*运行在同一个JVM中的两个线程*提供了通信的能力。
+- 管道可以作为数据源以及目标媒介。
+- 通过Java IO创建管道:
+	- PipedOutputStream和PipedInputStream创建管道。
+	- PipedInputStream流应该和一个PipedOutputStream 连接。
+
+一个线程通过PipedOutputStream写入的数据可以被另一个线程通过相关联的PipedInputStream读取出来。
+```
+
+Java IO管道示例 这是一个如何将PipedInputStream和PipedOutputStream关联起来的简单例子：
+
+```
+//使用管道来完成两个线程间的数据点对点传递
+    @Test
+    public void test2() throws IOException {
+        PipedInputStream pipedInputStream = new PipedInputStream();
+        PipedOutputStream pipedOutputStream = new PipedOutputStream(pipedInputStream);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    pipedOutputStream.write("hello input".getBytes());
+                    pipedOutputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    byte []arr = new byte[128];
+                    while (pipedInputStream.read(arr) != -1) {
+                        System.out.println(Arrays.toString(arr));
+                    }
+                    pipedInputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+```
+
+管道和线程 请记得，当使用两个相关联的管道流时，务必将它们分配给不同的线程。read()方法和write()方法调用时会导致流阻塞，这意味着如果你尝试在一个线程中同时进行读和写，可能会导致线程死锁。
+
+
+
+
 # 参考
 1. [Java IO 模型之 BIO，NIO，AIO](https://cloud.tencent.com/developer/article/1825524)
 2. [[IO模型]]
