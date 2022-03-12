@@ -209,17 +209,84 @@ public class NioSelectorServer {
 ![[Java NIO示意.png]]
 
 ### Epoll函数详解
-NioSelectorServer 代码里如下几个方法非常重要，Hotspot 与Linux内核函数级别来理解下：
+Hotspot 与 Linux 内核函数级别理解如下方法：
 ```java
 Selector.open()  //创建多路复用器
 socketChannel.register(selector, SelectionKey.OP_READ)  //将channel注册到多路复用器上
 selector.select()  //阻塞等待需要处理的事件发生
 ```
 
--   Selector.open() 会调用 Linux 内核函数 epoll_create 创建 epoll 实例（Selector 对象）。**
--   **socketChannel.register() 会将 SocketChannel 添加到一个内部集合中（pollWrapper.add(fd)）。**
--   **当程序执行到 selector.select()，先调用 updateRegistrations 方法从而调用 Linux 内核函数 epoll_ctl** 将前面加到集合中的 SocketChannel 进行注册绑定事件，当 Socket 收到数据后（网卡接收到数据包），会调用 Linux 内核中的中断处理程序调用回调函数往 epoll 实例的事件就绪列表 rdlist（SelectionKey） 里添加该 Socket 的引用。**然后会调用 Linux 内核函数 epoll_wait**，如果 rdlist 有 Socket 的引用，那么 epoll_wait 直接返回，程序继续完成后面的处理；如果 rdlist 为空，则阻塞进程。
+-  Selector.open() 会*调用 Linux 内核函数 epoll_create* 创建 epoll 实例（Selector 对象）。
+-  *socketChannel.register() 将 SocketChannel 添加到一个内部集合*中（pollWrapper.add(fd)）。
+-  执行到 selector.select()；
+	1. 先调用 updateRegistrations 方法从而调用 Linux 内核函数 epoll_ctl 将 SocketChannel 进行注册绑定事件；
+	2. 当 Socket 收到数据后（网卡接收到数据包），调用 Linux 内核中的中断处理程序调用回调函数往 epoll 实例的事件就绪列表 rdlist（SelectionKey） 里添加该 Socket 的引用。
+	3. 然后会调用 Linux 内核函数 epoll_wait，如果 rdlist 有 Socket 的引用，那么 epoll_wait 直接返回，程序继续完成后面的处理；
+	4. 如果 rdlist 为空，则阻塞进程。
 
+
+# AIO(NIO 2.0)
+- 异步非阻塞， 由操作系统完成后回调通知服务端程序启动线程去处理，；
+- 一般适用于*连接数较多且连接时间较长*的应用；
+- 应用场景：
+- AIO方式适用于连接数目多且连接比较长(重操作)的架构，JDK7 开始支持。
+
+```java
+/**
+ * AIO 服务端程序，异步非阻塞
+ * @author 程治玮
+ * @since 2021/3/21 2:20 下午
+ */
+public class AioServer {
+
+    public static void main(String[] args) throws Exception {
+        final AsynchronousServerSocketChannel serverChannel =
+                AsynchronousServerSocketChannel.open().bind(new InetSocketAddress(9000));
+
+        serverChannel.accept(null, new CompletionHandler<AsynchronousSocketChannel, Object>() {
+            @Override
+            public void completed(AsynchronousSocketChannel socketChannel, Object attachment) {
+                try {
+                    System.out.println("2--" + Thread.currentThread().getName());
+                    // 再此接收客户端连接，如果不写这行代码后面的客户端连接连不上服务端
+                    serverChannel.accept(attachment, this);
+                    System.out.println(socketChannel.getRemoteAddress());
+                    ByteBuffer buffer = ByteBuffer.allocate(1024);
+                    socketChannel.read(buffer, buffer, new CompletionHandler<Integer, ByteBuffer>() {
+                        @Override
+                        public void completed(Integer result, ByteBuffer buffer) {
+                            System.out.println("3--" + Thread.currentThread().getName());
+                            buffer.flip();
+                            System.out.println(new String(buffer.array(), 0, result));
+                            socketChannel.write(ByteBuffer.wrap("HelloClient".getBytes()));
+                        }
+
+                        @Override
+                        public void failed(Throwable exc, ByteBuffer buffer) {
+                            exc.printStackTrace();
+                        }
+                    });
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void failed(Throwable exc, Object attachment) {
+                exc.printStackTrace();
+            }
+        });
+
+        System.out.println("1--" + Thread.currentThread().getName());
+        Thread.sleep(Integer.MAX_VALUE);
+    }
+}
+```
+
+## 为什么Netty使用 NIO 而不是 AIO ？
+
+- 在 Linux 系统上，AIO 的底层实现仍使用 Epoll，因此在性能上没有明显的优势;
+- AIO被 JDK 封装了一层不容易深度优化，Linux 上 AIO 还不够成熟。Netty 是异步非阻塞框架，Netty 在 NIO 上做了很多异步的封装。
 # 参考
 1. [Java IO 模型之 BIO，NIO，AIO](https://cloud.tencent.com/developer/article/1825524)
 2. [[IO模型]]
