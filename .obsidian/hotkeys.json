@@ -32,15 +32,6 @@
       "key": "R"
     }
   ],
-  "file-explorer:reveal-active-file": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "S"
-    }
-  ],
   "workspace:split-horizontal": [
     {
       "modifiers": [
@@ -53,6 +44,23 @@
     {
       "modifiers": [
         "Alt"
+      ],
+      "key": "S"
+    }
+  ],
+  "editor:toggle-strikethrough": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Delete"
+    }
+  ],
+  "file-explorer:reveal-active-file": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
       ],
       "key": "S"
     }
