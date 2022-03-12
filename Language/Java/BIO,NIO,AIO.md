@@ -201,7 +201,24 @@ public class NioSelectorServer {
     }
 }
 ```
-- 把需要探知的 SocketChannel 注册到 Selector，调用 select() ，当有事件发生时，他会通知我们，传回一组 SelectionKey（linux 内核中的 rdlist 就绪事件列表）,我们读取这些 Key,就会获得我们刚刚注册过的 SocketChannel,然后，我们从这个 Channel 中读取并处理这些数据。Selector 内部原理实际是在做一个对所注册的 Channel（SocketChannel）不断地轮询访问，一旦轮询到一个 Channel 有所注册的事情发生，比如数据来了，它就会站起来报告，交出一把钥匙，让我们通过这把钥匙来读取这个 Channel 的内容。
+- 把需要探知的 SocketChannel 注册到 Selector，调用 select() 方法阻塞；
+- 当有事件发生时，Selector 传回一组 SelectionKey（linux 内核中的 rdlist 就绪事件列表）；
+- 根据 Key 获得注册过的 SocketChannel，并从 Channel 中读取并处理这些数据。
+- Selector 实际对所注册的 Channel（SocketChannel）不断地轮询访问，一旦轮询到所注册的事情发生，返回 channel 的 可以。
+
+![[Java NIO示意.png]]
+
+### Epoll函数详解
+NioSelectorServer 代码里如下几个方法非常重要，Hotspot 与Linux内核函数级别来理解下：
+```java
+Selector.open()  //创建多路复用器
+socketChannel.register(selector, SelectionKey.OP_READ)  //将channel注册到多路复用器上
+selector.select()  //阻塞等待需要处理的事件发生
+```
+
+-   Selector.open() 会调用 Linux 内核函数 epoll_create 创建 epoll 实例（Selector 对象）。**
+-   **socketChannel.register() 会将 SocketChannel 添加到一个内部集合中（pollWrapper.add(fd)）。**
+-   **当程序执行到 selector.select()，先调用 updateRegistrations 方法从而调用 Linux 内核函数 epoll_ctl** 将前面加到集合中的 SocketChannel 进行注册绑定事件，当 Socket 收到数据后（网卡接收到数据包），会调用 Linux 内核中的中断处理程序调用回调函数往 epoll 实例的事件就绪列表 rdlist（SelectionKey） 里添加该 Socket 的引用。**然后会调用 Linux 内核函数 epoll_wait**，如果 rdlist 有 Socket 的引用，那么 epoll_wait 直接返回，程序继续完成后面的处理；如果 rdlist 为空，则阻塞进程。
 
 # 参考
 1. [Java IO 模型之 BIO，NIO，AIO](https://cloud.tencent.com/developer/article/1825524)
