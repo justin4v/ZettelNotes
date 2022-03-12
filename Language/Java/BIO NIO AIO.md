@@ -19,8 +19,26 @@
 
 ## Stream/reader 和程序关系
 ![[IO中stream、reader和程序关系.png]]
-- InputStream（字节流）和Reader（字符流）与数据源相关联；
-- OutputStream（字节流）和writer（字符流）与目标媒介相关联
+- *InputStream（字节流）和Reader（字符流）* 与*数据源*相关联；
+- *OutputStream（字节流）和writer（字符流）* 与*目标媒介*相关联
+
+# Java IO
+## IO类别
+- 包含了许多 InputStream、OutputStream、Reader、Writer 的子类。
+- 原因是让每一个类都负责不同的功能。这也就是为什么IO包中有这么多不同的类的缘故。各类用途汇总如下：
+
+```
+文件访问
+网络访问
+内存缓存访问
+线程内部通信(管道)
+缓冲
+过滤
+解析
+读写文本 (Readers / Writers)
+读写基本类型数据 (long, int etc.)
+读写对象
+```
 
 
 # 参考
