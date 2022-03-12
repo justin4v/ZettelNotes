@@ -101,7 +101,22 @@ Reader reader = new InputStreamReader(inputStream);
 - read()方法和write()方法调用时会*导致流阻塞*，如果尝试在一个线程中同时进行读和写，可能会*导致线程死锁*。
 
 
-## Buffered和Filter
+# Filter和Buffered
+## Filter
+- **FilterInputStream** ：*封装输入流(输入流基类，InputStream)*，并*提供额外的功能*。
+- 常用的子类有 BufferedInputStream 和 DataInputStream。
+```java
+package java.io;
+
+public class FilterInputStream extends InputStream {
+    protected volatile InputStream in;
+    ...
+}
+```
+
+- **BufferedInputStream**：“输入流*提供缓冲功能*，以及mark()和reset()功能”。
+- **DataInputStream** ：装饰其它输入流，允许应用程序以与机器无关方式从底层输入流中*读取基本 Java 数据类型*。
+## Buffered
 - BufferedReader 能为字符输入流*提供缓冲区，提高 IO  效率*。
 - 可以*一次读取一个磁盘块(block)的数据*，而不需要每次从网络或者磁盘中一次读取一个字节。
 - 特别在访问大量磁盘数据时，缓冲通常会让IO快上许多。
