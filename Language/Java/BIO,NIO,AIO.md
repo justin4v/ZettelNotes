@@ -160,8 +160,8 @@ public class NioSelectorServer {
 
         while (true) {
             //阻塞等待需要处理的事件发生
-            //轮询监听 channel 里的 key，select()是阻塞的，当有客户端连接事件发生时 serverSocket.register(selector, SelectionKey.OP_ACCEPT)
-            //或者是读取客户端传的数据 socketChannel.register(selector, SelectionKey.OP_READ)，才会停止阻塞
+            //轮询监听 channel 里的 key，select()是阻塞的，当有客户端连接事件发生时 OP_ACCEPT
+            //或者是读取客户端传的数据 OP_READ，才会停止阻塞
             selector.select();
 
             // 获取 selector 中注册的全部事件的 SelectionKey 实例
@@ -201,7 +201,7 @@ public class NioSelectorServer {
     }
 }
 ```
-- 把需要探知的 SocketChannel 告诉 Selector，当有事件发生时，他会通知我们，传回一组 SelectionKey（linux 内核中的 rdlist 就绪事件列表）,我们读取这些 Key,就会获得我们刚刚注册过的 SocketChannel,然后，我们从这个 Channel 中读取并处理这些数据。Selector 内部原理实际是在做一个对所注册的 Channel（SocketChannel）不断地轮询访问，一旦轮询到一个 Channel 有所注册的事情发生，比如数据来了，它就会站起来报告，交出一把钥匙，让我们通过这把钥匙来读取这个 Channel 的内容。
+- 把需要探知的 SocketChannel 注册到 Selector，调用 select() ，当有事件发生时，他会通知我们，传回一组 SelectionKey（linux 内核中的 rdlist 就绪事件列表）,我们读取这些 Key,就会获得我们刚刚注册过的 SocketChannel,然后，我们从这个 Channel 中读取并处理这些数据。Selector 内部原理实际是在做一个对所注册的 Channel（SocketChannel）不断地轮询访问，一旦轮询到一个 Channel 有所注册的事情发生，比如数据来了，它就会站起来报告，交出一把钥匙，让我们通过这把钥匙来读取这个 Channel 的内容。
 
 # 参考
 1. [Java IO 模型之 BIO，NIO，AIO](https://cloud.tencent.com/developer/article/1825524)
