@@ -105,19 +105,15 @@ Reader reader = new InputStreamReader(inputStream);
 - BufferedReader 能为字符输入流*提供缓冲区，提高 IO  效率*。
 - 可以*一次读取一个磁盘块(block)的数据*，而不需要每次从网络或者磁盘中一次读取一个字节。
 - 特别在访问大量磁盘数据时，缓冲通常会让IO快上许多。
-- 只需要把Reader包装到BufferedReader中，就可以为Reader添加缓冲区(译者注：默认缓冲区大小为8192字节，即8KB)。代码如下：
-
-```
+- 只需把 Reader 包装到 BufferedReader 中，可以*为 Reader 添加缓冲区*( 默认缓冲区大小为 8192 字节，即8KB)。代码如下：
+```java
 Reader input = new BufferedReader(new FileReader("c:\\data\\input-file.txt"));
 ```
-
-你也可以通过传递构造函数的第二个参数，指定缓冲区大小，代码如下：
-
-```
+- 通过传递构造函数的第二个参数，*指定缓冲区大小（字节单位）*，代码如下：
+```java
 Reader input = new BufferedReader(new FileReader("c:\\data\\input-file.txt"), 8 * 1024);
 ```
-
-这个例子设置了8KB的缓冲区。最好把缓冲区大小设置成1024字节的整数倍，这样能更高效地利用内置缓冲区的磁盘
+- 最好把缓冲区大小设置成 *1024 的整数倍*，能更高效地利用内置缓冲区的磁盘
 
 
 
