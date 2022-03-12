@@ -62,14 +62,9 @@ Reader reader = new InputStreamReader(inputStream);
 - 管道可以作为数据源以及目标媒介。
 - 通过Java IO创建管道:
 	- PipedOutputStream和PipedInputStream创建管道。
-	- PipedInputStream流应该和一个PipedOutputStream 连接。
-
-一个线程通过PipedOutputStream写入的数据可以被另一个线程通过相关联的PipedInputStream读取出来。
-```
-
-Java IO管道示例 这是一个如何将PipedInputStream和PipedOutputStream关联起来的简单例子：
-
-```
+	- PipedInputStream 应该和 PipedOutputStream 连接。
+	- 一个线程通过PipedOutputStream写入的数据可以被另一个线程通过 PipedInputStream 读取出来。
+```java
 //使用管道来完成两个线程间的数据点对点传递
     @Test
     public void test2() throws IOException {
@@ -102,7 +97,8 @@ Java IO管道示例 这是一个如何将PipedInputStream和PipedOutputStream关
         }).start();
 ```
 
-管道和线程 请记得，当使用两个相关联的管道流时，务必将它们分配给不同的线程。read()方法和write()方法调用时会导致流阻塞，这意味着如果你尝试在一个线程中同时进行读和写，可能会导致线程死锁。
+- 当使用两个相关联的管道流时，*务必分配给不同的线程*。
+- read()方法和write()方法调用时会*导致流阻塞*，如果尝试在一个线程中同时进行读和写，可能会*导致线程死锁*。
 
 
 
