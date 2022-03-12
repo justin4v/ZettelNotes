@@ -101,6 +101,24 @@ Reader reader = new InputStreamReader(inputStream);
 - read()方法和write()方法调用时会*导致流阻塞*，如果尝试在一个线程中同时进行读和写，可能会*导致线程死锁*。
 
 
+## Buffered和Filter
+- BufferedReader 能为字符输入流*提供缓冲区，提高 IO  效率*。
+- 可以*一次读取一个磁盘块(block)的数据*，而不需要每次从网络或者磁盘中一次读取一个字节。
+- 特别在访问大量磁盘数据时，缓冲通常会让IO快上许多。
+- 只需要把Reader包装到BufferedReader中，就可以为Reader添加缓冲区(译者注：默认缓冲区大小为8192字节，即8KB)。代码如下：
+
+```
+Reader input = new BufferedReader(new FileReader("c:\\data\\input-file.txt"));
+```
+
+你也可以通过传递构造函数的第二个参数，指定缓冲区大小，代码如下：
+
+```
+Reader input = new BufferedReader(new FileReader("c:\\data\\input-file.txt"), 8 * 1024);
+```
+
+这个例子设置了8KB的缓冲区。最好把缓冲区大小设置成1024字节的整数倍，这样能更高效地利用内置缓冲区的磁盘
+
 
 
 # 参考
