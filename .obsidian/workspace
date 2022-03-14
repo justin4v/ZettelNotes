@@ -128,14 +128,14 @@
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
     "Language/Java/JMM/正确的同步与安全的多线程.md",
+    "Language/Java/JMM/Java 同步语义.md",
+    "Language/Java/JMM/Java Memory Model.md",
     "Language/Java/JMM/JMM 相关概念.md",
     "Language/Java/JMM/内存屏障.md",
     "Language/Java/JMM/代码重排与乱序执行.md",
     "Language/Java/并发编程/并发相关概念.md",
     "Language/Java/并发编程/3.线程性能问题.md",
     "Language/Java/并发编程/2.线程活跃性问题.md",
-    "Language/Java/并发编程/1.线程安全问题.md",
-    "Language/Java/并发编程/锁/重量级锁.md",
-    "Language/Java/并发编程/锁/轻量级锁.md"
+    "Language/Java/并发编程/1.线程安全问题.md"
   ]
 }
