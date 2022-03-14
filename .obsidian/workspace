@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Framework/RPC/基于Netty实现RPC.md",
+            "file": "Framework/Spring/Spring 如何保证线程安全.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Framework/RPC/基于Netty实现RPC.md",
+                "file": "Framework/Spring/Spring 如何保证线程安全.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/RPC/基于Netty实现RPC.md"
+                "file": "Framework/Spring/Spring 如何保证线程安全.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Framework/Spring/Spring 如何保证线程安全.md",
     "Framework/RPC/基于Netty实现RPC.md",
     "OS/Linux/IO模型.md",
     "Language/Java/BIO,NIO,AIO.md",
@@ -135,7 +136,6 @@
     "OS/Linux/Linux Capabilities.md",
     "日常记录/重点阅读.md",
     "日常记录/感悟记录/知识.md",
-    "日常记录/感悟记录/日常感悟列表.md",
-    "日常记录/日志/2022-02-26.md"
+    "日常记录/感悟记录/日常感悟列表.md"
   ]
 }
