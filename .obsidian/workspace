@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/1.线程安全问题.md",
+            "file": "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/1.线程安全问题.md",
+                "file": "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/1.线程安全问题.md"
+                "file": "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
     "Language/Java/并发编程/1.线程安全问题.md",
     "Language/Java/并发编程/2.线程活跃性问题.md",
     "Language/Java/JMM/代码重排与乱序执行.md",
@@ -135,7 +136,6 @@
     "Language/Java/JMM/Java 同步语义.md",
     "Language/Java/JMM/Java Memory Model.md",
     "Language/Java/JMM/JMM 相关概念.md",
-    "Language/Java/并发编程/并发相关概念.md",
-    "Language/Java/并发编程/3.线程性能问题.md"
+    "Language/Java/并发编程/并发相关概念.md"
   ]
 }
