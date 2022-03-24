@@ -48,3 +48,4 @@
 
 # 参考
 1. [ServiceMesh的关键：边车模式（sidecar）](https://juejin.cn/post/6875610706079645703)
+2. [Sidecar pattern - Azure Architecture Center | Microsoft Docs](https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar)
