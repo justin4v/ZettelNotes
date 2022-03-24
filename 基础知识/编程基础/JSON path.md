@@ -1,7 +1,8 @@
 #JSON
-## JsonPath的来源
-
-看它的名字你就能知道，这家伙和JSON文档有关系，正如XPath之于XML文档一样，JsonPath为Json文档提供了解析能力，通过使用JsonPath，你可以方便的查找节点、获取想要的数据，JsonPath是Json版的XPath。
+# 来源
+- XPath 为 XML文档提供了解析能力；
+- *JsonPath 为 Json文档提供了解析能力*；
+- 通过JsonPath，可以方便的查找节点、获取想要的数据，JsonPath 是 Json 版的 XPath。
 
 ## JsonPath语法
 
