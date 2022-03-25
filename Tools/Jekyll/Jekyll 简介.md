@@ -85,17 +85,11 @@ permalink:  /:categories/:year/:month/:day/:title.html  # 覆盖全局变量设�
 
 在文章中可以使用这些在头信息变量列表中未包含的变量。
 
-`date`:
+1. `date`: 这里的日期会覆盖文章名字中的日期。这样就可以用来保障文章排序的正确。日期的具体格式为`YYYY-MM-DD HH:MM:SS +/-TTTT`；时，分，秒和时区都是可选的。
 
-这里的日期会覆盖文章名字中的日期。这样就可以用来保障文章排序的正确。日期的具体格式为`YYYY-MM-DD HH:MM:SS +/-TTTT`；时，分，秒和时区都是可选的。
+2. `category` `categories`: 除过将博客文章放在某个文件夹下面外，你还可以指定博客的一个或者多个分类属性。这样当你的站点生成后，这些文章就可以根据这些分类来阅读。`categories` 可以通过 `YAML list`，或者以`逗号`隔开的字符串指定。
 
-`category` `categories`:
-
-除过将博客文章放在某个文件夹下面外，你还可以指定博客的一个或者多个分类属性。这样当你的站点生成后，这些文章就可以根据这些分类来阅读。`categories` 可以通过 `YAML list`，或者以`逗号`隔开的字符串指定。
-
-`tags`:
-
-类似分类 `categories`，一篇文章也可以给它增加一个或者多个标签。同样，`tags` 可以通过 `YAML` 列表或者以`逗号`隔开的字符串指定。
+3. `tags`: 类似分类 `categories`，一篇文章也可以给它增加一个或者多个标签。同样，`tags` 可以通过 `YAML` 列表或者以`逗号`隔开的字符串指定。
 
 ## 自定义变量
 
@@ -112,30 +106,19 @@ permalink:  /:categories/:year/:month/:day/:title.html  # 覆盖全局变量设�
 ```
 
 ## 静态文件
-
 除了用于渲染和转换的内容之外，我们还可以使用静态文件。静态文件不包含任何 YAML 头信息，譬如图片、PDF 和其他不必渲染的内容。 它们在 Liquid 中可以通过 `site.static_files` 访问
 
 #### 元数据
 
-`file.path`:
+1. `file.path`: 文件的相对路径，如：`/assets/img/image.jpg`
 
-文件的相对路径，如：`/assets/img/image.jpg`
+2. `file.modified_time`: 文件的最后修改时间，如：`2016-04-01 16:35:26 +0200`
 
-`file.modified_time`:
+3. `file.name`: 文件名称（带扩展名），如：文件image.jpg对应image.jpg
 
-文件的最后修改时间，如：`2016-04-01 16:35:26 +0200`
+4. `file.basename`：文件名称（不带扩展名） 如：文件image.jpg对应image
 
-`file.name`:
-
-文件名称（带扩展名），如：文件image.jpg对应image.jpg
-
-`file.basename`：
-
-文件名称（不带扩展名） 如：文件image.jpg对应image
-
-`file.extname`：
-
-文件的扩展名，如 image.jpg 中的 .jpg
+5. `file.extname`：文件的扩展名，如 image.jpg 中的 .jpg
 
 ## 常用变量
 
