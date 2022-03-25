@@ -33,22 +33,25 @@
 ## 文件/目录描述
 1. ` _config.yml`: 配置数据。
 2. ` _drafts`: 草稿文章。
-3. ` _includes`: 可重用的布局或者文章。可用 `{%include file.ext%}` 把文件 `_includes/file.ext`包含.
+3. ` _includes`: 可重用的布局或者文章。可用 `{%include file.ext%}` 把文件 `_includes/file.ext` 包含。
 4. ` _layouts`: layouts（布局）是包裹在文章外部的模板。布局可以在 `YAML` 头信息中根据不同文章进行选择。
-5. ` _posts`:这里放的就是你的文章了。文件格式很重要，必须要符合: `YEAR-MONTH-DAY-title.MARKUP`。 `永久链接`可以在文章中自己定制，但是数据和标记语言都是根据文件名来确定的。
-6. `_data`:格式化好的网站数据应放在这里。`jekyll` 的引擎会自动加载在该目录下所有的 `yaml` 文件（后缀是 `.yml`, `.yaml`, `.json` 或者 `.csv` ）。这些文件可以经由 ｀site.data｀ 访问。如果有一个 `members.yml` 文件在该目录下，你就可以通过 `site.data.members` 获取该文件的内容。
-7. `_site`: 一旦 `Jekyll` 完成转换，就会将生成的页面放在这里（默认）。最好将这个目录放进你的 `.gitignore` 文件中。
-8. `.jekyll-metadata`:该文件帮助 Jekyll 跟踪哪些文件从上次建立站点开始到现在没有被修改，哪些文件需要在下一次站点建立时重新生成。该文件不会被包含在生成的站点中。将它加入到你的 .gitignore 文件可能是一个好注意。
-9. `index.html` and `other HTML, Markdown, Textile files`: 如果这些文件中包含 `YAML` 头信息 部分，`Jekyll` 就会自动将它们进行转换。当然，其他的如 `.html`, `.markdown`, `.md`, 或者 `.textile` 等在你的站点根目录下或者不是以上提到的目录中的文件也会被转换。
-10. `Other Files/Folders`:其他一些未被提及的目录和文件如 `css` 还有 `images` 文件夹，`favicon.ico` 等文件都将被完全拷贝到生成的 `site` 中。
+5. ` _posts`: 文章。文件名格式必须要符合: `YEAR-MONTH-DAY-title.MARKUP`。
+6. `_data`: 格式化好的网站数据。
+	1. `jekyll` 的引擎自动加载在该目录下所有的 `yaml` 文件（后缀是 `.yml`, `.yaml`, `.json` 或者 `.csv` ）。
+	2. 这些文件可通过 `site.data` 访问。如有一个 `members.yml` 文件在该目录下，你就可以通过 `site.data.members` 获取该文件的内容。
+7. `_site`: 一旦 `Jekyll` 完成转换，生成的页面放在这里。最好将这个目录放进你的 `.gitignore` 文件中。
+8. `.jekyll-metadata`: 帮助 Jekyll 跟踪哪些文件从上次建立站点开始到现在没有被修改，哪些文件需要在下一次站点建立时重新生成。
+9. `index.html` 和 `other HTML, Markdown, Textile files`:  如果这些文件中包含 `YAML` 头信息 部分，`Jekyll` 就会自动将它们进行转换。
+10. `Other Files/Folders`: 其他目录和文件如 `css` 还有 `images` 文件夹，`favicon.ico` 等文件都将被完全拷贝到生成的 `site` 中。
 
 ## 配置
-
-Jekyll允许你很轻松的设计你的网站，这很大程度上归功于灵活强大的配置功能。既可以配置在网站根目录下的 `_config.yml` 文件，也可以作为命令行的标记来配置。[详细参见](http://jekyllcn.com/docs/configuration/)
+- Jekyll允许你很轻松的设计网站：
+- 可以配置在网站根目录下的 `_config.yml` 文件
+- 也可以作为命令行的标记来配置。[详细参见](http://jekyllcn.com/docs/configuration/)
 
 # 头信息
 
-正是头信息开始让 `Jekyll` 变的很酷。任何只要包含 `YAML` 头信息的文件在 `Jekyll` 中都能被当做一个特殊的文件来处理。头信息必须在文件的开始部分，并且需要按照 `YAML` 的格式写在两行三虚线之间。下面是一个基本的例子：
+- 任何只要包含 `YAML` 头信息的文件在 `Jekyll` 中都能被当做一个特殊的文件来处理。头信息必须在文件的开始部分，并且需要按照 `YAML` 的格式写在两行三虚线之间。下面是一个基本的例子：
 
 ```
 ---
