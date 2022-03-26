@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/DDD 分享资料.md",
+            "file": "Design/DDD思想和入门实践.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/DDD 分享资料.md",
+                "file": "Design/DDD思想和入门实践.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/DDD 分享资料.md"
+                "file": "Design/DDD思想和入门实践.md"
               }
             }
           },
@@ -127,7 +127,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
-    "Design/DDD 分享资料.md",
+    "Design/DDD思想和入门实践.md",
     "Tools/Jekyll/Jekyll 简介.md",
     "Framework/Spring/Spring Bean 线程安全问题.md",
     "基础知识/编程基础/JSON path.md",
