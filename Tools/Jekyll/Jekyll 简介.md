@@ -176,41 +176,33 @@ Jekyll 会遍历你的网站搜寻要处理的文件。任何有 YAML 头信息�
 
 - `page.categories`: 这个帖子所属的 Categories。Categories 是从这个帖子的 _posts 以上 的目录结构中提取的。举例来说, 一个在 `/work/code/_posts/2008-12-24-closures.md` 目录下的 Post，这个属性就会被设置成 `['work', 'code']`。不过 Categories 也能在 YAML 头文件信息 中被设置。
 
-`page.tags`:
+- `page.tags`: 这个 Post 所属的所有 tags。Tags 是在YAML 头文件信息中被定义的。
 
-这个 Post 所属的所有 tags。Tags 是在YAML 头文件信息中被定义的。
+- `page.path`: Post 或者 Page 的源文件地址。举例来说，一个页面在 GitHub 上的源文件地址。 这可以在 YAML 头文件信息 中被改写。
 
-`page.path`:
+- `page.next`: 当前文章在`site.posts`中的位置对应的下一篇文章。若当前文章为最后一篇文章，返回`nil`
 
-Post 或者 Page 的源文件地址。举例来说，一个页面在 GitHub 上的源文件地址。 这可以在 YAML 头文件信息 中被改写。
-
-`page.next`:
-
-当前文章在`site.posts`中的位置对应的下一篇文章。若当前文章为最后一篇文章，返回`nil`
-
-`page.previous`:
-
-当前文章在`site.posts`中的位置对应的上一篇文章。若当前文章为第一篇文章，返回`nil`
+`page.previous`: 当前文章在`site.posts`中的位置对应的上一篇文章。若当前文章为第一篇文章，返回`nil`
 
 ### 分页器(Paginator)
 
-`paginator.per_page` 每一页 Posts 的数量。
+- `paginator.per_page` 每一页 Posts 的数量。
 
-`paginator.posts` 这一页可用的 Posts。
+- `paginator.posts` 这一页可用的 Posts。
 
-`paginator.total_posts` Posts 的总数。
+- `paginator.total_posts` Posts 的总数。
 
-`paginator.total_pages` Pages 的总数。
+- `paginator.total_pages` Pages 的总数。
 
-`paginator.page` 当前页号。
+- `paginator.page` 当前页号。
 
-`paginator.previous_page` 前一页的页号。
+- `paginator.previous_page` 前一页的页号。
 
-`paginator.previous_page_path` 前一页的地址。
+- `paginator.previous_page_path` 前一页的地址。
 
-`paginator.next_page` 下一页的页号。
+- `paginator.next_page` 下一页的页号。
 
-`paginator.next_page_path` 下一页的地址。
+- `paginator.next_page_path` 下一页的地址。
 
 # 参考
 1. [Jekyll • Simple, blog-aware, static sites](https://jekyllrb.com/docs/)

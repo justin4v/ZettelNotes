@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tools/Jekyll/Jekyll 简介.md",
+            "file": "Design/DDD 分享资料.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tools/Jekyll/Jekyll 简介.md",
+                "file": "Design/DDD 分享资料.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tools/Jekyll/Jekyll 简介.md"
+                "file": "Design/DDD 分享资料.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Design/DDD 分享资料.md",
     "Tools/Jekyll/Jekyll 简介.md",
     "Framework/Spring/Spring Bean 线程安全问题.md",
     "基础知识/编程基础/JSON path.md",
@@ -135,7 +136,6 @@
     "Database/Mysql/SQL Join.md",
     "Database/Mysql/事务与锁/Mysql中锁.md",
     "Database/Mysql/事务与锁/事务日志.md",
-    "Database/Mysql/事务与锁/事务隔离级别.md",
-    "Database/Mysql/排序规则.md"
+    "Database/Mysql/事务与锁/事务隔离级别.md"
   ]
 }
