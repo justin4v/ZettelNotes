@@ -216,6 +216,7 @@ DDD提倡聚合之间产生的业务协同使用领域事件的方式来完成�
 - 聚合根和聚合内其他实体的关系是整体和部分的关系，是 UML 里面**组合**的关系；
 - 可以通过*聚合根访问聚合内的其他实体*；
 - 聚合划分依据：*语义相关、功能相关*
+- 聚合和聚合相关，通过聚合根 ID 关联，如在本聚合根中包含其他聚合根的 id。
 
 ### 2、实体
 1）实体着重唯一性和延续性，不在意属性（阅读数、转发数）的变化，它还是原来那个它；
@@ -254,6 +255,7 @@ DDD提倡聚合之间产生的业务协同使用领域事件的方式来完成�
 1.  应用层主要是应用服务和领域事件的发布和订阅；
 [应用服务和领域服务的区别](https://enterprisecraftsmanship.com/posts/domain-vs-application-services/)
 
+2. 应用层服务参数：command、event、query或者简单情况下用 Id。
   
 
 # DDD领域设计实践
@@ -297,3 +299,4 @@ https://mp.weixin.qq.com/s/1bcymUcjCkOdvVygunShmw
 https://www.cnblogs.com/junzi2099/p/13682154.html
 
 [应用服务和领域服务的区别](https://enterprisecraftsmanship.com/posts/domain-vs-application-services/)
+
