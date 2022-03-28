@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/DDD/DDD思想和入门实践.md",
+            "file": "Design/计算机科学问题的解决方法.md",
             "mode": "source",
             "source": false
           }
@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 211,
-    "collapsed": true
+    "width": 211
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/DDD/DDD思想和入门实践.md",
+                "file": "Design/计算机科学问题的解决方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/DDD/DDD思想和入门实践.md"
+                "file": "Design/计算机科学问题的解决方法.md"
               }
             }
           },
@@ -123,10 +122,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307
+    "width": 307,
+    "collapsed": true
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Design/计算机科学问题的解决方法.md",
     "Design/DDD/DDD思想和入门实践.md",
     "Design/DDD/DDD 业内实践.md",
     "Tools/Jekyll/Jekyll 简介.md",
@@ -135,7 +136,6 @@
     "基础知识/编程基础/正则表达式.md",
     "Framework/ServiceMesh/SideCar.md",
     "Database/Mysql/SQL Join.md",
-    "Database/Mysql/事务与锁/Mysql中锁.md",
-    "Database/Mysql/事务与锁/事务日志.md"
+    "Database/Mysql/事务与锁/Mysql中锁.md"
   ]
 }
