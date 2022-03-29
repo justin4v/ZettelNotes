@@ -28,14 +28,25 @@
 - 不要轻易打开查询缓存，特别是写密集型应用。
 - [Mysql 8.0 版本查询缓存将被移除](https://dev.mysql.com/blog-archive/mysql-8-0-retiring-support-for-the-query-cache/) ：严重的可伸缩性问题（scalability issues），且很容易成为瓶颈（bottleneck）。
 - 如果需要使用查询缓存，可参考 [proxysql: High-performance MySQL proxy with a GPL license](https://github.com/sysown/proxysql)
-- 靠近用户时，缓存会带来最大的好处。
+- *越靠近用户*时，缓存会带来最大的好处。
 
 
-# 明确 Select 字段
+# 查询优化
+## 
+- 尽量避免全表扫描，对where及orderby的列建立索引  
+- 尽量避免where使用 != 或 <>  
+- 尽量避免where子句用 or 连接条件  
+- 乱用%导致全表扫描  
+- 尽量避免where子句对字段进行表达式操作  
+- 尽量避免where子句对字段进行函数操作  
+- 覆盖查询，返回需要的字段  
+- 优化嵌套查询，关联查询优于子查询  
+
+- 用exist代替in  
 - 避免使用 '\*' , 只返回需要的字段
 
-
-# 正确使用索引
+## 索引
 - 关联字段尽量使用索引
 - 查询字段尽量使用索引
 - 值变化不大的字段，索引没有意义，避免建立索引
+- 组合索引或复合索引，最左索引原则  
