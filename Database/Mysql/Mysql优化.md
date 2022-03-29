@@ -1,5 +1,11 @@
 #SQL #Mysql #Optimize
 
+# 查询过程
+![[mysql查询过程示意.png]]
+
+
+
+
 # 明确 Select 字段
 - 避免使用 '\*' , 只返回需要的字段
 
