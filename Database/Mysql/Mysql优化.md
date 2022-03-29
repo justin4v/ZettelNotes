@@ -21,13 +21,12 @@
 ## 查询缓存
 - MySQL将结果缓存在一个引用表（类似于 HashMap）中，通过哈希值索引；
 - 哈希值和查询本身、当前要查询的数据库、客户端协议版本号等一些可能影响结果的信息有关；
-- 两个查询在任何字符上的不同（例如：空格、注释），都会导致缓存不会命中。
-- 如果查询中包含任何用户自定义函数、存储函数、用户变量、临时表、mysql库中的系统表，其查询结果都不会被缓存。
+- 非确定性功能将导致查询不被缓存（包括临时表，用户变量，RAND（），NOW（）和UDF）。
 - MySQL的查询缓存跟踪缓存中涉及的每个表，如果表的数据或结构发生变化，和表相关的所有缓存数据都将失效。
 - 任何的写操作，对应表的所有缓存都失效。
 - 如果查询缓存非常大或者碎片很多，缓存就可能带来很大的系统消耗。
 - 不要轻易打开查询缓存，特别是写密集型应用。
-- [Mysql 8.0 版本查询缓存将被移除](https://dev.mysql.com/blog-archive/mysql-8-0-retiring-support-for-the-query-cache/) ：serious scalability issues and it can easily become a severe bottleneck
+- [Mysql 8.0 版本查询缓存将被移除](https://dev.mysql.com/blog-archive/mysql-8-0-retiring-support-for-the-query-cache/) ：严重的可伸缩性问题（scalability issues），且很容易成为瓶颈（bottleneck）。
 
 
 # 明确 Select 字段
