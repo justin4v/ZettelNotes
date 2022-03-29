@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "正则",
+                "query": "最左",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -128,6 +129,7 @@
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
     "Database/Mysql/Mysql优化.md",
+    "Database/Index.md",
     "Design/计算机科学问题的解决方法.md",
     "基础知识/编程基础/正则表达式.md",
     "Design/DDD/DDD思想和入门实践.md",
@@ -135,7 +137,6 @@
     "Tools/Jekyll/Jekyll 简介.md",
     "Framework/Spring/Spring Bean 线程安全问题.md",
     "基础知识/编程基础/JSON path.md",
-    "Framework/ServiceMesh/SideCar.md",
-    "Database/Mysql/SQL Join.md"
+    "Framework/ServiceMesh/SideCar.md"
   ]
 }
