@@ -27,6 +27,8 @@
 - 如果查询缓存非常大或者碎片很多，缓存就可能带来很大的系统消耗。
 - 不要轻易打开查询缓存，特别是写密集型应用。
 - [Mysql 8.0 版本查询缓存将被移除](https://dev.mysql.com/blog-archive/mysql-8-0-retiring-support-for-the-query-cache/) ：严重的可伸缩性问题（scalability issues），且很容易成为瓶颈（bottleneck）。
+- 如果需要使用查询缓存，可参考 [proxysql: High-performance MySQL proxy with a GPL license](https://github.com/sysown/proxysql)
+- 靠近用户时，缓存会带来最大的好处。
 
 
 # 明确 Select 字段
