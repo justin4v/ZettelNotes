@@ -30,6 +30,13 @@
 - 如果需要使用查询缓存，可参考 [proxysql: High-performance MySQL proxy with a GPL license](https://github.com/sysown/proxysql)
 - *越靠近用户*时，缓存会带来最大的好处。
 
+## 语法解析和预处理
+- 解析 SQL 语句，并生成解析树。
+- 验证语法。如是否使用错误的关键字等等。
+- 预处理进一步检查解析树是否合法。如要查询的数据表和数据列是否存在等等。
+
+
+## 查询优化
 
 # 查询优化
 ## 一般建议
