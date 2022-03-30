@@ -47,6 +47,53 @@ show status like 'last_query_cost';
 
 
 # 查询优化
+## 分析SQL执行频率
+例如：分析读为主，还是写为主
+```sql
+show [global|session] status;
+```
+
+## 定位效率低的SQL
+
+```sql
+-- 慢查询日志定位
+-log-slow-queries = xxx;（指定文件名）
+
+-- 查看当前正在进行的线程，包括线程状态、是否锁表
+SHOW PROCESSLIST;
+```
+
+## 分析SQL执行计划
+```sql
+explain "your sql"
+desc "your sql"
+```
+部分参数分析：
+- select_type
+	-  SIMPLE 简单表，不使用表连接或子查询
+	- PRIMARY 主查询，即外层的查询UNION SUBQUER 子查询的第一个select
+- type:
+	- ALL 全表扫描
+	- index 索引全扫描
+	- range 索引范围扫描
+	- ref 使用非唯一索引或唯一索引的前缀扫描
+	- eq_ref 类似 ref，使用的索引是唯一索引
+	- const/system 单表中最多有一个匹配行
+	- NULL 不用访问表或者索引，直接得到结果
+  
+## show profile 分析SQL
+
+```sql
+-- 是否支持
+select @@have_profiling 
+
+--是否开启
+select @@profiling 
+
+执行 "your sql"
+show profiles 
+show profile block io for QUERY 17
+```
 ## 一般建议
 - 从Explain和Profile出发；
 - 用小结果集驱动大的结果集（如join中左表为*驱动表*）；
@@ -66,12 +113,6 @@ show status like 'last_query_cost';
 - 用exist代替in  
 - 避免使用 '\*' , 只返回需要的字段
 
-## 索引
-- 关联字段尽量使用索引
-- 查询字段尽量使用索引
-- 值变化不大的字段，索引没有意义，避免建立索引
-- 组合索引或复合索引，最左索引原则  
-- 尽量避免全表扫描，对where及orderby的列建立索引  
 
 
 # 参考
