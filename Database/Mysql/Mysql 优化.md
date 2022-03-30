@@ -81,7 +81,7 @@ desc "your sql"
 	- const/system 单表中最多有一个匹配行
 	- NULL 不用访问表或者索引，直接得到结果
   
-## show profile 分析SQL
+## show profile 分析 SQL
 
 ```sql
 -- 是否支持
@@ -90,10 +90,17 @@ select @@have_profiling
 --是否开启
 select @@profiling 
 
-执行 "your sql"
-show profiles 
-show profile block io for QUERY 17
+-- 执行 sql
+
+show profiles; 
+
+show profile block io for QUERY 17;
 ```
+
+## 索引优化
+- 频繁作为查询条件的字段应该建立索引；
+- 
+
 ## 一般建议
 - 从Explain和Profile出发；
 - 用小结果集驱动大的结果集（如join中左表为*驱动表*）；
