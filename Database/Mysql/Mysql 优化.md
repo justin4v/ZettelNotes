@@ -72,3 +72,7 @@ show status like 'last_query_cost';
 - 值变化不大的字段，索引没有意义，避免建立索引
 - 组合索引或复合索引，最左索引原则  
 - 尽量避免全表扫描，对where及orderby的列建立索引  
+
+
+# 参考
+1. [MySQL进阶篇SQL优化（show status、explain分析）](https://www.cnblogs.com/wzk153/p/14536323.html)
