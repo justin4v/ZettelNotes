@@ -101,7 +101,7 @@ show profile block io for QUERY 17;
 - 频繁作为查询条件的字段应该建立索引；
 - 唯一性叫差的字段不适合作为唯一索引，因为能过滤的部分占比较小；
 - 更新频繁的字段不适合建立索引，因为更新数据时也需要更新索引；
-- 
+- 不作为查询条件的字段不要建立索引。
 
 ## 一般建议
 - 从Explain和Profile出发；
@@ -110,6 +110,7 @@ show profile block io for QUERY 17;
 - select 最小的 Columns；
 - 尽早过滤，并使用最有效的过滤条件；
 - 避免复杂的JOIN和子查询。
+
 ## 常用查询
 - 尽量避免where使用 != 或 <>  
 - 尽量避免 where 子句用 or 连接：
