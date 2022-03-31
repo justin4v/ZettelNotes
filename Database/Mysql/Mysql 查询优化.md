@@ -68,7 +68,8 @@ SHOW PROCESSLIST;
 explain "your sql"
 desc "your sql"
 ```
-部分参数分析：
+
+### explain 结果分析
 - select_type
 	-  SIMPLE 简单表，不使用表连接或子查询
 	- PRIMARY 主查询，即外层的查询UNION SUBQUER 子查询的第一个select
