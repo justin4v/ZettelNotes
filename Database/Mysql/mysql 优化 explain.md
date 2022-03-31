@@ -4,7 +4,8 @@
 ## id列
 - select 的序列号；、
 - id 按 select 出现的顺序增长。
-- select 分为简单查询和复杂查询。复杂查询分为三类：简单子查询、派生表（from语句中的子查询）、union 查询。
+- select 分为简单查询和复杂查询。
+	- 复杂查询分为：简单子查询、派生表（from语句中的子查询）、union 查询。
 
 1）简单子查询
 ```sql
@@ -28,8 +29,6 @@ mysql> explain select id from (select id from film) as der;
 +----+-------------+------------+-------+---------------+----------+---------+------+------+-------------+
 ```
 
-这个查询执行时有个临时表别名为der，外部 select 查询引用了这个临时表
-
 3）union查询
 ```sql
 mysql> explain select 1 union all select 1;
@@ -41,11 +40,10 @@ mysql> explain select 1 union all select 1;
 | NULL | UNION RESULT | <union1,2> | ALL  | NULL          | NULL | NULL    | NULL | NULL | Using temporary |
 +----+--------------+------------+------+---------------+------+---------+------+------+-----------------+
 ```
-union结果总是放在一个匿名临时表中，临时表不在SQL总出现，因此它的id是NULL。
+- union 结果放在一个*匿名临时表*中，不在SQL中出现，id 是NULL。
 
 ### select_type列
-
-select_type 表示对应行是是简单还是复杂的查询，如果是复杂的查询，又是上述三种复杂查询中的哪一种。
+- *查询种类*：简单还是复杂查询
 
 1）**simple**：简单查询。查询不包含子查询和union
 ```sql
@@ -60,9 +58,8 @@ mysql> explain select * from film where id = 2;
 
 3）**subquery**：包含在 select 中的子查询（不在 from 子句中）
 
-4）**derived**：包含在 from 子句中的子查询。MySQL会将结果存放在一个临时表中，也称为派生表（derived的英文含义）
+4）**derived**：包含在 from 子句中的子查询。MySQL会将结果存放在一个临时表中，也称为派生表（derived）
 
-用这个例子来了解 primary、subquery 和 derived 类型
 ```sql
 mysql> explain select (select 1 from actor where id = 1) from (select * from film where id = 1) der;
 +----+-------------+------------+--------+---------------+---------+---------+-------+------+-------------+
@@ -77,7 +74,7 @@ mysql> explain select (select 1 from actor where id = 1) from (select * from fil
 
 6）**union result**：从 union 临时表检索结果的 select
 
-用这个例子来了解 union 和 union result 类型：
+ union 和 union result 示例：
 ```sql
 mysql> explain select 1 union all select 1;
 +----+--------------+------------+------+---------------+------+---------+------+------+-----------------+
@@ -90,15 +87,13 @@ mysql> explain select 1 union all select 1;
 ```
 
 ## table列
+- 查询使用的表。
 
 ## type 列
+- 表示关联类型或访问类型，即 MySQL 决定*如何查找表中的行*。
+- 性能顺序：`system > const > eq_ref > ref > fulltext > ref_or_null > index_merge > unique_subquery > index_subquery > range > index > ALL`
 
-这一列表示关联类型或访问类型，即MySQL决定如何查找表中的行。
-
-依次从最优到最差分别为：system > const > eq_ref > ref > fulltext > ref_or_null > index_merge > unique_subquery > index_subquery > range > index > ALL
-
-**NULL**：mysql能够在优化阶段分解查询语句，在执行阶段用不着再访问表或索引。例如：在索引列中选取最小值，可以单独查找索引来完成，不需要在执行时访问表
-
+1. **NULL**：能在优化阶段分解查询语句，在执行阶段不用访问表或索引。例如：在索引列中选取最小值，可以单独查找索引来完成。
 ```sql
 mysql> explain select min(id) from film;
 +----+-------------+-------+------+---------------+------+---------+------+------+------------------------------+
@@ -108,7 +103,7 @@ mysql> explain select min(id) from film;
 +----+-------------+-------+------+---------------+------+---------+------+------+------------------------------+
 ```
 
-**`const, system`**：mysql能对查询的某部分进行优化并将其转化成一个常量（可以看show warnings 的结果）。用于 primary key 或 unique key 的所有列与常数比较时，所以表最多有一个匹配行，读取1次，速度比较快。
+2. **`const, system`**：mysql能对查询的某部分进行优化并将其转化成一个常量（可以看show warnings 的结果）。用于 primary key 或 unique key 的所有列与常数比较时，所以表最多有一个匹配行，读取1次，速度比较快。
 ```sql
 mysql> explain extended select * from (select * from film where id = 1) tmp;
 +----+-------------+------------+--------+---------------+---------+---------+-------+------+----------+-------+
@@ -125,7 +120,7 @@ mysql> show warnings;
 | Note  | 1003 | /* select#1 */ select '1' AS `id`,'film1' AS `name` from dual |
 +-------+------+---------------------------------------------------------------+
 ```
-**eq_ref**：primary key 或 unique key 索引的所有部分被连接使用 ，最多只会返回一条符合条件的记录。这可能是在 const 之外最好的联接类型了，简单的 select 查询不会出现这种 type。
+3. **eq_ref**：primary key 或 unique key 索引的所有部分被连接使用 ，最多只会返回一条符合条件的记录。这可能是在 const 之外最好的联接类型了，简单的 select 查询不会出现这种 type。
 
 ```sql
 mysql> explain select * from film_actor left join film on film_actor.film_id = film.id;
@@ -137,7 +132,7 @@ mysql> explain select * from film_actor left join film on film_actor.film_id = f
 +----+-------------+------------+--------+---------------+-------------------+---------+-------------------------+------+-------------+
 ```
 
-**`ref`**：相比 `eq_ref`，不使用唯一索引，而是使用普通索引或者唯一性索引的部分前缀，索引要和某个值相比较，可能会找到多个符合条件的行。
+4. **`ref`**：相比 `eq_ref`，不使用唯一索引，而是使用普通索引或者唯一性索引的部分前缀，索引要和某个值相比较，可能会找到多个符合条件的行。
 
 1. 简单 select 查询，name是普通索引（非唯一索引）
 
