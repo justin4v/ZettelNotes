@@ -70,43 +70,7 @@ desc "your sql"
 ```
 
 ### explain 结果分析
-```sql
-mysql> explain extended select * from film where id = 1;
-+----+-------------+-------+-------+---------------+---------+---------+-------+------+----------+-------+
-| id | select_type | table | type  | possible_keys | key     | key_len | ref   | rows | filtered | Extra |
-+----+-------------+-------+-------+---------------+---------+---------+-------+------+----------+-------+
-|  1 | SIMPLE      | film  | const | PRIMARY       | PRIMARY | 4       | const |    1 |   100.00 | NULL  |
-+----+-------------+-------+-------+---------------+---------+---------+-------+------+----------+-------+
-```
-- id：select 查询的序列号
-- select_type
-	-  SIMPLE 简单表，不使用表连接或子查询
-	- PRIMARY 主查询，复杂查询中最外层的 select
-	- **subquery**：包含在 select 中的子查询（不在 from 子句中）
-	- **derived**：包含在 from 子句中的子查询。MySQL会将结果存放在一个临时表中，也称为派生表（derived）
-	- **union**：在 union 中的第二个和随后的 select
-	- **union result**：从 union 临时表检索结果的 select
-```sql
-mysql> explain select 1 union all select 1;
-+----+--------------+------------+------+---------------+------+---------+------+------+-----------------+
-| id | select_type  | table      | type | possible_keys | key  | key_len | ref  | rows | Extra           |
-+----+--------------+------------+------+---------------+------+---------+------+------+-----------------+
-|  1 | PRIMARY      | NULL       | NULL | NULL          | NULL | NULL    | NULL | NULL | No tables used  |
-|  2 | UNION        | NULL       | NULL | NULL          | NULL | NULL    | NULL | NULL | No tables used  |
-| NULL | UNION RESULT | <union1,2> | ALL  | NULL          | NULL | NULL    | NULL | NULL | Using temporary |
-+----+--------------+------------+------+---------------+------+---------+------+------+-----------------+
-```
-- type:
-	- system > const > eq_ref > ref > fulltext > ref_or_null > index_merge > unique_subquery > index_subquery > range > index > ALL
-	- ALL 全表扫描
-	- index 索引全扫描
-	- range 索引范围扫描
-	- ref 使用非唯一索引或唯一索引的前缀扫描
-	- eq_ref 类似 ref，使用的索引是唯一索引
-	- const/system 单表中最多有一个匹配行
-	- NULL 不用访问表或者索引，直接得到结果。例如：在索引列中选取最小值，可以单独查找索引来完成。
 
-- possible_keys：可能使用哪些索引来查找
 ## show profile 分析 SQL
 
 ```sql
