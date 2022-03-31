@@ -226,9 +226,11 @@ mysql> explain select * from actor;
 
 ### 7. key_len列
 
-- 显示索引里使用的字节数，可以算出具体使用了索引中的哪些列。
+- 显示索引里使用的字节数，可以*算出具体使用了索引中的哪些列*。
 
-举例来说，film_actor的联合索引 idx_film_actor_id 由 film_id 和 actor_id 两个int列组成，并且每个int是4字节。通过结果中的key_len=4可推断出查询使用了第一个列：film_id列来执行索引查找。
+举例来说：
+- film_actor 的联合索引 idx_film_actor_id 由 film_id 和 actor_id 两个int列组成，并且每个是 int 4字节。
+- 通过结果中的 *key_len=4 可推断出查询使用了第一个列：film_id* 列来执行索引查找。
 
 ```sql
 mysql> explain select * from film_actor where film_id = 2;
@@ -240,7 +242,6 @@ mysql> explain select * from film_actor where film_id = 2;
 ```
 
 key_len计算规则如下：
-
 -   字符串
     -   char(n)：n字节长度
     -   varchar(n)：2字节存储字符串长度，如果是utf-8，则长度 3n + 2
@@ -255,21 +256,21 @@ key_len计算规则如下：
     -   datetime：8字节
 -   如果字段允许为 NULL，需要1字节记录是否为 NULL
 
-索引最大长度是768字节，当字符串过长时，mysql会做一个类似左前缀索引的处理，将前半部分的字符提取出来做索引。
+索引*最大长度是768字节*，当字符串过长时，mysql 会做一个类似左前缀索引的处理，将前半部分的字符提取出来做索引。
 
 ### 8. ref列
 
-这一列显示了在key列记录的索引中，表查找值所用到的列或常量，常见的有：const（常量），func，NULL，字段名（例：film.id）
+- 显示了在key列记录的索引中，表查找值所用到的列或常量，常见的有：const（常量），func，NULL，字段名（例：film.id）
 
 ### 9. rows列
 
-这一列是mysql估计要读取并检测的行数，注意这个不是结果集里的行数。
+- mysql估计要读取并检测的行数，注意这个不是结果集里的行数。
 
 ### 10. Extra列
 
 这一列展示的是额外信息。常见的重要值如下：
 
-**`distinct`**: 一旦mysql找到了与行相联合匹配的行，就不再搜索了
+**`distinct`**: 一旦 mysql 找到了与行相联合匹配的行，就不再搜索了
 
 ```sql
 mysql> explain select distinct name from film left join film_actor on film.id = film_actor.film_id;
@@ -281,7 +282,8 @@ mysql> explain select distinct name from film left join film_actor on film.id = 
 +----+-------------+------------+-------+-------------------+-------------------+---------+--------------+------+------------------------------+
 ```
 
-**`Using index`**：这发生在对表的请求列都是同一索引的部分的时候，返回的列数据只使用了索引中的信息，而没有再去访问表中的行记录。是性能高的表现。
+**`Using index`**：返回的列数据只使用了索引中的信息，而没有再去访问表中的行记录。
+- 性能高的表现。
 
 ```sql
 mysql> explain select id from film order by id;
@@ -292,7 +294,8 @@ mysql> explain select id from film order by id;
 +----+-------------+-------+-------+---------------+---------+---------+------+------+-------------+ 
 ```
 
-**`Using where`**：mysql服务器将在存储引擎检索行后再进行过滤。就是先读取整行数据，再按 where 条件进行检查，符合就留下，不符合就丢弃。
+**`Using where`**：mysql 服务器将在*存储引擎检索行后再进行过滤*。
+- 先读取整行数据，再按 where 条件进行检查，符合就留下，不符合就丢弃。
 
 ```sql
 mysql> explain select * from film where id > 1;
@@ -303,18 +306,17 @@ mysql> explain select * from film where id > 1;
 +----+-------------+-------+-------+---------------+----------+---------+------+------+--------------------------+
 ```
 
-**`Using temporary`**：mysql需要创建一张临时表来处理查询。出现这种情况一般是要进行优化的，首先是想到用索引来优化。
-
-1. actor.name没有索引，此时创建了张临时表来distinct
+**`Using temporary`**：mysql *需要创建一张临时表来处理查询*。
+- 一般是要进行优化的，首先是想到用索引来优化。
 
 ```sql
+1. actor.name没有索引，此时创建了张临时表来distinct
 mysql> explain select distinct name from actor;
 +----+-------------+-------+------+---------------+------+---------+------+------+-----------------+
 | id | select_type | table | type | possible_keys | key  | key_len | ref  | rows | Extra           |
 +----+-------------+-------+------+---------------+------+---------+------+------+-----------------+
 |  1 | SIMPLE      | actor | ALL  | NULL          | NULL | NULL    | NULL |    2 | Using temporary |
 +----+-------------+-------+------+---------------+------+---------+------+------+-----------------+
-```
 
 2. film.name建立了idx_name索引，此时查询时extra是using index,没有用临时表
 ```sql
@@ -325,17 +327,19 @@ mysql> explain select distinct name from film;
 |  1 | SIMPLE      | film  | index | idx_name      | idx_name | 33      | NULL |    3 | Using index |
 +----+-------------+-------+-------+---------------+----------+---------+------+------+-------------+
 ```
-**`Using filesort`**：mysql 会对结果使用一个外部索引排序，而不是按索引次序从表里读取行。此时mysql会根据联接类型浏览所有符合条件的记录，并保存排序关键字和行指针，然后排序关键字并按顺序检索行信息。这种情况下一般也是要考虑使用索引来优化的。
 
-1. actor.name未创建索引，会浏览actor整个表，保存排序关键字name和对应的id，然后排序name并检索行记录
+**`Using filesort`**：mysql 会对结果*使用一个外部索引排序*，而不是按索引次序从表里读取行。
+- mysql 会根据联接类型浏览所有符合条件的记录，并保存排序关键字和行指针，然后排序关键字并按顺序检索行信息。
+- 一般也是要考虑使用索引来优化的。
+
 ```sql
+1. actor.name未创建索引，会浏览actor整个表，保存排序关键字name和对应的id，然后排序name并检索行记录
 mysql> explain select * from actor order by name;
 +----+-------------+-------+------+---------------+------+---------+------+------+----------------+
 | id | select_type | table | type | possible_keys | key  | key_len | ref  | rows | Extra          |
 +----+-------------+-------+------+---------------+------+---------+------+------+----------------+
 |  1 | SIMPLE      | actor | ALL  | NULL          | NULL | NULL    | NULL |    2 | Using filesort |
 +----+-------------+-------+------+---------------+------+---------+------+------+----------------+
-```
 
 2. film.name建立了idx_name索引,此时查询时extra是using index
 
