@@ -84,6 +84,9 @@ mysql> explain extended select * from film where id = 1;
 	- PRIMARY 主查询，复杂查询中最外层的 select
 	- **subquery**：包含在 select 中的子查询（不在 from 子句中）
 	- **derived**：包含在 from 子句中的子查询。MySQL会将结果存放在一个临时表中，也称为派生表（derived）
+	- **union**：在 union 中的第二个和随后的 select
+	- **union result**：从 union 临时表检索结果的 select
+
 - type:
 	- ALL 全表扫描
 	- index 索引全扫描
