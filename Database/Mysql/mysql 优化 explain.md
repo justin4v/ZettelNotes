@@ -133,7 +133,7 @@ mysql> explain select * from film_actor left join film on film_actor.film_id = f
 +----+-------------+------------+--------+---------------+-------------------+---------+---------
 ```
 
-4. **`ref`**：
+4. **`ref`**
 	1. 相比 `eq_ref`，不使用唯一索引，而是使用普通索引或者唯一性索引的部分前缀；
 	2. 索引要和某个值相比较，可能会找到多个符合条件的行。
 ```sql
@@ -143,20 +143,20 @@ mysql> explain select * from film where name = "film1";
 | id | select_type | table | type | possible_keys | key      | key_len | ref   | rows | Extra                    |
 +----+-------------+-------+------+---------------+----------+---------+-------+------+---------------+
 |  1 | SIMPLE      | film  | ref  | idx_name      | idx_name | 33      | const |    1 | Using where; Using index |
-+----+-------------+-------+------+---------------+----------+---------+-------+------+--------------------------+
++----+-------------+-------+------+---------------+----------+---------+-------+------+-------------+
 
 2.关联表查询，idx_film_actor_id是film_id和actor_id的联合索引，这里使用到了film_actor的左边前缀film_id部分。
 ```sql
 mysql> explain select * from film left join film_actor on film.id = film_actor.film_id;
-+----+-------------+------------+-------+-------------------+-------------------+---------+--------------+------+-------------+
++----+-------------+------------+-------+------------+------------+---------+--------+----+-------------+
 | id | select_type | table      | type  | possible_keys     | key               | key_len | ref          | rows | Extra       |
-+----+-------------+------------+-------+-------------------+-------------------+---------+--------------+------+-------------+
++----+-------------+------------+-------+----------+------------+---------+--------+------+-------------+
 |  1 | SIMPLE      | film       | index | NULL              | idx_name          | 33      | NULL         |    3 | Using index |
 |  1 | SIMPLE      | film_actor | ref   | idx_film_actor_id | idx_film_actor_id | 4       | test.film.id |    1 | Using index |
-+----+-------------+------------+-------+-------------------+-------------------+---------+--------------+------+-------------+
++----+-------------+------------+-------+-----------+-----------+---------+--------+--+-------------+
 ```
 
-**`ref_or_null`**：类似`ref`，但是可以搜索值为NULL的行。
+5. **`ref_or_null`**：类似`ref`，但是可以搜索值为 NULL 的行。
 
 ```sql
 mysql> explain select * from film where name = "film1" or name is null;
@@ -167,7 +167,9 @@ mysql> explain select * from film where name = "film1" or name is null;
 +----+-------------+-------+-------------+---------------+----------+---------+-------+------+--------------------------+
 ```
 
-**`index_merge`**：表示使用了索引合并的优化方法。 例如下表：id是主键，tenant_id是普通索引。or 的时候没有用 primary key，而是使用了 primary key(id) 和 tenant_id 索引
+6. **`index_merge`**：表示使用了*索引合并的优化*方法。
+
+例如下表：id是主键，tenant_id是普通索引。or 的时候没有用 primary key，而是使用了 primary key(id) 和 tenant_id 索引。
 
 ```sql
 mysql> explain select * from role where id = 11011 or tenant_id = 8888;
@@ -178,7 +180,7 @@ mysql> explain select * from role where id = 11011 or tenant_id = 8888;
 +----+-------------+-------+-------------+-----------------------+-----------------------+---------+------+------+-------------------------------------------------+
 ```
 
-**`range`**：范围扫描通常出现在 in(), between ,> ,<, >= 等操作中。使用一个索引来检索给定范围的行。
+7. **`range`**：范围扫描通常出现在 in(), between ,> ,<, >= 等操作中。
 
 ```sql
 mysql> explain select * from actor where id > 1;
@@ -189,7 +191,7 @@ mysql> explain select * from actor where id > 1;
 +----+-------------+-------+-------+---------------+---------+---------+------+------+-------------+
 ```
 
-**`index`**：和ALL一样，不同就是mysql只需扫描索引树，这通常比ALL快一些。
+8. **`index`**：和ALL一样，不同就是*只需扫描索引树*，这通常比ALL快一些。
 
 ```sql
 mysql> explain select count(*) from film;
@@ -200,7 +202,7 @@ mysql> explain select count(*) from film;
 +----+-------------+-------+-------+---------------+----------+---------+------+------+-------------+
 ```
 
-`**ALL**：`即全表扫描，意味着mysql需要从头到尾去查找所需要的行。通常情况下这需要增加索引来进行优化了
+9. `ALL：` *全表扫描*，意味着mysql需要从头到尾去查找所需要的行。通常情况下这需要增加索引来进行优化了
 
 ```sql
 mysql> explain select * from actor;
@@ -213,21 +215,18 @@ mysql> explain select * from actor;
 
 ### 5. possible_keys列
 
-这一列显示查询可能使用哪些索引来查找。
-
-explain 时可能出现 possible_keys 有列，而 key 显示 NULL 的情况，这种情况是因为表中数据不多，mysql认为索引对此查询帮助不大，选择了全表查询。
-
-如果该列是NULL，则没有相关的索引。在这种情况下，可以通过检查 where 子句看是否可以创造一个适当的索引来提高查询性能，然后用 explain 查看效果。
+- *可能使用哪些索引*查找。
+- 如果 possible_keys 有值，而 key 显示 NULL 的情况：表中数据不多，mysql 认为索引对查询帮助不大，选择了全表查询。
+- 如果该列是 NULL，*表示没有相关的索引*。可以通过检查 where 子句看是否可以*创造一个适当的索引*提高查询性能。
 
 ### 6. key列
-
-这一列显示mysql实际采用哪个索引来优化对该表的访问。
-
-如果没有使用索引，则该列是 NULL。如果想强制mysql使用或忽视possible_keys列中的索引，在查询中使用 force index、ignore index。
+- 实际采用哪个索引。
+- 如果没有使用索引，则该列是 NULL。
+- 如果想强制mysql使用或忽视 possible_keys 列中的索引，使用 *force index、ignore index*。
 
 ### 7. key_len列
 
-这一列显示了mysql在索引里使用的字节数，通过这个值可以算出具体使用了索引中的哪些列。
+- 显示索引里使用的字节数，可以算出具体使用了索引中的哪些列。
 
 举例来说，film_actor的联合索引 idx_film_actor_id 由 film_id 和 actor_id 两个int列组成，并且每个int是4字节。通过结果中的key_len=4可推断出查询使用了第一个列：film_id列来执行索引查找。
 
