@@ -68,6 +68,10 @@ kubectl logs -l name=myLabel -c my-container        # 获取含 name=myLabel 标
 kubectl logs my-pod -c my-container --previous      # 获取 Pod 中某容器的上个实例的日志（标准输出, 多容器场景）
 kubectl logs -f my-pod                              # 流式输出 Pod 的日志（标准输出）
 kubectl logs -f my-pod -c my-container              # 流式输出 Pod 容器的日志（标准输出, 多容器场景）
+
+
+# 只看最新的条目
+kubectl logs -f --tail=1000 [pod-name] -n [namespace]
 ```
 
 6. 进入 pod(运行中) 进行交互
