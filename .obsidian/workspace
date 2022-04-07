@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algorithm/Binary Search Tree.md",
+            "file": "Algorithm/DataStructure/集合.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/Binary Search Tree.md",
+                "file": "Algorithm/DataStructure/集合.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/Binary Search Tree.md"
+                "file": "Algorithm/DataStructure/集合.md"
               }
             }
           },
@@ -127,9 +127,9 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Algorithm/DataStructure/集合.md",
     "Algorithm/Binary Search Tree.md",
     "Algorithm/DataStructure/树有关术语.md",
-    "Algorithm/DataStructure/集合.md",
     "Database/逻辑&物理删除.md",
     "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
     "Design/Skills/Utils 里面使用 Bean.md",
