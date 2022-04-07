@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
+            "file": "Cache/直写式和回写式.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
+                "file": "Cache/直写式和回写式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JMM/正确的同步与安全的多线程.md"
+                "file": "Cache/直写式和回写式.md"
               }
             }
           },
@@ -127,6 +127,8 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Cache/直写式和回写式.md",
+    "Cache/CPU 缓存.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
     "Language/Java/JMM/Java Memory Model.md",
     "Algorithm/Binary Search Tree.md",
@@ -134,8 +136,6 @@
     "Framework/RPC/基于Netty实现RPC.md",
     "Big Data/Spark RDD.md",
     "Big Data/HDFS.md",
-    "Algorithm/DataStructure/树有关术语.md",
-    "Algorithm/DataStructure/集合.md",
-    "Database/逻辑&物理删除.md"
+    "Algorithm/DataStructure/树有关术语.md"
   ]
 }

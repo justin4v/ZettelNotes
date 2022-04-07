@@ -51,3 +51,7 @@
 ![[多核 CPU 多级缓存结构示意.png]]
 
 - 多核 CPU 的情况下有**多个 L1 Cache**，如何保证 Cache 内部数据的一致性？ **缓存一致性协议 [[MESI 协议]]**
+
+
+# 参考
+1. [缓存一致性（Cache Coherency）入门](https://www.infoq.cn/article/cache-coherency-primer)
