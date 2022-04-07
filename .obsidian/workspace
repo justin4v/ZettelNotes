@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algorithm/DataStructure/集合.md",
+            "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Argument-",
+                "query": "内存模型",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/DataStructure/集合.md",
+                "file": "Language/Java/JMM/正确的同步与安全的多线程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/DataStructure/集合.md"
+                "file": "Language/Java/JMM/正确的同步与安全的多线程.md"
               }
             }
           },
@@ -127,15 +128,15 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
-    "Algorithm/DataStructure/集合.md",
+    "Language/Java/JMM/正确的同步与安全的多线程.md",
+    "Language/Java/JMM/Java Memory Model.md",
     "Algorithm/Binary Search Tree.md",
+    "Framework/ServiceMesh/SideCar.md",
+    "Framework/RPC/基于Netty实现RPC.md",
+    "Big Data/Spark RDD.md",
+    "Big Data/HDFS.md",
     "Algorithm/DataStructure/树有关术语.md",
-    "Database/逻辑&物理删除.md",
-    "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
-    "Design/Skills/Utils 里面使用 Bean.md",
-    "Design/计算机科学问题的解决方法.md",
-    "Framework/Spring/如何.md",
-    "Framework/Spring/Spring 参数解析.md",
-    "Framework/Spring/Spring Bean 线程安全问题.md"
+    "Algorithm/DataStructure/集合.md",
+    "Database/逻辑&物理删除.md"
   ]
 }
