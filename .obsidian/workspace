@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/直写式和回写式.md",
+            "file": "Book Reading/SICP/1.2程序及其过程/1.2.1 线性递归和迭代.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/直写式和回写式.md",
+                "file": "Book Reading/SICP/1.2程序及其过程/1.2.1 线性递归和迭代.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/直写式和回写式.md"
+                "file": "Book Reading/SICP/1.2程序及其过程/1.2.1 线性递归和迭代.md"
               }
             }
           },
@@ -127,6 +127,8 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Book Reading/SICP/1.2程序及其过程/1.2.1 线性递归和迭代.md",
+    "Book Reading/SICP/1.1基本元素/1.1.4 复合程序.md",
     "Cache/直写式和回写式.md",
     "Cache/CPU 缓存.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
@@ -134,8 +136,6 @@
     "Algorithm/Binary Search Tree.md",
     "Framework/ServiceMesh/SideCar.md",
     "Framework/RPC/基于Netty实现RPC.md",
-    "Big Data/Spark RDD.md",
-    "Big Data/HDFS.md",
-    "Algorithm/DataStructure/树有关术语.md"
+    "Big Data/Spark RDD.md"
   ]
 }
