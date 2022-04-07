@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/逻辑&物理删除.md",
+            "file": "Algorithm/Binary Search Tree.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/逻辑&物理删除.md",
+                "file": "Algorithm/Binary Search Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/逻辑&物理删除.md"
+                "file": "Algorithm/Binary Search Tree.md"
               }
             }
           },
@@ -127,15 +127,15 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Algorithm/Binary Search Tree.md",
+    "Algorithm/DataStructure/树有关术语.md",
+    "Algorithm/DataStructure/集合.md",
     "Database/逻辑&物理删除.md",
     "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
     "Design/Skills/Utils 里面使用 Bean.md",
     "Design/计算机科学问题的解决方法.md",
     "Framework/Spring/如何.md",
     "Framework/Spring/Spring 参数解析.md",
-    "Framework/Spring/Spring Bean 线程安全问题.md",
-    "Tools/zookeeper/zookeeper介绍.md",
-    "Framework/Spring/IOC/AutowireCapableBeanFactory.md",
-    "Language/Java/并发编程/锁/AQS原理.md"
+    "Framework/Spring/Spring Bean 线程安全问题.md"
   ]
 }
