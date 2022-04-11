@@ -1,3 +1,4 @@
+#Directory
 # Directory Concepts
 
 Many naming services are extended with a _directory service_. A directory service associates names with objects and also associates such objects with _attributes_.
