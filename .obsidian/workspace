@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Framework/Spring/优秀实践/处理异常.md",
+            "file": "Language/Java/基础/transient volatile 关键字.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Framework/Spring/优秀实践/处理异常.md",
+                "file": "Language/Java/基础/transient volatile 关键字.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/Spring/优秀实践/处理异常.md"
+                "file": "Language/Java/基础/transient volatile 关键字.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Language/Java/基础/transient volatile 关键字.md",
     "Framework/Spring/优秀实践/处理异常.md",
     "日常记录/日志/2022-03-03.md",
     "日常记录/日志/2022-02-28.md",
@@ -135,7 +136,6 @@
     "基础知识/编程基础/Cron 表达式.md",
     "基础知识/编程基础/Directory.md",
     "Framework/Spring/Spring Schedule.md",
-    "Book Reading/SICP/1.2程序及其过程/1.2.1 线性递归和迭代.md",
-    "Book Reading/SICP/1.1基本元素/1.1.4 复合程序.md"
+    "Book Reading/SICP/1.2程序及其过程/1.2.1 线性递归和迭代.md"
   ]
 }
