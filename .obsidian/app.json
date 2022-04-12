@@ -6,5 +6,7 @@
   "communityPluginSortOrder": "download",
   "communityThemeSortOrder": "download",
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "defaultViewMode": "preview",
+  "foldHeading": false
 }
