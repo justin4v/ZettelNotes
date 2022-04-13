@@ -36,7 +36,7 @@ A cron expression is a string consisting of *six or seven subexpressions* (field
 
 # 问题
 - cron 频率表达式，会从距离当前时间最近的计划执行时间开始执行。
-- 如当前时间为 11：23， 表达式0 0/10 * * * ?；
+- 如当前时间为 11：23， 表达式 0 0/10 * * * ?；
 - 下次执行时间并不是 11:33，而是距离最近的十分钟整点数：11:30 、11:40、11:50....
 
 ## 解决
