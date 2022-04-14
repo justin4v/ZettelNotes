@@ -34,11 +34,15 @@ spring-boot项目，有bootstrap、application两个配置文件，结合profile
 - 优先级：主配置 > 扩展配置 > 共享配置
 
 ## 主配置
-- nacos 提供的配置路径 `spring.cloud.nacos.config` 下，有一系列的属性用于定位主配置。
-- 基于 prefix（默认为 `${spring.application.name}` 的值）、namespace、group（默认为字符串 `DEFAULT_GROUP`）、file-extension（默认为字符串 `.properties`）；
-- 按命名规则  `${prefix}-${spring.profiles.active}.${file-extension}` 一个配置。
+- nacos 提供的配置路径 `spring.cloud.nacos.config` 下，有一系列的属性用于定位主配置：
+	- *prefix*（默认为 `${spring.application.name}` 的值）；
+	- *namespace*；
+	- *group*（默认为字符串 `DEFAULT_GROUP`）；
+	- *file-extension*（默认为字符串 `.properties`）；
+- 按命名规则  `${prefix}-${spring.profiles.active}.${file-extension}` 加载配置。
 
-```
+## 示例
+```yaml
 spring:
   application:
     name: ddd-demo-service
@@ -46,19 +50,17 @@ spring:
     nacos:
       config:
         server-addr: nacos-2.nacos-headless.public.svc.cluster.local:8848
-        namespace: ygjpro-test2
+        namespace: test2
 ```
 
-> 上述配置，意味spring-boot和nacos 将按照如下规则执行：
+> spring-boot 和 nacos  将按照如下规则执行：
 > 
-> 1.  按照规则 `${prefix}-${spring.profiles.active}.${file-extension}`来获得dataId：ddd-demo-service.properties。因为：
-> 
-> > -   `${prefix}`：没有指定 `${prefix}` ，取默认值 `${spring.application.name}`，为字符串 `ddd-demo-service`。
-> > -   `spring.profiles.active`：没有指定 `spring.profiles.active`，取默认值空。
-> > -   `${file-extension}`：没有指定 `${file-extension}`，取默认值字符串`.properties`
-> 
-> 2.  spring-boot将尝试去nacos的 ygjpro-test2 表空间，在 DEFAULT_GROUP group 分组下，加载一个dataId叫做 ddd-demo-service 的配置。
-> 3.  如果发现上述dataId不存在，则继续尝试加载名为 ddd-demo-service 的dataId，该dataId只是前面步骤1中获得的dataId，去掉`file-extension`后缀名。
+> 1.  按照规则 `${prefix}-${spring.profiles.active}.${file-extension}` 得到 dataId：ddd-demo-service.properties。 
+> > -   `${prefix}`：取默认值 `${spring.application.name}`： `ddd-demo-service`。
+> > -   `spring.profiles.active`：取默认值空。
+> > -   `${file-extension}`：取默认值字符串：`.properties`
+> 2.  spring-boot 将在 nacos 的 test2 *namespace*，在 *DEFAULT_GROUP* group 分组下，加载一个 *dataId* 为 ddd-demo-service 的配置。
+> 3.  如果dataId不存在，则继续尝试加载名为 ddd-demo-service 的dataId，该dataId只是前面步骤1中获得的dataId，去掉`file-extension`后缀名。
 > 4.  如果上述两个步骤都没有找到dataId，就不再尝试去找主配置了。
 
 在nacos的所有配置中，主配置（存在的情况下）具有最高的优先级，其同名配置值不能被扩展配置或共享配置中定义的同名属性所覆盖。
