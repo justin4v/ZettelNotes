@@ -133,7 +133,7 @@ spring:
 
 -   共享配置/扩展配置
 > 共享配置和扩展配置没有 filez-extension 属性；
-> spring-boot 会认为 dataId 本身已经包含了 文件后缀。如果当发现按照配置中指定的dataId去nacos取回来的文件没有后缀名时，spring-boot将不会识别读取回来的文件。
+> spring-boot 会认为 dataId 本身已经包含了 文件后缀。如果当发现按照配置中指定的 dataId 在 nacos 读取的文件没有后缀名时，spring-boot 将*不会识别取回文件*。
 
 
 # 参考
