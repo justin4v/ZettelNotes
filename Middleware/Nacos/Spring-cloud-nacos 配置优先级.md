@@ -76,18 +76,16 @@ spring:
 -  `extension-configs` 和 `shared-configs` 优先级不同;
 -   nacos对配置的默认理念
 
-> 根据 nacos 的默认理念：
-> 
+> nacos 的默认理念：
 > -   namespace区分环境：开发环境、测试环境、预发布环境、生产环境
-> -   group区分不同应用：同一个环境内，不同应用的配置，通过group来区分。
+> -   group 区分不同应用：同一个环境内，不同应用的配置，通过group来区分。
 
 -   主配置是应用专有的配置。
+> 在 dataId 上要区分；
+> 最好还要有 group 的区分；
 
-> 因此，主配置应当在dataId上要区分，同时最好还要有 group 的区分，因为group区分应用（虽然dataId上区分了，不用设置group也能按应用单独加载）。
-
--   要在各应用之间共享一个配置，请使用上面的 shared-configs。
-
-> 因此按该理念，shared-configs 指定的配置，本来应该是不指定 group的，也就是应当归入 DEFAULT_GROUP 这个公共分组。
+-   要在各应用之间共享一个配置，使用 shared-configs。
+> shared-configs 指定的配置，本来应该是不指定 group的，也就是应当归入 DEFAULT_GROUP 这个公共分组。
 
 -   如果要在特定范围内（比如某个应用上）覆盖某个共享dataId上的特定属性，请使用 extension-configs
 
