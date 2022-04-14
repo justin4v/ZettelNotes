@@ -85,10 +85,10 @@ spring:
 > 最好还要有 group 的区分；
 
 -   要在各应用之间共享一个配置，使用 shared-configs。
-> shared-configs 指定的配置，本来应该是不指定 group的，也就是应当归入 DEFAULT_GROUP 这个公共分组。
+> shared-configs 指定的配置；
+> 本来应该是不指定 group的，应当归入 DEFAULT_GROUP 公共分组。
 
--   如果要在特定范围内（比如某个应用上）覆盖某个共享dataId上的特定属性，请使用 extension-configs
-
+-   如果要在特定范围内（比如某个应用上）覆盖某个共享 dataId上的特定属性，使用 extension-configs
 > 比如，其他应用的数据库url，都是一个固定的url，使用 shared-configs.dataId = mysql 的共享配置。  
 > 但其中有一个应用 ddd-demo 是特例，需要为该应用配置扩展属性来覆盖。所以定义如下扩展配置：
 > 
@@ -100,7 +100,7 @@ spring:
 >    nacos:
 >      config:
 >        server-addr: nacos-2.nacos-headless.public.svc.cluster.local:8848
->        namespace: ygjpro-test2
+>        namespace: test2
 >        group: ddd-demo
 >        ......
 >        shared-configs[3]:
