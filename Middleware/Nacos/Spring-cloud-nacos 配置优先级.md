@@ -16,10 +16,10 @@ spring-boot项目，有bootstrap、application两个配置文件，结合profile
 # application.yaml
 - *应用级别的 spring-boot 配置文件*；
 - 用于 Spring Boot 项目的自动化配置，其加载优先级低于bootstrap.yaml。
--   spring-boot 默认会从4个路径去找 application 配置：
-> -   按优先级，假设当前运行目录为`/`，优先级依次为：`/config` > `/` > `classpath:/config` > `classpath:/`
-> -   同时出现在上述四个配置文件中的同名属性，按优先级的覆盖低优先级的。
-> -   分别出现在不同配置文件中的非同名属性，合并后生效。
+-   spring-boot 默认有4个方式确定 application 配置：
+> -   假设当前目录为 `/`，查找优先级：`/config` > `/` > `classpath:/config` > `classpath:/`
+> -   不同配置文件中的同名属性，按优先级高低覆盖。
+> -   不同配置文件中的非同名属性，合并后生效。
 > -   对同名但不同后缀名的配置文件，`properties` > `yaml`
 
 -   对存在profile的场景，指定profile的配置优先级高于无profile的配置。
