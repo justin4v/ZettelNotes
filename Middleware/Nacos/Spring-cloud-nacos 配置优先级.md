@@ -25,15 +25,18 @@ spring-boot项目，有bootstrap、application两个配置文件，结合profile
 -   指定 profile 的配置优先级高于无 profile 的配置。
 -   在启动命令中通过 `--spring.config.location` 指定配置文件路径。该配置优先级最高。
 
-# spring-cloud-nacos引入的三级配置文件
-
-nacos作为外部配置服务器，通过spring-boot的bootstrap.yaml引入。但nacos本身，也提供了三级配置体系：主配置(只有一个，但会按照不同后缀名，去找到相关配置）、扩展配置、共享配置。
-
-三级配置的优先级如下：主配置 > 扩展配置 > 共享配置
+# spring-cloud-nacos 配置文件
+- nacos 作为外部配置服务器，通过 bootstrap.yaml 引入。
+- nacos本身提供了*三级配置体系*：
+	1. 主配置：只有一个，按照不同后缀名，加载配置；
+	2. 扩展配置；
+	3. 共享配置。
+- 优先级：主配置 > 扩展配置 > 共享配置
 
 ## 主配置
-
-nacos提供的配置路径 `spring.cloud.nacos.config` 下，有一系列的属性用于定位主配置。基于 prefix（默认为 `${spring.application.name}` 的值）、namespace、group（默认为字符串 `DEFAULT_GROUP`）、file-extension（默认为字符串 `.properties`），按组装规则 `${prefix}-${spring.profiles.active}.${file-extension}`去找到一个配置。
+- nacos 提供的配置路径 `spring.cloud.nacos.config` 下，有一系列的属性用于定位主配置。
+- 基于 prefix（默认为 `${spring.application.name}` 的值）、namespace、group（默认为字符串 `DEFAULT_GROUP`）、file-extension（默认为字符串 `.properties`）；
+- 按命名规则  `${prefix}-${spring.profiles.active}.${file-extension}` 一个配置。
 
 ```
 spring:
