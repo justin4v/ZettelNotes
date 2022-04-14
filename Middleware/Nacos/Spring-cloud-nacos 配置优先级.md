@@ -3,8 +3,9 @@
 spring-boot项目，有bootstrap、application两个配置文件，结合profile，和支持的文件格式properties、yaml，已经有6个配置文件了。然后使用了spring-cloud-starter-alibaba-nacos-config 后，又提供了三级配置。
 
 # bootstrap.yaml
-
-spring-boot项目依赖bootstrap.yml 用于应用程序上下文的引导阶段，由父Spring ApplicationContext加载，其工作的阶段为父ApplicationContext 被加载到使用application.yml的之前。也就是说 bootstrap 加载优先于 applicaton。
+- bootstrap.yml 用于应用程序上下文的引导阶段；
+- 由父 Spring ApplicationContext 加载，其工作的阶段为：*父 ApplicationContext 被加载*到*使用 application.yml 之前*。
+- bootstrap 加载优先于 applicaton.yaml。
 
 bootstrap 主要用于从额外的资源来加载配置信息，还可以在本地外部配置文件中解密属性。这两个上下文共用一个环境，它是任何Spring应用程序的外部属性的来源。bootstrap 里面的属性会优先加载，它们默认也不能被本地相同配置覆盖。
 
