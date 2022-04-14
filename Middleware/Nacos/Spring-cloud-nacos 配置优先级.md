@@ -89,8 +89,8 @@ spring:
 > 本来应该是不指定 group的，应当归入 DEFAULT_GROUP 公共分组。
 
 -   如果要在特定范围内（比如某个应用上）覆盖某个共享 dataId上的特定属性，使用 extension-configs
-> 比如，其他应用的数据库url，都是一个固定的url，使用 shared-configs.dataId = mysql 的共享配置。  
-> 但其中有一个应用 ddd-demo 是特例，需要为该应用配置扩展属性来覆盖。所以定义如下扩展配置：
+> - 比如，其他应用的数据库url，都是一个固定的url，使用 shared-configs.dataId = mysql 的共享配置。  
+> - 但应用 ddd-demo 是特例，需要配置扩展属性来覆盖。所以定义如下扩展配置：
 > 
 > ```
 > spring:
@@ -113,30 +113,27 @@ spring:
 >          refresh: true
 > ```
 > 
-> -   step1： 我们在group 为 DEFAULT_GROP 的分组内，创建各应用的共享配置dataId为mysql
-> -   step2：我们在group 为 ddd-demo 的分组内，，创建 ddd-demo 应用专有的配置mysql，其中定义的属性，会覆盖上述共享配置中定义的同名属性。
+> -   step1： 在 group 为 DEFAULT_GROP 的分组内，创建各应用的共享配置 dataId 为 mysql
+> -   step2：在 group 为 ddd-demo 的分组内，创建 ddd-demo 应用专有的配置 mysql，其中定义的属性，会覆盖上述共享配置中定义的同名属性。
 
 ### 优先级
-
--   上述两类配置都是数组，对同种配置，数组元素对应的下标越大，优先级越高。也就是排在后面的相同配置，将覆盖排在前面的同名配置。
+-   对同种配置，数组元素对应的下标越大，优先级越高。
+- 排在后面的相同配置，将覆盖排在前面的同名配置。
 
 > 比如：
-> 
 > -   同为扩展配置，存在如下优先级关系：`extension-configs[3] > extension-configs[2] > extension-configs[1] > extension-configs[0]`
 > -   同为共享配置，存在如下优先级关系：`shared-configs[3] > shared-configs[2] > shared-configs[1] > shared-configs[0]`
 
--   不同种类配置之间，优先级按顺序如下：主配置 > 扩展配置（extension-configs）> 共享配置（shared-configs）。
 
 ### 在nacos中配置的注意事项
 
 -   主配置
-
-> 主配置有 ${file-extension} 来指定文件后缀，因此在根据规则生成 dataId时，spring-boot 知道如何去识别这个读取下来的文件。所以在nacos中配置时，dataId可以带文件后缀，也可以不要带文件后缀。  
-> spring-boot 发现用不带文件后缀的dataId读取不到时，会尝试去掉文件后缀后的dataId 再去读取一次。
+> 主配置有 ${file-extension} 来指定文件后缀，dataId可以带文件后缀，也可以不要带文件后缀。  
+> spring-boot 会先用带后缀的文件读取，再尝试不带后缀。
 
 -   共享配置/扩展配置
-
-> 共享配置和扩展配置没有 filez-extension 属性，因此 spring-boot 会认为 dataId 本身已经包含了 文件后缀了。如果当发现按照配置中指定的dataId去nacos取回来的文件没有后缀名时，spring-boot将不会识别读取回来的文件。
+> 共享配置和扩展配置没有 filez-extension 属性；
+> spring-boot 会认为 dataId 本身已经包含了 文件后缀。如果当发现按照配置中指定的dataId去nacos取回来的文件没有后缀名时，spring-boot将不会识别读取回来的文件。
 
 
 # 参考
