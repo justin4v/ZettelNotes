@@ -9,18 +9,14 @@ spring-boot项目，有bootstrap、application两个配置文件，结合profile
 - 用于*从额外的资源来加载配置信息*，bootstrap 里面的属性会优先加载，默认不能被本地相同配置覆盖。
 
 ## 应用场景
--  bootstrap 中添加连接到配置中心的配置属性，以加载外部配置中心的配置；
--  系统级别的参数配置，不会变动的、不能被覆盖的属性；
--   加密/解密的场景；
-
-由于spring-boot支持多种文件格式，所以多种格式之间，其优先级是平等的，只要找到了一个，就会被使用。一般有：.properties、.yaml、.xml等格式。
+-  bootstrap 中*添加外部配置中心的连接属性*，以加载外部配置；
+-  *系统级别的配置*，不会变动的、不能被覆盖的属性；
+-   *加密 / 解密*的场景；
 
 # application.yaml
-
-应用级别的spring-boot配置文件，主要用于 Spring Boot 项目的自动化配置，其加载优先级低于bootstrap.yaml。
-
+- *应用级别的 spring-boot 配置文件*；
+- 用于 Spring Boot 项目的自动化配置，其加载优先级低于bootstrap.yaml。
 -   spring-boot 默认会从4个路径去找 application 配置：
-
 > -   按优先级，假设当前运行目录为`/`，优先级依次为：`/config` > `/` > `classpath:/config` > `classpath:/`
 > -   同时出现在上述四个配置文件中的同名属性，按优先级的覆盖低优先级的。
 > -   分别出现在不同配置文件中的非同名属性，合并后生效。
