@@ -6,13 +6,12 @@ spring-boot项目，有bootstrap、application两个配置文件，结合profile
 - bootstrap.yml 用于应用程序上下文的引导阶段；
 - 由父 Spring ApplicationContext 加载，其工作的阶段为：*父 ApplicationContext 被加载*到*使用 application.yml 之前*。
 - bootstrap 加载优先于 applicaton.yaml。
-- 用于*从额外的资源来加载配置信息*，bootstrap 里面的属性会优先加载，它们默认也不能被本地相同配置覆盖。
+- 用于*从额外的资源来加载配置信息*，bootstrap 里面的属性会优先加载，默认不能被本地相同配置覆盖。
 
-bootstrap 配置文件有以下几个应用场景：
-
--   使用 Spring Cloud Config 配置中心时，这时需要在 bootstrap 配置文件中添加连接到配置中心的配置属性来加载外部配置中心的配置信息；
--   系统级别的一些参数配置，这些参数一般是不会变动的，不能被覆盖的属性
--   一些加密/解密的场景；
+## 应用场景
+-  bootstrap 中添加连接到配置中心的配置属性，以加载外部配置中心的配置；
+-  系统级别的参数配置，不会变动的、不能被覆盖的属性；
+-   加密/解密的场景；
 
 由于spring-boot支持多种文件格式，所以多种格式之间，其优先级是平等的，只要找到了一个，就会被使用。一般有：.properties、.yaml、.xml等格式。
 
