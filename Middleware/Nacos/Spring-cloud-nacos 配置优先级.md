@@ -59,27 +59,24 @@ spring:
 > > -   `${prefix}`：取默认值 `${spring.application.name}`： `ddd-demo-service`。
 > > -   `spring.profiles.active`：取默认值空。
 > > -   `${file-extension}`：取默认值字符串：`.properties`
-> 2.  spring-boot 将在 nacos 的 test2 *namespace*，在 *DEFAULT_GROUP* group 分组下，加载一个 *dataId* 为 ddd-demo-service 的配置。
-> 3.  如果dataId不存在，则继续尝试加载名为 ddd-demo-service 的dataId，该dataId只是前面步骤1中获得的dataId，去掉`file-extension`后缀名。
-> 4.  如果上述两个步骤都没有找到dataId，就不再尝试去找主配置了。
+> 2.  spring-boot 将在 nacos 的 test2 *namespace*，在 *DEFAULT_GROUP* group 分组下，加载一个 *dataId* 为 ddd-demo-service.properties 的配置。
+> 3.  如果dataId不存在，则继续尝试加载dataId 为 ddd-demo-service 的配置，去掉`file-extension`后缀名。
+> 4.  如果两步都没有找到，就不再尝试去找主配置。
 
-在nacos的所有配置中，主配置（存在的情况下）具有最高的优先级，其同名配置值不能被扩展配置或共享配置中定义的同名属性所覆盖。
+- 在 nacos 中，主配置（存在的情况下）具有最高的优先级；
+- 同名配置不能被同名属性所覆盖。
 
 ## 共享配置和扩展配置
-
--   nacos在配置路径 `spring.cloud.nacos.config.extension-configs` 下，允许我们指定一个或多个额外配置。
--   nacos在配置路径 spring.cloud.nacos.config.shared-configs 下，允许我们指定一个或多个共享配置。
-
-上述两类配置都支持三个属性：`data-id`、`group`（默认为字符串 `DEFAULT_GROUP`）、`refresh`（默认为`true`）。
+-  `spring.cloud.nacos.config.extension-configs` 下，允许指定一个或多个额外配置。
+-  `spring.cloud.nacos.config.shared-configs` 下，允许指定一个或多个共享配置。
+- 上述两类配置都支持三个属性：`data-id`、`group`（默认为字符串 `DEFAULT_GROUP`）、`refresh`（默认为`true`）。
 
 ### 共享配置和扩展配置的区别
 
-实际上，nacos中并未对 `extension-configs` 和 `shared-configs` 的差别进行详细阐述。我们从他们的结构，看不出本质差别；除了优先级不同以外，也没有其他差别。那么，nacos项目组为什么要引入两个类似的配置呢?我们可以从当初[该功能的需求（issue）](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Falibaba%2Fspring-cloud-alibaba%2Fissues%2F141)上找到其原始目的。  
-摘要其核心内容如下：
-
+-  `extension-configs` 和 `shared-configs` 优先级不同;
 -   nacos对配置的默认理念
 
-> 根据nacos的默认理念：
+> 根据 nacos 的默认理念：
 > 
 > -   namespace区分环境：开发环境、测试环境、预发布环境、生产环境
 > -   group区分不同应用：同一个环境内，不同应用的配置，通过group来区分。
