@@ -46,10 +46,17 @@ Redis *数据类型和底层数据结构的关系*如下：
 ## zipList 压缩列表
 ![[Redis Ziplist.png]]
 
+压缩列表（ziplist）是Redis为了节省内存而开发的，是由一系列特殊编码的连续内存块组成的顺序型数据结构，一个压缩列表可以包含任意多个节点（entry），每个节点可以保存一个字节数组或者一个整数值
+
 当一个列表只有少量数据的时候，并且每个列表项要么就是小整数值，要么就是长度比较短的字符串，那么 Redis 就会使用压缩列表来做列表键的底层实现
 
+## quicklist
 
+由于使用链表的附加空间相对太高以及内存碎片化等缺点，Redis后续版本对列表数据结构进行改造，使用quicklist代替了ziplist和linkedlist。
 
+**quicklist 是 ziplist 和 linkedlist 的混合体，它将 linkedlist 按段切分，每一段使用 ziplist 来紧凑存储，多个 ziplist 之间使用双向指针串接起来**
+
+![[Redis quick-List.png]]
 
 # 参考
 1. [How fast is Redis? ](https://redis.io/topics/benchmarks)
