@@ -3,11 +3,11 @@
 # 背景
 - **[Redis](https://redis.io/)** 全称为 **Remote Dictionary Server**（远程词典服务）;
 - Redis 作者是一名意大利程序员 Sanfilippo（网名：antirez），早年任职于 LLOOGG.com;
-- LLOOGG.com 当时使用 **MySQL** 数据库， MySQL 每次推入和弹出都要进行*硬盘写入和读取*，程序的**性能严重受制于硬盘 I/O**；
+- LLOOGG.com 当时使用 **MySQL** 数据库， MySQL 每次推入和弹出都要进行*硬盘写入和读取*，程序的**性能严重受制于磁盘 I/O**；
 - antirez 决定写一个具有*列表结构的内存数据库原型*：
 	- 原型支持**复杂度为 O(1) 的推入和弹出**操作；
 	- 将数据储存在内存而不是硬盘，程序的**性能不会受到硬盘 I/O 限制**。
-	- antirez 使用 **C 语言** 重写了这个内存数据库，并给它加上了持久化功能
+	- antirez 后用 **C 语言** 重写了内存数据库，并加上了**持久化功能**。
 
 # Redis速度
 ![[Redis的QPS随连接数变化.png]]
