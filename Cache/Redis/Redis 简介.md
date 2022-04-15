@@ -1,5 +1,9 @@
 #Cache #Redis
 
+# 背景
+- **[Redis](https://redis.io/)** 全称为 **Remote Dictionary Server**（远程词典服务）;
+- 
+
 # Redis速度
 ![[Redis的QPS随连接数变化.png]]
 
