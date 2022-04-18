@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/Redis/Redis 简介.md",
+            "file": "Database/Mybatis-plus/Interceptor.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/Redis/Redis 简介.md",
+                "file": "Database/Mybatis-plus/Interceptor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/Redis/Redis 简介.md"
+                "file": "Database/Mybatis-plus/Interceptor.md"
               }
             }
           },
@@ -127,6 +127,8 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Database/Mybatis-plus/Interceptor.md",
+    "Book Reading/SICP/2. 构造数据抽象.md",
     "Cache/Redis/Redis 简介.md",
     "Cache/CPU 缓存.md",
     "Cache/MESI 协议.md",
@@ -134,8 +136,6 @@
     "Design/计算机科学问题的解决方法.md",
     "OS/2.线程.md",
     "Middleware/Nacos/Spring-cloud-nacos 配置优先级.md",
-    "Middleware/未命名.md",
-    "Framework/Spring/动态代理相关问题.md",
-    "Framework/Spring/Spring 参数解析.md"
+    "Middleware/未命名.md"
   ]
 }
