@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/Springboot+Caffeine本地缓存.md",
+            "file": "Cache/Springboot+Caffeine.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/Springboot+Caffeine本地缓存.md",
+                "file": "Cache/Springboot+Caffeine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/Springboot+Caffeine本地缓存.md"
+                "file": "Cache/Springboot+Caffeine.md"
               }
             }
           },
@@ -127,7 +127,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
-    "Cache/Springboot+Caffeine本地缓存.md",
+    "Cache/Springboot+Caffeine.md",
     "Cache/SpringBoot Multi-CacheManager.md",
     "Cache/MESI 协议.md",
     "基础知识/编程基础/Page请求再处理问题.md",
