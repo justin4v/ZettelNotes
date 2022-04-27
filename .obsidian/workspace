@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Framework/Spring/@ConfigurationProperties.md",
+            "file": "Framework/Spring/动态代理相关问题.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Todo",
+                "query": "不生效",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Framework/Spring/@ConfigurationProperties.md",
+                "file": "Framework/Spring/动态代理相关问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/Spring/@ConfigurationProperties.md"
+                "file": "Framework/Spring/动态代理相关问题.md"
               }
             }
           },
@@ -128,6 +128,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Framework/Spring/动态代理相关问题.md",
     "Framework/Spring/@ConfigurationProperties.md",
     "Language/Java/基础/transient volatile 关键字.md",
     "Cache/Springboot 使用缓存.md",
@@ -136,7 +137,6 @@
     "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
-    "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
-    "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md"
+    "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md"
   ]
 }
