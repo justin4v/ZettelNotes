@@ -1,9 +1,9 @@
-#Cache #Spring #Todo 
+#Cache #Spring #Todo #Springboot 
 
 # Cacheable
 
-expireAfterAccess :每次读取后，超时时间顺延长  
-expireAfterWrite:写入后，超时时间固定，不论访问与否
+expireAfterAccess : 每次读取后，超时时间顺延长  
+expireAfterWrite: 写入后，超时时间固定，不论访问与否
 
 
 # 参考
