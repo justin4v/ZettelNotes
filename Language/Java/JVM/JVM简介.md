@@ -15,6 +15,7 @@ java 应用运行过程中 JVM 中线程和操作系统中的实际线程之间�
 1. Hotspot JVM 中的 **Java 线程与原生操作系统线程有直接的映射关系**。当线程本地存储、缓冲区分配、同步对象、栈、程序计数器等准备好以后，就会创建一个操作系统原生线程。
 2. Java 线程结束，原生线程随之被回收。操作系统负责调度所有线程，并把它们分配到任何可用的 CPU 上。当原生线程初始化完毕，就会调用 Java 线程的 run() 方法。当线程结束时，会释放原生线程和 Java 线程的所有资源。
 
-参见
+# 参见
 1. JVM线程和实现方式：[[3.线程模型]]
 2. JVM 类加载过程：[[JVM类加载机制]]
+3. [Home: Java Platform, Standard Edition (Java SE) 8 Release 8](https://docs.oracle.com/javase/8/)

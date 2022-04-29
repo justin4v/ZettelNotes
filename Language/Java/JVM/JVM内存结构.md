@@ -104,3 +104,7 @@ JDK1.8之前称为永久代，**PermGen space**。
   
 **方法返回地址**
 方法执行完后，返回之前调用它的位置，因此在栈帧中保存一个方法返回地址。
+
+
+# 参考
+1. [Java SE Specifications](https://docs.oracle.com/javase/specs/index.html)
