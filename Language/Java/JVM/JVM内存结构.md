@@ -115,3 +115,4 @@ JDK1.8之前称为永久代，**PermGen space**。
 3. [Permgen vs Metaspace in Java](https://www.baeldung.com/java-permgen-metaspace)
 4. [JEP 122: Remove the Permanent Generation](https://openjdk.java.net/jeps/122)
 5. [JEP 0: JEP Index](https://openjdk.java.net/jeps/0)
+6. [Java JVM Run-time Data Areas](https://javapapers.com/core-java/java-jvm-run-time-data-areas/)
