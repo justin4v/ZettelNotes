@@ -60,7 +60,7 @@ Method Area ：
 
 ## Method Area 实现
 - 逻辑（物理分区）上属于 Heap 的一部分;
-- 为了与 Heap 区分，又称为“**No-Heap（非堆）**”
+- 为了与 Heap 区分，又称为“ **Non-Heap（非堆）****”
 - *Method Area 是规范，规定了这一区域存放的内容*；
 - *永久代（PermGen）和元空间（Metaspace）是对 Method Area 的不同实现*。
 - 永久代（PermGen）是Java 7 之前 JVM 对于Method Area 的实现。
@@ -70,6 +70,7 @@ Method Area ：
 - *永久代是从 Heap 中分配*；
 - 永久代*大小有限制*，如果加载的类太多，很可能导致*内存溢出（OOM）*，即 java.lang.OutOfMemoryError: PermGen;
 - Metaspace *从本地内存（Heap 之外）中分配*，最大为本地内存；
+- Java8 之前静态成员存储在
 
 # PC Registers
 当前线程所执行的字节码的行号指示器，用于记录正在执行的虚拟机字节指令地址，线程私有。
