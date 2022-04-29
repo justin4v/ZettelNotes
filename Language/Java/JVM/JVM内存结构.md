@@ -12,6 +12,11 @@
 - **Method Area** 和 **Heap Area** 是线程共享的。
 - **Stack Area** 、**PC Registers** 和 **Native Method Area**是每个线程独有的。
 
+# Metaspace
+JDK1.8之前称为永久代，**PermGen space**。
+1. JDK1.8开始 **Method Area 被称作 Metaspace(元空间，存放元数据)**；
+2. **存于本地内存**中，最大默认无限制，**最大为系统内存**，不会出现内存溢出错误。
+3. 大小通过`–XX:MetaspaceSize`设置，默认21M。
 
 # Heap
 - Heap 由所有 JVM 进程中的**线程共享**；
@@ -59,12 +64,6 @@ Method Area ：
 1. *线程共享的*；
 2. *JVM 启动时创建*；
 3. **存储类的结构信息（metadata）**。
-
-
-JDK1.8之前称为永久代，**PermGen space**。
-1. JDK1.8开始 **Method Area 被称作 Metaspace(元空间，存放元数据)**；
-2. **存于本地内存**中，最大默认无限制，**最大为系统内存**，不会出现内存溢出错误。
-3. 大小通过`–XX:MetaspaceSize`设置，默认21M。
 
 
 # PC Registers
