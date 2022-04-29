@@ -5,6 +5,9 @@
 
 《java 虚拟机规范》中正式叫法是** Runtime Data Area** （运行时数据区），内存结构是为了方便的称呼。
 
+
+![[JVM runtime structure.png]]
+
 ## 分类
 - **Method Area** 和 **Heap Area** 是线程共享的。
 - **Stack Area** 、**PC Registers** 和 **Native Method Area**是每个线程独有的。
@@ -48,7 +51,7 @@ Heap 初始容量分配根据系统的配置而定（参考 [Ergonomics](https:/
 1. [JDK 8](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/java.html)
 2. [JDK7 HotSpot VM Options](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html)
 
-# Method Area(Metaspace)
+# Method Area
 **Conception**
 Method Area stores **per-class structures（类结构信息）** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
 
