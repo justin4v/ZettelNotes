@@ -12,12 +12,6 @@
 - **Method Area** 和 **Heap Area** 是线程共享的。
 - **Stack Area** 、**PC Registers** 和 **Native Method Area**是每个线程独有的。
 
-# Metaspace
-JDK1.8之前称为永久代，**PermGen space**。
-1. JDK1.8开始 **Method Area 被称作 Metaspace(元空间，存放元数据)**；
-2. **存于本地内存**中，最大默认无限制，**最大为系统内存**，不会出现内存溢出错误。
-3. 大小通过`–XX:MetaspaceSize`设置，默认21M。
-
 # Heap
 - Heap 由所有 JVM 进程中的**线程共享**；
 - **类实例（对象）** 和**数组**空间从 heap 分配；
@@ -29,7 +23,6 @@ JDK1.8之前称为永久代，**PermGen space**。
 根据[[分代收集理论#两个假说|分代收集理论]]，可将 Heap 空间细分为 :**Young Generation 和 Old Generation**（存活的时长不同）
 具体如下图：
 ![[Heap的划分.png]]
-
 *Eden*: 指《圣经》中亚当和夏娃最初居住的地方，这里引申为对象最初存放的位置。参考[[对象分配规则]]
 
 不同区域的关系如下：
@@ -57,13 +50,15 @@ Heap 初始容量分配根据系统的配置而定（参考 [Ergonomics](https:/
 2. [JDK7 HotSpot VM Options](https://www.oracle.com/java/technologies/javase/vmoptions-jsp.html)
 
 # Method Area
-**Conception**
+## JVM 虚拟机规范中定义
 Method Area stores **per-class structures（类结构信息）** such as the *run-time constant pool, field and method data, and the code for methods and constructors, including the special methods* ([§2.9](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-2.html#jvms-2.9 "2.9. Special Methods")) used in class and instance initialization and interface initialization.
 
 Method Area ：
 1. *线程共享的*；
 2. *JVM 启动时创建*；
 3. **存储类的结构信息（metadata）**。
+
+## Method Area 实现
 
 
 # PC Registers
