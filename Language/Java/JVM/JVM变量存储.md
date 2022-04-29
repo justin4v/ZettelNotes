@@ -10,6 +10,9 @@
 5. 常量池（*Method Area*）：存放*字符串常量和基本类型常量（public static final）*。  
 6. 非RAM存储：硬盘等永久存储空间
 
+# 栈/堆/方法区关系
+![[栈-堆-方法区关系.png]]
+
 # 运行时常量池
 - 运行时常量池（Runtime Constant Pool）是方法区的一部分；
 
