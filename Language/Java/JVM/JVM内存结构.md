@@ -68,8 +68,8 @@ Method Area ：
 
 ### Metaspace VS. PermGen
 - *永久代是从 Heap 中分配*；
-- 永久代*大小有限制*，如果加载的类太多，很可能导致内存溢出，即 java.lang.OutOfMemoryError: PermGen;
-- Metaspace *从本地内存（Heap 之外）中分配*，最大为被；
+- 永久代*大小有限制*，如果加载的类太多，很可能导致*内存溢出（OOM）*，即 java.lang.OutOfMemoryError: PermGen;
+- Metaspace *从本地内存（Heap 之外）中分配*，最大为本地内存；
 
 # PC Registers
 当前线程所执行的字节码的行号指示器，用于记录正在执行的虚拟机字节指令地址，线程私有。
