@@ -108,6 +108,7 @@ JDK1.8之前称为永久代，**PermGen space**。
 
 # 参考
 1. [Java SE Specifications](https://docs.oracle.com/javase/specs/index.html)
-2. [JVM Storage for Static Members | Baeldung](https://www.baeldung.com/jvm-static-storage)
-3. [Permgen vs Metaspace in Java | Baeldung](https://www.baeldung.com/java-permgen-metaspace)
-4. [JEP 122: Remove the Permanent Generation (java.net)](https://openjdk.java.net/jeps/122)
+2. [JVM Storage for Static Members](https://www.baeldung.com/jvm-static-storage)
+3. [Permgen vs Metaspace in Java](https://www.baeldung.com/java-permgen-metaspace)
+4. [JEP 122: Remove the Permanent Generation](https://openjdk.java.net/jeps/122)
+5. [JEP 0: JEP Index](https://openjdk.java.net/jeps/0)
