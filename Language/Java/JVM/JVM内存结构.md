@@ -3,7 +3,7 @@
 
 ![[JVM架构图.png]]
 
-《java 虚拟机规范》中正式叫法是** Runtime Data Area** （运行时数据区），内存结构是为了方便的称呼。
+《java 虚拟机规范》中正式叫法是 **Runtime Data Area**  （运行时数据区），内存结构是为了方便的称呼。
 
 
 ![[JVM runtime structure.png]]
