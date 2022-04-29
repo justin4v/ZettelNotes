@@ -14,4 +14,4 @@
 # 参考
 1. [JVM 变量存储位置](https://www.cnblogs.com/sw008/p/11054352.html)
 2. [彻底弄懂java中的常量池](https://cloud.tencent.com/developer/article/1450501)
-3. [JVM详解之:运行时常量池 ](http://www.flydean.com/jvm-run-time-constant-pool/)
+3. [姆级教程，2万字详解JVM](https://cloud.tencent.com/developer/article/1894039)
