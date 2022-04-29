@@ -1,4 +1,4 @@
-#JVM #Memory-structure 
+#JVM #Memory-structure #Todo 
 
 # 简介
 1. 寄存器：最快的存储区, 由编译器根据需求进行分配,程序中无法控制.  
@@ -13,3 +13,5 @@
 
 # 参考
 1. [JVM 变量存储位置](https://www.cnblogs.com/sw008/p/11054352.html)
+2. [彻底弄懂java中的常量池](https://cloud.tencent.com/developer/article/1450501)
+3. [JVM详解之:运行时常量池 ](http://www.flydean.com/jvm-run-time-constant-pool/)
