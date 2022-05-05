@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/GC 算法.md",
+            "file": "Tool/Jenkins/Jenkins Pipeline 动态参数传递 Git 分支.md",
             "mode": "source",
             "source": false
           }
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/GC 算法.md",
+                "file": "Tool/Jenkins/Jenkins Pipeline 动态参数传递 Git 分支.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/GC 算法.md"
+                "file": "Tool/Jenkins/Jenkins Pipeline 动态参数传递 Git 分支.md"
               }
             }
           },
@@ -128,6 +127,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Tool/Jenkins/Jenkins Pipeline 动态参数传递 Git 分支.md",
     "Language/Java/JVM/GC 算法.md",
     "基础知识/编程基础/Stop The World.md",
     "Language/Java/JVM/Minor GC Major GC Full GC.md",
@@ -136,7 +136,6 @@
     "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/JVM内存结构.md",
     "Language/Java/JVM/JVM类加载机制.md",
-    "Language/Java/JVM/JVM变量存储.md",
-    "Language/Java/JVM/JVM简介.md"
+    "Language/Java/JVM/JVM变量存储.md"
   ]
 }
