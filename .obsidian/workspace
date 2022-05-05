@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tool/Jenkins/Jenkins Pipeline 动态参数传递 Git 分支.md",
+            "file": "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tool/Jenkins/Jenkins Pipeline 动态参数传递 Git 分支.md",
+                "file": "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tool/Jenkins/Jenkins Pipeline 动态参数传递 Git 分支.md"
+                "file": "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
     "Tool/Jenkins/Jenkins Pipeline 动态参数传递 Git 分支.md",
     "Language/Java/JVM/GC 算法.md",
     "基础知识/编程基础/Stop The World.md",
@@ -135,7 +136,6 @@
     "Language/Java/JVM/Java 中引用.md",
     "Language/Java/JVM/对象结构.md",
     "Language/Java/JVM/JVM内存结构.md",
-    "Language/Java/JVM/JVM类加载机制.md",
-    "Language/Java/JVM/JVM变量存储.md"
+    "Language/Java/JVM/JVM类加载机制.md"
   ]
 }
