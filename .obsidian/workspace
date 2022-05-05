@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Minor",
+                "query": "STW",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -128,6 +129,7 @@
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
     "Language/Java/JVM/GC 算法.md",
+    "基础知识/编程基础/Stop The World.md",
     "Language/Java/JVM/Minor GC Major GC Full GC.md",
     "Language/Java/JVM/分代收集理论.md",
     "Language/Java/JVM/Java 中引用.md",
@@ -135,7 +137,6 @@
     "Language/Java/JVM/JVM内存结构.md",
     "Language/Java/JVM/JVM类加载机制.md",
     "Language/Java/JVM/JVM变量存储.md",
-    "Language/Java/JVM/JVM简介.md",
-    "Language/Java/JVM/JVM ClassLoader.md"
+    "Language/Java/JVM/JVM简介.md"
   ]
 }

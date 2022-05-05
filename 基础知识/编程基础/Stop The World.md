@@ -1,3 +1,4 @@
+#Java基础 #JVM #GC 
 # Stop The World
 1. Stop-The-World，简称STW，指某个 JVM 事件，如 GC（参考[[GC 算法]]）JIT编译（参考[[JIT 编译器]]）发生过程中，整个 JVM 所有线程暂停的现象。
 2、所有的 GC 都有这个事件。
