@@ -20,6 +20,48 @@
 - *计数为0时可以回收*。
 
 此方法简单，无法解决对象**相互循环引用的问题**。
+- 对象objA和objB都有字段 instance，令 objA.instance=objB 及 objB.instance=objA；
+- 除此之外，*两个对象再无任何引用*，实际上这两个对象已经不可能再被访问；
+- 但是它们因为互相引用着对方，导致引用计数都不为零，*引用计数算法无法回收它们*。
+```java
+/**
+* testGC()方法执行后，objA和objB会不会被GC呢？
+* @author zzm
+*/
+public class ReferenceCountingGC {
+	public Object instance = null;
+	private static final int _1MB = 1024 * 1024;
+	
+	/**
+	* 这个成员属性的唯一意义就是占点内存，以便能在GC日志中看清楚是否有回收过
+	*/
+	private byte[] bigSize = new byte[2 * _1MB];
+	public static void testGC() {
+		ReferenceCountingGC objA = new ReferenceCountingGC();
+		ReferenceCountingGC objB = new ReferenceCountingGC();
+		objA.instance = objB;
+		objB.instance = objA;
+		objA = null;
+		objB = null;
+		// 假设在这行发生GC，objA和objB是否能被回收？
+		System.gc();
+	}
+}
+```
+结果
+```java
+[Full GC (System) [Tenured: 0K->210K(10240K), 0.0149142 secs] 4603K->210K(19456K), [Perm : 2999K->2999K(21248K)], 0.0150007 secs] [Times: user=0.01 sys=0.00, real=0.02 secs]
+Heap
+	def new generation total 9216K, used 82K [0x00000000055e0000, 0x0000000005fe0000, 0x0000000005fe0000)
+	Eden space 8192K, 1% used [0x00000000055e0000, 0x00000000055f4850, 0x0000000005de0000)
+	from space 1024K, 0% used [0x0000000005de0000, 0x0000000005de0000, 0x0000000005ee0000)
+	to space 1024K, 0% used [0x0000000005ee0000, 0x0000000005ee0000, 0x0000000005fe0000)
+	tenured generation total 10240K, used 210K [0x0000000005fe0000, 0x00000000069e0000, 0x00000000069e0000)
+	the space 10240K, 2% used [0x0000000005fe0000, 0x0000000006014a18, 0x0000000006014c00, 0x00000000069e0000)
+	compacting perm gen total 21248K, used 3016K [0x00000000069e0000, 0x0000000007ea0000, 0x000000000bde0000)
+	the space 21248K, 14% used [0x00000000069e0000, 0x0000000006cd2398, 0x0000000006cd2400, 0x0000000007ea0000)
+	No shared spaces configured.
+```
 
 ### 可达性分析（Reachability Analysis）
 - 从 [[#GC ROOT]] 开始向下搜索，搜索所走过的路径称为引用链。
