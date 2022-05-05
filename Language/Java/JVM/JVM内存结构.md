@@ -13,6 +13,7 @@
 - **Stack Area** 、**PC Registers** 和 **Native Method Area**是每个线程独有的。
 
 # Heap
+- 堆中存储内容的*共性*：***存储的只能是对象的实例***；
 - Heap 由所有 JVM 进程中的**线程共享**；
 - **类实例（对象）** 和**数组**空间从 heap 分配；
 - JVM **启动时创建 Heap**。
@@ -20,7 +21,7 @@
 - Heap 空间由 **GC（garbage collector）** 自动回收。
 
 
-根据[[分代收集理论#两个假说|分代收集理论]]，可将 Heap 空间细分为 :**Young Generation 和 Old Generation**（存活的时长不同）
+为了更好地回收内存，或者更快地分配内存，根据[[分代收集理论#两个假说|分代收集理论]]，可将 Heap 空间细分为 :**Young Generation 和 Old Generation**（存活的时长不同）
 具体如下图：
 ![[Heap的划分.png]]
 *Eden*: 指《圣经》中亚当和夏娃最初居住的地方，这里引申为对象最初存放的位置。参考[[对象分配规则]]
