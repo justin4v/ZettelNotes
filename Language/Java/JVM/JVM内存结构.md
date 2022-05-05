@@ -21,7 +21,7 @@
 - Heap 空间由 **GC（garbage collector）** 自动回收。
 
 
-为了更好地回收内存，或者更快地分配内存，根据[[分代收集理论#两个假说|分代收集理论]]，可将 Heap 空间细分为 :**Young Generation 和 Old Generation**（存活的时长不同）
+为了*更好地回收内存*，或者*更快地分配内存*，根据[[分代收集理论#两个假说|分代收集理论]]，可将 Heap 空间细分为 :**Young Generation 和 Old Generation**（存活的时长不同），《Java虚拟机规范》中*并未做此细分*。
 具体如下图：
 ![[Heap的划分.png]]
 *Eden*: 指《圣经》中亚当和夏娃最初居住的地方，这里引申为对象最初存放的位置。参考[[对象分配规则]]
@@ -57,7 +57,7 @@ Method Area stores **per-class structures（类结构信息）** such as the *ru
 Method Area ：
 1. *线程共享的*；
 2. *JVM 启动时创建*；
-3. **存储类的结构信息（metadata）**。
+3. **存储类的结构信息（metadata）**：已被虚拟机加载的*类型信息、常量、静态变量、即时编译器编译后的代码缓存*等数据。
 
 ## Method Area 实现
 - 逻辑（物理分区）上属于 Heap 的一部分;
