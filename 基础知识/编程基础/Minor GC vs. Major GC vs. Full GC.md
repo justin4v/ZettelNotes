@@ -1,3 +1,4 @@
+#Java基础 #GC #JVM 
 # Minor GC/Young GC
 - 从年轻代空间（包括 Eden 和 Survivor 区域）回收内存被称为 Minor GC；
 
