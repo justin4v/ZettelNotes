@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Medical/专业名词.md",
+            "file": "Framework/Spring/@ConfigurationProperties.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "HIS",
+                "query": "Config",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Medical/专业名词.md",
+                "file": "Framework/Spring/@ConfigurationProperties.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Medical/专业名词.md"
+                "file": "Framework/Spring/@ConfigurationProperties.md"
               }
             }
           },
@@ -127,6 +128,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Framework/Spring/@ConfigurationProperties.md",
     "Medical/专业名词.md",
     "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
     "Tool/Jenkins/Jenkins Pipeline 动态参数传递 Git 分支.md",
@@ -135,7 +137,6 @@
     "Language/Java/JVM/Minor GC Major GC Full GC.md",
     "Language/Java/JVM/分代收集理论.md",
     "Language/Java/JVM/Java 中引用.md",
-    "Language/Java/JVM/对象结构.md",
-    "Language/Java/JVM/JVM内存结构.md"
+    "Language/Java/JVM/对象结构.md"
   ]
 }
