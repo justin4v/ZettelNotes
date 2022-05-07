@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Framework/Spring/问题及解析/使用 @Async exposeProxy=true不生效问题.md",
+            "file": "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Framework/Spring/问题及解析/使用 @Async exposeProxy=true不生效问题.md",
+                "file": "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/Spring/问题及解析/使用 @Async exposeProxy=true不生效问题.md"
+                "file": "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md"
               }
             }
           },
@@ -127,10 +127,10 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md",
     "Framework/Spring/问题及解析/使用 @Async exposeProxy=true不生效问题.md",
     "Framework/Spring/问题及解析/@Async 导致循环依赖问题.md",
     "Framework/Spring/问题及解析/Spring Bean 线程安全问题.md",
-    "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md",
     "Framework/Spring/@ConfigurationProperties.md",
     "Framework/Spring/@Transactional.md",
     "Framework/Spring/Spring 参数解析.md",

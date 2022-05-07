@@ -23,6 +23,10 @@ public void saveApi(Api api){
 - SQL 操作在当前类方法中，调用 saveApi() *实际代码为 `this.saveApi(api)`*，非是通过代理类调用，无法被代理。
 
 # 解决方案
+## 方
+
+使*同类调用时切面依然生效*，有以下三个方法：
+
 ## AopContext 获取当前类
  - 使用 `AopContext#currentProxy()`，获取当前类的代理对象，然后调用方法：
 ```java
