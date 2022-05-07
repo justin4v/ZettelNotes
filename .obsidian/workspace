@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/基础/动态代理.md",
+            "file": "Framework/Spring/动态代理相关问题.md",
             "mode": "source",
             "source": false
           }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/基础/动态代理.md",
+                "file": "Framework/Spring/动态代理相关问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/基础/动态代理.md"
+                "file": "Framework/Spring/动态代理相关问题.md"
               }
             }
           },
@@ -128,8 +128,8 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
-    "Language/Java/基础/动态代理.md",
     "Framework/Spring/动态代理相关问题.md",
+    "Language/Java/基础/动态代理.md",
     "Framework/Spring/优秀实践/为什么不推荐@Autowired.md",
     "Book Reading/SICP/3模块化、对象和状态/3.1.3 引进赋值的代价.md",
     "Book Reading/SICP/3模块化、对象和状态/3.1.2 引进赋值的好处.md",
