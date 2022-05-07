@@ -1,4 +1,4 @@
-#Proxy #Spring 
+#Proxy #Spring #AOP 
 
 # 内部方法调用AOP不生效的问题
 - Spring AOP中*内部方法调用，切面逻辑是不生效*。
@@ -38,7 +38,7 @@ public Result create(Api api) {
 - 需要在*启动类加上 @EnableAspectJAutoProxy(exposeProxy = true)*
 - *exposeProxy = true* 用于公开AOP框架代理，公开后才可以通过AopContext获取到当前代理类。
 - 默认情况下不会公开代理，因为会降低性能；
-- **不能保证这种方式一定有效**，使用 *@Async* 时，本方式可能失效。
+- **不能保证这种方式一定有效**，使用 *@Async* 时本方式可能失效。
 
 
 ## @Autowired 注入自身
@@ -61,7 +61,7 @@ public class A{
 }
 ```
 - 一般不会有循环依赖的问题，spring 通过**三级缓存**基本解决了循环依赖问题。
-- 但是 *@Async 仍然有可能导致循环依赖*。
+- 但是 [[@Async 导致循环依赖问题|@Async 仍然有可能导致循环依赖]]。
 
 ## 通过 spring 上下文获取到当前代理类
 ```java
