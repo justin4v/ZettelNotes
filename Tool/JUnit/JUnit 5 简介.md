@@ -37,6 +37,8 @@ JUnit 到目前的结构如下：
 - Junit4中的@Test是import org.junit.Test;  
 - Jupiter中的@Test是import org.junit.jupiter.api.Test;
 
+## 断言
+![[JUnit 断言示意.png]]
 
 # 参考
 1. [Java单元测试之JUnit 5快速上手](https://www.cnblogs.com/one12138/p/11536492.html)
