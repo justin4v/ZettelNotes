@@ -38,6 +38,8 @@ JUnit 到目前的结构如下：
 - Jupiter中的@Test是import org.junit.jupiter.api.Test;
 
 ## 断言
+- Junit4和Junit5中均有*标准断言*
+
 ![[JUnit 断言示意.png]]
 
 # 参考
