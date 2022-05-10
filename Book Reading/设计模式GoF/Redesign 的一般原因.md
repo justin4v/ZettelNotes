@@ -1,5 +1,5 @@
 # 一般原因
-Here are some commoncauses ofredesign along with the design pattern(s)that address them:
+Here are some commoncauses of redesign along with the design pattern(s) that address them:
 
 1. **Creating an object by specifying a class explicitly.（显式的指定一个类创建对象）** Specifying a class name when you create an object commits you to a particular implementation instead of a particular interface. This commitment can complicate future changes. To avoid it, create objects indirectly. 
 	   - **Design patterns**: Abstract Factory ,Factory Method ,Prototype 
