@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tool/JDK工具/线上问题排查示例.md",
-            "mode": "source",
+            "file": "Language/Java/JVM/JVM 重要线程.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -61,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 340
+    "width": 340,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tool/JDK工具/线上问题排查示例.md",
+                "file": "Language/Java/JVM/JVM 重要线程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tool/JDK工具/线上问题排查示例.md"
+                "file": "Language/Java/JVM/JVM 重要线程.md"
               }
             }
           },
@@ -127,15 +128,15 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Language/Java/JVM/JVM 重要线程.md",
+    "Language/Java/基础/transient volatile 关键字.md",
+    "Medical/自定义表单.md",
+    "Book Reading/SICP/1.1基本元素/1.1 基本元素.md",
     "Tool/JDK工具/线上问题排查示例.md",
     "Tool/未命名.md",
     "日常记录/Idea.md",
     "日常记录/重点阅读.md",
     "日常记录/源码阅读.md",
-    "日常记录/ZettelKasten.md",
-    "日常记录/TODOs.md",
-    "日常记录/未命名.md",
-    "日常记录/感悟记录/规律.md",
-    "日常记录/感悟记录/日常感悟列表.md"
+    "日常记录/ZettelKasten.md"
   ]
 }
