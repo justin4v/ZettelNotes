@@ -20,7 +20,7 @@ JVM运行过程中产生的一些比较重要的线程罗列如下：
 通常，JVM会启动多个线程来处理这部分工作，线程名称后面的数字也会累加，例如：`CompilerThread1`。
 
 ## Concurrent Mark-Sweep GC Thread
--**并发标记清除垃圾回收器**（就是通常所说的CMS GC）线程；
+- **并发标记清除垃圾回收器**（就是通常所说的CMS GC）线程；
 - 主要针对于**老年代（old generation）**垃圾回收。
 
 启用该垃圾回收器，需要在JVM启动参数中加上：`-XX:+UseConcMarkSweepGC`。
