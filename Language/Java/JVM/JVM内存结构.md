@@ -37,7 +37,7 @@
 Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 1. `-Xms`： 堆**初始（最小）** 容量（Heap 大小*默认为新生代和老年代容量之和*）。 例如：-Xms20M ;
 2. `-Xmx`： 堆最大容量。 例如：-Xmx30M ;
-3. `-Xmn`： 新生代**初始（最大）**容量。例如：-Xmn10M  ;
+3. `-Xmn`： 新生代**初始（最大）** 容量。例如：-Xmn10M  ;
 4. `-XX:SurvivorRatio`: **Eden/Survivor** 的比例。Eden:form:to的比例默认是8：1：1。例如：-XX： SurvivorRatio=8 代表比例8：1：1。
 5. `-XX:NewRatio`: **old/new** 的比例。默认是2。
 **注意：建议将 -Xms 和 -Xmx 设为相同值，避免每次垃圾回收完成后JVM重新分配内存！**  
