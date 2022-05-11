@@ -22,3 +22,7 @@ JVM 加载 `class` 文件到内存有两种方式：
 当new 一个新对象或者引用静态成员变量时:
 1. JVM 中 ClassLoader SubSystem 将 java.lang.Class 对象加载到JVM中;
 2. JVM **根据类型信息创建实例对象或者静态变量的引用值**。
+
+
+# 参考
+1. [Java类加载器 — classloader 的原理及应用](https://developer.aliyun.com/article/792033)
