@@ -26,3 +26,4 @@ JVM 加载 `class` 文件到内存有两种方式：
 
 # 参考
 1. [Java类加载器 — classloader 的原理及应用](https://developer.aliyun.com/article/792033)
+2. [Java系列 | 远程热部署在美团的落地实践](https://segmentfault.com/a/1190000041581466)
