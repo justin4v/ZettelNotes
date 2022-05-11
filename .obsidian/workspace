@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Script/shell/AWK 命令.md",
+            "file": "Script/shell/Environment.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Script/shell/AWK 命令.md",
+                "file": "Script/shell/Environment.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Script/shell/AWK 命令.md"
+                "file": "Script/shell/Environment.md"
               }
             }
           },
@@ -127,6 +127,8 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Script/shell/Environment.md",
+    "Script/shell/Source命令.md",
     "Script/shell/AWK 命令.md",
     "Language/Java/JVM/JVM ClassLoader.md",
     "Language/Java/JVM/JVM变量存储.md",
@@ -134,8 +136,6 @@
     "Language/Java/JVM/JVM内存结构.md",
     "Language/Java/JVM/GC 算法.md",
     "Language/Java/JVM/Minor GC Major GC Full GC.md",
-    "Book Reading/设计模式GoF/设计模式.md",
-    "Book Reading/设计模式GoF/设计模式如何解决设计问题.md",
-    "Language/Java/编译/逃逸分析.md"
+    "Book Reading/设计模式GoF/设计模式.md"
   ]
 }

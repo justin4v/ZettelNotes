@@ -1,3 +1,4 @@
+#Shell #Linux 
 ## 环境变量
 **KEYS**
 - 实际上就是 **shell 变量**；
