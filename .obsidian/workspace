@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/JVM ClassLoader.md",
+            "file": "Script/shell/AWK 命令.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/JVM ClassLoader.md",
+                "file": "Script/shell/AWK 命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/JVM ClassLoader.md"
+                "file": "Script/shell/AWK 命令.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Script/shell/AWK 命令.md",
     "Language/Java/JVM/JVM ClassLoader.md",
     "Language/Java/JVM/JVM变量存储.md",
     "Language/Java/JVM/JVM类加载机制.md",
@@ -135,7 +136,6 @@
     "Language/Java/JVM/Minor GC Major GC Full GC.md",
     "Book Reading/设计模式GoF/设计模式.md",
     "Book Reading/设计模式GoF/设计模式如何解决设计问题.md",
-    "Language/Java/编译/逃逸分析.md",
-    "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md"
+    "Language/Java/编译/逃逸分析.md"
   ]
 }
