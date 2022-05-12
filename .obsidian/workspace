@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Front/前端入门.md",
+            "file": "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "逃逸",
+                "query": "AOP",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Front/前端入门.md",
+                "file": "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Front/前端入门.md"
+                "file": "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md"
               }
             }
           },
@@ -127,6 +128,7 @@
   },
   "active": "d0972cc50507f87e",
   "lastOpenFiles": [
+    "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md",
     "Front/前端入门.md",
     "Book Reading/设计模式GoF/设计模式如何解决设计问题.md",
     "Script/shell/Environment.md",
@@ -135,7 +137,6 @@
     "Language/Java/JVM/JVM ClassLoader.md",
     "Language/Java/JVM/JVM变量存储.md",
     "Language/Java/JVM/JVM类加载机制.md",
-    "Language/Java/JVM/JVM内存结构.md",
-    "Language/Java/JVM/GC 算法.md"
+    "Language/Java/JVM/JVM内存结构.md"
   ]
 }
