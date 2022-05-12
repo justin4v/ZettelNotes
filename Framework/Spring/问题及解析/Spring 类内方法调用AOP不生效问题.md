@@ -71,6 +71,8 @@ public class A{
 - 但是 [[@Async 导致循环依赖问题|@Async 仍然有可能导致循环依赖]]。
 
 ## 通过 spring 上下文获取到当前代理类
+*推荐方法*
+
 ```java
 // Spring 上下文获取当前代理类
 @Component
@@ -93,16 +95,19 @@ public class SpringBeanUtil implements ApplicationContextAware {
         return applicationContext.getBean(clazz);
     }
 }
+
+
+
 @Service
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
     private StudentMapper studentMapper;
-
     @Override
     public void insertStudent(){
         StudentService bean = SpringBeanUtil.getBean(StudentService.class);
         if (null != bean) {
+		    // 调用同类中有事务注解的方法
             bean.insert();
         }
     }
