@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tool/Test/@MockBean  vs. @SpyBean.md",
+            "file": "Language/编译器和解释器.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tool/Test/@MockBean  vs. @SpyBean.md",
+                "file": "Language/编译器和解释器.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tool/Test/@MockBean  vs. @SpyBean.md"
+                "file": "Language/编译器和解释器.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
+    "Language/编译器和解释器.md",
     "Tool/Test/@MockBean  vs. @SpyBean.md",
     "Tool/Test/@MockBean vs. mock() vs. @Mock.md",
     "Framework/Spring/@ConfigurationProperties.md",
@@ -135,7 +136,6 @@
     "OS/2.线程.md",
     "Framework/Spring/问题及解析/@Async 导致循环依赖问题.md",
     "Database/逻辑&物理删除.md",
-    "Front/前端入门.md",
-    "Database/Mysql/SQL实践/Group By 组内排序.md"
+    "Front/前端入门.md"
   ]
 }
