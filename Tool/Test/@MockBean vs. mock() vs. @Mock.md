@@ -48,13 +48,35 @@ public class MockAnnotationUnitTest {
 
 
 # @MockBean
-- @MockBean 注解将 Mock对 象*添加到 Spring 上下文*中。
+- @MockBean 注解将 Mock 对象*添加到 Spring 上下文*中。
 - Spring context 中同类型的原有 Bean 会被替换，如果没有同类型的 Bean 会新建；
 - 如果需要用 @Mockbean 注解，需要用:
 	-  *@Runwith(SpringRunner.class);
 	- Junit5 中是 *@Runwith(SpringExtention.class)*;
 	- Springboot 中用 *@SpringBootTest*。
 
+```java
+@RunWith(SpringExtention.class)
+public class MockBeanAnnotationIntegrationTest {
+    
+    @MockBean
+    UserRepository mockRepository;
+    
+    @Autowired
+    ApplicationContext context;
+    
+    @Test
+    public void givenCountMethodMocked_WhenCountInvoked_ThenMockValueReturned() {
+        Mockito.when(mockRepository.count()).thenReturn(123L);
+
+        UserRepository userRepoFromContext = context.getBean(UserRepository.class);
+        long userCount = userRepoFromContext.count();
+
+        Assert.assertEquals(123L, userCount);
+        Mockito.verify(mockRepository).count();
+    }
+}
+```
 
 # 参考
 1. [Mockito.mock() vs @Mock vs @MockBean](https://www.baeldung.com/java-spring-mockito-mock-mockbean)
