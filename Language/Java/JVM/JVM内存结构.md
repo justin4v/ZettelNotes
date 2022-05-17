@@ -43,6 +43,7 @@ Heap 各个区域的大小可以通过 JVM 参数控制，控制参数如下：
 3. `-Xmn`： 新生代**初始（最大）** 容量。例如：-Xmn10M  ;
 4. `-XX:SurvivorRatio`: **Eden/Survivor** 的比例。Eden:form:to的比例默认是8：1：1。例如：-XX： SurvivorRatio=8 代表比例8：1：1。
 5. `-XX:NewRatio`: **old/new** 的比例。默认是2。
+6. `-XX:MaxTenuringThreshold=15` : 存活于 Eden 的最大年龄，之后移动到老年代。
 **注意：建议将 -Xms 和 -Xmx 设为相同值，避免每次垃圾回收完成后JVM重新分配内存！**  
 
 Heap 初始容量分配根据系统的配置而定（参考 [Ergonomics](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/ergonomics.html#sthref5)），一般系统（CPU 2 核以上、内存 2 GB 以上）Heap size **默认设置**：

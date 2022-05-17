@@ -10,11 +10,11 @@
 -   目前*只有 [[GC 算法#^e81d32|CMS 收集器]]会有单独收集老年代的行为*。
 
 # Mixed GC
-- 收集整个新生代以及部分老年代的垃圾收集；
+- *收集整个新生代以及部分老年代*的垃圾收集；
 - 目前只有 [[GC 算法#^d3fbb8|G1收集器]]会有这种行为
 
 # Full GC
--   Full GC 是对整个 Heap 和 Method Area的 GC；
+-   Full GC 是对*整个 Heap 和 Method Area的 GC*；
 
 ## 触发条件
 
