@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/内存管理/JVM内存结构.md",
+            "file": "Language/Java/JVM/Java 命令参数.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/内存管理/JVM内存结构.md",
+                "file": "Language/Java/JVM/Java 命令参数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/内存管理/JVM内存结构.md"
+                "file": "Language/Java/JVM/Java 命令参数.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
+    "Language/Java/JVM/Java 命令参数.md",
     "Language/Java/JVM/内存管理/JVM内存结构.md",
     "Language/Java/JVM/JVM简介.md",
     "Language/Java/JVM/Java线程模型.md",
@@ -135,7 +136,6 @@
     "Language/Java/JVM/类加载机制/Hotspot 字节码指令集.md",
     "Language/Java/JVM/垃圾收集/Minor GC Major GC Full GC.md",
     "Language/编译器和解释器.md",
-    "Tool/Test/@MockBean  vs. @SpyBean.md",
-    "Tool/Test/@MockBean vs. mock() vs. @Mock.md"
+    "Tool/Test/@MockBean  vs. @SpyBean.md"
   ]
 }
