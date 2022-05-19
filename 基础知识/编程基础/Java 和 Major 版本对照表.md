@@ -1,3 +1,4 @@
+
 # 对照表
 | Java SE | Released | Major | Supported majors |
 | ------- | -------- | ----- | ---------------- |
