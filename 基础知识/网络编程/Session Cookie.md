@@ -36,9 +36,12 @@
 
 
 # session
-
+## 原理
+- Session机制就是通过检查服务器上的“客户明细表”来确认客户身份。
+- Session相当于程序在服务器上建立的一份客户档案，客户来访的时候只需要查询客户档案表就可以了。
 
 
 # 参考
 1. [JavaWeb学习总结(十二)——Session](https://www.cnblogs.com/xdp-gacl/p/3855702.html)
 2. [Session、Cookie、Token](https://cloud.tencent.com/developer/article/1704064)
+3. [cookie和session的详解与区别](https://www.cnblogs.com/l199616j/p/11195667.html)
