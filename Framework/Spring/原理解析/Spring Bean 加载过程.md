@@ -11,20 +11,21 @@
 Spring 的工作流，主要为两大环节：
 -   **解析**：
 	- 读 *xml 配置*，扫描 *java 类文件*；
-	- 从*配置或注解*中获取 Bean 的定义信息（），注册一些扩展功能。
--   **加载**，通过解析完的定义信息获取 Bean 实例。
+	- 从*配置或注解*中获取 *Bean 的定义信息（`BeanDefinition`）*，注册一些扩展功能。
+-   **加载**：
+	- 通过解析完的 Bean 定义信息*获取 Bean 实例*。
   
   ![[spring 总体流程.png|575]]
-假设所有的配置和扩展类都已经装载到了 ApplicationContext 中，然后具体的分析一下 Bean 的加载流程。
 
-思考一个问题，抛开 Spring 框架的实现，假设我们手头上已经有一套完整的 Bean Definition Map，然后指定一个 beanName 要进行实例化，需要关心什么？即使我们没有 Spring 框架，也需要了解这两方面的知识：
-
--   **作用域**。单例作用域或者原型作用域，单例的话需要全局实例化一次，原型每次创建都需要重新实例化。
--   **依赖关系**。一个 Bean 如果有依赖，我们需要初始化依赖，然后进行关联。如果多个 Bean 之间存在着循环依赖，A 依赖 B，B 依赖 C，C 又依赖 A，需要解这种循环依赖问题。
+- 假设所有的配置和扩展类都已经装载到了 ApplicationContext 中。
+- 假设已经有一套完整的 BeanDefinitionMap，指定一个 beanName 要进行实例化，需要关心什么？
+	- **作用域**。*单例作用域或原型作用*。单例全局实例化一次，原型每次创建都需要重新实例化。
+	- **依赖关系** Bean 如果有依赖，我们需要初始化依赖，然后进行关联。如果多个 Bean 之间存在着循环依赖，A 依赖 B，B 依赖 C，C 又依赖 A，需要解这种循环依赖问题。
 
 Spring 进行了抽象和封装，使得作用域和依赖关系的配置对开发者透明，我们只需要知道当初在配置里已经明确指定了它的生命周期和依赖了谁，至于是怎么实现的，依赖如何注入，托付给了 Spring 工厂来管理。
 
 Spring 只暴露了很简单的接口给调用者，比如 `getBean` ：
+
 ```java
 ApplicationContext context = new ClassPathXmlApplicationContext("hello.xml");
 HelloBean helloBean = (HelloBean) context.getBean("hello");
