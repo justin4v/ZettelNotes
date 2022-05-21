@@ -42,8 +42,11 @@
 	- 在 ApplicationContext 中提供了其他附加服务，ApplicationContext 与简单的 BeanFactory 相比，使用上是一种*面向框架*的风格。
 
 ## 其他
-- 这里主要涉及接口关系，具体的IoC容器都是在改接口体系下实现的。如 DefaultListableBeanFactory 。
-- 
+- 这里主要涉及接口关系，具体的IoC容器都是在改接口体系下实现的。
+	- 如 DefaultListableBeanFactory ，就是实现了 ConfigurableBeanFactory，从而成为一个简单IoC容器的实现。
+	- 其他IoC容器，如 XmlBeanFactory，都是在 DefaultListableBeanFactory 的基础上做扩展，ApplicationContext 也是。
+- 这个接口系统是以 BeanFactory 和 ApplicationContext 上下文为核心的。
+	- BeanFactory又是IoC容器的最基本接口,
 
 ## BeanDefinition
  - Spring 中的一个 bean 实例，具有属性值、构造函数以及由实现提供的信息；
