@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:Naming",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -61,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209
+    "width": 209,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -95,7 +96,7 @@
               "type": "tag",
               "state": {
                 "sortOrder": "alphabetical",
-                "useHierarchy": false
+                "useHierarchy": true
               }
             }
           },
@@ -118,7 +119,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
