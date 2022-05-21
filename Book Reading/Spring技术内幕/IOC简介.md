@@ -2,11 +2,15 @@
 # 控制反转
 - IoC：**Inversion of Control** 控制反转，是一种设计原则。
 - 在2004年，Martin Fowler 提出“*哪些方面的控制被反转了？*"的问题。
-- 结论是：**依赖对象的*获得*被反转了**。
+- 结论是：**依赖对象的*获得*被反转了-责任反转**。
 - 他为控制反转创造了一个更好的名字：*依赖注入(DI, Dependency Injection)*，是 *IoC 原则的一种实现模式*。
 	- 许多应用都是由*两个或多个类通过彼此的合作来实现业逻辑*，使得每个对象都需要合作对象（所依赖的对象）的引用。
 	- 如果获取过程要靠自身实现，那么将导致代码*高度耦合且难以测试*。
 - Spring IoC是Spring-Framework的核心。
+- 简化了应用开发，吧应用从
+
+
+# 应用
 
 # Spring IoC 容器系列简介
 
@@ -34,7 +38,6 @@
 	- 容器 Bean 返回值不考虑层级(HierarchicalBeanFactory 接口)的 Bean，*只读取当前容器定义的信息*。
 	- 可以通过 BeanFactoryUtils 工具类来获取在父 BeanFactory 中的 Bean。
 - *ApplicationContext* 通过继承 *MessageSource（解析Message）*、*ResourceLoader（加载文件资源）*、*ApplicationEventPublisher（注册 Listener）* ，在BeanFactory 的基础上添加了*高级容器的特性*。
-
 	- *支持不同的信息源*。扩展了 MessageSource ，这些信息源的扩展功能可以支持国际化的实现，为开发多语言版本的应用提供服务。
 	- *访问资源*。体现在对ResourceLoader和Resource的支持上，可以从不同地方得到 Bean 定义资源。一般来说，具体 AppIicationContext 都继承了 DefaultResourceLoader 的子类。
 	- *支持应用事件*。继承了 ApplicationEventPublisher，引人了事件机制。和 Bean 生命周期的结合为Bean的管理提供了便利。
