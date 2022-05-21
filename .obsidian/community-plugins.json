@@ -3,5 +3,7 @@
   "markdown-prettifier",
   "obsidian-mind-map",
   "table-editor-obsidian",
-  "note-refactor-obsidian"
+  "note-refactor-obsidian",
+  "obsidian-excalidraw-plugin",
+  "obsidian-pandoc"
 ]
