@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Framework/Spring/原理解析/Spring Bean 加载过程.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -129,6 +129,7 @@
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
     "Framework/Spring/原理解析/Spring Bean 加载过程.md",
+    "附件/spring 总体流程.png",
     "附件/Bean加载过程.png",
     "Framework/Spring/未命名.md",
     "日常记录/快捷键设置.md",
@@ -136,7 +137,6 @@
     "基础知识/网络编程/SOAP.md",
     "基础知识/编程基础/对称加密和非对称加密.md",
     "基础知识/编程基础/正则表达式.md",
-    "基础知识/编程基础/字节码访问标志.md",
-    "基础知识/编程基础/字节码字段描述符.md"
+    "基础知识/编程基础/字节码访问标志.md"
   ]
 }
