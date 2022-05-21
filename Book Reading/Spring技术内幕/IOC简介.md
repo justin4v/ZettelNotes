@@ -7,12 +7,11 @@
 	- 许多应用都是由*两个或多个类通过彼此的合作来实现业逻辑*，使得每个对象都需要合作对象（所依赖的对象）的引用。
 	- 如果获取过程要靠自身实现，那么将导致代码*高度耦合且难以测试*。
 - Spring IoC是Spring-Framework的核心。
-- 简化了应用开发，吧应用从
+- 简化了应用开发，把应用从复杂的对象依赖关系管理中解放出来。
 
 
-# 应用
 
-# Spring IoC 容器系列简介
+# Spring IoC 容器设计
 
 ![[IoC 容器接口设计图.png]]
 
@@ -21,7 +20,7 @@
 - BeanFactory 的 Specification (规约)如下
 
 ![[BeanFactory结构.png]]
-- 从 *BeanFactory => HierarchicalBeanFactory => ConfigurableBeanFactory*，是一条主要的 BeanFactory 设计路径。
+- 从 *BeanFactory => HierarchicalBeanFactory => ConfigurableBeanFactory*，是一条主**要的 BeanFactory 设计路径**。
 - *BeanFactory* 体现了**容器工厂的概念**，定义了基本的 *IoC 容器规范*。包含 loC 容器的基本方法（ 如 `getBean()`，从容器中取得Bean）。
 - *HierarchicalBeanFactory* 继承了 BeanFactory，增加了 `getParentBeanFactory()` 功能，容器工厂具备了*双亲 IoC 容器管理功能*。
 - *ConfigurableBeanFactory* 主要定义了对 *BeanFactory 的配置功能*：
@@ -31,8 +30,7 @@
 
 ## ApplicationContext
 应用上下文，高级容器系列，增加了面向框架特性
-
-- 第二条设计主线：以 *ApplicationContext*(应用上下文) 为核心的接口设计，*BeanFactory => ListableBeanFactory =>App]icationContext => WebApplicationContext 或者ConfigurableApplicationContext*。
+- 第二条设计主线：以 *ApplicationContext*(应用上下文) 为核心的接口设计，*BeanFactory => ListableBeanFactory =>App]icationContext => WebApplicationContext 或ConfigurableApplicationContext*。
 - 常用的应用上下文是 *ConfigurableApplicationContext* 或者 *WebApplicationContext* 的实现。
 - *ListableBeanFactory* 指*可列出所有 bean* 而不是当客户端请求时一个一个查找的 Bean-Factorty。 实现类一般都有**预先加载 bean-的definition 的功能**（XML-based factories ）。
 	- 容器 Bean 返回值不考虑层级(HierarchicalBeanFactory 接口)的 Bean，*只读取当前容器定义的信息*。
@@ -42,6 +40,8 @@
 	- *访问资源*。体现在对ResourceLoader和Resource的支持上，可以从不同地方得到 Bean 定义资源。一般来说，具体 AppIicationContext 都继承了 DefaultResourceLoader 的子类。
 	- *支持应用事件*。继承了 ApplicationEventPublisher，引人了事件机制。和 Bean 生命周期的结合为Bean的管理提供了便利。
 	- 在 ApplicationContext 中提供了其他附加服务，ApplicationContext 与简单的 BeanFactory 相比，使用上是一种*面向框架*的风格。
+
+
 
 ## BeanDefinition
  - Spring 中的一个 bean 实例，具有属性值、构造函数以及由实现提供的信息；
