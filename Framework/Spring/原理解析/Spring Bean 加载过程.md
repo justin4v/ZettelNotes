@@ -1,4 +1,4 @@
-#Spring #Springboot #Todo #Bean
+#Spring #Springboot #Todo #BeanLoad
 
 
 # 1. 概述
@@ -14,6 +14,7 @@ Spring 的工作流，主要为两大环节：
 	- 从*配置或注解*中获取 *Bean 的定义信息（`BeanDefinition`）*，注册一些扩展功能。
 -   **加载**：
 	- 通过解析完的 Bean 定义信息*获取 Bean 实例*。
+- 
   
   ![[spring 总体流程.png|575]]
 ## Spring Bean加载流程入口
@@ -34,7 +35,7 @@ HelloBean helloBean = (HelloBean) context.getBean("hello");
 helloBean.sayHello();
 ```
   
-- 以 `getBean` 方法作为入口，理解 Spring 加载的流程，以及内部对创建信息、作用域、依赖关系等等的处理细节。
+- *以 `getBean` 方法为入口*，理解 *Spring 加载的流程*，以及内部*创建信息、作用域、依赖关系*等等的处理细节。
 
 # 2. 总体流程
 ![[Bean加载过程.png]]
@@ -467,7 +468,7 @@ protected Object doCreateBean ...  {
 
 读取缓存的地方见 `DefaultSingletonBeanRegistry` :
 
-```kotlin
+```java
 protected Object getSingleton(String beanName, boolean allowEarlyReference) {
     Object singletonObject = this.singletonObjects.get(beanName);
     if (singletonObject == null && isSingletonCurrentlyInCreation(beanName)) {
@@ -487,7 +488,7 @@ protected Object getSingleton(String beanName, boolean allowEarlyReference) {
 }
 ```
 
-先尝试从 `singletonObjects` 和 `singletonFactory` 读取，没有数据，然后尝试 `singletonFactories` 读取 singletonFactory，执行 `getEarlyBeanReference` 获取到引用后，存储到 `earlySingletonObjects` 中。
+先尝试从 `singletonObjects` 和 `earlySingletonObjects` 读取，没有数据，然后尝试 `singletonFactories` 读取 singletonFactory，执行 `getEarlyBeanReference` 获取到引用后，存储到 `earlySingletonObjects` 中。
 
 这个 `earlySingletonObjects` 的好处是，如果此时又有其他地方尝试获取未初始化的单例，可以从 `earlySingletonObjects` 直接取出而不需要再调用 `getEarlyBeanReference`。
 
