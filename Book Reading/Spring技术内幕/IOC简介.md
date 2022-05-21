@@ -41,7 +41,9 @@
 	- *支持应用事件*。继承了 ApplicationEventPublisher，引人了事件机制。和 Bean 生命周期的结合为Bean的管理提供了便利。
 	- 在 ApplicationContext 中提供了其他附加服务，ApplicationContext 与简单的 BeanFactory 相比，使用上是一种*面向框架*的风格。
 
-
+## 其他
+- 这里主要涉及接口关系，具体的IoC容器都是在改接口体系下实现的。如 DefaultListableBeanFactory 。
+- 
 
 ## BeanDefinition
  - Spring 中的一个 bean 实例，具有属性值、构造函数以及由实现提供的信息；
