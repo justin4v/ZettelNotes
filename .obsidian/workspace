@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/快捷键设置.md",
-            "mode": "source",
+            "file": "Framework/Spring/原理解析/Spring Bean 加载过程.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/快捷键设置.md",
+                "file": "Framework/Spring/原理解析/Spring Bean 加载过程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/快捷键设置.md"
+                "file": "Framework/Spring/原理解析/Spring Bean 加载过程.md"
               }
             }
           },
@@ -128,15 +128,15 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
+    "Framework/Spring/原理解析/Spring Bean 加载过程.md",
+    "附件/Bean加载过程.png",
+    "Framework/Spring/未命名.md",
     "日常记录/快捷键设置.md",
-    "Framework/Spring/Spring Bean 加载过程.md",
     "基础知识/网络编程/Session Cookie.md",
     "基础知识/网络编程/SOAP.md",
     "基础知识/编程基础/对称加密和非对称加密.md",
     "基础知识/编程基础/正则表达式.md",
     "基础知识/编程基础/字节码访问标志.md",
-    "基础知识/编程基础/字节码字段描述符.md",
-    "基础知识/编程基础/API vs. SPI.md",
-    "基础知识/编程基础/Cron 表达式.md"
+    "基础知识/编程基础/字节码字段描述符.md"
   ]
 }

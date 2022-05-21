@@ -10,7 +10,7 @@ Spring 作为 Ioc 框架，实现了依赖注入，由一个中心化的 Bean �
 -   **解析**，读 xml 配置，扫描类文件，从配置或者注解中获取 Bean 的定义信息，注册一些扩展功能。
 -   **加载**，通过解析完的定义信息获取 Bean 实例。
   
-  ![[spring 总体流程.png]]
+  ![[spring 总体流程.png|375]]
 假设所有的配置和扩展类都已经装载到了 ApplicationContext 中，然后具体的分析一下 Bean 的加载流程。
 
 思考一个问题，抛开 Spring 框架的实现，假设我们手头上已经有一套完整的 Bean Definition Map，然后指定一个 beanName 要进行实例化，需要关心什么？即使我们没有 Spring 框架，也需要了解这两方面的知识：
