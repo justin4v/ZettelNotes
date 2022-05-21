@@ -1,4 +1,4 @@
-#Spring #Springboot #Todo #BeanLoad
+#Spring #Springboot #Todo #Bean-loading
 
 
 # 1. 概述
@@ -14,7 +14,7 @@ Spring 的工作流，主要为两大环节：
 	- 从*配置或注解*中获取 *Bean 的定义信息（`BeanDefinition`）*，注册一些扩展功能。
 -   **加载**：
 	- 通过解析完的 Bean 定义信息*获取 Bean 实例*。
-- 
+- 本文主要描述*从 BeanDefinitionMap 开始的加载过程*；
   
   ![[spring 总体流程.png|575]]
 ## Spring Bean加载流程入口
