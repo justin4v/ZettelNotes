@@ -74,7 +74,3 @@
 	- `ApplicationContext` 的设计中：
 		- 一方面继承了 BeanFactory 接口体系中的 `ListableBeanFactory`、`AutowireCapableBeanFactory`、`HierarchicalBeanFactory` 等接口，*具备了 IoC 容器的基本功能*；
 		- 另一方面继承了 MessageSource、ResourceLoader、ApplicationEventPublisher 等接口，*为 ApplicationContext 赋予了更高级特性*。
-
-# BeanDefinition
- - Spring 中的一个 bean 实例，具有*属性值、构造函数以及由实现提供的信息*；
- - 主要目的*允许 BeanFactoryPostProcessor 查看和修改 Bean 的属性值和元数据*；
