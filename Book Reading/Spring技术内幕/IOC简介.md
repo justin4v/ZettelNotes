@@ -17,10 +17,11 @@
 
 # Bean Factory主线
 ## BeanFactory
-- The root interface for accessing a Spring bean container. 
-- This is the basic client view of a bean container; further interfaces such as ListableBeanFactory and org.springframework.beans.factory.config.ConfigurableBeanFactory are available for specific purposes.
+- The *root interface for accessing a Spring bean container*. 
+	> - This is the *basic client view* of a bean container; 
+	> - further interfaces such as *ListableBeanFactory* and *ConfigurableBeanFactory* are available f*or specific purposes*.
 - This interface is implemented by objects that hold a number of bean definitions, each uniquely identified by a String name. 
-- Depending on the bean definition, the factory will return either an independent instance of a contained object (the Prototype design pattern), or a single shared instance (a superior alternative to the Singleton design pattern, in which the instance is a singleton in the scope of the factory). Which type of instance will be returned depends on the bean factory configuration: the API is the same.
+- Depending on the bean definition, the factory will return either an independent instance of a contained object (the *Prototype* design pattern), or a single shared instance (a superior alternative to the *Singleton* design pattern, in which the instance is a singleton in the scope of the factory). Which type of instance will be returned depends on the bean factory configuration.
 
 
 简单容器工厂（概念层次），包含了容器的基本功能
@@ -36,7 +37,7 @@
 - 这些接口设计的叠加，定义了 BeanFactory 作为简单 loc容器的基本功能。
 
 ## HierarchicalBeanFactory
-- Sub-interface implemented by bean factories that can be part of a hierarchy.
+- Sub-interface implemented by bean factories that can be *part of a hierarchy*.
 - The corresponding *setParentBeanFactory* method for bean factories that allow setting the parent in a configurable fashion can be found in the ConfigurableBeanFactory interface
 
 ## ConfigurableBeanFactory
