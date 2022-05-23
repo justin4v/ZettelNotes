@@ -45,8 +45,22 @@
 - This extended interface is just meant to allow for framework-internal plugin and for special access to bean factory configuration methods
 
 
-# Bean Factory 高级特性
+# Bean Factory副线-高级特性
+## ListableBeanFactory
+- Extension of the BeanFactory interface to be implemented by bean factories that can enumerate all their bean instances, rather than attempting bean lookup by name one by one as requested by clients. BeanFactory implementations that preload all their bean definitions (such as XML-based factories) may implement this interface.
+- If this is a HierarchicalBeanFactory, the return values will not take any BeanFactory hierarchy into account, but will relate only to the beans defined in the current factory. Use the BeanFactoryUtils helper class to consider beans in ancestor factories too.
+- The methods in this interface will just respect bean definitions of this factory. They will ignore any singleton beans that have been registered by other means like org.springframework.beans.factory.config.ConfigurableBeanFactory's registerSingleton method, with the exception of getBeanNamesOfType and getBeansOfType which will check such manually registered singletons too. Of course, BeanFactory's getBean does allow transparent access to such special beans as well. However, in typical scenarios, all beans will be defined by external bean definitions anyway, so most applications don't need to worry about this differentiation.
+- NOTE: With the exception of getBeanDefinitionCount and containsBeanDefinition, the methods in this interface are not designed for frequent invocation. Implementations may be slow
 ## ApplicationContext
+- Central interface to provide configuration for an application. This is read-only while the application is running, but may be reloaded if the implementation supports this.
+- An ApplicationContext provides:
+	- Bean factory methods for accessing application components. Inherited from ListableBeanFactory.
+	- The ability to load file resources in a generic fashion. Inherited from the org.springframework.core.io.ResourceLoader interface.
+	- The ability to publish events to registered listeners. Inherited from the ApplicationEventPublisher interface.
+	- The ability to resolve messages, supporting internationalization. Inherited from the MessageSource interface.
+	- Inheritance from a parent context. Definitions in a descendant context will always take priority. This means, for example, that a single parent context can be used by an entire web application, while each servlet has its own child context that is independent of that of any other servlet.
+- In addition to standard org.springframework.beans.factory.BeanFactory lifecycle capabilities, ApplicationContext implementations detect and invoke ApplicationContextAware beans as well as ResourceLoaderAware, ApplicationEventPublisherAware and MessageSourceAware beans.
+
 应用上下文，高级容器系列，增加了面向框架特性
 - 第二条设计主线：以 *ApplicationContext*(应用上下文) 为核心的接口设计，*BeanFactory => ListableBeanFactory =>App]icationContext => WebApplicationContext 或ConfigurableApplicationContext*。
 - 常用的应用上下文是 *ConfigurableApplicationContext* 或者 *WebApplicationContext* 的实现。
