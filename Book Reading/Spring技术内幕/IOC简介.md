@@ -43,12 +43,12 @@
 ## ConfigurableBeanFactory
 - *Configuration interface* to be implemented by most bean factories. *Provides facilities to configure a bean factory*, in addition to the bean factory client methods in the BeanFactory interface.
 - This bean factory interface is *not meant to be used in normal application code*，You should stick to use *BeanFactory or ListableBeanFactory for typical needs*. 
-- This extended interface is just meant to allow for framework-internal plugin and for special access to bean factory configuration methods
+- This extended interface is just *meant to allow for framework-internal plugin and special access* to bean factory configuration methods
 
 
 # Bean Factory副线-高级特性
 ## ListableBeanFactory
-- Extension of the BeanFactory interface to be implemented by bean factories that can enumerate all their bean instances, rather than attempting bean lookup by name one by one as requested by clients. BeanFactory implementations that preload all their bean definitions (such as XML-based factories) may implement this interface.
+- Extension of the BeanFactory interface to be implemented by bean factories that can *enumerate all their bean instances*, rather than attempting bean lookup by name one by one as requested by clients. BeanFactory implementations that preload all their bean definitions (such as XML-based factories) may implement this interface.
 - If this is a HierarchicalBeanFactory, the return values will not take any BeanFactory hierarchy into account, but will relate only to the beans defined in the current factory. Use the BeanFactoryUtils helper class to consider beans in ancestor factories too.
 - The methods in this interface will just respect bean definitions of this factory. They will ignore any singleton beans that have been registered by other means like org.springframework.beans.factory.config.ConfigurableBeanFactory's registerSingleton method, with the exception of getBeanNamesOfType and getBeansOfType which will check such manually registered singletons too. Of course, BeanFactory's getBean does allow transparent access to such special beans as well. However, in typical scenarios, all beans will be defined by external bean definitions anyway, so most applications don't need to worry about this differentiation.
 - NOTE: With the exception of getBeanDefinitionCount and containsBeanDefinition, the methods in this interface are not designed for frequent invocation. Implementations may be slow
