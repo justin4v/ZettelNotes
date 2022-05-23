@@ -15,7 +15,15 @@
 
 ![[IoC 容器接口设计图.png]]
 
+# Bean Factory简介
+
 ## BeanFactory
+- The root interface for accessing a Spring bean container. 
+- This is the basic client view of a bean container; further interfaces such as ListableBeanFactory and org.springframework.beans.factory.config.ConfigurableBeanFactory are available for specific purposes.
+- This interface is implemented by objects that hold a number of bean definitions, each uniquely identified by a String name. 
+- Depending on the bean definition, the factory will return either an independent instance of a contained object (the Prototype design pattern), or a single shared instance (a superior alternative to the Singleton design pattern, in which the instance is a singleton in the scope of the factory). Which type of instance will be returned depends on the bean factory configuration: the API is the same.
+
+
 简单容器工厂（概念层次），包含了容器的基本功能
 - BeanFactory 的 Specification (规约)如下
 
