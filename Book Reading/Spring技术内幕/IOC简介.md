@@ -15,8 +15,7 @@
 
 ![[IoC 容器接口设计图.png]]
 
-# Bean Factory简介
-
+# Bean Factory主线
 ## BeanFactory
 - The root interface for accessing a Spring bean container. 
 - This is the basic client view of a bean container; further interfaces such as ListableBeanFactory and org.springframework.beans.factory.config.ConfigurableBeanFactory are available for specific purposes.
@@ -36,6 +35,17 @@
 	- `addBeanPostProcessor()` 配置 Bean 后置处理器。
 - 这些接口设计的叠加，定义了 BeanFactory 作为简单 loc容器的基本功能。
 
+## HierarchicalBeanFactory
+- Sub-interface implemented by bean factories that can be part of a hierarchy.
+- The corresponding *setParentBeanFactory* method for bean factories that allow setting the parent in a configurable fashion can be found in the ConfigurableBeanFactory interface
+
+## ConfigurableBeanFactory
+- Configuration interface to be implemented by most bean factories. Provides facilities to configure a bean factory, in addition to the bean factory client methods in the BeanFactory interface.
+- This bean factory interface is not meant to be used in normal application code: Stick to BeanFactory or org.springframework.beans.factory.ListableBeanFactory for typical needs. 
+- This extended interface is just meant to allow for framework-internal plugin and for special access to bean factory configuration methods
+
+
+# Bean Factory 高级特性
 ## ApplicationContext
 应用上下文，高级容器系列，增加了面向框架特性
 - 第二条设计主线：以 *ApplicationContext*(应用上下文) 为核心的接口设计，*BeanFactory => ListableBeanFactory =>App]icationContext => WebApplicationContext 或ConfigurableApplicationContext*。
