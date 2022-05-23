@@ -42,6 +42,7 @@
 - The methods in this interface *will just respect bean definitions of this factory*. They will ignore any singleton beans that have been registered by other means like ConfigurableBeanFactory's registerSingleton method, with the exception of getBeanNamesOfType and getBeansOfType which will check such manually registered singletons too. 
 - Of course, BeanFactory's getBean does allow transparent access to such special beans as well. However, in typical scenarios, all beans will be defined by external bean definitions anyway, so most applications don't need to worry about this differentiation.
 - NOTE: With the exception of getBeanDefinitionCount and containsBeanDefinition, the methods in this interface are not designed for frequent invocation. Implementations may be slow.
+
 ## ApplicationContext
 - Central interface to *provide configuration for an application*. This is read-only while the application is running, but may be reloaded if the implementation supports this.
 - An ApplicationContext provides:
