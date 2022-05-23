@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/Spring技术内幕/Spring IoC 容器设计.md",
+            "file": "Framework/Spring/原理解析/Spring Aware 接口.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/Spring技术内幕/Spring IoC 容器设计.md",
+                "file": "Framework/Spring/原理解析/Spring Aware 接口.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/Spring技术内幕/Spring IoC 容器设计.md"
+                "file": "Framework/Spring/原理解析/Spring Aware 接口.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
+    "Framework/Spring/原理解析/Spring Aware 接口.md",
     "Book Reading/Spring技术内幕/Spring IoC 容器设计.md",
     "Book Reading/Spring技术内幕/IOC简介.md",
     "Book Reading/Spring技术内幕/DefaultListableBeanFactory.md",
@@ -135,7 +136,6 @@
     "Book Reading/Spring技术内幕/控制反转.md",
     "Book Reading/Spring技术内幕/IoC设计.md",
     "Framework/Spring/Spring 源码调试.md",
-    "Framework/Spring/原理解析/Spring Bean 加载过程.md",
-    "附件/spring 总体流程.png"
+    "Framework/Spring/原理解析/Spring Bean 加载过程.md"
   ]
 }
