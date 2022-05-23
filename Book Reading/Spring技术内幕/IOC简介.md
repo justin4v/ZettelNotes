@@ -38,11 +38,11 @@
 
 ## HierarchicalBeanFactory
 - Sub-interface implemented by bean factories that can be *part of a hierarchy*.
-- The corresponding *setParentBeanFactory* method for bean factories that allow setting the parent in a configurable fashion can be found in the ConfigurableBeanFactory interface
+- The corresponding *setParentBeanFactory* method for bean factories that allow *setting the parent in a configurable fashion can be found in the ConfigurableBeanFactory interface*
 
 ## ConfigurableBeanFactory
-- Configuration interface to be implemented by most bean factories. Provides facilities to configure a bean factory, in addition to the bean factory client methods in the BeanFactory interface.
-- This bean factory interface is not meant to be used in normal application code: Stick to BeanFactory or org.springframework.beans.factory.ListableBeanFactory for typical needs. 
+- *Configuration interface* to be implemented by most bean factories. *Provides facilities to configure a bean factory*, in addition to the bean factory client methods in the BeanFactory interface.
+- This bean factory interface is *not meant to be used in normal application code*，You should stick to use *BeanFactory or ListableBeanFactory for typical needs*. 
 - This extended interface is just meant to allow for framework-internal plugin and for special access to bean factory configuration methods
 
 
