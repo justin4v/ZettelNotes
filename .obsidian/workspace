@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Framework/Spring/原理解析/Spring 容器启动流程.md",
+            "file": "Framework/Spring/原理解析/ignoreDependencyInterface.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Framework/Spring/原理解析/Spring 容器启动流程.md",
+                "file": "Framework/Spring/原理解析/ignoreDependencyInterface.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/Spring/原理解析/Spring 容器启动流程.md"
+                "file": "Framework/Spring/原理解析/ignoreDependencyInterface.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
+    "Framework/Spring/原理解析/ignoreDependencyInterface.md",
     "Framework/Spring/原理解析/Spring 容器启动流程.md",
     "Pasted image 20220523172055.png.md",
     "附件/Spring启动-refresh步骤.png",
@@ -135,7 +136,6 @@
     "附件/Pasted image 20220124101201.png",
     "附件/Pasted image 20220215172010.png",
     "附件/Pasted image 20220223112933.png",
-    "附件/Pasted image 20220523172055.png",
-    "附件/Pasted image 20220302191454.png"
+    "附件/Pasted image 20220523172055.png"
   ]
 }
