@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Book Reading/Spring深度解析/DefaultListableBeanFactory.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -61,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 325
+    "width": 325,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -128,14 +129,14 @@
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
     "Book Reading/Spring深度解析/DefaultListableBeanFactory.md",
+    "DefaultListableBeanFactory继承关系.png.md",
+    "附件/DefaultListableBeanFactory继承关系.png",
     "Framework/Spring/原理解析/ignoreDependencyInterface.md",
     "Framework/Spring/原理解析/Spring Bean 加载过程.md",
     "Framework/Spring/原理解析/Spring Aware 接口.md",
     "Framework/Spring/原理解析/Spring 容器启动流程.md",
     "Framework/Spring/Spring Schedule.md",
     "Framework/Spring/Spring 源码调试.md",
-    "Framework/Spring/Spring 参数解析.md",
-    "Framework/Spring/@Transactional.md",
-    "Book Reading/Spring深度解析/Spring IoC 容器设计.md"
+    "Framework/Spring/Spring 参数解析.md"
   ]
 }
