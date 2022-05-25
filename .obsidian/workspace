@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/Spring深度解析/DefaultListableBeanFactory.md",
+            "file": "基础知识/网络编程/SqlSession.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Spring启动",
+                "query": "session",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/Spring深度解析/DefaultListableBeanFactory.md",
+                "file": "基础知识/网络编程/SqlSession.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/Spring深度解析/DefaultListableBeanFactory.md"
+                "file": "基础知识/网络编程/SqlSession.md"
               }
             }
           },
@@ -127,6 +127,8 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
+    "基础知识/网络编程/SqlSession.md",
+    "基础知识/网络编程/Session Cookie.md",
     "Book Reading/Spring深度解析/DefaultListableBeanFactory.md",
     "Book Reading/Spring深度解析/Spring IoC 容器设计.md",
     "Book Reading/Spring深度解析/IOC简介.md",
@@ -134,8 +136,6 @@
     "Framework/Spring/原理解析/Spring 容器启动流程.md",
     "Framework/Spring/原理解析/Spring Aware 接口.md",
     "Framework/Spring/原理解析/Spring Bean 加载过程.md",
-    "DefaultListableBeanFactory继承关系.png.md",
-    "附件/DefaultListableBeanFactory继承关系.png",
-    "Framework/Spring/Spring Schedule.md"
+    "DefaultListableBeanFactory继承关系.png.md"
   ]
 }
