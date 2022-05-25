@@ -1,7 +1,8 @@
 #Java基础 #JVM #Multi-threads #Thread-safe #TLAB  #Problem-and-Solutions 
 
 # 线程
-- 线程的本质是函数的运行。
+- 线程的本质是函数的运行，。
+- JVM 中线程间共享
 
 # 参考
 1. [[JVM内存结构]]
