@@ -6,8 +6,8 @@
 
 
 # 意图功能简介
--   AliasRegistry：定义对 Bean *alias* 的**增删查操作规范**（规约层面要求）。
--   SimpleAliasRegistry：主要使用map作为alias的缓存，并对接口AliasRegistry进行实现。
+-   AliasRegistry：定义对 Bean *Alias* 的**增删查操作规范**（规约层面要求对 Alias 具有增删查操作）。
+-   SimpleAliasRegistry：对接口 AliasRegistry 进行实现，主要使用map作为alias的缓存，并。
 -   SingletonBeanRegistry：定义对单例的注册及获取。
 -   BeanFactory：定义获取bean及bean的各种属性。
 -   DefaultSingletonBeanRegistry：对接口SingletonBeanRegistry各函数的实现。
