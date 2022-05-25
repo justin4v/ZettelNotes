@@ -19,7 +19,7 @@
 -   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的*默认实现*。持有三种缓存：
 	- `Map<String, Object> singletonObjects`：singleton objects 缓存 *bean name -> bean instance*;
 	- `Map<String, ObjectFactory<?>> singletonFactories`: singleton factories 缓存 *bean name -> ObjectFactory*;
-	- `Map<String, Object> earlySingletonObjects`: early singleton objects 缓存 *bean name -> bean instance*;
+	- `Map<String, Object> earlySingletonObjects`: early singleton objects 缓存 *bean name -> bean instance*，提前暴露的 Singleton bean 引用（注册到 beanFactory ）。
 
 
 -   *HierarchicalBeanFactory*：
