@@ -10,7 +10,8 @@
 -   *SimpleAliasRegistry*：
 	- 对接口 AliasRegistry 的简单*实现*，使用 *aliasMap（map<name, alias>）* 作为缓存。
 	- 对 Alias 的*注册、删除、获取*操作都是针对 aliasMap 的操作。
--   *BeanDefinitionRegistry*：定义对 BeanDefinition 的各种增删改操作。
+-   *BeanDefinitionRegistry*：定义对 BeanDefinition 的**注册、删除、获取操作规范**。
+	- Spring bean 工厂中唯一封装了 BeanDefinition 
 
 -   *SingletonBeanRegistry*：定义对单例的**注册、获取操作规范**。
 -   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的*默认实现*。
