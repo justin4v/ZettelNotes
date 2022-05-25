@@ -6,12 +6,14 @@
 
 
 # 意图功能简介
--   *AliasRegistry*：定义对 Bean *Alias* 的**注册、删除、查询操作规范**（规约层面要求对 Alias 具有增删查操作）。
+-   *AliasRegistry*：定义对 Bean *Alias* 的**注册、删除、获取操作规范**（*规约层面要求对 Alias 具有注册、删除、查询*操作）。
 -   *SimpleAliasRegistry*：对接口 AliasRegistry 的简单*实现*，使用 *map<name, alias>* 作为缓存。
+
 -   *SingletonBeanRegistry*：定义对单例的**注册、获取操作规范**。
--   *BeanFactory*：定义获取bean及bean的各种属性。
--   DefaultSingletonBeanRegistry：对接口SingletonBeanRegistry各函数的实现。
--   HierarchicalBeanFactory：继承BeanFactory，也就是在BeanFactory定义的功能的基础上增加了对parentFactory的支持。
+-   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的默认实现。
+
+-   *BeanFactory*：定义*获取 bean 和各种属性（factory）的操作规范*。
+-   *HierarchicalBeanFactory*：继承自 BeanFactory，在 BeanFactory 基础上增加了对 parentFactory 的支持。
 -   BeanDefinitionRegistry：定义对BeanDefinition的各种增删改操作。
 -   FactoryBeanRegistrySupport：在DefaultSingletonBeanRegistry基础上增加了对FactoryBean的特殊处理功能。
 -   ConfigurableBeanFactory：提供配置Factory的各种方法。
