@@ -16,18 +16,18 @@
 	- `DefaultListableBeanFactory` 实现了该接口：BeanDefinition 存储（同时操作处于）在 *Map<String, BeanDefinition> beanDefinitionMap*。
 
 -   *SingletonBeanRegistry*：定义对单例（singleton）的**注册、获取操作规范**。
--   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的*默认实现*。持有三种缓存：
+-   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的*默认实现*。持有三种缓存（目的是为了**解决 setter 和 field 注入的循环依赖**）：
 	- `Map<String, Object> singletonObjects`：singleton objects 缓存 *bean name -> bean instance*;
 	- `Map<String, ObjectFactory<?>> singletonFactories`: singleton factories 缓存 *bean name -> ObjectFactory*;
-	- `Map<String, Object> earlySingletonObjects`: early singleton objects 缓存 *bean name -> bean instance*，提前暴露的 Singleton bean 引用（注册到 beanFactory ）。
-
+	- `Map<String, Object> earlySingletonObjects`: early singleton objects 缓存 *bean name -> bean instance*，提前暴露的 Singleton bean 引用（刚注册到 beanFactory *还没有注入属性等*）。
+-   *FactoryBeanRegistrySupport*：在 DefaultSingletonBeanRegistry 基础上增加了对 FactoryBean 的特殊处理功能。
 
 -   *HierarchicalBeanFactory*：
 	- 继承自 `BeanFactory`，用于处理具有继承层级( Hierarchy )结构的 BeanFactory。
 	- 增加了对 `parentFactory` 的支持（`getParentBeanFactory()`）。
 	- `parentFactory` 的设置在 `ConfigurableBeanFactory#setParentBeanFactory`。
 
--   FactoryBeanRegistrySupport：在 DefaultSingletonBeanRegistry 基础上增加了对FactoryBean的特殊处理功能。
+
 -   ConfigurableBeanFactory：提供配置Factory的各种方法。
 -   ListableBeanFactory：根据各种条件获取bean的配置清单。
 -   AbstractBeanFactory：综合FactoryBeanRegistrySupport和ConfigurableBeanFactory的功能。
