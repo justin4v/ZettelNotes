@@ -32,8 +32,11 @@
 	- `Map<String, Object> earlySingletonObjects`: early singleton objects 缓存 *bean name -> bean instance*，提前暴露的 Singleton bean 引用（刚注册到 beanFactory *还没有注入属性等*）。
 	-   *FactoryBeanRegistrySupport*：在 `DefaultSingletonBeanRegistry` 基础上增加了对 FactoryBean 其他功能。
 		- 如`getObjectFromFactoryBean()` 功能；
-		- 
--   AbstractBeanFactory：综合FactoryBeanRegistrySupport和ConfigurableBeanFactory的功能。
+		- 持有 `Map<String, Object> factoryBeanObjectCache` singleton objects created by FactoryBeans 缓存： *FactoryBean name -> object*。
+		- 作为 `AbstractBeanFactory` 基类。
+-   *AbstractBeanFactory*：综合 FactoryBeanRegistrySupport 和 ConfigurableBeanFactory 的功能。
+	- 主要 *模板方法* 是 `getBeanDefinition` 和 `createBean`，分别检索 beanDefinition 和 创建bean实例。
+	- 
 
 
 
