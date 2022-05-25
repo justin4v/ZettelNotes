@@ -13,6 +13,7 @@
 -   *BeanDefinitionRegistry*：定义对 BeanDefinition 的**注册、删除、获取操作规范**。
 	- Spring beanFactory 中*唯一定义了 BeanDefinition 注册操作规范*的接口。
 	- 标准的 BeanFactory 接口一般只包括对*完全配置完成的（fully configured）* BeanFactory 实例的访问。
+	- `DefaultListableBeanFactory` 实现了该接口：BeanDefinition 存储（同时操作处于）在 *Map<String, BeanDefinition> beanDefinitionMap*。
 
 -   *SingletonBeanRegistry*：定义对单例的**注册、获取操作规范**。
 -   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的*默认实现*。
@@ -29,3 +30,5 @@
 -   AbstractBeanFactory：综合FactoryBeanRegistrySupport和ConfigurableBeanFactory的功能。
 -   AutowireCapableBeanFactory：提供创建bean、自动注入、初始化以及应用bean的后处理器。
 -   AbstractAutowireCapableBeanFactory：综合AbstractBeanFactory并对接口Autowire Capable BeanFactory进行实现。
+- ConfigurableListableBeanFactory：BeanFactory配置清单，指定忽略类型及接口等。
+-  DefaultListableBeanFactory：综合上面所有功能，主要是对bean注册后的处理。
