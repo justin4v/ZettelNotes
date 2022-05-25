@@ -35,8 +35,9 @@
 		- 持有 `Map<String, Object> factoryBeanObjectCache` singleton objects created by FactoryBeans 缓存： *FactoryBean name -> object*。
 		- 作为 `AbstractBeanFactory` 基类。
 -   *AbstractBeanFactory*：综合 FactoryBeanRegistrySupport 和 ConfigurableBeanFactory 的功能。
-	- 主要 *模板方法* 是 `getBeanDefinition` 和 `createBean`，分别检索 beanDefinition 和 创建bean实例。
-	- 
+	- 主要 *模板方法* 是 `getBeanDefinition` 和 `createBean`，分别*查询 beanDefinition 和 创建 bean 实例*，由子类实现。
+	- BeanFactory implementation 的*抽象基类*，提供了 *ConfigurableBeanFactory SPI 的全部功能*；
+	- 默认实现为  `DefaultListableBeanFactory`.
 
 
 
