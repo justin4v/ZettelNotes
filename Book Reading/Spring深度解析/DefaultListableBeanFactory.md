@@ -15,16 +15,17 @@
 	- 标准的 BeanFactory 接口一般只包括对*完全配置完成的（fully configured）* BeanFactory 实例的访问。
 	- `DefaultListableBeanFactory` 实现了该接口：BeanDefinition 存储（同时操作处于）在 *Map<String, BeanDefinition> beanDefinitionMap*。
 
--   *SingletonBeanRegistry*：定义对单例的**注册、获取操作规范**。
--   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的*默认实现*。
+-   *SingletonBeanRegistry*：定义对单例（singleton）的**注册、获取操作规范**。
+-   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的*默认实现*。持有三种缓存：
+	- 三种缓存：`Map<String, Object> singletonObjects`
 
--   *BeanFactory*：定义*获取 bean 和各种属性（factory）的操作规范*。
+
 -   *HierarchicalBeanFactory*：
 	- 继承自 `BeanFactory`，用于处理具有继承层级( Hierarchy )结构的 BeanFactory。
 	- 增加了对 `parentFactory` 的支持（`getParentBeanFactory()`）。
 	- `parentFactory` 的设置在 `ConfigurableBeanFactory#setParentBeanFactory`。
 
--   FactoryBeanRegistrySupport：在DefaultSingletonBeanRegistry基础上增加了对FactoryBean的特殊处理功能。
+-   FactoryBeanRegistrySupport：在 DefaultSingletonBeanRegistry 基础上增加了对FactoryBean的特殊处理功能。
 -   ConfigurableBeanFactory：提供配置Factory的各种方法。
 -   ListableBeanFactory：根据各种条件获取bean的配置清单。
 -   AbstractBeanFactory：综合FactoryBeanRegistrySupport和ConfigurableBeanFactory的功能。
