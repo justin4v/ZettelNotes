@@ -5,13 +5,14 @@
 ![[DefaultListableBeanFactory继承关系.png|700]]
 
 
-# 意图功能简介
+# 意图/功能简介
 -   *AliasRegistry*：定义对 Bean *Alias* 的**注册、删除、获取操作规范**（*规约层面要求对 Alias 具有注册、删除、查询*操作）。
 -   *SimpleAliasRegistry*：
 	- 对接口 AliasRegistry 的简单*实现*，使用 *aliasMap（map<name, alias>）* 作为缓存。
 	- 对 Alias 的*注册、删除、获取*操作都是针对 aliasMap 的操作。
 -   *BeanDefinitionRegistry*：定义对 BeanDefinition 的**注册、删除、获取操作规范**。
-	- Spring bean 工厂中唯一封装了 BeanDefinition 
+	- Spring beanFactory 中*唯一定义了 BeanDefinition 注册操作规范*的接口。
+	- 标准的 BeanFactory 接口一般只包括对*完全配置完成的（fully configured）* BeanFactory 实例的访问。
 
 -   *SingletonBeanRegistry*：定义对单例的**注册、获取操作规范**。
 -   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的*默认实现*。
