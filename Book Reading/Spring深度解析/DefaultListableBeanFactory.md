@@ -17,7 +17,9 @@
 
 -   *SingletonBeanRegistry*：定义对单例（singleton）的**注册、获取操作规范**。
 -   *DefaultSingletonBeanRegistry*：接口 SingletonBeanRegistry 的*默认实现*。持有三种缓存：
-	- 三种缓存：`Map<String, Object> singletonObjects`
+	- `Map<String, Object> singletonObjects`：singleton objects 缓存 *bean name -> bean instance*;
+	- `Map<String, ObjectFactory<?>> singletonFactories`: singleton factories 缓存 *bean name -> ObjectFactory*;
+	- `Map<String, Object> earlySingletonObjects`: early singleton objects 缓存 *bean name -> bean instance*;
 
 
 -   *HierarchicalBeanFactory*：
