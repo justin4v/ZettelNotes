@@ -9,7 +9,7 @@
 ![[JVM runtime structure.png]]
 
 ## 分类
-- **Method Area** 和 **Heap Area** 是线程共享的。
+- **Method Area** 和 **Heap Area** 是**线程共享**的。
 - **Stack Area** 、**PC Registers** 和 **Native Method Area**是每个线程独有的。
 
 # Heap
