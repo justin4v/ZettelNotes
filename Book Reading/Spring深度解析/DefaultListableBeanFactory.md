@@ -27,6 +27,8 @@
 	- 应用代码不应该直接使用该接口，应使用 `BeanFactory` 和 `ListableBeanFactory`。
 	- 其他框架的集成代码可利用该接口*填充 Spring 无法控制的 bean 实例*。
 -   *AbstractAutowireCapableBeanFactory*：综合 AbstractBeanFactory 并对接口 AutowireCapableBeanFactory 进行实现。
+	- 提供了 *bean creation (with constructor resolution), property population, wiring (including autowiring), and initialization*. Handles runtime bean references, resolves managed collections, calls initialization methods, etc. Supports autowiring constructors, properties by name, and properties by type
+	- 需要子类实现的主要模板方法是
 - ConfigurableListableBeanFactory：BeanFactory配置清单，指定忽略类型及接口等。
 
 -   *SingletonBeanRegistry*：定义对单例（singleton）的**注册、获取操作规范**。
