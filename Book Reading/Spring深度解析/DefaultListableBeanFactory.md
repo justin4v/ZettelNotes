@@ -20,7 +20,9 @@
 	- 增加了对 `parentFactory` 的支持（`getParentBeanFactory()`）。
 	- `parentFactory` 的设置在 `ConfigurableBeanFactory#setParentBeanFactory`。
 -   *ListableBeanFactory*：定义了**根据各种条件获取 bean 和 beanDefinition 的操作规范**。
--   *ConfigurableBeanFactory*：定义了配置Factory的各种方法。
+-   *ConfigurableBeanFactory*：定义了**配置 BeanFactory 的各种操作规范**。
+	- 应用代码不应该直接使用该接口，应使用
+	- 这个扩展接口是为了支持*框架内部的即插即用*和对bean工厂配置方法的特殊访问
 -   AutowireCapableBeanFactory：提供创建bean、自动注入、初始化以及应用bean的后处理器。
 -   AbstractAutowireCapableBeanFactory：综合AbstractBeanFactory并对接口Autowire Capable BeanFactory进行实现。
 - ConfigurableListableBeanFactory：BeanFactory配置清单，指定忽略类型及接口等。
