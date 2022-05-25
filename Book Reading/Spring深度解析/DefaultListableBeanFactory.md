@@ -18,7 +18,23 @@
 
 ## BeanFactory
 - **定义了容器的基本功能规范**
-
+```java
+org.springframework.beans.factory.BeanFactory#containsBean
+org.springframework.beans.factory.BeanFactory#getAliases
+org.springframework.beans.factory.BeanFactory#getBean(java.lang.Class<T>)
+org.springframework.beans.factory.BeanFactory#getBean(java.lang.Class<T>, java.lang.Object...)
+org.springframework.beans.factory.BeanFactory#getBean(java.lang.String)
+org.springframework.beans.factory.BeanFactory#getBean(java.lang.String, java.lang.Class<T>)
+org.springframework.beans.factory.BeanFactory#getBean(java.lang.String, java.lang.Object...)
+org.springframework.beans.factory.BeanFactory#getBeanProvider(java.lang.Class<T>)
+org.springframework.beans.factory.BeanFactory#getBeanProvider(org.springframework.core.ResolvableType)
+org.springframework.beans.factory.BeanFactory#getType(java.lang.String)
+org.springframework.beans.factory.BeanFactory#getType(java.lang.String, boolean)
+org.springframework.beans.factory.BeanFactory#isPrototype
+org.springframework.beans.factory.BeanFactory#isSingleton
+org.springframework.beans.factory.BeanFactory#isTypeMatch(java.lang.String, java.lang.Class<?>)
+org.springframework.beans.factory.BeanFactory#isTypeMatch(java.lang.String, org.springframework.core.ResolvableType)
+```
 
 -   *HierarchicalBeanFactory*：
 	- 继承自 `BeanFactory`，用于处理具有继承层级( Hierarchy )结构的 BeanFactory。
