@@ -38,3 +38,4 @@ AccountContext[]
 
 # 参考
 1. [ApplicationContext (Spring Framework 5.3.20 API)](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html)
+2. [关于编程中Context的理解_HiCoderMan的博客](https://blog.csdn.net/u200814499/article/details/60478821)
