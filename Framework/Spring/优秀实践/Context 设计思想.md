@@ -36,6 +36,11 @@ AccountContext[]
 -   其次，第二层是会话上下文，同时和多个不同的好友聊天，每个聊天的上下文数据隔离
 -   最后，第三层的会话实体，包含会话ID之类的数据
 
+
+# Context switch
+CPU切换前把当前任务的状态保存下来，以便下次切换回这个任务时可以再次加载这个任务的状态，然后加载下一任务的状态并执行。任务的状态保存及再加载
+
+
 # 参考
 1. [ApplicationContext (Spring Framework 5.3.20 API)](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html)
 2. [关于编程中Context的理解_HiCoderMan的博客](https://blog.csdn.net/u200814499/article/details/60478821)
