@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/消息队列设计精要.md",
+            "file": "Cache/Redis/Redis Stream 实现消息队列.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/消息队列设计精要.md",
+                "file": "Cache/Redis/Redis Stream 实现消息队列.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/消息队列设计精要.md"
+                "file": "Cache/Redis/Redis Stream 实现消息队列.md"
               }
             }
           },
@@ -127,8 +127,8 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
-    "Cache/消息队列设计精要.md",
     "Cache/Redis/Redis Stream 实现消息队列.md",
+    "Cache/消息队列设计精要.md",
     "日常记录/TODOs.md",
     "Framework/Spring/优秀实践/Context 设计思想.md",
     "Framework/Spring/原理解析/Spring Aware 接口.md",
