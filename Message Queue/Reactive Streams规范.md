@@ -115,13 +115,13 @@ public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
 
 - 发布者（publisher）是潜在无限数量的有序元素的生产者。 
 	- 根据收到的要求向当前订阅者发送元素。
-- 订阅者（subscriber）从发布者那里订阅(Publisher.subscribe() )并接收元素。
-	-  Publisher 创建的元素的接收者. 监听指定的事件,例如OnNext,OnComplete,OnError等
-
+- 订阅者（subscriber）从  publisher 订阅(Publisher.subscribe() )并接收元素。
+	-  *监听指定的事件*，例如OnNext,OnComplete,OnError等
 - *订阅（subscription）* ：
 	- Publisher 和 Subscriber *一对一的协调对象*；
 	- Subscriber 可通过 subscription 向 Publisher 取消数据发送或者 request 更多数据。
-- 处理者（processor）充当订阅者和发布者的处理阶段。 `Processor`接口继承了`Publisher`和`Subscriber`接口。 它用于转换 发布者–订阅者 管道中的元素。 **`Processor<T,R>`订阅类型 T 的数据元素，接收并转换为类型 R 的数据，并发布变换后的数据 R 。**
+- 处理者（processor）：
+- 充当订阅者和发布者的处理阶段。 `Processor`接口继承了`Publisher`和`Subscriber`接口。 它用于转换 发布者–订阅者 管道中的元素。 **`Processor<T,R>`订阅类型 T 的数据元素，接收并转换为类型 R 的数据，并发布变换后的数据 R 。**
 
 
 
