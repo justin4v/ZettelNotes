@@ -43,7 +43,7 @@
 - Session 机制就是通过检查服务器上的 “*客户明细表*” 来确认客户身份。
 - Session 相当于程序在服务器上建立的一份客户档案，客户来访的时候只需要查询客户档案表就可以了。
 
-
+- 服务器创建session出来后，会把session的id号，以cookie的形式回写给客户机
 # 参考
 1. [JavaWeb学习总结(十二)——Session](https://www.cnblogs.com/xdp-gacl/p/3855702.html)
 2. [Session、Cookie、Token](https://cloud.tencent.com/developer/article/1704064)
