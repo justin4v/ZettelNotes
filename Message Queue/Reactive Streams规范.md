@@ -121,7 +121,8 @@ public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
 	- Publisher 和 Subscriber *一对一的协调对象*；
 	- Subscriber 可通过 subscription 向 Publisher 取消数据发送或者 request 更多数据。
 - 处理者（processor）：
-- 充当订阅者和发布者的处理阶段。 `Processor`接口继承了`Publisher`和`Subscriber`接口。 它用于转换 发布者–订阅者 管道中的元素。 **`Processor<T,R>`订阅类型 T 的数据元素，接收并转换为类型 R 的数据，并发布变换后的数据 R 。**
+	-  `Processor`接口继承了`Publisher`和`Subscriber`接口。 
+	- **`Processor<T,R>`订阅类型 T 的数据元素，接收并转换为类型 R 的数据，并发布变换后的数据 R 。**
 
 
 
