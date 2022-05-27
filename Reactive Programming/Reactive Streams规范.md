@@ -1,8 +1,7 @@
 #Reactive-streams #Publish-subscribe
 # Reactive Streams 标准
 
-### 含义
-
+## 含义
 reactive stream 是一个标准，它的目标是定义带有非阻塞背压的异步数据流（可供线程间交换），它定义了实现非阻塞的back pressure的最小区间的接口，方法和协议。
 
 reactive stream 可以有各种实现，如 JDK 9的响应流式API，Project-Reactor（Pivotal 公司 ）等。
@@ -10,7 +9,7 @@ reactive stream 可以有各种实现，如 JDK 9的响应流式API，Project-Re
 其中，Reactive Streams规范诞生于 **Reactor** 之后，**Reactor** 是在2.0.0.RC1版本时，支持了Reactive Streams规范，点击查看[版本BLOG](https://spring.io/blog/2015/02/18/reactor-2-0-0-rc1-with-native-reactive-streams-support-now-available)。
 
 
-### 设计意图
+## 设计意图
 
 The main goal of Reactive Streams is to govern the exchange of stream data across an asynchronous boundary – think passing elements on to another thread or thread-pool — while ensuring that the receiving side is not forced to buffer arbitrary amounts of data.
 
@@ -22,15 +21,13 @@ back pressure 是 Reactive Streams 模型中使得线程之间交换队列有界
 
 
 
-### Stream （流）
-
+## Stream （流）
 **Stream流是由生产者生产并由一个或多个消费者消费的元素（item）的序列**。
 
  **生产者——消费者模型** 也被称为 **source/sink（源-库） 模型**或 **publisher-subscriber（发布者-订阅者）模型**。 
 
 
-
-### 优点
+## 优点
 
 I/O阻塞浪费了系统性能，只有纯异步处理才能发挥系统的全部性能；而JDK的异步API比较难用，成为异步编程的瓶颈，这是**Reactor**等其它反应式框架诞生的原因。
 
@@ -48,7 +45,7 @@ JDK的异步API使用的是传统的**命令式编程**，命令式编程是以�
 
 
 
-#### 流处理机制
+### 流处理机制
 
 有几种**流处理机制**，其中**pull模型**和**push模型**是最常见的。
 
@@ -60,7 +57,7 @@ JDK的异步API使用的是传统的**命令式编程**，命令式编程是以�
 
 
 
-#### 速率同步问题
+### 速率同步问题
 
  发布者和订阅者都以同样的速率工作，这是一个理想的情况，这些模式非常有效。 我们会考虑一些情况，如果**发布者和订阅者不按同样的速率工作**，这种情况下涉及的问题以及对应的解决办法。
 
@@ -75,7 +72,7 @@ JDK的异步API使用的是传统的**命令式编程**，命令式编程是以�
 
 
 
-### 响应式流
+## 响应式流
 
 响应式流从2013年开始，作为提供非阻塞背压的异步流处理标准的倡议。 它旨在解决处理元素流的问题——如何将元素流从发布者传递到订阅者，而不需要发布者阻塞，或订阅者有无限制的缓冲区或丢弃。
 
@@ -86,7 +83,7 @@ JDK的异步API使用的是传统的**命令式编程**，命令式编程是以�
 - 当订阅者较慢时，它使用pull模型 – 根据自身情况，**主动通知发布者推送数据；**
 - 当订阅者更快时使用push模型 – 定义一个更大的背压上限，**由发布者自由推送数据**。
 
-### API
+## API
 
 reactive streams 只包含四个接口：
 
@@ -122,6 +119,7 @@ public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
 - 处理者（processor）：
 	-  `Processor`接口继承了`Publisher`和`Subscriber`接口。 
 	- **`Processor<T,R>`订阅类型 T 的数据元素，接收并转换为类型 R 的数据，并发布变换后的数据 R 。**
+
 
 # 参考
 1. [Reactive Streams-01 ](https://hcqbuqingzhen.github.io/2022/02/11/001-reactive-streams/)
