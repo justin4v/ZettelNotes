@@ -36,7 +36,10 @@
 - 当浏览器再请求该网站时，浏览器把请求的网址连同 Cookie 一同提交给服务器。
 - 服务器检查该Cookie，校验用户状态。
 
+## cookie 不可跨域
+很多网站都会使用Cookie。例如，Google会向客户端颁发Cookie，Baidu也会向客户端颁发Cookie。那浏览器访问Google会不会也携带上Baidu颁发的Cookie呢？或者Google能不能修改Baidu颁发的Cookie呢？
 
+答案是否定的。**Cookie具有不可跨域名性**。根据Cookie规范，浏览器访问Google只会携带Google的Cookie，而不会携带Baidu的Cookie。Google也只能操作Google的Cookie，而不能操作Baidu的Cookie。
 
 # session
 ## 原理
@@ -44,6 +47,8 @@
 - Session 相当于程序在服务器上建立的一份客户档案，客户来访的时候只需要查询客户档案表就可以了。
 
 - 服务器创建session出来后，会把session的id号，以cookie的形式回写给客户机
+
+
 # 参考
 1. [JavaWeb学习总结(十二)——Session](https://www.cnblogs.com/xdp-gacl/p/3855702.html)
 2. [Session、Cookie、Token](https://cloud.tencent.com/developer/article/1704064)
