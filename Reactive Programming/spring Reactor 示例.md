@@ -26,6 +26,9 @@ Reactor中，发布者Publisher负责生产数据，有两种发布者，Flux可
 - `3` 创建 publisher-subscriber 订阅关系，生产者开始生产数据，并传递给订阅者
 
 ## 调用链分析
+
+![[spring Reactor 示例 2022-05-27 17.45.18]]
+
 ### Flux.range
 
 Flux.range，Flux.fromArray 等静态方法都会返回一个Flux子类，如 FluxRange，FluxArray。

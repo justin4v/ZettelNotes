@@ -7,10 +7,20 @@
         "id": "0b4a570633b2b450",
         "type": "leaf",
         "state": {
+          "type": "excalidraw",
+          "state": {
+            "file": "附件/Excalidraw/spring Reactor 示例 2022-05-27 17.45.18.md"
+          }
+        }
+      },
+      {
+        "id": "4344211b338ef667",
+        "type": "leaf",
+        "state": {
           "type": "markdown",
           "state": {
             "file": "Reactive Programming/spring Reactor 示例.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -61,7 +71,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 325
+    "width": 325,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reactive Programming/spring Reactor 示例.md",
+                "file": "附件/Excalidraw/spring Reactor 示例 2022-05-27 17.45.18.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reactive Programming/spring Reactor 示例.md"
+                "file": "附件/Excalidraw/spring Reactor 示例 2022-05-27 17.45.18.md"
               }
             }
           },
@@ -127,6 +138,7 @@
   },
   "active": "0b4a570633b2b450",
   "lastOpenFiles": [
+    "附件/Excalidraw/spring Reactor 示例 2022-05-27 17.45.18.md",
     "Reactive Programming/spring Reactor 示例.md",
     "附件/Excalidraw/Drawing 2022-05-27 17.33.18.md",
     "附件/Excalidraw/Drawing 2022-05-27 17.33.18.png",
@@ -135,7 +147,6 @@
     "Excalidraw/Drawing 2022-05-27 17.21.37.excalidraw.md",
     "Excalidraw/Drawing 2022-05-27 17.25.04.excalidraw.md",
     "基础知识/网络编程/Session Cookie.md",
-    "Reactive Programming/Java 实现.md",
-    "Message Queue/JMS.md"
+    "Reactive Programming/Java 实现.md"
   ]
 }
