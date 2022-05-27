@@ -7,11 +7,9 @@
         "id": "e25acf2ade613d2c",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "excalidraw",
           "state": {
-            "file": "Reactive Programming/spring Reactor 示例.md",
-            "mode": "source",
-            "source": false
+            "file": "Excalidraw/Drawing 2022-05-27 17.21.37.excalidraw.md"
           }
         }
       }
@@ -78,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reactive Programming/spring Reactor 示例.md",
+                "file": "Excalidraw/Drawing 2022-05-27 17.21.37.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reactive Programming/spring Reactor 示例.md"
+                "file": "Excalidraw/Drawing 2022-05-27 17.21.37.excalidraw.md"
               }
             }
           },
@@ -128,6 +126,7 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2022-05-27 17.21.37.excalidraw.md",
     "Reactive Programming/spring Reactor 示例.md",
     "Reactive Programming/Reactive Streams规范.md",
     "基础知识/网络编程/Session Cookie.md",
@@ -136,7 +135,6 @@
     "Message Queue/消息模型.md",
     "Message Queue/Redis Stream 实现消息队列.md",
     "OS/Linux/exec().md",
-    "OS/Linux/fork.md",
-    "OS/Copy on write.md"
+    "OS/Linux/fork.md"
   ]
 }

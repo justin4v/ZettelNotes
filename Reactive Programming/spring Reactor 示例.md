@@ -25,11 +25,11 @@ Reactor中，发布者Publisher负责生产数据，有两种发布者，Flux可
 - `2` 构建一个订阅者 Subscriber  
 - `3` 创建 publisher-subscriber 订阅关系，生产者开始生产数据，并传递给订阅者
 
-## 解释
+## 调用链分析
 ### Flux.range
 Flux.range，Flux.fromArray 等静态方法都会返回一个Flux子类，如 FluxRange，FluxArray。
 
-## Flux.subscribe
+### Flux.subscribe
 ```java
 public final void subscribe(Subscriber<? super T> actual) {
     CorePublisher publisher = Operators.onLastAssembly(this);
@@ -51,7 +51,7 @@ public final void subscribe(Subscriber<? super T> actual) {
 - 程序中订阅者，会转化为一个 CoreSubscriber。
 - CorePublisher 也有一个内部的 subscribe 方法，由Flux子类实现。
 
-## FluxRange.subscribe
+### FluxRange.subscribe
 ```java
 public void subscribe(CoreSubscriber<? super Integer> actual) {
     ...
@@ -63,7 +63,7 @@ public void subscribe(CoreSubscriber<? super Integer> actual) {
 - Flux 子类 subscribe 方法中通常会使用CoreSubscriber 创建为 Subscription，并调用订阅者的onSubscribe方法，这时订阅关系已完成。
 
 ### onSubscribe
-Subscriber端的 onSubscribe 方法  
+
 BaseSubscriber#onSubscribe -> hookOnSubscribe
 ```java
 protected void hookOnSubscribe(Subscription subscription) {
@@ -71,8 +71,8 @@ protected void hookOnSubscribe(Subscription subscription) {
 }
 ```
 
-Subscription#request由Publisher端实现，也是核心方法，订阅者通过该方法向发布者拉取特定数量的数据。  
-注意，这时发布者才开始生产数据。
+- Subscription#request 由 Publisher 端实现，是核心方法;
+- 订阅者通过该方法向发布者拉取特定数量的数据。此时发布者才开始生产数据。
 
 RangeSubscription#request -> RangeSubscription#slowPath -> Subscriber#onNext
 
