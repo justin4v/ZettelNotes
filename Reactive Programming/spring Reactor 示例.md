@@ -101,11 +101,9 @@ void slowPath(long n) {
 }
 ```
 
-`1` RangeSubscription负责生产指定范围内的整数，并调用Subscriber#onNext将数据推送到订阅者。
-
-可以看到，  
-Publisher#subscribe完成订阅操作，生成Subscription订阅关系，并触发订阅者钩子方法onSubscribe。  
-订阅者的onSubscribe方法中，订阅者开始调用Subscription#request请求数据，这时发布者才开始生产数据，并将数据推给订阅者。
+- RangeSubscription 负责生产指定范围内的整数，并调用 *Subscriber#onNext* 将数据推送到订阅者。
+- Publisher#subscribe完成订阅操作，生成Subscription订阅关系，并触发订阅者钩子方法onSubscribe。  
+- 订阅者的 onSubscribe 方法中，订阅者调用Subscription#request请求数据时发布者才开始生产数据，并将数据推给订阅者。
 
 # 参考
 1. [Reactive Spring实战 -- 理解Reactor的设计与实现 ](https://www.cnblogs.com/binecy/p/14458911.html)
