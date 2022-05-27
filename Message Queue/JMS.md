@@ -1,3 +1,4 @@
+#JMS #Message-queue 
 # 概念
 JMS 即 **Java消息服务（Java Message Service）**，是Java平台中面向消息中间件（MOM）的 *API*
 
@@ -10,47 +11,6 @@ JMS 即 **Java消息服务（Java Message Service）**，是Java平台中面向�
 2.   **Reliable**（可靠）
     JMS保证消息只会递送一次
 	
-	
-# 消息模型
-JMS 定义了**消息发送模型的规范**：
-1. Point-to-Point Messaging Domain （点对点）
-2. Publish/Subscribe Messaging Domain （发布/订阅模式）
-
-## 点对点消息模型
-Point-to-Point Messaging Domain
-
-![[p2p 消息模型.png]]
-
-### 涉及到的概念
-1. 程序由消息队列，发送方，接收方组成。
-2. 每个消息都被发送到一个特定的队列，接收者从队列中获取消息。
-3. 队列保留消息直到他们被消费或超时。
-
-### 特点
-
--    **每个消息只要一个消费者**；
--    发送者发送消息到消息队列和接收者接收消息是**独立的**；
--    接收方在接收完消息之后，要向消息队列应答。
-
-## 发布/订阅消息模型
-Publish/Subscribe Messaging Domain
-
-![[发布-订阅模型.png]]
-
-### 涉及到的概念：
-
-- 发布者发布一个消息，该消息通过 topic 传递给所有的客户端；
-- 发布者与订阅者相互之间是无感知的；
-- 可以动态的发布与订阅 Topic。
-- Topic主要用于保存和传递消息，且会保存消息直到消息被传递给客户端。
-
-### 特点：
-
--  **一个消息可以传递给多个订阅者**（即：一个消息可以有多个接受方）。
--   **发布者与订阅者具有时间约束**，针对某个主题（Topic）的订阅者，它必须创建一个订阅者之后，才能消费发布者的消息，而且为了消费消息，订阅者必须保持运行的状态。
--    为了缓和这样严格的时间相关性，JMS **允许订阅者创建一个可持久化的订阅**。即使订阅者没有被激活（运行），它也能接收到发布者的消息。
-
-
 # JMS编程模型　
 
 1.  管理对象（Administered objects）-连接工厂（Connection Factories）和目的地（Destination）
@@ -156,7 +116,7 @@ MessageConsumer consumer = session.createConsumer(topic);
 
 ## MessageListener
 
-*如果注册了消息监听器，一旦消息到达，将自动调用监听器的onMessage方法*。
+*如果注册了消息监听器，一旦消息到达，将自动调用监听器的 onMessage 方法*。
 
 ```java
 Listener myListener = new Listener();
@@ -206,3 +166,7 @@ JMS消息头预定义了若干字段用于**客户端与JMS提供者之间识别
 -   Joram
 -   Coridan的MantaRay
 -   The OpenJMS Group的OpenJMS
+
+
+# 参考
+1. [[消息模型]]

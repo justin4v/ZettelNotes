@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -129,10 +128,10 @@
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
     "Message Queue/JMS.md",
+    "Message Queue/Redis Stream 实现消息队列.md",
     "OS/Linux/exec().md",
     "OS/Linux/fork.md",
     "OS/Copy on write.md",
-    "Cache/Redis/Redis Stream 实现消息队列.md",
     "Cache/消息队列设计精要.md",
     "日常记录/TODOs.md",
     "Framework/Spring/优秀实践/Context 设计思想.md",
