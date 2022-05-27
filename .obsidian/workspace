@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Message Queue/JMS.md",
+            "file": "Message Queue/Reactive Streams规范.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Message Queue/JMS.md",
+                "file": "Message Queue/Reactive Streams规范.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Message Queue/JMS.md"
+                "file": "Message Queue/Reactive Streams规范.md"
               }
             }
           },
@@ -127,15 +127,15 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
+    "Message Queue/Reactive Streams规范.md",
     "Message Queue/JMS.md",
+    "Message Queue/消息模型.md",
     "Message Queue/Redis Stream 实现消息队列.md",
     "OS/Linux/exec().md",
     "OS/Linux/fork.md",
     "OS/Copy on write.md",
     "Cache/消息队列设计精要.md",
     "日常记录/TODOs.md",
-    "Framework/Spring/优秀实践/Context 设计思想.md",
-    "Framework/Spring/原理解析/Spring Aware 接口.md",
-    "Framework/Spring/优秀实践/为什么不推荐@Autowired.md"
+    "Framework/Spring/优秀实践/Context 设计思想.md"
   ]
 }
