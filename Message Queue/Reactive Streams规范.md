@@ -92,10 +92,25 @@ JDK的异步API使用的是传统的**命令式编程**，命令式编程是以�
 Java API 的响应式流只包含四个接口：
 
 ```java
-Publisher<T>
-Subscriber<T>
-Subscription
-Processor<T,R>
+//发布者
+public  interface  Publisher < T > {
+    public  void  subscribe（Subscriber <？ super  T >  s）;
+}
+//订阅者
+public  interface  Subscriber < T > {
+    public  void  onSubscribe（Subscription  s）;
+    public  void  onNext（T  t）;
+    public  void  onError（Throwable  t）;
+    public  void  onComplete（）;
+}
+//表示Subscriber消费Publisher发布的一个消息的生命周期
+public interface Subscription {
+    public void request(long n);
+    public void cancel();
+}
+//处理器，表示一个处理阶段，它既是订阅者也是发布者，并且遵守两者的契约
+public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
+}
 ```
 
 - 发布者（publisher）是潜在无限数量的有序元素的生产者。 它根据收到的要求向当前订阅者发送元素。
@@ -157,3 +172,8 @@ Flow.Subscription
 这里，符号`*`和`?`在正则表达式中被用作关键字，一个`*`表示零个或多个出现， `?`意为零或一次。
 
 在订阅者上的第一个方法调用是**`onSubscribe()`方法，它是成功订阅发布者的通知**。订阅者的`onNext()`方法可以被调用零次或多次，每次调用指示元素发布。`onComplete()`和`onError()`方法可以被调用为零或一次来指示终止状态; 只要订阅者不取消其订阅，就会调用这些方法。
+
+
+
+# 参考
+1. [Reactive Streams-01 ](https://hcqbuqingzhen.github.io/2022/02/11/001-reactive-streams/)
