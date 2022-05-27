@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/Linux/fork.md",
+            "file": "OS/Linux/exec().md",
             "mode": "source",
             "source": false
           }
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/Linux/fork.md",
+                "file": "OS/Linux/exec().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/Linux/fork.md"
+                "file": "OS/Linux/exec().md"
               }
             }
           },
@@ -128,9 +127,9 @@
   },
   "active": "e25acf2ade613d2c",
   "lastOpenFiles": [
+    "OS/Linux/exec().md",
     "OS/Linux/fork.md",
     "OS/Copy on write.md",
-    "OS/Linux/exec().md",
     "Cache/Redis/Redis Stream 实现消息队列.md",
     "Cache/消息队列设计精要.md",
     "日常记录/TODOs.md",
