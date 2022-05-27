@@ -1,4 +1,4 @@
-#JMS #Message-queue 
+#JMS #Message-queue  #Publish-subscribe 
 # 概念
 JMS 即 **Java消息服务（Java Message Service）**，是Java平台中面向消息中间件（MOM）的 *API*
 
