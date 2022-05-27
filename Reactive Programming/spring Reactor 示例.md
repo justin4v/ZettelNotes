@@ -26,6 +26,29 @@ Reactor中，发布者Publisher负责生产数据，有两种发布者，Flux可
 - `3` 创建 publisher-subscriber 订阅关系，生产者开始生产数据，并传递给订阅者
 
 ## 解释
-### F
+### Flux.range
+Flux.range，Flux.fromArray 等静态方法都会返回一个Flux子类，如 FluxRange，FluxArray。
+
+## Flux.subscribe
+```java
+public final void subscribe(Subscriber<? super T> actual) {
+    CorePublisher publisher = Operators.onLastAssembly(this);
+    CoreSubscriber subscriber = Operators.toCoreSubscriber(actual);
+
+    try {
+        ...
+
+        publisher.subscribe(subscriber);
+    }
+    catch (Throwable e) {
+        Operators.reportThrowInSubscribe(subscriber, e);
+        return;
+    }
+}
+```
+
+获取内部的CorePublisher
+
+
 # 参考
 1. [Reactive Spring实战 -- 理解Reactor的设计与实现 ](https://www.cnblogs.com/binecy/p/14458911.html)
