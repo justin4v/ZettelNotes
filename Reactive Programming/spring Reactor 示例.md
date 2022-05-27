@@ -47,8 +47,64 @@ public final void subscribe(Subscriber<? super T> actual) {
 }
 ```
 
-获取内部的CorePublisher
+- 获取内部的CorePublisher
+- 程序中订阅者，会转化为一个 CoreSubscriber。
+- CorePublisher 也有一个内部的 subscribe 方法，由Flux子类实现。
 
+## FluxRange.subscribe
+```java
+public void subscribe(CoreSubscriber<? super Integer> actual) {
+    ...
+    actual.onSubscribe(new RangeSubscription(actual, st, en));
+}
+```
+
+- Subscription 代表了发布者与订阅者之间的一个订阅关系，由 Publisher 端实现。  
+- Flux 子类 subscribe 方法中通常会使用CoreSubscriber 创建为 Subscription，并调用订阅者的onSubscribe方法，这时订阅关系已完成。
+
+### onSubscribe
+Subscriber端的 onSubscribe 方法  
+BaseSubscriber#onSubscribe -> hookOnSubscribe
+```java
+protected void hookOnSubscribe(Subscription subscription) {
+    subscription.request(9223372036854775807L);
+}
+```
+
+Subscription#request由Publisher端实现，也是核心方法，订阅者通过该方法向发布者拉取特定数量的数据。  
+注意，这时发布者才开始生产数据。
+
+RangeSubscription#request -> RangeSubscription#slowPath -> Subscriber#onNext
+
+```java
+void slowPath(long n) {
+    Subscriber<? super Integer> a = this.actual;
+    long f = this.end;
+    long e = 0L;
+    long i = this.index;
+
+    while(!this.cancelled) {
+        // [1]
+        while(e != n && i != f) {
+            a.onNext((int)i);
+            if (this.cancelled) {
+                return;
+            }
+
+            ++e;
+            ++i;
+        }
+
+        ...
+    }
+}
+```
+
+`1` RangeSubscription负责生产指定范围内的整数，并调用Subscriber#onNext将数据推送到订阅者。
+
+可以看到，  
+Publisher#subscribe完成订阅操作，生成Subscription订阅关系，并触发订阅者钩子方法onSubscribe。  
+订阅者的onSubscribe方法中，订阅者开始调用Subscription#request请求数据，这时发布者才开始生产数据，并将数据推给订阅者。
 
 # 参考
 1. [Reactive Spring实战 -- 理解Reactor的设计与实现 ](https://www.cnblogs.com/binecy/p/14458911.html)
