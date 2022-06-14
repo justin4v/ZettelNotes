@@ -19,8 +19,8 @@ public void saveApi(Api api){
 }
 ```
 
-- `@Transactional` 原理是动态代理，实际调用是*通过代理类调用*； 
-- SQL 操作在当前类方法中，调用 saveApi() *实际代码为 `this.saveApi(api)`*，非是通过代理类调用，无法被代理。
+- `@Transactional` 原理是 [[动态代理]]，实际调用是*通过代理类调用*； 
+- 在当前方法中，调用同类中定义的 saveApi() *实际代码为 `this.saveApi(api)`*，**不是通过代理类调用**，无法被代理。
 
 # 解决方案
 ## 移动到另一个类
