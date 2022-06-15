@@ -48,7 +48,8 @@ Personal Access Token 参考
 [github docs](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
 
 ## Personal Access Token
-在 github 配置生成
-
-
-##
+1. 在 github 配置生成
+2. 使用: 在 repo url 中加入 `“[用户名]:[token]”`
+```
+https://justin4v:[token]@github.com/justin4v/ZettelNotes.git
+```
