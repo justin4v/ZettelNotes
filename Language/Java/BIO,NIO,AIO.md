@@ -179,7 +179,7 @@ public class NioSelectorServer {
                     socketChannel.configureBlocking(false);  //false 非阻塞
 
                     // 把客户端连接的 socketChannel 注册到 Selector 上，对读操作感兴趣
-                    // 这里只注册了读事件，如果需要给客户端发送数据可以注册写事件
+                    // 注册了读事件，如果需要给客户端发送数据可以注册写事件
                     socketChannel.register(selector, SelectionKey.OP_READ);
                     System.out.println("客户端连接成功");
                 } else if (key.isReadable()) {  // 如果是OP_READ事件，则进行读取和打印
@@ -189,6 +189,8 @@ public class NioSelectorServer {
                     // 如果有数据，把数据打印出来
                     if (len > 0) {
                         System.out.println("接收到消息：" + new String(byteBuffer.array()));
+                        // 增加写事件，写事件会不断被触发，数据写完后必须取消写事件监听  
+						key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
                     } else if (len == -1) { // 如果客户端断开连接，关闭Socket
                         System.out.println("客户端断开连接");
                         socketChannel.close();
