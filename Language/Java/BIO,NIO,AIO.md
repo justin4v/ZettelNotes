@@ -191,6 +191,7 @@ public class NioSelectorServer {
                         System.out.println("接收到消息：" + new String(byteBuffer.array()));
                         // 增加写事件，写事件会不断被触发，数据写完后必须取消写事件监听  
 						key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
+						key.attach("");
                     } else if (len == -1) { // 如果客户端断开连接，关闭Socket
                         System.out.println("客户端断开连接");
                         socketChannel.close();
