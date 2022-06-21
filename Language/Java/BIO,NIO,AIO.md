@@ -158,48 +158,102 @@ public class NioSelectorServer {
         SelectionKey selectionKey = serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         System.out.println("服务启动成功");
 
-        while (true) {
-            //阻塞等待需要处理的事件发生
-            //轮询监听 channel 里的 key，select()是阻塞的，当有客户端连接事件发生时 OP_ACCEPT
-            //或者是读取客户端传的数据 OP_READ，才会停止阻塞
-            selector.select();
-
-            // 获取 selector 中注册的全部事件的 SelectionKey 实例
-            Set<SelectionKey> selectionKeys = selector.selectedKeys();
-            Iterator<SelectionKey> iterator = selectionKeys.iterator();
-
-            // 遍历 SelectionKey 对事件进行处理
-            while (iterator.hasNext()) {
-                SelectionKey key = iterator.next();
-                // 如果是OP_ACCEPT事件，则进行连接获取和事件注册
-                if (key.isAcceptable()) {
-                    //通过 selector 注册事件的 Key 获取到对应的客户端连接的 ServerSocket
-                    ServerSocketChannel serverSocket = (ServerSocketChannel) key.channel();
-                    SocketChannel socketChannel = serverSocket.accept(); //连接客户端
-                    socketChannel.configureBlocking(false);  //false 非阻塞
-
-                    // 把客户端连接的 socketChannel 注册到 Selector 上，对读操作感兴趣
-                    // 注册了读事件，如果需要给客户端发送数据可以注册写事件
-                    socketChannel.register(selector, SelectionKey.OP_READ);
-                    System.out.println("客户端连接成功");
-                } else if (key.isReadable()) {  // 如果是OP_READ事件，则进行读取和打印
-                    SocketChannel socketChannel = (SocketChannel) key.channel();
-                    ByteBuffer byteBuffer = ByteBuffer.allocate(128);
-                    int len = socketChannel.read(byteBuffer);
-                    // 如果有数据，把数据打印出来
-                    if (len > 0) {
-                        System.out.println("接收到消息：" + new String(byteBuffer.array()));
-                        // 增加写事件，写事件会不断被触发，数据写完后必须取消写事件监听  
-						key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
-						key.attach("");
-                    } else if (len == -1) { // 如果客户端断开连接，关闭Socket
-                        System.out.println("客户端断开连接");
-                        socketChannel.close();
+        
+        executor.submit(() -> {
+            while (true) {
+                //阻塞等待需要处理的事件发生
+                //轮询监听 channel 里的 key，select()是阻塞的，当有客户端连接事件发生时 OP_ACCEPT
+                //或者是读取客户端传的数据 OP_READ，才会停止阻塞
+                selector.select();
+                // 获取 selector 中注册的全部事件的 SelectionKey 实例
+                Set<SelectionKey> selectionKeys = selector.selectedKeys();
+                Iterator<SelectionKey> iterator = selectionKeys.iterator();
+                // 遍历 SelectionKey 对事件进行处理
+                while (iterator.hasNext()) {
+                    SelectionKey key = iterator.next();
+                    // 如果是OP_ACCEPT事件，则进行连接获取和事件注册
+                    if (key.isAcceptable()) {
+                        handleAccept(key);
+                    } else if (key.isReadable()) {
+                        // 如果是OP_READ事件，则进行读取和打印
+                        handleRead(key);
+                    } else if (key.isValid() && key.isWritable()) {
+                        // 如果是OP_WRITE事件，则进行写入
+                        handleWrite(key);
                     }
+                    //从事件集合里删除本次处理的key，防止下次select重复处理
+                    iterator.remove();
                 }
-                //从事件集合里删除本次处理的key，防止下次select重复处理
-                iterator.remove();
             }
+        });
+    }
+
+	private void handleAccept(SelectionKey key) throws IOException {
+        //通过 selector 注册事件的 Key 获取到对应的客户端连接的 ServerSocket
+        //连接客户端
+        SocketChannel socket = ((ServerSocketChannel) key.channel()).accept();
+        //false 非阻塞
+        socket.configureBlocking(false);
+        // 把客户端连接的 socketChannel 注册到 Selector 上，对读操作感兴趣
+        // 这里只注册了读事件，如果需要给客户端发送数据可以注册写事件
+        socket.register(key.selector(), SelectionKey.OP_READ);
+        InetSocketAddress address = (InetSocketAddress) socket.getRemoteAddress();
+        logger.info("客户端连接成功,ip:{},端口：{}", address.getHostString(), address.getPort());
+    }
+
+    private void handleRead(SelectionKey key) throws IOException {
+        SocketChannel socketChannel = (SocketChannel) key.channel();
+        ByteBuffer byteBuffer = ByteBuffer.allocate(PrefetchConst.HL7_BUFFER_SIZE);
+        int len = socketChannel.read(byteBuffer);
+        String readMsg = "";
+        // 如果有数据，把数据打印出来
+        if (len > 0) {
+            logger.info("接收到原始 HL7 消息：{}", new String(byteBuffer.array()));
+            try {
+                /*原消息经过 ER7 编码，需要通过 HL7 reader 解码转为 message*/
+                InputStream in = new ByteArrayInputStream(byteBuffer.array());
+                HL7Reader reader = context.getLowerLayerProtocol().getReader(in);
+                String theMessage = reader.getMessage();
+                /*预处理消息，纠正错误字段*/
+                theMessage = HL7Utils.preHandleMsg(theMessage);
+                Message message = context.getGenericParser().parse(theMessage);
+                try {
+                    messageService.populateAndSaveMsg(message);
+                    readMsg = message.generateACK().encode();
+                } catch (Exception e) {
+                    logger.error("持久化 HL7 消息出错：{}", e.getMessage());
+                    readMsg = e.getMessage();
+                }
+                // 增加写事件，写事件会不断被触发，数据写完后必须取消写事件监听
+                key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
+                key.attach(readMsg);
+            } catch (HL7Exception | LLPException e) {
+                logger.error("解析HL7消息出错：{}", e.getMessage());
+                key.attach("解析HL7消息出错, 原因： " + e.getMessage());
+            }
+        } else { // 如果客户端断开连接，关闭Socket
+            logger.info("客户端断开连接");
+            socketChannel.close();
+        }
+    }
+
+
+	private void handleWrite(SelectionKey key) throws IOException {
+        String msg = String.valueOf(key.attachment());
+        if (StringUtils.isEmpty(msg)) {
+            return;
+        }
+        SocketChannel socketChannel = (SocketChannel) key.channel();
+        try {
+            byte[] bytes = HL7Utils.prepareResMsg(msg);
+            socketChannel.write(ByteBuffer.wrap(bytes));
+            logger.info("HL7 响应消息: ");
+            logger.info(msg);
+        } catch (Exception e) {
+            logger.error("发送 HL7 响应消息出错：{}", e.getMessage());
+        } finally {
+            // 取消写事件监听,防止一直触发
+            key.interestOps(key.interestOps() & ~SelectionKey.OP_WRITE);
         }
     }
 }
