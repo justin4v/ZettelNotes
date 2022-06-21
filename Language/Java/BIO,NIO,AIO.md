@@ -203,30 +203,16 @@ public class NioSelectorServer {
 
     private void handleRead(SelectionKey key) throws IOException {
         SocketChannel socketChannel = (SocketChannel) key.channel();
-        ByteBuffer byteBuffer = ByteBuffer.allocate(PrefetchConst.HL7_BUFFER_SIZE);
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
         int len = socketChannel.read(byteBuffer);
-        String readMsg = "";
         // 如果有数据，把数据打印出来
         if (len > 0) {
             logger.info("接收到原始 HL7 消息：{}", new String(byteBuffer.array()));
             try {
-                /*原消息经过 ER7 编码，需要通过 HL7 reader 解码转为 message*/
-                InputStream in = new ByteArrayInputStream(byteBuffer.array());
-                HL7Reader reader = context.getLowerLayerProtocol().getReader(in);
-                String theMessage = reader.getMessage();
-                /*预处理消息，纠正错误字段*/
-                theMessage = HL7Utils.preHandleMsg(theMessage);
-                Message message = context.getGenericParser().parse(theMessage);
-                try {
-                    messageService.populateAndSaveMsg(message);
-                    readMsg = message.generateACK().encode();
-                } catch (Exception e) {
-                    logger.error("持久化 HL7 消息出错：{}", e.getMessage());
-                    readMsg = e.getMessage();
-                }
+                
                 // 增加写事件，写事件会不断被触发，数据写完后必须取消写事件监听
                 key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
-                key.attach(readMsg);
+                key.attach(byteBuffer);
             } catch (HL7Exception | LLPException e) {
                 logger.error("解析HL7消息出错：{}", e.getMessage());
                 key.attach("解析HL7消息出错, 原因： " + e.getMessage());
@@ -245,7 +231,7 @@ public class NioSelectorServer {
         }
         SocketChannel socketChannel = (SocketChannel) key.channel();
         try {
-            byte[] bytes = HL7Utils.prepareResMsg(msg);
+            byte[] bytes = msg；
             socketChannel.write(ByteBuffer.wrap(bytes));
             logger.info("HL7 响应消息: ");
             logger.info(msg);
@@ -261,7 +247,7 @@ public class NioSelectorServer {
 - 把需要探知的 SocketChannel 注册到 Selector，调用 select() 方法阻塞；
 - 当有事件发生时，Selector *传回一组 SelectionKey*（linux 内核中的 rdlist 就绪事件列表）；
 - 根据 Key 获得注册过的 SocketChannel，并从 Channel 中读取并处理这些数据。
-- Selector 实际对所注册的 Channel（SocketChannel）不断地轮询访问，一旦轮询到所注册的事情发生，返回 channel 的。
+- Selector 实际对所注册的 Channel（SocketChannel）不断地轮询访问，一旦轮询到所注册的事情发生，返回 channel 的引用，获取内容。
 
 ![[Java NIO示意.png]]
 
@@ -281,7 +267,7 @@ selector.select()  //阻塞等待需要处理的事件发生
 	3. 然后会调用 Linux 内核函数 epoll_wait，如果 rdlist 有 Socket 的引用，那么 epoll_wait 直接返回，程序继续完成后面的处理；
 	4. 如果 rdlist 为空，则阻塞进程。
 
-
+![[Select poll epoll对比.png]]
 # AIO(NIO 2.0)
 - *异步非阻塞*， 由操作系统完成后回调通知服务端程序启动线程去处理，；
 - 一般适用于*连接数较多且连接时间较长*的应用；
