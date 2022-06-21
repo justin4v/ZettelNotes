@@ -1,3 +1,4 @@
+#Git #Git-conflict
 ## 步骤
 以 git rebase 合并命令为例说明解决冲突的步骤。
 ```bash
@@ -36,6 +37,6 @@ git rebase master
 ```
 
 1. **merge**时，`ours`指的是当前分支，即`master`，`theirs`指的是需要合并到当前的分支的branch，即`master`；
-2.  **rebase**时，`theirs`指的是当前分支，即`my_branch`，`ours`指向将成为 base 的分支，即`master`
+2. **rebase**时，`theirs`指的是当前分支，即`my_branch`，`ours`指向将成为 base 的分支，即`master`
 
 
