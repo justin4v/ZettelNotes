@@ -129,6 +129,7 @@
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
     "Language/Java/BIO,NIO,AIO.md",
+    "OS/Linux/IO模型.md",
     "Front/NPM.md",
     "Git/Git 配置.md",
     "Cache/Redis/Redis 简介.md",
@@ -136,7 +137,6 @@
     "Cache/消息队列设计精要.md",
     "Framework/Spring/问题及解析/Spring 类内方法调用AOP不生效问题.md",
     "Database/Mysql/SQL实践/树形结构表3种设计分析.md",
-    "Reactive Programming/spring Reactor 示例.md",
-    "Reactive Programming/Reactive Streams规范.md"
+    "Reactive Programming/spring Reactor 示例.md"
   ]
 }

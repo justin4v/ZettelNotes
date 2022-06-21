@@ -261,7 +261,7 @@ public class NioSelectorServer {
 - 把需要探知的 SocketChannel 注册到 Selector，调用 select() 方法阻塞；
 - 当有事件发生时，Selector *传回一组 SelectionKey*（linux 内核中的 rdlist 就绪事件列表）；
 - 根据 Key 获得注册过的 SocketChannel，并从 Channel 中读取并处理这些数据。
-- Selector 实际对所注册的 Channel（SocketChannel）不断地轮询访问，一旦轮询到所注册的事情发生，返回 channel 的 可以。
+- Selector 实际对所注册的 Channel（SocketChannel）不断地轮询访问，一旦轮询到所注册的事情发生，返回 channel 的。
 
 ![[Java NIO示意.png]]
 
