@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "socket",
+                "query": "tag:#Todo",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -57,12 +57,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 325,
-    "collapsed": true
+    "width": 325
   },
   "right": {
     "id": "556fe6a48d657f05",
