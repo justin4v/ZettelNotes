@@ -25,3 +25,34 @@
       public URL  getResource (String name);  
       public InputStream  getResourceAsStream (String name); 
 ```
+
+- 真正使用的不是 ClassLoader 的这两个方法，而是 Class 的 getResource 和 getResourceAsStream 方法
+- 因为 Class 对象可以直接从类得到（如 YourClass.class 或 YourClass.getClass()），更加方便；
+-  ClassLoader 则需要再调用一次 YourClass.getClassLoader()。
+- Class 对象的这两个方法其实是“委托”（delegate）给装载它的 ClassLoader 实现。
+
+```java
+1.this.getClass().getResource（""） 
+得到的是当前 class 文件的 URI 目录。
+如：file：/D：/workspace/jbpmtest3/bin/com/test/
+
+2.this.getClass().getResource（"/"） 
+得到的是当前的classpath的绝对URI路径 。
+如：file：/D：/workspace/jbpmtest3/bin/
+
+3.this.getClass() .getClassLoader().getResource（""） 
+得到的也是当前ClassPath的绝对URI路径 。
+如：file：/D：/workspace/jbpmtest3/bin/
+
+4.ClassLoader.getSystemResource（""） 
+得到的也是当前ClassPath的绝对URI路径 。
+如：file：/D：/workspace/jbpmtest3/bin/
+
+5.Thread.currentThread().getContextClassLoader ().getResource（""） 
+得到的也是当前ClassPath的绝对URI路径 。
+如：file：/D：/workspace/jbpmtest3/bin/
+
+6.ServletActionContext.getServletContext().getRealPath(“/”) 
+Web应用程序 中，得到Web应用程序的根目录的绝对路径。这样，我们只需要提供相对于Web应用程序根目录的路径，就可以构建出定位资源的绝对路径。
+如：file：/D:/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/WebProject
+```
