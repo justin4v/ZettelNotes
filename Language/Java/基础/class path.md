@@ -33,12 +33,12 @@
 
 ```java
 1.this.getClass().getResource（""） 
-得到的是当前 class 文件的 URI 目录。
-如：file：/D：/workspace/jbpmtest3/bin/com/test/
+得到的是当前 class 文件的 URI 目录。只到父级
+如：file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/com/uih/uplus/workflowresearch/controller/v2/
 
 2.this.getClass().getResource（"/"） 
-得到的是当前的classpath的绝对URI路径 。
-如：file：/D：/workspace/jbpmtest3/bin/
+得到的是当前的 classpath 的 URI 根路径 。
+如：file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/
 
 3.this.getClass() .getClassLoader().getResource（""） 
 得到的也是当前ClassPath的绝对URI路径 。
@@ -52,7 +52,4 @@
 得到的也是当前ClassPath的绝对URI路径 。
 如：file：/D：/workspace/jbpmtest3/bin/
 
-6.ServletActionContext.getServletContext().getRealPath(“/”) 
-Web应用程序 中，得到Web应用程序的根目录的绝对路径。这样，我们只需要提供相对于Web应用程序根目录的路径，就可以构建出定位资源的绝对路径。
-如：file：/D:/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/WebProject
 ```
