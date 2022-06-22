@@ -31,10 +31,14 @@
 -  ClassLoader 则需要再调用一次 YourClass.getClassLoader()。
 - Class 对象的这两个方法其实是“委托”（delegate）给装载它的 ClassLoader 实现。
 
+目录结构如下：
+![[classpath 目录结构示意.png]]
+
 ```java
 1.this.getClass().getResource（""） 
 得到的是当前 class 文件的 URI 目录。只到父级
-如：file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/com/uih/uplus/workflowresearch/controller/v2/
+如：
+file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/com/uih/uplus/workflowresearch/controller/v2/
 
 2.this.getClass().getResource（"/"） 
 得到的是当前的 classpath 的 URI 根路径 。
