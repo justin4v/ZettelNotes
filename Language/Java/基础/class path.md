@@ -36,26 +36,24 @@
 
 ```java
 1.this.getClass().getResource("")
-得到的是当前 class 文件的 URI 目录。只到父级
-如：
-URL url1 = this.getClass().getResource("");
+当前 class 文件的 URI 目录。只到父级
 得到：
-    file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/com/uih/uplus/workflowresearch/controller/v2/
+file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/com/uih/uplus/workflowresearch/controller/v2/
 
 2.this.getClass().getResource("/")
-得到的是当前的 classpath 的 URI 根路径 。
+当前的 classpath 的 URI 根路径 。
 如：file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/
 
-3.this.getClass() .getClassLoader().getResource("")
-得到的也是当前ClassPath的绝对URI路径 。
-如：file：/D：/workspace/jbpmtest3/bin/
+3.this.getClass().getClassLoader().getResource("")
+当前ClassPath的 URI 根路径 。
+如：file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/
 
 4.ClassLoader.getSystemResource("") 
-得到的也是当前ClassPath的绝对URI路径 。
+得到的也是当前ClassPath的 URI 根路径。
 如：file：/D：/workspace/jbpmtest3/bin/
 
 5.Thread.currentThread().getContextClassLoader ().getResource("")
-得到的也是当前ClassPath的绝对URI路径 。
+当前ClassPath的 URI 根路径。
 如：file：/D：/workspace/jbpmtest3/bin/
 
 ```
