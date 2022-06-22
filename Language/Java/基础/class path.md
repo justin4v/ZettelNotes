@@ -45,15 +45,15 @@ file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-c
 如：file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/
 
 3.this.getClass().getClassLoader().getResource("")
-当前ClassPath的 URI 根路径 。
-如：file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/
+当前 ClassPath 的 URI 根路径 。
+file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/
 
 4.ClassLoader.getSystemResource("") 
-得到的也是当前ClassPath的 URI 根路径。
-如：file：/D：/workspace/jbpmtest3/bin/
+当前 ClassPath 的 URI 根路径。
+file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/
 
 5.Thread.currentThread().getContextClassLoader ().getResource("")
-当前ClassPath的 URI 根路径。
-如：file：/D：/workspace/jbpmtest3/bin/
+当前 ClassPath 的 URI 根路径。
+file:/E:/00justin/04-Project/01-com.uih/Workflow/workflow-research/target/test-classes/
 
 ```
