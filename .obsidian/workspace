@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "基础知识/Vim/Vim键盘图.md",
+            "file": "Language/Java/并发编程/核心概念/通俗理解线程安全.md",
             "mode": "preview",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Todo",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -78,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "基础知识/Vim/Vim键盘图.md",
+                "file": "Language/Java/并发编程/核心概念/通俗理解线程安全.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "基础知识/Vim/Vim键盘图.md"
+                "file": "Language/Java/并发编程/核心概念/通俗理解线程安全.md"
               }
             }
           },
@@ -128,11 +129,11 @@
   },
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
+    "Language/Java/并发编程/核心概念/通俗理解线程安全.md",
     "基础知识/Vim/Vim键盘图.md",
     "Framework/Spring/优秀实践/ConditionalOnExpression.md",
     "Framework/Spring/SpEL/SpEL简介.md",
     "Language/Java/基础/class path.md",
-    "Language/Java/并发编程/核心概念/通俗理解线程安全.md",
     "Language/Java/并发编程/核心概念/1.线程安全问题.md",
     "Language/Java/并发编程/核心概念/2.线程活跃性问题.md",
     "OS/Linux/fork.md",
