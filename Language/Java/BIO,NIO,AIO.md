@@ -68,6 +68,8 @@ public class SocketServer {
 	- 然后调用 select() 方法，*select() 会阻塞到某个注册的 channel 有事件*就绪。
 	- 一旦这个方法返回，线程就可以处理这些事件。
 -  **Channel**：Channel 类似于 Stream，数据可以从 Channel 读到 Buffer，也可以从Buffer 写到 Channel。
+	- NIO 中 ServerSocketChannel 是服务端；
+	- SocketChannel 是客户端；
 -  **Buffer**：本质上是一个*可以读写数据的内存块*，能够跟踪和记录缓冲区的状态变换情况，Channel 提供从文件，网络读取数据的渠道，但是*读取写入的数据都经由 Buffer* 。
 - 应用场景：
 	- 适用于连接数目多且连接比较短（轻操作）的架构；
