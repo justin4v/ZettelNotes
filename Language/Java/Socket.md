@@ -1,4 +1,4 @@
-#Socket #IO-model 
+#Socket #IO-model #ServerSocket
 # 交互
 
 ![[Socket服务端与客户端交互示意.png]]
@@ -30,4 +30,6 @@ server.close()；
 - Socket 的 getOutputStream() 和 getInputStream() 分别获得向Socket读写数据的输入／输出流。
 - 当通信结束时，可以调用 close() 方法关闭 Socket，拆除连接。
 
-ServerSocket 一般仅用于设置端口号和监听，真正进行通信的是服务器端的Socket与客户端的Socket，在ServerSocket 进行accept之后，就将主动权转让了。
+## 注意
+- ServerSocket 一般仅用于设置端口号和监听，真正进行通信的是服务器端的Socket与客户端的Socket；
+- 在 ServerSocket 进行 accept 之后，就将主动权转让了。
