@@ -25,8 +25,9 @@ server.close()；
 ```java
  Socket MySocket=new Socket(“ServerComputerName”，600)；
 ```
-- Socket类的构造函数有两个参数，第一个参数是欲连接到的Server计算机的主机地址，第二个参数是该Server机上提供服务的端口号。
-Socket对象建立成功之后，就可以在Client和Server之间建立一个连接，并通过这个连接在两个端点之间传递数据。利用Socket类的方法getOutputStream()和getInputStream()分别获得向Socket读写数据的输入／输出流，最后将从Server端读取的数据重新返还到Server端。
-当Server和Client端的通信结束时，可以调用Socket类的close()方法关闭Socket，拆除连接。
+- 有两个参数，Server 的 IP 和 Server 的端口号。
+- ServerSocket 和 socket 连接建立成功之后，可通过这个连接在两个端点之间传递数据。
+- Socket 的 getOutputStream() 和 getInputStream() 分别获得向Socket读写数据的输入／输出流。
+- 当通信结束时，可以调用 close() 方法关闭 Socket，拆除连接。
 
 ServerSocket 一般仅用于设置端口号和监听，真正进行通信的是服务器端的Socket与客户端的Socket，在ServerSocket 进行accept之后，就将主动权转让了。
