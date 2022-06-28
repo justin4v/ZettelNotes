@@ -5,24 +5,27 @@
 
 
 ## ServerSocket
-- 创建一个ServerSocket 对象，会在运行该语句的计算机的指定端口处建立一个监听服务，如：
+- 创建一个 *ServerSocket 对象*，会在运行该语句的计算机*指定端口处建立一个监听服务*，如：
 ```java
-ServerSocket MyListener=new ServerSocket(600)；
+ServerSocket server=new ServerSocket(600)；
 ```
-- 一台计算机可以同时提供多个服务(多个端口)，通过端口号来区别。为了随时监听可能的Client请求，执行如下的语句：
+- 一台计算机可以*同时提供多个服务(多个端口)*，通过端口号来区别。为了监听可能的 Client 请求，执行如下的语句：
 ```java
-Socket LinkSocket=MyListener．accept()；
+Socket client=server.accept()；
 ```
-该语句调用了ServerSocket对象的accept()方法，这个方法的执行将使Server端的程序处于等待状态，程序将一直阻塞直到捕捉到一个来自Client端的请求，并返回一个用于与该Client通信的Socket对象Link-Socket。此后Server程序只要向这个Socket对象读写数据，就可以实现向远端的Client读写数据。结束监听时，关闭ServerSocket对象：
+- accept() 方法将使 Server 端处于**阻塞状态**，直到*接收到一个来自 Client 的连接请求*；
+- 并返回一个用于与该 Client 通信的 Socket 对象 client。
+- 此后 Server 程序*只要向 Socket 对象读写数据*，就可实现向远端的 Client 读写数据。
+- 结束监听时，关闭 ServerSocket 对象：
 ```java
-Mylistener．close()；
+server.close()；
 ```
 ## Socket
-当Client程序需要从Server端获取信息及其他服务时，应创建一个Socket对象：
+- 当 Client 需要从 Server 端获取信息及其他服务时，创建一个 Socket 对象：
 ```java
  Socket MySocket=new Socket(“ServerComputerName”，600)；
 ```
-Socket类的构造函数有两个参数，第一个参数是欲连接到的Server计算机的主机地址，第二个参数是该Server机上提供服务的端口号。
+- Socket类的构造函数有两个参数，第一个参数是欲连接到的Server计算机的主机地址，第二个参数是该Server机上提供服务的端口号。
 Socket对象建立成功之后，就可以在Client和Server之间建立一个连接，并通过这个连接在两个端点之间传递数据。利用Socket类的方法getOutputStream()和getInputStream()分别获得向Socket读写数据的输入／输出流，最后将从Server端读取的数据重新返还到Server端。
 当Server和Client端的通信结束时，可以调用Socket类的close()方法关闭Socket，拆除连接。
 
