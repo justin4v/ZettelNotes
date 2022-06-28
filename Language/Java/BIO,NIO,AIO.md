@@ -204,22 +204,28 @@ public class NioSelectorServer {
     private void handleRead(SelectionKey key) throws IOException {
         SocketChannel socketChannel = (SocketChannel) key.channel();
         ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
-        int len = socketChannel.read(byteBuffer);
-        // 如果有数据，把数据打印出来
-        if (len > 0) {
-            logger.info("接收到原始 HL7 消息：{}", new String(byteBuffer.array()));
-            try {
-                
-                // 增加写事件，写事件会不断被触发，数据写完后必须取消写事件监听
-                key.interestOps(key.interestOps() | SelectionKey.OP_WRITE);
-                key.attach(byteBuffer);
-            } catch (HL7Exception | LLPException e) {
-                logger.error("解析HL7消息出错：{}", e.getMessage());
-                key.attach("解析HL7消息出错, 原因： " + e.getMessage());
-            }
-        } else { // 如果客户端断开连接，关闭Socket
-            logger.info("客户端断开连接");
+        /*read message length*/
+        int len = 0;
+        /*times of read*/
+        int part = 0;
+        /*readed message*/
+        StringBuilder readMsg = new StringBuilder();
+        // 持续读取数据，数据长度可能超过 buffer size 长度
+        while ((len = socketChannel.read(byteBuffer)) > 0) {
+            logger.debug("接收到原始 HL7 消息(part:{}) ：{}", part, new String(byteBuffer.array()));
+            byteBuffer.flip();
+            // 将读取的数据拼接到一起
+            readMsg.append(new String(byteBuffer.array()));
+            // 清楚buffer
+            byteBuffer.clear();
+            part++;
+        }
+        // 客户端断开连接，关闭Socket
+        if (len == -1) {
             socketChannel.close();
+            InetSocketAddress address = (InetSocketAddress) socketChannel.getRemoteAddress();
+            logger.info("客户端已断开连接,ip:{},端口：{}", address.getHostString(), address.getPort());
+            return;
         }
     }
 
