@@ -4,4 +4,5 @@
 
 
 # 参考
-1. [相关度评分背后的理论 | Elasticsearch: 权威指南 | Elastic](https://www.elastic.co/guide/cn/elasticsearch/guide/2.x/scoring-theory.html)
+1. [相关度评分背后的理论 | Elasticsearch: 权威指南](https://www.elastic.co/guide/cn/elasticsearch/guide/2.x/scoring-theory.html)
+2. [实战 | Elasticsearch自定义评分的N种方法](https://cloud.tencent.com/developer/article/1600163)
