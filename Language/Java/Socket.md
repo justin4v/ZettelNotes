@@ -5,11 +5,11 @@
 
 
 ## ServerSocket
-创建一个ServerSocket 对象，会在运行该语句的计算机的指定端口处建立一个监听服务，如：
+- 创建一个ServerSocket 对象，会在运行该语句的计算机的指定端口处建立一个监听服务，如：
 ```java
 ServerSocket MyListener=new ServerSocket(600)；
 ```
-这里指定提供监听服务的端口是600，一台计算机可以同时提供多个服务，这些不同的服务之间通过端口号来区别，不同的端口号上提供不同的服务。为了随时监听可能的Client请求，执行如下的语句：
+- 一台计算机可以同时提供多个服务(多个端口)，通过端口号来区别。为了随时监听可能的Client请求，执行如下的语句：
 ```java
 Socket LinkSocket=MyListener．accept()；
 ```
