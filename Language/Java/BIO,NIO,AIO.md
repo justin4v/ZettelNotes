@@ -154,7 +154,7 @@ public class NioSelectorServer {
         serverSocketChannel.configureBlocking(false);  //false 非阻塞
         // 打开 Selector 处理 Channel ，即创建 epoll
         Selector selector = Selector.open();
-        // 把 ServerSocketChannel 注册到 Selector 上，并且 Selector 对客户端 accept 连接操作感兴趣
+        // 把 Selector 注册到 ServerSocketChannel 上，Selector 对客户端 accept 连接操作感兴趣
         SelectionKey selectionKey = serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
         System.out.println("服务启动成功");
 
@@ -218,6 +218,7 @@ public class NioSelectorServer {
             readMsg.append(new String(byteBuffer.array()));
             // 清楚buffer
             byteBuffer.clear();
+            // 计次
             part++;
         }
         // 客户端断开连接，关闭Socket
