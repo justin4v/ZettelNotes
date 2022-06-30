@@ -43,9 +43,9 @@
 
 **常用指令**
 
--   **【局部变量压栈指令】**将一个局部变量加载到操作数栈：xload、xload_（其中x为i、l、f、d、a，n为0到3）**
--   **【常量入栈指令】**将一个常量加载到操作数栈：bipush、sipush、ldc、ldc_w、ldc2_w、aconst_null、iconst_ml、iconst、lconst、fconst、dconst**
--   **【出栈装入局部变量表指令】**将一个数值从操作数栈存储到局部变量表：xstore、xstore_（其中x为i、l、f、d、a，n为0到3）；xastore（其中x为i、1、f、d、a、b、c、s）**
+-   **【局部变量压栈指令】** 将一个局部变量加载到操作数栈：xload、xload_（其中x为i、l、f、d、a，n为0到3）
+-   **【常量入栈指令】** 将一个常量加载到操作数栈：bipush、sipush、ldc、ldc_w、ldc2_w、aconst_null、iconst_ml、iconst、lconst、fconst、dconst
+-   **【出栈装入局部变量表指令】** 将一个数值从操作数栈存储到局部变量表：xstore、xstore_（其中x为i、l、f、d、a，n为0到3）；xastore（其中x为i、1、f、d、a、b、c、s）
 
 上面所列举的指令助记符中，有一部分是以尖括号结尾的（例如iload）。这些指令助记符实际上代表了一组指令（例如iload代表了iload0、iload1、iload2和iload3这几个指令）。这几组指令都是某个带有一个操作数的通用指令（例如iload）的特殊形式，**对于这若干组特殊指令来说，它们表面上没有操作数，不需要进行取操作数的动作，但操作数都隐含在指令中。**
 
