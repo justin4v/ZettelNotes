@@ -128,14 +128,14 @@
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
     "Language/Java/JMM/内存屏障.md",
+    "Language/Java/JMM/JMM 相关概念.md",
+    "Language/Java/JMM/代码重排与乱序执行.md",
+    "Language/Java/JMM/正确的同步与安全的多线程.md",
+    "Language/Java/JMM/Java 同步语义.md",
+    "Language/Java/JMM/Java Memory Model简介.md",
     "OS/CPU 密集型和 IO 密集型.md",
     "OS/Copy on write.md",
     "Database/ElasticSearch/ES 脚本评分.md",
-    "Database/ElasticSearch/Painless 脚本语言.md",
-    "Database/ElasticSearch/简介.md",
-    "Language/Java/Socket.md",
-    "Language/Java/BIO,NIO,AIO.md",
-    "基础知识/分享/分享.md",
-    "Language/Java/并发编程/核心概念/通俗理解线程安全.md"
+    "Database/ElasticSearch/Painless 脚本语言.md"
   ]
 }
