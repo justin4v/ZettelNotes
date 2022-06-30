@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/JVM/类加载机制/Hotspot 字节码指令集.md",
+            "file": "Language/Java/JMM/内存屏障.md",
             "mode": "source",
             "source": false
           }
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/类加载机制/Hotspot 字节码指令集.md",
+                "file": "Language/Java/JMM/内存屏障.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/类加载机制/Hotspot 字节码指令集.md"
+                "file": "Language/Java/JMM/内存屏障.md"
               }
             }
           },
@@ -128,8 +127,8 @@
   },
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
-    "Language/Java/JVM/类加载机制/Hotspot 字节码指令集.md",
     "Language/Java/JMM/内存屏障.md",
+    "Language/Java/JVM/类加载机制/Hotspot 字节码指令集.md",
     "Language/Java/JMM/JMM 相关概念.md",
     "Language/Java/JMM/代码重排与乱序执行.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
