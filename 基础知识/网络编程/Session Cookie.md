@@ -47,6 +47,8 @@ images.google.com与网站www.google.com同属于Google，但是域名不一样�
 注意：用户登录网站www.google.com之后会发现访问images.google.com时登录信息仍然有效，而普通的Cookie是做不到的。这是因为Google做了特殊处理
 
 # session
+除了使用Cookie，Web应用程序中还经常使用Session来记录客户端状态。**Session是服务器端使用的一种记录客户端状态的机制**，使用上比Cookie简单一些，相应的也**增加了服务器的存储压力**。
+
 ## 原理
 - Session 机制就是通过检查服务器上的 “*客户明细表*” 来确认客户身份。
 - Session 相当于程序在服务器上建立的一份客户档案，客户来访的时候只需要查询客户档案表就可以了。
