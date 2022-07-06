@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mock",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,

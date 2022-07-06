@@ -81,6 +81,7 @@ public class MockBeanAnnotationIntegrationTest {
 
 # mock 静态方法
 mock `StaticUtils.range()`
+
 ```java
 @Test
 void givenStaticMethodWithArgs_whenMocked_thenReturnsMockSuccessfully() {
