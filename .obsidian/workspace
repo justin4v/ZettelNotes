@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/并发编程/疑问解答/线程的本质.md",
+            "file": "Language/Java/并发编程/核心概念/通俗理解线程安全.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "线程",
+                "query": "tag:#Todo",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/并发编程/疑问解答/线程的本质.md",
+                "file": "Language/Java/并发编程/核心概念/通俗理解线程安全.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/并发编程/疑问解答/线程的本质.md"
+                "file": "Language/Java/并发编程/核心概念/通俗理解线程安全.md"
               }
             }
           },
@@ -128,15 +128,15 @@
   },
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
-    "Language/Java/并发编程/疑问解答/线程的本质.md",
     "Language/Java/并发编程/核心概念/通俗理解线程安全.md",
+    "Framework/Springboot/@ConfigurationProperties.md",
+    "OS/2.线程.md",
+    "Language/Java/并发编程/疑问解答/线程的本质.md",
     "基础知识/编程基础/编程核心概念.md",
     "Language/Java/并发编程/核心概念/并发问题示例.md",
     "Language/Java/并发编程/核心概念/并发相关概念.md",
     "Language/Java/JMM/代码重排与乱序执行.md",
     "OS/0.程序性能的限制与解决.md",
-    "Language/Java/并发编程/核心概念/1.线程安全问题.md",
-    "OS/2.线程.md",
-    "OS/3.线程模型.md"
+    "Language/Java/并发编程/核心概念/1.线程安全问题.md"
   ]
 }
