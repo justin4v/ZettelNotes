@@ -78,5 +78,24 @@ public class MockBeanAnnotationIntegrationTest {
 }
 ```
 
+
+# mock 静态方法
+mock 
+```java
+@Test
+void givenStaticMethodWithArgs_whenMocked_thenReturnsMockSuccessfully() {
+    assertThat(StaticUtils.range(2, 6)).containsExactly(2, 3, 4, 5);
+
+    try (MockedStatic<StaticUtils> utilities = Mockito.mockStatic(StaticUtils.class)) {
+        utilities.when(() -> StaticUtils.range(2, 6))
+          .thenReturn(Arrays.asList(10, 11, 12));
+
+        assertThat(StaticUtils.range(2, 6)).containsExactly(10, 11, 12);
+    }
+
+    assertThat(StaticUtils.range(2, 6)).containsExactly(2, 3, 4, 5);
+}
+```
 # 参考
 1. [Mockito.mock() vs @Mock vs @MockBean](https://www.baeldung.com/java-spring-mockito-mock-mockbean)
+2. [Mocking Static Methods With Mockito](https://www.baeldung.com/mockito-mock-static-methods#:~:text=As%20previously%20mentioned%2C%20since%20Mockito%203.4.0%2C%20we%20can,our%20type%2C%20which%20is%20a%20scoped%20mock%20object.)
