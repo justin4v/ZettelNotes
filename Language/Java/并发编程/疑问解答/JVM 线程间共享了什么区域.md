@@ -73,10 +73,10 @@
 
 ### TLAB使用的相关参数
 
-- TLAB可以选择开启或者关闭的，可以通过设置-XX:+/-UseTLAB参数来指定是否开启TLAB分配。
-- TLAB默认是eden区的1%，可以通过选项-XX:TLABWasteTargetPercent设置TLAB空间所占用Eden空间的百分比大小。
-- 默认情况下，TLAB的空间会在运行时不断调整，使系统达到最佳的运行状态。如果需要禁用自动调整TLAB的大小，可以使用-XX:-ResizeTLAB来禁用，并且使用-XX：TLABSize来手工指定TLAB的大小。
-- TLAB的refill_waste也是可以调整的，默认值为64，即表示使用约为1/64空间大小作为refill_waste，使用参数：-XX：TLABRefillWasteFraction来调整。
+- TLAB可以开启或者关闭的，通过 `-XX:+/-UseTLAB` 设置。
+- TLAB 默认 eden 区的1%，通过 `-XX:TLABWasteTargetPercent` 设置占用 Eden 空间的百分比。
+- 默认情况下，TLAB的空间会在运行时不断调整，使系统达到最佳的运行状态。使用 `-XX:-ResizeTLAB` 禁用自动调整，`-XX：TLABSize` 手动指定 TLAB 的大小。
+- TLAB 的 refill_waste 大小可以调整的，默认值为 64，表示设置 refill_waste 大小为 TLAB 1/64 ，使用：`-XX：TLABRefillWasteFraction` 来调整。
 
 # 总结
 - 为了保证对象的内存分配过程中的线程安全性，HotSpot 虚拟机提供了一种叫做 *TLAB(Thread Local Allocation Buffer)* 的技术。
