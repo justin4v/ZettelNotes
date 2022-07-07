@@ -59,7 +59,7 @@ JndiTemplate jndiTemplate = new JndiTemplate();
 ctx = (InitialContext) jndiTemplate.getContext();
 ```
 
-##  JNDI 对象绑定与查找
+#  JNDI 对象绑定与查找
 
  - Name 和 Context 的使用：
 - 使用 JNDI 存储一个 JDBC _DataSource_:
@@ -67,32 +67,27 @@ ctx = (InitialContext) jndiTemplate.getContext();
 ds = new DriverManagerDataSource("jdbc:h2:mem:mydb");
 ```
 
-### 绑定 JNDI 对象
-
-- 获得 context 之后, 将对象绑定到context:
+## 绑定 JNDI 对象
+- 获得 context 之后, 将*对象绑定到 context*，后期可通过路径 `java:comp/env/jdbc/datasource` 查找:
 
 ```java
 ctx.bind("java:comp/env/jdbc/datasource", ds);
 ```
+- 通常，sevice 可*在 directory context 中存储对象引用、序列化数据或属性*。但取决于应用程序的需要。
 
-In general, services should store an object reference, serialized data, or attributes in a directory context. It all depends on the needs of the application.
-通常，服务应该在 directory context 中存储对象引用、序列化数据或属性。不过这取决于应用程序的需要。
-
-### 查找 JNDI 对象
-
-查找 _DataSource_:
-
+## 查找 JNDI 对象
+- 查找 _DataSource_:
 ```java
 DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/datasource");
 ```
 
-## Role of JNDI in Modern Application Architecture
+## JNDI 在现代应用架构的角色
 
-虽然JNDI在**轻量级、容器化**的Java应用程序(如Spring Boot)中扮演的角色较小，但还有其他用途。
-如：
-1. [JDBC](https://www.baeldung.com/java-jdbc)；
-2. [EJB](https://www.baeldung.com/ejb-intro)；
-3. [JMS](https://www.baeldung.com/spring-jms). 
+- JNDI 在**轻量级、容器化**的 Java 应用程序(*如Spring Boot)中扮演的角色较小*；
+- 但还有其他用途。如：
+	1. [JDBC](https://www.baeldung.com/java-jdbc)；
+	2. [EJB](https://www.baeldung.com/ejb-intro)；
+	3. [JMS](https://www.baeldung.com/spring-jms). 
 
 
 ## 参考文献
