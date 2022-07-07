@@ -76,7 +76,7 @@ ctx.bind("java:comp/env/jdbc/datasource", ds);
 - 通常，sevice 可*在 directory context 中存储对象引用、序列化数据或属性*。但取决于应用程序的需要。
 
 ## 查找 JNDI 对象
-- 查找 _DataSource_:
+- 根据路径查找对象 _DataSource_:
 ```java
 DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/datasource");
 ```
