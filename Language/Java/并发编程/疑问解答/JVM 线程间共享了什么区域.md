@@ -67,13 +67,13 @@
 - 当请求分配的内存大于 *refill_waste* 的时候，会选择在堆（Heap）内存中分配。
 - 若小于 refill_waste 值，则会*废弃当前 TLAB，重新创建 TLAB* 进行对象内存分配。
 - 前面的例子中：
-	- TLAB 总空间 100KB，使用了 80KB，剩余 20KB；
+	- TLAB 总空间 100KB，使用了 80KB，*剩余 20KB*；
 	- 如果设置的 *refill_waste* 的值为25KB，那么如果新对象的内存大于 25KB，则直接堆内存分配；
-	- 如果小于 25KB，则会废弃掉之前的那个 TLAB，重新分配一个 TLAB 空间，给新对象分配内存。
+	- 如果小于 25KB，大于 20 KB，则会废弃掉之前的那个 TLAB，重新分配一个 TLAB 空间，给新对象分配内存。
 
 ### TLAB使用的相关参数
 
-- TLAB功能是可以选择开启或者关闭的，可以通过设置-XX:+/-UseTLAB参数来指定是否开启TLAB分配。
+- TLAB可以选择开启或者关闭的，可以通过设置-XX:+/-UseTLAB参数来指定是否开启TLAB分配。
 - TLAB默认是eden区的1%，可以通过选项-XX:TLABWasteTargetPercent设置TLAB空间所占用Eden空间的百分比大小。
 - 默认情况下，TLAB的空间会在运行时不断调整，使系统达到最佳的运行状态。如果需要禁用自动调整TLAB的大小，可以使用-XX:-ResizeTLAB来禁用，并且使用-XX：TLABSize来手工指定TLAB的大小。
 - TLAB的refill_waste也是可以调整的，默认值为64，即表示使用约为1/64空间大小作为refill_waste，使用参数：-XX：TLABRefillWasteFraction来调整。
