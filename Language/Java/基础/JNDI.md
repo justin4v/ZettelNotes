@@ -45,10 +45,8 @@ objectName.add("example");
 ```
 
 ## Context Interface
-
-_Context_ 包含 naming 和 directory 服务的属性。
-使用 spring 的工具类构建 _Context_:
-
+- Context 包含 *naming 和 directory* 服务的属性。
+- 使用 spring 的工具类构建 _Context_:
 ```java
 SimpleNamingContextBuilder builder = new SimpleNamingContextBuilder(); 
 builder.activate();
