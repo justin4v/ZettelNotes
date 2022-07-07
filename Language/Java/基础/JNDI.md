@@ -51,29 +51,25 @@ objectName.add("example");
 SimpleNamingContextBuilder builder = new SimpleNamingContextBuilder(); 
 builder.activate();
 ```
-
-Spring 的 _SimpleNamingContextBuilder_ 创建一个 JNDI provider 且用[_NamingManager_](https://docs.oracle.com/en/java/javase/11/docs/api/java.naming/javax/naming/spi/NamingManager.html)激活 builder。
-
-最后，通过 _JndiTemplate_ 得到  _InitialContext_.
-
+- Spring 的 _SimpleNamingContextBuilder_ 创建一个 JNDI provider；
+- 用 [_NamingManager_](https://docs.oracle.com/en/java/javase/11/docs/api/java.naming/javax/naming/spi/NamingManager.html) 激活 builder。
+- 最后，通过 _JndiTemplate_ 得到  _InitialContext_.
 ```java
 JndiTemplate jndiTemplate = new JndiTemplate();
 ctx = (InitialContext) jndiTemplate.getContext();
 ```
 
-
 ##  JNDI 对象绑定与查找
 
- _Name_ and _Context_ 的使用：
-使用 JNDI 存储一个 JDBC _DataSource_:
-
+ - Name 和 Context 的使用：
+- 使用 JNDI 存储一个 JDBC _DataSource_:
 ```java
 ds = new DriverManagerDataSource("jdbc:h2:mem:mydb");
 ```
 
 ### 绑定 JNDI 对象
 
-获得 context 之后, 将对象绑定到context:
+- 获得 context 之后, 将对象绑定到context:
 
 ```java
 ctx.bind("java:comp/env/jdbc/datasource", ds);
