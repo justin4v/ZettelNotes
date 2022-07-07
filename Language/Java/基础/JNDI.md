@@ -15,14 +15,15 @@
 	1. *Name*
 	2. *Context*
 
-## _Name_ Interface
+## Name Interface
 
 ```java
 Name objectName = new CompositeName("java:comp/env/jdbc");
 ```
 
-_Name_ 接口提供了管理组件名称和 JNDI 名称语法的能力。
-字符串的第一个标记表示 **全局上下文（global context）**，之后添加的字符串表示下一个**子上下文（sub-context）**:
+- Name 接口提供了*管理组件名称和 JNDI 名称语法*的能力。
+- 字符串 `java:comp/env/jdbc` 的第一个标记 (`java:comp`) 表示 **全局上下文（global context）**;
+- 之后的字符串(`env` 和 `jdbc`)表示下一个**子上下文（sub-context）**:
 
 ```java
 Enumeration<String> elements = objectName.getAll();
@@ -30,23 +31,20 @@ while(elements.hasMoreElements()) {
   System.out.println(elements.nextElement());
 }
 ```
-
 输出:
-
 ```plaintext
 java:comp  // gobal context
 env        // sub-context
 jdbc       // sub-context
 ```
 
- `/`是 _Name_ 中 sub-contexts 的分隔符. 
-增加一个 sub-context:
-
+ - `/`是 _Name_ 中 sub-contexts 的分隔符. 
+ - 增加一个 sub-context:
 ```java
 objectName.add("example");
 ```
 
-###  _Context_ Interface
+## Context Interface
 
 _Context_ 包含 naming 和 directory 服务的属性。
 使用 spring 的工具类构建 _Context_:
