@@ -1,10 +1,61 @@
 #Test #Spring #Mock 
 
+# 问题
+- 期望测试 `TestService` 的 `test` 方法;
+- 但是 `doSomething` 执行很复杂。 
+- 希望 `test` 方法真实执行，而为 `doSomething` 方法打桩。
 
+```java
+package com.example.demo.service;
+
+import com.example.demo.repositroy.TestRepository;
+import org.springframework.stereotype.Component;
+
+@Component
+public class TestService {
+    private final TestRepository testRepository;
+
+    public TestService(TestRepository testRepository) {
+        this.testRepository = testRepository;
+    }
+
+    public String doSomething(){
+        //假装有复杂的无法执行的业务逻辑
+        testRepository.doSomething();
+        throw new RuntimeException();
+    }
+
+    public String test() {
+        doSomething();
+        //其他逻辑
+        return "id";
+    }
+}
+```
+
+# 解决
+## MockBean
+
+- `MockBean` 会替换目标对象，其中所有方法全部 mock， `test` 不能真实地被执行。
+- 其中的  `when...thenCallRealMethod` 可达到部分 mock 的效果，仅`test`方法真实执行。
+
+```java
+@SpringBootTest
+@RunWith(SpringRunner.class)
+public class TestServiceTest {
+    @MockBean
+    TestService testService;
+
+    @Test
+    public void test(){
+        Mockito.when(testService.test()).thenCallRealMethod();
+        assertThat(testService.test(), equalTo("id"));
+    }
+}
+```
 
 # SpyBean
-
-使用`@SpyBean`修饰的`testService`是一个真实对象，仅当`Mockito.doReturn("").when(testService).doSomething()`时，`doSomething`方法被打桩，其他的方法仍被真实调用。
+- `@SpyBean`修饰的`testService`是一个真实对象，仅当`Mockito.doReturn("").when(testService).doSomething()`时，`doSomething`方法被打桩，其他的方法仍被真实调用。
 
 ```java
 @SpringBootTest
