@@ -7,6 +7,9 @@
 - *不会影响 Bean 其它的功能*
 - `@SpyBean` 与 `@Spy` 的关系类似于 `@MockBean` 与 `@Mock` 的关系；
 
+# SpyBean
+
 
 # 参考
 1. [使用 @MockBean 和 @SpyBean 解决 SpringBoot 单元测试中 Mock 类装配的问题 ](https://sspai.com/post/48245)
+2. [Springboot单元测试:SpyBean vs MockBean](https://juejin.cn/post/6881981078735699976)
