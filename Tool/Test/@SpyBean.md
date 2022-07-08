@@ -36,7 +36,7 @@ public class TestService {
 # 解决
 ## MockBean
 
-- `MockBean` 会替换目标对象，其中所有方法全部 mock， `test` 不能真实地被执行。
+- `MockBean` 会替换目标对象，生成一个 *mock 对象*，其中所有方法全部 mock， `test` 不能真实地被执行。
 - 其中的  `when...thenCallRealMethod` 可达到部分 mock 的效果，仅`test`方法真实执行。
 
 ```java
@@ -55,7 +55,8 @@ public class TestServiceTest {
 ```
 
 # SpyBean
-- `@SpyBean`修饰的`testService`是一个真实对象，仅当`Mockito.doReturn("").when(testService).doSomething()`时，`doSomething`方法被打桩，其他的方法仍被真实调用。
+- `@SpyBean` 修饰的 `testService` 是一个*真实对象*；
+- 当 `Mockito.doReturn("").when(testService).doSomething()` 时，`doSomething()` 方法被打桩，其他的方法仍被真实调用。
 
 ```java
 @SpringBootTest
