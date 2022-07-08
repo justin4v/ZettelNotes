@@ -27,6 +27,9 @@ public class TestServiceTest {
 - 而 `Mockito.when(testService.doSomething()).thenReturn("")` 则不会。
 - 因为使用 `@SpyBean` 修饰的 `testService` 是一个真实对象，所以 `testService.doSomething()` 会真实调用 `doSomething()` 方法。
 
+-   spy修饰的变量，Mockito会重新创建一个实例的copy，并不直接作用于真实实例
+-   spy对final方法无效
+
   # 比较
 - `@MockBean` 只能 mock 本地的代码——或者说是自己写的代码，对于三方库中又以 Bean 的形式装配的类无能为力；
 - `@SpyBean` 不会生成一个 Bean 的替代品装配到类中；
