@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/设计模式解析/开发过程中的三个视角.md",
+            "file": "Database/Mybatis-plus/未命名.md",
             "mode": "source",
             "source": false
           }
@@ -40,9 +40,9 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "三个视角",
+                "query": "动态sql",
                 "matchingCase": false,
-                "explainSearch": true,
+                "explainSearch": false,
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/设计模式解析/开发过程中的三个视角.md",
+                "file": "Database/Mybatis-plus/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/设计模式解析/开发过程中的三个视角.md"
+                "file": "Database/Mybatis-plus/未命名.md"
               }
             }
           },
@@ -128,6 +127,8 @@
   },
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
+    "Database/Mybatis-plus/未命名.md",
+    "Database/Sql 注入.md",
     "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Tool/JUnit/事务回滚.md",
     "Tool/JDK工具/线上问题排查示例.md",
@@ -135,8 +136,6 @@
     "Tool/Test/@MockBean vs. mock() vs. @Mock.md",
     "Tool/Test/@SpyBean.md",
     "Language/Java/JMM/代码重排与乱序执行.md",
-    "Language/Java/基础/transient volatile 关键字.md",
-    "Language/Java/基础/Java 基础.md",
-    "Language/Java/基础/Java 输入输出流.md"
+    "Language/Java/基础/transient volatile 关键字.md"
   ]
 }
