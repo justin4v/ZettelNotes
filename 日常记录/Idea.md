@@ -43,14 +43,17 @@ java 实现：
 
 ```java
 public Boolean valid() {
+	// list 存储需要判断的值，方便遍历
     List<String> params = List.of(Optional.ofNullable(this.domain).orElse(""),
         Optional.ofNullable(this.grade).orElse(""),
         Optional.ofNullable(this.className).orElse(""));
     boolean checkBit = false;
     for (String param : params) {
+      // 如果已经出现0，后续不能再出现 1
       if (checkBit && StringUtils.isNotBlank(param)) {
         return false;
       }
+      // 出现 0，则后续不允许再出现 1
       if (StringUtils.isBlank(param)) {
         checkBit = true;
       }
