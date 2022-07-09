@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mybatis-plus/未命名.md",
+            "file": "Database/Mybatis-plus/Mybatis XML 映射.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mybatis-plus/未命名.md",
+                "file": "Database/Mybatis-plus/Mybatis XML 映射.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mybatis-plus/未命名.md"
+                "file": "Database/Mybatis-plus/Mybatis XML 映射.md"
               }
             }
           },
@@ -127,7 +127,8 @@
   },
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
-    "Database/Mybatis-plus/未命名.md",
+    "Database/Mybatis-plus/Mybatis XML 映射.md",
+    "Database/Mybatis-plus/动态 SQL.md",
     "Database/Sql 注入.md",
     "Book Reading/设计模式解析/开发过程中的三个视角.md",
     "Tool/JUnit/事务回滚.md",
@@ -135,7 +136,6 @@
     "Tool/JUnit/JUnit 5 简介.md",
     "Tool/Test/@MockBean vs. mock() vs. @Mock.md",
     "Tool/Test/@SpyBean.md",
-    "Language/Java/JMM/代码重排与乱序执行.md",
-    "Language/Java/基础/transient volatile 关键字.md"
+    "Language/Java/JMM/代码重排与乱序执行.md"
   ]
 }
