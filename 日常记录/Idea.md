@@ -30,5 +30,32 @@
 问题 ：
 1. 假如有关联项 A，B，C，D；
 2. 合法性要求：A 存在时 B 才能存在，B 存在时 C 才能存在...依次类推。
-3. 现在给定 A B C D 的一种可能
+3. 现在给定 A B C D 的一种可能判断其输入合法性
+
+分析思路：
+1. 其实可以看做是要求保持输入值的某种*连续性*。
+2. 假设存在时记为 1，不存在记为 0；
+3. 依次读入 A B C D：
+	1. 当读入到 1 时，后续值存在不存在都有可能是合法的；
+	2. 当读入到 0 时，后续值必须为 0 ，否则整体将*不连续*，不合法。
+
+java 实现：
+
+```java
+public Boolean valid() {
+    List<String> params = List.of(Optional.ofNullable(this.domain).orElse(""),
+        Optional.ofNullable(this.grade).orElse(""),
+        Optional.ofNullable(this.className).orElse(""));
+    boolean checkBit = false;
+    for (String param : params) {
+      if (checkBit && StringUtils.isNotBlank(param)) {
+        return false;
+      }
+      if (StringUtils.isBlank(param)) {
+        checkBit = true;
+      }
+    }
+    return true;
+  }
+```
 
