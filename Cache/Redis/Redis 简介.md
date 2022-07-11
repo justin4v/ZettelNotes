@@ -65,13 +65,14 @@ Redis 会使用 zipList 做列表键的底层实现
 - Redis 后续用 quicklist 代替了 ziplist 和 linkedlist。
 	- quicklist 是 *ziplist 和 linkedlist 的混合体*；
 	- 将 linkedlist 按段切分，*每一段用 ziplist 来紧凑存储*；
-	- 多个 ziplist 之间使用双向指针串接起来
+	- 多个 *ziplist 之间用双向指针串接*。
 
 ![[Redis quick-List.png]]
 
 ## 整数数组（intset）
-
-当一个集合只包含整数值元素，并且这个集合的元素数量不多时，Redis 就会使用整数集合作为集合键的底层实现，节省内存。
+- 当集合只包含整数值元素；
+- 且这个集合的元素数量不多时；
+- Redis 用 intset 作为集合键的底层实现。
 
 # 参考
 1. [How fast is Redis? ](https://redis.io/topics/benchmarks)
