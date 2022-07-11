@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "运维相关/docker 常用命令.md",
+            "file": "OS/并发编程/协程/goroutine.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "运维相关/docker 常用命令.md",
+                "file": "OS/并发编程/协程/goroutine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "运维相关/docker 常用命令.md"
+                "file": "OS/并发编程/协程/goroutine.md"
               }
             }
           },
@@ -127,8 +127,8 @@
   },
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
-    "运维相关/docker 常用命令.md",
     "OS/并发编程/协程/goroutine.md",
+    "运维相关/docker 常用命令.md",
     "OS/并发编程/核心概念/1.线程安全问题.md",
     "OS/并发编程/核心概念/3.线程性能问题.md",
     "OS/并发编程/核心概念/2.线程活跃性问题.md",
