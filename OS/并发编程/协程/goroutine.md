@@ -1,4 +1,4 @@
 #协程 #Go #Goroutine #Todo 
 
 # 参考
-1. [线程(Thread)和协程(Goroutine) ](https://juejin.cn/post/7064500124168241165)
+1. [【深度知识】GO语言的goroutine并发原理和调度机制](https://www.jianshu.com/p/4afa0679851d)
