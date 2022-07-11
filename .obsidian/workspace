@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/Idea.md",
+            "file": "OS/并发编程/协程/goroutine.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "idea",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/Idea.md",
+                "file": "OS/并发编程/协程/goroutine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/Idea.md"
+                "file": "OS/并发编程/协程/goroutine.md"
               }
             }
           },
@@ -128,15 +127,15 @@
   },
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
+    "OS/并发编程/协程/goroutine.md",
+    "OS/并发编程/核心概念/1.线程安全问题.md",
+    "OS/并发编程/核心概念/3.线程性能问题.md",
+    "OS/并发编程/核心概念/2.线程活跃性问题.md",
+    "OS/未命名.md",
     "日常记录/Idea.md",
     "Database/Mybatis-plus/Mybatis XML 语句映射.md",
     "Database/Mybatis-plus/动态 SQL.md",
     "Database/Sql 注入.md",
-    "Book Reading/设计模式解析/开发过程中的三个视角.md",
-    "Tool/JUnit/事务回滚.md",
-    "Tool/JDK工具/线上问题排查示例.md",
-    "Tool/JUnit/JUnit 5 简介.md",
-    "Tool/Test/@MockBean vs. mock() vs. @Mock.md",
-    "Tool/Test/@SpyBean.md"
+    "Book Reading/设计模式解析/开发过程中的三个视角.md"
   ]
 }
