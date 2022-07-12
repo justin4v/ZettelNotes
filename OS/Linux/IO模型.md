@@ -1,4 +1,4 @@
-#IO-model #Problem-and-Solutions 
+#IO-model #Problem-and-Solutions #NIO #BIO #AIO #SIGIO #IO-multiplexing
 
 # 问题
 1. 如何突破原始 I/O 的效率限制？ 
@@ -161,12 +161,19 @@
 - 同步异步：
 	1. 是不是需要一直等待操作结果的返回，甚至被挂起（也可能不被挂起）。
 	2. 描述的是用户线程与内核的交互方式（通信机制）。
-- 同步阻塞 IO：BIO
+
+## IO 分类及解释
+- 同步阻塞 IO：**BIO，IO-multiplexing**(select 阻塞)
 	1. 同步等待返回；
 	2. 阻塞状态。
-- 同步非阻塞 IO：NIO
+- 同步非阻塞 IO(**内核复制数据到用户空间是阻塞**的)：**NIO，SIGIO**(进程可继续执行)
 	1. 同步等待返回；
 	2. 可执行轮询，非阻塞。
 - 异步非阻塞：AIO
 	1. 异步，当前线程无需等待；
-	2. 非阻塞
+	2. 非阻塞状态。
+
+
+# 参考
+1. [[select poll epoll]]
+2. 
