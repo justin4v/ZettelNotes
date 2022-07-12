@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/Linux/Linux cgroups.md",
+            "file": "OS/Copy on write.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/Linux/Linux cgroups.md",
+                "file": "OS/Copy on write.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/Linux/Linux cgroups.md"
+                "file": "OS/Copy on write.md"
               }
             }
           },
@@ -127,15 +127,15 @@
   },
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
+    "OS/Copy on write.md",
+    "OS/3.线程模型.md",
+    "OS/0.程序性能的限制与解决.md",
+    "OS/1.进程.md",
+    "OS/2.线程.md",
+    "OS/Linux/Linux Namespace.md",
     "OS/Linux/Linux cgroups.md",
     "OS/Linux/Linux Capabilities.md",
     "OS/Linux/select poll epoll.md",
-    "OS/Copy on write.md",
-    "Cache/Redis/Redis 简介.md",
-    "OS/并发编程/协程/goroutine.md",
-    "运维相关/docker 常用命令.md",
-    "OS/并发编程/核心概念/1.线程安全问题.md",
-    "OS/并发编程/核心概念/3.线程性能问题.md",
-    "OS/并发编程/核心概念/2.线程活跃性问题.md"
+    "Cache/Redis/Redis 简介.md"
   ]
 }
