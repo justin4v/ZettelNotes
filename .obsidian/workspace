@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/基础概念/进程切换.md",
+            "file": "OS/Linux/IO模型.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/基础概念/进程切换.md",
+                "file": "OS/Linux/IO模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/基础概念/进程切换.md"
+                "file": "OS/Linux/IO模型.md"
               }
             }
           },
@@ -127,15 +127,15 @@
   },
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
-    "OS/基础概念/进程切换.md",
     "OS/Linux/IO模型.md",
+    "OS/并发编程/Java并发编程基础/线程状态及转变.md",
+    "OS/并发编程/协程/goroutine.md",
+    "OS/并发编程/核心概念/并发相关概念.md",
+    "OS/基础概念/进程切换.md",
     "OS/基础概念/用户空间和内核空间.md",
     "OS/基础概念/CPU 密集型和 IO 密集型.md",
     "OS/Copy on write.md",
     "OS/基础概念/3.线程模型.md",
-    "OS/基础概念/0.程序性能的限制与解决.md",
-    "OS/基础概念/1.进程.md",
-    "OS/基础概念/2.线程.md",
-    "OS/Linux/Linux Namespace.md"
+    "OS/基础概念/0.程序性能的限制与解决.md"
   ]
 }
