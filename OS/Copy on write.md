@@ -1,7 +1,7 @@
 #Operating-system #Copy-on-write #Todo 
 
 # cow 思想
- - 写入时复制（CopyOnWrite，简称COW）思想是计算机程序设计领域中的一种*通用优化策略*。
+ - **写入时复制（CopyOnWrite，简称COW）** 思想是计算机程序设计领域中的一种*通用优化策略*。
  - 核心思想是：
 	 1. 如果有多个调用者（Callers）同时访问相同的资源（如内存或者是磁盘上的数据存储），会*获取同一份资源*；
 	 2. 直到某个调用者*修改资源*内容时，才会复制一份*专用副本（private copy）给该调用者*；
@@ -58,7 +58,37 @@ Copy On Write技术**实现原理：**
 - 修改的同时，*读操作不会被阻塞*，而是*读取旧的数据*。和读写锁区分开。
 
 ## 源码
+1. CopyOnWriteArrayList 的 add()
+ 
+```java
+    public boolean add(E e) {
+        final ReentrantLock lock = this.lock;
+        lock.lock();
+        try {
+            Object[] elements = getArray();
+            int len = elements.length;
+            Object[] newElements = Arrays.copyOf(elements, len + 1);
+            newElements[len] = e;
+            setArray(newElements);
+            return true;
+        } finally {
+            lock.unlock();
+        }
+    }
+```
 
+2. CopyOnWriteArrayList 的 get(int index)，**无锁**
+```java
+    public E get(int index) {
+        return get(getArray(), index);
+    }
+    
+    @SuppressWarnings("unchecked")
+    private E get(Object[] a, int index) {
+        return (E) a[index];
+    }    
+
+```
 
 ## 优点
 - 适用于**读多写少**场景，是一种*无锁的实现*，可以实现*更高的并发*；
@@ -68,10 +98,11 @@ Copy On Write技术**实现原理：**
 	- CopyOnWriteArrayList 只是在增删改上加锁，读不加锁，读性能就好于 Vector。
 
 ## 缺点
-
-数据一致性问题。这种实现只是保证数据的最终一致性，在添加到拷贝数据而还没进行替换的时候，读到的仍然是旧数据。
-
-内存占用问题。如果对象比较大，频繁地进行替换会消耗内存，从而引发 Java 的 GC 问题，这个时候，我们应该考虑其他的容器，例如 ConcurrentHashMap。
+1. 只保证**数据的最终一致性**。
+	- 在添加到拷贝数据而还没进行替换的时候，读到的仍然是旧数据。
+2. **内存占用**。
+	1. 果对象比较大，频繁地进行替换会**消耗内存**，从而引发 Java 的 GC 问题’
+	2. 此时应该考虑*其他并发容器*，例如 *ConcurrentHashMap*。
 
 # 参考
 1. [理解Copy on write机制](https://www.jianshu.com/p/2d30dce24bdb)
