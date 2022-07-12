@@ -1,3 +1,4 @@
+#Linux #Linux-capabilities
 - `Capabilities` 是在 Linux 内核 `2.2` 之后引入的；
 - 原理是将之前与超级用户 root（UID=0）关联的特权细分为不同的功能组；
 - Capabilites 作为线程（**Linux 并不真正区分进程和线程**）的属性存在，每个功能组都可以独立启用和禁用。
