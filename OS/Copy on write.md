@@ -1,5 +1,15 @@
 #Operating-system #Copy-on-write #Todo 
 
+# cow 思想
+ - 写入时复制（CopyOnWrite，简称COW）思想是计算机程序设计领域中的一种*通用优化策略*。
+ - 核心思想是：
+	 1. 如果有多个调用者（Callers）同时访问相同的资源（如内存或者是磁盘上的数据存储），会共同获取相同的指针指向相同的资源；
+	 2. 直到某个调用者修改资源内容时，系统才会真正复制一份专用副本（private copy）给该调用者；
+	 3. 而其他调用者所见到的最初的资源仍然保持不变，是透明的（transparently）。
+- 主要优点是如果没有修改资源，就不会有副本（private copy）被创建，因此多个调用者只是读取操作时可以共享同一份资源。
+
+通俗易懂的讲，写入时复制技术就是不同进程在访问同一资源的时候，只有更新操作，才会去复制一份新的数据并更新替换，否则都是访问同一个资源。
+
 # linux 的 cow
 > fork()会产生一个和父进程完全相同的子进程(除了pid)
 
@@ -36,5 +46,9 @@ Copy On Write技术**实现原理：**
 -   如果在fork()之后，父子进程都还需要继续进行写操作，**那么会产生大量的分页错误(页异常中断page-fault)**，这样就得不偿失。
 
 
+# 应用
+1. java 中 copyOnWriteArrayList 和 copyOnWriteArraySet；
+
 # 参考
 1. [理解Copy on write机制](https://www.jianshu.com/p/2d30dce24bdb)
+2. [写入时复制（CopyOnWrite）](https://www.cnblogs.com/jmcui/p/12377081.html)
