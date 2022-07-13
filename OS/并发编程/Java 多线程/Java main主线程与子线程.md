@@ -14,8 +14,8 @@
 
 
 ## 主线程中死锁（单个线程）
-
-主线程创建一个死锁：
+- 主线程应该是最后一个结束的线程；
+- 如果主线程自己调用了 join() 方法则会产生一个死锁：
 ```java
 public class Test {
     public static void main(String[] args) {
@@ -31,13 +31,11 @@ public class Test {
 } 
 ```
 
-看下输出：
-
+输出：
 ```csharp
 Entering into Deadlock
 ```
-
-语句`Thread.currentThread().join()`会告诉主线程一直等待这个线程（也就是等它自己）运行结束，所以我们就有了死锁。
+- `Thread.currentThread().join()` 使得*主线程一直等待当前线程（主线程自己）运行结束*，故产生了死锁。
 
 # main 和子线程
 
