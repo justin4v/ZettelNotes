@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -129,6 +128,7 @@
   "active": "b0038cd2319120f8",
   "lastOpenFiles": [
     "OS/并发编程/Java 多线程/创建线程的两种方式.md",
+    "日常记录/ZettelKasten.md",
     "OS/并发编程/Java 多线程/Java 启动新线程.md",
     "OS/并发编程/Java 多线程/线程状态及转变.md",
     "OS/Linux/fork.md",
@@ -136,7 +136,6 @@
     "OS/Linux/IO模型.md",
     "OS/并发编程/协程/goroutine.md",
     "OS/并发编程/核心概念/并发相关概念.md",
-    "OS/基础概念/进程切换.md",
-    "OS/基础概念/用户空间和内核空间.md"
+    "OS/基础概念/进程切换.md"
   ]
 }
