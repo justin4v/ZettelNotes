@@ -14,13 +14,14 @@
 
 # 四种传参方式
 
-| HTTP协议组成           | 协议内容示例                                  | 对应Spring注解     |
-| ------------------ | --------------------------------------- | -------------- |
-| path info传参        | /articles/12 (查询id为12的文章，12是参数)         | @PathVariable  |
-| URL Query String传参 | /articles?id=12                         | @RequestParam  |
-| Body 传参            | Content-Type: multipart/form-data       | @RequestParam  |
+| HTTP协议组成         | 协议内容示例                                     | 对应Spring注解 |
+| -------------------- | ------------------------------------------------ | -------------- |
+| path info传参        | /articles/12 (查询id为12的文章，12是参数)        | @PathVariable  |
+| URL Query String传参 | /articles?id=12                                  | @RequestParam  |
+| Body 传参            | Content-Type: multipart/form-data                | @RequestParam  |
 | Body 传参            | Content-Type: application/json，或其他自定义格式 | @RequestBody   |
-| Headers 传参         |                                         | @RequestHeader |
+| Body 传参            | Content-Type: x-www-form-urlencoded            |                |
+| Headers 传参         |                                                  | @RequestHeader |
 
 # path info传参
 请求路径：`http://localhost:8080/rest/articles/1`
@@ -156,5 +157,7 @@
 ```
 
 - 用注解 @RequestHeader 之后，传数据的同时也还要把请求头中的数据传过来（没有的话自定义一个也要穿过来，不然报错400）。
+
+
 # 参考
 1. [HTTP协议的四种传参方式](https://www.cnblogs.com/jinyuanya/p/13934722.html)

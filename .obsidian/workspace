@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "传参",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -62,7 +62,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251
+    "width": 251,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -123,8 +124,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307,
-    "collapsed": true
+    "width": 307
   },
   "active": "1b2a1ce85f46ef00",
   "lastOpenFiles": [
