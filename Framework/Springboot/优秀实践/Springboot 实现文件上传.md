@@ -79,15 +79,13 @@ public String upload(@RequestParam("imgFile") MultipartFile file, @RequestParam(
 ```
 - `multipart/form-data` 格式上传的文件在 Java 中是`MultipartFile`类型；
 - `@RequestParam` 中 `value` 对应前端表单每一项（`<input>`标签）的 `name` 属性值，或者`FormData`对象`append` 时的名字。
-- 前端表单中的 `action` 属性即为表单提交至的地址，对应我们Controller的 `@PostMapping`中的值。
-
-MultipartFile实例通过使用方法`transferTo`方法实现把上传的文件保存至指定位置
-
-注意最好是使用`@RequestParam`逐个接受参数，因为`@RequestBody`不支持`multipart`类型，参数多了可以分接口接收。
+- 前端表单中的 `action` 属性即为表单提交至的地址，对应 Controller 该请求的地址 。
+- 实例中通过 `transferTo` 方法把上传的文件保存至指定位置。
+- 最好使用 `@RequestParam` 接收参数，`@RequestBody` 不支持 `multipart`类 型。
 
 # 上传多个文件
-
-上传多个文件其实也很简单，和上面上传单个文件差别不大。在前端的`<input type="file"...>`这一条表示文件的条目标签中加入属性multiple即可，我的代码如下：
+- 上传多个文件和单个文件类似。
+- 前端的 `<input type="file"...>` 标签中加入属性 multipl e即可，代码如下：
 
 ```html
 <form enctype="multipart/form-data" method="POST" action="/upload">
@@ -95,10 +93,9 @@ MultipartFile实例通过使用方法`transferTo`方法实现把上传的文件�
     <input type="file" name="imgFile" multiple />
     <input type="submit" value="upload" />
 </form>
-复制代码
 ```
 
-这时，再上传文件时后端接收到的是MultipartFile数组，因此在上述的Controller方法中的对应的形参改成`MultipartFile[]`类型即可，然后遍历操作，具体例子如下：
+- 后端接收到的是 MultipartFile 数组，在 Controller 中形参改成 `MultipartFile[]` 类型，然后遍历操作：
 
 ```java
 @PostMapping("/upload")
