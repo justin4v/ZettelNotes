@@ -125,13 +125,11 @@ public class LogAdvisor extends AbstractPointcutAdvisor {
 ![[AOP执行顺序-正常情况]]
 
 
-
 执行失败（`注意没有Around后`）:
 
-  
-
+![[AOP执行顺序-异常情况]]
 
 
 # 参考
 1. [【线上排查实战】AOP切面执行顺序你真的了解吗](https://segmentfault.com/a/1190000037558963)
-2. 
+2. [🚀一文搞懂：jdk动态代理,cglib,Spring AOP和Aspectj (AOP日志收集实战)](https://juejin.cn/post/7042484603365359646#heading-27)
