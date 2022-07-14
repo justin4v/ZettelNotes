@@ -160,8 +160,32 @@
 
 # postman 提交参数几种格式
 ## form-data
-- 等价于 http 请求中的 multipart/form-data ,它会将表单的数据处理为一条消息，以标签为单元，用分隔符分开。既可以上传键值对，也可以上传文件。当上传的字段是文件时，会有Content-Type来表名文件类型；content-disposition，用来说明字段的一些信息；  
-由于有boundary隔离，所以multipart/form-data既可以上传文件，也可以上传键值对，它采用了键值对的方式，所以可以上传多个文件
+- 等价于 http 请求中的 *multipart/form-data* ；
+- 会将表单的数据处理为一条消息，以标签为单元，用分隔符（boundary）分开。
+- 既可以上传键值对，也可以上传文件。
+	- 上传文件时，会有 Content-Type 来表名文件类型；
+	- content-disposition，用来说明字段的一些信息；  
+	- 可以上传多个文件
+
+```http
+POST /api/research/v2/researchUser/importByExcel/preParser?locationCode=lc20200101&locationName=测试机构&officeCode=0101&officeName=测试科室 HTTP/1.1
+Host: localhost:8091
+User-Agent: apifox/1.0.0 (https://www.apifox.cn)
+Content-Length: 235
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="C:\Users\junjie.fu\Desktop\templates\student-info.xlsx"
+Content-Type: <Content-Type header here>
+
+(data)
+----WebKitFormBoundary7MA4YWxkTrZu0gW
+```
+
+## x-www-form-urlencoded
+- 等价于 application/x-www-from-urlencoded，会将表单内的数据转换为键值对；
+- 如 name=java&age = 23
+
 
 
 # 参考
