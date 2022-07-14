@@ -126,6 +126,11 @@ public class StudentServiceImpl implements StudentService {
 }
 ```
 
+## spring 默认代理策略
+![[动态代理#Spring 的代理策略]]
+
+## springboot 默认代理策略
+![[动态代理#解释]]
 
 # 参考
 1. [[动态代理]]
