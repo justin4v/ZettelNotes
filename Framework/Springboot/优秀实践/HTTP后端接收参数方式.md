@@ -9,6 +9,7 @@
 3. 协议规定 POST 提交的数据必须放在消息主体（entity-body）中，但协议并没有规定数据必须 **使用什么编码方式** 。开发者完全可以自己决定消息主体的格式，只要最后发送的 HTTP 请求满足上面的格式就可以。
 4. 数据发送出去，服务端要解析成功才有意义。一般服务端语言如 java、python 及相关 framework 等，都内置了自动解析常见数据格式的功能。
 5. 服务端通常是根据请求头（headers）中的 Content-Type 字段来获知请求中的消息主体是用何种方式编码，再对主体进行解析。
+6. `application/x-www-form-urlencoded` 和 `multipart/form-data` 都是**浏览器原生支持**。
 
 
 # 四种传参方式
@@ -161,7 +162,7 @@
 # postman 提交参数几种格式
 ## form-data
 - 等价于 http 请求中的 *multipart/form-data* ；
-- 会将表单的数据处理为一条消息，以标签为单元，用分隔符（boundary）分开。
+- 会将表单的数据*转换为一条消息*，以标签为单元，用分隔符（boundary）分开。
 - 既可以上传键值对，也可以上传文件。
 	- 上传文件时，会有 Content-Type 来表名文件类型；
 	- content-disposition，用来说明字段的一些信息；  
@@ -184,9 +185,17 @@ Content-Type: <Content-Type header here>
 
 ## x-www-form-urlencoded
 - 等价于 application/x-www-from-urlencoded，会将表单内的数据转换为键值对；
-- 如 name=java&age = 23
+- 如 `name=java&age = 23`
 
 
+# raw
+- raw 对应的是入参是任意格式的可以上传任意格式的【文本】，可以上传text、json、xml、html等
 
+![[raw 格式示意.png]]
+
+
+# binary
+- 相当于 Content-Type:application/octet-stream；
+- 只可以上传二进制数据，通常用来上传文件，但是*一次只能上传一个文件*；
 # 参考
 1. [HTTP协议的四种传参方式](https://www.cnblogs.com/jinyuanya/p/13934722.html)
