@@ -4,18 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "b0038cd2319120f8",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Framework/Springboot/问题及解析/Spring 类内方法调用AOP不生效问题.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
         "id": "1b2a1ce85f46ef00",
         "type": "leaf",
         "state": {
