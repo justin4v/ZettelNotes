@@ -50,7 +50,8 @@ let file = input.files[0]; //input的属性files表示选择的文件数组，�
 
 
 ## 后端
-- 在 Spring Boot 中配置**文件上传大小限制**，因为其默认限制是 1mb，所以上传文件稍大就会失败
+- 在 Spring Boot 中配置**文件上传大小限制**，**其默认限制是 1mb**，所以上传文件稍大就会失败
+- 无限制可以填 `-1`。
 
 ```properties
 # 设置内置Tomcat请求大小为20MB
@@ -62,10 +63,8 @@ spring.servlet.multipart.max-file-size=20MB
 复制代码
 ```
 
-三个选项最好是都设定一下，如果想无限制可以都填`-1`。
 
-然后在Controller类中写如下方法：
-
+Controller：
 ```java
 @PostMapping("/upload")
 public String upload(@RequestParam("imgFile") MultipartFile file, @RequestParam("imgName") String name) throws Exception {
@@ -77,10 +76,10 @@ public String upload(@RequestParam("imgFile") MultipartFile file, @RequestParam(
     file.transferTo(new File(dir.getAbsolutePath() + File.separator + name + ".png"));
     return "上传完成！文件名：" + name;
 }
-复制代码
 ```
-
-需要注意的是，上传过来的文件在Java中是`MultipartFile`类型，`@RequestParam`中的值即为我们前端表单每一项（`<input>`标签）里面的`name`属性值，或者是使用`FormData`对象`append`时对应的那个名字，要一一对应，必须相同。前端表单中的`action`属性即为表单提交至的地址，对应我们Controller的`@PostMapping`中的值。
+- `multipart/form-data` 格式上传的文件在 Java 中是`MultipartFile`类型；
+- `@RequestParam` 中 `value` 对应前端表单每一项（`<input>`标签）的 `name` 属性值，或者`FormData`对象`append` 时的名字。
+- 前端表单中的 `action` 属性即为表单提交至的地址，对应我们Controller的 `@PostMapping`中的值。
 
 MultipartFile实例通过使用方法`transferTo`方法实现把上传的文件保存至指定位置
 
