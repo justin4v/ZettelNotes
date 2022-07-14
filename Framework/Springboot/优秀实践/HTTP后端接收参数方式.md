@@ -11,19 +11,18 @@
 5. 服务端通常是根据请求头（headers）中的 Content-Type 字段来获知请求中的消息主体是用何种方式编码，再对主体进行解析。
 
 
-
 # 四种传参方式
 
 | HTTP协议组成         | 协议内容示例                                     | 对应Spring注解 |
 | -------------------- | ------------------------------------------------ | -------------- |
 | path info传参        | /articles/12 (查询id为12的文章，12是参数)        | @PathVariable  |
 | URL Query String传参 | /articles?id=12                                  | @RequestParam  |
+| Body 传参            | Content-Type: application/x-www-form-urlencoded  | @RequestParam  |
 | Body 传参            | Content-Type: multipart/form-data                | @RequestParam  |
 | Body 传参            | Content-Type: application/json，或其他自定义格式 | @RequestBody   |
-| Body 传参            | Content-Type: x-www-form-urlencoded            |                |
 | Headers 传参         |                                                  | @RequestHeader |
 
-# path info传参
+# path info 传参
 请求路径：`http://localhost:8080/rest/articles/1`
 
 ```java
@@ -65,7 +64,7 @@
     }
 ```
 
-## Body 传参：@RequestParam
+# Body 传参：@RequestParam
 
 请求路径：`http://localhost:8080/rest/articles1`
 
@@ -118,7 +117,7 @@
 - 用了 @RequestParam 接收参数，则只能接受表单形式的提交。类似get中 ❓ 后一键一值。
 - @RequestBody才是接收json形式的数据的！！！
 
-## Body 传参 和 Headers 传参
+# Body 传参 和 Headers 传参
 
 请求路径：`http://localhost:8080/rest/articles2`
 ```java
@@ -142,7 +141,7 @@
     }
 ```
 
-- @RequestBody 接收json形式的数据自动转换成实体类；
+- @RequestBody 接收 json 形式的数据*自动转换成实体类*；
 - 还可以接受集合类型的数据。
 
 ```json
@@ -157,6 +156,12 @@
 ```
 
 - 用注解 @RequestHeader 之后，传数据的同时也还要把请求头中的数据传过来（没有的话自定义一个也要穿过来，不然报错400）。
+
+
+# postman 提交参数几种格式
+## form-data
+- 等价于 http 请求中的 multipart/form-data ,它会将表单的数据处理为一条消息，以标签为单元，用分隔符分开。既可以上传键值对，也可以上传文件。当上传的字段是文件时，会有Content-Type来表名文件类型；content-disposition，用来说明字段的一些信息；  
+由于有boundary隔离，所以multipart/form-data既可以上传文件，也可以上传键值对，它采用了键值对的方式，所以可以上传多个文件
 
 
 # 参考
