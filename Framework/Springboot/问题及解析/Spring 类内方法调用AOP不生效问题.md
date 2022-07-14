@@ -49,7 +49,6 @@ public Result create(Api api) {
 
 
 ## @Autowired 注入自身
-
 在当前类中获取自身的 Bean 实例，再用 Bean 进行内部调用：
 ```java
 @Service
