@@ -83,6 +83,21 @@ public String upload(@RequestParam("imgFile") MultipartFile file, @RequestParam(
 - 实例中通过 `transferTo` 方法把上传的文件保存至指定位置。
 - 最好使用 `@RequestParam` 接收参数，`@RequestBody` 不支持 `multipart`类 型。
 
+
+## post binary方式
+
+```java
+    // 路由注解可添加consumes参数指定Content-Type类型，如application/octet-stream
+    @PostMapping(value = "/test")
+    public void testBinary(HttpServletRequest request) throws IOException {
+        File targetFile = new File("d:/test333.png");
+        ServletInputStream inputStream = request.getInputStream();
+        // org.apache.commons.io.FileUtils
+        FileUtils.copyInputStreamToFile(inputStream, targetFile);
+    }
+```
+
+
 # 上传多个文件
 - 上传多个文件和单个文件类似。
 - 前端的 `<input type="file"...>` 标签中加入属性 multipl e即可，代码如下：

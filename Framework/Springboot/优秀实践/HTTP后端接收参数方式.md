@@ -198,6 +198,7 @@ Content-Type: <Content-Type header here>
 - 相当于 Content-Type:application/octet-stream；
 - 只可以上传二进制数据，通常用来上传文件，但是*一次只能上传一个文件*；
 
+![[Springboot 实现文件上传#post binary方式]]
 
 # 参考
 1. [HTTP协议的四种传参方式](https://www.cnblogs.com/jinyuanya/p/13934722.html)

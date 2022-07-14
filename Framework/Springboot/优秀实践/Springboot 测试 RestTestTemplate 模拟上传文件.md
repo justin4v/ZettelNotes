@@ -39,7 +39,7 @@
      */
     @Test
     public  void streamPost() throws IOException {
-		//fastdfs地址，文件上传地址
+		//fastdfs 地址，文件上传地址
 	    private String url = "http://xxx.xxx.xxx.xxx:8188/uploadfile4picture";
 	    //文件路径
 	    private String filePath = "C:\\Users\\rwto\\Desktop\\测试\\图片\\a.jpg";
