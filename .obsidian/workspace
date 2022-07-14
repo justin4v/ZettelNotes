@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "1b2a1ce85f46ef00",
+        "id": "040f6db25c2d3195",
         "type": "leaf",
         "state": {
           "type": "excalidraw",
           "state": {
-            "file": "附件/Excalidraw/Drawing 2022-07-14 15.22.33.md"
+            "file": "附件/Excalidraw/AOP执行顺序-正常情况.md"
           }
         }
       }
@@ -59,8 +59,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251,
-    "collapsed": true
+    "width": 251
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -76,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "附件/Excalidraw/Drawing 2022-07-14 15.22.33.md",
+                "file": "附件/Excalidraw/AOP执行顺序-正常情况.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "附件/Excalidraw/Drawing 2022-07-14 15.22.33.md"
+                "file": "附件/Excalidraw/AOP执行顺序-正常情况.md"
               }
             }
           },
@@ -124,17 +123,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "1b2a1ce85f46ef00",
+  "active": "040f6db25c2d3195",
   "lastOpenFiles": [
-    "附件/Excalidraw/Drawing 2022-07-14 15.22.33.md",
+    "附件/Excalidraw/AOP执行顺序-正常情况.md",
     "Framework/AOP/AOP 相关概念.md",
+    "附件/Excalidraw/Drawing 2022-05-27 17.33.18.md",
     "Framework/AOP/SpringAop 和 AspectJ.md",
     "Framework/Springboot/问题及解析/Spring 类内方法调用AOP不生效问题.md",
     "Framework/Springboot/优秀实践/RestTemplate 上传文件.md",
     "Framework/Springboot/优秀实践/HTTP后端接收参数方式.md",
     "Framework/Springboot/优秀实践/Springboot 实现文件上传.md",
     "Framework/Springboot/优秀实践/Springboot 测试 RestTestTemplate 模拟上传文件.md",
-    "Language/Java/基础/动态代理.md",
-    "Framework/Springboot/SpEL/SpEL简介.md"
+    "Language/Java/基础/动态代理.md"
   ]
 }
