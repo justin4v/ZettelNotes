@@ -265,5 +265,20 @@ java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
 	- springboot 版本尽量*不高于 2.1.0.RELEASE*
 
 
+## PKIX path building failed
+- 错误 stack
+
+```
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "https://localhost/home": PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target; nested exception is javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:743)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:669)
+	at org.springframework.web.client.RestTemplate.getForEntity(RestTemplate.java:337)
+```
+
+
+### 原因
+- 缺少
+
 
 # 参考
