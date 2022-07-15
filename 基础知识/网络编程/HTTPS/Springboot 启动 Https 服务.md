@@ -202,7 +202,7 @@ public class DemoApplication {
                 <configuration>
                     <!--   maven install 时跳过 UT  -->
                     <skipTests>true</skipTests>
-                    <!--   maven install UT 出错时  -->
+                    <!--   maven install 忽略失败的 UT  -->
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
@@ -237,8 +237,30 @@ public class DemoApplication {
 ```
 
 # 异常处理
+## UnsatisfiedLinkError
+- 错误 stack
+```
+2022-07-15 14:06:34.607 ERROR 12756 --- [-nio-443-exec-6] org.apache.tomcat.util.net.NioEndpoint   : 
 
-1. 
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.base/javax.net.ssl.SSLEngine.wrap(SSLEngine.java:479) ~[na:na]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1394) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+
+```
+
+### 原因
+- springboot 内嵌 Tomcat 版本的问题；
+- 
 
 
 
