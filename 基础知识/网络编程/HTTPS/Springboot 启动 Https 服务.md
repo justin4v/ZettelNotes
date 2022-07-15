@@ -301,7 +301,9 @@ org.springframework.web.client.ResourceAccessException: I/O error on GET request
 - 缺少相关证书
 
 ### 解决
-- 下载网站证书并安装
+- 手动下载网站证书并安装
+	- 导出网站证书；
+	- 使用 keytool 
 - 忽略 ssl  certification 校验
 
 - 自定义tomcat 配置如下：
@@ -313,7 +315,7 @@ public class CustomRestConfig {
   public RestTemplate customRestTemplate()
       throws KeyStoreException, NoSuchAlgorithmException, KeyManagementException {
     // 实现了 org.apache.http.ssl.TrustStrategy，重写了 isTrusted(X509Certificate[] chain, String authType)
-    // 总是返回 true
+    // 总是返回 true，相当于忽略了 ssl 认证
     TrustStrategy acceptingTrustStrategy = (X509Certificate[] chain, String authType) -> true;
 
     SSLContext sslContext = org.apache.http.ssl.SSLContexts.custom()
@@ -342,7 +344,9 @@ public class CustomRestConfig {
 ```
 
 ### 注意
+- **生产环境慎用忽略 ssl 认证的方式**，除非确保不会造成其他副作用。
 
 # 参考
 1. [从头解决PKIX path building failed](https://www.cnblogs.com/clnsx/p/12433062.html)
 2. [Skip SSL certificate verification in Spring Rest Template (codeleak.pl)](https://blog.codeleak.pl/2016/02/skip-ssl-certificate-verification-in.html)
+3. [彻底解决unable to find valid certification path to requested target](https://blog.csdn.net/frankcheng5143/article/details/52164939)
