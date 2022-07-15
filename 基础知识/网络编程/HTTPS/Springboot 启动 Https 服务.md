@@ -37,7 +37,7 @@ openssl genrsa -out server.key 2048
 ```
 3. 生成一个证书请求
 ```shell
-openssl req -new -key server.key -out server.csr -subj “/C=CN/ST=Beijing/L=Beijing/O=power Inc./OU=Web Security/CN=power.com”
+openssl req -new -key server.key -out server.csr -subj “/C=CN/ST=HB/L=WH/O=UIH/OU=UPlus/CN=localhost”
 ```
 4. 自己签发证书
 ```shell
@@ -45,11 +45,25 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 ```
 5. 转换为pkcs12格式（因为在 Java 中使用证书，需要转换一下格式）
 ```shell
-openssl pkcs12 -export -clcerts -in server.crt -inkey server.key -out server.p12
+openssl pkcs12 -export -clcerts -in server.crt -inkey server.key -out keystore.p12
 ```
 
 
 # Springboot 配置
+- 将上面生成的*证书复制到 springboot 工程 resource 目录*（本例中改名为 `server.keystore`）
+
+## application.yaml 配置
+```yaml
+server:  
+  port: 443 # https默认访问端口  
+  ssl:  
+  key-store: classpath:server.keystore # 证书存放的位置  
+  key-alias: httpsTest # 证书别名  
+  key-store-type: PKCS12 # P12证书格式  
+  key-store-password: Admin123
+```
+
+
 
 
 # 参考
