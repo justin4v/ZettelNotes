@@ -266,6 +266,20 @@ java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
 
 
 ## PKIX path building failed
+- 测试用例
+
+```java
+@Test  
+public void testHttpsOrigin() {  
+  String url = "https://localhost/home";  
+  ResponseEntity<String> resp = standardRestTemplate.getForEntity(url, String.class);  
+  System.out.println(resp);  
+  Assert.assertTrue(resp.getStatusCode().is5xxServerError());  
+}
+```
+- 其中 *localhost 为只允许 https 请求*；
+- standardRestTemplate 为*标准的 springboot RestTemplate*；
+
 - 错误 stack
 
 ```
@@ -278,7 +292,7 @@ org.springframework.web.client.ResourceAccessException: I/O error on GET request
 
 
 ### 原因
-- 缺少
+- 缺少相关证书
 
 
 # 参考
