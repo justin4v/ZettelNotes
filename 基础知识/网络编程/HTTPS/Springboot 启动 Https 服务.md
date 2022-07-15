@@ -124,7 +124,7 @@ public class DemoApplication {
 2022-07-15 13:46:36.128  INFO 1164 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 4.638 seconds (JVM running for 5.331)
 ```
 - https 启动在 443 (默认端口，访问时无需带上该端口)
-- http 
+- http 启动在 8080 端口
 
 
 2. 页面
