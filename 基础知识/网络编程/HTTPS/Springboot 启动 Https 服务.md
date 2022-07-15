@@ -303,7 +303,8 @@ org.springframework.web.client.ResourceAccessException: I/O error on GET request
 ### 解决
 - 手动下载网站证书并安装
 	- 导出网站证书；
-	- 使用 keytool 
+	- 切换到 jre 的/lib/security/；
+	- 执行 `keytool -import ...` 命令，导入证书
 - 忽略 ssl  certification 校验
 
 - 自定义tomcat 配置如下：
@@ -341,6 +342,15 @@ public class CustomRestConfig {
     return new RestTemplate();
   }
 }
+```
+
+- 依赖
+```xml
+<dependency>
+	<groupId>org.apache.httpcomponents</groupId>
+	<artifactId>httpclient</artifactId>
+	<version>4.5.3</version>
+</dependency>
 ```
 
 ### 注意
