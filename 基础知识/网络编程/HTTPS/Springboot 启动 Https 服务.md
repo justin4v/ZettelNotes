@@ -261,8 +261,10 @@ java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
 ### 原因
 - springboot 内嵌 Tomcat 版本的问题；
 - 参考 [Spring Boot 2.1.1: UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending](https://stackoverflow.com/questions/53596134/spring-boot-2-1-1-unsatisfiedlinkerror-org-apache-tomcat-jni-ssl-renegotiatepe)
-- 解决：embed tomcat 使用 9.0.12 版本（springboot 版本为 2.1.0.RELEASE）
-	- springboot 版本尽量*不高于 2.1.0.RELEASE*
+
+### 解决
+- embed tomcat 使用 9.0.12 版本（springboot 版本为 2.1.0.RELEASE）
+- springboot 版本尽量*不高于 2.1.0.RELEASE*
 
 
 ## PKIX path building failed
@@ -298,6 +300,49 @@ org.springframework.web.client.ResourceAccessException: I/O error on GET request
 ### 原因
 - 缺少相关证书
 
+### 解决
+- 下载网站证书并安装
+- 忽略 ssl  certification 校验
+
+- 自定义tomcat 配置如下：
+```java
+@Configuration
+public class CustomRestConfig {
+
+  @Bean
+  public RestTemplate customRestTemplate()
+      throws KeyStoreException, NoSuchAlgorithmException, KeyManagementException {
+    // 实现了 org.apache.http.ssl.TrustStrategy，重写了 isTrusted(X509Certificate[] chain, String authType)
+    // 总是返回 true
+    TrustStrategy acceptingTrustStrategy = (X509Certificate[] chain, String authType) -> true;
+
+    SSLContext sslContext = org.apache.http.ssl.SSLContexts.custom()
+        .loadTrustMaterial(null, acceptingTrustStrategy)
+        .build();
+
+    SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslContext);
+
+    CloseableHttpClient httpClient = HttpClients.custom()
+        .setSSLSocketFactory(csf)
+        .build();
+
+    HttpComponentsClientHttpRequestFactory requestFactory =
+        new HttpComponentsClientHttpRequestFactory();
+
+    requestFactory.setHttpClient(httpClient);
+    RestTemplate restTemplate = new RestTemplate(requestFactory);
+    return restTemplate;
+  }
+
+  @Bean
+  public RestTemplate restTemplate() {
+    return new RestTemplate();
+  }
+}
+```
+
+### 注意
 
 # 参考
 1. [从头解决PKIX path building failed](https://www.cnblogs.com/clnsx/p/12433062.html)
+2. [Skip SSL certificate verification in Spring Rest Template (codeleak.pl)](https://blog.codeleak.pl/2016/02/skip-ssl-certificate-verification-in.html)
