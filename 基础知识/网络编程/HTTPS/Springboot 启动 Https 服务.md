@@ -266,6 +266,10 @@ java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
 
 
 ## PKIX path building failed
+### 含义
+- PKIX 的全称为 Public-Key Infrastructure (X.509)；
+- X.509 是一种证书的标准，用在很多网络协议，比如TLS/SSL
+
 - 测试用例
 
 ```java
@@ -296,3 +300,4 @@ org.springframework.web.client.ResourceAccessException: I/O error on GET request
 
 
 # 参考
+1. [从头解决PKIX path building failed](https://www.cnblogs.com/clnsx/p/12433062.html)
