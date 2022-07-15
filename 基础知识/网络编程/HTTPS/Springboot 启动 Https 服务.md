@@ -260,8 +260,9 @@ java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
 
 ### 原因
 - springboot 内嵌 Tomcat 版本的问题；
-- 
-
+- 参考 [Spring Boot 2.1.1: UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending](https://stackoverflow.com/questions/53596134/spring-boot-2-1-1-unsatisfiedlinkerror-org-apache-tomcat-jni-ssl-renegotiatepe)
+- 解决：embed tomcat 使用 9.0.12 版本（springboot 版本为 2.1.0.RELEASE）
+	- springboot 版本尽量*不高于 2.1.0.RELEASE*
 
 
 
