@@ -195,6 +195,17 @@ public class DemoApplication {
 
     <build>
         <plugins>
+	        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <configuration>
+                    <!--   maven install 时跳过 UT  -->
+                    <skipTests>true</skipTests>
+                    <!--   maven install UT 出错时  -->
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
