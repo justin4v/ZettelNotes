@@ -117,4 +117,21 @@ public class DemoApplication {
 
 ```
 
+## 结果
+1. **tomcat 启动信息**
+```
+2022-07-15 13:46:36.125  INFO 1164 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 443 (https) 8080 (http) with context path ''
+2022-07-15 13:46:36.128  INFO 1164 --- [           main] com.example.demo.DemoApplication         : Started DemoApplication in 4.638 seconds (JVM running for 5.331)
+```
+- https 启动在 443 (默认端口，访问时无需带上该端口)
+- http 
+
+
+2. 页面
+
+![[springboot Https 服务响应示意.png]]
+3. Http 请求自动跳转 Https
+
+
+
 # 参考
