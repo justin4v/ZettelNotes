@@ -22,3 +22,8 @@
 	-   日志访问
 	-   调试应用程序
 	-   提供认证和授权
+
+
+# 参考
+1. [《Kubernetes与云原生应用》系列之Kubernetes的系统架构与设计理念](https://www.infoq.cn/article/kubernetes-and-cloud-native-applications-part01/)
+2. [Kubernetes（k8s）中文文档 Kubernetes设计架构](https://www.kubernetes.org.cn/kubernetes%e8%ae%be%e8%ae%a1%e6%9e%b6%e6%9e%84)
