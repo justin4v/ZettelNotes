@@ -309,40 +309,54 @@ org.springframework.web.client.ResourceAccessException: I/O error on GET request
 
 - 自定义tomcat 配置如下：
 ```java
+/**
+ * @author ：junjie.fu
+ * @date ：2022/07/15
+ */
 @Configuration
-public class CustomRestConfig {
+public class CustomTomcatConfig {
 
   @Bean
-  public RestTemplate customRestTemplate()
-      throws KeyStoreException, NoSuchAlgorithmException, KeyManagementException {
-    // 实现了 org.apache.http.ssl.TrustStrategy，重写了 isTrusted(X509Certificate[] chain, String authType)
-    // 总是返回 true，相当于忽略了 ssl 认证
-    TrustStrategy acceptingTrustStrategy = (X509Certificate[] chain, String authType) -> true;
+  public TomcatServletWebServerFactory servletContainer() { //springboot2 新变化
 
-    SSLContext sslContext = org.apache.http.ssl.SSLContexts.custom()
-        .loadTrustMaterial(null, acceptingTrustStrategy)
-        .build();
+    TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
+      @Override
+      protected void postProcessContext(Context context) {
 
-    SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslContext);
-
-    CloseableHttpClient httpClient = HttpClients.custom()
-        .setSSLSocketFactory(csf)
-        .build();
-
-    HttpComponentsClientHttpRequestFactory requestFactory =
-        new HttpComponentsClientHttpRequestFactory();
-
-    requestFactory.setHttpClient(httpClient);
-    RestTemplate restTemplate = new RestTemplate(requestFactory);
-    return restTemplate;
+        SecurityConstraint securityConstraint = new SecurityConstraint();
+        securityConstraint.setUserConstraint("CONFIDENTIAL");
+        SecurityCollection collection = new SecurityCollection();
+        collection.addPattern("/*");
+        securityConstraint.addCollection(collection);
+        context.addConstraint(securityConstraint);
+      }
+    };
+    tomcat.addAdditionalTomcatConnectors(initiateHttpConnector());
+    return tomcat;
   }
 
-  @Bean
-  public RestTemplate restTemplate() {
-    return new RestTemplate();
+  /**
+   * initiateHttpConnector http(port 8080) redirect to https(port 8443)
+   *
+   * @return Connector
+   */
+  private Connector initiateHttpConnector() {
+    Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+    connector.setScheme("http");
+    connector.setPort(8080);
+    connector.setSecure(false);
+    connector.setRedirectPort(443);
+    return connector;
   }
 }
+
 ```
+
+UserConstraint 有如下几种类型：
+ - *NONE*，这意味着应用不需要传输保证。
+ - *INTEGRAL*，意味着服务器和客户端之间的数据必须以某种方式发送，而且在传送中不能改变
+ - *CONFIDENTIAL*，这意味着传输的数据必须是加密的数据。
+ - 大多数情况下，*安全套接字层(SSL)* 使用 INTEGRAL 或 CONFIDENTIAL
 
 - 依赖
 ```xml
@@ -360,3 +374,4 @@ public class CustomRestConfig {
 1. [从头解决PKIX path building failed](https://www.cnblogs.com/clnsx/p/12433062.html)
 2. [Skip SSL certificate verification in Spring Rest Template (codeleak.pl)](https://blog.codeleak.pl/2016/02/skip-ssl-certificate-verification-in.html)
 3. [彻底解决unable to find valid certification path to requested target](https://blog.csdn.net/frankcheng5143/article/details/52164939)
+4. [Specifying Security Constraints (The Java EE 6 Tutorial, Volume I) (oracle.com)](https://docs.oracle.com/cd/E19226-01/820-7627/bncbk/index.html#:~:text=If%20you%20specify%20CONFIDENTIAL%20or%20INTEGRAL%20as%20a,and%20not%20just%20to%20the%20login%20dialog%20box.)
