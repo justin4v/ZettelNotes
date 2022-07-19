@@ -63,7 +63,7 @@ class Test {
 上面流程栈和本地变量表的情况如下图：
 
 ![[finally和return字节码操作流程示意.png]]
-参见 [[Hotspot 字节码指令集]]
+参见 ![[Hotspot 字节码指令集#字节码指令集概述]]
 
 
 # 总结
