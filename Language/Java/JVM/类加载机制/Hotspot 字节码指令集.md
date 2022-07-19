@@ -16,7 +16,8 @@
 - 由于Java虚拟机采用面向操作数栈而不是寄存器的结构，所以*大多数的指令都不包含操作数*，只有一个操作码。
 -   比如 **aload_0** 就是只有操作码没有操作数，而**invokespecial #1** 就是由操作数和操作码构成。
 -   由于限制了Java虚拟机操作码的长度为一个字节（0 ~ 255），这意味着指令集的操作码总数不可能超过256条。
-- **加载（load）和存储（store）** 指令用于将数据从**栈帧的局部变量表**和**操作栈**之间来回传递。
+- **load  store** 指令用于将数据从**栈帧的局部变量表**和**操作栈**之间来回传递。
+	1. load 
 
 ## 字节码与数据类型
 
@@ -851,7 +852,7 @@ java虚拟机支持两种同步结构：**方法级的同步**和**方法内部�
     -   在方法执行期间，执行线程持有了同步锁，其他任何线程都无法再获得同一个锁。
     -   如果一个同步方法执行期间抛出了异常，并且在方法内部无法处理此异常，那这个同步方法所持有的锁将在异常抛到同步方法之外时自动释放。
 
-```java
+```
 public synchronized void test() {}
 ```
 
@@ -882,3 +883,7 @@ public synchronized void test() {}
 ```
 
 ![[synchronize 字节码.png]]
+
+
+# 参考
+1. [Chapter 6. The Java Virtual Machine Instruction Set (oracle.com)](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.invokespecial)
