@@ -16,9 +16,9 @@
 - 由于Java虚拟机采用面向操作数栈而不是寄存器的结构，所以*大多数的指令都不包含操作数*，只有一个操作码。
 -   比如 **aload_0** 就是只有操作码没有操作数，而**invokespecial #1** 就是由操作数和操作码构成。
 -   由于限制了Java虚拟机操作码的长度为一个字节（0 ~ 255），这意味着指令集的操作码总数不可能超过256条。
-- **load  store** 指令用于将数据从**栈帧的局部变量表**和**操作栈**之间来回传递。
-	1. **load：load from local variable (to stack frame)**
-	2. **store：(from stack frame) store into local  variable**
+- **load  store** 指令用于将数据从**栈帧的局部变量表**和**操作栈(operand stack)**之间来回传递。
+	1. **load：load from local variable (to stack frame/operand stack)**
+	2. **store：(from stack frame/operand stack) store into local  variable**
 
 ## 字节码与数据类型
 

@@ -50,9 +50,9 @@ class Test {
 ![[finally和return示例字节码.png]]
 
 指令操作顺序：  
-1. *iconst_1*： 把常数1进栈 ；
+1. *[iconst_1](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.iconst_i)*： 把常数1进栈 ；
 2. *istore_1*： 栈顶元素出栈，并把元素保存在本地变量表的第二个位置里（下标为1的位置里） 
-3. *iinc 1, 1* ： 本地变量表的第二个元素自增1 
+3. *[iinc 1, 1](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.iinc)* ： 本地变量表的第二个元素自增1 
 4. *iload_1*：第二个元素进栈 
 5. *istore_2*：栈顶元素出栈并把元素保存在本地变量表的第2个位置里 
 6. *iinc 1, 1* ： 本地变量表的第二个元素自增1 
@@ -82,3 +82,4 @@ class Test {
 1. [Java中的异常和处理详解](https://www.cnblogs.com/lulipro/p/7504267.html)
 2. [你真的了解try{ return }finally{}中的return？](https://www.cnblogs.com/averey/p/4379646.html)
 3. [Chapter 4. The class File Format (oracle.com)](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html#jvms-4.10.2.5)
+4. [[Hotspot 字节码指令集]]
