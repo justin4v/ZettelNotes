@@ -26,14 +26,11 @@ class Test {
 ```
 - 问题： 为什么是2 而不是3
 
-
 # 解释
 1. 官方对finally 说明：
 >The `finally` block _always_ executes when the `try` block exits. This ensures that the `finally` block is executed even if an unexpected exception occurs. But `finally` is useful for more than just exception handling — it allows the programmer to avoid having cleanup code accidentally bypassed by a `return`, `continue`, or `break`. Putting cleanup code in a `finally` block is always a good practice, even when no exceptions are anticipated.
 
 2. 另外，在[java的语言规范](http://docs.oracle.com/javase/specs/jls/se7/html/jls-14.html#jls-14.17)中，如果在 try 语句里有 return 语句，finally 语句还是会执行。它会在把控制权转移到该方法的调用者或者构造器前执行finally语句。也就是说，使用return语句把控制权转移给其他的方法前会执行finally语句。
-
-
 3. [官方的jvm规范](http://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html#jvms-4.10.2.5)解释如下：
 > If the try clause executes a return, the compiled code does the following:
 > 
@@ -61,8 +58,7 @@ class Test {
 6. iinc 1, 1 ： 本地变量表的第二个元素自增1 
 7. iload_2：第二个元素进栈 （注意，此时栈顶元素为2）
 8. ireturn：返回栈顶元素。
-
-后面的指令是要在 2-7 行出现异常时在跳到12行的，这个例子没出现异常，不用关注。
+9. 后面的指令是要在 2-7 行出现异常时在跳到12行的，本例没出现异常。
 
 上面流程栈和本地变量表的情况如下图：
 
