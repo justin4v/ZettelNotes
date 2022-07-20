@@ -7,8 +7,12 @@
         "id": "8837ab5db28dc300",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/如何阅读一本书.md",
+            "mode": "preview",
+            "source": false
+          }
         }
       }
     ],
@@ -36,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Todo",
+                "query": "如何",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -53,12 +57,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 236,
-    "collapsed": true
+    "width": 236
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -74,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Book Reading/如何阅读一本书.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +105,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Book Reading/如何阅读一本书.md"
+              }
             }
           },
           {
@@ -121,6 +128,8 @@
   },
   "active": "8837ab5db28dc300",
   "lastOpenFiles": [
+    "Book Reading/如何阅读一本书.md",
+    "日常记录/重点阅读.md",
     "Language/Java/基础/transient volatile 关键字.md",
     "OS/并发编程/核心概念/并发问题示例.md",
     "Language/Java/基础/finally和return.md",
@@ -128,8 +137,6 @@
     "Language/Java/JVM/类加载机制/字节码示例.md",
     "Language/Java/基础/异常处理.md",
     "Language/Java/基础/异常架构.md",
-    "基础知识/编程基础/正则表达式.md",
-    "基础知识/网络编程/HTTPS/Springboot 启动 Https 服务.md",
-    "基础知识/网络编程/HTTPS/RestTemplate 调用 Https 接口.md"
+    "基础知识/编程基础/正则表达式.md"
   ]
 }
