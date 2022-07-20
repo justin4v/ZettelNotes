@@ -1,8 +1,9 @@
 #Socket #Websocket #Todo 
 
 # WebSocket
-
-> WebSocket protocol 是HTML5一种新的协议。它实现了浏览器与服务器全双工通信(full-duplex)。一开始的握手需要借助HTTP请求完成。 ——百度百科
+- WebSocket protocol 是 HTML5 一种新的协议。
+- 实现了浏览器与服务器全双工通信(full-duplex)。
+- 一开始的握手需要借助HTTP请求完成。
 
 **目的：** 即时通讯，替代轮询
 
