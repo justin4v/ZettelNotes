@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/ElasticSearch/Kibana 查询语法.md",
+            "file": "基础知识/网络编程/socket和websocket.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/ElasticSearch/Kibana 查询语法.md",
+                "file": "基础知识/网络编程/socket和websocket.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/ElasticSearch/Kibana 查询语法.md"
+                "file": "基础知识/网络编程/socket和websocket.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "8837ab5db28dc300",
   "lastOpenFiles": [
+    "基础知识/网络编程/socket和websocket.md",
     "Database/ElasticSearch/Kibana 查询语法.md",
     "Database/ElasticSearch/ES 脚本评分.md",
     "Book Reading/如何阅读一本书.md",
@@ -135,7 +136,6 @@
     "OS/并发编程/核心概念/并发问题示例.md",
     "Language/Java/基础/finally和return.md",
     "Language/Java/JVM/类加载机制/Hotspot 字节码指令集.md",
-    "Language/Java/JVM/类加载机制/字节码示例.md",
-    "Language/Java/基础/异常处理.md"
+    "Language/Java/JVM/类加载机制/字节码示例.md"
   ]
 }
