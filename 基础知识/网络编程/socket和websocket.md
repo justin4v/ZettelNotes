@@ -1,10 +1,10 @@
 #Socket #Websocket #Todo 
 
-# WebSocket介绍与原理
+# WebSocket
 
-> WebSocket protocol 是HTML5一种新的协议。它实现了浏览器与服务器(https://cloud.tencent.com/product/cvm?from=10680)全双工通信(full-duplex)。一开始的握手需要借助HTTP请求完成。 ——百度百科
+> WebSocket protocol 是HTML5一种新的协议。它实现了浏览器与服务器全双工通信(full-duplex)。一开始的握手需要借助HTTP请求完成。 ——百度百科
 
-**目的：** [即时通讯](https://cloud.tencent.com/product/im?from=10680)，替代轮询
+**目的：** 即时通讯，替代轮询
 
 **应用场景：** 网站上的即时通讯是很常见的，比如网页的QQ，聊天系统等。按照以往的技术能力通常是采用轮询、Comet技术解决。
 
@@ -12,7 +12,7 @@ HTTP协议是非持久化的，单向的网络协议，在建立连接后只允�
 
 **缺点：** 会导致过多不必要的请求，浪费流量和服务器资源，每一次请求、应答，都浪费了一定流量在相同的头部信息上,
 
-然而WebSocket的出现可以弥补这一缺点。
+然而 WebSocket 的出现可以弥补这一缺点。
 
 在WebSocket中，只需要服务器和浏览器通过HTTP协议进行一个握手的动作，然后单独建立一条TCP的通信通道进行数据的传送。
 
@@ -25,7 +25,7 @@ HTTP协议是非持久化的，单向的网络协议，在建立连接后只允�
 3.  服务器收到客户端的握手请求后，同样采用HTTP协议回馈数据。
 4.  当收到了连接成功的消息后，通过TCP通道进行传输通信。
 
-### WebSocket与HTTP的关系
+# WebSocket与HTTP的关系
 
 **相同点**
 
@@ -41,11 +41,10 @@ HTTP协议是非持久化的，单向的网络协议，在建立连接后只允�
 
 -   WebSocket在建立握手时，数据是通过HTTP传输的。但是建立之后，在真正传输时候是不需要HTTP协议的。
 
-### WebSocket与Socket的关系
+# WebSocket与Socket的关系
 
-Socket其实并不是一个协议，而是为了方便使用TCP或UDP而抽象出来的一层，是位于应用层和传输控制层之间的一组接口。
-
-Socket是应用层与TCP/IP协议族通信的中间软件抽象层，它是一组接口。
+- Socket 其实并不是一个协议，是为了方便使用TCP或UDP而抽象出来的一层。
+- Socket 是应用层与 TCP/IP 协议族通信的**中间软件抽象层，是一组接口**。
 
 在设计模式中，Socket其实就是一个门面模式，它把复杂的TCP/IP协议族隐藏在Socket接口后面，对用户来说，一组简单的接口就是全部，让Socket去组织数据，以符合指定的协议。
 
@@ -53,9 +52,8 @@ Socket是应用层与TCP/IP协议族通信的中间软件抽象层，它是一�
 
 TCP连接则更依靠于底层的IP协议，IP协议的连接则依赖于链路层等更低层次。
 
-WebSocket则是一个典型的应用层协议。
+- **WebSocket 是典型的应用层协议**。
 
-Socket是传输控制层协议，WebSocket是应用层协议。
 
 
 # 参考
