@@ -7,12 +7,8 @@
         "id": "8837ab5db28dc300",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Language/Java/基础/transient volatile 关键字.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -61,7 +57,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236
+    "width": 236,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +74,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/基础/transient volatile 关键字.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,9 +100,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Language/Java/基础/transient volatile 关键字.md"
-              }
+              "state": {}
             }
           },
           {
