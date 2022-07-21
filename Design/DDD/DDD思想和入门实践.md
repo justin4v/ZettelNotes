@@ -294,15 +294,14 @@ DDD提倡聚合之间产生的业务协同使用领域事件的方式来完成�
 
 
 # 参考文档
-领域驱动设计
 
-https://mp.weixin.qq.com/s/kpXklmidsidZEiHNw57QAQ
+1. https://mp.weixin.qq.com/s/kpXklmidsidZEiHNw57QAQ
 
-https://mp.weixin.qq.com/s/MU1rqpQ1aA1p7OtXqVVwxQ
+2. https://mp.weixin.qq.com/s/MU1rqpQ1aA1p7OtXqVVwxQ
 
-https://mp.weixin.qq.com/s/1bcymUcjCkOdvVygunShmw
+3. https://mp.weixin.qq.com/s/1bcymUcjCkOdvVygunShmw
 
-https://www.cnblogs.com/junzi2099/p/13682154.html
-
-[应用服务和领域服务的区别](https://enterprisecraftsmanship.com/posts/domain-vs-application-services/)
+4. https://www.cnblogs.com/junzi2099/p/13682154.html
+5. [应用服务和领域服务的区别](https://enterprisecraftsmanship.com/posts/domain-vs-application-services/)
+6. [[DDD 业内实践]]
 
