@@ -1,4 +1,4 @@
-#k8s #Todo 
+#k8s 
 
 # nodePort
 - nodePort 提供了**集群外部客户端访问 Service 的一种方式**；
@@ -7,10 +7,10 @@
 - 而数据库等服务可能不需要被外界访问，只需被内部服务访问即可，那么我们就不必设置service的NodePort。
 
 # port
-
-port是暴露在cluster ip上的端口，:port提供了集群内部客户端访问service的入口，即`clusterIP:port`。
-
-mysql容器暴露了3306端口（参考[DockerFile](https://github.com/docker-library/mysql/)），集群内其他容器通过33306端口访问mysql服务，但是外部流量不能访问mysql服务，因为mysql服务没有配置NodePort。对应的service.yaml如下：
+- port 是暴露在 cluster ip上的端口，提供了**集群内部客户端访问service的入口**，即 `clusterIP:port`。
+- mysql 容器暴露了 3306 端口（参考[DockerFile](https://github.com/docker-library/mysql/)），集群内其他容器通过33306端口访问mysql服务；
+- 外部流量不能访问mysql服务，因为mysql服务没有配置NodePort。
+- 对应的service.yaml如下：
 
 ```yaml
 apiVersion: v1
@@ -26,10 +26,10 @@ spec:
 ```
 
 # targetPort
-
-targetPort是pod上的端口，从port/nodePort上来的数据，经过kube-proxy流入到后端pod的targetPort上，最后进入容器。
-
-与制作容器时暴露的端口一致（使用DockerFile中的EXPOSE），例如官方的nginx（参考[DockerFile](https://github.com/nginxinc/docker-nginx)）暴露80端口。 对应的service.yaml如下：
+- targetPort 是 **pod 上的端口**；
+- 从 port/nodePort 上来的数据，**经过 kube-proxy 流入到后端 pod 的targetPort上**，最后进入容器。
+- 与制作容器时暴露的端口一致（使用DockerFile中的EXPOSE），例如官方的 nginx（参考[DockerFile](https://github.com/nginxinc/docker-nginx)）暴露80端口。
+- 对应的service.yaml如下：
 
 ```yaml
 apiVersion: v1
@@ -47,10 +47,8 @@ spec:
 ```
 
 # containerPort
-
-containerPort是在pod控制器中定义的、pod中的容器需要暴露的端口。
-
-例如，mysql 服务需要暴露 3306 端口，redis 暴露 6379 端口
+- containerPort是在 pod **控制器中定义的、其中容器需要暴露的端口**。
+- 例如，mysql 服务需要暴露 3306 端口，redis 暴露 6379 端口
 
 ```yaml
 apiVersion: v1
