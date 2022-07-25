@@ -140,8 +140,7 @@ kube-system   kube-dns     ClusterIP   10.96.0.10   <none>        53/UDP,53/TCP,
 ```
 
 Cluster IP是一个虚拟的IP，但更像是一个伪造的IP网络，原因有以下几点:
-
-1.  Cluster IP仅仅作用于Kubernetes Service这个对象，并由Kubernetes管理和分配P地址
+1.  Cluster IP仅仅作用于Kubernetes Service这个对象，并由Kubernetes管理和分配IP地址
 2.  Cluster IP无法被ping，他没有一个“实体网络对象”来响应
 3.  Cluster IP只能结合Service Port组成一个具体的通信端口，单独的Cluster IP不具备通信的基础，并且他们属于Kubernetes集群这样一个封闭的空间。
 4.  在不同Service下的pod节点在集群间相互访问可以通过Cluster IP
