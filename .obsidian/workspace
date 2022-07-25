@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 236
+    "width": 284
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -125,7 +125,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "8837ab5db28dc300",
+  "active": "03e52bdc9194142b",
   "lastOpenFiles": [
     "Framework/Springboot/优秀实践/Utils 里面使用 Bean.md",
     "Design/DDD/DDD思想和入门实践.md",
