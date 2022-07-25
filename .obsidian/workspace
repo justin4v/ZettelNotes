@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "运维相关/K8s/k8s端口类型与ip类型.md",
+            "file": "运维相关/K8s/K8s暴露服务的三种方式.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "运维相关/K8s/k8s端口类型与ip类型.md",
+                "file": "运维相关/K8s/K8s暴露服务的三种方式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "运维相关/K8s/k8s端口类型与ip类型.md"
+                "file": "运维相关/K8s/K8s暴露服务的三种方式.md"
               }
             }
           },
@@ -127,8 +127,8 @@
   },
   "active": "2101796051104fa6",
   "lastOpenFiles": [
-    "运维相关/K8s/K8s暴露服务的三种方式.md",
     "运维相关/K8s/k8s端口类型与ip类型.md",
+    "运维相关/K8s/K8s暴露服务的三种方式.md",
     "运维相关/K8s/k8s 资源对象.md",
     "运维相关/K8s/K8s简介与架构设计.md",
     "运维相关/K8s/Kubectl 命令手册.md",
