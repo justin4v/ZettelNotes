@@ -128,9 +128,9 @@
   "active": "2101796051104fa6",
   "lastOpenFiles": [
     "Design/DDD/DDD思想和入门实践.md",
-    "Design/DDD/DDD与微服务.md",
-    "Design/DDD/DDD领域设计基础.md",
     "Design/DDD/DDD 业内实践.md",
+    "Design/DDD/DDD领域设计基础.md",
+    "Design/DDD/DDD与微服务.md",
     "Design/计算机科学问题的解决方法.md",
     "Framework/Springboot/优秀实践/Utils 里面使用 Bean.md",
     "基础知识/网络编程/socket和websocket.md",
