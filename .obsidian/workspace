@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "运维相关/K8s/K8s.md",
+            "file": "运维相关/K8s/K8s暴露服务的三种方式.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "运维相关/K8s/K8s.md",
+                "file": "运维相关/K8s/K8s暴露服务的三种方式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "运维相关/K8s/K8s.md"
+                "file": "运维相关/K8s/K8s暴露服务的三种方式.md"
               }
             }
           },
