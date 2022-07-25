@@ -75,9 +75,19 @@ spec:
 
 
 # IP类型
-- Node IP：Node节点的IP地址，即物理网卡的IP地址。  
-- Pod IP：Pod的IP地址，即docker容器的IP地址，此为虚拟IP地址。  
-- Cluster IP：Service的IP地址，此为虚拟IP地址。
+## Node IP
+1. Node节点的IP地址，即物理网卡的IP地址。  
+2. 每个Service都会在Node节点上开通一个端口，外部可以通过NodeIP:NodePort即可访问Service里的Pod
+
+## Pod IP
+- Pod的IP地址，即docker容器的IP地址，此为虚拟IP地址。  
+- Pod IP是每个Pod的IP地址，他是Docker Engine根据docker网桥的IP地址段进行分配的，通常是一个虚拟的二层网络
+	1.   同Service下的pod可以直接根据PodIP相互通信
+	2.   不同Service下的pod在集群间pod通信要借助于 cluster ip
+	3.   pod和集群外通信，要借助于node ip
+
+## Cluster IP
+Service的IP地址，此为虚拟IP地址。
 
 # 参考
 1. [k8s 辨析 port、NodePort、targetPort、containerPort 区别](https://www.cnblogs.com/veeupup/p/13545361.html)
