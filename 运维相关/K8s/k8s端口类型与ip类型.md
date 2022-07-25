@@ -74,6 +74,11 @@ spec:
 ```
 
 
+# IP类型
+- Node IP：Node节点的IP地址，即物理网卡的IP地址。  
+- Pod IP：Pod的IP地址，即docker容器的IP地址，此为虚拟IP地址。  
+- Cluster IP：Service的IP地址，此为虚拟IP地址。
+
 # 参考
 1. [k8s 辨析 port、NodePort、targetPort、containerPort 区别](https://www.cnblogs.com/veeupup/p/13545361.html)
 2. 
