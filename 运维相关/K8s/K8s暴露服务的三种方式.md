@@ -13,6 +13,10 @@ k8s有三种方式暴露Service给外部网络访问。
 - 该服务仅在内部集群 IP 和端口上才可访间；
 - Kubernetes在其所有节点上开放一  个端口给外部访问（所有节点上都使用相同的端口号）， 并将传入的连接转发给作为Service服务对象的  pod。
 
+![[k8s nodeport 方式暴露服务.png]]
+
+k8s 中 service 配置：
+![[k8s nodeport service yaml配置.png]]
 
 # LoadBalane
 - 将服务的类型设置成LoadBalance, NodePort类型的一 种扩展，这使得服务可以通过一个专用的负载均衡器来访问， 这是由Kubernetes中正在运行的云基础设施提供的。 
