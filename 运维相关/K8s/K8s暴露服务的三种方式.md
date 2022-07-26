@@ -18,9 +18,21 @@ k8s有三种方式暴露Service给外部网络访问。
 k8s 中 service 配置：
 ![[k8s nodeport service yaml配置.png]]
 
+## 特点
+- 简单；
+- 服务多时，NodePort 在每个节点上开启的端口会很多，而且难以维护。
+
 # LoadBalane
 - 将服务的类型设置成LoadBalance, NodePort类型的一 种扩展，这使得服务可以通过一个专用的负载均衡器来访问， 这是由Kubernetes中正在运行的云基础设施提供的。 
 - 负载均衡器将流量重定向到跨所有节点的节点端口。客户端通过负载均衡器的 IP 连接到服务。
+
+![[loadbalance 方式暴露服务.png]]
+
+k8s service 配置：
+
+![[loadbalance service配置.png]]
+## 特点
+- 用 LoadBalancer 暴露的服务都会有它自己的 IP 地址和端口，不能做到一个ip地址就可以访问所有服务。
 
 
 # Ingress
