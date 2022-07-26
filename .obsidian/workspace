@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/并发编程/协程/goroutine.md",
+            "file": "OS/并发编程/协程/goroutine 原理.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "DDD",
+                "query": "tag:#go",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/并发编程/协程/goroutine.md",
+                "file": "OS/并发编程/协程/goroutine 原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/并发编程/协程/goroutine.md"
+                "file": "OS/并发编程/协程/goroutine 原理.md"
               }
             }
           },
@@ -125,8 +126,9 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "2101796051104fa6",
+  "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
+    "OS/并发编程/协程/goroutine简介.md",
     "Big Data/HDFS.md",
     "Big Data/Spark RDD.md",
     "运维相关/K8s/k8s端口类型与ip类型.md",
@@ -135,7 +137,6 @@
     "运维相关/K8s/k8s 资源对象.md",
     "运维相关/K8s/K8s简介与架构设计.md",
     "运维相关/K8s/Kubectl 命令手册.md",
-    "Design/DDD/DDD领域设计基础.md",
-    "Design/DDD/DDD思想和入门实践.md"
+    "Design/DDD/DDD领域设计基础.md"
   ]
 }
