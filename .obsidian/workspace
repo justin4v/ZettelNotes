@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "运维相关/K8s/K8s暴露服务的三种方式.md",
+            "file": "Big Data/HDFS.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "运维相关/K8s/K8s暴露服务的三种方式.md",
+                "file": "Big Data/HDFS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "运维相关/K8s/K8s暴露服务的三种方式.md"
+                "file": "Big Data/HDFS.md"
               }
             }
           },
@@ -127,15 +127,15 @@
   },
   "active": "2101796051104fa6",
   "lastOpenFiles": [
+    "Big Data/Spark RDD.md",
+    "Big Data/HDFS.md",
     "运维相关/K8s/k8s端口类型与ip类型.md",
+    "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
     "运维相关/K8s/K8s暴露服务的三种方式.md",
     "运维相关/K8s/k8s 资源对象.md",
     "运维相关/K8s/K8s简介与架构设计.md",
     "运维相关/K8s/Kubectl 命令手册.md",
     "Design/DDD/DDD领域设计基础.md",
-    "Design/DDD/DDD思想和入门实践.md",
-    "Design/DDD/DDD 业内实践.md",
-    "Design/DDD/DDD与微服务.md",
-    "Design/计算机科学问题的解决方法.md"
+    "Design/DDD/DDD思想和入门实践.md"
   ]
 }
