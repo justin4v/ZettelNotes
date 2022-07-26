@@ -1,4 +1,4 @@
-#k8s #Todo 
+#k8s 
 
 
 - pod ip是 docker 网桥的IP地址段进行分配的，是一个虚拟的二层网络，外部网络并没有办法访问;
@@ -36,8 +36,12 @@ k8s service 配置：
 
 
 # Ingress
-创建一 个Ingress资源， 这是一 个完全不同的机制， 通过一 个IP地址公开多
-个服务,就是一个网关入口，和springcloud的网关zuul、gateway类似。
+- 创建一 个Ingress资源， 通过一 个IP地址公开多个服务；
+- 类似一个网关入口，和springcloud的网关zuul、gateway类似。
+- 用 NodePort 方式暴露服务时，服务一旦多起来，NodePort 在每个节点上开启的端口会很多；
+- 如果采用 LoadBalane，每个服务都得开放一个公网IP，也会很庞大
+
+![[ingress 暴露服务.png]]
 
 
 # 参考
