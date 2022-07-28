@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/并发编程/协程/goroutine 原理.md",
+            "file": "Database/ElasticSearch/Kibana 查询语法.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#go",
+                "query": "kibana",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/并发编程/协程/goroutine 原理.md",
+                "file": "Database/ElasticSearch/Kibana 查询语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/并发编程/协程/goroutine 原理.md"
+                "file": "Database/ElasticSearch/Kibana 查询语法.md"
               }
             }
           },
@@ -126,8 +126,9 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "f9c60a5916b5869d",
+  "active": "2101796051104fa6",
   "lastOpenFiles": [
+    "OS/并发编程/协程/goroutine 原理.md",
     "OS/并发编程/协程/goroutine简介.md",
     "Big Data/HDFS.md",
     "Big Data/Spark RDD.md",
@@ -136,7 +137,6 @@
     "运维相关/K8s/K8s暴露服务的三种方式.md",
     "运维相关/K8s/k8s 资源对象.md",
     "运维相关/K8s/K8s简介与架构设计.md",
-    "运维相关/K8s/Kubectl 命令手册.md",
-    "Design/DDD/DDD领域设计基础.md"
+    "运维相关/K8s/Kubectl 命令手册.md"
   ]
 }
