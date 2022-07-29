@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/ElasticSearch/Kibana 查询语法.md",
+            "file": "Cache/MESI 协议.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "kibana",
+                "query": "mesi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/ElasticSearch/Kibana 查询语法.md",
+                "file": "Cache/MESI 协议.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/ElasticSearch/Kibana 查询语法.md"
+                "file": "Cache/MESI 协议.md"
               }
             }
           },
@@ -128,6 +128,7 @@
   },
   "active": "2101796051104fa6",
   "lastOpenFiles": [
+    "Database/ElasticSearch/Kibana 查询语法.md",
     "OS/并发编程/协程/goroutine 原理.md",
     "OS/并发编程/协程/goroutine简介.md",
     "Big Data/HDFS.md",
@@ -136,7 +137,6 @@
     "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
     "运维相关/K8s/K8s暴露服务的三种方式.md",
     "运维相关/K8s/k8s 资源对象.md",
-    "运维相关/K8s/K8s简介与架构设计.md",
-    "运维相关/K8s/Kubectl 命令手册.md"
+    "运维相关/K8s/K8s简介与架构设计.md"
   ]
 }
