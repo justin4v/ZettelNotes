@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/MESI 协议.md",
+            "file": "Language/Java/JMM/内存屏障.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/MESI 协议.md",
+                "file": "Language/Java/JMM/内存屏障.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/MESI 协议.md"
+                "file": "Language/Java/JMM/内存屏障.md"
               }
             }
           },
@@ -127,15 +127,15 @@
   },
   "active": "2101796051104fa6",
   "lastOpenFiles": [
-    "Cache/CPU 缓存.md",
+    "Language/Java/基础/动态代理.md",
     "Cache/MESI 协议.md",
+    "Cache/CPU 缓存.md",
     "Database/ElasticSearch/Kibana 查询语法.md",
     "OS/并发编程/协程/goroutine 原理.md",
     "OS/并发编程/协程/goroutine简介.md",
     "Big Data/HDFS.md",
     "Big Data/Spark RDD.md",
     "运维相关/K8s/k8s端口类型与ip类型.md",
-    "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
-    "运维相关/K8s/K8s暴露服务的三种方式.md"
+    "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md"
   ]
 }
