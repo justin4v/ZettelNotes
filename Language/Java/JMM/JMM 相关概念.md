@@ -54,7 +54,7 @@ However, they have to appear to share an ordering to the rest of the program. If
 For example, the write of a default value to every field of an object constructed by a thread need not occur before the beginning of that thread, as long as no read ever observes that fact.
 
 ## 参考
-1. [[内存屏障#Happen-Before 先行原则]]
+1. [[重排序与Volatile#Happen-Before 先行原则]]
 
 
 # 访问冲突

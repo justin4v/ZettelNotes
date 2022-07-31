@@ -1,0 +1,152 @@
+#Todo #JVM #Memory-Barriers
+
+内存屏障 Memory Barrier 又称为内存栅栏 Memory Fence 
+# 原子操作
+JMM 规定了变量在主内存和工作内存中如何传输，也提供了八个原子指令来具体实现
+![[JMM定义的原子操作.png]]
+
+对于上面八个原子操作的使用，JMM制定了一些规则：
+
+1.  read/load、store/write 必须成对出现
+2.  不允许线程丢弃最近的assign操作，即工作内存中变量修改之后必须同步到主内存
+3.  不允许线程无原因地(没有assign操作）将变量工作内存同步到主内存
+4.  变量只能在主内存中诞生，并且必须在工作内存中初始化才能使用。即use、store之前必须经过load和assign
+5.  一个变量在同一时刻只能被一个线程lock。但一个线程可以lock多次。几次lock，只有对应次数的unlock变量才能解锁
+6.  一个变量被lock后，**会清空所有工作内存中此变量的值**。再次使用需要重新load、assign来初始化
+7.  一个变量未被lock，则不允许对它执行unlock，也不允许unlock其他线程lock的变量
+8.  一个变量unlock前，必须先把此变量同步到主内存中(store、write)
+
+## 如何理解这八条规则和八条指令？
+
+lock/unlock 指令让一个变量被一个线程独享，其他六个指令都是变量在工作内存中的赋值和传输操作。JMM的出现是为了让一个线程对变量修改时，其他线程停止修改，并能获取最新值，从而保证数据的一致性。
+
+而lock可以锁定变量，让变量只能被一个线程修改，且其他线程工作内存中的此变量的值会失效，必须通过指令来获取最新的值。
+
+## JMM 规范尝试保证的特性
+1.  原子性：lock和unlock提供了大范围的原子性，其他操作都具有原子性
+2.  可见性：当一个线程修改了变量的值，其他线程能立即得知修改
+3.  有序性：在本线程内操作都是有序的，相对于多个线程是无序的
+
+# 重排序
+## 什么是重排序
+重排序是编译器和处理器为了优化程序性能，对指令序列进行重新排序的行为。
+
+## 重排序分类
+1. 编译器优化重排序：编译器在不改变单线程程序语义的前提下，对语句的执行顺序进行排序。
+2. 指令级并行重排序：采用指令级并行技术将多条指令重叠执行，如果不存在数据依赖性，则处理器可以改变指令的执行顺序。
+3. 内存系统的重排序：处理器使用缓存和读写缓冲器，为了提高内存的读写性能，指令数据进行排序。
+
+4. 1 属于编译器重排序，2和3处于处理器重排序。
+
+## 重排序的问题
+- 重排序可能会导致多线程程序出现**内存可见性问题**。
+- 编译器排序规则需要禁止特定类型的编译器重排序。处理器排序规则需要插入特定得内存屏障来禁止特定得处理器重排序。
+
+### 数据依赖性
+- 如果两个操作**同时访问一个变量**，且两个操作中**有写操作**，那么这两个操作存在*数据依赖性*。
+- 广义的说，如果改变了两个操作的顺序，就会出现不同的执行结果，那么就存在数据依赖。
+- JMM 规定，有数据依赖的执行，**不会发生重排序**。
+
+### as-if-serial
+- as-if-serial语义的意思是：不管怎么重排序，单线程程序执行的结果不能被改变。
+- 处理器和编译器不会对存在数据依赖的执行进行重排序。
+- **重排序只在多线程才会存在，单线程是不会重排序的**。
+
+
+
+# 内存屏障
+
+Java 中如何保证底层操作的有序性和可见性？可以通过内存屏障（memory barrier）。
+
+内存屏障是被插入两个 *CPU 指令* 之间的一种指令，用来禁止处理器指令发生重排序（像屏障一样），从而保障**有序性**的。另外，为了达到屏障的效果，它也会使处理器写入、读取值之前，将主内存的值写入高速缓存，清空无效队列，从而保障**可见性**。
+
+示例：
+```java
+Store1;
+Store2;
+Load1;
+StoreLoad;  //内存屏障
+Store3;
+Load2;
+Load3;
+```
+
+- *Store* 表示写入指令，*Load* 表示读取指令；
+	- *Load 从主存中加载变量到缓存（栈帧）中*；
+	- *Store 从缓存（栈帧）中存储变量到主存中*；
+- StoreLoad 屏障之前的 Store 指令无法与 StoreLoad 屏障之后的 Load 指令进行交换位置，即**重排序**。
+- 但是 StoreLoad 屏障之前和之后的指令间是可以互换位置的，即 Store1 可以和 Store2 互换，Load2 可以和 Load3 互换。
+
+## 常见有 4 种屏障
+-   `LoadLoad` 屏障 - 对于这样的语句 `Load1; LoadLoad; Load2`，在 Load2 及后续读取操作要读取的数据被访问前，保证 Load1 要读取的数据被读取完毕。
+-   `StoreStore` 屏障 - 对于这样的语句 `Store1; StoreStore; Store2`，在 Store2 及后续写入操作执行前，保证 Store1 的写入操作对其它处理器可见。
+-   `LoadStore` 屏障 - 对于这样的语句 `Load1; LoadStore; Store2`，在 Store2 及后续写入操作被执行前，保证 Load1 要读取的数据被读取完毕。
+-   `StoreLoad` 屏障 - 对于这样的语句 `Store1; StoreLoad; Load2`，在 Load2 及后续所有读取操作执行前，保证 Store1 的写入对所有处理器可见。它的开销是四种屏障中最大的（冲刷写缓冲器，清空无效化队列）。在大多数处理器的实现中，这个屏障是个万能屏障，兼具其它三种内存屏障的功能。
+
+
+## synchronize
+synchronize可以看做是lock/unlock的实现，底层是由monitorenter/monitorexit来实现的。
+
+
+# volatile 内存语义
+volatile我们都知道是java的关键字用来保证数据可见性，防止指令重排的效果。包括JUC里AQS Lock的底层实现也是基于volatitle来实现。
+
+volatile写的内存语义
+
+> 当写一个volatile变量的时候，JMM会把该线程对应的本地内存变量值刷新到主内存
+
+volatile读的内存语义
+
+> 当读一个volatile变量的时候，JMM会把线程本次内存置为无效。线程接下来将从主内存中读取共享变量（也就是重新从主内存获取值，更新运行内存中的本地变量）
+
+上面两个语义，保证了volatile变量写入对线程的可见性
+
+## volatile 内存屏障
+
+![[volatile 插入的默认屏障.png]]
+
+```java
+class X {
+    
+int a, b;
+    
+volatile int v, u;
+    
+void f() {     
+int i, j;
+
+    i = a;// load a  普通load  
+    j = b;// load b  普通load
+    i = v;// load v  volatile load
+        
+// LoadLoad
+    j = u;// load u  volatile load
+        
+// LoadStore
+    a = i;// store a 普通store  
+    b = j;// store b 普通store
+        
+// StoreStore
+    v = i;// store v volatile store
+        
+// StoreStore
+    u = j;// store u volatile store
+        
+// StoreLoad
+    i = u;// load u  volatile load
+        
+// 两个屏障 LoadLoad 和 LoadStore
+    j = b;// load b  普通load
+    a = i;// store a 普通store
+    }
+}
+```
+
+
+
+# 参考
+1. [内存屏障 · JVM (gitbooks.io)](https://luoyoubao.gitbooks.io/jvm/content/javanei-cun-mo-xing/nei-cun-ping-zhang.html)
+2. [JMM中的重排序及内存屏障](https://www.cnblogs.com/wuqinglong/p/9947786.html)
+3. [JMM：Java内存屏障](https://juejin.cn/post/7031188400061284359)
+4. [[并发问题示例]]
+5. [说透缓存一致性与内存屏障](https://www.cnblogs.com/chanmufeng/p/16523365.html)
