@@ -100,15 +100,16 @@ MESI协议中一个缓存条目的 Flag 值：
 # MESI协议的处理器读写操作？
 
 ## 读取操作
-- 下面讨论在Processor 0上读取数据S的实现。
+- 下面讨论在Processor 0上读取数据 D 的实现。
 - 设内存地址A上 的数据S是处理器Processor 0 和处理器Processor 1  **可能共享**的数据。
 
 1. Processor 0 会根据地址A找到对应的缓存条目， 并读取该缓存条目的Tag和Flag值（不讨论Tag值的匹配问题）。 
-2. Processor0找到的缓存条目的状态如果为M、 E或者s. 那么 该处理器可以直接从相应的缓存行 中读取地址 A所对应的数据， 而无须往总线中发送任何消息。Processor 0找到的缓存条目的状态如果为I. 则说明该处理器的高速缓存中并不 包含S的有效副本数据，此时Processor 0需要往总线发送Read消息以读取地址A对应的 数据， 而其他处理器Processor l (或者主内存）则需要回复ReadResponse以提供相应的 数据
-
-Processor 0接收到ReadResponse消息时， 会将其中携带的数据（包含数据S的数据块） 存入相应的缓存行 并将相应缓存条目的状态更新为S。 Processor 0 接收到的Read Response消息可能来自主内存也可能来自其他处理器(Processor I)。
-
-Processor I会嗅探总线中由其他处理器发送的消息。Processor I嗅探到Read消息的时候， 会从该消息中取 出待读取的内存地址．并根据该地址在其高速缓存中查找对应的缓存条目。如果Processor I 找到的缓存条目的状态不为I (表11-2所示的情况）． 则说明该处理器的高速缓存中有待 读取数据的副本，此时Processor l会构造相应的ReadResponse消息并将相应缓存行所存储的整块数据（而不仅仅是Processor0所请求的数据s) ,. 塞入 “ 该消息。如果Processor1 找到的相应缓存条目的状态为M, 那么Processor1可能在往总线发送ReadResponse消息 前将相应缓存行中的数据写入主内存。Processor1往总线发送ReadResponse之后，相应缓存条目的状态会被更新为 S。 如果 Processor I 找到的高速缓存条目的状态为I, 那么 Processor 0所接收到的ReadResponse消息就来自主内存。
+2. Processor0 找到的缓存条目的状态如果为*M、 E或者S（缓存和主存数据一致）*，处理器可以直接从相应的缓存行中读取地址 A 所对应的数据， 无须往总线中发送任何消息。
+3. Processor 0找到的缓存条目的状态如果*为 I，则处理器的高速缓存中并不包含 D 的有效副本数据*；
+4. Processor 0 需要往总线发送 Read 消息以读取地址 A 对应的数据， 其他*处理器 Processor 1 或者主内存*则需要回复 ReadResponse 以**提供相应的数据**
+5. Processor 0 接收到 Read Response 消息时， 会将其中携带的数据（包含数据 D 的数据块） **存入缓存行并将该缓存条目的状态更新为 S** 。
+6. Processor 0 接收到的 Read Response 消息可能来自主内存也可能来自其他处理器(Processor I)。
+7. Processor 1 会嗅探总线中由其他处理器发送的消息。Processor I嗅探到Read消息的时候， 会从该消息中取 出待读取的内存地址．并根据该地址在其高速缓存中查找对应的缓存条目。如果Processor I 找到的缓存条目的状态不为I (表11-2所示的情况）． 则说明该处理器的高速缓存中有待 读取数据的副本，此时Processor l会构造相应的ReadResponse消息并将相应缓存行所存储的整块数据（而不仅仅是Processor0所请求的数据s) ,. 塞入 “ 该消息。如果Processor1 找到的相应缓存条目的状态为M, 那么Processor1可能在往总线发送ReadResponse消息 前将相应缓存行中的数据写入主内存。Processor1往总线发送ReadResponse之后，相应缓存条目的状态会被更新为 S。 如果 Processor I 找到的高速缓存条目的状态为I, 那么 Processor 0所接收到的ReadResponse消息就来自主内存。
 
 可见，在Processor0读取内存 的时候，即便Processor I对相应的内存数据进行了更新且这种更新还停留在Processor I 的高速缓存中而造成高速缓存与主内存中的数据不一致，在MESI消息的协调下这种不一 致也并不会导致Processor0读取到一个过时的旧值。
 
