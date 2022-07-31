@@ -109,9 +109,14 @@ MESI协议中一个缓存条目的 Flag 值：
 4. Processor 0 需要往总线发送 Read 消息以读取地址 A 对应的数据， 其他*处理器 Processor 1 或者主内存*则需要回复 ReadResponse 以**提供相应的数据**
 5. Processor 0 接收到 Read Response 消息时， 会将其中携带的数据（包含数据 D 的数据块） **存入缓存行并将该缓存条目的状态更新为 S** 。
 6. Processor 0 接收到的 Read Response 消息可能来自主内存也可能来自其他处理器(Processor I)。
-7. Processor 1 会嗅探总线中由其他处理器发送的消息。Processor I嗅探到Read消息的时候， 会从该消息中取 出待读取的内存地址．并根据该地址在其高速缓存中查找对应的缓存条目。如果Processor I 找到的缓存条目的状态不为I (表11-2所示的情况）． 则说明该处理器的高速缓存中有待 读取数据的副本，此时Processor l会构造相应的ReadResponse消息并将相应缓存行所存储的整块数据（而不仅仅是Processor0所请求的数据s) ,. 塞入 “ 该消息。如果Processor1 找到的相应缓存条目的状态为M, 那么Processor1可能在往总线发送ReadResponse消息 前将相应缓存行中的数据写入主内存。Processor1往总线发送ReadResponse之后，相应缓存条目的状态会被更新为 S。 如果 Processor I 找到的高速缓存条目的状态为I, 那么 Processor 0所接收到的ReadResponse消息就来自主内存。
+7. Processor 1 会嗅探总线中由其他处理器发送的消息。
+	1. Processor I嗅探到 Read 消息的时候，会从该消息中*取出待读取的内存地址*．并根据该地址在其高速缓存中查找对应的缓存条目。
+	2. 如果Processor 1 找到的缓存条目的状态*不为 I* (表11-2所示的情况）． 则该处理器的高速缓存中存在该数据的副本，此时Processor 1 构造相应的 ReadResponse 消息并将相应*缓存行的整块数据*（而不仅仅是Processor0所请求的数据s)  塞入 “ 该消息。
+	3. 如果 Processor1 找到的相应缓存条目的状态*为 M*, 那么 Processor 1 可能在**往总线发送 ReadResponse 消息前将相应缓存行中的数据写入主内存**。Processor 1 往总线**发送 ReadResponse 之后，缓存条目的状态会被更新为 S**。 
+	4. 如果 Processor 1 找到的高速缓存条目的状态*为 I*， 那么 Processor 0 所接收到的 ReadResponse 消息就**来自主内存**。
 
-可见，在Processor0读取内存 的时候，即便Processor I对相应的内存数据进行了更新且这种更新还停留在Processor I 的高速缓存中而造成高速缓存与主内存中的数据不一致，在MESI消息的协调下这种不一 致也并不会导致Processor0读取到一个过时的旧值。
+
+- 在Processor0读取内存的时候，即便Processor I对相应的内存数据进行了更新且更新还停留在Processor I 的高速缓存中而造成高速缓存与主内存中的数据不一致的情况下，MESI 消息的协调下这种不一 致也并不会导致Processor0读取到一个过时的旧值。
 
 **_讨论Processor 0往地址A写数据的实现_**
 
