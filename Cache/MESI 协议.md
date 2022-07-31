@@ -116,15 +116,17 @@ MESI协议中一个缓存条目的 Flag 值：
 	4. 如果 Processor 1 找到的高速缓存条目的状态*为 I*， 那么 Processor 0 所接收到的 ReadResponse 消息就**来自主内存**。
 
 
-- 在Processor0读取内存的时候，即便Processor I对相应的内存数据进行了更新且更新还停留在Processor I 的高速缓存中而造成高速缓存与主内存中的数据不一致的情况下，MESI 消息的协调下这种不一 致也并不会导致Processor0读取到一个过时的旧值。
+- 在Processor0读取内存的时候，即便Processor I对相应的内存数据进行了更新且更新还停留在Processor I 的高速缓存中而造成高速缓存与主内存中的数据不一致的情况下；
+- MESI 消息的协调下这种不一致也并不会导致Processor0 读取到一个过时的旧值。
 
-**_讨论Processor 0往地址A写数据的实现_**
+## 写入操作
+1. 任何一个处理器执行内存写操作时必须**拥有相应数据的所有权**。
+2. 在执行内存写操作时，Processor 0 会先根据内存地址A找到相应的缓存条目。
+3. Processor 0 所找到的缓存条目的状态若为*E或者M*, 则该处理器*已经拥有相应数据的所有权*，该处理器可以直接将数据**写入相应的缓存行并将状态更新为M** 。
+4. Processo r0 所找到的缓存条目的状态如果不为*E、M* , 则需要往总线*发送 Invalidate 消息*以获得数据的所有权。
+5. 其他处理器接收到 Invalidate 消息后，将缓存中相应的缓存条目**状态更新为I (相当于删除相应的副本数据）** 并回复 Invalidate Acknowledge消息。
+6. Invalidate 消息的发送者，必须在接收到**其他所有处理器所回复的 Invalidate Acknowledge 消息**之后再将数据更新到相应的缓存行之中.
 
-任何一个处理器执行内存写操作时必须拥有相应数据的所有权。在执行内存写操作时，Processor0会先根据内存地址A找到相应的缓存条目。Processor0所找到的缓存条目的状态若为E或者M, 则说明该处理器已经拥有相应数据的所有权，此时该处理器可以直接将数据写入相应的缓存行并将相应缓存条目的状态更新为M 。Processor0所找到的缓存条目的状态如果不为E、M, 则该处理器需要往总线发送Invalidate消息以获得数据的所有权。其他处理器接收到Invalidate消息后会 将其高速缓存中相应的缓存条目状态更新为I (相当于删除相应的副本数据）并回复 Invalidate Acknowledge消息。发送Invalidate消息的处理器（即内存写操作的执行处理器），必须在接收到其他所有处理器所回复的所有I nvalidate Acknowledge消息之后再将数据更 新到相应的缓存行之中.
-
-![](//upload-images.jianshu.io/upload_images/4017523-bc463e8d9bdf32d6.png?imageMogr2/auto-orient/strip|imageView2/2/w/773/format/webp)
-
-image.png
 
 Processor 0所找到的缓存条目的状态若为s. 则说明Processor l上的高速缓存可能也保留了地址A对应的数据副本（场景I). 此时Processor 0需要往总线发送Invalidate消息。Processor 0在接收到其他所有处理器所回复的InvalidateAcknowledge消息之后会将相应的缓存条目的状态更新为 E, 此时 Processor 0 获得了地址 A 上数据的所有权。 接着，Processor 0 便可以将数据写入相应的缓存行， 并将相应缓存条目的状态更新为 M 。Processor 0 所找到的缓存条目的状态若为 I, 则表示该处理器不包含地址 A 对应的有效副本数据（场景 2), 此时 Processor 0 需要往总线发送 Read Invalidate 消息。Processor 0 在接收到 Read Response 消息以及其他所有处理器所回复的 Invalidate Acknowledge 消息之后， 会将相应缓存条目的状态更新为E, 这表示该处理器已经获得相应数据的所有权。接 着， Processor 0 便可以往相应的缓存行中写入数据了并将相应缓存条目的状态更新为 M 。 其他处理器在接收到 Invalidate 消息或者 Read Invalidate 消息之后， 必须根据消息中包含的内存地址在该处理器的高速缓存中查找相应的高速缓存条目。若 Processor I 所找到的高速缓存条目的状态不为 I (场景 2), 那么 Processor I 必须将相应缓存条目的状态更新为I, 以删除相应的副本数据并给总线回复 Invalidate Acknowledge 消息。可见. Invalidate 消息和 Invalidate Acknowledge 消息使得针对同一个内存地址的写操作在任意一个时刻只能由一个处理器执行， 从而避免了多个处理器同时更新同一数据可能导致的数据不一致问题。
 
