@@ -138,7 +138,8 @@ MESI协议中一个缓存条目的 Flag 值：
 	2. Processor 0 在接收到 Read Response 消息以及其他所有处理器所回复的 Invalidate Acknowledge 消息之后， 会将相应缓存条目的**状态更新为 E**, 这表示该处理器已经获得相应数据的所有权。
 	3.  Processor 0 便可以往相应的缓存行中写入数据了并将相应缓存条目的**状态更新为 M** 。 
 9. 其他处理器在接收到 Invalidate 消息或者 Read Invalidate 消息之后， 必须根据消息中包含的内存地址在该处理器的高速缓存中查找相应的高速缓存条目。
-	1. 若 Processor I 所找到的高速缓存条目的状态*不为 I* , 那么 Processor I 必须将相应缓存条目的状态更新为I, 以删除相应的副本数据并给总线回复 Invalidate Acknowledge 消息。可见. Invalidate 消息和 Invalidate Acknowledge 消息使得针对同一个内存地址的写操作在任意一个时刻只能由一个处理器执行， 从而避免了多个处理器同时更新同一数据可能导致的数据不一致问题。
+	1. 若 Processor I 所找到的高速缓存条目的状态*不为 I* , 那么 Processor I 必须将相应缓存条目的**状态更新为I**, 以删除相应的副本数据并给总线回复 Invalidate Acknowledge 消息。
+	2.  *Invalidate 消息和 Invalidate Acknowledge 消息使得针对同一个内存地址的写操作在任意一个时刻只能由一个处理器执行*， 从而避免了多个处理器同时更新同一数据可能导致的数据不一致问题。
 
   
   
