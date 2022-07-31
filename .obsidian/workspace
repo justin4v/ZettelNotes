@@ -127,13 +127,13 @@
   },
   "active": "2101796051104fa6",
   "lastOpenFiles": [
-    "Language/Java/JMM/重排序与Volatile.md",
+    "Language/Java/JMM/代码重排与乱序执行.md",
     "Language/Java/JMM/内存屏障.md",
+    "Language/Java/JMM/重排序与Volatile.md",
     "Language/Java/JMM/Java 同步语义.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
     "Language/Java/JMM/Java Memory Model简介.md",
     "Language/Java/JMM/JMM 相关概念.md",
-    "Language/Java/JMM/代码重排与乱序执行.md",
     "Language/Java/基础/动态代理.md",
     "Cache/MESI 协议.md",
     "Cache/CPU 缓存.md"
