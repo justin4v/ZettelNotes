@@ -1,4 +1,4 @@
-#Tools #Flyway #Todo 
+#Tools #Flyway 
 # flyway是什么
 
 - **Version control for database**， 可以像 Git 管理不同人的代码那样，管理不同人的sql脚本，从而做到数据库同步。
@@ -76,6 +76,52 @@
 ![[Flyway_migrate.png]]
 
 
+
+# 配置示例
+common
+```YAML
+flyway:
+    # 启用或禁用 flyway
+    enabled: true
+    # 字符编码
+    encoding: utf-8
+    # 对执行迁移时基准版本的描述
+    baseline-description: ===== Baseline(create tables add data) =====
+    # 若连接的数据库非空库，是否初始化
+    # 当迁移时发现目标schema非空，而且带有没有元数据的表时，是否自动执行基准迁移，默认false.
+    baseline-on-migrate: true
+    # 指定 baseline 的版本号,缺省值为 1, 低于该版本号的 SQL 文件, migrate 的时候被忽略
+    # 开始执行基准迁移时对现有的schema的版本打标签，默认值为1.
+    baseline-version: 1
+    # 是否开启校验
+    # 迁移时是否校验，默认为 true
+    validate-on-migrate: true
+    # flyway 的 clean 命令会删除指定 schema 下的所有 table，默认 false
+    locations:
+      - classpath:db/migration/iteration
+    clean-disabled: true
+    # 发环境最好开启 outOfOrder, 生产环境关闭 outOfOrder
+    # 是否允许无序的迁移，默认 false
+    out-of-order: false
+    # 检查迁移脚本的位置是否存在，默认false
+    check-location: false
+    # 当读取元数据表时是否忽略错误的迁移，默认false
+    ignore-future-migrations: false
+    # 当初始化好连接时要执行的SQL
+    init-sqls: 
+      - show tables;
+```
+
+服务中只需要配置 metadata 表名
+workflow-prefetch
+```YAML
+spring:
+  flyway:
+    # 启用或禁用 flyway
+    enabled: true
+    # 版本记录表
+    table: prefetch_schema_history
+```
 
 # 参考
 1. [Flyway基本介绍及基本使用](https://developer.aliyun.com/article/842712)
