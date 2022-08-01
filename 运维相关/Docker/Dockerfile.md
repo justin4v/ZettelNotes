@@ -8,10 +8,8 @@ Dockerfile是一个包含用于组合映像的命令的文本文档。可以使�
 
 例：
 ```docker
-```
 docker build -f /path/to/a/Dockerfile
-
-[回到顶部](https://www.cnblogs.com/panwenbin-logs/p/8007348.html#_labelTop)
+```
 
 ## Dockerfile的基本结构
 
