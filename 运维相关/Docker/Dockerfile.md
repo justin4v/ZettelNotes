@@ -28,9 +28,9 @@ Dockerfile 一般分为四部分：
 
 
 ## FROM
-FROM：指定基础镜像，必须为第一个命令
+- FROM：指定基础镜像，必须为第一个命令
 
-``````
+```dockerfile
 格式：
 　　FROM <image>
 　　FROM <image>:<tag>
@@ -39,41 +39,41 @@ FROM：指定基础镜像，必须为第一个命令
 　　FROM mysql:5.6  
 注：  
 　　tag或digest是可选的，如果不使用这两个值时，会使用latest版本的基础镜像
+```
 
+## MAINTAINER
+- MAINTAINER: 维护者信息
 
-
-**MAINTAINER: 维护者信息**
-
-格式：
-    MAINTAINER <name>
+```dockerfile
+   MAINTAINER <name>
 示例：
     MAINTAINER Jasper Xu
     MAINTAINER sorex@163.com
     MAINTAINER Jasper Xu <sorex@163.com>
+```
+ 
 
-**RUN：构建镜像时执行的命令**
+## RUN
+- RUN：构建镜像时执行的命令
+有以下两种命令执行方式：
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
-RUN用于在镜像容器中执行命令，其有以下两种命令执行方式：
-**shell执行**
+```dockerfile
+shell执行
 格式：
     RUN <command>
-**exec执行**
+
+exec执行
 格式：
     RUN ["executable", "param1", "param2"]
 示例：
     RUN ["executable", "param1", "param2"]
     RUN apk update
     RUN ["/etc/execfile", "arg1", "arg1"]
-注：  
-　　RUN指令创建的中间镜像会被缓存，并会在下次构建中使用。如果不想使用这些缓存镜像，可以在构建时指定--no-cache参数，如：docker build --no-cache
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+```
+- RUN指令创建的中间镜像会被缓存，并会在下次构建中使用。
+- 如果不想使用缓存镜像，可以在构建时指定 `--no-cache` 参数，如：`docker build --no-cache`
 
 **ADD：将本地文件添加到容器中，tar类型文件会自动解压(网络压缩资源不会被解压)，可以访问网络资源，类似wget**
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
 
 格式：
     ADD <src>... <dest>
@@ -84,13 +84,12 @@ RUN用于在镜像容器中执行命令，其有以下两种命令执行方式�
     ADD test relativeDir/     # 添加 "test" 到 `WORKDIR`/relativeDir/
     ADD test /absoluteDir/    # 添加 "test" 到 /absoluteDir/
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 **COPY：功能类似ADD，但是是不会自动解压文件，也不能访问网络资源**
 
 **CMD：构建容器后调用，也就是在容器启动时才进行调用。**
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
 
 格式：
     CMD ["executable","param1","param2"] (执行可执行文件，优先)
@@ -102,7 +101,7 @@ RUN用于在镜像容器中执行命令，其有以下两种命令执行方式�
 注：  
  　　CMD不同于RUN，CMD用于指定在容器启动时所要执行的命令，而RUN用于指定镜像构建时所要执行的命令。
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 **ENTRYPOINT：配置容器，使其可执行化。配合CMD可省去"application"，只使用参数。**
 
@@ -122,7 +121,7 @@ RUN用于在镜像容器中执行命令，其有以下两种命令执行方式�
 
 **LABEL：用于为镜像添加元数据**
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 格式：
     LABEL <key>=<value> <key>=<value> <key>=<value> ...
@@ -131,11 +130,11 @@ RUN用于在镜像容器中执行命令，其有以下两种命令执行方式�
 注：
 　　使用LABEL指定元数据时，一条LABEL指定可以指定一或多条元数据，指定多条元数据时不同元数据之间通过空格分隔。推荐将所有的元数据通过一条LABEL指令指定，以免生成过多的中间镜像。
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 **ENV：设置环境变量**
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 格式：
     ENV <key> <value>  #<key>之后的所有内容均会被视为其<value>的组成部分，因此，一次只能设置一个变量
@@ -145,11 +144,11 @@ RUN用于在镜像容器中执行命令，其有以下两种命令执行方式�
     ENV myDog Rex The Dog
     ENV myCat=fluffy
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 **EXPOSE：指定于外界交互的端口**
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 格式：
     EXPOSE <port> [<port>...]
@@ -160,11 +159,11 @@ RUN用于在镜像容器中执行命令，其有以下两种命令执行方式�
 注：  
 　　EXPOSE并不会让容器的端口访问到主机。要使其可访问，需要在`docker run`运行容器时通过-p来发布这些端口，或通过`-P`参数来发布EXPOSE导出的所有端口
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 **VOLUME：用于指定持久化目录**
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 格式：
     VOLUME ["/path/to/dir"]
@@ -180,11 +179,11 @@ RUN用于在镜像容器中执行命令，其有以下两种命令执行方式�
 4 对卷的修改不会对镜像产生影响
 5 卷会一直存在，直到没有任何容器在使用它
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 **WORKDIR：工作目录，类似于cd命令**
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 格式：
     WORKDIR /path/to/workdir
