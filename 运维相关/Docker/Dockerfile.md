@@ -31,11 +31,11 @@ Dockerfile 一般分为四部分：
 - 格式为 `FROM <image>` 或 `FROM <image>:<tag>`，指定基础镜像。
 - 第一条指令必须为 `FROM` 指令。如果在同一个Dockerfile中创建多个镜像时，可以使用多个 `FROM` 指令（每个镜像一次）。
 
-### 2.2 MAINTAINER
+### MAINTAINER
 
 - 格式为 `MAINTAINER <name>`，指定维护者信息。
 
-### 2.3 RUN
+### RUN
 
 - 格式为 `RUN <command>` 或 `RUN ["executable", "param1", "param2"]`。
 - 前者将在 shell 终端中运行命令，即 `/bin/sh -c`；
@@ -43,7 +43,7 @@ Dockerfile 一般分为四部分：
 - 每条 `RUN` 指令将在当前镜像基础上执行指定命令，并提交为新的镜像。
 - 当命令较长时可以使用 `\` 来换行。
 
-### 2.4 CMD
+### CMD
 
 支持三种格式
 -   `CMD ["executable","param1","param2"]` 使用 `exec` 执行，推荐方式；
@@ -54,13 +54,13 @@ Dockerfile 一般分为四部分：
 - 如果指定了多条命令，只有最后一条会被执行。
 - 如果用户启动容器时候指定了运行的命令，则会覆盖掉 `CMD` 指定的命令。
 
-### 2.5 EXPOSE
+### EXPOSE
 
 - 格式为 `EXPOSE <port> [<port>...]`。
 - Docker 服务端容器暴露的端口号，供互联系统使用。
 - 在启动容器时需要通过 -P，Docker 主机会自动分配一个端口转发到指定的端口。
 
-### 2.6 ENV
+### ENV
 
 - 格式为 `ENV <key> <value>`。 
 - 指定一个环境变量，会被后续 `RUN` 指令使用，并在容器运行时保持。
@@ -74,7 +74,7 @@ RUN curl -SL http://example.com/postgres-$PG_VERSION.tar.xz | tar -xJC /usr/src/
 ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
 ```
 
-### 2.7 ADD
+### ADD
 
 - 格式为 `ADD <src> <dest>`。
 - 复制指定的 `<src>` 到容器中的 `<dest>`。 
@@ -83,7 +83,7 @@ ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
 	- 可以是一个 URL；
 	- 可以是一个 tar 文件（自动解压为目录）。
 
-### 2.8 COPY
+### COPY
 
 - 格式为 `COPY <src> <dest>`。
 - 复制本地主机的 `<src>`（为 Dockerfile 所在目录的相对路径）到容器中的 `<dest>`。
@@ -96,7 +96,7 @@ ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
 - 配置容器启动后执行的命令，并且不可被 `docker run` 提供的参数覆盖。
 - 每个 Dockerfile 中只能有一个 `ENTRYPOINT`，当指定多个时，只有最后一个起效。
 
-### 2.9 VOLUME
+### VOLUME
 
 - 格式为 `VOLUME ["/data"]`。
 - 创建一个可以从本地主机或其他容器挂载的挂载点，一般用来存放数据库和需要保持的数据等。
@@ -135,7 +135,7 @@ ONBUILD RUN /usr/local/bin/python-build --dir /app/src
 [...]
 ```
 
-如果基于 image-A 创建新的镜像时，新的Dockerfile中使用 `FROM image-A`指定基础镜像时，会自动执行`ONBUILD` 指令内容，等价于在后面添加了两条指令。
+- 如果基于 image-A 创建新的镜像，新的Dockerfile中使用 `FROM image-A`指定基础镜像时，会自动执行`ONBUILD` 指令内容，等价于在后面添加了两条指令。
 
 ```dockerfile
 FROM image-A
@@ -149,11 +149,15 @@ RUN /usr/local/bin/python-build --dir /app/src
 
 ## 3、创建镜像
 
-编写完成 Dockerfile 之后，可以通过 `docker build` 命令来创建镜像。
-
-基本的格式为 `docker build [选项] 路径`，该命令将读取指定路径下（包括子目录）的 Dockerfile，并将该路径下所有内容发送给 Docker 服务端，由服务端来创建镜像。因此一般建议放置 Dockerfile 的目录为空目录。也可以通过 `.dockerignore` 文件（每一行添加一条匹配模式）来让 Docker 忽略路径下的目录和文件。
+- 编写完成 Dockerfile 之后，可以通过 `docker build` 命令来创建镜像。
+- 基本的格式为 `docker build [选项] 路径`；
+- 该命令将读取指定路径下（包括子目录）的 Dockerfile，并将该路径下所有内容发送给 Docker 服务端，由服务端来创建镜像。
+- 一般建议放置 Dockerfile 的目录为空目录。也可以通过 `.dockerignore` 文件（每一行添加一条匹配模式）来让 Docker 忽略路径下的目录和文件。
 
 要指定镜像的标签信息，可以通过 `-t` 选项，例如
+```shell
+$ sudo docker build -t myrepo/myapp /tmp/test1/
+```
 
 # 参考
 1. [Dockerfile文件详解](https://www.cnblogs.com/panwenbin-logs/p/8007348.html)
