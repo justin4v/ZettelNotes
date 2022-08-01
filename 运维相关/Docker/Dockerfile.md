@@ -1,32 +1,36 @@
 #Docker #Dockerfile
 
 ## 什么是dockerfile?
-
-Dockerfile是一个包含用于组合映像的命令的文本文档。可以使用在命令行中调用任何命令。 Docker通过读取`Dockerfile`中的指令自动生成映像。
-
-`docker build`命令用于从Dockerfile构建映像。可以在`docker build`命令中使用`-f`标志指向文件系统中任何位置的Dockerfile。
+- Dockerfile是包含用于组合映像的命令的文本文档。
+- Docker通过读取`Dockerfile`中的指令自动生成映像。
+- `docker build` 命令用于从Dockerfile构建映像。
+- 可以在 `docker build` 命令中使用 `-f` 指向文件系统中 Dockerfile 文件。
 
 例：
 ```docker
 docker build -f /path/to/a/Dockerfile
 ```
 
-## Dockerfile的基本结构
+# Dockerfile的基本结构
 
-Dockerfile 一般分为四部分：基础镜像信息、维护者信息、镜像操作指令和容器启动时执行指令，’#’ 为 Dockerfile 中的注释。
+Dockerfile 一般分为四部分：
+1. *基础镜像信息*；
+2. *维护者信息*；
+3. *镜像操作指令*；
+4. 容器*启动时执行指令*；
+5. ’#’ 为 Dockerfile 中的*注释*。
 
-[回到顶部](https://www.cnblogs.com/panwenbin-logs/p/8007348.html#_labelTop)
+# Dockerfile文件说明
+- Docker以从上到下的顺序运行Dockerfile的指令。
+- 为了指定基本映像，第一条指令必须是 `FROM`。
+- 注释以`＃`字符开头。
+- Dockerfile 文件命令有 `RUN`，`CMD`，`FROM`，`EXPOSE`，`ENV`等指令。
 
-## Dockerfile文件说明
 
-Docker以从上到下的顺序运行Dockerfile的指令。为了指定基本映像，第一条指令必须是_FROM_。一个声明以`＃`字符开头则被视为注释。可以在Docker文件中使用`RUN`，`CMD`，`FROM`，`EXPOSE`，`ENV`等指令。
+## FROM
+FROM：指定基础镜像，必须为第一个命令
 
-**在这里列出了一些常用的指令。**
-
-**FROM：指定基础镜像，必须为第一个命令**
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
+``````
 格式：
 　　FROM <image>
 　　FROM <image>:<tag>
@@ -36,7 +40,7 @@ Docker以从上到下的顺序运行Dockerfile的指令。为了指定基本映�
 注：  
 　　tag或digest是可选的，如果不使用这两个值时，会使用latest版本的基础镜像
 
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
+
 
 **MAINTAINER: 维护者信息**
 
