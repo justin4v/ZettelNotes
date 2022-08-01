@@ -125,17 +125,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "03e52bdc9194142b",
+  "active": "2101796051104fa6",
   "lastOpenFiles": [
+    "Cache/MESI 协议.md",
+    "Language/Java/JMM/内存屏障.md",
     "运维相关/Docker/Dockerfile.md",
     "Tool/Flyway/flyway 简介.md",
     "Tool/plantUML/plantUML 语法.md",
-    "Language/Java/JMM/内存屏障.md",
     "Language/Java/JMM/代码重排与乱序执行.md",
     "Language/Java/JMM/重排序与Volatile.md",
     "Language/Java/JMM/Java 同步语义.md",
     "Language/Java/JMM/正确的同步与安全的多线程.md",
-    "Language/Java/JMM/Java Memory Model简介.md",
-    "Language/Java/JMM/JMM 相关概念.md"
+    "Language/Java/JMM/Java Memory Model简介.md"
   ]
 }
