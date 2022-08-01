@@ -27,255 +27,133 @@ Dockerfile 一般分为四部分：
 - Dockerfile 文件命令有 `RUN`，`CMD`，`FROM`，`EXPOSE`，`ENV`等指令。
 
 
-## FROM
-- FROM：指定基础镜像，必须为第一个命令
+### FROM
+- 格式为 `FROM <image>` 或 `FROM <image>:<tag>`，指定基础镜像。
+- 第一条指令必须为 `FROM` 指令。如果在同一个Dockerfile中创建多个镜像时，可以使用多个 `FROM` 指令（每个镜像一次）。
+
+### 2.2 MAINTAINER
+
+- 格式为 `MAINTAINER <name>`，指定维护者信息。
+
+### 2.3 RUN
+
+- 格式为 `RUN <command>` 或 `RUN ["executable", "param1", "param2"]`。
+- 前者将在 shell 终端中运行命令，即 `/bin/sh -c`；
+- 后者则使用 `exec` 执行。指定使用其它终端可以通过第二种方式实现，例如 `RUN ["/bin/bash", "-c", "echo hello"]`。
+- 每条 `RUN` 指令将在当前镜像基础上执行指定命令，并提交为新的镜像。
+- 当命令较长时可以使用 `\` 来换行。
+
+### 2.4 CMD
+
+支持三种格式
+-   `CMD ["executable","param1","param2"]` 使用 `exec` 执行，推荐方式；
+-   `CMD command param1 param2` 在 `/bin/sh` 中执行，提供给需要交互的应用；
+-   `CMD ["param1","param2"]` 提供给 `ENTRYPOINT` 的默认参数；
+
+- 指定启动容器时执行的命令，每个 Dockerfile 只能有一条 `CMD` 命令。
+- 如果指定了多条命令，只有最后一条会被执行。
+- 如果用户启动容器时候指定了运行的命令，则会覆盖掉 `CMD` 指定的命令。
+
+### 2.5 EXPOSE
+
+- 格式为 `EXPOSE <port> [<port>...]`。
+- Docker 服务端容器暴露的端口号，供互联系统使用。
+- 在启动容器时需要通过 -P，Docker 主机会自动分配一个端口转发到指定的端口。
+
+### 2.6 ENV
+
+- 格式为 `ENV <key> <value>`。 
+- 指定一个环境变量，会被后续 `RUN` 指令使用，并在容器运行时保持。
+
+例如
 
 ```dockerfile
-格式：
-　　FROM <image>
-　　FROM <image>:<tag>
-　　FROM <image>@<digest>  
-示例：  
-　　FROM mysql:5.6  
-注：  
-　　tag或digest是可选的，如果不使用这两个值时，会使用latest版本的基础镜像
+ENV PG_MAJOR 9.3
+ENV PG_VERSION 9.3.4
+RUN curl -SL http://example.com/postgres-$PG_VERSION.tar.xz | tar -xJC /usr/src/postgress && …
+ENV PATH /usr/local/postgres-$PG_MAJOR/bin:$PATH
 ```
 
-## MAINTAINER
-- MAINTAINER: 维护者信息
+### 2.7 ADD
+
+- 格式为 `ADD <src> <dest>`。
+- 复制指定的 `<src>` 到容器中的 `<dest>`。 
+- 其中 `<src>` ：
+	- 可以是Dockerfile所在目录的一个相对路径；
+	- 可以是一个 URL；
+	- 可以是一个 tar 文件（自动解压为目录）。
+
+### 2.8 COPY
+
+- 格式为 `COPY <src> <dest>`。
+- 复制本地主机的 `<src>`（为 Dockerfile 所在目录的相对路径）到容器中的 `<dest>`。
+- 当使用本地目录为源目录时，推荐使用 `COPY`。
+
+### ENTRYPOINT
+- 两种格式：
+	-   `ENTRYPOINT ["executable", "param1", "param2"]`
+	-   `ENTRYPOINT command param1 param2`（shell中执行）。
+- 配置容器启动后执行的命令，并且不可被 `docker run` 提供的参数覆盖。
+- 每个 Dockerfile 中只能有一个 `ENTRYPOINT`，当指定多个时，只有最后一个起效。
+
+### 2.9 VOLUME
+
+- 格式为 `VOLUME ["/data"]`。
+- 创建一个可以从本地主机或其他容器挂载的挂载点，一般用来存放数据库和需要保持的数据等。
+
+### USER
+
+- 格式为 `USER daemon`。
+- 指定运行容器时的用户名或 UID，后续的 `RUN` 也会使用指定用户。
+- 当服务不需要管理员权限时，可以通过该命令指定运行用户。
+- 且可以在之前创建所需要的用户，例如：`RUN groupadd -r postgres && useradd -r -g postgres postgres`。要临时获取管理员权限可以使用 `gosu`，而不推荐 `sudo`。
+
+### WORKDIR
+
+- 格式为 `WORKDIR /path/to/workdir`。
+- 为后续的 `RUN`、`CMD`、`ENTRYPOINT` 指令配置工作目录。
+- 可以使用多个 `WORKDIR` 指令，后续命令如果参数是相对路径，则会基于之前命令指定的路径。例如
 
 ```dockerfile
-   MAINTAINER <name>
-示例：
-    MAINTAINER Jasper Xu
-    MAINTAINER sorex@163.com
-    MAINTAINER Jasper Xu <sorex@163.com>
+WORKDIR /a
+WORKDIR b
+WORKDIR c
+RUN pwd
 ```
- 
+- 最终路径为 `/a/b/c`。
 
-## RUN
-- RUN：构建镜像时执行的命令
-有以下两种命令执行方式：
+### ONBUILD
+
+- 格式为 `ONBUILD [INSTRUCTION]`。
+- 配置当所创建的镜像作为其它新创建镜像的基础镜像时，所执行的操作指令。
+
+例如，Dockerfile 使用如下的内容创建了镜像 `image-A`。
+```dockerfile
+[...]
+ONBUILD ADD . /app/src
+ONBUILD RUN /usr/local/bin/python-build --dir /app/src
+[...]
+```
+
+如果基于 image-A 创建新的镜像时，新的Dockerfile中使用 `FROM image-A`指定基础镜像时，会自动执行`ONBUILD` 指令内容，等价于在后面添加了两条指令。
 
 ```dockerfile
-shell执行
-格式：
-    RUN <command>
+FROM image-A
 
-exec执行
-格式：
-    RUN ["executable", "param1", "param2"]
-示例：
-    RUN ["executable", "param1", "param2"]
-    RUN apk update
-    RUN ["/etc/execfile", "arg1", "arg1"]
+#Automatically run the following
+ADD . /app/src
+RUN /usr/local/bin/python-build --dir /app/src
 ```
-- RUN指令创建的中间镜像会被缓存，并会在下次构建中使用。
-- 如果不想使用缓存镜像，可以在构建时指定 `--no-cache` 参数，如：`docker build --no-cache`
 
-**ADD：将本地文件添加到容器中，tar类型文件会自动解压(网络压缩资源不会被解压)，可以访问网络资源，类似wget**
+- 使用 `ONBUILD` 指令的镜像，推荐在标签中注明，例如 `ruby:1.9-onbuild`。
 
-格式：
-    ADD <src>... <dest>
-    ADD ["<src>",... "<dest>"] 用于支持包含空格的路径
-示例：
-    ADD hom* /mydir/          # 添加所有以"hom"开头的文件
-    ADD hom?.txt /mydir/      # ? 替代一个单字符,例如："home.txt"
-    ADD test relativeDir/     # 添加 "test" 到 `WORKDIR`/relativeDir/
-    ADD test /absoluteDir/    # 添加 "test" 到 /absoluteDir/
+## 3、创建镜像
 
+编写完成 Dockerfile 之后，可以通过 `docker build` 命令来创建镜像。
 
+基本的格式为 `docker build [选项] 路径`，该命令将读取指定路径下（包括子目录）的 Dockerfile，并将该路径下所有内容发送给 Docker 服务端，由服务端来创建镜像。因此一般建议放置 Dockerfile 的目录为空目录。也可以通过 `.dockerignore` 文件（每一行添加一条匹配模式）来让 Docker 忽略路径下的目录和文件。
 
-**COPY：功能类似ADD，但是是不会自动解压文件，也不能访问网络资源**
-
-**CMD：构建容器后调用，也就是在容器启动时才进行调用。**
-
-
-格式：
-    CMD ["executable","param1","param2"] (执行可执行文件，优先)
-    CMD ["param1","param2"] (设置了ENTRYPOINT，则直接调用ENTRYPOINT添加参数)
-    CMD command param1 param2 (执行shell内部命令)
-示例：
-    CMD echo "This is a test." | wc -
-    CMD ["/usr/bin/wc","--help"]  
-注：  
- 　　CMD不同于RUN，CMD用于指定在容器启动时所要执行的命令，而RUN用于指定镜像构建时所要执行的命令。
-
-
-
-**ENTRYPOINT：配置容器，使其可执行化。配合CMD可省去"application"，只使用参数。**
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
-格式：
-    ENTRYPOINT ["executable", "param1", "param2"] (可执行文件, 优先)
-    ENTRYPOINT command param1 param2 (shell内部命令)
-示例：
-    FROM ubuntu
-    ENTRYPOINT ["top", "-b"]
-    CMD ["-c"]  
-注：  
-　　　ENTRYPOINT与CMD非常类似，不同的是通过`docker run`执行的命令不会覆盖ENTRYPOINT，而`docker run`命令中指定的任何参数，都会被当做参数再次传递给ENTRYPOINT。Dockerfile中只允许有一个ENTRYPOINT命令，多指定时会覆盖前面的设置，而只执行最后的ENTRYPOINT指令。
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
-**LABEL：用于为镜像添加元数据**
-
-
-
-格式：
-    LABEL <key>=<value> <key>=<value> <key>=<value> ...
-示例：
-　　LABEL version="1.0" description="这是一个Web服务器" by="IT笔录"
-注：
-　　使用LABEL指定元数据时，一条LABEL指定可以指定一或多条元数据，指定多条元数据时不同元数据之间通过空格分隔。推荐将所有的元数据通过一条LABEL指令指定，以免生成过多的中间镜像。
-
-
-
-**ENV：设置环境变量**
-
-
-
-格式：
-    ENV <key> <value>  #<key>之后的所有内容均会被视为其<value>的组成部分，因此，一次只能设置一个变量
-    ENV <key>=<value> ...  #可以设置多个变量，每个变量为一个"<key>=<value>"的键值对，如果<key>中包含空格，可以使用\来进行转义，也可以通过""来进行标示；另外，反斜线也可以用于续行
-示例：
-    ENV myName John Doe
-    ENV myDog Rex The Dog
-    ENV myCat=fluffy
-
-
-
-**EXPOSE：指定于外界交互的端口**
-
-
-
-格式：
-    EXPOSE <port> [<port>...]
-示例：
-    EXPOSE 80 443
-    EXPOSE 8080  
-    EXPOSE 11211/tcp 11211/udp  
-注：  
-　　EXPOSE并不会让容器的端口访问到主机。要使其可访问，需要在`docker run`运行容器时通过-p来发布这些端口，或通过`-P`参数来发布EXPOSE导出的所有端口
-
-
-
-**VOLUME：用于指定持久化目录**
-
-
-
-格式：
-    VOLUME ["/path/to/dir"]
-示例：
-    VOLUME ["/data"]
-    VOLUME ["/var/www", "/var/log/apache2", "/etc/apache2"  
-注：  
-　　一个卷可以存在于一个或多个容器的指定目录，该目录可以绕过联合文件系统，并具有以下功能：  
-
-1 卷可以容器间共享和重用
-2 容器并不一定要和其它容器共享卷
-3 修改卷后会立即生效
-4 对卷的修改不会对镜像产生影响
-5 卷会一直存在，直到没有任何容器在使用它
-
-
-
-**WORKDIR：工作目录，类似于cd命令**
-
-
-
-格式：
-    WORKDIR /path/to/workdir
-示例：
-    WORKDIR /a  (这时工作目录为/a)
-    WORKDIR b  (这时工作目录为/a/b)
-    WORKDIR c  (这时工作目录为/a/b/c)  
-注：  
-　　通过WORKDIR设置工作目录后，Dockerfile中其后的命令RUN、CMD、ENTRYPOINT、ADD、COPY等命令都会在该目录下执行。在使用`docker run`运行容器时，可以通过-w参数覆盖构建时所设置的工作目录。
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
-**USER:****指定运行容器时的用户名或 UID，后续的 RUN 也会使用指定用户。使用USER指定用户时，可以使用用户名、UID或GID，或是两者的组合。当服务不需要管理员权限时，可以通过该命令指定运行用户。并且可以在之前创建所需要的用户**
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
- 格式:  
-　　USER user  
-　　USER user:group  
-　　USER uid  
-　　USER uid:gid  
-　　USER user:gid  
-　　USER uid:group
-
- 示例：  
-　　USER www
-
- 注：
-
-　　使用USER指定用户后，Dockerfile中其后的命令RUN、CMD、ENTRYPOINT都将使用该用户。镜像构建完成后，通过`docker run`运行容器时，可以通过-u参数来覆盖所指定的用户。
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
-**ARG：用于指定传递给构建运行时的变量**
-
-格式：
-    ARG <name>[=<default value>]
-示例：
-    ARG site
-    ARG build_user=www
-
-**ONBUILD：用于设置镜像触发器**
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
-格式：  
-　　ONBUILD [INSTRUCTION]
-示例：
-　　ONBUILD ADD . /app/src
-　　ONBUILD RUN /usr/local/bin/python-build --dir /app/src
-注：  
-　　当所构建的镜像被用做其它镜像的基础镜像，该镜像中的触发器将会被钥触发
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
-**以下是一个小例子：**
-
-![复制代码](https://common.cnblogs.com/images/copycode.gif)
-
-# This my first nginx Dockerfile
-# Version 1.0
-
-# Base images 基础镜像
-FROM centos
-
-#MAINTAINER 维护者信息
-MAINTAINER tianfeiyu 
-
-#ENV 设置环境变量
-ENV PATH /usr/local/nginx/sbin:$PATH
-
-#ADD  文件放在当前目录下，拷过去会自动解压
-ADD nginx-1.8.0.tar.gz /usr/local/  
-ADD epel-release-latest-7.noarch.rpm /usr/local/  
-
-#RUN 执行以下命令 
-RUN rpm -ivh /usr/local/epel-release-latest-7.noarch.rpm
-RUN yum install -y wget lftp gcc gcc-c++ make openssl-devel pcre-devel pcre && yum clean all
-RUN useradd -s /sbin/nologin -M www
-
-#WORKDIR 相当于cd
-WORKDIR /usr/local/nginx-1.8.0 
-
-RUN ./configure --prefix=/usr/local/nginx --user=www --group=www --with-http_ssl_module --with-pcre && make && make install
-
-RUN echo "daemon off;" >> /etc/nginx.conf
-
-#EXPOSE 映射端口
-EXPOSE 80
-
-#CMD 运行以下命令
-CMD ["nginx"]
+要指定镜像的标签信息，可以通过 `-t` 选项，例如
 
 # 参考
 1. [Dockerfile文件详解](https://www.cnblogs.com/panwenbin-logs/p/8007348.html)
