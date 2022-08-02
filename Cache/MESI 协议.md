@@ -93,7 +93,33 @@ MESI协议中一个缓存条目的 Flag 值：
 - 比照 HTTP 协议， 可以将 MESI 协议中的消息分为请求消息和响应消息。
 - 处理器在执行内存读、写操作时在必要的情况下会往总线 (Bus) 中发送特定的请求消息，同时每个处理器还*嗅探 (Snoop, 也称拦截）* 总线中由其他处理器发出的请求消息并在一 定条件下往总线中回复相应的响应消息。
 ![[MESI中消息示例.png]]
+-   Read
 
+`Read`消息表示要读取某个缓存行，同时会携带目标缓存行对应的物理地址。
+
+-   Read Response
+
+是对`Read`消息的反馈，反馈的内容就是发`送Read`消息的CPU核心请求的目标缓存行。`Read Response`可能来自于内存，也可能来自其他CPU核心。
+
+比如，如果被请求的目标缓存行不存在于任何CPU Cache中，那么只能从内存中获取；如果被请求的目标缓存行恰好被其中一个CPU修改，此时该缓存行为`Modified`状态，意味着该缓存行目前是最新数据，那么理应让其他同样需要该缓存行的CPU核心获取到该最新数据，更进一步，自然理应由该CPU核心把该缓存行的内容反馈给发出`Read`消息的CPU核心。
+-   Invalidate
+
+`Invalidate`的含义是使某个缓存行失效，拥有该缓存行的其他CPU核心需要删除该缓存行中的数据，并对发出`Invalidate`消息的核心做出反馈。
+如果有多个CPU同时发出`Invalidate`消息怎么办？答案是**总线裁决**。首先占用消息总线的CPU核心获胜，其他核心只能乖乖清空自己的缓存行，并向其发出`Invalidate Acknowledge`反馈。
+
+-   Invalidate Acknowledge
+
+这就是上面提到的`Invalidate`消息的反馈，意味着发出此消息的CPU核心已经将`Invalidate`消息的目标缓存行中的数据清除。
+
+-   Read Invalidate
+
+- `Read Invalidate`相当于`Read` + `Invalidate`，既要读取某个缓存行信息，又要让属于其他CPU核心的此缓存行失效。
+- 同样，`Read Invalidate` 也需要收到反馈，只不过此反馈既包含1条`Read Response`，又包含多条（如果其他CPU核心也拥有目标缓存行的话）`Invalidate Acknowledge`。
+
+-   Writeback
+
+- `Writeback`消息包含要写回内存的地址和数据，通常指的是`Modified`状态的数据；
+- Cache 可以根据需要弹出处于 `Modified` 状态的缓存行，以便为其他数据腾出空间。
 
   
   

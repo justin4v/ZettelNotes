@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/MESI 协议.md",
+            "file": "Language/Java/JMM/内存屏障.md",
             "mode": "source",
             "source": false
           }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/MESI 协议.md",
+                "file": "Language/Java/JMM/内存屏障.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/MESI 协议.md"
+                "file": "Language/Java/JMM/内存屏障.md"
               }
             }
           },
@@ -128,6 +128,7 @@
   },
   "active": "2101796051104fa6",
   "lastOpenFiles": [
+    "Cache/MESI 协议.md",
     "Language/Java/JMM/内存屏障.md",
     "Language/Java/JMM/代码重排与乱序执行.md",
     "Language/Java/JMM/重排序与Volatile.md",
@@ -136,7 +137,6 @@
     "Language/Java/JMM/Java Memory Model简介.md",
     "Language/Java/JMM/JMM 相关概念.md",
     "Language/Java/基础/动态代理.md",
-    "Cache/MESI 协议.md",
     "Cache/CPU 缓存.md"
   ]
 }
