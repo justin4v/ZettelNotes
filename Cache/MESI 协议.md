@@ -168,6 +168,32 @@ MESI协议中一个缓存条目的 Flag 值：
 	2.  *Invalidate 消息和 Invalidate Acknowledge 消息使得针对同一个内存地址的写操作在任意一个时刻只能由一个处理器执行*， 从而避免了多个处理器同时更新同一数据可能导致的数据不一致问题。
 
   
+## MESI跃迁场景解析
+
+![[MESI状态跃迁示意.png]]
+(a)：通过`Writeback`消息把被修改过的缓存行刷新至内存，但是CPU的Cache仍然保留该数据；
+
+(b)：CPU修改了只保存在当前Cache中的缓存行；
+
+(c)：CPU收到了`Read Invalidate`消息，该消息的目标正是当前处于M状态（被修改了）的缓存行。CPU不得不使自己的缓存行失效，并把该缓存行数据携同`Read Response`以及`Invalidate Acknowledge`消息返回；
+
+(d)：CPU执行了一个原子操作，该操作包含读和写两个子操作，并且不可分割。CPU首先发送`Read Invalidate`消息，收到`Read Response`消息之后立刻对数据进行更新，至此便完成了该原子操作。
+
+(e)：和d大致相同。CPU执行了一个原子操作，该操作包含读和写两个子操作，并且不可分割。CPU首先发送`Invalidate`消息，收到`Invalidate Acknowledge`消息之后立刻对数据进行更新，至此便完成了该原子操作。
+
+(f)：当前CPU修改了一个缓存行数据，接着其他CPU核心对当前CPU的该缓存行发出`Read`消息，当前CPU将该缓存行数据随`Read Response`消息反馈给其他CPU核心。至于该过程会不会涉及到缓存行数据刷新到内存，那就不一定了。
+
+(g)：当前CPU独占了一个未经修改的缓存行，其他CPU对当前CPU的该缓存行发出Read消息，当前CPU将该缓存行随`Read Response`消息反馈给其他CPU，并将缓存行的状态由`Exclusive`改为`Shared`；
+
+(h)：多个CPU共享某个缓存行，其中一个CPU对其他CPU发出`Invalidate`消息，该CPU收到其他所有拥有该缓存行的CPU的`Invalidate Acknowledge`消息之后，将该缓存行状态切换为`Exclusive`；或者其他CPU自己清空了该缓存行（比如为其他数据腾出空间）导致该CPU独占该缓存行，同样会发生这种状态转换。
+
+(i)：其他CPU对当前CPU独占的一个缓存行发出一个`Read Invalidate`消息，当前CPU将该缓存行设置为`Invalid`，并发送`Read Response`以及`Invalidate Acknowledge`反馈；
+
+(j)：CPU对不在自己Cache的一个数据进行写操作，因此发出`Read Invalidate`消息，收到一条`Read Response`（可能来自其他Cache，也可能来自内存）以及所有拥有该缓存行的CPU的`Invalidate Acknowledge`反馈（可能压根没有）之后，缓存行被当前CPU独占；
+
+(k)：CPU读取某个自己Cache中不存在的数据，于是发出`Read`消息，收到`Read Response`（该消息一定来自于其他CPU）之后，缓存行的状态由`Invalid`变为了`Shared`；
+
+(l)：当前CPU和其他CPU共享了一个缓存行，突然有一个其他CPU向当前CPU发来一条`Invalidate`消息，当前缓存行只能默默把自己的缓存行设置为`Invalidate`，并回复`Invalidate Acknowledge`。
 
 
 
