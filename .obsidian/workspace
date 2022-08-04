@@ -57,12 +57,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 166
+    "width": 265
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -126,7 +125,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "f9c60a5916b5869d",
+  "active": "03e52bdc9194142b",
   "lastOpenFiles": [
     "Cache/缓存雪崩 穿透 击穿.md",
     "Language/Java/JMM/内存屏障.md",
