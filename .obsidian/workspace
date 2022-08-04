@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "引入storebuffer后cpu不一致问题示意.",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -125,7 +126,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "2101796051104fa6",
+  "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
     "Cache/缓存雪崩 穿透 击穿.md",
     "Language/Java/JMM/内存屏障.md",
