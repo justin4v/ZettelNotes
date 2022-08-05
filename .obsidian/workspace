@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/并发编程/Java 多线程/线程状态及转变.md",
+            "file": "Language/Java/Socket.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "状态",
+                "query": "serverSocket",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/并发编程/Java 多线程/线程状态及转变.md",
+                "file": "Language/Java/Socket.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/并发编程/Java 多线程/线程状态及转变.md"
+                "file": "Language/Java/Socket.md"
               }
             }
           },
@@ -128,8 +128,8 @@
   },
   "active": "2101796051104fa6",
   "lastOpenFiles": [
-    "Git/Git 配置.md",
     "OS/并发编程/Java 多线程/线程状态及转变.md",
+    "Git/Git 配置.md",
     "Language/Java/BIO,NIO,AIO.md",
     "Language/Java/JMM/内存屏障.md",
     "Cache/MESI 协议.md",

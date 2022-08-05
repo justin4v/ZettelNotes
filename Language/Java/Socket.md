@@ -9,7 +9,8 @@
 ```java
 ServerSocket server=new ServerSocket(600)；
 ```
-- 一台计算机可以*同时提供多个服务(多个端口)*，通过端口号来区别。为了监听可能的 Client 请求，执行如下的语句：
+- 计算机可*同时提供多个服务(多个端口)*，通过端口号来区别。
+- 为了监听可能的 Client 请求，执行如下的语句：
 ```java
 Socket client=server.accept()；
 ```
