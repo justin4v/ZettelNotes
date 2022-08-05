@@ -11,6 +11,28 @@
 
 
 # Channel
+Channel和IO中的Stream(流)是差不多一个等级的。只不过Stream是单向的，譬如：InputStream, OutputStream.而Channel是双向的，既可以用来进行读操作，又可以用来进行写操作。  
+NIO中的Channel的主要实现有：
+
+-   FileChannel
+-   DatagramChannel
+-   SocketChannel
+-   ServerSocketChannel
+
+分别可以对应文件IO、UDP和TCP（Server和Client）
+
+
+# Buffer
+
+NIO中的关键Buffer实现有：ByteBuffer, CharBuffer, DoubleBuffer, FloatBuffer, IntBuffer, LongBuffer, ShortBuffer，分别对应基本数据类型: byte, char, double, float, int, long, short。当然NIO中还有MappedByteBuffer, HeapByteBuffer, DirectByteBuffer等
+
+
+# Selector
+
+Selector运行单线程处理多个Channel，如果你的应用打开了多个通道，但每个连接的流量都很低，使用Selector就会很方便。例如在一个聊天服务器中。要使用Selector, 得向Selector注册Channel，然后调用它的select()方法。这个方法会一直阻塞到某个注册的通道有事件就绪。一旦这个方法返回，线程就可以处理这些事件，事件的例子有如新的连接进来、数据接收等。
+
+
+
 
 
 # 参考
