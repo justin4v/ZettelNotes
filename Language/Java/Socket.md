@@ -34,3 +34,5 @@ server.close()；
 ## 注意
 - ServerSocket 一般仅用于设置端口号和监听，真正进行通信的是服务器端的Socket与客户端的Socket；
 - 在 ServerSocket 进行 accept 之后，就将主动权转让了。
+
+
