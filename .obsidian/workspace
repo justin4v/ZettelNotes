@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tool/logger/日志链路追踪.md",
+            "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "sql优化",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -57,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tool/logger/日志链路追踪.md",
+                "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tool/logger/日志链路追踪.md"
+                "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md"
               }
             }
           },
@@ -127,6 +128,7 @@
   },
   "active": "2101796051104fa6",
   "lastOpenFiles": [
+    "Tool/logger/日志链路追踪.md",
     "Database/ElasticSearch/Kibana 查询语法.md",
     "Language/Java/Java IO/Java NIO组件.md",
     "Language/Java/Java IO/BIO,NIO,AIO.md",
@@ -135,7 +137,6 @@
     "OS/并发编程/Java 多线程/线程状态及转变.md",
     "Git/Git 配置.md",
     "Language/Java/JMM/内存屏障.md",
-    "Cache/MESI 协议.md",
-    "Language/Java/JMM/代码重排与乱序执行.md"
+    "Cache/MESI 协议.md"
   ]
 }
