@@ -16,7 +16,7 @@
 ![[wait for graph检测死锁示意.png]]
 
 # innodb隔离级别、索引与锁
-## 锁与索引的关系
+## 索引
 
 - 假设有一张*消息表（msg）*，里面有3个字段。
 - 假设id是主键，token 是*非唯一索引*，message没有索引。
@@ -32,7 +32,20 @@
 
 ![[聚簇索引和普通索引示意.png]]
 
+## 索引与锁的关系
 
+1. delete from msg where id=2；
+由于id是主键，因此直接锁住整行记录即可。
+
+![[主键索引与锁示意.png]]
+
+2. delete from msg where token=’ cvs’;
+由于token是二级索引，因此首先锁住二级索引（两行），接着会锁住相应主键所对应的记录；
+![[二级索引与锁关系示意.png]]
+
+2. delete from msg where message=订单号是多少’；
+message没有索引，所以走的是全表扫描过滤。这时表上的各个记录都将添加上X锁。
+![[无索引与锁关系示意.png]]
 
 
 
