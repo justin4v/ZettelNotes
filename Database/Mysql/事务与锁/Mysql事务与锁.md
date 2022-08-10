@@ -27,7 +27,7 @@
 	- 一种数据存储方式；
 	- 表数据是和主键一起存储；
 	- 主键索引的叶结点存储行数据。
-- 对于普通索引，其叶子节点存储的是主键值
+- 对于[[|二级索引]]，其叶子节点存储的是主键值
 
 ![[聚簇索引和普通索引示意.png]]
 
@@ -110,3 +110,4 @@ SQL： DELETE FROM xxx WHERE 1=1 AND BOOK_ID IN (?,?,?,?)
 1. [MySql Lock wait timeout exceeded该如何处理？](https://ningyu1.github.io/site/post/75-mysql-lock-wait-timeout-exceeded/)
 2. [MySQL delete limit AND 逻辑删除优劣比较](https://blog.csdn.net/qq_21454973/article/details/109162528)
 3. [mysql死锁（锁与事务）](https://www.cnblogs.com/111testing/p/11371236.html)
+4. [[索引分类]]
