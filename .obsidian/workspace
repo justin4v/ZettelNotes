@@ -129,13 +129,13 @@
   "lastOpenFiles": [
     "Database/Mysql/事务与锁/Mysql中事务.md",
     "Database/Mysql/事务与锁/事务与隔离级别.md",
-    "Database/Mysql/事务与锁/Mysql事务与锁.md",
+    "Database/Mysql/事务与锁/事务日志.md",
     "Database/Mysql/事务与锁/Mysql中锁.md",
+    "Database/Mysql/事务与锁/MVCC实现.md",
+    "Database/Mysql/事务与锁/Mysql事务与锁.md",
     "Tool/Nacos/Nacos 配置动态刷新原理.md",
     "Database/Mysql/索引/索引建立原则.md",
     "Database/Mysql/索引/索引分类.md",
-    "Database/Mysql/索引/索引简介.md",
-    "Database/Mysql/索引/索引的最左前缀原则.md",
-    "Database/Mysql/SQL实践/部分常用命令.md"
+    "Database/Mysql/索引/索引简介.md"
   ]
 }
