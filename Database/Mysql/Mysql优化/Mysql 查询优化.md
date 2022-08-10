@@ -119,5 +119,5 @@ show profile block io for QUERY 17;
 
 # 参考
 1. [MySQL进阶篇SQL优化（show status、explain分析）](https://www.cnblogs.com/wzk153/p/14536323.html)
-2. [[索引]]
+2. [[索引简介]]
 3. [[索引的最左前缀原则]]
