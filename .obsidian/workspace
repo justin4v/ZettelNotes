@@ -61,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 239
+    "width": 239,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -125,7 +126,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "03e52bdc9194142b",
+  "active": "2101796051104fa6",
   "lastOpenFiles": [
     "Database/Mysql/SQL实践/部分常用命令.md",
     "Database/Mysql/SQL实践/Mysql事务与锁.md",
