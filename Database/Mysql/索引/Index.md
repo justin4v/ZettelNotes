@@ -1,4 +1,4 @@
-#B-Tree #Index
+#B-Tree #Index #BPlus-Tree
 
 索引（index）是在*存储引擎（storage engine）层面实现*，而不是server层面
 
