@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mysql/事务与锁/两阶段锁.md",
-            "mode": "source",
+            "file": "基础知识/Vim/Vim键盘图.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sql优化",
+                "query": "vim",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -57,11 +57,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 239
+    "width": 239,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mysql/事务与锁/两阶段锁.md",
+                "file": "基础知识/Vim/Vim键盘图.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mysql/事务与锁/两阶段锁.md"
+                "file": "基础知识/Vim/Vim键盘图.md"
               }
             }
           },
@@ -127,10 +129,10 @@
   },
   "active": "4905f5496deb395e",
   "lastOpenFiles": [
+    "Database/Mysql/事务与锁/两阶段锁.md",
     "Database/Mysql/事务与锁/事务与隔离级别.md",
     "Database/Mysql/事务与锁/Mysql事务与锁.md",
     "Database/Mysql/事务与锁/Mysql中锁.md",
-    "Database/Mysql/事务与锁/两阶段锁.md",
     "附件/从用户态和内核态看linux整体架构.png",
     "附件/快速学习法.png",
     "附件/快照读-MVCC.png",
