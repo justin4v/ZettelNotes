@@ -127,10 +127,10 @@
   },
   "active": "4905f5496deb395e",
   "lastOpenFiles": [
-    "Database/Mysql/事务与锁/两阶段锁.md",
-    "Database/Mysql/事务与锁/Mysql中锁.md",
     "Database/Mysql/事务与锁/Mysql事务与锁.md",
     "Database/Mysql/事务与锁/事务与隔离级别.md",
+    "Database/Mysql/事务与锁/两阶段锁.md",
+    "Database/Mysql/事务与锁/Mysql中锁.md",
     "附件/从用户态和内核态看linux整体架构.png",
     "附件/快速学习法.png",
     "附件/快照读-MVCC.png",
