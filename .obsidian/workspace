@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "67bd512984fed42f",
+        "id": "4905f5496deb395e",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -125,17 +125,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "67bd512984fed42f",
+  "active": "03e52bdc9194142b",
   "lastOpenFiles": [
-    "Database/Mysql/索引/索引建立原则.md",
+    "附件/从用户态和内核态看linux整体架构.png",
+    "附件/快速学习法.png",
+    "附件/快照读-MVCC.png",
+    "Database/Mysql/事务与锁/事务与隔离级别.md",
     "Database/Mysql/事务与锁/Mysql事务与锁.md",
+    "Database/Mysql/事务与锁/MVCC实现.md",
+    "Database/Mysql/索引/索引建立原则.md",
     "Database/Mysql/事务与锁/事务日志.md",
     "附件/重量级锁对象头.png",
-    "附件/重量级锁、轻量级锁和偏向锁之间转换.png",
-    "Database/Mysql/事务与锁/Mysql中锁.md",
-    "Database/Mysql/事务与锁/事务与隔离级别.md",
-    "Database/Mysql/事务与锁/Mysql中事务.md",
-    "Database/Mysql/事务与锁/MVCC实现.md",
-    "Tool/Nacos/Nacos 配置动态刷新原理.md"
+    "附件/重量级锁、轻量级锁和偏向锁之间转换.png"
   ]
 }
