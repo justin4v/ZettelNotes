@@ -6,10 +6,10 @@ mindmap-plugin: basic
 
 # IO模型
 
-## No-blocking IO
-
 ## Blocking IO
+
+## No-blocking IO
 
 ## IO multiplexing
 
-## 新节点
+## asynchronize IO
