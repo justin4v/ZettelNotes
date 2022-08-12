@@ -80,5 +80,15 @@
       ],
       "key": "O"
     }
+  ],
+  "file-explorer:new-file-in-new-pane": [],
+  "file-explorer:open": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "F"
+    }
   ]
 }

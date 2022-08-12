@@ -4,11 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "4b3b1fb3880221ae",
+        "id": "9cd39b2cad0cbf6e",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "mindmapView",
+          "state": {
+            "file": "Mindmap/Java 基础.md"
+          }
         }
       }
     ],
@@ -22,6 +24,14 @@
         "id": "be79254847411fa4",
         "type": "tabs",
         "children": [
+          {
+            "id": "bdf4e150039db0c1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
           {
             "id": "f9c60a5916b5869d",
             "type": "leaf",
@@ -65,6 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Mindmap/Java 基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -91,7 +102,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Mindmap/Java 基础.md"
+              }
             }
           },
           {
@@ -110,9 +123,9 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "4b3b1fb3880221ae",
+  "active": "9cd39b2cad0cbf6e",
   "lastOpenFiles": [
-    "Mindmap/未命名思维导图.md",
+    "Mindmap/Java 基础.md",
     "Mindmap/未命名思维导图 1.md",
     "运维相关/K8s/K8s Chart.md",
     "运维相关/K8s/k8s 资源对象.md",
