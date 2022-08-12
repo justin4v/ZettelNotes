@@ -9,7 +9,7 @@
         "state": {
           "type": "excalidraw",
           "state": {
-            "file": "Mindmap/IO模型示意.md"
+            "file": "Mindmap/Drawing 2022-08-12 17.24.23.md"
           }
         }
       }
@@ -75,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/IO模型示意.md",
+                "file": "Mindmap/Drawing 2022-08-12 17.24.23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/IO模型示意.md"
+                "file": "Mindmap/Drawing 2022-08-12 17.24.23.md"
               }
             }
           },
@@ -123,7 +123,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "e7e916c412e62645",
+  "active": "9cd39b2cad0cbf6e",
   "lastOpenFiles": [
     "Mindmap/IO模型.md",
     "Mindmap/未命名思维导图.md",
