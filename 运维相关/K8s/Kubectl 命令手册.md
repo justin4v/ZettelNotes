@@ -77,7 +77,7 @@ kubectl logs -f --tail=1000 [pod-name] -n [namespace]
 6. 进入 pod(运行中) 进行交互
 ```bash
 kubectl exec my-pod -- ls /                         # 在已有的 Pod 中运行命令（单容器场景）
-kubectl exec --stdin --tty my-pod -- /bin/sh        # 使用交互 shell 访问正在运行的 Pod (一个容器场景)
+kubectl exec -ti my-pod --/bin/sh        # 使用交互 shell 访问正在运行的 Pod (一个容器场景)
 kubectl exec my-pod -c my-container -- ls /         # 在已有的 Pod 中运行命令（多容器场景）
 kubectl top pod POD_NAME --containers               # 显示给定 Pod 和其中容器的监控数据
 kubectl top pod POD_NAME --sort-by=cpu              # 显示给定 Pod 的指标并且按照 'cpu' 或者 'memory' 排序
