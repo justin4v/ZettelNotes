@@ -342,4 +342,4 @@ public class AioServer {
 - Netty 是异步非阻塞框架，Netty 在 NIO 上做了很多异步的封装。
 # 参考
 1. [Java IO 模型之 BIO，NIO，AIO](https://cloud.tencent.com/developer/article/1825524)
-2. [[IO模型]]
+2. [[OS/Linux/IO模型]]

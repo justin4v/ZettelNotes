@@ -103,4 +103,4 @@ struct epoll_event {
 
 
 # 参考
-1. [[IO模型]]
+1. [[OS/Linux/IO模型]]

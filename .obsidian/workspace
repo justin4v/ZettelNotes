@@ -7,9 +7,9 @@
         "id": "9cd39b2cad0cbf6e",
         "type": "leaf",
         "state": {
-          "type": "mindmapView",
+          "type": "excalidraw",
           "state": {
-            "file": "Mindmap/Java 基础.md"
+            "file": "Mindmap/IO模型示意.md"
           }
         }
       }
@@ -59,7 +59,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307
+    "width": 147
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -75,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/Java 基础.md",
+                "file": "Mindmap/IO模型示意.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/Java 基础.md"
+                "file": "Mindmap/IO模型示意.md"
               }
             }
           },
@@ -123,10 +123,10 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "9cd39b2cad0cbf6e",
+  "active": "e7e916c412e62645",
   "lastOpenFiles": [
+    "Mindmap/IO模型.md",
     "Mindmap/未命名思维导图.md",
-    "Mindmap/Java 基础.md",
     "Mindmap/未命名思维导图 1.md",
     "运维相关/K8s/K8s Chart.md",
     "运维相关/K8s/k8s 资源对象.md",
