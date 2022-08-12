@@ -25,7 +25,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bdf4e150039db0c1",
+            "id": "e7e916c412e62645",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -59,8 +59,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307,
-    "collapsed": true
+    "width": 307
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -126,6 +125,7 @@
   },
   "active": "9cd39b2cad0cbf6e",
   "lastOpenFiles": [
+    "Mindmap/未命名思维导图.md",
     "Mindmap/Java 基础.md",
     "Mindmap/未命名思维导图 1.md",
     "运维相关/K8s/K8s Chart.md",
@@ -134,7 +134,6 @@
     "运维相关/K8s/K8s简介与架构设计.md",
     "Database/Mysql/事务与锁/事务与隔离级别.md",
     "Database/Mysql/事务与锁/事务日志.md",
-    "Tool/logger/日志链路追踪.md",
-    "Database/ElasticSearch/Kibana 查询语法.md"
+    "Tool/logger/日志链路追踪.md"
   ]
 }
