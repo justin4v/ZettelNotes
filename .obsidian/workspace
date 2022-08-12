@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 239
+    "width": 257
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -125,7 +125,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "2101796051104fa6",
+  "active": "03e52bdc9194142b",
   "lastOpenFiles": [
     "Tool/logger/日志链路追踪.md",
     "Database/ElasticSearch/Kibana 查询语法.md",
