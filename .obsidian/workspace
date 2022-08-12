@@ -125,8 +125,10 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "03e52bdc9194142b",
+  "active": "2101796051104fa6",
   "lastOpenFiles": [
+    "Database/Mysql/事务与锁/事务日志.md",
+    "Database/Mysql/事务与锁/事务与隔离级别.md",
     "Tool/logger/日志链路追踪.md",
     "Database/ElasticSearch/Kibana 查询语法.md",
     "Language/Java/Java IO/Java NIO组件.md",
@@ -134,8 +136,6 @@
     "Language/Java/Java IO/Java IO介绍.md",
     "Language/Java/Java IO/Socket.md",
     "OS/并发编程/Java 多线程/线程状态及转变.md",
-    "Git/Git 配置.md",
-    "Language/Java/JMM/内存屏障.md",
-    "Cache/MESI 协议.md"
+    "Git/Git 配置.md"
   ]
 }
