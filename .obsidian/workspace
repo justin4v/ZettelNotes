@@ -14,6 +14,18 @@
             "source": false
           }
         }
+      },
+      {
+        "id": "a72a1e912a98a12d",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -78,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
+                "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md"
+                "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md"
               }
             }
           },
@@ -126,11 +138,11 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "e7e916c412e62645",
+  "active": "a72a1e912a98a12d",
   "lastOpenFiles": [
+    "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "附件/Pasted image 20220801075635.png",
     "附件/Pasted image 20220815192833.png",
-    "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
     "Language/Java/基础/transient volatile 关键字.md",
     "Mindmap/IO模型总结.md",
