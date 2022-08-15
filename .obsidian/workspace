@@ -9,7 +9,7 @@
         "state": {
           "type": "mindmapView",
           "state": {
-            "file": "Mindmap/未命名思维导图.md"
+            "file": "Mindmap/IO模型总结.md"
           }
         }
       }
@@ -46,13 +46,21 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "009bf708812f5c62",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 147,
-    "collapsed": true
+    "width": 147
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -68,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/未命名思维导图.md",
+                "file": "Mindmap/IO模型总结.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/未命名思维导图.md"
+                "file": "Mindmap/IO模型总结.md"
               }
             }
           },
@@ -116,10 +124,10 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "e7e916c412e62645",
+  "active": "009bf708812f5c62",
   "lastOpenFiles": [
     "Mindmap/IO模型示意.md",
-    "Mindmap/未命名思维导图.md",
+    "Mindmap/IO模型总结.md",
     "Mindmap/IO模型.md",
     "Mindmap/Drawing 2022-08-15 10.30.05.png",
     "附件/Excalidraw/Drawing 2022-08-15 10.29.09.md",

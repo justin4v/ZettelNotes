@@ -19,6 +19,13 @@ mindmap-plugin: basic
 
 ## IO multiplexing
 
+### 监听事件
+- select
+   - 1.最大1024
+   - 新节点
+- poll
+- epoll
+
 ## event driven IO
 
-## 新节点
+## asynchronize IO
