@@ -32,7 +32,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "epoll",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -129,13 +129,13 @@
   "lastOpenFiles": [
     "Mindmap/IO模型总结.md",
     "OS/Linux/IO模型.md",
+    "OS/并发编程/Java 多线程/线程状态及转变.md",
     "OS/Linux/select poll epoll.md",
     "Mindmap/IO模型示意.md",
     "Mindmap/IO模型.md",
     "Mindmap/Drawing 2022-08-15 10.30.05.png",
     "附件/Excalidraw/Drawing 2022-08-15 10.29.09.md",
     "Mindmap/Drawing 2022-08-12 17.24.23.md",
-    "Mindmap/未命名思维导图 1.md",
-    "运维相关/K8s/K8s Chart.md"
+    "Mindmap/未命名思维导图 1.md"
   ]
 }

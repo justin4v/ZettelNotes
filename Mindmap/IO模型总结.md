@@ -10,12 +10,14 @@ mindmap-plugin: basic
 
 ### CPU处于阻塞状态
 - 阻塞等待，浪费CPU资源
+- 阻塞 IO
 
 ## non-blocking IO
 
 ### 立即返回错误/成功
 - 1.CPU立即返回成功或失败，不阻塞
 - 2.不断轮询确认
+- 非阻塞
 
 ## IO multiplexing
 
@@ -29,6 +31,7 @@ mindmap-plugin: basic
 - epoll
    - 1.无最大fd限制
    - 2.事件驱动
+- 阻塞IO：select()/wait() 调用阻塞
 
 ## event driven IO
 
