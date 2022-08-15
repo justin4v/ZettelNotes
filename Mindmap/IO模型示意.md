@@ -10,7 +10,7 @@ tags: [excalidraw]
 # Text Elements
 IO model ^dwRFfXGT
 
-IO ^Ab2dvaiH
+blocking IO ^Ab2dvaiH
 
 %%
 # Drawing
@@ -127,8 +127,8 @@ IO ^Ab2dvaiH
 		},
 		{
 			"type": "text",
-			"version": 219,
-			"versionNonce": 1973103639,
+			"version": 221,
+			"versionNonce": 722058679,
 			"isDeleted": false,
 			"id": "Ab2dvaiH",
 			"fillStyle": "hachure",
@@ -147,18 +147,18 @@ IO ^Ab2dvaiH
 			"groupIds": [],
 			"strokeSharpness": "sharp",
 			"boundElements": [],
-			"updated": 1660531295397,
+			"updated": 1660544760208,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
 			"fontFamily": 1,
-			"text": "IO",
-			"rawText": "IO",
+			"text": "blocking IO",
+			"rawText": "blocking IO",
 			"baseline": 18,
 			"textAlign": "center",
 			"verticalAlign": "middle",
 			"containerId": "K9vdrg_xM9GyrotyPhtnY",
-			"originalText": "IO"
+			"originalText": "blocking IO"
 		},
 		{
 			"id": "G1RT0NQsC-JRyYtYT5nVC",
@@ -178,11 +178,11 @@ IO ^Ab2dvaiH
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"seed": 455083289,
-			"version": 241,
-			"versionNonce": 269738649,
+			"version": 242,
+			"versionNonce": 1150742231,
 			"isDeleted": false,
 			"boundElements": null,
-			"updated": 1660531468934,
+			"updated": 1660544763195,
 			"link": null,
 			"locked": false,
 			"points": [
