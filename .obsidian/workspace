@@ -7,9 +7,9 @@
         "id": "9cd39b2cad0cbf6e",
         "type": "leaf",
         "state": {
-          "type": "excalidraw",
+          "type": "mindmapView",
           "state": {
-            "file": "Mindmap/Drawing 2022-08-12 17.24.23.md"
+            "file": "Mindmap/IO模型.md"
           }
         }
       }
@@ -75,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/Drawing 2022-08-12 17.24.23.md",
+                "file": "Mindmap/IO模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/Drawing 2022-08-12 17.24.23.md"
+                "file": "Mindmap/IO模型.md"
               }
             }
           },
@@ -125,8 +125,8 @@
   },
   "active": "9cd39b2cad0cbf6e",
   "lastOpenFiles": [
-    "Mindmap/IO模型.md",
     "Mindmap/Drawing 2022-08-12 17.24.23.md",
+    "Mindmap/IO模型.md",
     "Mindmap/未命名思维导图.md",
     "Mindmap/未命名思维导图 1.md",
     "运维相关/K8s/K8s Chart.md",

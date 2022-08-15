@@ -4,7 +4,7 @@ mindmap-plugin: basic
 
 ---
 
-# IO模型
+# IO模型:input/output,计算机与外部交互
 
 ## Blocking IO：调用线程阻塞等待
 
@@ -13,5 +13,3 @@ mindmap-plugin: basic
 ## IO multiplexing
 
 ## asynchronize IO
-
-## input/output,计算机与外部交互
