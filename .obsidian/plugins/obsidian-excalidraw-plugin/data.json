@@ -41,7 +41,7 @@
   "exportPaddingSVG": 10,
   "keepInSync": true,
   "autoexportSVG": false,
-  "autoexportPNG": true,
+  "autoexportPNG": false,
   "autoexportExcalidraw": false,
   "embedType": "excalidraw",
   "embedWikiLink": true,

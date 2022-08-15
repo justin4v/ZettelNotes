@@ -9,7 +9,7 @@
         "state": {
           "type": "excalidraw",
           "state": {
-            "file": "Mindmap/Drawing 2022-08-15 10.30.05.md"
+            "file": "Mindmap/IO模型示意.md"
           }
         }
       }
@@ -75,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/Drawing 2022-08-15 10.30.05.md",
+                "file": "Mindmap/IO模型示意.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/Drawing 2022-08-15 10.30.05.md"
+                "file": "Mindmap/IO模型示意.md"
               }
             }
           },
@@ -125,15 +125,15 @@
   },
   "active": "9cd39b2cad0cbf6e",
   "lastOpenFiles": [
-    "附件/Excalidraw/Drawing 2022-08-15 10.29.09.md",
     "Mindmap/IO模型.md",
+    "Mindmap/IO模型示意.md",
+    "Mindmap/Drawing 2022-08-15 10.30.05.png",
+    "附件/Excalidraw/Drawing 2022-08-15 10.29.09.md",
     "Mindmap/Drawing 2022-08-12 17.24.23.md",
     "Mindmap/未命名思维导图.md",
     "Mindmap/未命名思维导图 1.md",
     "运维相关/K8s/K8s Chart.md",
     "运维相关/K8s/k8s 资源对象.md",
-    "运维相关/K8s/Kubectl 命令手册.md",
-    "运维相关/K8s/K8s简介与架构设计.md",
-    "Database/Mysql/事务与锁/事务与隔离级别.md"
+    "运维相关/K8s/Kubectl 命令手册.md"
   ]
 }
