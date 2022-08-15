@@ -17,7 +17,7 @@ mindmap-plugin: basic
 ### 立即返回错误/成功
 - 1.CPU立即返回成功或失败，不阻塞
 - 2.不断轮询确认
-- 非阻塞
+- 非阻塞：不会进入blocked 状态
 
 ## IO multiplexing
 
@@ -37,6 +37,10 @@ mindmap-plugin: basic
 
 ### 事件驱动，使用很少
 
+### 非阻塞
+
 ## asynchronize IO
 
 ### 异步 IO
+
+### 非阻塞
