@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
+            "file": "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
             "mode": "source",
             "source": false
           }
@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 188,
-    "collapsed": true
+    "width": 188
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
+                "file": "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md"
+                "file": "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md"
               }
             }
           },
@@ -128,15 +127,15 @@
   },
   "active": "fa2ecf39034c0587",
   "lastOpenFiles": [
-    "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
+    "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md",
+    "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
     "附件/Pasted image 20220801075635.png",
     "附件/Pasted image 20220815192833.png",
     "Language/Java/基础/transient volatile 关键字.md",
     "Mindmap/IO模型总结.md",
     "Mindmap/IO模型示意.md",
-    "OS/Linux/IO模型.md",
-    "OS/并发编程/Java 多线程/线程状态及转变.md"
+    "OS/Linux/IO模型.md"
   ]
 }
