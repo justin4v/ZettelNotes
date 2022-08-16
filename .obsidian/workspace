@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "fa2ecf39034c0587",
+        "id": "e992188bb4aab177",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "附件/Template/To Mindmap.md",
-            "mode": "source",
+            "file": "Mindmap/test.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -26,6 +26,14 @@
         "id": "be79254847411fa4",
         "type": "tabs",
         "children": [
+          {
+            "id": "b83fe008a809d9e9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
           {
             "id": "f9c60a5916b5869d",
             "type": "leaf",
@@ -48,17 +56,8 @@
               "type": "starred",
               "state": {}
             }
-          },
-          {
-            "id": "b83fe008a809d9e9",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "附件/Template/To Mindmap.md",
+                "file": "Mindmap/test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "附件/Template/To Mindmap.md"
+                "file": "Mindmap/test.md"
               }
             }
           },
@@ -126,17 +125,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "fa2ecf39034c0587",
+  "active": "e992188bb4aab177",
   "lastOpenFiles": [
-    "Mindmap/test.md",
-    "Mindmap/IO模型总结.md",
-    "Mindmap/IO模型示意.md",
-    "附件/Template/Untitled.md",
-    "附件/Template/To Mindmap.md",
-    "Database/数据标签存储设计.md",
-    "Database/MangoDB/MongoDB VS ElasticSearch.md",
-    "Database/MangoDB/MongoDB简介.md",
-    "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
-    "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md"
+    "Database/Mysql/索引/索引简介.md",
+    "附件/Pictures/单列索引结构示意.png",
+    "附件/Pictures/单例模式结构.png",
+    "Book Reading/SICP/1.2程序及其过程/1.2.1 线性递归和迭代.md",
+    "附件/Pictures/6!的计算过程示例1.png",
+    "附件/Pictures/whileInt字节码.png",
+    "附件/Pictures/5种IO模型对比.png",
+    "Book Reading/Spring深度解析/DefaultListableBeanFactory.md",
+    "Book Reading/如何阅读一本书.md",
+    "附件/Pictures/《如何阅读一本书》读书笔记.pdf"
   ]
 }
