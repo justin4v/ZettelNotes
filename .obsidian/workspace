@@ -7,11 +7,9 @@
         "id": "fa2ecf39034c0587",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "excalidraw",
           "state": {
-            "file": "Database/数据标签存储设计.md",
-            "mode": "source",
-            "source": false
+            "file": "Mindmap/IO模型示意.md"
           }
         }
       }
@@ -77,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/数据标签存储设计.md",
+                "file": "Mindmap/IO模型示意.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/数据标签存储设计.md"
+                "file": "Mindmap/IO模型示意.md"
               }
             }
           },
@@ -127,10 +125,10 @@
   },
   "active": "fa2ecf39034c0587",
   "lastOpenFiles": [
+    "Mindmap/IO模型总结.md",
+    "Database/数据标签存储设计.md",
     "Database/MangoDB/MongoDB VS ElasticSearch.md",
     "Database/MangoDB/MongoDB简介.md",
-    "Database/数据标签存储设计.md",
-    "Mindmap/IO模型总结.md",
     "Mindmap/IO模型示意.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
