@@ -7,10 +7,8 @@
         "id": "fa2ecf39034c0587",
         "type": "leaf",
         "state": {
-          "type": "excalidraw",
-          "state": {
-            "file": "Mindmap/IO模型示意.md"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -24,14 +22,6 @@
         "id": "be79254847411fa4",
         "type": "tabs",
         "children": [
-          {
-            "id": "009bf708812f5c62",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
           {
             "id": "f9c60a5916b5869d",
             "type": "leaf",
@@ -54,12 +44,21 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "eac48de9c7c96acd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 188
+    "width": 197
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -75,7 +74,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/IO模型示意.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,9 +100,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Mindmap/IO模型示意.md"
-              }
+              "state": {}
             }
           },
           {
@@ -123,17 +119,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "fa2ecf39034c0587",
+  "active": "eac48de9c7c96acd",
   "lastOpenFiles": [
+    "附件/Template/To Mindmap.md",
+    "附件/Template/Untitled.md",
+    "Mindmap/IO模型示意.md",
     "Mindmap/IO模型总结.md",
     "Database/数据标签存储设计.md",
     "Database/MangoDB/MongoDB VS ElasticSearch.md",
     "Database/MangoDB/MongoDB简介.md",
-    "Mindmap/IO模型示意.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
-    "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md",
-    "Book Reading/SICP/2.1抽象介绍/2.2 层次性数据和闭包.md",
-    "附件/Pasted image 20220801075635.png"
+    "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md"
   ]
 }
