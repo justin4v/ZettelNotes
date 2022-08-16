@@ -7,11 +7,9 @@
         "id": "e992188bb4aab177",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "excalidraw",
           "state": {
-            "file": "Mindmap/test.md",
-            "mode": "preview",
-            "source": false
+            "file": "Mindmap/IO模型示意.md"
           }
         }
       }
@@ -77,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/test.md",
+                "file": "Mindmap/IO模型示意.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/test.md"
+                "file": "Mindmap/IO模型示意.md"
               }
             }
           },
@@ -127,6 +125,8 @@
   },
   "active": "e992188bb4aab177",
   "lastOpenFiles": [
+    "附件/Template/To Mindmap.md",
+    "Mindmap/test.md",
     "Database/Mysql/索引/索引简介.md",
     "附件/Pictures/单列索引结构示意.png",
     "附件/Pictures/单例模式结构.png",
@@ -134,8 +134,6 @@
     "附件/Pictures/6!的计算过程示例1.png",
     "附件/Pictures/whileInt字节码.png",
     "附件/Pictures/5种IO模型对比.png",
-    "Book Reading/Spring深度解析/DefaultListableBeanFactory.md",
-    "Book Reading/如何阅读一本书.md",
-    "附件/Pictures/《如何阅读一本书》读书笔记.pdf"
+    "Book Reading/Spring深度解析/DefaultListableBeanFactory.md"
   ]
 }
