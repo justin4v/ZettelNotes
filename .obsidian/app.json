@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "附件",
+  "attachmentFolderPath": "附件/Pictures",
   "spellcheck": false,
   "communityPluginSortOrder": "downloadReverse",
   "communityThemeSortOrder": "download",

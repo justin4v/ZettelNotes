@@ -7,8 +7,12 @@
         "id": "fa2ecf39034c0587",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "附件/Template/To Mindmap.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -46,7 +50,7 @@
             }
           },
           {
-            "id": "eac48de9c7c96acd",
+            "id": "b83fe008a809d9e9",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -74,6 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "附件/Template/To Mindmap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +105,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "附件/Template/To Mindmap.md"
+              }
             }
           },
           {
@@ -119,17 +126,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "eac48de9c7c96acd",
+  "active": "fa2ecf39034c0587",
   "lastOpenFiles": [
-    "附件/Template/To Mindmap.md",
-    "附件/Template/Untitled.md",
-    "Mindmap/IO模型示意.md",
+    "Mindmap/test.md",
     "Mindmap/IO模型总结.md",
+    "Mindmap/IO模型示意.md",
+    "附件/Template/Untitled.md",
+    "附件/Template/To Mindmap.md",
     "Database/数据标签存储设计.md",
     "Database/MangoDB/MongoDB VS ElasticSearch.md",
     "Database/MangoDB/MongoDB简介.md",
     "Book Reading/SICP/2.1抽象介绍/2.2.2 层次性数据.md",
-    "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md",
-    "Book Reading/SICP/2.1抽象介绍/2.1.2 抽象屏障.md"
+    "Book Reading/SICP/2.1抽象介绍/2.2.1 序列的表示.md"
   ]
 }
