@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nacos",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -57,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -126,7 +125,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "e992188bb4aab177",
+  "active": "b83fe008a809d9e9",
   "lastOpenFiles": [
     "Mindmap/IO模型总结.md",
     "Mindmap/IO模型示意.md",
