@@ -7,9 +7,11 @@
         "id": "e992188bb4aab177",
         "type": "leaf",
         "state": {
-          "type": "excalidraw",
+          "type": "markdown",
           "state": {
-            "file": "Mindmap/IO模型示意.md"
+            "file": "Tool/Nacos/Nacos 配置动态刷新原理.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -38,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "nacos",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -55,7 +57,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -75,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/IO模型示意.md",
+                "file": "Tool/Nacos/Nacos 配置动态刷新原理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/IO模型示意.md"
+                "file": "Tool/Nacos/Nacos 配置动态刷新原理.md"
               }
             }
           },
@@ -125,6 +128,8 @@
   },
   "active": "e992188bb4aab177",
   "lastOpenFiles": [
+    "Mindmap/IO模型总结.md",
+    "Mindmap/IO模型示意.md",
     "附件/Template/To Mindmap.md",
     "Mindmap/test.md",
     "Database/Mysql/索引/索引简介.md",
@@ -132,8 +137,6 @@
     "附件/Pictures/单例模式结构.png",
     "Book Reading/SICP/1.2程序及其过程/1.2.1 线性递归和迭代.md",
     "附件/Pictures/6!的计算过程示例1.png",
-    "附件/Pictures/whileInt字节码.png",
-    "附件/Pictures/5种IO模型对比.png",
-    "Book Reading/Spring深度解析/DefaultListableBeanFactory.md"
+    "附件/Pictures/whileInt字节码.png"
   ]
 }
