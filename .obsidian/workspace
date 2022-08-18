@@ -57,11 +57,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 394
+    "width": 258
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -125,17 +126,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "b83fe008a809d9e9",
+  "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
+    "OS/Linux/IO模型.md",
+    "附件/Pictures/IO模型-测试.svg",
+    "Mindmap/test.md",
     "日常记录/Idea.md",
     "Tool/Nacos/Nacos 配置动态刷新原理.md",
     "Mindmap/IO模型总结.md",
     "Mindmap/IO模型示意.md",
     "附件/Template/To Mindmap.md",
-    "Mindmap/test.md",
     "Database/Mysql/索引/索引简介.md",
-    "附件/Pictures/单列索引结构示意.png",
-    "附件/Pictures/单例模式结构.png",
-    "Book Reading/SICP/1.2程序及其过程/1.2.1 线性递归和迭代.md"
+    "附件/Pictures/单列索引结构示意.png"
   ]
 }
