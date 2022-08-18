@@ -4,31 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "25cf5688d9e8cf27",
-        "type": "split",
-        "children": [
-          {
-            "id": "ed3b68c3c1bde1e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mindmap/说明.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "73f5f20a8f270c2b",
-            "type": "leaf",
-            "state": {
-              "type": "diagrams-net",
-              "state": {}
-            }
+        "id": "ed3b68c3c1bde1e4",
+        "type": "leaf",
+        "state": {
+          "type": "diagram",
+          "state": {
+            "file": "Excalidraw/Scripts/Downloaded/Mindmap connector.svg"
           }
-        ],
-        "direction": "horizontal"
+        }
       }
     ],
     "direction": "vertical"
@@ -55,7 +38,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:IO模型",
+                "query": "file:mind",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -72,7 +55,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -92,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/说明.md",
+                "file": "Excalidraw/Scripts/Downloaded/Mindmap connector.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/说明.md"
+                "file": "Excalidraw/Scripts/Downloaded/Mindmap connector.svg"
               }
             }
           },
@@ -142,6 +126,8 @@
   },
   "active": "ed3b68c3c1bde1e4",
   "lastOpenFiles": [
+    "Mindmap/说明.md",
+    "Mindmap/Untitled Diagram.svg",
     "OS/并发编程/Java 多线程/创建线程的两种方式.md",
     "OS/并发编程/疑问解答/JVM 线程间共享了什么区域.md",
     "OS/并发编程/疑问解答/线程的本质.md",
@@ -149,8 +135,6 @@
     "OS/并发编程/锁/Java 锁升级概述.md",
     "OS/并发编程/锁/AQS原理.md",
     "OS/并发编程/锁/偏向锁.md",
-    "OS/并发编程/锁/轻量级锁.md",
-    "OS/并发编程/核心概念/CAS.md",
-    "OS/并发编程/核心概念/通俗理解线程安全.md"
+    "OS/并发编程/锁/轻量级锁.md"
   ]
 }
