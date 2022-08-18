@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Mindmap/test.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -127,11 +127,11 @@
   },
   "active": "bb5e5f590a8c6d89",
   "lastOpenFiles": [
-    "Mindmap/Untitled Diagram 1.svg",
-    "Mindmap/Untitled Diagram.svg",
+    "Mindmap/test.svg",
     "Mindmap/test.md",
-    "OS/Linux/IO模型.md",
     "附件/Pictures/IO模型-测试.svg",
+    "Mindmap/Untitled Diagram 1.svg",
+    "OS/Linux/IO模型.md",
     "日常记录/Idea.md",
     "Tool/Nacos/Nacos 配置动态刷新原理.md",
     "Mindmap/IO模型总结.md",
