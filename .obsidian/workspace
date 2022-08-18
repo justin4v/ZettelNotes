@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "file:IO模型",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -127,15 +127,15 @@
   },
   "active": "bb5e5f590a8c6d89",
   "lastOpenFiles": [
-    "Mindmap/test.svg",
+    "Mindmap/test1.svg",
     "Mindmap/test.md",
+    "Mindmap/test.svg",
     "附件/Pictures/IO模型-测试.svg",
-    "Mindmap/Untitled Diagram 1.svg",
+    "Mindmap/test2.svg",
     "OS/Linux/IO模型.md",
     "日常记录/Idea.md",
     "Tool/Nacos/Nacos 配置动态刷新原理.md",
     "Mindmap/IO模型总结.md",
-    "Mindmap/IO模型示意.md",
-    "附件/Template/To Mindmap.md"
+    "Mindmap/IO模型示意.md"
   ]
 }
