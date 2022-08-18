@@ -4,16 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "bb5e5f590a8c6d89",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Mindmap/说明.md",
-            "mode": "source",
-            "source": false
+        "id": "6639d0aab8da5895",
+        "type": "split",
+        "children": [
+          {
+            "id": "bb5e5f590a8c6d89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mindmap/说明.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "54aa50b2ace75c72",
+            "type": "leaf",
+            "state": {
+              "type": "diagram-edit",
+              "state": {
+                "file": "Mindmap/Untitled Diagram.svg"
+              }
+            }
           }
-        }
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -77,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/说明.md",
+                "file": "Mindmap/Untitled Diagram.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/说明.md"
+                "file": "Mindmap/Untitled Diagram.svg"
               }
             }
           },
@@ -125,10 +142,10 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "b83fe008a809d9e9",
+  "active": "54aa50b2ace75c72",
   "lastOpenFiles": [
-    "Mindmap/test1.svg",
     "Mindmap/说明.md",
+    "Mindmap/test1.svg",
     "Mindmap/test.svg",
     "附件/Pictures/IO模型-测试.svg",
     "Mindmap/test2.svg",
