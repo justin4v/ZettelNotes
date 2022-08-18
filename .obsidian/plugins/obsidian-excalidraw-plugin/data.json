@@ -68,7 +68,34 @@
   "mdFontColor": "Black",
   "mdBorderColor": "Black",
   "mdCSS": "",
-  "scriptEngineSettings": {},
+  "scriptEngineSettings": {
+    "Downloaded/Connect elements": {
+      "Starting arrowhead": {
+        "value": "none",
+        "valueset": [
+          "none",
+          "arrow",
+          "triangle",
+          "bar",
+          "dot"
+        ]
+      },
+      "Ending arrowhead": {
+        "value": "triangle",
+        "valueset": [
+          "none",
+          "arrow",
+          "triangle",
+          "bar",
+          "dot"
+        ]
+      },
+      "Line points": {
+        "value": 1,
+        "description": "Number of line points between start and end"
+      }
+    }
+  },
   "defaultTrayMode": true,
   "previousRelease": "1.7.12",
   "showReleaseNotes": true,

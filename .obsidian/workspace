@@ -4,12 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "ed3b68c3c1bde1e4",
+        "id": "c97209b2cb93a1ed",
         "type": "leaf",
         "state": {
-          "type": "diagram",
+          "type": "markdown",
           "state": {
-            "file": "Excalidraw/Scripts/Downloaded/Mindmap connector.svg"
+            "file": "Mindmap/说明.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -55,8 +57,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -76,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Scripts/Downloaded/Mindmap connector.svg",
+                "file": "Mindmap/说明.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Scripts/Downloaded/Mindmap connector.svg"
+                "file": "Mindmap/说明.md"
               }
             }
           },
@@ -124,17 +125,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "ed3b68c3c1bde1e4",
+  "active": "c97209b2cb93a1ed",
   "lastOpenFiles": [
+    "Mindmap/IO模型总结.md",
+    "Mindmap/IO模型示意.md",
+    "Excalidraw/Scripts/Downloaded/Mindmap connector.md",
+    "附件/Pictures/mindtest.svg",
+    "Excalidraw/Scripts/Downloaded/Mindmap connector.svg",
     "Mindmap/说明.md",
     "Mindmap/Untitled Diagram.svg",
     "OS/并发编程/Java 多线程/创建线程的两种方式.md",
     "OS/并发编程/疑问解答/JVM 线程间共享了什么区域.md",
-    "OS/并发编程/疑问解答/线程的本质.md",
-    "OS/并发编程/锁/Synchronize 底层优化.md",
-    "OS/并发编程/锁/Java 锁升级概述.md",
-    "OS/并发编程/锁/AQS原理.md",
-    "OS/并发编程/锁/偏向锁.md",
-    "OS/并发编程/锁/轻量级锁.md"
+    "OS/并发编程/疑问解答/线程的本质.md"
   ]
 }
