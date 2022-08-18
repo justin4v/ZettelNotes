@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/并发编程/核心概念/通俗理解线程安全.md",
+            "file": "OS/并发编程/Java 多线程/创建线程的两种方式.md",
             "mode": "preview",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/并发编程/核心概念/通俗理解线程安全.md",
+                "file": "OS/并发编程/Java 多线程/创建线程的两种方式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/并发编程/核心概念/通俗理解线程安全.md"
+                "file": "OS/并发编程/Java 多线程/创建线程的两种方式.md"
               }
             }
           },
@@ -127,15 +127,15 @@
   },
   "active": "ed3b68c3c1bde1e4",
   "lastOpenFiles": [
-    "OS/并发编程/核心概念/并发相关概念.md",
-    "OS/并发编程/核心概念/并发问题示例.md",
-    "OS/并发编程/核心概念/3.线程性能问题.md",
-    "OS/并发编程/核心概念/2.线程活跃性问题.md",
-    "OS/并发编程/核心概念/1.线程安全问题.md",
-    "Network/Tcp-Ip protocols.md",
-    "Network/TCP Protocol.md",
-    "Network/MAC.md",
-    "Network/Hypertext.md",
-    "Network/Http protocol.md"
+    "OS/并发编程/疑问解答/JVM 线程间共享了什么区域.md",
+    "OS/并发编程/疑问解答/线程的本质.md",
+    "OS/并发编程/锁/Synchronize 底层优化.md",
+    "OS/并发编程/锁/Java 锁升级概述.md",
+    "OS/并发编程/锁/AQS原理.md",
+    "OS/并发编程/锁/偏向锁.md",
+    "OS/并发编程/锁/轻量级锁.md",
+    "OS/并发编程/核心概念/CAS.md",
+    "OS/并发编程/核心概念/通俗理解线程安全.md",
+    "OS/并发编程/核心概念/并发相关概念.md"
   ]
 }
