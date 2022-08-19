@@ -59,7 +59,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258
+    "width": 258,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -126,8 +127,8 @@
   "active": "c97209b2cb93a1ed",
   "lastOpenFiles": [
     "Mindmap/Java IO模型.md",
-    "Mindmap/说明.md",
     "Mindmap/IO模型导图.svg",
+    "Mindmap/说明.md",
     "Mindmap/IO模型总结.md",
     "Mindmap/IO模型示意.md",
     "Excalidraw/Scripts/Downloaded/Mindmap connector.md",
