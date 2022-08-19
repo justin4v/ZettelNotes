@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Mindmap/说明.md",
-            "mode": "source",
+            "file": "Mindmap/IO模型总结.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/说明.md",
+                "file": "Mindmap/IO模型总结.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/说明.md"
+                "file": "Mindmap/IO模型总结.md"
               }
             }
           },
@@ -127,10 +127,10 @@
   },
   "active": "c97209b2cb93a1ed",
   "lastOpenFiles": [
-    "Mindmap/Untitled Diagram.svg",
-    "Mindmap/说明.md",
-    "Mindmap/IO模型总结.md",
     "Mindmap/IO模型示意.md",
+    "Mindmap/说明.md",
+    "Mindmap/Untitled Diagram.svg",
+    "Mindmap/IO模型总结.md",
     "Excalidraw/Scripts/Downloaded/Mindmap connector.md",
     "附件/Pictures/mindtest.svg",
     "Excalidraw/Scripts/Downloaded/Mindmap connector.svg",
