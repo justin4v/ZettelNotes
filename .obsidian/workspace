@@ -7,11 +7,9 @@
         "id": "c97209b2cb93a1ed",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "diagram-edit",
           "state": {
-            "file": "Mindmap/IO模型总结.md",
-            "mode": "preview",
-            "source": false
+            "file": "Mindmap/IO模型导图.svg"
           }
         }
       }
@@ -77,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/IO模型总结.md",
+                "file": "Mindmap/IO模型导图.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/IO模型总结.md"
+                "file": "Mindmap/IO模型导图.svg"
               }
             }
           },
@@ -127,15 +125,15 @@
   },
   "active": "c97209b2cb93a1ed",
   "lastOpenFiles": [
-    "Mindmap/IO模型示意.md",
+    "Mindmap/Java IO模型.md",
     "Mindmap/说明.md",
-    "Mindmap/Untitled Diagram.svg",
+    "Mindmap/IO模型导图.svg",
     "Mindmap/IO模型总结.md",
+    "Mindmap/IO模型示意.md",
     "Excalidraw/Scripts/Downloaded/Mindmap connector.md",
     "附件/Pictures/mindtest.svg",
     "Excalidraw/Scripts/Downloaded/Mindmap connector.svg",
     "OS/并发编程/Java 多线程/创建线程的两种方式.md",
-    "OS/并发编程/疑问解答/JVM 线程间共享了什么区域.md",
-    "OS/并发编程/疑问解答/线程的本质.md"
+    "OS/并发编程/疑问解答/JVM 线程间共享了什么区域.md"
   ]
 }
