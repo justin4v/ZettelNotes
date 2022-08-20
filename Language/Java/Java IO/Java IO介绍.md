@@ -133,4 +133,4 @@ Reader input = new BufferedReader(new FileReader("c:\\data\\input-file.txt"), 8 
 
 
 # 参考
-2. [[OS/Linux/IO模型]]
+2. [[IO模型]]
