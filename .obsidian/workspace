@@ -7,11 +7,9 @@
         "id": "2a4dff00f333d8f1",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "diagram-edit",
           "state": {
-            "file": "Mindmap/Java IO模型.md",
-            "mode": "preview",
-            "source": false
+            "file": "Mindmap/IO模型导图.svg"
           }
         }
       }
@@ -78,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/Java IO模型.md",
+                "file": "Mindmap/IO模型导图.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/Java IO模型.md"
+                "file": "Mindmap/IO模型导图.svg"
               }
             }
           },
@@ -128,8 +126,8 @@
   },
   "active": "2a4dff00f333d8f1",
   "lastOpenFiles": [
-    "Mindmap/IO模型导图.svg",
     "Mindmap/Java IO模型.md",
+    "Mindmap/IO模型导图.svg",
     "Mindmap/说明.md",
     "Mindmap/IO模型总结.md",
     "Mindmap/IO模型示意.md",
