@@ -59,8 +59,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258,
-    "collapsed": true
+    "width": 258
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -126,12 +125,12 @@
   },
   "active": "2a4dff00f333d8f1",
   "lastOpenFiles": [
-    "附件/Pictures/5种IO模型对比.png",
+    "Mindmap/Java IO模型.md",
     "Mindmap/IO模型导图.svg",
+    "附件/Pictures/5种IO模型对比.png",
     "OS/基础概念/IO模型.md",
     "Mindmap/IO模型总结.md",
     "Book Reading/Spring深度解析/IOC简介.md",
-    "Mindmap/Java IO模型.md",
     "Language/Java/Java IO/Java IO介绍.md",
     "Language/Java/Java IO/BIO,NIO,AIO.md",
     "Language/Java/Java IO/Java NIO组件.md",
