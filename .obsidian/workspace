@@ -7,9 +7,11 @@
         "id": "2a4dff00f333d8f1",
         "type": "leaf",
         "state": {
-          "type": "diagram-edit",
+          "type": "markdown",
           "state": {
-            "file": "Mindmap/IO模型导图.svg"
+            "file": "OS/并发编程/Java 多线程/线程状态及转变.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -76,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/IO模型导图.svg",
+                "file": "OS/并发编程/Java 多线程/线程状态及转变.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mindmap/IO模型导图.svg"
+                "file": "OS/并发编程/Java 多线程/线程状态及转变.md"
               }
             }
           },
@@ -126,11 +128,11 @@
   },
   "active": "2a4dff00f333d8f1",
   "lastOpenFiles": [
-    "OS/并发编程/Java 多线程/线程状态及转变.md",
-    "Mindmap/IO模型导图.svg",
-    "Mindmap/Java IO模型.md",
-    "Mindmap/IO模型总结.md",
     "Language/Java/基础/POJO中使用包装类还是基础类.md",
+    "Mindmap/IO模型导图.svg",
+    "Mindmap/IO模型总结.md",
+    "Mindmap/Java IO模型.md",
+    "OS/并发编程/Java 多线程/线程状态及转变.md",
     "Database/Mybatis 使用.md",
     "OS/基础概念/3.线程模型.md",
     "Language/Java/JVM/Java线程模型.md",
