@@ -7,11 +7,9 @@
         "id": "2a4dff00f333d8f1",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "diagram-edit",
           "state": {
-            "file": "Language/Java/基础/POJO中使用包装类还是基础类.md",
-            "mode": "source",
-            "source": false
+            "file": "Mindmap/IO模型导图.svg"
           }
         }
       }
@@ -61,7 +59,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258
+    "width": 258,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -77,7 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/基础/POJO中使用包装类还是基础类.md",
+                "file": "Mindmap/IO模型导图.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/基础/POJO中使用包装类还是基础类.md"
+                "file": "Mindmap/IO模型导图.svg"
               }
             }
           },
@@ -127,15 +126,15 @@
   },
   "active": "2a4dff00f333d8f1",
   "lastOpenFiles": [
-    "Database/Mybatis 使用.md",
+    "Mindmap/Java IO模型.md",
+    "Mindmap/IO模型总结.md",
     "Mindmap/IO模型导图.svg",
+    "Language/Java/基础/POJO中使用包装类还是基础类.md",
+    "Database/Mybatis 使用.md",
     "OS/基础概念/3.线程模型.md",
     "Language/Java/JVM/Java线程模型.md",
     "OS/并发编程/Java 多线程/线程状态及转变.md",
-    "Mindmap/Java IO模型.md",
     "附件/Pictures/5种IO模型对比.png",
-    "OS/基础概念/IO模型.md",
-    "Mindmap/IO模型总结.md",
-    "Book Reading/Spring深度解析/IOC简介.md"
+    "OS/基础概念/IO模型.md"
   ]
 }
