@@ -127,15 +127,15 @@
   },
   "active": "c947f64ce922e7d2",
   "lastOpenFiles": [
+    "Database/Mysql/事务与锁/Mysql事务与锁.md",
+    "Database/Mysql/事务与锁/Mysql中锁.md",
+    "Database/Mysql/SQL实践/部分常用命令.md",
+    "Database/Mysql/SQL实践/树形结构表3种设计分析.md",
+    "日常记录/Idea.md",
     "Framework/Springboot/优秀实践/yaml 如何配置 list map等复杂结构.md",
     "Mindmap/IO模型导图.svg",
     "Mindmap/Java IO模型.md",
     "Mindmap/IO模型总结.md",
-    "OS/并发编程/Java 多线程/线程状态及转变.md",
-    "Book Reading/SICP/3模块化、对象和状态/3.1.1 局部状态.md",
-    "Language/Java/基础/POJO中使用包装类还是基础类.md",
-    "Database/Mybatis 使用.md",
-    "OS/基础概念/3.线程模型.md",
-    "Language/Java/JVM/Java线程模型.md"
+    "OS/并发编程/Java 多线程/线程状态及转变.md"
   ]
 }

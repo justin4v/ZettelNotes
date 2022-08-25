@@ -62,3 +62,14 @@ public Boolean valid() {
   }
 ```
 
+
+
+# 备选
+## HL7 大量消息导致出现mysql数据库无法及时持久化
+- 出现 `Lock wait timeout exceeded`与`Dead Lock`
+- 线程池满了，无法提交任务
+- 数据库连接池满了
+
+
+优化：
+hl7 大量请求（快）       如何适配         数据持久化不及时（慢）
