@@ -38,7 +38,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "状态",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -55,12 +55,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 258,
-    "collapsed": true
+    "width": 258
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -126,14 +126,14 @@
   },
   "active": "2a4dff00f333d8f1",
   "lastOpenFiles": [
+    "OS/并发编程/Java 多线程/线程状态及转变.md",
+    "Mindmap/IO模型导图.svg",
     "Mindmap/Java IO模型.md",
     "Mindmap/IO模型总结.md",
-    "Mindmap/IO模型导图.svg",
     "Language/Java/基础/POJO中使用包装类还是基础类.md",
     "Database/Mybatis 使用.md",
     "OS/基础概念/3.线程模型.md",
     "Language/Java/JVM/Java线程模型.md",
-    "OS/并发编程/Java 多线程/线程状态及转变.md",
     "附件/Pictures/5种IO模型对比.png",
     "OS/基础概念/IO模型.md"
   ]
