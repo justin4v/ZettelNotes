@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Framework/Springboot/优秀实践/yaml 如何配置 list map等复杂结构.md",
+            "file": "日常记录/Idea.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Framework/Springboot/优秀实践/yaml 如何配置 list map等复杂结构.md",
+                "file": "日常记录/Idea.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/Springboot/优秀实践/yaml 如何配置 list map等复杂结构.md"
+                "file": "日常记录/Idea.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "c947f64ce922e7d2",
   "lastOpenFiles": [
+    "Framework/Springboot/优秀实践/yaml 如何配置 list map等复杂结构.md",
     "Mindmap/IO模型导图.svg",
     "Mindmap/Java IO模型.md",
     "Mindmap/IO模型总结.md",
@@ -135,7 +136,6 @@
     "Language/Java/基础/POJO中使用包装类还是基础类.md",
     "Database/Mybatis 使用.md",
     "OS/基础概念/3.线程模型.md",
-    "Language/Java/JVM/Java线程模型.md",
-    "附件/Pictures/5种IO模型对比.png"
+    "Language/Java/JVM/Java线程模型.md"
   ]
 }
