@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0b56b69ef913db27",
+        "id": "c947f64ce922e7d2",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Mindmap/Java IO模型.md",
-            "mode": "preview",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -78,7 +74,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mindmap/Java IO模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,9 +100,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Mindmap/Java IO模型.md"
-              }
+              "state": {}
             }
           },
           {
@@ -126,7 +119,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "0b56b69ef913db27",
+  "active": "c947f64ce922e7d2",
   "lastOpenFiles": [
     "Mindmap/IO模型导图.svg",
     "Mindmap/Java IO模型.md",
