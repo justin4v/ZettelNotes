@@ -124,5 +124,116 @@ protected void set(V v) {
 
 **4. 获取结果** 结果是共享的，因此获取时根据当前task所处于的状态，如果是未完成的话则直接进入等待线程队列中，当结果被设置时会主动唤醒这些等待线程。
 
+```java
+public V get() throws InterruptedException， ExecutionException {
+  int s = state;
+  if (s <= COMPLETING)
+      // 未完成则进入等待线程队列中
+      s = awaitDone(false， 0L);
+  // 获取返回值
+  return report(s);
+}
+```
+
+## Callback（回调式Future）
+
+对于Future模式，最麻烦的地方是需要手动获取对应的值，这个过程并且是阻塞操作，有时候的业务并不怎么关心值什么时候被计算出来，只关心计算出来后后续要做哪些操作，因此一种改进策略就是利用回调方式(Callback)实现后续逻辑。 以guava中`FutureCallback`为例，其接口定义如下：
+
+```java
+public interface FutureCallback<V> {
+
+  void onSuccess(@NullableDecl V result);
+
+  void onFailure(Throwable t);
+}
+```
+
+该接口本身是一个业务处理，可以使用`Futures#addCallback`添加到Future当中。Callback的实现原理可以的想到在对应的`Future`中维护一个`Callback`链表，当任务执行完成后依次执行对应的回调，类似于[观察者模式](https://mrdear.cn/2018/04/20/experience/design_patterns--observer/)的`Subject`依次调用`Observer`。 `Callback`很好的解决了`Future`手动调用get所带来的阻塞与不便。因为在值算出来时自动调用后续处理因此不存在阻塞操作。但是在业务后续操作很多时，其存在一个嵌套的问题，俗称回调地狱，[这一点在JS中经常遇到](https://zhuanlan.zhihu.com/p/29783901)：
+
+```java
+api.getItem(1)
+  .then(item => {
+    item.amount++;
+    api.updateItem(1, item)
+      .then(update => {
+        api.deleteItem(1)
+          .then(deletion => {
+            console.log('done!');
+          })
+      })
+  })
+```
+
+回调嵌套过多在服务端倒不是很常见，但是嵌套会使得逻辑变得很难梳理，因此诞生了Promise模式，也是目前使用最多的一种模式。
 
 
+## Promise（可变的Future）
+
+`Promise`结合了Future与Callback两种形式，对于Future，Promise在其基础上提供结果写入的接口，也就是可以主动完成这个Future，对于Callback，Promise所作的是把调用形式由嵌套打平，避免了循环嵌套，其使用方式大概如下JS代码所示：
+
+**清单8：Promise使用形式**
+
+```javascript
+api.getItem(1)
+  .then(item => {
+    item.amount++;
+    return api.updateItem(1, item);
+  })
+  .then(update => {
+    return api.deleteItem(1);
+  })
+  .then(deletion => {
+    console.log('done!');
+  })
+```
+
+
+`Promise`对于Future的改进原理是提供主动完成的方法入口，并且完成任务时会主动触发所有的Callback，
+
+在JDK中提供了`CompletableFuture`类，用于实现Promise模式编程，**清单9**展示了其可以主动完成任务的能力，即使异步任务会导致异步线程无限休眠，但是仍然可以通过主动设置值的方式完成该任务。这一特性可以很好的在两个线程中交换数据使用，举个例子在一些RPC框架中客户端在对应的Handler中发出来`RPCRequest`后创建一个Promise放入到全局Map中，然后阻塞获取响应结果，在`RPCResponse`异步返回的线程中从Map中取出Promise，然后主动把结果设置进去，那么对于使用方来说就像是同步完成了一次调用。
+
+**清单9：Promise主动完成任务能力**
+
+```java
+CompletableFuture<String> promise = CompletableFuture.supplyAsync(() -> {
+     // 无限休眠
+     sleep(Long.MAX_VALUE);
+     return null;
+   });
+
+   // 调用主动完成
+   promise.complete("quding2");
+
+   System.out.println(promise.get()); // 输出quding2
+```
+
+`Promise`对于Callback的改进是把每一个Callback封装成一个`Stage`阶段，所有的`Stage`之间使用单链表关联，因此当完成时启动整个链表链路即可。这是一种常用的打散嵌套调用的一种做法，比如Java8的Stream也是类似的做法，详细的可以参考之前写的Stream分析文章。[Java8知识点](https://mrdear.cn/tags/java8/)
+
+**清单10：Promise对于Callback的优化**
+
+```javascript
+CountDownLatch latch = new CountDownLatch(1);
+
+   CompletableFuture<String> promise = CompletableFuture.supplyAsync(() -> {
+     sleep(2000L);
+     return "quding";
+   });
+   // 将一系列的Callback打平
+   promise.thenApply(String::toUpperCase)
+       .thenApply(t -> t + ": 屈定")
+       .whenComplete((t, ex) -> {
+         if (ex != null) {
+           ex.printStackTrace();
+         } else {
+           System.out.println("result: " + t); // 输出 result: QUDING: 屈定
+         }
+         latch.countDown();
+       });
+
+   latch.await();
+```
+
+
+## 总结
+
+由于篇幅过长，因此原本打算加入的Netty相关内容被去掉了，后续会分析Netty相关的实现机制。另外三种模式中，`Future`是核心也是最基础的一种模式，`Callback`，`Promise`都是一种优化手段，一般业务上使用`Promise`就可以了，其包含了前两者的全部功能。
