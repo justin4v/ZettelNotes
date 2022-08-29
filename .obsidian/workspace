@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "c947f64ce922e7d2",
+        "id": "9bcf3ecf565a1fdf",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "日常记录/Idea.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "状态",
+                "query": "file:一致性",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -125,17 +125,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "c947f64ce922e7d2",
+  "active": "9bcf3ecf565a1fdf",
   "lastOpenFiles": [
+    "附件/Pictures/基于hl7一致性校验架构.svg",
+    "日常记录/Idea.md",
     "Medical/DICOM/DICOM消息服务简介.md",
     "Medical/Project/未命名.md",
     "Cache/Redis/Redis 的 LFU算法.md",
-    "日常记录/Idea.md",
     "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
     "Language/Java/基础/异常处理.md",
     "Language/Java/基础/异常架构.md",
     "Database/Mysql/事务与锁/Mysql事务与锁.md",
-    "Database/Mysql/事务与锁/Mysql中锁.md",
-    "Database/Mysql/SQL实践/部分常用命令.md"
+    "Database/Mysql/事务与锁/Mysql中锁.md"
   ]
 }
