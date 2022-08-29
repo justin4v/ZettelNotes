@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Medical/DICOM/DICOM消息服务简介.md",
+            "file": "日常记录/Idea.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Medical/DICOM/DICOM消息服务简介.md",
+                "file": "日常记录/Idea.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Medical/DICOM/DICOM消息服务简介.md"
+                "file": "日常记录/Idea.md"
               }
             }
           },
@@ -127,6 +127,7 @@
   },
   "active": "c947f64ce922e7d2",
   "lastOpenFiles": [
+    "Medical/DICOM/DICOM消息服务简介.md",
     "Medical/Project/未命名.md",
     "Cache/Redis/Redis 的 LFU算法.md",
     "日常记录/Idea.md",
@@ -135,7 +136,6 @@
     "Language/Java/基础/异常架构.md",
     "Database/Mysql/事务与锁/Mysql事务与锁.md",
     "Database/Mysql/事务与锁/Mysql中锁.md",
-    "Database/Mysql/SQL实践/部分常用命令.md",
-    "Database/Mysql/SQL实践/树形结构表3种设计分析.md"
+    "Database/Mysql/SQL实践/部分常用命令.md"
   ]
 }

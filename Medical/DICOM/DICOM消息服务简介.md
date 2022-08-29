@@ -14,15 +14,15 @@
 # DIMSE-C
 DIMSE-C 服务是支持在有同等 DIMSE-service-user 复合信息对象定义的复合 SOP 实例上操作的 DIMSE 服务的子集，复合 SOP 实例大致可以理解为不会被改变的文档类的实体，例如 dicom 影像文件。DIMSE-C 服务包含以下5个服务：
 
-1.  C-STORE：用于一个 DIMSE-service-user 在同等的 DIMSE-service-user 上存储一个复合 SOP 实例；其实就是存储服务，可以用来归档影像，也可以用来获取影像；  
+1.  **C-STORE**：用于一个 DIMSE-service-user 在同等的 DIMSE-service-user 上存储一个复合 SOP 实例；其实就是存储服务，可以用来归档影像，也可以用来获取影像；  
     有关详细介绍请参考 [Dicom 学习笔记-DICOM C-Store 消息服务](https://www.jianshu.com/p/bab6a85d3486)
-2.  C-FIND：查询服务，用于一个 DIMSE-service-user 在同等的DIMSE-service-user 上查询复合 SOP 实例的属性满足查询条件给出的一组属性的复合 SOP 实例；我们可以通过此服务查询某一 PatientID 为xx的患者的所有检查影像；  
+2.  **C-FIND**：查询服务，用于一个 DIMSE-service-user 在同等的DIMSE-service-user 上查询复合 SOP 实例的属性满足查询条件给出的一组属性的复合 SOP 实例；我们可以通过此服务查询某一 PatientID 为xx的患者的所有检查影像；  
     有关详细介绍请参考 [Dicom 学习笔记-DICOM C-Find 消息服务](https://www.jianshu.com/p/035dfa708077)
-3.  C-GET：获取服务，用于一个 DIMSE-service-user 在同等的DIMSE-service-user 上查询复合 SOP 实例的属性满足查询条件给出的一组属性的复合 SOP 实例，并取回这些符合条件的复合 SOP 实例，同时在这个过程中将触发一个或多个 C-STORE 子操作过程，所有的操作（包含 C-STORE 子操作）均在同一个 Association 连接中；  
+3.  **C-GET**：获取服务，用于一个 DIMSE-service-user 在同等的DIMSE-service-user 上查询复合 SOP 实例的属性满足查询条件给出的一组属性的复合 SOP 实例，并取回这些符合条件的复合 SOP 实例，同时在这个过程中将触发一个或多个 C-STORE 子操作过程，所有的操作（包含 C-STORE 子操作）均在同一个 Association 连接中；  
     有关详细介绍请参考 [Dicom 学习笔记-DICOM C-Get 消息服务](https://www.jianshu.com/p/c7f5b9fa597c)
-4.  C-MOVE：也是获取服务，但是获取的发起方和接收方可以是同一个实体也可以是两个不同的实体。标准中是这么定义的：用于一个 DIMSE-service-user 在同等的 DIMSE-service-user 上查询复合 SOP 实例的属性满足查询条件给出的一组属性的复合 SOP 实例，并取回这些符合条件的复合 SOP 实例，同时在这个过程中将触发一个或多个 C-STORE 子操作过程，所有的 C-STORE 子操作触发在另外一个单独的 TCP 连接中；和 C-GET 最大的区别是这个是两个 Association 连接，而 C-GET 服务是一个；  
+4.  **C-MOVE**：也是获取服务，但是获取的发起方和接收方可以是同一个实体也可以是两个不同的实体。标准中是这么定义的：用于一个 DIMSE-service-user 在同等的 DIMSE-service-user 上查询复合 SOP 实例的属性满足查询条件给出的一组属性的复合 SOP 实例，并取回这些符合条件的复合 SOP 实例，同时在这个过程中将触发一个或多个 C-STORE 子操作过程，所有的 C-STORE 子操作触发在另外一个单独的 TCP 连接中；和 C-GET 最大的区别是这个是两个 Association 连接，而 C-GET 服务是一个；  
     有关详细介绍请参考 [Dicom 学习笔记-DICOM C-Move 消息服务](https://www.jianshu.com/p/7e753628a865)
-5.  C-ECHO：验证两个同等的 DIMSE-service-user 之间端到端的通信是否成功；  
+5.  **C-ECHO**：验证两个同等的 DIMSE-service-user 之间端到端的通信是否成功；  
     有关详细介绍请参考 [Dicom 学习笔记-DICOM C-Echo 消息服务](https://www.jianshu.com/p/ef577f069f4b)
 
 # DIMSE-N
