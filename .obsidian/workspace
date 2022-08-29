@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/Idea.md",
+            "file": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/Idea.md",
+                "file": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/Idea.md"
+                "file": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md"
               }
             }
           },
@@ -127,15 +127,15 @@
   },
   "active": "c947f64ce922e7d2",
   "lastOpenFiles": [
+    "Language/Java/基础/异常处理.md",
+    "Language/Java/基础/异常架构.md",
+    "日常记录/Idea.md",
     "Database/Mysql/事务与锁/Mysql事务与锁.md",
     "Database/Mysql/事务与锁/Mysql中锁.md",
     "Database/Mysql/SQL实践/部分常用命令.md",
     "Database/Mysql/SQL实践/树形结构表3种设计分析.md",
-    "日常记录/Idea.md",
     "Framework/Springboot/优秀实践/yaml 如何配置 list map等复杂结构.md",
     "Mindmap/IO模型导图.svg",
-    "Mindmap/Java IO模型.md",
-    "Mindmap/IO模型总结.md",
-    "OS/并发编程/Java 多线程/线程状态及转变.md"
+    "Mindmap/Java IO模型.md"
   ]
 }
