@@ -3,7 +3,7 @@
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "附件/Pictures",
   "spellcheck": false,
-  "communityPluginSortOrder": "downloadReverse",
+  "communityPluginSortOrder": "download",
   "communityThemeSortOrder": "download",
   "legacyEditor": false,
   "livePreview": true,

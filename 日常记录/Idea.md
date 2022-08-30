@@ -98,15 +98,18 @@ hl7 大量请求（快）  和  数据持久化不及时（慢），两者如何
 
 ![[hl7影像一致性 1.svg]]
 
+## 技术特点
 
 - 近似计数算法进行聚合
-- 对 HotKey的访问进行计数，使用 LFU 算法保留访问频次高的 hotkey；
+- 对 HotKey 的访问进行计数 counter；
+	- counter 以及时间衰减系数计算得到优势权重（），使用 LFU 算法保留访问频次高的 hotkey；
 	- 使用优先队列按频次排序 hotkey；
 	- 更新计数，则设置其状态 invalid，查询命中之前需要从数据库同步最新数据；
 - PACS -> redis ：缓存并进行消息合并
 	- redis 更新到数据库，mysql 从左到右消费，从右向左 merge 消息；
 - storage -> redis：缓存命中、缓存更新
 
+## 
 
 ## 参考
 [Redis LFU 实现 -- 掷硬币的艺术](https://blog.csdn.net/jh0218/article/details/95389361)
