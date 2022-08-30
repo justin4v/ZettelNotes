@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cache/缓存雪崩 穿透 击穿.md",
+            "file": "日常记录/Idea.md",
             "mode": "source",
             "source": false
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/缓存雪崩 穿透 击穿.md",
+                "file": "日常记录/Idea.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/缓存雪崩 穿透 击穿.md"
+                "file": "日常记录/Idea.md"
               }
             }
           },
@@ -135,6 +135,7 @@
   },
   "active": "9df6719d812660ed",
   "lastOpenFiles": [
+    "Cache/缓存雪崩 穿透 击穿.md",
     "日常记录/Idea.md",
     "Distribute System/分布式中可用性与一致性.md",
     "附件/Pictures/hl7影像一致性 1.svg",
@@ -143,7 +144,6 @@
     "Medical/Project/未命名.md",
     "Cache/Redis/Redis 的 LFU算法.md",
     "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
-    "Language/Java/基础/异常处理.md",
-    "Language/Java/基础/异常架构.md"
+    "Language/Java/基础/异常处理.md"
   ]
 }
