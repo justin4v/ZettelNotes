@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/Idea.md",
+            "file": "Distribute System/分布式中可用性与一致性.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:一致性",
+                "query": "CAP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258,
-    "collapsed": true
+    "width": 258
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/Idea.md",
+                "file": "Distribute System/分布式中可用性与一致性.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/Idea.md"
+                "file": "Distribute System/分布式中可用性与一致性.md"
               }
             }
           },
@@ -134,10 +133,10 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "bb2499453009a483",
+  "active": "9df6719d812660ed",
   "lastOpenFiles": [
-    "附件/Pictures/hl7影像一致性 1.svg",
     "日常记录/Idea.md",
+    "附件/Pictures/hl7影像一致性 1.svg",
     "附件/Pictures/基于hl7一致性校验架构.svg",
     "Medical/DICOM/DICOM消息服务简介.md",
     "Medical/Project/未命名.md",
