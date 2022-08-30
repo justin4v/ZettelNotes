@@ -56,6 +56,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "bb2499453009a483",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
         ]
       }
@@ -126,7 +134,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "9df6719d812660ed",
+  "active": "bb2499453009a483",
   "lastOpenFiles": [
     "附件/Pictures/hl7影像一致性 1.svg",
     "日常记录/Idea.md",
