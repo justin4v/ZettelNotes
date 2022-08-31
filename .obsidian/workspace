@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "日常记录/Idea.md",
+            "file": "Distribute System/分布式中可用性与一致性.md",
             "mode": "source",
             "source": false
           }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258,
-    "collapsed": true
+    "width": 258
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/Idea.md",
+                "file": "Distribute System/分布式中可用性与一致性.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/Idea.md"
+                "file": "Distribute System/分布式中可用性与一致性.md"
               }
             }
           },
@@ -137,14 +136,14 @@
   "active": "22092c9a2d06cf85",
   "lastOpenFiles": [
     "日常记录/hl7影像一致性.svg",
+    "附件/Pictures/hl7影像一致性.svg",
+    "日常记录/Idea.md",
     "基础知识/UTF-8.md",
     "附件/Pictures/hl7影像一致性 1.svg",
-    "日常记录/Idea.md",
     "Language/Java/反射/RTTI.md",
     "Language/Java/反射/反射.md",
     "Language/Java/编译/JIT 编译器.md",
     "Language/Java/编译/Javac 编译.md",
-    "Medical/DICOM/DICOM消息服务简介.md",
-    "Cache/缓存雪崩 穿透 击穿.md"
+    "Medical/DICOM/DICOM消息服务简介.md"
   ]
 }

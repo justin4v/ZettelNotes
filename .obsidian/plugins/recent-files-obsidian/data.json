@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Idea",
-      "path": "日常记录/Idea.md"
+      "basename": "分布式中可用性与一致性",
+      "path": "Distribute System/分布式中可用性与一致性.md"
     },
     {
       "basename": "hl7影像一致性",
       "path": "日常记录/hl7影像一致性.svg"
+    },
+    {
+      "basename": "Idea",
+      "path": "日常记录/Idea.md"
     },
     {
       "basename": "UTF-8",
@@ -35,10 +39,6 @@
     {
       "basename": "缓存雪崩 穿透 击穿",
       "path": "Cache/缓存雪崩 穿透 击穿.md"
-    },
-    {
-      "basename": "分布式中可用性与一致性",
-      "path": "Distribute System/分布式中可用性与一致性.md"
     }
   ],
   "omittedPaths": [],
