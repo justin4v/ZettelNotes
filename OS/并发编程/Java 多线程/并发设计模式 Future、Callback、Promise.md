@@ -74,8 +74,6 @@ public FutureTask(Runnable runnable， V result) {
 ```
 
 **2. 执行任务** 当线程启动时会调用其`run`方法，该方法会调用`callable`任务，然后把返回结果调用`set`进行更新。
-
-
 ```java
 public void run() {
   // CAS更新把当前对象与线程绑定起来
@@ -150,7 +148,7 @@ public interface FutureCallback<V> {
 
 该接口本身是一个业务处理，可以使用`Futures#addCallback`添加到Future当中。Callback的实现原理可以的想到在对应的`Future`中维护一个`Callback`链表，当任务执行完成后依次执行对应的回调，类似于[观察者模式](https://mrdear.cn/2018/04/20/experience/design_patterns--observer/)的`Subject`依次调用`Observer`。 `Callback`很好的解决了`Future`手动调用get所带来的阻塞与不便。因为在值算出来时自动调用后续处理因此不存在阻塞操作。但是在业务后续操作很多时，其存在一个嵌套的问题，俗称回调地狱，[这一点在JS中经常遇到](https://zhuanlan.zhihu.com/p/29783901)：
 
-```java
+```javascript
 api.getItem(1)
   .then(item => {
     item.amount++;

@@ -5,6 +5,10 @@
       "path": "Distribute System/分布式中可用性与一致性.md"
     },
     {
+      "basename": "并发设计模式 Future、Callback、Promise",
+      "path": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md"
+    },
+    {
       "basename": "hl7影像一致性",
       "path": "日常记录/hl7影像一致性.svg"
     },

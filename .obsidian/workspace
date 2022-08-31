@@ -133,8 +133,10 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "b83fe008a809d9e9",
+  "active": "22092c9a2d06cf85",
   "lastOpenFiles": [
+    "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
+    "Distribute System/分布式中可用性与一致性.md",
     "日常记录/hl7影像一致性.svg",
     "附件/Pictures/hl7影像一致性.svg",
     "日常记录/Idea.md",
@@ -142,8 +144,6 @@
     "附件/Pictures/hl7影像一致性 1.svg",
     "Language/Java/反射/RTTI.md",
     "Language/Java/反射/反射.md",
-    "Language/Java/编译/JIT 编译器.md",
-    "Language/Java/编译/Javac 编译.md",
-    "Medical/DICOM/DICOM消息服务简介.md"
+    "Language/Java/编译/JIT 编译器.md"
   ]
 }
