@@ -7,9 +7,11 @@
         "id": "22092c9a2d06cf85",
         "type": "leaf",
         "state": {
-          "type": "diagram",
+          "type": "markdown",
           "state": {
-            "file": "日常记录/hl7影像一致性.svg"
+            "file": "日常记录/Idea.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/hl7影像一致性.svg",
+                "file": "日常记录/Idea.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/hl7影像一致性.svg"
+                "file": "日常记录/Idea.md"
               }
             }
           },
