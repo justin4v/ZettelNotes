@@ -11,6 +11,9 @@
 3. **DIMSE-N**：DICOM Message Service Element - Normalized（标准化的 DICOM 消息服务元素）  
 4. **DIMSE-service-user**：that part of an application entity that makes use of the DICOM Message Service Element.（使用 DICOM 消息服务元素的应用实体部分）
 
+-   SCU：Service Class User，可以理解为客户端（用户端）；
+-   SCP：Service Class Provider。可以理解为服务端；
+
 # DIMSE-C
 DIMSE-C 服务是支持在有同等 DIMSE-service-user 复合信息对象定义的复合 SOP 实例上操作的 DIMSE 服务的子集，复合 SOP 实例大致可以理解为不会被改变的文档类的实体，例如 dicom 影像文件。DIMSE-C 服务包含以下5个服务：
 

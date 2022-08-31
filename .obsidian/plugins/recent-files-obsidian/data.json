@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Javac 编译",
+      "path": "Language/Java/编译/Javac 编译.md"
+    },
+    {
+      "basename": "DICOM消息服务简介",
+      "path": "Medical/DICOM/DICOM消息服务简介.md"
+    },
+    {
       "basename": "hl7影像一致性 1",
       "path": "附件/Pictures/hl7影像一致性 1.svg"
     },

@@ -7,9 +7,11 @@
         "id": "9df6719d812660ed",
         "type": "leaf",
         "state": {
-          "type": "diagram",
+          "type": "markdown",
           "state": {
-            "file": "附件/Pictures/hl7影像一致性 1.svg"
+            "file": "Medical/DICOM/DICOM消息服务简介.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -38,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:HL7",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -63,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -84,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "附件/Pictures/hl7影像一致性 1.svg",
+                "file": "Medical/DICOM/DICOM消息服务简介.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "附件/Pictures/hl7影像一致性 1.svg"
+                "file": "Medical/DICOM/DICOM消息服务简介.md"
               }
             }
           },
@@ -132,12 +133,12 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "f9c60a5916b5869d",
+  "active": "9df6719d812660ed",
   "lastOpenFiles": [
+    "附件/Pictures/hl7影像一致性 1.svg",
     "日常记录/Idea.md",
     "Cache/缓存雪崩 穿透 击穿.md",
     "Distribute System/分布式中可用性与一致性.md",
-    "附件/Pictures/hl7影像一致性 1.svg",
     "附件/Pictures/基于hl7一致性校验架构.svg",
     "Medical/DICOM/DICOM消息服务简介.md",
     "Medical/Project/未命名.md",
