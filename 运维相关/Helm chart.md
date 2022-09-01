@@ -174,30 +174,29 @@ metadata:
 data:
   myvalue: "Hello World"
   # 修改当前作用域为 .Values.favorite
-  # 
+  # 类比于 cd 命令
   {{- with .Values.favorite }}
   drink: {{ .drink | default "tea" | quote }}
   food: {{ .food | upper | quote }}
   {{- end }}
 ```
 
-- 在上面的例子中，在`with`的作用范围内（`{- with .xxxx}` 到 `{{- end}}`之间）可以直接引用`.drink`和`.food`，这是因为`{{- with .Values.favorite}}`把`Values.favorite`赋值给了当前作用域(`.`)。
+- 在上面的例子中，在`with`的作用范围内（`{- with .xxxx}` 到 `{{- end}}`之间）可以直接引用`.drink`和`.food`；
+- 因为`{{- with .Values.favorite}}`把`Values.favorite`赋值给了当前作用域(`.`)。
 
 ### range
 
-`range`用于循环遍历数组或是map。例如`values.yaml`文件中有如下信息：
-
+- `range`用于循环遍历数组或是map。例如`values.yaml`文件中有如下信息：
 ```markdown
 pizzaToppings:
   - mushrooms
   - cheese
   - peppers
   - onions
-复制代码
+
 ```
 
-使用`{{ range}}...{{ end}}`循环语句循环`pizzaToppings`数组：
-
+- 使用`{{ range}}...{{ end}}`循环语句循环`pizzaToppings`数组：
 ```yaml
 apiVersion: v1
 kind: ConfigMap
@@ -208,11 +207,10 @@ data:
     {{- range .Values.pizzaToppings }}
     - {{ . | title | quote }}
     {{- end }}
-复制代码
+
 ```
 
-上述模板的渲染结果如下：
-
+渲染结果如下：
 ```makefile
 apiVersion: v1
 kind: ConfigMap
@@ -224,10 +222,11 @@ data:
     - "Cheese"
     - "Peppers"
     - "Onions"
-复制代码
 ```
 
-可以看到，`range`遍历了`.Values.pizzaToppings`数组，且将循环体内的作用域(`.`)设置成了每一次循环的值。`range`还可以同时获取迭代对象的`key`,`value`，例如有如下模板：
+- 可以看到，`range`遍历了`.Values.pizzaToppings`数组；
+- 且将循环体内的作用域(`.`)设置成了每一次循环的值。
+- `range`还可以同时获取迭代对象的`key`,`value`，例如有如下模板：
 
 ```yaml
 apiVersion: v1
@@ -239,7 +238,6 @@ data:
     {{- range $index, $topping := .Values.pizzaToppings }}
     {{ $index }}: {{ $topping }}
     {{- end }}
-复制代码
 ```
 
 其渲染结果如下：
@@ -255,7 +253,6 @@ data:
     1: cheese
     2: peppers
     3: onions
-复制代码
 ```
 
 ### 空格处理
