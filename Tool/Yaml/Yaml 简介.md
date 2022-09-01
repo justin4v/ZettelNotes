@@ -65,67 +65,65 @@ hash: { name: Steve, foo: bar }
  ```javascript
 
 [ 'Cat', 'Dog', 'Goldfish' ]
- ```
+```
 
 数据结构的子成员是一个数组，则可以在该项下面缩进一个空格。
 
-> ```javascript
-> 
-> -
->  - Cat
->  - Dog
->  - Goldfish
-> ```
+```javascript
+-
+ - Cat
+ - Dog
+ - Goldfish
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> [ [ 'Cat', 'Dog', 'Goldfish' ] ]
-> ```
+ ```javascript
+ [ [ 'Cat', 'Dog', 'Goldfish' ] ]
+ ```
 
 数组也可以采用行内表示法。
 
-> ```javascript
-> 
-> animal: [Cat, Dog]
-> ```
+```javascript
+ 
+ animal: [Cat, Dog]
+ ```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { animal: [ 'Cat', 'Dog' ] }
-> ```
+ ```javascript
+
+ { animal: [ 'Cat', 'Dog' ] }
+ ```
 
 ## 四、复合结构
 
 对象和数组可以结合使用，形成复合结构。
 
-> ```javascript
-> 
-> languages:
->  - Ruby
->  - Perl
->  - Python 
-> websites:
->  YAML: yaml.org 
->  Ruby: ruby-lang.org 
->  Python: python.org 
->  Perl: use.perl.org 
-> ```
+```javascript
+
+languages:
+- Ruby
+- Perl
+- Python 
+websites:
+YAML: yaml.org 
+Ruby: ruby-lang.org 
+Python: python.org 
+Perl: use.perl.org 
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { languages: [ 'Ruby', 'Perl', 'Python' ],
->   websites: 
->    { YAML: 'yaml.org',
->      Ruby: 'ruby-lang.org',
->      Python: 'python.org',
->      Perl: 'use.perl.org' } }
-> ```
+```javascript
+
+{ languages: [ 'Ruby', 'Perl', 'Python' ],
+websites: 
+{ YAML: 'yaml.org',
+Ruby: 'ruby-lang.org',
+Python: 'python.org',
+Perl: 'use.perl.org' } }
+```
 
 ## 五、纯量
 
@@ -141,10 +139,10 @@ hash: { name: Steve, foo: bar }
 
 数值直接以字面量的形式表示。
 
-> ```javascript
-> 
-> number: 12.30
-> ```
+```javascript
+
+number: 12.30
+```
 
 转为 JavaScript 如下。
 
