@@ -140,332 +140,328 @@ Perl: 'use.perl.org' } }
 数值直接以字面量的形式表示。
 
 ```javascript
-
 number: 12.30
 ```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { number: 12.30 }
-> ```
+```javascript
+
+{ number: 12.30 }
+```
 
 布尔值用`true`和`false`表示。
 
-> ```javascript
-> 
-> isSet: true
-> ```
+```javascript
+
+isSet: true
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { isSet: true }
-> ```
+```javascript
+
+{ isSet: true }
+```
 
 `null`用`~`表示。
 
-> ```javascript
-> 
-> parent: ~ 
-> ```
+```javascript
+
+parent: ~ 
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { parent: null }
-> ```
+```javascript
+
+{ parent: null }
+```
 
 时间采用 ISO8601 格式。
 
-> ```javascript
-> 
-> iso8601: 2001-12-14t21:59:43.10-05:00 
-> ```
+```javascript
+
+iso8601: 2001-12-14t21:59:43.10-05:00 
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { iso8601: new Date('2001-12-14t21:59:43.10-05:00') }
-> ```
+```javascript
+
+{ iso8601: new Date('2001-12-14t21:59:43.10-05:00') }
+```
 
 日期采用复合 iso8601 格式的年、月、日表示。
 
-> ```javascript
-> 
-> date: 1976-07-31
-> ```
+```javascript
+
+date: 1976-07-31
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { date: new Date('1976-07-31') }
-> ```
+```javascript
+
+{ date: new Date('1976-07-31') }
+```
 
 YAML 允许使用两个感叹号，强制转换数据类型。
 
-> ```javascript
-> 
-> e: !!str 123
-> f: !!str true
-> ```
+```javascript
+
+e: !!str 123
+f: !!str true
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { e: '123', f: 'true' }
-> ```
+```javascript
+
+{ e: '123', f: 'true' }
+```
 
 ## 六、字符串
 
 字符串是最常见，也是最复杂的一种数据类型。
 
-字符串默认不使用引号表示。
+### 字符串默认不使用引号表示
 
-> ```javascript
-> 
-> str: 这是一行字符串
-> ```
+```javascript
 
-转为 JavaScript 如下。
-
-> ```javascript
-> 
-> { str: '这是一行字符串' }
-> ```
-
-如果字符串之中包含空格或特殊字符，需要放在引号之中。
-
-> ```javascript
-> 
-> str: '内容： 字符串'
-> ```
+str: 这是一行字符串
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { str: '内容: 字符串' }
-> ```
+```javascript
 
-单引号和双引号都可以使用，双引号不会对特殊字符转义。
+{ str: '这是一行字符串' }
+```
 
-> ```javascript
-> 
-> s1: '内容\n字符串'
-> s2: "内容\n字符串"
-> ```
+### 包含空格
+- 如果字符串之中包含空格或特殊字符，需要放在引号之中。
 
-转为 JavaScript 如下。
+```javascript
 
-> ```javascript
-> 
-> { s1: '内容\\n字符串', s2: '内容\n字符串' }
-> ```
-
-单引号之中如果还有单引号，必须连续使用两个单引号转义。
-
-> ```javascript
-> 
-> str: 'labor''s day' 
-> ```
+str: '内容： 字符串'
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { str: 'labor\'s day' }
-> ```
+```javascript
+{ str: '内容: 字符串' }
+```
 
-字符串可以写成多行，从第二行开始，必须有一个单空格缩进。换行符会被转为空格。
+### 转义
+- 单引号和双引号都可以使用，双引号不会对特殊字符转义。
+```javascript
 
-> ```javascript
-> 
-> str: 这是一段
->   多行
->   字符串
-> ```
+s1: '内容\n字符串'
+s2: "内容\n字符串"
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { str: '这是一段 多行 字符串' }
-> ```
+```javascript
+{ s1: '内容\\n字符串', s2: '内容\n字符串' }
+```
+
+- 单引号之中如果**还有单引号，必须连续使用两个单引号转义**。
+
+```javascript
+str: 'labor''s day' 
+```
+
+转为 JavaScript 如下。
+
+```javascript
+{ str: 'labor\'s day' }
+```
+
+### 多行
+- 字符串可以写成多行，从第二行开始，必须有一个单空格缩进。换行符会被转为空格。
+
+```javascript
+str: 这是一段
+多行
+字符串
+```
+
+转为 JavaScript 如下。
+
+```javascript
+
+{ str: '这是一段 多行 字符串' }
+```
 
 多行字符串可以使用`|`保留换行符，也可以使用`>`折叠换行。
 
-> ```javascript
-> 
-> this: |
->   Foo
->   Bar
-> that: >
->   Foo
->   Bar
-> ```
+```javascript
+
+this: |
+Foo
+Bar
+that: >
+Foo
+Bar
+```
 
 转为 JavaScript 代码如下。
 
-> ```javascript
-> 
-> { this: 'Foo\nBar\n', that: 'Foo Bar\n' }
-> ```
+```javascript
+
+{ this: 'Foo\nBar\n', that: 'Foo Bar\n' }
+```
 
 `+`表示保留文字块末尾的换行，`-`表示删除字符串末尾的换行。
 
-> ```javascript
-> 
-> s1: |
->   Foo
-> 
-> s2: |+
->   Foo
-> 
-> 
-> s3: |-
->   Foo
-> ```
+```javascript
+
+s1: |
+Foo
+
+s2: |+
+Foo
+
+
+s3: |-
+Foo
+```
 
 转为 JavaScript 代码如下。
 
-> ```javascript
-> 
-> { s1: 'Foo\n', s2: 'Foo\n\n\n', s3: 'Foo' }
-> ```
+```javascript
+
+{ s1: 'Foo\n', s2: 'Foo\n\n\n', s3: 'Foo' }
+```
 
 字符串之中可以插入 HTML 标记。
 
-> ```javascript
-> 
-> message: |
-> 
->   <p style="color: red">
->     段落
->   </p>
-> ```
+```javascript
+
+message: |
+
+<p style="color: red">
+段落
+</p>
+```
 
 转为 JavaScript 如下。
 
-> ```javascript
-> 
-> { message: '\n<p style="color: red">\n  段落\n</p>\n' }
-> ```
+```javascript
+
+{ message: '\n<p style="color: red">\n  段落\n</p>\n' }
+```
 
 ## 七、引用
 
 锚点`&`和别名`*`，可以用来引用。
 
-> ```javascript
-> 
-> defaults: &defaults
->   adapter:  postgres
->   host:     localhost
-> 
-> development:
->   database: myapp_development
->   <<: *defaults
-> 
-> test:
->   database: myapp_test
->   <<: *defaults
-> ```
+```javascript
+
+defaults: &defaults
+adapter:  postgres
+host:     localhost
+
+development:
+database: myapp_development
+<<: *defaults
+
+test:
+database: myapp_test
+<<: *defaults
+```
 
 等同于下面的代码。
 
-> ```javascript
-> 
-> defaults:
->   adapter:  postgres
->   host:     localhost
-> 
-> development:
->   database: myapp_development
->   adapter:  postgres
->   host:     localhost
-> 
-> test:
->   database: myapp_test
->   adapter:  postgres
->   host:     localhost
-> ```
+```javascript
+
+defaults:
+adapter:  postgres
+host:     localhost
+
+development:
+database: myapp_development
+adapter:  postgres
+host:     localhost
+
+test:
+database: myapp_test
+adapter:  postgres
+host:     localhost
+```
 
 `&`用来建立锚点（`defaults`），`<<`表示合并到当前数据，`*`用来引用锚点。
 
 下面是另一个例子。
 
-> ```javascript
-> 
-> - &showell Steve 
-> - Clark 
-> - Brian 
-> - Oren 
-> - *showell 
-> ```
+```javascript
+
+- &showell Steve 
+- Clark 
+- Brian 
+- Oren 
+- *showell 
+```
 
 转为 JavaScript 代码如下。
 
-> ```javascript
-> 
-> [ 'Steve', 'Clark', 'Brian', 'Oren', 'Steve' ]
-> ```
+```javascript
+
+[ 'Steve', 'Clark', 'Brian', 'Oren', 'Steve' ]
+```
 
 ## 八、函数和正则表达式的转换
 
 这是 [JS-YAML](https://github.com/nodeca/js-yaml) 库特有的功能，可以把函数和正则表达式转为字符串。
 
-> ```javascript
-> 
-> # example.yml
-> fn: function () { return 1 }
-> reg: /test/
-> ```
+```javascript
+
+# example.yml
+fn: function () { return 1 }
+reg: /test/
+```
 
 解析上面的 yml 文件的代码如下。
 
-> ```javascript
-> 
-> var yaml = require('js-yaml');
-> var fs   = require('fs');
-> 
-> try {
->   var doc = yaml.load(
->     fs.readFileSync('./example.yml', 'utf8')
->   );
->   console.log(doc);
-> } catch (e) {
->   console.log(e);
-> }
-> ```
+```javascript
+
+var yaml = require('js-yaml');
+var fs   = require('fs');
+
+try {
+var doc = yaml.load(
+fs.readFileSync('./example.yml', 'utf8')
+);
+console.log(doc);
+} catch (e) {
+console.log(e);
+}
+```
 
 从 JavaScript 对象还原到 yaml 文件的代码如下。
 
-> ```javascript
-> 
-> var yaml = require('js-yaml');
-> var fs   = require('fs');
-> 
-> var obj = {
->   fn: function () { return 1 },
->   reg: /test/
-> };
-> 
-> try {
->   fs.writeFileSync(
->     './example.yml',
->     yaml.dump(obj),
->     'utf8'
->   );
-> } catch (e) {
->   console.log(e);
-> }
-> ```
+```javascript
+
+var yaml = require('js-yaml');
+var fs   = require('fs');
+
+var obj = {
+fn: function () { return 1 },
+reg: /test/
+};
+
+try {
+fs.writeFileSync(
+'./example.yml',
+yaml.dump(obj),
+'utf8'
+);
+} catch (e) {
+console.log(e);
+}
+```
 
 
 
