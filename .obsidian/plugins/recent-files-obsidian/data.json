@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Helm chart",
+      "path": "运维相关/Helm chart.md"
+    },
+    {
       "basename": "docker 常用命令",
       "path": "运维相关/docker 常用命令.md"
     },
