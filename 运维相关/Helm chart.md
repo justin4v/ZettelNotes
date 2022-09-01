@@ -64,6 +64,13 @@ data:
 - gotemplate原生并没有提供太多方法，helm里面的许多方法来自这个库：[github.com/Masterminds…](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2FMasterminds%2Fsprig "https://github.com/Masterminds/sprig")
 - Helm 方法完整列表：[helm.sh/docs/chart_…](https://link.juejin.cn?target=https%3A%2F%2Fhelm.sh%2Fdocs%2Fchart_template_guide%2Ffunction_list%2F "https://helm.sh/docs/chart_template_guide/function_list/")
 
+### 常用函数
+其他常用函数
+- 指定默认值： `default`函数；
+-   缩进：`{{ .Values.resources | indent 12 }}`
+-   大写：`{{ upper .Values.resources }}`
+-   首字母大写：`{{ title .Values.resources }}`
+
 ### 管道
 - 管道是 go template 提供的一个强大的功能；
 - 借鉴UNIX中的管道操作(|)的概念。
@@ -81,7 +88,8 @@ data:
   food: {{ .Values.favorite.food | quote }}
 ```
 
-- 使用管道操作符(|)代替了原有的函数调用方式。与UNIX管道一样，模板的管道也支持链式操作：
+- 使用*管道操作符(|)代替了原有的函数调用*方式。
+- 与UNIX管道一样，模板的**管道也支持链式操作**：
 ```yaml
 apiVersion: v1
 kind: ConfigMap
@@ -92,10 +100,10 @@ data:
   drink: {{ .Values.favorite.drink | quote }}
   # 大写，然后双引号包裹
   food: {{ .Values.favorite.food | upper | quote }}
-复制代码
 ```
 
-在链式操作中，**管道左侧的值会作为管道右侧函数中的最后一个参数**，例如`repeat`函数的函数签名为`repeat COUNT STRING`，则可以这样使用管道传参：
+- 在链式操作中，**管道左侧的值会作为管道右侧函数中的最后一个参数**；
+- 例如 `repeat `函数的函数签名为 `repeat COUNT STRING`，则可以这样使用管道传参：
 
 ```yaml
 apiVersion: v1
@@ -107,16 +115,14 @@ data:
   # repeat 5 .Values.favorite.drink
   drink: {{ .Values.favorite.drink | repeat 5 | quote }}
   food: {{ .Values.favorite.food | upper | quote }}
-复制代码
 ```
-
-在编写Helm template时，建议优先使用管道来替代函数调用的方式。
+- *优先使用管道来替代函数调用*。
 
 ## 控制流程
 
 ### IF/ELSE
 
-if/else判断语句的语法如下：
+- if/else判断语句的语法如下：
 
 ```vbnet
 {{ if PIPELINE }}
