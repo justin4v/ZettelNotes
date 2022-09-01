@@ -12,9 +12,8 @@
 $ helm create mychart
 ```
 
-该命令会在当前目录下创建如下结构的文件夹：
-
-```
+- 在当前目录下创建如下结构的文件夹：
+```shell
 mychart
 ├── Chart.yaml
 ├── charts
@@ -29,10 +28,11 @@ mychart
 │   └── tests
 │       └── test-connection.yaml
 └── values.yaml
-复制代码
 ```
 
--   `templates/` 目录下是模板文件，当Helm需要生成chart的时，会渲染该目录下的模板文件，将渲染结果发送给kubernetes。
+-   `templates/` 目录下是模板文件：
+	- **核心，是模板化的 K8S manifests 文件**；
+	- 当 Helm 需要生成 chart 的时，会**渲染该目录下的模板文件**，将**渲染结果发送给 kubernetes**。
 -   `values.yaml` 文件保存模板的默认值，用户可以在`helm install` 或者 `helm upgrade`可以指定新的值来覆盖默认值。
 -   `Chart.yaml`文件保存chart的基本描述信息，这些描述信息也可以在模板中被引用。
 -   `_helper.tpl` 用于保存一些可以在该chart中复用的模板。
