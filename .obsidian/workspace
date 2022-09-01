@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "运维相关/K8s/K8s Chart.md",
+            "file": "运维相关/Helm chart.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "运维相关/K8s/K8s Chart.md",
+                "file": "运维相关/Helm chart.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "运维相关/K8s/K8s Chart.md"
+                "file": "运维相关/Helm chart.md"
               }
             }
           },
@@ -127,8 +127,8 @@
   },
   "active": "12c2e2769deea195",
   "lastOpenFiles": [
-    "运维相关/Helm chart.md",
     "运维相关/K8s/K8s Chart.md",
+    "运维相关/Helm chart.md",
     "Medical/工作流程理解.md",
     "Mindmap/IO模型导图.svg",
     "OS/基础概念/3.线程模型.md",
