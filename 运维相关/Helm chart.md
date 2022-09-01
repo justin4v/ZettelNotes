@@ -438,7 +438,9 @@ data:
 
 ```
 
-在以上例子中，我们使用`.Files.Glob`函数来获取所有符合 `*.yaml` pattern的文件，然后调用`AsConfig`方法输出以文件名称为key,文件内容为value的`yaml`格式，注意使用`indent`来增加合适的缩进以保证`yaml`文件的语法正确性，在本例中使用`ident 2`来缩进两个空格。 `AsSecret`的用法是类似的：
+- 使用`.Files.Glob`函数来获取所有符合 `*.yaml` pattern的文件；
+- 调用 `AsConfig` 方法输出以文件名称为 key，文件内容为value的 `yaml` 格式；
+- 注意使用`indent`来增加合适的缩进以*保证`yaml`文件的语法正确性*，在本例中使用`ident 2`来缩进两个空格。 `AsSecret`的用法是类似的：
 
 ```makefile
 apiVersion: v1
@@ -447,7 +449,6 @@ metadata:
   name: {{ .Release.Name }}-config
 data:
 {{(.Files.Glob "*.yaml").AsSecrets | indent 2 }}
-复制代码
 ```
 
 渲染结果:
