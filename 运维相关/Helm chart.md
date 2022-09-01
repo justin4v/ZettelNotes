@@ -440,7 +440,8 @@ data:
 
 - 使用`.Files.Glob`函数来获取所有符合 `*.yaml` pattern的文件；
 - 调用 `AsConfig` 方法输出以文件名称为 key，文件内容为value的 `yaml` 格式；
-- 注意使用`indent`来增加合适的缩进以*保证`yaml`文件的语法正确性*，在本例中使用`ident 2`来缩进两个空格。 `AsSecret`的用法是类似的：
+- 注意使用`indent`来增加合适的缩进以*保证`yaml`文件的语法正确性*，在本例中使用`ident 2`来缩进两个空格。
+- `AsSecret`的用法是类似的：
 
 ```makefile
 apiVersion: v1
@@ -461,38 +462,35 @@ metadata:
 data:
   bar.yaml: YmFyOiB0cnVlCmZpbGVOYW1lOiBiYXIueWFtbA==
   foo.yaml: Zm9vOiB0cnVlCmZpbGVOYW1lOiBmb28ueWFtbA==
-复制代码
 ```
 
 > 更多文件处理方法请参考文档：[helm.sh/docs/chart_…](https://link.juejin.cn?target=https%3A%2F%2Fhelm.sh%2Fdocs%2Fchart_template_guide%2Faccessing_files%2F "https://helm.sh/docs/chart_template_guide/accessing_files/")
 
 # 模板引用/嵌套
 
-模板嵌套允许我们在一个模板中去引入另一个模板，我们可以将可以复用的模板单独抽离，在使用时再引入。例如我们希望所有发布的资源都包含一组相同的label，这时候我们不需要在每种资源（例如deployment，service，configmap ....）的模板中复制粘贴label的模板代码，而可以将渲染label的模板单独定义，然后在各资源模板中引用即可。下面我们通过一个示例来说明如何引用模板。
+- 模板嵌套允许我们在一个模板中去引入另一个模板；
+- 可以将可以复用的模板单独抽离，在使用时再引入。
+- 例如我们希望所有发布的资源都包含一组相同的label，不需要在每种资源（例如deployment，service，configmap ....）的模板中复制粘贴label的模板代码，而可以**将渲染label的模板单独定义，然后在各资源模板中引用即可**。
+- 下面我们通过一个示例来说明如何引用模板。
 
 在示例之前，我们先要了解一下Helm的文件命名约定：
 
--   `template/` 中的大多数文件都被视为Kubernetes资源清单(会被发往Kubernetes创建对应资源)
--   `NOTES.txt`是个例外
--   名称以下划线（_） 开头的文件不会被当做资源发往Kubernetes，但是可以被其他模板所引用。
-
-这些下划线开头的文件用于定义局部模板。 实际上，当我们第一次创建mychart时，我们看到了一个名为_helpers.tpl的文件。 该文件是模板局部文件的默认位置。
-
-`helm create mychart`所创建的默认模板中，已经为我们提供了一套局部模板，下面就以默认模板为例，演示如何引用模板。
+-  `template/` 中的大多数文件都被视为 Kubernetes 资源清单(会被发往Kubernetes创建对应资源)
+-  `NOTES.txt`是个例外
+-  名称以下划线 `__` 开头的文件不会被当做资源发往Kubernetes，但是可以被其他模板所引用。
+- **下划线开头的文件用于定义局部模板**。 实际上，当第一次创建mychart时，有一个名为_helpers.tpl的文件。 该文件是模板局部文件的默认位置。
+- `helm create mychart`所创建的默认模板中，已经为我们提供了一套局部模板，下面就以默认模板为例，演示如何引用模板。
 
 ## 定义模板
 
-使用`{{ define}}...{{end}}`可以定义模板：
-
+- 使用`{{ define}}...{{end}}`可以定义模板：
 ```arduino
 {{ define "MY.NAME" }}
   # body of template here
 {{ end }}
-复制代码
 ```
 
-例如在`_helpers.tpl`中，Helm定义了一些模板，以Kubernetes资源label为例：
-
+- 例如在`_helpers.tpl`中，Helm定义了一些模板，以Kubernetes资源label为例：
 ```lua
 ...
 {{- define "mychart.labels" -}}
@@ -504,7 +502,6 @@ app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 ...
-复制代码
 ```
 
 使用`{{ include 模板名称}}`引用模板，在`deployment.yaml`中有：
@@ -516,10 +513,9 @@ metadata:
   name: {{ include "mychart.fullname" . }}
   # include引用mychart.labels
   labels:{{ include "mychart.labels" . | nindent 4 }}
-复制代码
 ```
 
-要注意的是，在使用`define`定义模板的时候，不要给模板加缩进，而是在使用`include`引用的时候搭配`nindent`或者是`indent`来缩进。`nindent`和`indent`方法类似，不过`nindent`会在最开始的地方增加一个空行，如果使用`indent`，则上面的模板可以写成：
+- 要注意的是，在使用`define`定义模板的时候，不要给模板加缩进，而是在使用`include`引用的时候搭配`nindent`或者是`indent`来缩进。`nindent`和`indent`方法类似，不过`nindent`会在最开始的地方增加一个空行，如果使用`indent`，则上面的模板可以写成：
 
 ```makefile
 apiVersion: apps/v1
