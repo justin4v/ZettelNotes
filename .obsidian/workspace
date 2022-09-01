@@ -118,14 +118,13 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 238,
-    "collapsed": true
+    "width": 238
   },
-  "active": "12c2e2769deea195",
+  "active": "0c976a4cc7df6d7c",
   "lastOpenFiles": [
     "运维相关/K8s/K8s Chart.md",
     "运维相关/Helm chart.md",
