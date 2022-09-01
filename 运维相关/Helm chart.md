@@ -33,15 +33,13 @@ mychart
 -   `templates/` 目录下是模板文件：
 	- **核心，是模板化的 K8S manifests 文件**；
 	- 当 Helm 需要生成 chart 的时，会**渲染该目录下的模板文件**，将**渲染结果发送给 kubernetes**。
--   `values.yaml` 文件保存模板的默认值，用户可以在`helm install` 或者 `helm upgrade`可以指定新的值来覆盖默认值。
--   `Chart.yaml`文件保存chart的基本描述信息，这些描述信息也可以在模板中被引用。
--   `_helper.tpl` 用于保存一些可以在该chart中复用的模板。
+-   `values.yaml` 文件保存 **template 的默认配置**：
+	- 用户可修改；
+	- 或在 `helm install` 或者 `helm upgrade`可以指定新的 **values.yaml** 来覆盖默认值。
+-   `Chart.yaml`文件保存chart的**基本描述信息**，这些描述信息也可以在模板中被引用。
+-   `_helper.tpl` 用于保存一些可以在该chart中复用的函数。
 
-  
-作者：水立方  
-链接：https://juejin.cn/post/6844904199818313735  
-来源：稀土掘金  
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 
 # template
 -   模板渲染**本质就是一种字符串替换**,一种高级的字符串替换.
