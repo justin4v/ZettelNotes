@@ -101,29 +101,27 @@ hash: { name: Steve, foo: bar }
 对象和数组可以结合使用，形成复合结构。
 
 ```javascript
-
 languages:
-- Ruby
-- Perl
-- Python 
+ - Ruby
+ - Perl
+ - Python 
 websites:
-YAML: yaml.org 
-Ruby: ruby-lang.org 
-Python: python.org 
-Perl: use.perl.org 
+ YAML: yaml.org 
+ Ruby: ruby-lang.org 
+ Python: python.org 
+ Perl: use.perl.org 
 ```
 
 转为 JavaScript 如下。
 
 ```javascript
-
 { languages: [ 'Ruby', 'Perl', 'Python' ],
-websites: 
-{ YAML: 'yaml.org',
-Ruby: 'ruby-lang.org',
-Python: 'python.org',
-Perl: 'use.perl.org' } }
-```
+  websites: 
+   { YAML: 'yaml.org',
+     Ruby: 'ruby-lang.org',
+     Python: 'python.org',
+     Perl: 'use.perl.org' } }
+
 
 ## 五、纯量
 
@@ -174,7 +172,6 @@ parent: ~
 转为 JavaScript 如下。
 
 ```javascript
-
 { parent: null }
 ```
 
@@ -284,115 +281,107 @@ str: 'labor''s day'
 
 ```javascript
 str: 这是一段
-多行
-字符串
+ 多行
+ 字符串
 ```
 
 转为 JavaScript 如下。
 
 ```javascript
-
 { str: '这是一段 多行 字符串' }
 ```
-
-多行字符串可以使用`|`保留换行符，也可以使用`>`折叠换行。
+- 多行字符串可以**用`|`保留换行符**，也可以**用`>`折叠换行**。
 
 ```javascript
-
 this: |
-Foo
-Bar
+  Foo
+  Bar
 that: >
-Foo
-Bar
+  Foo
+  Bar
 ```
 
 转为 JavaScript 代码如下。
-
 ```javascript
-
 { this: 'Foo\nBar\n', that: 'Foo Bar\n' }
 ```
 
-`+`表示保留文字块末尾的换行，`-`表示删除字符串末尾的换行。
+- **`+`表示保留文字块末尾的换行**；
+- **`-`表示删除字符串末尾的换行**。
 
 ```javascript
-
 s1: |
-Foo
+  Foo
 
 s2: |+
-Foo
+  Foo
 
 
 s3: |-
-Foo
+  Foo
 ```
+
 
 转为 JavaScript 代码如下。
 
 ```javascript
-
 { s1: 'Foo\n', s2: 'Foo\n\n\n', s3: 'Foo' }
 ```
 
-字符串之中可以插入 HTML 标记。
+### HTML
+- 字符串之中可以插入 HTML 标记。
 
 ```javascript
-
 message: |
 
-<p style="color: red">
-段落
-</p>
+  <p style="color: red">
+    段落
+  </p>
 ```
 
 转为 JavaScript 如下。
 
 ```javascript
-
 { message: '\n<p style="color: red">\n  段落\n</p>\n' }
 ```
 
 ## 七、引用
 
-锚点`&`和别名`*`，可以用来引用。
+- 锚点`&`和别名`*`，可以用来引用。
 
 ```javascript
-
 defaults: &defaults
-adapter:  postgres
-host:     localhost
+  adapter:  postgres
+  host:     localhost
 
 development:
-database: myapp_development
-<<: *defaults
+  database: myapp_development
+  <<: *defaults
 
 test:
-database: myapp_test
-<<: *defaults
+  database: myapp_test
+  <<: *defaults
 ```
 
 等同于下面的代码。
 
 ```javascript
-
 defaults:
-adapter:  postgres
-host:     localhost
+  adapter:  postgres
+  host:     localhost
 
 development:
-database: myapp_development
-adapter:  postgres
-host:     localhost
+  database: myapp_development
+  adapter:  postgres
+  host:     localhost
 
 test:
-database: myapp_test
-adapter:  postgres
-host:     localhost
+  database: myapp_test
+  adapter:  postgres
+  host:     localhost
 ```
 
-`&`用来建立锚点（`defaults`），`<<`表示合并到当前数据，`*`用来引用锚点。
+- `&`用来建立锚点（`defaults`），`<<`表示合并到当前数据，`*`用来引用锚点。
 
 下面是另一个例子。
 
@@ -417,7 +406,6 @@ host:     localhost
 这是 [JS-YAML](https://github.com/nodeca/js-yaml) 库特有的功能，可以把函数和正则表达式转为字符串。
 
 ```javascript
-
 # example.yml
 fn: function () { return 1 }
 reg: /test/
@@ -426,40 +414,38 @@ reg: /test/
 解析上面的 yml 文件的代码如下。
 
 ```javascript
-
 var yaml = require('js-yaml');
 var fs   = require('fs');
 
 try {
-var doc = yaml.load(
-fs.readFileSync('./example.yml', 'utf8')
-);
-console.log(doc);
+  var doc = yaml.load(
+    fs.readFileSync('./example.yml', 'utf8')
+  );
+  console.log(doc);
 } catch (e) {
-console.log(e);
+  console.log(e);
 }
 ```
 
 从 JavaScript 对象还原到 yaml 文件的代码如下。
 
 ```javascript
-
 var yaml = require('js-yaml');
 var fs   = require('fs');
 
 var obj = {
-fn: function () { return 1 },
-reg: /test/
+  fn: function () { return 1 },
+  reg: /test/
 };
 
 try {
-fs.writeFileSync(
-'./example.yml',
-yaml.dump(obj),
-'utf8'
-);
+  fs.writeFileSync(
+    './example.yml',
+    yaml.dump(obj),
+    'utf8'
+  );
 } catch (e) {
-console.log(e);
+  console.log(e);
 }
 ```
 
