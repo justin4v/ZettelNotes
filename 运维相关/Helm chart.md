@@ -366,14 +366,11 @@ e.g:
 ## Values
 
 用于渲染模板的变量，如`values.yaml` 文件中的变量，以及用户部署时指定的变量。（-set, -f）。
-- `Values`对象是为`Chart`模板提供值，这个对象的值有`4`个来源
--   `chart`包中的`values.yaml`文件
-    
--   父`chart`包的`values.yaml`文件
-    
--   通过`helm install`或者`helm upgrade`的 `-f`或者 `--values`参数传入的自定义的`yaml`文件
-    
--   通过 `--set` 参数传入的值
+- `Values`对象的值有`4`个来源，**优先级由低到高**：
+	 1. `chart`包中的`values.yaml`文件
+	 2. 父`chart`包的`values.yaml`文件 
+	 3. 通过`helm install`或者`helm upgrade`的 `-f`或者 `--values`参数传入的自定义的`yaml`文件
+	 4. 通过 `--set` 参数传入的值
 
 ## Chart
 
