@@ -366,6 +366,14 @@ e.g:
 ## Values
 
 用于渲染模板的变量，如`values.yaml` 文件中的变量，以及用户部署时指定的变量。（-set, -f）。
+- `Values`对象是为`Chart`模板提供值，这个对象的值有`4`个来源
+-   `chart`包中的`values.yaml`文件
+    
+-   父`chart`包的`values.yaml`文件
+    
+-   通过`helm install`或者`helm upgrade`的 `-f`或者 `--values`参数传入的自定义的`yaml`文件
+    
+-   通过 `--set` 参数传入的值
 
 ## Chart
 
@@ -504,8 +512,8 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 ...
 ```
 
-使用`{{ include 模板名称}}`引用模板，在`deployment.yaml`中有：
-
+- **使用`{{ include 模板名称}}`引用模板**，在`deployment.yaml`中有：
+- `template` 指令也可以将一个模板包含在另一个模板中的方法。但是，`template`函数不能用于`Go`模板管道。
 ```makefile
 apiVersion: apps/v1
 kind: Deployment
@@ -515,7 +523,10 @@ metadata:
   labels:{{ include "mychart.labels" . | nindent 4 }}
 ```
 
-- 要注意的是，在使用`define`定义模板的时候，不要给模板加缩进，而是在使用`include`引用的时候搭配`nindent`或者是`indent`来缩进。`nindent`和`indent`方法类似，不过`nindent`会在最开始的地方增加一个空行，如果使用`indent`，则上面的模板可以写成：
+- 要注意的是，**在`define`定义模板的时候，不要给模板加缩进**；
+- 而是在使用`include`引用的时候搭配`nindent`或者是`indent`来缩进。
+- `nindent`和`indent`方法类似，不过`nindent`会在最开始的地方增加一个空行；
+- 如果使用`indent`，则上面的模板可以写成：
 
 ```makefile
 apiVersion: apps/v1
@@ -524,7 +535,6 @@ metadata:
   name: {{ include "mychart.fullname" . | indent 2}}
   labels:
 {{ include "mychart.labels" . | indent 4 }}
-复制代码
 ```
 
 # 附录：常用命令
@@ -621,13 +631,7 @@ helm install mychart --debug --dry-run./mychart
 复制代码
 ```
 
-# 参考
 
-  
-作者：水立方  
-链接：https://juejin.cn/post/6844904199818313735  
-来源：稀土掘金  
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
 # 参考
 1. [Helm template快速入门 ](https://juejin.cn/post/6844904199818313735#heading-0)
