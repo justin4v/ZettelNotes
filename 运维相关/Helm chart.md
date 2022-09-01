@@ -123,8 +123,7 @@ data:
 ### IF/ELSE
 
 - if/else判断语句的语法如下：
-
-```vbnet
+```go
 {{ if PIPELINE }}
   # Do something
 {{ else if OTHER PIPELINE }}
@@ -132,20 +131,17 @@ data:
 {{ else }}
   # Default case
 {{ end }}
-复制代码
 ```
 
-当`PIPELINE`值为以下内容，判定为`false`：
+- **当表达式值为以下内容，判定为`false`**：
+	-  *布尔值false*
+	-  *数字0*
+	-  *空字符串*
+	-  *nil*
+	-  *空集合（map,数组）*
 
--   布尔值false
--   数字零
--   一个空字符串
--   nil
--   空的集合（map,数组）
-
-下列模板将判断如果`.Values.favorite.drink == "coffee"`则新增`mug: true`。
-
-```vbnet
+- 下列模板中如果`.Values.favorite.drink == "coffee"`则新增`mug: true`。
+```go
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -155,35 +151,37 @@ data:
   drink: {{ .Values.favorite.drink | default "tea" | quote }}
   food: {{ .Values.favorite.food | upper | quote }}
   {{ if eq .Values.favorite.drink "coffee" }}mug: true{{ end }}
-复制代码
 ```
 
 ### With
-
-```sql
+```go
 {{ with PIPELINE }}
   # with声明的作用域
 {{ end }}
-复制代码
+
 ```
 
-`with`用于更改当前作用域(`.`)。上文提到在`{{ .Release.Name }}`中，最左边的（`.`）表示当前作用域下的顶层命名空间，`.Values`告诉模板在当前作用域范围的顶层命名空间下查找`Values`对象。使用`with`可以改变模板变量的当前作用域，把（`.`）赋值给另一个对象：
+- `with`用于更改当前作用域(`.`)。
+- 在`{{ .Release.Name }}`中，最左边的（`.`）表示当前作用域下的顶层命名空间;
+- `.Values`告诉模板在当前作用域范围的顶层命名空间下查找`Values`对象。
+- 使用`with`可以改变模板变量的当前作用域，把（`.`）赋值给另一个对象：
 
-```vbnet
+```yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-configmap
 data:
   myvalue: "Hello World"
+  # 修改当前作用域为 .Values.favorite
+  # 
   {{- with .Values.favorite }}
   drink: {{ .drink | default "tea" | quote }}
   food: {{ .food | upper | quote }}
   {{- end }}
-复制代码
 ```
 
-在上面的例子中，在`with`的作用范围内（`{- with .xxxx}` 到 `{{- end}}`之间）可以直接引用`.drink`和`.food`，这是因为`{{- with .Values.favorite}}`把`Values.favorite`赋值给了当前作用域(`.`)。
+- 在上面的例子中，在`with`的作用范围内（`{- with .xxxx}` 到 `{{- end}}`之间）可以直接引用`.drink`和`.food`，这是因为`{{- with .Values.favorite}}`把`Values.favorite`赋值给了当前作用域(`.`)。
 
 ### range
 
