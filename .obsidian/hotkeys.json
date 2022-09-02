@@ -90,5 +90,15 @@
       ],
       "key": "F"
     }
+  ],
+  "obsidian-excalidraw-plugin:insert-link": [],
+  "editor:toggle-blockquote": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
+    }
   ]
 }
