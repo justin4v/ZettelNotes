@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "yaml",
+                "query": "reduce",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -133,7 +134,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "12c2e2769deea195",
+  "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
     "Framework/Springboot/优秀实践/yaml 如何配置 list map等复杂结构.md",
     "运维相关/Helm chart.md",
