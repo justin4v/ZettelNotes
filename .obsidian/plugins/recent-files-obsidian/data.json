@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Yaml 简介",
+      "path": "Tool/Yaml/Yaml 简介.md"
+    },
+    {
+      "basename": "Dockerfile",
+      "path": "运维相关/Docker/Dockerfile.md"
+    },
+    {
       "basename": "Helm chart",
       "path": "运维相关/Helm chart.md"
     },

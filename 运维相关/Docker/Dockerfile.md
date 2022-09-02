@@ -11,6 +11,14 @@
 docker build -f /path/to/a/Dockerfile
 ```
 
+## 作用
+- 镜像的定制实际上就是定制每一层所添加的配置、文件。
+- 如果我们可以把每一层修改、安装、构建、操作的命令都写入一个脚本，用这个脚本来构建、定制镜像，那么之前提及的无法重复的问题、镜像构建透明性的问题、体积的问题就都会解决。这个脚本就是 Dockerfile。
+
+- Dockerfile 是一个文本文件，其内包含了一条条的 **指令(Instruction)**；
+- 每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。
+
+
 # Dockerfile的基本结构
 
 Dockerfile 一般分为四部分：
@@ -50,7 +58,7 @@ Dockerfile 一般分为四部分：
 -   `CMD command param1 param2` 在 `/bin/sh` 中执行，提供给需要交互的应用；
 -   `CMD ["param1","param2"]` 提供给 `ENTRYPOINT` 的默认参数；
 
-- 指定启动容器时执行的命令，每个 Dockerfile 只能有一条 `CMD` 命令。
+- 指定启动容器时执行的命令，**每个 Dockerfile 只能有一条 `CMD` 命令**。
 - 如果指定了多条命令，只有最后一条会被执行。
 - 如果用户启动容器时候指定了运行的命令，则会覆盖掉 `CMD` 指定的命令。
 
@@ -161,3 +169,4 @@ $ sudo docker build -t myrepo/myapp /tmp/test1/
 
 # 参考
 1. [Dockerfile文件详解](https://www.cnblogs.com/panwenbin-logs/p/8007348.html)
+2. [使用 Dockerfile 定制镜像 · Docker](https://docker-practice.github.io/zh-cn/image/build.html)
