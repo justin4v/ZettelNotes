@@ -159,7 +159,10 @@ public V get() throws InterruptedException， ExecutionException {
 
 # Callback（回调式Future）
 
-- Future 模式，最麻烦的地方是需要手动获取对应的值，这个过程并且是阻塞操作，有时候的业务并不怎么关心值什么时候被计算出来，只关心计算出来后后续要做哪些操作，因此一种改进策略就是利用回调方式(Callback)实现后续逻辑。 以guava中`FutureCallback`为例，其接口定义如下：
+- Future 模式需要手动获取对应的值，且是阻塞操作;
+- 有时候的业务并不怎么关心值什么时候被计算出来，*只关心计算出来后后续要做哪些操作*;
+- 一种改进策略就是利用**回调方式(Callback)实现后续逻辑**。 
+- 以 guava 的 `FutureCallback` 为例，其接口定义如下：
 
 ```java
 public interface FutureCallback<V> {
@@ -170,7 +173,12 @@ public interface FutureCallback<V> {
 }
 ```
 
-该接口本身是一个业务处理，可以使用`Futures#addCallback`添加到Future当中。Callback的实现原理可以的想到在对应的`Future`中维护一个`Callback`链表，当任务执行完成后依次执行对应的回调，类似于[观察者模式](https://mrdear.cn/2018/04/20/experience/design_patterns--observer/)的`Subject`依次调用`Observer`。 `Callback`很好的解决了`Future`手动调用get所带来的阻塞与不便。因为在值算出来时自动调用后续处理因此不存在阻塞操作。但是在业务后续操作很多时，其存在一个嵌套的问题，俗称回调地狱，[这一点在JS中经常遇到](https://zhuanlan.zhihu.com/p/29783901)：
+- 该接口本身是一个业务处理，可以使用 guava 的 `Futures#addCallback` 添加到Future当中。
+- Callback 的实现原理是：
+	1. 在对应的 `Future` 中维护一个 `Callback` 链表；
+	2. 当任务执行完成后依次执行对应的回调，类似于[观察者模式](https://mrdear.cn/2018/04/20/experience/design_patterns--observer/)的`Subject`依次调用`Observer`。 
+- `Callback` 很好的解决了 `Future` 手动 `get` 所带来的阻塞与不便。
+- 因为在值算出来时自动调用后续处理因此不存在阻塞操作。但是在业务后续操作很多时，其存在一个嵌套的问题，俗称回调地狱，[这一点在JS中经常遇到](https://zhuanlan.zhihu.com/p/29783901)：
 
 ```javascript
 api.getItem(1)
