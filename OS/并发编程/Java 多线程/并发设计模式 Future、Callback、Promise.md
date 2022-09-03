@@ -161,7 +161,7 @@ public V get() throws InterruptedException， ExecutionException {
 
 - Future 模式需要手动获取对应的值，且是阻塞操作;
 - 有时候的业务并不怎么关心值什么时候被计算出来，*只关心计算出来后后续要做哪些操作*;
-- 一种改进策略就是利用**回调方式(Callback)实现后续逻辑**。 
+- 一种改进策略就是利用**回调方式(Callback) 实现后续逻辑**。 
 - 以 guava 的 `FutureCallback` 为例，其接口定义如下：
 
 ```java
@@ -177,7 +177,7 @@ public interface FutureCallback<V> {
 - Callback 的实现原理是：
 	1. 在对应的 `Future` 中维护一个 `Callback` 链表；
 	2. 当任务执行完成后依次执行对应的回调，类似于[观察者模式](https://mrdear.cn/2018/04/20/experience/design_patterns--observer/)的`Subject`依次调用`Observer`。 
-- `Callback` 很好的解决了 `Future` 手动 `get` 所带来的阻塞与不便。
+- `Callback` 很好的解决了 `Future` 手动 `get()` 所带来的阻塞与不便。
 - 因为在值算出来时自动调用后续处理，不存在阻塞操作。
 - 但是在业务后续操作很多时，可能存在一个 **多个callback 嵌套的问题，俗称回调地狱**，[这一点在JS中经常遇到](https://zhuanlan.zhihu.com/p/29783901)：
 
@@ -221,8 +221,8 @@ api.getItem(1)
 - JDK 中提供了 `CompletableFuture` 类，用于实现 Promise 模式编程;
 - 下面代码展示了其可以主动完成任务的能力，假如异步任务会导致线程无限休眠，仍然*可以通过主动设置值的方式完成该任务*。
 - 这一特性可以很好的在**两个线程中交换数据使用**：
-	- 举个例子在一些 RPC 框架中，客户端在对应的 `Handler` 中发出来 `RPCRequest` 后，创建一个 `Request Promise` 放入到**全局 Map（队列、缓存）** 中，然后*阻塞获取响应结果*；
-	- 在 `RPCResponse` 异步返回的线程中从 Map 中取出 `Promise`，然后**主动把 response 结果设置进去**，对于使用方来说就像是同步完成了一次调用。
+	- 举个例子在一些 RPC 框架中，客户端在对应的 `Handler` 中向远端发出 `RPCRequest` 后，创建一个 `Request Promise` 放入到**全局 Map（队列、缓存）** 中，然后*阻塞获取响应结果*；
+	- 在 `RPCResponse` 异步返回的线程中从 Map 中取出 `Promise`，然后**主动把 response 结果设置进去**，对于使用方来说就像是*同步完成了一次调用*。
 
 **Promise主动完成任务能力**
 ```java
@@ -238,9 +238,13 @@ CompletableFuture<String> promise = CompletableFuture.supplyAsync(() -> {
    System.out.println(promise.get()); // 输出quding2
 ```
 
-`Promise`对于Callback的改进是把每一个Callback封装成一个`Stage`阶段，所有的`Stage`之间使用单链表关联，因此当完成时启动整个链表链路即可。这是一种常用的打散嵌套调用的一种做法，比如Java8的Stream也是类似的做法，详细的可以参考之前写的Stream分析文章。[Java8知识点](https://mrdear.cn/tags/java8/)
+- `Promise` 对于 Callback 的改进是：
+	- **把每一个 Callback 封装成一个 `Stage` 阶段**；
+	- 所有的`Stage`之间使用单链表关联，因此*当任务完成准备回调时启动整个链表链路即可*。
+	- 这是一种常用的打散嵌套调用的一种做法，比如 Java8 的 Stream 也是类似的做法；
 
-**清单10：Promise对于Callback的优化**
+
+**Promise对于Callback的优化**
 
 ```javascript
 CountDownLatch latch = new CountDownLatch(1);
@@ -267,4 +271,10 @@ CountDownLatch latch = new CountDownLatch(1);
 
 ## 总结
 
-由于篇幅过长，因此原本打算加入的Netty相关内容被去掉了，后续会分析Netty相关的实现机制。另外三种模式中，`Future`是核心也是最基础的一种模式，`Callback`，`Promise`都是一种优化手段，一般业务上使用`Promise`就可以了，其包含了前两者的全部功能。
+- 三种模式中，`Future`是核心也是最基础的一种模式；
+- `Callback`，`Promise`都是一种优化手段，
+- 一般业务上使用`Promise`就可以了，其包含了前两者的全部功能。
+
+# 参考
+1. [Java8知识点](https://mrdear.cn/tags/java8/)
+2. [并行设计模式--Future、Callback、Promise](https://cloud.tencent.com/developer/article/1347628)
