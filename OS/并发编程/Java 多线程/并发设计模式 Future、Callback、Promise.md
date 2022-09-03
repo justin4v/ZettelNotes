@@ -1,17 +1,22 @@
 #Java基础 #Concurrent #Todo 
 
-## Java中的线程
+# Java中的线程
 
 - Java 中创建线程有哪些方式，大多数回答是 `Thread，Runnable，Callable`，然而这是错误的回答。
 - Java 代码**提供给用户创建线程的方式只有 `Thread`**；
-- `Runnable` 只是代表提交给 `Thread` 执行的任务， `Thread` 只会执行其对应的 `run` 方法;
-- 最后 `Callable` 是一个辅助接口，`Thread`  并不会执行其对应的call方法，所以`Callable`通常情况下需要与`Runnable`一起使用，然后在对应的run()方法中调用call()的方法。 理解这一点对接下来的内容很有帮助。
+- `Runnable` 只是**代表提交给 `Thread` 执行的任务**， `Thread` 只会执行其对应的 `run` 方法;
+- `Callable` 是一个辅助接口;
+	- `Thread`  并不会执行其对应的 `call` 方法;
+	- `Callable` 通常需要与 `Runnable` 一起使用，在 `Runnable` 的 `run()` 方法中调用 `Callable` 的 `call()` 的方法。 
 
-## Future模式
+# Future模式
+- Future 是并发当中经常用到的一种设计模式；
+- 核心思想是**异步执行，同步返回（主动查询执行结果）**。
+	1. 把耗时操作放到异步线程中执行；
+	2. 然后在获取结果时判断是否执行完，执行完则直接返回结果，**没执行完则阻塞等到返回**；
+	3. 这是 future 模式的一般做法，目的是**充分利用等待时间**。
 
-**Future模式**是并发当中经常用到的一种设计模式，它的核心思想是**异步执行，同步返回**。把耗时操作放到异步线程中执行，然后再获取结果时判断是否执行完，执行完则直接返回结果，没执行完则阻塞等到返回，这是future模式的一般做法，目的是**充分利用等待时间**
-
-### JDK Future模式的使用
+## JDK Future模式的使用
 
 以JDK中的`Future`接口为例，可以发现`Future`是一个read-only 的结构，一旦任务被提交除了取消任务外就不可以改变任务，这一点也是Future模式与其他模式的重要区别。
 
