@@ -2,7 +2,10 @@
 
 ## Java中的线程
 
-- Java 中创建线程有哪些方式，大多数回答是`Thread，Runnable，Callable`，然而这是错误的回答。Java代码提供给用户创建线程的方式只有`Thread`，而`Runnable`只是提交给线程执行的任务，线程`Thread`也只会执行其对应的run方法，最后`Callable`是一个辅助接口，线程并不会执行其对应的call方法，所以`Callable`通常情况下需要与`Runnable`一起使用，然后在对应的run()方法中调用call()的方法。 理解这一点对接下来的内容很有帮助。
+- Java 中创建线程有哪些方式，大多数回答是 `Thread，Runnable，Callable`，然而这是错误的回答。
+- Java 代码**提供给用户创建线程的方式只有 `Thread`**；
+- `Runnable` 只是代表提交给 `Thread` 执行的任务， `Thread` 只会执行其对应的 `run` 方法;
+- 最后 `Callable` 是一个辅助接口，`Thread`  并不会执行其对应的call方法，所以`Callable`通常情况下需要与`Runnable`一起使用，然后在对应的run()方法中调用call()的方法。 理解这一点对接下来的内容很有帮助。
 
 ## Future模式
 
