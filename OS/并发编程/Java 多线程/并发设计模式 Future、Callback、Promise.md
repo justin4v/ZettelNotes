@@ -18,7 +18,9 @@
 
 ## JDK Future模式的使用
 
-以JDK中的`Future`接口为例，可以发现`Future`是一个read-only 的结构，一旦任务被提交除了取消任务外就不可以改变任务，这一点也是Future模式与其他模式的重要区别。
+- 以JDK中的`Future`接口为例， `Future` 是一个 **read-only 的结构**：
+	- 一旦任务被提交，**除了取消任务外不可以改变任务（没有改变的接口）**；
+- 这也是Future模式与其他模式的重要区别。
 
 清单1：JDK中的Future接口
 ```java
@@ -39,8 +41,9 @@ public interface Future<V> {
 }
 ```
 
-
-Future模式在JDK中一般如下方式使用，主要步骤是创建对应的异步任务，然后需要结果时主动调用get方法
+### 使用示例
+- Future 模式在JDK中一般如下方式使用；
+- 主要步骤是创建对应的异步任务，然后需要结果时主动调用 get 方法。
 
 ```java
 private static ExecutorService executorService = Executors.newCachedThreadPool();
@@ -59,13 +62,15 @@ public static void main(String[] args) throws InterruptedException, TimeoutExcep
 }
 ```
 
-不考虑其他因素，上面代码主线程中逻辑需要1000毫秒，同时任务执行也需要1000毫秒，两者利用`FutureTask`并行执行，因此总耗时也是1000毫秒，这是`FutureTask`带来的最直观的效果：**增加系统的并发性，减少不必要的等待**。
+- 不考虑其他因素，代码主线程中逻辑需要1000毫秒，同时任务执行也需要1000毫秒；
+- 利用 `FutureTask` 并发执行，总耗时也是1000毫秒；
+- `FutureTask` 最直观的效果：**增加系统的并发性，减少不必要的等待**。
 
-### JDK Future模式的原理
+## JDK Future模式的原理
 
-从代码角度上来分析，一个`FutureTask`会经历以下几个过程:
-
-**1. 接收任务** 从代码角度上看，`FutureTask`首先会接收一个`Callable`任务的任务，并将自身状态设置为`NEW`(关于状态在该类中有详细注释描述)
+从代码角度上来分析，一个 `FutureTask` 会经历以下几个过程:
+### 接收任务
+从代码角度上看，`FutureTask`首先会接收一个`Callable`任务的任务，并将自身状态设置为`NEW`(关于状态在该类中有详细注释描述)
 
 ```java
 public FutureTask(Callable<V> callable) {
