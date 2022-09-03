@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Regex-",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -65,12 +65,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 258
+    "width": 258,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -134,7 +134,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "f9c60a5916b5869d",
+  "active": "b83fe008a809d9e9",
   "lastOpenFiles": [
     "Tool/正则/正则表达式.md",
     "Language/Java/Stream/Stream流式编程简介.md",
