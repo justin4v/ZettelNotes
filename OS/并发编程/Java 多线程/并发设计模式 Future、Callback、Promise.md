@@ -70,7 +70,8 @@ public static void main(String[] args) throws InterruptedException, TimeoutExcep
 
 从代码角度上来分析，一个 `FutureTask` 会经历以下几个过程:
 ### 接收任务
-从代码角度上看，`FutureTask`首先会接收一个`Callable`任务的任务，并将自身状态设置为`NEW`(关于状态在该类中有详细注释描述)
+- 从代码角度上看，`FutureTask` 首先会接收一个`Callable`任务的任务；
+- 并将自身状态设置为 `NEW` ( 关于状态在该类中有详细注释描述)。
 
 ```java
 public FutureTask(Callable<V> callable) {
@@ -86,7 +87,9 @@ public FutureTask(Runnable runnable， V result) {
 }
 ```
 
-**2. 执行任务** 当线程启动时会调用其`run`方法，该方法会调用`callable`任务，然后把返回结果调用`set`进行更新。
+### 执行任务
+- 当线程启动时会调用其 `run()` 方法;
+- 调用 `callable` 任务，然后把返回结果调用 `set()` 进行更新。
 ```java
 public void run() {
   // CAS更新把当前对象与线程绑定起来
@@ -118,7 +121,9 @@ public void run() {
 }
 ```
 
-**3. 设置结果** `set`方法中会把对应的结果赋值给属性变量`Object outcome`，那么`FutureTask`原理就就是利用了**属性变量内存共享来实现的返回值获取**。
+### 设置结果
+- `set()` 会把对应的结果赋值给属性变量 `Object outcome`;
+- `FutureTask` 就是利用了**属性变量内存共享来实现的返回值获取**。
 
 ```java
 protected void set(V v) {
