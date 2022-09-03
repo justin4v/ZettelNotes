@@ -178,7 +178,8 @@ public interface FutureCallback<V> {
 	1. 在对应的 `Future` 中维护一个 `Callback` 链表；
 	2. 当任务执行完成后依次执行对应的回调，类似于[观察者模式](https://mrdear.cn/2018/04/20/experience/design_patterns--observer/)的`Subject`依次调用`Observer`。 
 - `Callback` 很好的解决了 `Future` 手动 `get` 所带来的阻塞与不便。
-- 因为在值算出来时自动调用后续处理因此不存在阻塞操作。但是在业务后续操作很多时，其存在一个嵌套的问题，俗称回调地狱，[这一点在JS中经常遇到](https://zhuanlan.zhihu.com/p/29783901)：
+- 因为在值算出来时自动调用后续处理，不存在阻塞操作。
+- 但是在业务后续操作很多时，可能存在一个 **多个callback 嵌套的问题，俗称回调地狱**，[这一点在JS中经常遇到](https://zhuanlan.zhihu.com/p/29783901)：
 
 ```javascript
 api.getItem(1)
@@ -194,15 +195,14 @@ api.getItem(1)
   })
 ```
 
-回调嵌套过多在服务端倒不是很常见，但是嵌套会使得逻辑变得很难梳理，因此诞生了Promise模式，也是目前使用最多的一种模式。
+- 回调嵌套过多在服务端倒不是很常见，但是**嵌套会使逻辑不清晰**，因此诞生了 **Promise 模式**，也是目前使用最多的一种模式。
 
+# Promise（可变的Future）
 
-## Promise（可变的Future）
-
-`Promise`结合了Future与Callback两种形式，对于Future，Promise在其基础上提供结果写入的接口，也就是可以主动完成这个Future，对于Callback，Promise所作的是把调用形式由嵌套打平，避免了循环嵌套，其使用方式大概如下JS代码所示：
-
-**清单8：Promise使用形式**
-
+- `Promise` 结合了 `Future` 与 `Callback` 两种形式:
+	- 对于 `Future`，`Promise` 在其基础上提供**结果写入**的接口，也就是**可以主动完成 `Future`**;
+	- 对于 `Callback`，`Promise` **把调用形式由嵌套打平**，避免了循环嵌套;
+其使用方式大概如下JS代码所示：
 ```javascript
 api.getItem(1)
   .then(item => {
@@ -217,13 +217,12 @@ api.getItem(1)
   })
 ```
 
+- `Promise` 对于Future的改进原理是**提供主动完成的方法入口**，并且完成任务时会**主动触发所有的 `Callback`**;
+- JDK 中提供了 `CompletableFuture` 类，用于实现 Promise 模式编程;
+- 下面代码展示了其可以主动完成任务的能力，异步任务会导致异步线程无限休眠，仍然可以通过主动设置值的方式完成该任务。
+- 这一特性可以很好的在两个线程中交换数据使用，举个例子在一些RPC框架中客户端在对应的Handler中发出来`RPCRequest`后创建一个Promise放入到全局Map中，然后阻塞获取响应结果，在`RPCResponse`异步返回的线程中从Map中取出Promise，然后主动把结果设置进去，那么对于使用方来说就像是同步完成了一次调用。
 
-`Promise`对于Future的改进原理是提供主动完成的方法入口，并且完成任务时会主动触发所有的Callback，
-
-在JDK中提供了`CompletableFuture`类，用于实现Promise模式编程，**清单9**展示了其可以主动完成任务的能力，即使异步任务会导致异步线程无限休眠，但是仍然可以通过主动设置值的方式完成该任务。这一特性可以很好的在两个线程中交换数据使用，举个例子在一些RPC框架中客户端在对应的Handler中发出来`RPCRequest`后创建一个Promise放入到全局Map中，然后阻塞获取响应结果，在`RPCResponse`异步返回的线程中从Map中取出Promise，然后主动把结果设置进去，那么对于使用方来说就像是同步完成了一次调用。
-
-**清单9：Promise主动完成任务能力**
-
+**Promise主动完成任务能力**
 ```java
 CompletableFuture<String> promise = CompletableFuture.supplyAsync(() -> {
      // 无限休眠
