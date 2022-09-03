@@ -122,7 +122,11 @@ public void run() {
 ```
 
 ### 设置结果
-- `set()` 会把对应的结果赋值给属性变量 `Object outcome`;
+- `set()` 会把对应的结果赋值给 **`FutureTask` 类的属性变量 `Object outcome`;**
+```java
+    /** The result to return or exception to throw from get() */
+    private Object outcome; // non-volatile, protected by state reads/writes
+```
 - `FutureTask` 就是利用了**属性变量内存共享来实现的返回值获取**。
 
 ```java
@@ -138,7 +142,9 @@ protected void set(V v) {
 }
 ```
 
-**4. 获取结果** 结果是共享的，因此获取时根据当前task所处于的状态，如果是未完成的话则直接进入等待线程队列中，当结果被设置时会主动唤醒这些等待线程。
+### 获取结果
+- 结果 `FutureTask` 是共享的；
+- 获取时*根据当前 task 所处于的状态*，如果是未完成的话则直接*进入等待线程队列*中，当运行结果 `outcome` **被设值时会主动唤醒这些等待线程**。
 
 ```java
 public V get() throws InterruptedException， ExecutionException {
@@ -151,9 +157,9 @@ public V get() throws InterruptedException， ExecutionException {
 }
 ```
 
-## Callback（回调式Future）
+# Callback（回调式Future）
 
-对于Future模式，最麻烦的地方是需要手动获取对应的值，这个过程并且是阻塞操作，有时候的业务并不怎么关心值什么时候被计算出来，只关心计算出来后后续要做哪些操作，因此一种改进策略就是利用回调方式(Callback)实现后续逻辑。 以guava中`FutureCallback`为例，其接口定义如下：
+- Future 模式，最麻烦的地方是需要手动获取对应的值，这个过程并且是阻塞操作，有时候的业务并不怎么关心值什么时候被计算出来，只关心计算出来后后续要做哪些操作，因此一种改进策略就是利用回调方式(Callback)实现后续逻辑。 以guava中`FutureCallback`为例，其接口定义如下：
 
 ```java
 public interface FutureCallback<V> {
