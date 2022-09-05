@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
+            "file": "Design/计算机科学问题的解决方法.md",
             "mode": "source",
             "source": false
           }
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258
+    "width": 258,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
+                "file": "Design/计算机科学问题的解决方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md"
+                "file": "Design/计算机科学问题的解决方法.md"
               }
             }
           },
@@ -136,6 +137,7 @@
   },
   "active": "12c2e2769deea195",
   "lastOpenFiles": [
+    "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
     "Mindmap/Java IO模型.md",
     "Medical/工作流程理解.md",
     "Medical/DICOM/DICOM消息服务简介.md",
@@ -144,7 +146,6 @@
     "Tool/正则/正则引擎.md",
     "Language/Java/Stream/Stream流式编程简介.md",
     "Language/Java/未命名.md",
-    "Reactive Programming/Java 实现.md",
-    "Reactive Programming/Reactive Streams规范.md"
+    "Reactive Programming/Java 实现.md"
   ]
 }
