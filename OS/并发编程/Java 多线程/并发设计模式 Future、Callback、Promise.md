@@ -177,7 +177,7 @@ public interface FutureCallback<V> {
 - Callback 的实现原理是：
 	1. 在对应的 `Future` 中维护一个 `Callback` 链表；
 	2. 当任务执行完成后依次执行对应的回调，类似于[观察者模式](https://mrdear.cn/2018/04/20/experience/design_patterns--observer/)的`Subject`依次调用`Observer`。 
-- `Callback` 很好的解决了 `Future` 手动 `get()` 所带来的阻塞与不便。
+- `Callback` **很好的解决了 `Future` 手动 `get()` 所带来的阻塞与不便**。
 - 因为在值算出来时自动调用后续处理，不存在阻塞操作。
 - 但是在业务后续操作很多时，可能存在一个 **多个callback 嵌套的问题，俗称回调地狱**，[这一点在JS中经常遇到](https://zhuanlan.zhihu.com/p/29783901)：
 
@@ -221,7 +221,7 @@ api.getItem(1)
 - JDK 中提供了 `CompletableFuture` 类，用于实现 Promise 模式编程;
 - 下面代码展示了其可以主动完成任务的能力，假如异步任务会导致线程无限休眠，仍然*可以通过主动设置值的方式完成该任务*。
 - 这一特性可以很好的在**两个线程中交换数据使用**：
-	- 举个例子在一些 RPC 框架中，客户端在对应的 `Handler` 中向远端发出 `RPCRequest` 后，创建一个 `Request Promise` 放入到**全局 Map（队列、缓存）** 中，然后*阻塞获取响应结果*；
+	- 举个例子在一些 RPC 框架中，客户端在对应的 `Handler` 中*向远端发出 `RPCRequest` 后*，创建一个 `Request Promise` 放入到**全局 Map（队列、缓存）** 中，然后*阻塞获取响应结果*；
 	- 在 `RPCResponse` 异步返回的线程中从 Map 中取出 `Promise`，然后**主动把 response 结果设置进去**，对于使用方来说就像是*同步完成了一次调用*。
 
 **Promise主动完成任务能力**
