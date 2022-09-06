@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Yaml 语法",
+      "path": "Tool/Yaml/Yaml 语法.md"
+    },
+    {
+      "basename": "分代收集理论",
+      "path": "Language/Java/JVM/垃圾收集/分代收集理论.md"
+    },
+    {
+      "basename": "编程核心概念",
+      "path": "基础知识/编程基础/编程核心概念.md"
+    },
+    {
       "basename": "计算机科学问题的解决方法",
       "path": "Design/计算机科学问题的解决方法.md"
     },
@@ -19,10 +31,6 @@
     {
       "basename": "DICOM消息服务简介",
       "path": "Medical/DICOM/DICOM消息服务简介.md"
-    },
-    {
-      "basename": "Yaml 简介",
-      "path": "Tool/Yaml/Yaml 简介.md"
     },
     {
       "basename": "正则表达式",

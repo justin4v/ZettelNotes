@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/计算机科学问题的解决方法.md",
+            "file": "Tool/Yaml/Yaml 语法.md",
             "mode": "source",
             "source": false
           }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/计算机科学问题的解决方法.md",
+                "file": "Tool/Yaml/Yaml 语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/计算机科学问题的解决方法.md"
+                "file": "Tool/Yaml/Yaml 语法.md"
               }
             }
           },
@@ -134,17 +133,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "f9c60a5916b5869d",
+  "active": "b83fe008a809d9e9",
   "lastOpenFiles": [
+    "Language/Java/JVM/垃圾收集/分代收集理论.md",
+    "基础知识/编程基础/编程核心概念.md",
+    "Design/计算机科学问题的解决方法.md",
     "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
     "Mindmap/Java IO模型.md",
     "Medical/工作流程理解.md",
     "Medical/DICOM/DICOM消息服务简介.md",
-    "Tool/Yaml/Yaml 简介.md",
+    "Tool/Yaml/Yaml 语法.md",
     "Tool/正则/正则表达式.md",
-    "Tool/正则/正则引擎.md",
-    "Language/Java/Stream/Stream流式编程简介.md",
-    "Language/Java/未命名.md",
-    "Reactive Programming/Java 实现.md"
+    "Tool/正则/正则引擎.md"
   ]
 }
