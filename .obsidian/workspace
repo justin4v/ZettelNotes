@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "todo",
+                "query": "数据结构",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258,
-    "collapsed": true
+    "width": 258
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -135,7 +134,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "12c2e2769deea195",
+  "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
     "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
     "Mindmap/Java IO模型.md",
