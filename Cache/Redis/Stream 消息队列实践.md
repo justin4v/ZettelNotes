@@ -235,93 +235,9 @@ container.receive(Consumer.from(MAIL_GROUP, "consumer-1"),
 container.start();  
 ```
 
-
 完整代码：
 
-1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-13  
-14  
-15  
-16  
-17  
-18  
-19  
-20  
-21  
-22  
-23  
-24  
-25  
-26  
-27  
-28  
-29  
-30  
-31  
-32  
-33  
-34  
-35  
-36  
-37  
-38  
-39  
-40  
-41  
-42  
-43  
-44  
-45  
-46  
-47  
-48  
-49  
-50  
-51  
-52  
-53  
-54  
-55  
-56  
-57  
-58  
-59  
-60  
-61  
-62  
-63  
-64  
-65  
-66  
-67  
-68  
-69  
-70  
-71  
-72  
-73  
-74  
-75  
-76  
-77  
-78  
-79  
-80  
-81  
-82  
-83  
-
+```java
 @Component  
 public class StreamConsumerRunner implements ApplicationRunner, DisposableBean {  
   
@@ -405,21 +321,17 @@ public class StreamConsumerRunner implements ApplicationRunner, DisposableBean {
         }  
     }  
 }  
+```
+
+
 
 注意`prepareChannelAndGroup`方法，在初始化容器时，如果key对应的stream或者group不存在时会抛出异常，所以我们需要提前检查并且初始化。
 
-## [](https://lolico.me/2020/06/28/Stream%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%9C%A8SpringBoot%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B8%8E%E8%B8%A9%E5%9D%91/#%E6%B5%8B%E8%AF%95 "测试")测试
+## 测试
 
 添加一个测试接口：
 
-1  
-2  
-3  
-4  
-5  
-6  
-7  
-
+```java
 @GetMapping("/sendMail")  
 public ResponseEntity<RecordId> sendMail(String receiver, String description) {  
     MailInfo mailInfo = new MailInfo(receiver, description);  
@@ -427,39 +339,25 @@ public ResponseEntity<RecordId> sendMail(String receiver, String description) {
     RecordId recordId = redisTemplate.opsForStream().add(record);  
     return ResponseEntity.ok(recordId);  
 }  
+```
 
 访问进行测试：
-
-1  
-
+```java
 2020-06-28 19:26:17.870  INFO 21900 --- [         task-1] reamConsumerRunner$StreamMessageListener : 消费stream:channel:stream:mail中的信息:MailInfo(receiver=534619360@qq.com, description=发送邮件), 消息id:1593343576237-0  
+```
 
 控制台输出日志，如果在redis-cli中使用`xpending`命令检查ack信息会发现也是0，因为我们虽然使用`receive`方法注册，但是在`onMessage`中手动提交了确认，当然，你也可以使用`receiveAutoAck`方法添加。
 
-## [](https://lolico.me/2020/06/28/Stream%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%9C%A8SpringBoot%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B8%8E%E8%B8%A9%E5%9D%91/#%E5%AE%9E%E8%B7%B5%E4%B8%AD%E8%B8%A9%E5%88%B0%E7%9A%84%E5%9D%91 "实践中踩到的坑")实践中踩到的坑
+# 实践中踩到的坑
 
-### [](https://lolico.me/2020/06/28/Stream%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%9C%A8SpringBoot%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B8%8E%E8%B8%A9%E5%9D%91/#%E8%87%AA%E5%8A%A8ack%E5%92%8C%E6%B3%9B%E5%9E%8B%E7%B1%BB%E5%9E%8B%E9%94%99%E8%AF%AF "自动ack和泛型类型错误")自动ack和泛型类型错误
+## 自动ack和泛型类型错误
 
 这两个问题在前面已经提到了并且在2.3已经修复，这里不多说。还是那句话，如果想尝鲜，那么强烈推荐使用SpringBoot最新发布的版本。
 
-### [](https://lolico.me/2020/06/28/Stream%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%9C%A8SpringBoot%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B8%8E%E8%B8%A9%E5%9D%91/#RedisTemplate%E5%BA%8F%E5%88%97%E5%8C%96%E5%99%A8%E4%BD%BF%E7%94%A8%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4%E5%AE%B9%E5%99%A8%E6%97%A0%E6%B3%95%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96 "RedisTemplate序列化器使用错误导致容器无法反序列化")RedisTemplate序列化器使用错误导致容器无法反序列化
+## RedisTemplate序列化器使用错误导致容器无法反序列化
 
 `RedisTemplate`的hashvalue的序列化器最初使用的json序列化器，导致容器监听到新消息反序列化时抛出异常：
-
-1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-9  
-10  
-11  
-12  
-13  
-
+```java
 java.lang.IllegalArgumentException: Value must not be null!  
     at org.springframework.util.Assert.notNull(Assert.java:198)  
     at org.springframework.data.redis.connection.stream.Record.of(Record.java:81)  
@@ -473,34 +371,23 @@ java.lang.IllegalArgumentException: Value must not be null!
     at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)  
     at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)  
     at java.lang.Thread.run(Thread.java:748)  
+```
+
 
 这是为什么呢？我们知道Redis中Stream中存的是键值对并且`DefaultStreamOperations`中操作的都是`byte[]`，也就是说我们虽然添加的是`ObjectRecord`，但是会先转换成`MapRecord`，然后再被转换成`ByteRecord`，最后进行序列化。来看一下`add`方法：
 
-1  
-2  
-3  
-4  
-5  
-6  
-
+```java
 public RecordId add(Record<K, ?> record) {  
     Assert.notNull(record, "Record must not be null");  
     MapRecord<K, HK, HV> input = StreamObjectMapper.toMapRecord(this, record); //转换成MapRecord  
     ByteRecord binaryRecord = input.serialize(keySerializer(), hashKeySerializer(), hashValueSerializer()); //再使用序列化器转换成ByteRecord  
     return execute(connection -> connection.xAdd(binaryRecord), true);  
 }  
+```
 
 通过上面这个方法我们可以发现stream序列化时和其他类型不一样，我们在使用json序列化一个对象时都是直接进行的，而这里分了两步并且序列化器是用于第二部转换，那么`ObjectRecord`是怎么转换成`MapRecord`的呢？点进`StreamObjectMapper.toMapRecord`方法可以看到其实是通过`ObjectRecord#toMapRecord`方法完成的，这个方法需要一个`HashMapper`用于将对象的属性/属性值映射构造成Map类型，你会发现`opsForStream`方法重载了一个默认无参的方法，而这个方法默认使用的是`ObjectHashMapper`，在我们构造`StreamMessageListenerContainerOptionsBuilder`时调用`targetType`时默认使用的也是`ObjectHashMapper`。而这个`ObjectHashMapper`会将对象中的属性和属性值转换成`byte[]`形式，所以在第一步之后这个`MapRecord`中的值的类型已经是`byte[]`了，那么也就导致第二步在使用json序列化器转换为`ByteRecord`时出现这种情况：`objectMapper.writeValueAsBytes(byte[])`，这是一个测试实例：
 
-1  
-2  
-3  
-4  
-5  
-6  
-7  
-8  
-
+```java
 @Test  
 void test() throws JsonProcessingException {  
     ObjectMapper mapper = new ObjectMapper();  
@@ -509,30 +396,26 @@ void test() throws JsonProcessingException {
     System.out.println(new String(bytes));  
     //输出"NTM0NjE5MzYwQHFxLmNvbQ=="  
 }  
+```
 
-反应到stream中值就变成了\“NTM0NjE5MzYwQHFxLmNvbQ==\“（引号需要转义）。为了便于理解，我们可以使用设置使用json序列化器的`RedisTemplate`进行`add`断点debug测试看一下转换后的两个`Record`中的内容：
 
-1  
-2  
-3  
-4  
-5  
-6  
+反应到stream中值就变成了 \“NTM0NjE5MzYwQHFxLmNvbQ\==\“ （引号需要转义）。为了便于理解，我们可以使用设置使用json序列化器的`RedisTemplate`进行`add`断点debug测试看一下转换后的两个`Record`中的内容：
 
+```java
 @Test  
 void test() {  
     stringRedisTemplate.setHashValueSerializer(RedisSerializer.json());  
     MailInfo mailInfo = new MailInfo("534619360@qq.com", "send mail");  
     stringRedisTemplate.opsForStream().add(Record.of(mailInfo).withStreamKey(channel));  
 }  
+```
+
 
 运行测试并断点查看`MapRecord`和`ByteRecord`：
-
-![](./Stream消息队列在SpringBoot中的实践与踩坑 _ 萌面喵喵侠_files/20200628204658.png)
+![[Pasted image 20220907170304.png]]
 
 使用Redis Desktop Manager查看值：
 
-![](./Stream消息队列在SpringBoot中的实践与踩坑 _ 萌面喵喵侠_files/20200628204930.png)
 
 测试结束终端抛出上面提到的异常。这个问题解决办法就是使用`String`序列化器也就是使用`StringRedisTemplate`，因为这个序列化器不能序列化`byte[]`类型的对象，使用这个序列化器在序列化时如果已经是`byte[]`，那么就会直接返回原`byte[]`：
 
@@ -540,16 +423,16 @@ void test() {
 
 更具体的细节可以跟着`add`方法debug一遍。
 
-### [](https://lolico.me/2020/06/28/Stream%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%9C%A8SpringBoot%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B8%8E%E8%B8%A9%E5%9D%91/#ReadOffset%E4%BD%BF%E7%94%A8%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4group%E4%B8%AD%E6%B6%88%E8%B4%B9%E8%80%85%E6%B6%88%E8%B4%B9%E5%A4%B1%E8%B4%A5 "ReadOffset使用错误导致group中消费者消费失败")ReadOffset使用错误导致group中消费者消费失败
+## ReadOffset使用错误导致group中消费者消费失败
 
 异常：
 
-1  
-
+```java
 RedisCommandExecutionException: ERR The $ ID is meaningless in the context of XREADGROUP: you want to read the history of this consumer by specifying a proper ID, or use the > ID to get new messages. The $ ID would just return an empty result set.  
+```
 
 上面`StreamOffset`中也提到了，这涉及到`0`、`>`、`$`的使用场景和范围，如果出现这个异常，很有可能你在消费者组模式下设置消费者读取的offset时使用了`ReadOffset.latest()`，而这个对应着`$`，也就是最新一条记录。如果不明白那么你可能对这三个标识符的使用还不是很理解，最好的解决办法就是使用redis命令先完整的操作一遍。
 
-### [](https://lolico.me/2020/06/28/Stream%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%9C%A8SpringBoot%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B8%8E%E8%B8%A9%E5%9D%91/#stream%E6%88%96%E8%80%85group%E4%B8%8D%E5%AD%98%E5%9C%A8%E5%AF%BC%E8%87%B4%E5%90%AF%E5%8A%A8%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8 "stream或者group不存在导致启动抛出异常")stream或者group不存在导致启动抛出异常
+## stream或者group不存在导致启动抛出异常
 
 同样在上面提到了，在构造`StreamMessageListenerContainer`时需要stream和group存在才可以。解决方法就是提前检查并初始化，上面已给出代码
