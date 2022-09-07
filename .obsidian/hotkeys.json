@@ -2,7 +2,7 @@
   "editor:toggle-code": [
     {
       "modifiers": [
-        "Alt"
+        "Shift"
       ],
       "key": "C"
     }
