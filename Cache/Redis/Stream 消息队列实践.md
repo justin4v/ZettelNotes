@@ -22,7 +22,8 @@
 
 SpringBoot为我们提供了五种消息类型的抽象：`MapRecord`、`ObjectRecord`、`ByteRecord`、`ByteBufferRecord`、`StringRecord`，以及一个消息ID类型：`RecordId`。
 
-> 这里另外说一下：其实除开`ObjectRecord`，其他几个`Record`都是通过继承`MapRecord`扩展而来的。`StringRecord`中的消息内容也并非仅仅是一个字符串，而是一个键值都为字符串类型的`Map`（`ByteRecord`、`ByteBufferRecord`同理）。而`ObjectRecord`最后也会使用`HashMapper`转换成`MapRecord`。为什么最后都是操作`Map`类型？这是因为Stream中的内容是以多个`key-value`这种键值对的形式存储的。
+> 其实除开 `ObjectRecord`，其他几个 `Record` 都是通过继承 `MapRecord` 扩展而来的。
+> `StringRecord`中的消息内容也并非仅仅是一个字符串，而是一个键值都为字符串类型的`Map`（`ByteRecord`、`ByteBufferRecord`同理）。而`ObjectRecord`最后也会使用`HashMapper`转换成`MapRecord`。为什么最后都是操作`Map`类型？这是因为Stream中的内容是以多个`key-value`这种键值对的形式存储的。
 
 那么我们怎样去创建一个消息对象呢？
 
