@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258
+    "width": 258,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -133,7 +134,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "b83fe008a809d9e9",
+  "active": "12c2e2769deea195",
   "lastOpenFiles": [
     "Tool/Yaml/Yaml 语法.md",
     "Language/Java/JVM/垃圾收集/分代收集理论.md",

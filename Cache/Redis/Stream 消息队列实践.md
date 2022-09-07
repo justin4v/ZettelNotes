@@ -412,14 +412,14 @@ void test() {
 
 
 运行测试并断点查看`MapRecord`和`ByteRecord`：
-![[Pasted image 20220907170304.png]]
+![[redis stream 序列化错误示意.png]]
 
 使用Redis Desktop Manager查看值：
 
-
+![[redis stream 序列错误示意2.png]]
 测试结束终端抛出上面提到的异常。这个问题解决办法就是使用`String`序列化器也就是使用`StringRedisTemplate`，因为这个序列化器不能序列化`byte[]`类型的对象，使用这个序列化器在序列化时如果已经是`byte[]`，那么就会直接返回原`byte[]`：
 
-![](./Stream消息队列在SpringBoot中的实践与踩坑 _ 萌面喵喵侠_files/20200628210421.png)
+
 
 更具体的细节可以跟着`add`方法debug一遍。
 
@@ -436,3 +436,7 @@ RedisCommandExecutionException: ERR The $ ID is meaningless in the context of XR
 ## stream或者group不存在导致启动抛出异常
 
 同样在上面提到了，在构造`StreamMessageListenerContainer`时需要stream和group存在才可以。解决方法就是提前检查并初始化，上面已给出代码
+
+
+# 参考
+1. [https://lolico.me/2020/06/28/Stream消息队列在SpringBoot中的实践与踩坑](https://lolico.me/2020/06/28/Stream%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E5%9C%A8SpringBoot%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5%E4%B8%8E%E8%B8%A9%E5%9D%91)
