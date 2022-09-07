@@ -39,21 +39,21 @@ static <S, V> ObjectRecord<S, V> of(V value) {
 }  
 ```
 
-
 我们可以看到，这两个方法实际上是调用了`StreamRecords`中提供的静态方法来创建，`StreamRecords`这个类提供了下面这些方法用于创建五种`Record`：
 
-
+```java
 ByteRecord rawBytes(Map<byte[], byte[]> raw)   
 ByteBufferRecord rawBuffer(Map<ByteBuffer, ByteBuffer> raw)   
 StringRecord string(Map<String, String> raw)  
 <S, K, V> MapRecord<S, K, V> mapBacked(Map<K, V> map)  
 <S, V> ObjectRecord<S, V> objectBacked(V value)  
 RecordBuilder<?> newRecord()  // 通过builder方式创建  
+```
+
 
 当然，我们还可以通过使用某个具体的`Record`类型的`create`静态方法来创建，下面是几个示例：
 
-
-
+```java
 String streamKey = "channel:stream:key1";//stream key  
 MailInfo mailInfo = new MailInfo("554205726@qq.com", "sendmail");//定义一个Object类型的消息内容  
 Map<String, String> map = new HashMap<String, String>() {{  
@@ -64,6 +64,8 @@ Record.of(map).withStreamKey(streamKey).withId(RecordId.of("123"));//指定id
 StreamRecords.objectBacked(mailInfo).withStreamKey(streamKey);  
 StreamRecords.mapBacked(map).withStreamKey(streamKey).withId(RecordId.autoGenerate());//指定id  
 ObjectRecord.create(streamKey, mailInfo); //使用ObjectRecord的create静态方法创建  
+```
+
 
 如果我们不通过`withId`方法显示调用去指定`id`，那么默认的情况下就是使用`RecordId.autoGenerate()`自动生成。还有一个需要注意的地方就是在使用`StreamRecords`的方法来构建`Record`时一定要记住用`withStreamKey`方法来指定`Stream Key`。
 
