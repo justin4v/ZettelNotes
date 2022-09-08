@@ -71,7 +71,7 @@ ObjectRecord.create(streamKey, mailInfo); //使用ObjectRecord的create静态方
 
 不管是消息或是消息ID，这些类基本都提供了扁平化的api来构造，使用起来还是很简单的。那么在构造了一个`Record`后怎么将其持久化到Redis的Stream类型中呢？
 
-## 向Stream添加消息（Record)
+## 向 Stream 添加消息（Record)
 
 使用`RedisTemplate`操作`Stream`：
 
