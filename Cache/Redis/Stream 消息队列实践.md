@@ -137,7 +137,7 @@ public class MailInfo {
 StreamMessageListenerContainerOptions<String, ObjectRecord<String, MailInfo>> options =  
         StreamMessageListenerContainerOptions.builder()  
                 .batchSize(100) //一批次拉取的最大count数  
-                .executor(executor)  //线程池  
+                .executor(executor)  //消费者轮询用的线程池  
                 .pollTimeout(Duration.ZERO) //阻塞式轮询  
                 .targetType(MailInfo.class) //目标类型（消息内容的类型）  
                 .build();  
