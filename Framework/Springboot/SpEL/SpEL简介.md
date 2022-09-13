@@ -8,7 +8,8 @@
 
 
 # 注意
-- SpEL 支持动态注入与更新属性设置，如 ${}
+- SpEL 支持动态注入与更新属性设置，如 `${external.redis.enble}`。
+- nacos中增加 `@RefreshScope` 使得动态更新生效
 # 参考
 1. [Spring Expression Language Guide | Baeldung](https://www.baeldung.com/spring-expression-language)
 2. [8. Spring 表达式语言 (SpEL) ](https://itmyhome.com/spring/expressions.html)
