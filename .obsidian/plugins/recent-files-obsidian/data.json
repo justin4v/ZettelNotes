@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "SpEL简介",
+      "path": "Framework/Springboot/SpEL/SpEL简介.md"
+    },
+    {
       "basename": "Stream 消息队列实践",
       "path": "Cache/Redis/Stream 消息队列实践.md"
     },
