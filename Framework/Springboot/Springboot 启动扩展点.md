@@ -1,24 +1,26 @@
 #Springboot 
 
-## 1.背景
+# 1.背景
 
 Spring的核心思想就是容器，当容器refresh的时候，外部看上去风平浪静，其实内部则是一片惊涛骇浪，汪洋一片。Springboot更是封装了Spring，遵循约定大于配置，加上自动装配的机制。很多时候我们只要引用了一个依赖，几乎是零配置就能完成一个功能的装配。
 
-我非常喜欢这种自动装配的机制，所以在自己开发中间件和公共依赖工具的时候也会用到这个特性。让使用者以最小的代价接入。想要把自动装配玩的转，就必须要了解spring对于bean的构造生命周期以及各个扩展接口。当然了解了bean的各个生命周期也能促进我们加深对spring的理解
+这种自动装配的机制，在开发中间件和公共依赖工具的时候也会用到。让使用者以最小的代价接入。
 
-## 2.可扩展的接口启动调用顺序图
+# 2.可扩展的接口启动调用顺序图
 
 ![[SpringBoot可扩展点整理.png]]
 
-## 3.ApplicationContextInitializer
+# 3.ApplicationContextInitializer
 
 > org.springframework.context.ApplicationContextInitializer
 
 这是整个spring容器在刷新之前初始化`ConfigurableApplicationContext`的回调接口，简单来说，就是在容器刷新之前调用此类的`initialize`方法。这个点允许被用户自己扩展。用户可以在整个spring容器还没被初始化之前做一些事情。
 
-可以想到的场景可能为，在最开始激活一些配置，或者利用这时候class还没被类加载器加载的时机，进行动态字节码注入等操作。
+## 场景
+- 在最开始激活一些配置；
+- 或者利用这时候class还没被类加载器加载的时机，进行动态字节码注入等操作。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class TestApplicationContextInitializer implements ApplicationContextInitializer {  
     @Override  
@@ -37,15 +39,16 @@ public class TestApplicationContextInitializer implements ApplicationContext
 -   Spring SPI扩展，在spring.factories中加入`org.springframework.context.ApplicationContextInitializer=com.example.demo.TestApplicationContextInitializer`
     
 
-## 4.BeanDefinitionRegistryPostProcessor
+# 4.BeanDefinitionRegistryPostProcessor
 
 > org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor
 
 这个接口在读取项目中的`beanDefinition`之后执行，提供一个补充的扩展点
 
-使用场景：你可以在这里动态注册自己的`beanDefinition`，可以加载classpath之外的bean
+## 使用场景
+- 可以在这里动态注册自己的`beanDefinition`，可以加载classpath之外的bean
 
-扩展方式为:
+## 扩展方式
 ```java
 public class TestBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor {  
     @Override  
@@ -60,15 +63,16 @@ public class TestBeanDefinitionRegistryPostProcessor implements BeanDefiniti
 }
 ``` 
 
-## 5.BeanFactoryPostProcessor
+# 5.BeanFactoryPostProcessor
 
 > org.springframework.beans.factory.config.BeanFactoryPostProcessor
 
 这个接口是`beanFactory`的扩展接口，调用时机在spring在读取`beanDefinition`信息之后，实例化bean之前。
 
-在这个时机，用户可以通过实现这个扩展接口来自行处理一些东西，比如修改已经注册的`beanDefinition`的元信息。
+## 使用场景
+用户可以通过实现这个扩展接口来自行处理一些东西，比如修改已经注册的`beanDefinition`的元信息。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcessor {  
     @Override  public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {  
@@ -77,7 +81,7 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 }
 ```
 
-## 6.InstantiationAwareBeanPostProcessor
+# 6.InstantiationAwareBeanPostProcessor
 
 > org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor
 
@@ -98,9 +102,11 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 -   `postProcessAfterInitialization`：初始化bean之后，相当于把bean注入spring上下文之后
     
 
-使用场景：这个扩展点非常有用 ，无论是写中间件和业务中，都能利用这个特性。比如对实现了某一类接口的bean在各个生命期间进行收集，或者对某个类型的bean进行统一的设值等等。
+## 使用场景
+- 这个扩展点非常有用 ，无论是写中间件和业务中，都能利用这个特性。
+- 比如对实现了某一类接口的bean在各个生命期间进行收集，或者对某个类型的bean进行统一的设值等等。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class TestInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {  
   
@@ -135,7 +141,7 @@ public class TestInstantiationAwareBeanPostProcessor implements Instantiatio
     }
 ```
 
-## 7.SmartInstantiationAwareBeanPostProcessor
+# 7.SmartInstantiationAwareBeanPostProcessor
 
 > org.springframework.beans.factory.config.SmartInstantiationAwareBeanPostProcessor
 
@@ -148,7 +154,7 @@ public class TestInstantiationAwareBeanPostProcessor implements Instantiatio
 -   `getEarlyBeanReference`：该触发点发生在`postProcessAfterInstantiation`之后，当有循环依赖的场景，当bean实例化好之后，为了防止有循环依赖，会提前暴露回调方法，用于bean实例化的后置处理。这个方法就是在提前暴露的回调方法中触发。
     
 
-扩展方式为：
+## 扩展方式
 
 ```java
 public class TestSmartInstantiationAwareBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor {  
@@ -173,13 +179,13 @@ public class TestSmartInstantiationAwareBeanPostProcessor implements SmartIn
 }
 ```
 
-## 8.BeanFactoryAware
+# 8.BeanFactoryAware
 
 > org.springframework.beans.factory.BeanFactoryAware
 
 这个类只有一个触发点，发生在bean的实例化之后，注入属性之前，也就是Setter之前。这个类的扩展点方法为`setBeanFactory`，可以拿到`BeanFactory`这个属性。
 
-使用场景为，你可以在bean实例化之后，但还未初始化之前，拿到 `BeanFactory`，在这个时候，可以对每个bean作特殊化的定制。也或者可以把`BeanFactory`拿到进行缓存，日后使用。
+## 使用场景为，你可以在bean实例化之后，但还未初始化之前，拿到 `BeanFactory`，在这个时候，可以对每个bean作特殊化的定制。也或者可以把`BeanFactory`拿到进行缓存，日后使用。
 
 扩展方式为：
 ```java
@@ -238,7 +244,7 @@ public class NormalBeanA implements BeanNameAware{
 
 ## 11.@PostConstruct
 
-> javax.annotation.PostConstruct
+>`javax.annotation.PostConstruct`
 
 这个并不算一个扩展点，其实就是一个标注。其作用是在bean的初始化阶段，如果对一个方法标注了`@PostConstruct`，会先调用这个方法。这里重点是要关注下这个标准的触发点，这个触发点是在`postProcessBeforeInitialization`之后，`InitializingBean.afterPropertiesSet`之前。
 
