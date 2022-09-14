@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "node",
+                "query": "redis",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -133,7 +134,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "1c50ff776bae7668",
+  "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
     "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
     "运维相关/K8s/K8s暴露服务的三种方式.md",
