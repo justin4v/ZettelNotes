@@ -135,15 +135,15 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
-    "运维相关/K8s/k8s 资源对象.md",
     "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
+    "运维相关/K8s/K8s暴露服务的三种方式.md",
+    "运维相关/K8s/k8s 资源对象.md",
     "Framework/Springboot/Springboot 启动扩展点.md",
     "Framework/Springboot/SpringSecurity 简介.md",
     "Framework/Springboot/SpringSecurity主要流程.svg",
     "Framework/Springboot/SpringSecurity流程.svg.md",
     "Language/Java/Java IO/BIO,NIO,AIO.md",
     "Language/Java/Java IO/Java NIO组件.md",
-    "Framework/Springboot/SpEL/SpEL简介.md",
-    "Cache/Redis/Stream 消息队列实践.md"
+    "Framework/Springboot/SpEL/SpEL简介.md"
   ]
 }

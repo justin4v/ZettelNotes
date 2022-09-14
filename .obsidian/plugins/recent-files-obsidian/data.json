@@ -5,12 +5,12 @@
       "path": "运维相关/K8s/K8s暴露服务的三种方式.md"
     },
     {
-      "basename": "k8s 资源对象",
-      "path": "运维相关/K8s/k8s 资源对象.md"
-    },
-    {
       "basename": "Service中spec.type：nodeport和clusterIp",
       "path": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md"
+    },
+    {
+      "basename": "k8s 资源对象",
+      "path": "运维相关/K8s/k8s 资源对象.md"
     },
     {
       "basename": "Springboot 启动扩展点",
