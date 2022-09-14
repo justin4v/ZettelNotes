@@ -4,12 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "12c2e2769deea195",
+        "id": "c06b027dd4ac146f",
         "type": "leaf",
         "state": {
-          "type": "diagram-edit",
+          "type": "markdown",
           "state": {
-            "file": "Framework/Springboot/Untitled Diagram.svg"
+            "file": "Framework/Springboot/SpringSecurity 简介.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -67,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258,
-    "collapsed": true
+    "width": 258
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -84,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Framework/Springboot/Untitled Diagram.svg",
+                "file": "Framework/Springboot/SpringSecurity 简介.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/Springboot/Untitled Diagram.svg"
+                "file": "Framework/Springboot/SpringSecurity 简介.md"
               }
             }
           },
@@ -132,10 +133,10 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "12c2e2769deea195",
+  "active": "c06b027dd4ac146f",
   "lastOpenFiles": [
+    "Framework/Springboot/SpringSecurity主要流程.svg",
     "Framework/Springboot/SpringSecurity 简介.md",
-    "Framework/Springboot/Untitled Diagram.svg",
     "Framework/Springboot/SpringSecurity流程.svg.md",
     "Language/Java/Java IO/BIO,NIO,AIO.md",
     "Language/Java/Java IO/Java NIO组件.md",

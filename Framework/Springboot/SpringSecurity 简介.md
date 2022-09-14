@@ -1,7 +1,7 @@
 #Todo #Springboot #SpringSecurity
 
 # 框架
-![[Framework/Springboot/Untitled Diagram.svg]]
+![[SpringSecurity主要流程.svg]]
 
 
 
