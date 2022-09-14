@@ -31,6 +31,45 @@ spring:
 - 没有配置的时候，账号和密码是由Spring Security定义生成的。
 - 实际项目中账号和密码都是从数据库中查询出来的。所以需要 **自定义逻辑控制认证逻辑** 。需要实现UserDetailsService 接口
 
+- *UserDetailsService*
+```java
+/**
+ * Core interface which loads user-specific data.
+ * <p>
+ * It is used throughout the framework as a user DAO and is the strategy used by the
+ * {@link org.springframework.security.authentication.dao.DaoAuthenticationProvider
+ * DaoAuthenticationProvider}.
+ *
+ * <p>
+ * The interface requires only one read-only method, which simplifies support for new
+ * data-access strategies.
+ *
+ * @see org.springframework.security.authentication.dao.DaoAuthenticationProvider
+ * @see UserDetails
+ *
+ * @author Ben Alex
+ */
+public interface UserDetailsService {
+
+	/**
+	 * Locates the user based on the username. In the actual implementation, the search
+	 * may possibly be case sensitive, or case insensitive depending on how the
+	 * implementation instance is configured. In this case, the <code>UserDetails</code>
+	 * object that comes back may have a username that is of a different case than what
+	 * was actually requested..
+	 *
+	 * @param username the username identifying the user whose data is required.
+	 *
+	 * @return a fully populated user record (never <code>null</code>)
+	 *
+	 * @throws UsernameNotFoundException if the user could not be found or the user has no
+	 * GrantedAuthority
+	 */
+	UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
+}
+
+```
+
 ```java
 @Component  
 public class UserSecurity implements UserDetailsService {  
@@ -140,6 +179,8 @@ public PasswordEncoder passwordEncoder() {
 ```
 
 # 登录配置
+
+
 
 ## 方式一 转发
 
@@ -433,6 +474,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 > 权限检验,请求到来访问控制单元之前必须包含xx权限才能访问，控制单元方法执行前进行角色校验
 
+```java
 
    /**  
      * [ROLE_管理员, admin:read, admin:write, all:login, all:logout, all:error, all:toMain]  
@@ -454,20 +496,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public String toMain(){  
         return "main";  
     }  
+```
 
-使用`@PreAuthorize`和`@PostAuthorize` 需要在配置类中配置注解@EnableGlobalMethodSecurity 才能生效
 
-@EnableGlobalMethodSecurity(prePostEnabled = true)  
-
-### @PostAuthorize
-
-> ❝
-> 
+## @PostAuthorize
 > 权限检验,请求到来访问控制单元之后必须包含xx权限才能访问 ，控制单元方法执行完后进行角色校验
-> 
-> ❞
 
-   /**  
+```java
+/**  
      * [ROLE_管理员, admin:read, admin:write, all:login, all:logout, all:error, all:toMain]  
      * @PostAuthorize  角色 、权限 校验 方法执行后进行角色校验  
      *  
@@ -483,9 +519,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public String toMain(){  
         return "main";  
     }  
+```
+- 使用 `@PreAuthorize` 和 `@PostAuthorize` 需要在配置类中配置注解 `@EnableGlobalMethodSecurity(prePostEnabled = true) ` 才能生效
 
-### Spring Security 整合Thymeleaf 进行权限校验
 
+## Spring Security 整合Thymeleaf 进行权限校验
+```xml
 <dependency>  
       <groupId>org.springframework.boot</groupId>  
       <artifactId>spring-boot-starter-thymeleaf</artifactId>  
@@ -494,11 +533,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 <dependency>  
      <groupId>org.thymeleaf.extras</groupId>  
      <artifactId>thymeleaf-extras-springsecurity5</artifactId>  
-</dependency>  
+</dependency>
+```
 
-## **Spring Security中CSRF**
 
-## **什么是CSRF?**
+# Spring Security中CSRF
+
+## 什么是CSRF?
 
 CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Click Attack” 或者Session Riding。通过伪造用户请求访问受信任站点的非法请求访问。
 
@@ -506,7 +547,7 @@ CSRF（Cross-site request forgery）跨站请求伪造，也被称为“One Clic
 
 客户端与服务进行交互时，由于http协议本身是无状态协议，所以引入了cookie进行记录客户端身份。在cookie中会存放session id用来识别客户端身份的。在跨域的情况下，session id可能被第三方恶意劫持，通过这个session id向服务端发起请求时，服务端会认为这个请求是合法的，可能发生很多意想不到的事情。
 
-通俗解释：
+## 通俗解释
 
 CSRF就是别的网站非法获取我们网站Cookie值，我们项目服务器是无法区分到底是不是我们的客户端，只有请求中有Cookie，认为是自己的客户端，所以这个时候就出现了CSRF。
 
