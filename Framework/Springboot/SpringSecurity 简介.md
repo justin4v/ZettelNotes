@@ -65,13 +65,10 @@ public class UserSecurity implements UserDetailsService {
 - 自定义登录逻辑时需要在容器注入 PaswordEncoder 的bean。
 - SpringSecurity 定义了很多 **PasswordEncoder** 的实现满足密码加密、密码校验需求。
 
-PasswordEncoder密码解析器详解
-
 ### 自定义密码解析器
 
-1.  编写类，实现PasswordEncoder 接口
-    
-
+1.  实现 PasswordEncoder  接口
+```java
 /**  
  * 凭证匹配器，用于做认证流程的凭证校验使用的类型  
  * 其中有2个核心方法  
@@ -125,9 +122,11 @@ public class MyMD5PasswordEncoder implements PasswordEncoder {
   
     }  
 }  
+```
 
-2.在配置类中指定自定义密码凭证匹配器
+2. 在配置类中指定自定义密码凭证匹配器
 
+```java
 /**  
   * 加密  
   * @return 加密对象  
@@ -138,20 +137,23 @@ public class MyMD5PasswordEncoder implements PasswordEncoder {
 public PasswordEncoder passwordEncoder() {  
     return new BCryptPasswordEncoder(); //Spring Security 自带  
 }  
+```
 
-## **登录配置**
+# 登录配置
 
-### 方式一 转发
+## 方式一 转发
 
+```java
 http.formLogin()  
     .usernameParameter("name") // 设置请求参数中，用户名参数名称。 默认username  
     .passwordParameter("pswd") // 设置请求参数中，密码参数名称。 默认password  
     .loginPage("/toLogin") // 当用户未登录的时候，跳转的登录页面地址是什么？ 默认 /login  
     .loginProcessingUrl("/login") // 用户登录逻辑请求地址是什么。 默认是 /login  
     .failureForwardUrl("/failure"); // 登录失败后，请求转发的位置。Security请求转发使用Post请求。默认转发到：loginPage?error  
-    .successForwardUrl("/toMain"); // 用户登录成功后，请求转发到的位置。Security请求转发使用POST请求。  
+    .successForwardUrl("/toMain"); // 用户登录成功后，请求转发到的位置。Security请求转发使用POST请求。 
+``` 
 
-### 方式二 ：重定向
+## 方式二 ：重定向
 
 http.formLogin()  
     .usernameParameter("name") // 设置请求参数中，用户名参数名称。 默认username  
@@ -161,10 +163,11 @@ http.formLogin()
  .defaultSuccessUrl("/toMain",true); //用户登录成功后，响应重定向到的位置。GET请求。必须配置绝对地址。  
   .failureUrl("/failure"); // 登录失败后，重定向的位置。  
 
-### 方式三：自定义登录处理器
+## 方式三：自定义登录处理器
 
-自定义登录失败逻辑处理器
+### 自定义登录失败逻辑处理器
 
+```java
 /*自定义登录失败处理器*/  
 public class MyAuthenticationFailureHandler implements AuthenticationFailureHandler {  
     private  String url;  
@@ -186,6 +189,8 @@ public class MyAuthenticationFailureHandler implements AuthenticationFailure
     }  
   
 //get set 方法 省略  
+
+```
 
 ### 自定义登录成功逻辑处理器
 
