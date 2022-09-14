@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Service中spec.type：nodeport和clusterIp",
+      "path": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md"
+    },
+    {
       "basename": "Springboot 启动扩展点",
       "path": "Framework/Springboot/Springboot 启动扩展点.md"
     },
@@ -91,10 +95,6 @@
     {
       "basename": "docker 常用命令",
       "path": "运维相关/docker 常用命令.md"
-    },
-    {
-      "basename": "Service中spec.type：nodeport和clusterIp",
-      "path": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md"
     },
     {
       "basename": "K8s简介与架构设计",

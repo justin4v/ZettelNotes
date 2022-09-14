@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Framework/Springboot/Springboot 启动扩展点.md",
+            "file": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:pas",
+                "query": "node",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -65,12 +65,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 258,
-    "collapsed": true
+    "width": 258
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Framework/Springboot/Springboot 启动扩展点.md",
+                "file": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/Springboot/Springboot 启动扩展点.md"
+                "file": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md"
               }
             }
           },
@@ -131,10 +131,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 238
+    "width": 238,
+    "collapsed": true
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Framework/Springboot/Springboot 启动扩展点.md",
     "Framework/Springboot/SpringSecurity 简介.md",
     "Framework/Springboot/SpringSecurity主要流程.svg",
     "Framework/Springboot/SpringSecurity流程.svg.md",
@@ -143,7 +145,6 @@
     "Framework/Springboot/SpEL/SpEL简介.md",
     "Cache/Redis/Stream 消息队列实践.md",
     "Tool/Yaml/Yaml 语法.md",
-    "Language/Java/JVM/垃圾收集/分代收集理论.md",
-    "基础知识/编程基础/编程核心概念.md"
+    "Language/Java/JVM/垃圾收集/分代收集理论.md"
   ]
 }
