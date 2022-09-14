@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "c06b027dd4ac146f",
+        "id": "c0393fc446860e63",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
             "file": "Framework/Springboot/SpringSecurity 简介.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -133,7 +133,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "c06b027dd4ac146f",
+  "active": "c0393fc446860e63",
   "lastOpenFiles": [
     "Framework/Springboot/SpringSecurity主要流程.svg",
     "Framework/Springboot/SpringSecurity 简介.md",
