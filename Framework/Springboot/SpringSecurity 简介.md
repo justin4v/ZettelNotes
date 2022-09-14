@@ -204,14 +204,15 @@ http.formLogin()
 ``` 
 
 ## 方式二 ：重定向
-
+```java
 http.formLogin()  
     .usernameParameter("name") // 设置请求参数中，用户名参数名称。 默认username  
     .passwordParameter("pswd") // 设置请求参数中，密码参数名称。 默认password  
     .loginPage("/toLogin") // 当用户未登录的时候，跳转的登录页面地址是什么？ 默认 /login  
     .loginProcessingUrl("/login") // 用户登录逻辑请求地址是什么。 默认是 /login  
- .defaultSuccessUrl("/toMain",true); //用户登录成功后，响应重定向到的位置。GET请求。必须配置绝对地址。  
-  .failureUrl("/failure"); // 登录失败后，重定向的位置。  
+    .defaultSuccessUrl("/toMain",true); //用户登录成功后，响应重定向到的位置。GET请求。必须配置绝对地址。  
+    .failureUrl("/failure"); // 登录失败后，重定向的位置。  
+```
 
 ## 方式三：自定义登录处理器
 
