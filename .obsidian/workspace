@@ -4,35 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "acbb14b120dea582",
-        "type": "split",
-        "children": [
-          {
-            "id": "12c2e2769deea195",
-            "type": "leaf",
-            "dimension": 29.94011976047904,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Framework/Springboot/SpringSecurity 简介.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3e2944b3720c1bf5",
-            "type": "leaf",
-            "dimension": 70.05988023952095,
-            "state": {
-              "type": "diagram-edit",
-              "state": {
-                "file": "Framework/Springboot/Untitled Diagram.svg"
-              }
-            }
+        "id": "12c2e2769deea195",
+        "type": "leaf",
+        "state": {
+          "type": "diagram-edit",
+          "state": {
+            "file": "Framework/Springboot/Untitled Diagram.svg"
           }
-        ],
-        "direction": "horizontal"
+        }
       }
     ],
     "direction": "vertical"
@@ -105,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Framework/Springboot/SpringSecurity 简介.md",
+                "file": "Framework/Springboot/Untitled Diagram.svg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +112,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Framework/Springboot/SpringSecurity 简介.md"
+                "file": "Framework/Springboot/Untitled Diagram.svg"
               }
             }
           },
@@ -155,15 +134,15 @@
   },
   "active": "12c2e2769deea195",
   "lastOpenFiles": [
-    "Framework/Springboot/Untitled Diagram.svg",
     "Framework/Springboot/SpringSecurity 简介.md",
+    "Framework/Springboot/Untitled Diagram.svg",
+    "Framework/Springboot/SpringSecurity流程.svg.md",
     "Language/Java/Java IO/BIO,NIO,AIO.md",
     "Language/Java/Java IO/Java NIO组件.md",
     "Framework/Springboot/SpEL/SpEL简介.md",
     "Cache/Redis/Stream 消息队列实践.md",
     "Tool/Yaml/Yaml 语法.md",
     "Language/Java/JVM/垃圾收集/分代收集理论.md",
-    "基础知识/编程基础/编程核心概念.md",
-    "Design/计算机科学问题的解决方法.md"
+    "基础知识/编程基础/编程核心概念.md"
   ]
 }
