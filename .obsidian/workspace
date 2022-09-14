@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
+            "file": "运维相关/K8s/K8s暴露服务的三种方式.md",
             "mode": "source",
             "source": false
           }
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
+                "file": "运维相关/K8s/K8s暴露服务的三种方式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md"
+                "file": "运维相关/K8s/K8s暴露服务的三种方式.md"
               }
             }
           },
@@ -136,6 +135,8 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "运维相关/K8s/k8s 资源对象.md",
+    "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
     "Framework/Springboot/Springboot 启动扩展点.md",
     "Framework/Springboot/SpringSecurity 简介.md",
     "Framework/Springboot/SpringSecurity主要流程.svg",
@@ -143,8 +144,6 @@
     "Language/Java/Java IO/BIO,NIO,AIO.md",
     "Language/Java/Java IO/Java NIO组件.md",
     "Framework/Springboot/SpEL/SpEL简介.md",
-    "Cache/Redis/Stream 消息队列实践.md",
-    "Tool/Yaml/Yaml 语法.md",
-    "Language/Java/JVM/垃圾收集/分代收集理论.md"
+    "Cache/Redis/Stream 消息队列实践.md"
   ]
 }
