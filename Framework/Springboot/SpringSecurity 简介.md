@@ -194,6 +194,7 @@ public class MyAuthenticationFailureHandler implements AuthenticationFailure
 
 ### 自定义登录成功逻辑处理器
 
+```java
 /**  
  * 自定义登录成功后处理器  
  * 转发重定向，有代码逻辑实现  
@@ -228,9 +229,12 @@ http.formLogin()
     .passwordParameter("pswd") // 设置请求参数中，密码参数名称。 默认password  
     .loginPage("/toLogin") // 当用户未登录的时候，跳转的登录页面地址是什么？ 默认 /login  
     .loginProcessingUrl("/login") // 用户登录逻辑请求地址是什么。 默认是 /login  
+```
 
-### 登录相关配置类
 
+# 登录相关配置类
+
+```java
 @Configuration  
 @EnableWebSecurity  
 public class SecurityConfig extends WebSecurityConfigurerAdapter {  
@@ -297,56 +301,52 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return jdbcTokenRepository;  
     }  
 }  
+```
 
-## **角色权限**
+#  角色权限
 
-> ❝
-> 
 > **「hasAuthority(String)」** 判断角色是否具有特定权限
-> 
-> ❞
 
+```java
 http.authorizeRequests().antMatchers("/main1.html").hasAuthority("admin")  
+```
 
-> ❝
-> 
+
+
 > **「hasAnyAuthority(String ...)」** 如果用户具备给定权限中某一个，就允许访问
-> 
-> ❞
 
+```java
 http.authorizeRequests().antMatchers("/admin/read").hasAnyAuthority("xxx","xxx")   
+```
 
-> ❝
-> 
+
 > **「hasRole(String)」** 如果用户具备给定角色就允许访问。否则出现403
-> 
-> ❞
 
+```java
 //请求地址为/admin/read的请求，必须登录用户拥有'管理员'角色才可访问  
 http.authorizeRequests().antMatchers("/admin/read").hasRole("管理员")   
+```
 
-> ❝
-> 
 > **「hasAnyRole(String ...)」** 如果用户具备给定角色的任意一个，就允许被访问
-> 
-> ❞
 
+```java
 //用户拥有角色是管理员 或 访客 可以访问 /guest/read  
 http.authorizeRequests().antMatchers("/guest/read").hasAnyRole("管理员", "访客")  
+```
 
-> ❝
-> 
+
 > **「hasIpAddress(String)」** 请求是指定的IP就运行访问
-> 
-> ❞
 
+```java
 //ip 是127.0.0.1 的请求 可以访问/ip  
 http.authorizeRequests().antMatchers("/ip").hasIpAddress("127.0.0.1")  
+```
 
-## **403 权限不足页面处理**
+## 403 权限不足页面处理
 
-1.编写类实现接口**「AccessDeniedHandler」**
+1. 编写类实现接口**AccessDeniedHandler**
 
+```java
 /**  
  * @describe  403 权限不足  
  * @author: AnyWhere  
@@ -376,14 +376,16 @@ public class MyAccessDeniedHandler implements AccessDeniedHandler {
         response.getWriter().flush();//刷新缓冲区  
     }  
 }  
+```
 
-2.配置类中配置exceptionHandling
-
+2. 配置类中配置 exceptionHandling
+```java
 // 配置403访问错误处理器。  
-http.exceptionHandling().accessDeniedHandler(myAccessDeniedHandler);/  
+http.exceptionHandling().accessDeniedHandler(myAccessDeniedHandler);
+```
 
-## **RememberMe（记住我）**
-
+## RememberMe 配置
+```java
 @Configuration  
 @EnableWebSecurity  
 public class SecurityConfig extends WebSecurityConfigurerAdapter {  
@@ -406,36 +408,31 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      return jdbcTokenRepository;  
   }  
 }     
+```
 
-## **Spring Security 注解**
 
-### @Secured
+# Spring Security 注解
 
-> ❝
-> 
+## @Secured
+
 > 角色校验 ,请求到来访问控制单元方法时必须包含XX角色才能访问
 > 
 > 角色必须添加ROLE_前缀
-> 
-> ❞
 
+```java
   @Secured({"ROLE_管理员","ROLE_访客"})  
   @RequestMapping("/toMain")  
   public String toMain(){  
       return "main";  
   }  
+```
 
-使用注解@Secured需要在配置类中添加注解 使@Secured注解生效
+- 使用注解@Secured需要在配置类中添加注解 `@EnableGlobalMethodSecurity(securedEnabled = true)  ` 使 `@Secured` 注解生效
 
-@EnableGlobalMethodSecurity(securedEnabled = true)  
+## @PreAuthorize
 
-### @PreAuthorize
-
-> ❝
-> 
 > 权限检验,请求到来访问控制单元之前必须包含xx权限才能访问，控制单元方法执行前进行角色校验
-> 
-> ❞
+
 
    /**  
      * [ROLE_管理员, admin:read, admin:write, all:login, all:logout, all:error, all:toMain]  
