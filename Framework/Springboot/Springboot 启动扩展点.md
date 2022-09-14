@@ -71,8 +71,7 @@ public class TestBeanDefinitionRegistryPostProcessor implements BeanDefiniti
 扩展方式为：
 ```java
 public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcessor {  
-    @Override  
- public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {  
+    @Override  public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {  
         System.out.println("[BeanFactoryPostProcessor]");  
     }  
 }
@@ -102,8 +101,39 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 使用场景：这个扩展点非常有用 ，无论是写中间件和业务中，都能利用这个特性。比如对实现了某一类接口的bean在各个生命期间进行收集，或者对某个类型的bean进行统一的设值等等。
 
 扩展方式为：
-
-`public class TestInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {          @Override       public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {           System.out.println("[TestInstantiationAwareBeanPostProcessor] before initialization " + beanName);           return bean;       }          @Override       public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {           System.out.println("[TestInstantiationAwareBeanPostProcessor] after initialization " + beanName);           return bean;       }          @Override       public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {           System.out.println("[TestInstantiationAwareBeanPostProcessor] before instantiation " + beanName);           return null;       }          @Override       public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {           System.out.println("[TestInstantiationAwareBeanPostProcessor] after instantiation " + beanName);           return true;       }          @Override       public PropertyValues postProcessPropertyValues(PropertyValues pvs, PropertyDescriptor[] pds, Object bean, String beanName) throws BeansException {           System.out.println("[TestInstantiationAwareBeanPostProcessor] postProcessPropertyValues " + beanName);           return pvs;       }   `
+```java
+public class TestInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {  
+  
+    @Override  
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {  
+        System.out.println("[TestInstantiationAwareBeanPostProcessor] before initialization " + beanName);  
+        return bean;  
+    }  
+  
+    @Override  
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {  
+        System.out.println("[TestInstantiationAwareBeanPostProcessor] after initialization " + beanName);  
+        return bean;  
+    }  
+  
+    @Override  
+    public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {  
+        System.out.println("[TestInstantiationAwareBeanPostProcessor] before instantiation " + beanName);  
+        return null;  
+    }  
+  
+    @Override  
+    public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {  
+        System.out.println("[TestInstantiationAwareBeanPostProcessor] after instantiation " + beanName);  
+        return true;  
+    }  
+  
+    @Override  
+    public PropertyValues postProcessPropertyValues(PropertyValues pvs, PropertyDescriptor[] pds, Object bean, String beanName) throws BeansException {  
+        System.out.println("[TestInstantiationAwareBeanPostProcessor] postProcessPropertyValues " + beanName);  
+        return pvs;  
+    }
+```
 
 ## 7.SmartInstantiationAwareBeanPostProcessor
 
@@ -120,7 +150,28 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 
 扩展方式为：
 
-`public class TestSmartInstantiationAwareBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor {          @Override       public Class<?> predictBeanType(Class<?> beanClass, String beanName) throws BeansException {           System.out.println("[TestSmartInstantiationAwareBeanPostProcessor] predictBeanType " + beanName);           return beanClass;       }          @Override       public Constructor<?>[] determineCandidateConstructors(Class<?> beanClass, String beanName) throws BeansException {           System.out.println("[TestSmartInstantiationAwareBeanPostProcessor] determineCandidateConstructors " + beanName);           return null;       }          @Override       public Object getEarlyBeanReference(Object bean, String beanName) throws BeansException {           System.out.println("[TestSmartInstantiationAwareBeanPostProcessor] getEarlyBeanReference " + beanName);           return bean;       }   }   `
+```java
+public class TestSmartInstantiationAwareBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor {  
+  
+    @Override  
+    public Class<?> predictBeanType(Class<?> beanClass, String beanName) throws BeansException {  
+        System.out.println("[TestSmartInstantiationAwareBeanPostProcessor] predictBeanType " + beanName);  
+        return beanClass;  
+    }  
+  
+    @Override  
+    public Constructor<?>[] determineCandidateConstructors(Class<?> beanClass, String beanName) throws BeansException {  
+        System.out.println("[TestSmartInstantiationAwareBeanPostProcessor] determineCandidateConstructors " + beanName);  
+        return null;  
+    }  
+  
+    @Override  
+    public Object getEarlyBeanReference(Object bean, String beanName) throws BeansException {  
+        System.out.println("[TestSmartInstantiationAwareBeanPostProcessor] getEarlyBeanReference " + beanName);  
+        return bean;  
+    }  
+}
+```
 
 ## 8.BeanFactoryAware
 
@@ -131,8 +182,14 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 使用场景为，你可以在bean实例化之后，但还未初始化之前，拿到 `BeanFactory`，在这个时候，可以对每个bean作特殊化的定制。也或者可以把`BeanFactory`拿到进行缓存，日后使用。
 
 扩展方式为：
-
-`public class TestBeanFactoryAware implements BeanFactoryAware {       @Override       public void setBeanFactory(BeanFactory beanFactory) throws BeansException {           System.out.println("[TestBeanFactoryAware] " + beanFactory.getBean(TestBeanFactoryAware.class).getClass().getSimpleName());       }   }   `
+```java
+public class TestBeanFactoryAware implements BeanFactoryAware {  
+    @Override  
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {  
+        System.out.println("[TestBeanFactoryAware] " + beanFactory.getBean(TestBeanFactoryAware.class).getClass().getSimpleName());  
+    }  
+}
+```
 
 ## 9.ApplicationContextAwareProcessor
 
@@ -166,8 +223,18 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 使用场景为：用户可以扩展这个点，在初始化bean之前拿到spring容器中注册的的beanName，来自行修改这个beanName的值。
 
 扩展方式为：
-
-`public class NormalBeanA implements BeanNameAware{       public NormalBeanA() {           System.out.println("NormalBean constructor");       }          @Override       public void setBeanName(String name) {           System.out.println("[BeanNameAware] " + name);       }   }   `
+```java
+public class NormalBeanA implements BeanNameAware{  
+    public NormalBeanA() {  
+        System.out.println("NormalBean constructor");  
+    }  
+  
+    @Override  
+    public void setBeanName(String name) {  
+        System.out.println("[BeanNameAware] " + name);  
+    }  
+}
+```
 
 ## 11.@PostConstruct
 
@@ -178,8 +245,18 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 使用场景：用户可以对某一方法进行标注，来进行初始化某一个属性
 
 扩展方式为：
-
-`public class NormalBeanA {       public NormalBeanA() {           System.out.println("NormalBean constructor");       }          @PostConstruct       public void init(){           System.out.println("[PostConstruct] NormalBeanA");       }   }   `
+```java
+public class NormalBeanA {  
+    public NormalBeanA() {  
+        System.out.println("NormalBean constructor");  
+    }  
+  
+    @PostConstruct  
+    public void init(){  
+        System.out.println("[PostConstruct] NormalBeanA");  
+    }  
+}
+```
 
 ## 12.InitializingBean
 
@@ -190,8 +267,14 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 使用场景：用户实现此接口，来进行系统启动的时候一些业务指标的初始化工作。
 
 扩展方式为：
-
-`public class NormalBeanA implements InitializingBean{       @Override       public void afterPropertiesSet() throws Exception {           System.out.println("[InitializingBean] NormalBeanA");       }   }   `
+```java
+public class NormalBeanA implements InitializingBean{  
+    @Override  
+    public void afterPropertiesSet() throws Exception {  
+        System.out.println("[InitializingBean] NormalBeanA");  
+    }  
+}
+```
 
 ## 13.FactoryBean
 
@@ -202,8 +285,31 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 使用场景：用户可以扩展这个类，来为要实例化的bean作一个代理，比如为该对象的所有的方法作一个拦截，在调用前后输出一行log，模仿`ProxyFactoryBean`的功能。
 
 扩展方式为：
+```java
+public class TestFactoryBean implements FactoryBean<TestFactoryBean.TestFactoryInnerBean> {  
+  
+    @Override  
+    public TestFactoryBean.TestFactoryInnerBean getObject() throws Exception {  
+        System.out.println("[FactoryBean] getObject");  
+        return new TestFactoryBean.TestFactoryInnerBean();  
+    }  
+  
+    @Override  
+    public Class<?> getObjectType() {  
+        return TestFactoryBean.TestFactoryInnerBean.class;  
+    }  
+  
+    @Override  
+    public boolean isSingleton() {  
+        return true;  
+    }  
+  
+    public static class TestFactoryInnerBean{  
+  
+    }  
+}
+```
 
-`public class TestFactoryBean implements FactoryBean<TestFactoryBean.TestFactoryInnerBean> {          @Override       public TestFactoryBean.TestFactoryInnerBean getObject() throws Exception {           System.out.println("[FactoryBean] getObject");           return new TestFactoryBean.TestFactoryInnerBean();       }          @Override       public Class<?> getObjectType() {           return TestFactoryBean.TestFactoryInnerBean.class;       }          @Override       public boolean isSingleton() {           return true;       }          public static class TestFactoryInnerBean{          }   }   `
 
 ## 14.SmartInitializingSingleton
 
@@ -214,8 +320,15 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 使用场景：用户可以扩展此接口在对所有单例对象初始化完毕后，做一些后置的业务处理。
 
 扩展方式为：
+```java
+public class TestSmartInitializingSingleton implements SmartInitializingSingleton {  
+    @Override  
+    public void afterSingletonsInstantiated() {  
+        System.out.println("[TestSmartInitializingSingleton]");  
+    }  
+}
+```
 
-`public class TestSmartInitializingSingleton implements SmartInitializingSingleton {       @Override       public void afterSingletonsInstantiated() {           System.out.println("[TestSmartInitializingSingleton]");       }   }   `
 
 ## 15.CommandLineRunner
 
@@ -226,8 +339,16 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 使用场景：用户扩展此接口，进行启动项目之后一些业务的预处理。
 
 扩展方式为：
+```java
+public class TestCommandLineRunner implements CommandLineRunner {  
+  
+    @Override  
+    public void run(String... args) throws Exception {  
+        System.out.println("[TestCommandLineRunner]");  
+    }  
+}
+```
 
-`public class TestCommandLineRunner implements CommandLineRunner {          @Override       public void run(String... args) throws Exception {           System.out.println("[TestCommandLineRunner]");       }   }   `
 
 ## 16.DisposableBean
 
@@ -236,8 +357,14 @@ public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcesso
 这个扩展点也只有一个方法：`destroy()`，其触发时机为当此对象销毁时，会自动执行这个方法。比如说运行`applicationContext.registerShutdownHook`时，就会触发这个方法。
 
 扩展方式为：
-
-`public class NormalBeanA implements DisposableBean {       @Override       public void destroy() throws Exception {           System.out.println("[DisposableBean] NormalBeanA");       }   }   `
+```java
+public class NormalBeanA implements DisposableBean {  
+    @Override  
+    public void destroy() throws Exception {  
+        System.out.println("[DisposableBean] NormalBeanA");  
+    }  
+}
+```
 
 ## 17.ApplicationListener
 
