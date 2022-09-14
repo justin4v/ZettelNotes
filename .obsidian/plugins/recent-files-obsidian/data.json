@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Stream 消息队列实践",
+      "path": "Cache/Redis/Stream 消息队列实践.md"
+    },
+    {
       "basename": "K8s暴露服务的三种方式",
       "path": "运维相关/K8s/K8s暴露服务的三种方式.md"
     },
@@ -35,10 +39,6 @@
     {
       "basename": "SpEL简介",
       "path": "Framework/Springboot/SpEL/SpEL简介.md"
-    },
-    {
-      "basename": "Stream 消息队列实践",
-      "path": "Cache/Redis/Stream 消息队列实践.md"
     },
     {
       "basename": "Yaml 语法",
