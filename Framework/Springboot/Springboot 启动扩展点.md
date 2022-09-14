@@ -19,8 +19,14 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 可以想到的场景可能为，在最开始激活一些配置，或者利用这时候class还没被类加载器加载的时机，进行动态字节码注入等操作。
 
 扩展方式为：
-
-`public class TestApplicationContextInitializer implements ApplicationContextInitializer {       @Override       public void initialize(ConfigurableApplicationContext applicationContext) {           System.out.println("[ApplicationContextInitializer]");       }   }   `
+```java
+public class TestApplicationContextInitializer implements ApplicationContextInitializer {  
+    @Override  
+    public void initialize(ConfigurableApplicationContext applicationContext) {  
+        System.out.println("[ApplicationContextInitializer]");  
+    }  
+}
+```
 
 因为这时候spring容器还没被初始化，所以想要自己的扩展的生效，有以下三种方式：
 
@@ -40,8 +46,19 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 使用场景：你可以在这里动态注册自己的`beanDefinition`，可以加载classpath之外的bean
 
 扩展方式为:
-
-`public class TestBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor {       @Override       public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {           System.out.println("[BeanDefinitionRegistryPostProcessor] postProcessBeanDefinitionRegistry");       }          @Override       public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {           System.out.println("[BeanDefinitionRegistryPostProcessor] postProcessBeanFactory");       }   }   `
+```java
+public class TestBeanDefinitionRegistryPostProcessor implements BeanDefinitionRegistryPostProcessor {  
+    @Override  
+    public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {  
+        System.out.println("[BeanDefinitionRegistryPostProcessor] postProcessBeanDefinitionRegistry");  
+    }  
+  
+    @Override  
+    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {  
+        System.out.println("[BeanDefinitionRegistryPostProcessor] postProcessBeanFactory");  
+    }  
+}
+``` 
 
 ## 5.BeanFactoryPostProcessor
 
@@ -52,8 +69,14 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 在这个时机，用户可以通过实现这个扩展接口来自行处理一些东西，比如修改已经注册的`beanDefinition`的元信息。
 
 扩展方式为：
-
-`public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcessor {       @Override       public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {           System.out.println("[BeanFactoryPostProcessor]");       }   }   `
+```java
+public class TestBeanFactoryPostProcessor implements BeanFactoryPostProcessor {  
+    @Override  
+ public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {  
+        System.out.println("[BeanFactoryPostProcessor]");  
+    }  
+}
+```
 
 ## 6.InstantiationAwareBeanPostProcessor
 
@@ -134,7 +157,7 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 -   `ApplicationContextAware`：用来获取`ApplicationContext`的一个扩展类，`ApplicationContext`应该是很多人非常熟悉的一个类了，就是spring上下文管理器，可以手动的获取任何在spring上下文注册的bean，我们经常扩展这个接口来缓存spring上下文，包装成静态方法。同时`ApplicationContext`也实现了`BeanFactory`，`MessageSource`，`ApplicationEventPublisher`等接口，也可以用来做相关接口的事情。
     
 
-## **10.BeanNameAware**
+## 10.BeanNameAware
 
 > org.springframework.beans.factory.BeanNameAware
 
@@ -146,7 +169,7 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 
 `public class NormalBeanA implements BeanNameAware{       public NormalBeanA() {           System.out.println("NormalBean constructor");       }          @Override       public void setBeanName(String name) {           System.out.println("[BeanNameAware] " + name);       }   }   `
 
-## **11.@PostConstruct**
+## 11.@PostConstruct
 
 > javax.annotation.PostConstruct
 
@@ -158,7 +181,7 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 
 `public class NormalBeanA {       public NormalBeanA() {           System.out.println("NormalBean constructor");       }          @PostConstruct       public void init(){           System.out.println("[PostConstruct] NormalBeanA");       }   }   `
 
-## **12.InitializingBean**
+## 12.InitializingBean
 
 > org.springframework.beans.factory.InitializingBean
 
@@ -170,7 +193,7 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 
 `public class NormalBeanA implements InitializingBean{       @Override       public void afterPropertiesSet() throws Exception {           System.out.println("[InitializingBean] NormalBeanA");       }   }   `
 
-## **13.FactoryBean**
+## 13.FactoryBean
 
 > org.springframework.beans.factory.FactoryBean
 
@@ -182,7 +205,7 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 
 `public class TestFactoryBean implements FactoryBean<TestFactoryBean.TestFactoryInnerBean> {          @Override       public TestFactoryBean.TestFactoryInnerBean getObject() throws Exception {           System.out.println("[FactoryBean] getObject");           return new TestFactoryBean.TestFactoryInnerBean();       }          @Override       public Class<?> getObjectType() {           return TestFactoryBean.TestFactoryInnerBean.class;       }          @Override       public boolean isSingleton() {           return true;       }          public static class TestFactoryInnerBean{          }   }   `
 
-## **14.SmartInitializingSingleton**
+## 14.SmartInitializingSingleton
 
 > org.springframework.beans.factory.SmartInitializingSingleton
 
@@ -194,7 +217,7 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 
 `public class TestSmartInitializingSingleton implements SmartInitializingSingleton {       @Override       public void afterSingletonsInstantiated() {           System.out.println("[TestSmartInitializingSingleton]");       }   }   `
 
-## **15.CommandLineRunner**
+## 15.CommandLineRunner
 
 > org.springframework.boot.CommandLineRunner
 
@@ -206,7 +229,7 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 
 `public class TestCommandLineRunner implements CommandLineRunner {          @Override       public void run(String... args) throws Exception {           System.out.println("[TestCommandLineRunner]");       }   }   `
 
-## **16.DisposableBean**
+## 16.DisposableBean
 
 > org.springframework.beans.factory.DisposableBean
 
@@ -216,7 +239,7 @@ Spring的核心思想就是容器，当容器refresh的时候，外部看上去�
 
 `public class NormalBeanA implements DisposableBean {       @Override       public void destroy() throws Exception {           System.out.println("[DisposableBean] NormalBeanA");       }   }   `
 
-## **17.ApplicationListener**
+## 17.ApplicationListener
 
 > org.springframework.context.ApplicationListener
 
