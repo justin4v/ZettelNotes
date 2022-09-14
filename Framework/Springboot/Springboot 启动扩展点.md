@@ -185,9 +185,11 @@ public class TestSmartInstantiationAwareBeanPostProcessor implements SmartIn
 
 这个类只有一个触发点，发生在bean的实例化之后，注入属性之前，也就是Setter之前。这个类的扩展点方法为`setBeanFactory`，可以拿到`BeanFactory`这个属性。
 
-## 使用场景为，你可以在bean实例化之后，但还未初始化之前，拿到 `BeanFactory`，在这个时候，可以对每个bean作特殊化的定制。也或者可以把`BeanFactory`拿到进行缓存，日后使用。
+## 使用场景
+- 可以在bean实例化之后，但还未初始化之前，拿到 `BeanFactory`；
+- 此时可以对每个bean作特殊化的定制。也或者可以把`BeanFactory`拿到进行缓存，日后使用。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class TestBeanFactoryAware implements BeanFactoryAware {  
     @Override  
@@ -197,7 +199,7 @@ public class TestBeanFactoryAware implements BeanFactoryAware {
 }
 ```
 
-## 9.ApplicationContextAwareProcessor
+# 9.ApplicationContextAwareProcessor
 
 > org.springframework.context.support.ApplicationContextAwareProcessor
 
@@ -220,15 +222,16 @@ public class TestBeanFactoryAware implements BeanFactoryAware {
 -   `ApplicationContextAware`：用来获取`ApplicationContext`的一个扩展类，`ApplicationContext`应该是很多人非常熟悉的一个类了，就是spring上下文管理器，可以手动的获取任何在spring上下文注册的bean，我们经常扩展这个接口来缓存spring上下文，包装成静态方法。同时`ApplicationContext`也实现了`BeanFactory`，`MessageSource`，`ApplicationEventPublisher`等接口，也可以用来做相关接口的事情。
     
 
-## 10.BeanNameAware
+# 10.BeanNameAware
 
 > org.springframework.beans.factory.BeanNameAware
 
 可以看到，这个类也是Aware扩展的一种，触发点在bean的初始化之前，也就是`postProcessBeforeInitialization`之前，这个类的触发点方法只有一个：`setBeanName`
 
-使用场景为：用户可以扩展这个点，在初始化bean之前拿到spring容器中注册的的beanName，来自行修改这个beanName的值。
+## 使用场景
+- 用户可以扩展这个点，在初始化bean之前拿到spring容器中注册的的beanName，来自行修改这个beanName的值。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class NormalBeanA implements BeanNameAware{  
     public NormalBeanA() {  
@@ -242,15 +245,16 @@ public class NormalBeanA implements BeanNameAware{
 }
 ```
 
-## 11.@PostConstruct
+# 11.@PostConstruct
 
 >`javax.annotation.PostConstruct`
 
 这个并不算一个扩展点，其实就是一个标注。其作用是在bean的初始化阶段，如果对一个方法标注了`@PostConstruct`，会先调用这个方法。这里重点是要关注下这个标准的触发点，这个触发点是在`postProcessBeforeInitialization`之后，`InitializingBean.afterPropertiesSet`之前。
 
-使用场景：用户可以对某一方法进行标注，来进行初始化某一个属性
+## 使用场景
+- 用户可以对某一方法进行标注，来进行初始化某一个属性
 
-扩展方式为：
+## 扩展方式
 ```java
 public class NormalBeanA {  
     public NormalBeanA() {  
@@ -264,15 +268,16 @@ public class NormalBeanA {
 }
 ```
 
-## 12.InitializingBean
+# 12.InitializingBean
 
 > org.springframework.beans.factory.InitializingBean
 
 这个类，顾名思义，也是用来初始化bean的。`InitializingBean`接口为bean提供了初始化方法的方式，它只包括`afterPropertiesSet`方法，凡是继承该接口的类，在初始化bean的时候都会执行该方法。这个扩展点的触发时机在`postProcessAfterInitialization`之前。
 
-使用场景：用户实现此接口，来进行系统启动的时候一些业务指标的初始化工作。
+## 使用场景
+- 用户实现此接口，来进行系统启动的时候一些业务指标的初始化工作。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class NormalBeanA implements InitializingBean{  
     @Override  
@@ -282,15 +287,16 @@ public class NormalBeanA implements InitializingBean{
 }
 ```
 
-## 13.FactoryBean
+# 13.FactoryBean
 
 > org.springframework.beans.factory.FactoryBean
 
 一般情况下，Spring通过反射机制利用bean的class属性指定支线类去实例化bean，在某些情况下，实例化Bean过程比较复杂，如果按照传统的方式，则需要在bean中提供大量的配置信息。配置方式的灵活性是受限的，这时采用编码的方式可能会得到一个简单的方案。Spring为此提供了一个`org.springframework.bean.factory.FactoryBean`的工厂类接口，用户可以通过实现该接口定制实例化Bean的逻辑。`FactoryBean`接口对于Spring框架来说占用重要的地位，Spring自身就提供了70多个`FactoryBean`的实现。它们隐藏了实例化一些复杂bean的细节，给上层应用带来了便利。从Spring3.0开始，`FactoryBean`开始支持泛型，即接口声明改为`FactoryBean<T>`的形式
 
-使用场景：用户可以扩展这个类，来为要实例化的bean作一个代理，比如为该对象的所有的方法作一个拦截，在调用前后输出一行log，模仿`ProxyFactoryBean`的功能。
+## 使用场景
+- 用户可以扩展这个类，来为要实例化的bean作一个代理，比如为该对象的所有的方法作一个拦截，在调用前后输出一行log，模仿`ProxyFactoryBean`的功能。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class TestFactoryBean implements FactoryBean<TestFactoryBean.TestFactoryInnerBean> {  
   
@@ -317,15 +323,16 @@ public class TestFactoryBean implements FactoryBean<TestFactoryBean.TestFact
 ```
 
 
-## 14.SmartInitializingSingleton
+# 14.SmartInitializingSingleton
 
 > org.springframework.beans.factory.SmartInitializingSingleton
 
-这个接口中只有一个方法`afterSingletonsInstantiated`，其作用是是 在spring容器管理的所有单例对象（非懒加载对象）初始化完成之后调用的回调接口。其触发时机为`postProcessAfterInitialization`之后。
+这个接口中只有一个方法`afterSingletonsInstantiated`，其作用是在spring容器管理的所有单例对象（非懒加载对象）初始化完成之后调用的回调接口。其触发时机为`postProcessAfterInitialization`之后。
 
-使用场景：用户可以扩展此接口在对所有单例对象初始化完毕后，做一些后置的业务处理。
+## 使用场景
+- 用户可以扩展此接口在对所有单例对象初始化完毕后，做一些后置的业务处理。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class TestSmartInitializingSingleton implements SmartInitializingSingleton {  
     @Override  
@@ -336,15 +343,16 @@ public class TestSmartInitializingSingleton implements SmartInitializingSing
 ```
 
 
-## 15.CommandLineRunner
+# 15.CommandLineRunner
 
 > org.springframework.boot.CommandLineRunner
 
 这个接口也只有一个方法：`run(String... args)`，触发时机为整个项目启动完毕后，自动执行。如果有多个`CommandLineRunner`，可以利用`@Order`来进行排序。
 
-使用场景：用户扩展此接口，进行启动项目之后一些业务的预处理。
+## 使用场景
+- 用户扩展此接口，进行启动项目之后一些业务的预处理。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class TestCommandLineRunner implements CommandLineRunner {  
   
@@ -356,13 +364,13 @@ public class TestCommandLineRunner implements CommandLineRunner {
 ```
 
 
-## 16.DisposableBean
+# 16.DisposableBean
 
 > org.springframework.beans.factory.DisposableBean
 
 这个扩展点也只有一个方法：`destroy()`，其触发时机为当此对象销毁时，会自动执行这个方法。比如说运行`applicationContext.registerShutdownHook`时，就会触发这个方法。
 
-扩展方式为：
+## 扩展方式
 ```java
 public class NormalBeanA implements DisposableBean {  
     @Override  
@@ -372,7 +380,7 @@ public class NormalBeanA implements DisposableBean {
 }
 ```
 
-## 17.ApplicationListener
+# 17.ApplicationListener
 
 > org.springframework.context.ApplicationListener
 
