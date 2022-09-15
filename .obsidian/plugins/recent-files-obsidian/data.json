@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Springboot 启动扩展点",
+      "path": "Framework/Springboot/Springboot 启动扩展点.md"
+    },
+    {
       "basename": "消息队列设计精要",
       "path": "Cache/消息队列设计精要.md"
     },
@@ -27,10 +31,6 @@
     {
       "basename": "k8s 资源对象",
       "path": "运维相关/K8s/k8s 资源对象.md"
-    },
-    {
-      "basename": "Springboot 启动扩展点",
-      "path": "Framework/Springboot/Springboot 启动扩展点.md"
     },
     {
       "basename": "SpringSecurity 简介",
