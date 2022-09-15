@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Message Queue/Redis Stream 实现消息队列.md",
+            "file": "Cache/Redis/Stream 消息队列实践.md",
             "mode": "source",
             "source": false
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Message Queue/Redis Stream 实现消息队列.md",
+                "file": "Cache/Redis/Stream 消息队列实践.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Message Queue/Redis Stream 实现消息队列.md"
+                "file": "Cache/Redis/Stream 消息队列实践.md"
               }
             }
           },
@@ -136,6 +136,7 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Message Queue/Redis Stream 实现消息队列.md",
     "Cache/Redis/Stream 消息队列实践.md",
     "运维相关/K8s/K8s暴露服务的三种方式.md",
     "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
@@ -144,7 +145,6 @@
     "Framework/Springboot/SpringSecurity 简介.md",
     "Framework/Springboot/SpringSecurity主要流程.svg",
     "Framework/Springboot/SpringSecurity流程.svg.md",
-    "Language/Java/Java IO/BIO,NIO,AIO.md",
-    "Language/Java/Java IO/Java NIO组件.md"
+    "Language/Java/Java IO/BIO,NIO,AIO.md"
   ]
 }
