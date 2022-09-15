@@ -1,5 +1,5 @@
 #Vim
-![[Vim键位图.png]]
+![[Vim键位图.png|850]]
 
 ![[Vim键位分类.png]]
 
