@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Message Queue/Redis Stream 实现消息队列.md",
+            "file": "Cache/消息队列设计精要.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "stream",
+                "query": "消息",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Message Queue/Redis Stream 实现消息队列.md",
+                "file": "Cache/消息队列设计精要.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Message Queue/Redis Stream 实现消息队列.md"
+                "file": "Cache/消息队列设计精要.md"
               }
             }
           },
@@ -136,15 +136,15 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
-    "Cache/Redis/Stream 消息队列实践.md",
+    "Message Queue/消息模型.md",
+    "Cache/消息队列设计精要.md",
     "Message Queue/Redis Stream 实现消息队列.md",
+    "Cache/Redis/Stream 消息队列实践.md",
     "运维相关/K8s/K8s暴露服务的三种方式.md",
     "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
     "运维相关/K8s/k8s 资源对象.md",
     "Framework/Springboot/Springboot 启动扩展点.md",
     "Framework/Springboot/SpringSecurity 简介.md",
-    "Framework/Springboot/SpringSecurity主要流程.svg",
-    "Framework/Springboot/SpringSecurity流程.svg.md",
-    "Language/Java/Java IO/BIO,NIO,AIO.md"
+    "Framework/Springboot/SpringSecurity主要流程.svg"
   ]
 }

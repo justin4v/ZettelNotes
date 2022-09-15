@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "消息队列设计精要",
+      "path": "Cache/消息队列设计精要.md"
+    },
+    {
+      "basename": "消息模型",
+      "path": "Message Queue/消息模型.md"
+    },
+    {
       "basename": "Redis Stream 实现消息队列",
       "path": "Message Queue/Redis Stream 实现消息队列.md"
     },
