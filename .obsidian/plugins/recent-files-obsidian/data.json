@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Redis Stream 实现消息队列",
+      "path": "Message Queue/Redis Stream 实现消息队列.md"
+    },
+    {
+      "basename": "Stream 消息队列实践",
+      "path": "Cache/Redis/Stream 消息队列实践.md"
+    },
+    {
       "basename": "Vim键盘图",
       "path": "基础知识/Vim/Vim键盘图.md"
     },
@@ -15,14 +23,6 @@
     {
       "basename": "消息模型",
       "path": "Message Queue/消息模型.md"
-    },
-    {
-      "basename": "Redis Stream 实现消息队列",
-      "path": "Message Queue/Redis Stream 实现消息队列.md"
-    },
-    {
-      "basename": "Stream 消息队列实践",
-      "path": "Cache/Redis/Stream 消息队列实践.md"
     },
     {
       "basename": "K8s暴露服务的三种方式",
