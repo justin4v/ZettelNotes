@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "redis",
+                "query": "tag:todo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -134,7 +134,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "1c50ff776bae7668",
+  "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
     "Cache/Redis/Stream 消息队列实践.md",
     "基础知识/Vim/Vim键盘图.md",
