@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Message Queue/Redis Stream 实现消息队列.md",
+            "file": "Language/Java/Java IO/Socket.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:todo",
+                "query": "serversocket",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Message Queue/Redis Stream 实现消息队列.md",
+                "file": "Language/Java/Java IO/Socket.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Message Queue/Redis Stream 实现消息队列.md"
+                "file": "Language/Java/Java IO/Socket.md"
               }
             }
           },
@@ -136,15 +136,15 @@
   },
   "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
+    "基础知识/网络编程/socket和websocket.md",
+    "Language/Java/Java IO/BIO,NIO,AIO.md",
+    "Language/Java/Java IO/Socket.md",
+    "基础知识/网络编程/HTTPS/Springboot 启动 Https 服务.md",
+    "OS/基础概念/IO模型.md",
+    "Language/Java/Java IO/Java NIO组件.md",
+    "Message Queue/Redis Stream 实现消息队列.md",
     "Cache/Redis/Stream 消息队列实践.md",
     "基础知识/Vim/Vim键盘图.md",
-    "Framework/Springboot/Springboot 启动扩展点.md",
-    "Cache/消息队列设计精要.md",
-    "Message Queue/消息模型.md",
-    "Message Queue/Redis Stream 实现消息队列.md",
-    "运维相关/K8s/K8s暴露服务的三种方式.md",
-    "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md",
-    "运维相关/K8s/k8s 资源对象.md",
-    "Framework/Springboot/SpringSecurity 简介.md"
+    "Framework/Springboot/Springboot 启动扩展点.md"
   ]
 }
