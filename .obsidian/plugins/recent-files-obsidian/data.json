@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "计算机科学问题的解决方法",
+      "path": "Design/计算机科学问题的解决方法.md"
+    },
+    {
+      "basename": "动态 SQL",
+      "path": "Database/Mybatis-plus/动态 SQL.md"
+    },
+    {
+      "basename": "设计模式如何解决设计问题",
+      "path": "Book Reading/设计模式GoF/设计模式如何解决设计问题.md"
+    },
+    {
+      "basename": "编程核心概念",
+      "path": "基础知识/编程基础/编程核心概念.md"
+    },
+    {
+      "basename": "设计模式",
+      "path": "Book Reading/设计模式GoF/设计模式.md"
+    },
+    {
       "basename": "Mysql 查询优化",
       "path": "Database/Mysql/Mysql优化/Mysql 查询优化.md"
     },
@@ -87,14 +107,6 @@
     {
       "basename": "分代收集理论",
       "path": "Language/Java/JVM/垃圾收集/分代收集理论.md"
-    },
-    {
-      "basename": "编程核心概念",
-      "path": "基础知识/编程基础/编程核心概念.md"
-    },
-    {
-      "basename": "计算机科学问题的解决方法",
-      "path": "Design/计算机科学问题的解决方法.md"
     },
     {
       "basename": "并发设计模式 Future、Callback、Promise",

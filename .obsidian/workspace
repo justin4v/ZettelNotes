@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md",
+            "file": "Design/计算机科学问题的解决方法.md",
             "mode": "source",
             "source": false
           }
@@ -40,9 +40,9 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "serversocket",
+                "query": "tag:todo",
                 "matchingCase": false,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md",
+                "file": "Design/计算机科学问题的解决方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md"
+                "file": "Design/计算机科学问题的解决方法.md"
               }
             }
           },
@@ -135,15 +136,15 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Database/Mybatis-plus/动态 SQL.md",
+    "Book Reading/设计模式GoF/设计模式如何解决设计问题.md",
+    "基础知识/编程基础/编程核心概念.md",
+    "Book Reading/设计模式GoF/设计模式.md",
+    "Database/Mysql/Mysql优化/Mysql 查询优化.md",
     "Language/Java/Java IO/Netty NIO简介.md",
     "Language/Java/Java IO/Java NIO组件.md",
     "Language/Java/Java IO/Socket、ServerSocket.md",
     "Language/Java/Java IO/BIO,NIO,AIO.md",
-    "基础知识/网络编程/socket和websocket.md",
-    "基础知识/网络编程/HTTPS/Springboot 启动 Https 服务.md",
-    "OS/基础概念/IO模型.md",
-    "Message Queue/Redis Stream 实现消息队列.md",
-    "Cache/Redis/Stream 消息队列实践.md",
-    "基础知识/Vim/Vim键盘图.md"
+    "基础知识/网络编程/socket和websocket.md"
   ]
 }
