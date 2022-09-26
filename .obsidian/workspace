@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Design/计算机科学问题的解决方法.md",
+            "file": "Language/Java/JVM/类加载机制/JVM变量存储.md",
             "mode": "source",
             "source": false
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Design/计算机科学问题的解决方法.md",
+                "file": "Language/Java/JVM/类加载机制/JVM变量存储.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Design/计算机科学问题的解决方法.md"
+                "file": "Language/Java/JVM/类加载机制/JVM变量存储.md"
               }
             }
           },
@@ -136,6 +136,7 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Design/计算机科学问题的解决方法.md",
     "Database/Mybatis-plus/动态 SQL.md",
     "Book Reading/设计模式GoF/设计模式如何解决设计问题.md",
     "基础知识/编程基础/编程核心概念.md",
@@ -144,7 +145,6 @@
     "Language/Java/Java IO/Netty NIO简介.md",
     "Language/Java/Java IO/Java NIO组件.md",
     "Language/Java/Java IO/Socket、ServerSocket.md",
-    "Language/Java/Java IO/BIO,NIO,AIO.md",
-    "基础知识/网络编程/socket和websocket.md"
+    "Language/Java/Java IO/BIO,NIO,AIO.md"
   ]
 }

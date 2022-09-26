@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "JVM变量存储",
+      "path": "Language/Java/JVM/类加载机制/JVM变量存储.md"
+    },
+    {
       "basename": "计算机科学问题的解决方法",
       "path": "Design/计算机科学问题的解决方法.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Javac 编译",
       "path": "Language/Java/编译/Javac 编译.md"
-    },
-    {
-      "basename": "缓存雪崩 穿透 击穿",
-      "path": "Cache/缓存雪崩 穿透 击穿.md"
     }
   ],
   "omittedPaths": [],
