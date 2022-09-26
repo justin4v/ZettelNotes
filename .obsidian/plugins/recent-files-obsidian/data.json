@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "两阶段锁",
+      "path": "Database/Mysql/事务与锁/两阶段锁.md"
+    },
+    {
+      "basename": "分布式中可用性与一致性",
+      "path": "Distribute System/分布式中可用性与一致性.md"
+    },
+    {
       "basename": "JVM变量存储",
       "path": "Language/Java/JVM/类加载机制/JVM变量存储.md"
     },
@@ -169,10 +177,6 @@
       "path": "Medical/专业名词.md"
     },
     {
-      "basename": "分布式中可用性与一致性",
-      "path": "Distribute System/分布式中可用性与一致性.md"
-    },
-    {
       "basename": "hl7影像一致性",
       "path": "日常记录/hl7影像一致性.svg"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "JIT 编译器",
       "path": "Language/Java/编译/JIT 编译器.md"
-    },
-    {
-      "basename": "Javac 编译",
-      "path": "Language/Java/编译/Javac 编译.md"
     }
   ],
   "omittedPaths": [],
