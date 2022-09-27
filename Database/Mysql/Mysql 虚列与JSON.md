@@ -99,5 +99,15 @@ ALTER TABLE 'players' add column `names_virtual` VARCHAR(20) GENERATED ALWAYS AS
 CREATE INDEX `names_idx` ON `players`(`names_virtual`);
 ```
 
+
+# 使用场景
+1. 虚拟生成列可以用作简化和统一查询的方法。可以将复杂条件定义为生成列，并从表上的多个查询中引用该条件，以确保所有条件都使用完全相同的条件。
+2. 存储的生成列可用作复杂条件的物化缓存，这些条件需要快速计算。
+3. 生成列可以模拟功能索引：使用生成列定义功能表达式并为其编制索引。这对于处理无法直接索引的类型的列（例如，JSON列）很有用 。
+
+
+
+
+
 # 参考
 1. [MySQL for JSON: Generated Columns and Indexing](https://www.compose.com/articles/mysql-for-json-generated-columns-and-indexing/#:~:text=MySQL%20for%20JSON%3A%20Generated%20Columns%20and%20Indexing%201,...%203%20Storing%20values%20in%20generated%20columns%20)
