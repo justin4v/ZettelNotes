@@ -9,8 +9,8 @@
 
 - 又叫做虚拟列或计算列。
 - 生成列的值是在列定义时包含了一个计算表达式计算得到的，有两种类型的生成列：
-	- Virtual（虚拟）：这个类型的列会在**读取表记录时自动计算结果并返回**。  
-	- Stored（存储）：这个类型的列会在表中**插入数据时自动计算对应的值，并插入列中**，列会作为一个常规列存在表中。
+	- VIRTUAL，即`虚拟`类型，字段值不实际存储，当读取行时再计算，虚拟列类型不占存储  
+	- STORED，即`存储`类型，字段值会实际存储起来，当插入或更新时，字段值会计算出来并存储起来
 	- Virtual生成列一般比 Stored 生成列更有用，因为它**不会占用存储空间**，也是 Mysql 默认类型。
 
 1. 衍生列的定义可以修改，但virtual和stored之间不能相互转换，必要时需要删除重建  
@@ -24,9 +24,56 @@
 9. 针对virtual类型的衍生列索引，在insert和update操作时会消耗额外的写负载，因为更新衍生列索引时需要将衍生列值计算出来，并物化到索引里。`但即使这样，virtual类型也比stored类型的衍生列好`，有索引就避免了每次读取数据行时都需要进行一次衍生计算，同时stored类型衍生列实际存储数据，使得聚簇索引更大更占空间。
 10. virtual类型的衍生列索引使用 MVCC日志，避免在事务rollback或者purge操作时重新进行不必要的衍生计算。
 
+## 用法
+定义
+```mysql
+col_name data_type [GENERATED ALWAYS] AS (expr)
+  [VIRTUAL | STORED] [NOT NULL | NULL]
+  [UNIQUE [KEY]] [[PRIMARY] KEY]
+  [COMMENT 'string']
+```
+
+如：
+```sql
+CREATE TABLE person (
+  first_name VARCHAR(10) NOT NULL COMMENT '名',
+  last_name VARCHAR(10) NOT NULL COMMENT '姓',
+  full_name VARCHAR(21) GENERATED ALWAYS AS (CONCAT(first_name,' ',last_name)) STORED NOT NULL COMMENT '全名'
+);
+```
+
+```sql
+ALTER TABLE person ADD full_name_gc VARCHAR(21) 
+GENERATED ALWAYS AS (CONCAT(first_name,'_',last_name)) VIRTUAL NOT NULL COMMENT '全名(虚拟列)'
+```
+
 # Index JSON
 - Mysql 没有提供直接索引 JSON 类型数据的方法，但是 *Generate column* 可以做到类似的事情。
 - 在 JSON 类型上新增虚拟列并建立索引，可以快速查询 JSON field。
+
+## 示例
+
+原始 JSON:
+```json
+{
+    "id": 1,  
+    "name": "Sally",  
+    "games_played":{    
+       "Battlefield": {
+          "weapon": "sniper rifle",
+          "rank": "Sergeant V",
+          "level": 20
+        },                                                                                                                          
+       "Crazy Tennis": {
+          "won": 4,
+          "lost": 1
+        },  
+       "Puzzler": {
+          "time": 7
+        }
+     }
+ }
+```
 
 
 
