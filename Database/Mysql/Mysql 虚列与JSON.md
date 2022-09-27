@@ -26,6 +26,7 @@
 
 # Index JSON
 - Mysql 没有提供直接索引 JSON 类型数据的方法，但是 *Generate column* 可以做到类似的事情。
+- 在 JSON 类型上新增虚拟列并建立索引，可以快速查询 JSON field。
 
 
 
