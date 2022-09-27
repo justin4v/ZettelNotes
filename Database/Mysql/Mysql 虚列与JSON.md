@@ -52,8 +52,8 @@ GENERATED ALWAYS AS (CONCAT(first_name,'_',last_name)) VIRTUAL NOT NULL COMMENT 
 - 在 JSON 类型上新增虚拟列并建立索引，可以快速查询 JSON field。
 
 ## 示例
-
-原始 JSON:
+- 假设有一个 player 列表，JSON 格式，里面含有一些游戏信息
+- 原始 JSON:
 ```json
 {
     "id": 1,  
@@ -75,6 +75,21 @@ GENERATED ALWAYS AS (CONCAT(first_name,'_',last_name)) VIRTUAL NOT NULL COMMENT 
  }
 ```
 
+新建一个 players table：
+```sql
+CREATE TABLE `players` (  
+    `id` INT UNSIGNED NOT NULL,
+    `player_and_games` JSON NOT NULL,
+    PRIMARY KEY (`id`)
+);
+```
+
+新增一个 Generate column ：
+- 
+
+```sql
+ALTER TABLE 'players' add column `names_virtual` VARCHAR(20) GENERATED ALWAYS AS (`player_and_games` ->> '$.name')
+```
 
 
 # 参考
