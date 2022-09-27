@@ -1,12 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "Mysql 虚列",
-      "path": "Database/Mysql/Mysql 虚列.md"
-    },
-    {
-      "basename": "Mysql 原生JSON支持",
-      "path": "Database/Mysql/Mysql 原生JSON支持.md"
+      "basename": "Mysql 虚列与JSON",
+      "path": "Database/Mysql/Mysql 虚列与JSON.md"
     },
     {
       "basename": "两阶段锁",
