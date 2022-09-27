@@ -75,7 +75,7 @@ GENERATED ALWAYS AS (CONCAT(first_name,'_',last_name)) VIRTUAL NOT NULL COMMENT 
  }
 ```
 
-新建一个 players table：
+### 新建一个 players table
 ```sql
 CREATE TABLE `players` (  
     `id` INT UNSIGNED NOT NULL,
@@ -84,13 +84,20 @@ CREATE TABLE `players` (
 );
 ```
 
-新增一个 Generate column ：
-- 
+### 新增 Generate column 
+- names_virtual 值从 JSON 中提取，采用 [[JSON path]] 语法提取值；
+- 使用 Mysql 操作符 `->>`，等价于 `JSON_UNQUOTE(JSON_EXTRACT(...))`，得到无括号包围的实际值。
 
 ```sql
-ALTER TABLE 'players' add column `names_virtual` VARCHAR(20) GENERATED ALWAYS AS (`player_and_games` ->> '$.name')
+ALTER TABLE 'players' add column `names_virtual` VARCHAR(20) GENERATED ALWAYS AS (`player_and_games` ->> '$.name') not null；
 ```
 
+### 新建索引
+- Generate column 支持建立索引；
+
+```sql
+CREATE INDEX `names_idx` ON `players`(`names_virtual`);
+```
 
 # 参考
 1. [MySQL for JSON: Generated Columns and Indexing](https://www.compose.com/articles/mysql-for-json-generated-columns-and-indexing/#:~:text=MySQL%20for%20JSON%3A%20Generated%20Columns%20and%20Indexing%201,...%203%20Storing%20values%20in%20generated%20columns%20)
