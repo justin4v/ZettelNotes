@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Mysql 虚列",
+      "path": "Database/Mysql/Mysql 虚列.md"
+    },
+    {
+      "basename": "Mysql 原生JSON支持",
+      "path": "Database/Mysql/Mysql 原生JSON支持.md"
+    },
+    {
       "basename": "两阶段锁",
       "path": "Database/Mysql/事务与锁/两阶段锁.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "RTTI",
       "path": "Language/Java/反射/RTTI.md"
-    },
-    {
-      "basename": "反射",
-      "path": "Language/Java/反射/反射.md"
-    },
-    {
-      "basename": "JIT 编译器",
-      "path": "Language/Java/编译/JIT 编译器.md"
     }
   ],
   "omittedPaths": [],
