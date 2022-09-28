@@ -42,13 +42,13 @@ A(A)-->|*3| B(B)
 -   基础类型扩展 34 种
 
 ## 基础类型
+- 基础类型定义有以下几种:
+	- Predicate
+	- Supplier
+	- Function
+	- Consumer
 
-基础类型定义有以下几种:
-- Predicate
-- Supplier
-- Function
-- Consumer
-之所以说是基本定义，是因为其他的定义都是围绕在这些概念的基础上进行扩展的。
+- 之所以说是基本定义，是因为其他的定义都是围绕在这些概念的基础上进行扩展的。
 其中 Predicate 我认为可以算是 Function 的一种特例变形，可以认为是 Function<T,Boolean>。而单独的进行封装是为了进行语义增强。其中源码上的说明也是如此:
 Represents a predicate (boolean-valued function) of one argument.
 那么你会发现，剩下来的三种基础类型 Supplier、Function、Consumer，所对应了一个范畴实体的开始、范畴实体与实体的态射、范畴实体的结束。
@@ -84,23 +84,16 @@ Represents a predicate (boolean-valued function) of one argument.
 -   ToIntFunction
     
 可以看到这 11 个接口又可以分为三种：
-
-  
-
--   入参，对于一种入参类型的接口，提供类型为`int`的接口。是 Int 开头的接口(不包含 IntTo)。特别的，ObjIntConsumer 是一个入参为`int`的 BiConsumer。
-    
+-   入参推定，对于一种入参类型的接口，提供类型为`int`的接口。是 Int 开头的接口(不包含 IntTo)。特别的，ObjIntConsumer 是一个入参为`int`的 BiConsumer。
 -   类型转换的 Function，为了向其他基础类型进行转换的 Function。是 IntTo 开头的接口
-    
 -   出参推定，对于出参的接口，提供类型为`int`的接口。是 ToInt 开头的接口。
-    
-
-  
 
 除此之外为了 boolean 类型单独提供了 BooleanSupplier 接口。
-
-  
-
 基础类型扩展主要是避免在处理常用类型的函数式编程或者流编程的时候产生频繁的包装类转换。所以单独提供了一组接口，用于提高性能。
+
+# 最后
+Java8 中的函数式编程是一种数学思想的程序化，而函数接口则是具体的执行单位。函数式接口以 Consumer、Supplier、Function 三个借口为核心进行功能扩展，以满足不同场景的便捷使用。
+
 
 # reduce
 -   `Reduce` 原意：减少，缩小
