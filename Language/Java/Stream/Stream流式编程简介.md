@@ -47,11 +47,10 @@ A(A)-->|*3| B(B)
 	- Supplier
 	- Function
 	- Consumer
-
-- 之所以说是基本定义，是因为其他的定义都是围绕在这些概念的基础上进行扩展的。
-其中 Predicate 我认为可以算是 Function 的一种特例变形，可以认为是 Function<T,Boolean>。而单独的进行封装是为了进行语义增强。其中源码上的说明也是如此:
-Represents a predicate (boolean-valued function) of one argument.
-那么你会发现，剩下来的三种基础类型 Supplier、Function、Consumer，所对应了一个范畴实体的开始、范畴实体与实体的态射、范畴实体的结束。
+- 其他的定义都是围绕在这些概念的基础上进行扩展的。
+- Predicate 可以算是 Function 的一种特例变形，可以认为是 Function<T,Boolean>。
+- 单独进行封装是为了进行语义增强。其中源码上的说明也是如此:  `Represents a predicate (boolean-valued function) of one argument`.
+- 剩下来的三种基础类型 Supplier、Function、Consumer，对应了一个**范畴实体的开始(supplier)**、**范畴实体与实体的态射(function)**、**范畴实体的结束(consumer)**。
 
 ## 入参扩展
 
