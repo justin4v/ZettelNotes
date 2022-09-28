@@ -41,6 +41,67 @@ A(A)-->|*3| B(B)
 -   出入类型相同省略 2 种
 -   基础类型扩展 34 种
 
+## 基础类型
+
+基础类型定义有以下几种:
+- Predicate
+- Supplier
+- Function
+- Consumer
+之所以说是基本定义，是因为其他的定义都是围绕在这些概念的基础上进行扩展的。
+其中 Predicate 我认为可以算是 Function 的一种特例变形，可以认为是 Function<T,Boolean>。而单独的进行封装是为了进行语义增强。其中源码上的说明也是如此:
+Represents a predicate (boolean-valued function) of one argument.
+那么你会发现，剩下来的三种基础类型 Supplier、Function、Consumer，所对应了一个范畴实体的开始、范畴实体与实体的态射、范畴实体的结束。
+
+## 入参扩展
+
+入参扩展就是将具有入参的基本类型的参数个数扩展为了两个：
+
+-   BiConsumer
+-   BiFunction
+-   BiPredicate
+原则上，多参数的扩展是可以利用“科尔化”来处理的，但是由于两个参数的使用场景实在是太多了，比如处理 Map 相关的内容，所以特别的将两个入参的封装为了单独的接口。
+
+## 出入类型相同省略
+
+出入类型相同省略是对，Function 与 BiFunction 的一种特殊的省略。由于在数据处理的时候存在大量使用相同数据类型进行处理的情况，例如: reduce 操作。所以特别地提供了入参与出参相同的接口:
+-   UnaryOperator(单个入参)
+-   BinaryOperator(两个入参)
+出入参数类型相同，则可以简化泛型定义的过程。
+
+## 基础类型扩展
+基础类型扩展主要是针对常用的基础类型 int、long、double 类型进行了接口定义，三种类型各 11 个，以 Int 为例子:
+-   IntBinaryOperator
+-   IntConsumer
+-   IntFunction
+-   IntPredicate
+-   IntSupplier
+-   IntUnaryOperator
+-   ObjIntConsumer
+-   IntToDoubleFunction
+-   IntToLongFunction
+-   ToIntBiFunction
+-   ToIntFunction
+    
+可以看到这 11 个接口又可以分为三种：
+
+  
+
+-   入参，对于一种入参类型的接口，提供类型为`int`的接口。是 Int 开头的接口(不包含 IntTo)。特别的，ObjIntConsumer 是一个入参为`int`的 BiConsumer。
+    
+-   类型转换的 Function，为了向其他基础类型进行转换的 Function。是 IntTo 开头的接口
+    
+-   出参推定，对于出参的接口，提供类型为`int`的接口。是 ToInt 开头的接口。
+    
+
+  
+
+除此之外为了 boolean 类型单独提供了 BooleanSupplier 接口。
+
+  
+
+基础类型扩展主要是避免在处理常用类型的函数式编程或者流编程的时候产生频繁的包装类转换。所以单独提供了一组接口，用于提高性能。
+
 # reduce
 -   `Reduce` 原意：减少，缩小
 -   根据指定的计算模型将Stream中的值计算得到一个最终结果  ：
