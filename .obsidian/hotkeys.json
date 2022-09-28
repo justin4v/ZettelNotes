@@ -2,9 +2,10 @@
   "editor:toggle-code": [
     {
       "modifiers": [
+        "Mod",
         "Shift"
       ],
-      "key": "C"
+      "key": "B"
     }
   ],
   "app:delete-file": [
