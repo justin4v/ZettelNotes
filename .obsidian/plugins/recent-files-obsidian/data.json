@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Stream流式编程简介",
+      "path": "Language/Java/Stream/Stream流式编程简介.md"
+    },
+    {
       "basename": "Mysql 虚列与JSON",
       "path": "Database/Mysql/Mysql 虚列与JSON.md"
     },
@@ -147,10 +151,6 @@
     {
       "basename": "正则引擎",
       "path": "Tool/正则/正则引擎.md"
-    },
-    {
-      "basename": "Stream流式编程简介",
-      "path": "Language/Java/Stream/Stream流式编程简介.md"
     },
     {
       "basename": "Java 实现",
