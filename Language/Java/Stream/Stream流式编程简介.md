@@ -25,28 +25,22 @@ A(A)-->|*3| B(B)
 # 函数式接口
 - 由于函数是用来描述一次实体的转变的，所以**函数式接口中只有一个抽象方法**。
 -  Java 的继承关系，”只有一个“的概念实际是排除了 Object 的相关方法的。
-- 满足这个条件的就可以作为函数式接口进行使用，但为了后续的开发导致歧义，你可以用`@FunctionInterface`注解标记到接口上，用于表明这个接口只应该有一个抽象方法，如果不满足这个条件，则这个问题会在编译的时候就暴露出来。
+- 满足这个条件的就可以作为函数式接口，但为了语义清晰，可用 `@FunctionInterface` 注解标记到接口上，用于表明这个接口只应该有一个抽象方法，如果不满足这个条件，则会在编译的时候就暴露出来。
+- 尽管 Java 的函数式编程是在 Java8 才支持的，但是之前的版本中就有很多函数接口，其中常用的有:
+	-   java.lang.Runnable
+	-   java.util.concurrent.Callable
+	-   java.util.Comparator
+	-   java.io.FileFilter
+	-   java.nio.file.PathMatcher
 
-  
+# Java8 新增的函数式接口
+- 在 Java8 中为了支持 Lambda 表达式与函数式编程，特别新增了一批函数式接口，包路径为: `java.util.function`  
+该包路径下一共 43 个类，划分为以下几类:
+-   基础类型 4 种
+-   入参扩展 3 种
+-   出入类型相同省略 2 种
+-   基础类型扩展 34 种
 
-尽管 Java 的函数式编程是在 Java8 才支持的，但是之前的版本中就有很多函数接口，其中常用的有:
-
-  
-
--   java.lang.Runnable
-    
--   java.util.concurrent.Callable
-    
--   java.util.Comparator
-    
--   java.io.FileFilter
-    
--   java.nio.file.PathMatcher
-    
-
-  
-
-这些接口本身就满足上述条件，同时在 Java8 中也为这些接口加上了`@FunctionInterface`注解特别标示。
 # reduce
 -   `Reduce` 原意：减少，缩小
 -   根据指定的计算模型将Stream中的值计算得到一个最终结果  ：
