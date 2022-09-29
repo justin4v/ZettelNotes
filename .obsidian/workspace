@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "基础知识/网络编程/Connection reset by peer.md",
+            "file": "基础知识/网络编程/问题收集.md",
             "mode": "source",
             "source": false
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "基础知识/网络编程/Connection reset by peer.md",
+                "file": "基础知识/网络编程/问题收集.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "基础知识/网络编程/Connection reset by peer.md"
+                "file": "基础知识/网络编程/问题收集.md"
               }
             }
           },
@@ -133,7 +133,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "1c50ff776bae7668",
+  "active": "b83fe008a809d9e9",
   "lastOpenFiles": [
     "Language/Java/Stream/Stream流式编程简介.md",
     "Database/Mysql/Mysql 虚列与JSON.md",
