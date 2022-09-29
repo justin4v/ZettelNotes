@@ -1,4 +1,4 @@
-#Stream #Java基础 
+#Stream #Java基础 #Fundamental-Of-Programing #Functional-programming
 
 # 数学概念-范畴（Category Theory）
 - 数据概念帮助理解一些问题出现的原因与原理：函数式编程的数学**起源就是范畴概念**。
@@ -117,9 +117,8 @@ A(A)-->|*3| B(B)
 | 类型               | 常规 Lambda 示例        | 方法引用示例           |
 | ---------------- | -------------------------- | ------------------------------ |
 | 引用静态方法           | ()->Integer.parseInt('20') | Integer::parseInt              |
-| 引用对象的实例方法      | (String x)->x.length()     | String::length                 |
-| 引用类型的任意对象的实例方法 |                            | expensiveTransaction::getValue |
-| 引用构造方法           | ()->new Apple("red", 50)   | Person::new                    |
+| 引用对象的实例方法 |      x->x.getValue()            | expensiveTransaction::getValue |
+
 
 # 参考
 1. [JAVA8 Stream流之reduce()方法详解](https://www.cnblogs.com/MrYuChen-Blog/p/14061320.html)
