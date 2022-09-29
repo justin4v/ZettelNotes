@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Language/Java/Stream/Stream流式编程简介.md",
+            "file": "基础知识/网络编程/Connection reset by peer.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "stream",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -65,13 +65,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 258,
-    "collapsed": true
+    "width": 258
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -87,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/Stream/Stream流式编程简介.md",
+                "file": "基础知识/网络编程/Connection reset by peer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/Stream/Stream流式编程简介.md"
+                "file": "基础知识/网络编程/Connection reset by peer.md"
               }
             }
           },
@@ -137,6 +135,7 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Language/Java/Stream/Stream流式编程简介.md",
     "Database/Mysql/Mysql 虚列与JSON.md",
     "Database/Mysql/Mysql 原生JSON支持.md",
     "Database/Mysql/事务与锁/两阶段锁.md",
@@ -145,7 +144,6 @@
     "Design/计算机科学问题的解决方法.md",
     "Database/Mybatis-plus/动态 SQL.md",
     "Book Reading/设计模式GoF/设计模式如何解决设计问题.md",
-    "基础知识/编程基础/编程核心概念.md",
-    "Book Reading/设计模式GoF/设计模式.md"
+    "基础知识/编程基础/编程核心概念.md"
   ]
 }

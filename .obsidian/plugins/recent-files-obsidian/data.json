@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Connection reset by peer",
+      "path": "基础知识/网络编程/Connection reset by peer.md"
+    },
+    {
       "basename": "Stream流式编程简介",
       "path": "Language/Java/Stream/Stream流式编程简介.md"
     },
