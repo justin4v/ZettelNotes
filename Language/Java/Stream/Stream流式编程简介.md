@@ -105,6 +105,22 @@ A(A)-->|*3| B(B)
 	- `reduce` 操作可以实现从Stream中生成一个值;
 	- 其生成的值不是随意的，而是根据指定的计算模型。
 	- 比如，之前提到 count、min和max事实上都是reduce操作，因为常用而被纳入标准库中。
+
+# Lambda简化：方法应用
+- 方法引用是一个**更加紧凑，易读的Lambda表达式**。
+- 方法引用的操作符是双冒号 "::"。
+
+## 四种方法引用类型
+- 方法引用的基本语法是：**类名::方法名。（注意：只需要写方法名，不需要写括号）**  
+- 方法引用的四种类型:
+
+| 类型               | 常规 Lambda 示例        | 方法引用示例           |
+| ---------------- | -------------------------- | ------------------------------ |
+| 引用静态方法           | ()->Integer.parseInt('20') | Integer::parseInt              |
+| 引用对象的实例方法      | (String x)->x.length()     | String::length                 |
+| 引用类型的任意对象的实例方法 |                            | expensiveTransaction::getValue |
+| 引用构造方法           | ()->new Apple("red", 50)   | Person::new                    |
+
 # 参考
 1. [JAVA8 Stream流之reduce()方法详解](https://www.cnblogs.com/MrYuChen-Blog/p/14061320.html)
 2. [JAVA新特性的入场券-函数式接口](https://xie.infoq.cn/article/a8ef07f9558032814ce169588)
