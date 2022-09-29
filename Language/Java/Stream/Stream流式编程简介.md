@@ -44,24 +44,26 @@ A(A)-->|*3| B(B)
 ## 基础类型
 - 基础类型定义有以下几种:
 	- Predicate
-	- Supplier
-	- Function
-	- Consumer
+	- Supplier：提供者，**范畴实体的开始(supplier)**；
+	- Function：转换者，**范畴实体与实体的态射(function)**；
+	- Consumer：消费者，**范畴实体的结束(consumer)**。
 - 其他的定义都是围绕在这些概念的基础上进行扩展的。
-- Predicate 可以算是 Function 的一种特例变形，可以认为是 Function<T,Boolean>。
-- 单独进行封装是为了进行语义增强。其中源码上的说明也是如此:  `Represents a predicate (boolean-valued function) of one argument`.
-- 剩下来的三种基础类型 Supplier、Function、Consumer，对应了一个**范畴实体的开始(supplier)**、**范畴实体与实体的态射(function)**、**范畴实体的结束(consumer)**。
+- Predicate 可以算是 Function 的一种*特例变形*，可以认为是 Function<T,Boolean>。
+	- 单独进行封装是为了进行语义增强。
+	- 源码上的说明也是如此:  `Represents a predicate (boolean-valued function) of one argument`.
 
 ## 入参扩展
-入参扩展就是将具有入参的基本类型的参数个数扩展为了两个：
+入参扩展就是将具有入参的基本类型的*参数个数扩展为两个*：
 -   BiConsumer
 -   BiFunction
 -   BiPredicate
-原则上，多参数的扩展是可以利用“科尔化”来处理的，但是由于两个参数的使用场景实在是太多了，比如处理 Map 相关的内容，所以特别的将两个入参的封装为了单独的接口。
+- 原则上，多参数的扩展是可以利用“科尔化”来处理的；
+- 但是两个参数的使用场景实在是太多了，比如处理 Map 相关的内容，所以将两个入参的封装为了单独的接口。
 
 ## 出入类型相同省略
 
-出入类型相同省略是对，Function 与 BiFunction 的一种特殊的省略。由于在数据处理的时候存在大量使用相同数据类型进行处理的情况，例如: reduce 操作。所以特别地提供了入参与出参相同的接口:
+- *出入类型相同省略*是对 Function 与 BiFunction 的一种特殊的省略。
+- 由于在数据处理的时候存在大量使用相同数据类型进行处理的情况，例如: reduce 操作。所以特别地提供了入参与出参相同的接口:
 -   UnaryOperator(单个入参)
 -   BinaryOperator(两个入参)
 出入参数类型相同，则可以简化泛型定义的过程。
