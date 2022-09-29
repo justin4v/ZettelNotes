@@ -64,34 +64,38 @@ A(A)-->|*3| B(B)
 
 - *出入类型相同省略*是对 Function 与 BiFunction 的一种特殊的省略。
 - 由于在数据处理的时候存在大量使用相同数据类型进行处理的情况，例如: reduce 操作。所以特别地提供了入参与出参相同的接口:
--   UnaryOperator(单个入参)
--   BinaryOperator(两个入参)
-出入参数类型相同，则可以简化泛型定义的过程。
+	-  **UnaryOperator(单个入参)**
+	-  **BinaryOperator(两个入参)**
+- 出入参数类型相同，则可以简化泛型定义的过程。
 
 ## 基础类型扩展
-基础类型扩展主要是针对常用的基础类型 int、long、double 类型进行了接口定义，三种类型各 11 个，以 Int 为例子:
--   IntBinaryOperator
--   IntConsumer
--   IntFunction
--   IntPredicate
--   IntSupplier
--   IntUnaryOperator
--   ObjIntConsumer
--   IntToDoubleFunction
--   IntToLongFunction
--   ToIntBiFunction
--   ToIntFunction
-    
+- 主要针对常用的基础类型 int、long、double 类型进行了接口定义扩展，三种类型各 11 个，以 Int 为例子:
+	-   IntBinaryOperator
+	-   IntConsumer
+	-   IntFunction
+	-   IntPredicate
+	-   IntSupplier
+	-   IntUnaryOperator
+	-   ObjIntConsumer
+	-   IntToDoubleFunction
+	-   IntToLongFunction
+	-   ToIntBiFunction
+	-   ToIntFunction
 可以看到这 11 个接口又可以分为三种：
--   入参推定，对于一种入参类型的接口，提供类型为`int`的接口。是 Int 开头的接口(不包含 IntTo)。特别的，ObjIntConsumer 是一个入参为`int`的 BiConsumer。
--   类型转换的 Function，为了向其他基础类型进行转换的 Function。是 IntTo 开头的接口
--   出参推定，对于出参的接口，提供类型为`int`的接口。是 ToInt 开头的接口。
-
-除此之外为了 boolean 类型单独提供了 BooleanSupplier 接口。
-基础类型扩展主要是避免在处理常用类型的函数式编程或者流编程的时候产生频繁的包装类转换。所以单独提供了一组接口，用于提高性能。
+-   **入参推定**，对于一种入参类型的接口，入参类型都是 `int`。
+	- Int 开头的接口(不包含 IntTo)。
+	- ObjIntConsumer 是一个入参为`int`的 BiConsumer。
+-   **类型转换**Function:
+	- 向其他基础类型进行转换的 Function;
+	- 是 IntTo 开头的接口;
+-   **出参推定**，对于出参的接口，出参类型都是 `int`。
+	- ToInt 开头的接口。
+- boolean 类型单独提供了 BooleanSupplier 接口。
+- 基础类型扩展主要是避免在处理常用类型的函数式编程或者流编程的时候**产生频繁的包装类转换**。
+- 单独提供了一组接口，用于提高性能。
 
 # 最后
-Java8 中的函数式编程是一种数学思想的程序化，而函数接口则是具体的执行单位。函数式接口以 Consumer、Supplier、Function 三个借口为核心进行功能扩展，以满足不同场景的便捷使用。
+- Java8 中的函数式编程是一种数学思想的程序化，而函数接口则是具体的执行单位。函数式接口以 Consumer、Supplier、Function 三个借口为核心进行功能扩展，以满足不同场景的便捷使用。
 
 
 # reduce
