@@ -53,9 +53,7 @@ A(A)-->|*3| B(B)
 - 剩下来的三种基础类型 Supplier、Function、Consumer，对应了一个**范畴实体的开始(supplier)**、**范畴实体与实体的态射(function)**、**范畴实体的结束(consumer)**。
 
 ## 入参扩展
-
 入参扩展就是将具有入参的基本类型的参数个数扩展为了两个：
-
 -   BiConsumer
 -   BiFunction
 -   BiPredicate
