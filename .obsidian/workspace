@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mysql/Mysql 转义符.md",
+            "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md",
             "mode": "source",
             "source": false
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mysql/Mysql 转义符.md",
+                "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mysql/Mysql 转义符.md"
+                "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md"
               }
             }
           },
@@ -135,6 +135,7 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Database/Mysql/Mysql 转义符.md",
     "基础知识/网络编程/问题收集.md",
     "Language/Java/Stream/Stream流式编程简介.md",
     "Database/Mysql/Mysql 虚列与JSON.md",
@@ -143,7 +144,6 @@
     "Distribute System/分布式中可用性与一致性.md",
     "Language/Java/JVM/类加载机制/JVM变量存储.md",
     "Design/计算机科学问题的解决方法.md",
-    "Database/Mybatis-plus/动态 SQL.md",
-    "Book Reading/设计模式GoF/设计模式如何解决设计问题.md"
+    "Database/Mybatis-plus/动态 SQL.md"
   ]
 }
