@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "基础知识/网络编程/问题收集.md",
+            "file": "Database/Mysql/Mysql 转义符.md",
             "mode": "source",
             "source": false
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "基础知识/网络编程/问题收集.md",
+                "file": "Database/Mysql/Mysql 转义符.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "基础知识/网络编程/问题收集.md"
+                "file": "Database/Mysql/Mysql 转义符.md"
               }
             }
           },
@@ -133,8 +133,9 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "b83fe008a809d9e9",
+  "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "基础知识/网络编程/问题收集.md",
     "Language/Java/Stream/Stream流式编程简介.md",
     "Database/Mysql/Mysql 虚列与JSON.md",
     "Database/Mysql/Mysql 原生JSON支持.md",
@@ -143,7 +144,6 @@
     "Language/Java/JVM/类加载机制/JVM变量存储.md",
     "Design/计算机科学问题的解决方法.md",
     "Database/Mybatis-plus/动态 SQL.md",
-    "Book Reading/设计模式GoF/设计模式如何解决设计问题.md",
-    "基础知识/编程基础/编程核心概念.md"
+    "Book Reading/设计模式GoF/设计模式如何解决设计问题.md"
   ]
 }
