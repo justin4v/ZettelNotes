@@ -1,4 +1,4 @@
-#运维
+#运维 #k8s #K8s-command
 # 概述
 - Kubectl 是命令行工具，用于管理 Kubernetes 集群；
 - `kubectl` 在 `$HOME/.kube` 目录中查找一个名为 `config` 的配置文件。 通过设置 KUBECONFIG 环境变量或设置 `--kubeconfig`参数来指定其它 kubeconfig 文件。
@@ -41,12 +41,13 @@ kubectl get namespaces
 -   `default`
 -   `kube-system`：由 Kubernetes 系统创建的对象的Namespace
 
-2. 列出所有命名空间下的全部的 Pods
+2. **列出所有命名空间下的全部的 Pods**
 ```bash
 kubectl get pods --all-namespaces 
+kubectl get pods -A
 ```
 
-3. describe 命令的详细输出
+3. **describe 详细输出**
 ```bash
 kubectl describe nodes my-node
 kubectl describe pods my-pod
@@ -58,7 +59,7 @@ kubectl describe pods my-pod
 kubectl api-resources
 ```
 
-5. 日志
+5. **日志**
 ```bash
 kubectl logs my-pod                                 # 获取 pod 日志（标准输出）
 kubectl logs -l name=myLabel                        # 获取含 name=myLabel 标签的 Pods 的日志（标准输出）
@@ -74,7 +75,7 @@ kubectl logs -f my-pod -c my-container              # 流式输出 Pod 容器的
 kubectl logs -f --tail=1000 [pod-name] -n [namespace]
 ```
 
-6. 进入 pod(运行中) 进行交互
+6. **进入 pod(运行中) 进行交互**
 ```bash
 kubectl exec my-pod -- ls /                         # 在已有的 Pod 中运行命令（单容器场景）
 kubectl exec -ti my-pod --/bin/sh        # 使用交互 shell 访问正在运行的 Pod (一个容器场景)

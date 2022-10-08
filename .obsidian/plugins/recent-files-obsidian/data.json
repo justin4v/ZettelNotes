@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "Yaml 语法",
+      "path": "Tool/Yaml/Yaml 语法.md"
+    },
+    {
+      "basename": "k8s 命令手册",
+      "path": "运维相关/K8s/k8s 命令手册.md"
+    },
+    {
+      "basename": "K8s简介与架构设计",
+      "path": "运维相关/K8s/K8s简介与架构设计.md"
+    },
+    {
+      "basename": "k8s端口类型与ip类型",
+      "path": "运维相关/K8s/k8s端口类型与ip类型.md"
+    },
+    {
+      "basename": "K8s暴露服务的三种方式",
+      "path": "运维相关/K8s/K8s暴露服务的三种方式.md"
+    },
+    {
+      "basename": "k8s 资源对象",
+      "path": "运维相关/K8s/k8s 资源对象.md"
+    },
+    {
       "basename": "Docker引擎",
       "path": "运维相关/Docker/Docker引擎.md"
     },
@@ -133,16 +157,8 @@
       "path": "Message Queue/消息模型.md"
     },
     {
-      "basename": "K8s暴露服务的三种方式",
-      "path": "运维相关/K8s/K8s暴露服务的三种方式.md"
-    },
-    {
       "basename": "Service中spec.type：nodeport和clusterIp",
       "path": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md"
-    },
-    {
-      "basename": "k8s 资源对象",
-      "path": "运维相关/K8s/k8s 资源对象.md"
     },
     {
       "basename": "SpringSecurity 简介",
@@ -155,10 +171,6 @@
     {
       "basename": "SpEL简介",
       "path": "Framework/Springboot/SpEL/SpEL简介.md"
-    },
-    {
-      "basename": "Yaml 语法",
-      "path": "Tool/Yaml/Yaml 语法.md"
     },
     {
       "basename": "分代收集理论",
@@ -187,18 +199,6 @@
     {
       "basename": "Java 实现",
       "path": "Reactive Programming/Java 实现.md"
-    },
-    {
-      "basename": "Reactive Streams规范",
-      "path": "Reactive Programming/Reactive Streams规范.md"
-    },
-    {
-      "basename": "Dockerfile",
-      "path": "运维相关/Docker/Dockerfile.md"
-    },
-    {
-      "basename": "Helm chart",
-      "path": "运维相关/Helm chart.md"
     }
   ],
   "omittedPaths": [],

@@ -42,7 +42,6 @@ hash: { name: Steve, foo: bar }
 ```
 
 转为 JavaScript 如下。
-
  ```javascript
  { hash: { name: 'Steve', foo: 'bar' } }
  ```

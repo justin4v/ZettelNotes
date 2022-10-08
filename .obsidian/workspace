@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "运维相关/Docker/Docker引擎.md",
+            "file": "Tool/Yaml/Yaml 语法.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:",
+                "query": "yaml",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "运维相关/Docker/Docker引擎.md",
+                "file": "Tool/Yaml/Yaml 语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "运维相关/Docker/Docker引擎.md"
+                "file": "Tool/Yaml/Yaml 语法.md"
               }
             }
           },
@@ -134,17 +134,17 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "f9c60a5916b5869d",
+  "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "运维相关/K8s/k8s 命令手册.md",
+    "运维相关/K8s/K8s简介与架构设计.md",
+    "运维相关/K8s/k8s端口类型与ip类型.md",
+    "运维相关/K8s/K8s暴露服务的三种方式.md",
+    "运维相关/K8s/k8s 资源对象.md",
+    "运维相关/Docker/Docker引擎.md",
     "运维相关/Docker/Docker基础.md",
     "运维相关/Docker/Docker镜像与容器.md",
     "运维相关/docker 常用命令.md",
-    "基础知识/markdown/Markdown 图形语法.md",
-    "基础知识/markdown/Markdown 公式手册.md",
-    "Tool/正则/正则表达式.md",
-    "Database/Mysql/Mysql优化/Mysql 查询优化.md",
-    "Database/Mysql/Mysql 转义符.md",
-    "基础知识/网络编程/问题收集.md",
-    "Language/Java/Stream/Stream流式编程简介.md"
+    "基础知识/markdown/Markdown 图形语法.md"
   ]
 }
