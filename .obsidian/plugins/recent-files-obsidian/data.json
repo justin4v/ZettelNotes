@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Docker引擎",
+      "path": "运维相关/Docker/Docker引擎.md"
+    },
+    {
+      "basename": "Docker基础",
+      "path": "运维相关/Docker/Docker基础.md"
+    },
+    {
+      "basename": "Docker镜像与容器",
+      "path": "运维相关/Docker/Docker镜像与容器.md"
+    },
+    {
+      "basename": "docker 常用命令",
+      "path": "运维相关/docker 常用命令.md"
+    },
+    {
       "basename": "Markdown 图形语法",
       "path": "基础知识/markdown/Markdown 图形语法.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "Helm chart",
       "path": "运维相关/Helm chart.md"
-    },
-    {
-      "basename": "docker 常用命令",
-      "path": "运维相关/docker 常用命令.md"
-    },
-    {
-      "basename": "K8s简介与架构设计",
-      "path": "运维相关/K8s/K8s简介与架构设计.md"
-    },
-    {
-      "basename": "专业名词",
-      "path": "Medical/专业名词.md"
-    },
-    {
-      "basename": "hl7影像一致性",
-      "path": "日常记录/hl7影像一致性.svg"
     }
   ],
   "omittedPaths": [],
