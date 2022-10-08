@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Markdown 公式手册",
+      "path": "基础知识/markdown/Markdown 公式手册.md"
+    },
+    {
+      "basename": "正则表达式",
+      "path": "Tool/正则/正则表达式.md"
+    },
+    {
       "basename": "Mysql 查询优化",
       "path": "Database/Mysql/Mysql优化/Mysql 查询优化.md"
     },
@@ -153,10 +161,6 @@
       "path": "Medical/DICOM/DICOM消息服务简介.md"
     },
     {
-      "basename": "正则表达式",
-      "path": "Tool/正则/正则表达式.md"
-    },
-    {
       "basename": "正则引擎",
       "path": "Tool/正则/正则引擎.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Idea",
       "path": "日常记录/Idea.md"
-    },
-    {
-      "basename": "UTF-8",
-      "path": "基础知识/UTF-8.md"
     }
   ],
   "omittedPaths": [],

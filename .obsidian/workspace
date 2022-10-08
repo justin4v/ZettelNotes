@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md",
+            "file": "Tool/正则/正则表达式.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "markdown",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md",
+                "file": "Tool/正则/正则表达式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mysql/Mysql优化/Mysql 查询优化.md"
+                "file": "Tool/正则/正则表达式.md"
               }
             }
           },
@@ -136,6 +136,7 @@
   },
   "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
+    "Database/Mysql/Mysql优化/Mysql 查询优化.md",
     "Database/Mysql/Mysql 转义符.md",
     "基础知识/网络编程/问题收集.md",
     "Language/Java/Stream/Stream流式编程简介.md",
@@ -144,7 +145,6 @@
     "Database/Mysql/事务与锁/两阶段锁.md",
     "Distribute System/分布式中可用性与一致性.md",
     "Language/Java/JVM/类加载机制/JVM变量存储.md",
-    "Design/计算机科学问题的解决方法.md",
-    "Database/Mybatis-plus/动态 SQL.md"
+    "Design/计算机科学问题的解决方法.md"
   ]
 }
