@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "yaml",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -134,7 +133,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "1c50ff776bae7668",
+  "active": "b83fe008a809d9e9",
   "lastOpenFiles": [
     "运维相关/K8s/k8s 命令手册.md",
     "运维相关/K8s/K8s简介与架构设计.md",
