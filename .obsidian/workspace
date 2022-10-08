@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -133,7 +134,7 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "1c50ff776bae7668",
+  "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
     "Database/Mysql/Mysql 转义符.md",
     "基础知识/网络编程/问题收集.md",
