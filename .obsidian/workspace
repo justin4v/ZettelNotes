@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Tool/Yaml/Yaml 语法.md",
+            "file": "基础知识/编程基础/编码和编码格式.md",
             "mode": "source",
             "source": false
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tool/Yaml/Yaml 语法.md",
+                "file": "基础知识/编程基础/编码和编码格式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tool/Yaml/Yaml 语法.md"
+                "file": "基础知识/编程基础/编码和编码格式.md"
               }
             }
           },
@@ -133,8 +133,9 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "b83fe008a809d9e9",
+  "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Tool/Yaml/Yaml 语法.md",
     "运维相关/K8s/k8s 命令手册.md",
     "运维相关/K8s/K8s简介与架构设计.md",
     "运维相关/K8s/k8s端口类型与ip类型.md",
@@ -143,7 +144,6 @@
     "运维相关/Docker/Docker引擎.md",
     "运维相关/Docker/Docker基础.md",
     "运维相关/Docker/Docker镜像与容器.md",
-    "运维相关/docker 常用命令.md",
-    "基础知识/markdown/Markdown 图形语法.md"
+    "运维相关/docker 常用命令.md"
   ]
 }
