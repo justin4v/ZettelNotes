@@ -1,8 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "编码和编码格式",
-      "path": "基础知识/编程基础/编码和编码格式.md"
+      "basename": "大端 vs. 小端模式",
+      "path": "基础知识/大端 vs. 小端模式.md"
+    },
+    {
+      "basename": "字符编码和字符集",
+      "path": "基础知识/编程基础/字符编码和字符集.md"
     },
     {
       "basename": "Yaml 语法",
@@ -195,10 +199,6 @@
     {
       "basename": "DICOM消息服务简介",
       "path": "Medical/DICOM/DICOM消息服务简介.md"
-    },
-    {
-      "basename": "正则引擎",
-      "path": "Tool/正则/正则引擎.md"
     }
   ],
   "omittedPaths": [],
