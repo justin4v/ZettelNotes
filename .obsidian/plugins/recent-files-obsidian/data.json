@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Markdown 图形语法",
+      "path": "基础知识/markdown/Markdown 图形语法.md"
+    },
+    {
       "basename": "Markdown 公式手册",
       "path": "基础知识/markdown/Markdown 公式手册.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "hl7影像一致性",
       "path": "日常记录/hl7影像一致性.svg"
-    },
-    {
-      "basename": "Idea",
-      "path": "日常记录/Idea.md"
     }
   ],
   "omittedPaths": [],
