@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "如何设计统计数据表",
+      "path": "Database/Mysql/SQL实践/如何设计统计数据表.md"
+    },
+    {
       "basename": "字符编码和字符集",
       "path": "基础知识/编程基础/字符编码和字符集.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "工作流程理解",
       "path": "Medical/工作流程理解.md"
-    },
-    {
-      "basename": "DICOM消息服务简介",
-      "path": "Medical/DICOM/DICOM消息服务简介.md"
     }
   ],
   "omittedPaths": [],
