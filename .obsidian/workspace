@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "基础知识/大端 vs. 小端模式.md",
+            "file": "基础知识/编程基础/字符编码和字符集.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "编码",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -65,11 +65,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 258
+    "width": 258,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -85,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "基础知识/大端 vs. 小端模式.md",
+                "file": "基础知识/编程基础/字符编码和字符集.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "基础知识/大端 vs. 小端模式.md"
+                "file": "基础知识/编程基础/字符编码和字符集.md"
               }
             }
           },
@@ -135,6 +137,7 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "基础知识/大端 vs. 小端模式.md",
     "基础知识/编程基础/字符编码和字符集.md",
     "Tool/Yaml/Yaml 语法.md",
     "运维相关/K8s/k8s 命令手册.md",
@@ -143,7 +146,6 @@
     "运维相关/K8s/K8s暴露服务的三种方式.md",
     "运维相关/K8s/k8s 资源对象.md",
     "运维相关/Docker/Docker引擎.md",
-    "运维相关/Docker/Docker基础.md",
-    "运维相关/Docker/Docker镜像与容器.md"
+    "运维相关/Docker/Docker基础.md"
   ]
 }
