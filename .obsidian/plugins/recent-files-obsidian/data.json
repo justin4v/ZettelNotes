@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Mysql 优化 explain",
+      "path": "Database/Mysql/Mysql优化/Mysql 优化 explain.md"
+    },
+    {
       "basename": "如何设计统计数据表",
       "path": "Database/Mysql/SQL实践/如何设计统计数据表.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Java IO模型",
       "path": "Mindmap/Java IO模型.md"
-    },
-    {
-      "basename": "工作流程理解",
-      "path": "Medical/工作流程理解.md"
     }
   ],
   "omittedPaths": [],
