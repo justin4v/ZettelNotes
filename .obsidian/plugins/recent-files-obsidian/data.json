@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Kibana 查询语法",
+      "path": "Database/ElasticSearch/Kibana 查询语法.md"
+    },
+    {
       "basename": "Redis 简介",
       "path": "Cache/Redis/Redis 简介.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "SpringSecurity 简介",
       "path": "Framework/Springboot/SpringSecurity 简介.md"
-    },
-    {
-      "basename": "SpringSecurity主要流程",
-      "path": "Framework/Springboot/SpringSecurity主要流程.svg"
     }
   ],
   "omittedPaths": [],

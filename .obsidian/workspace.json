@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cache/Redis/Redis 简介.md",
+                "file": "Database/ElasticSearch/Kibana 查询语法.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "编码",
+                "query": "kibana",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -73,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cache/Redis/Redis 简介.md",
+                "file": "Database/ElasticSearch/Kibana 查询语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cache/Redis/Redis 简介.md"
+                "file": "Database/ElasticSearch/Kibana 查询语法.md"
               }
             }
           },
@@ -146,6 +147,7 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Cache/Redis/Redis 简介.md",
     "Cache/Redis/Stream 消息队列实践.md",
     "Language/Java/Java IO/BIO,NIO,AIO.md",
     "Language/Java/Java IO/Socket、ServerSocket.md",
@@ -154,7 +156,6 @@
     "Big Data/HDFS.md",
     "Architect/架构设计方法.md",
     "Database/Mysql/Mysql优化/Mysql 优化 explain.md",
-    "Database/Mysql/SQL实践/如何设计统计数据表.md",
-    "基础知识/编程基础/字符编码和字符集.md"
+    "Database/Mysql/SQL实践/如何设计统计数据表.md"
   ]
 }
