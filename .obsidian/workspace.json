@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database/Mysql/Mysql优化/Mysql 优化 explain.md",
+                "file": "Language/Java/Java IO/BIO,NIO,AIO.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/Mysql/Mysql优化/Mysql 优化 explain.md",
+                "file": "Language/Java/Java IO/BIO,NIO,AIO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/Mysql/Mysql优化/Mysql 优化 explain.md"
+                "file": "Language/Java/Java IO/BIO,NIO,AIO.md"
               }
             }
           },
@@ -146,15 +146,15 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Language/Java/Java IO/Socket、ServerSocket.md",
+    "Language/Java/Java IO/Netty NIO简介.md",
+    "Language/Java/Java IO/Java IO介绍.md",
+    "Language/Java/Java IO/BIO,NIO,AIO.md",
+    "Big Data/HDFS.md",
+    "Architect/架构设计方法.md",
     "Database/Mysql/Mysql优化/Mysql 优化 explain.md",
     "Database/Mysql/SQL实践/如何设计统计数据表.md",
     "基础知识/编程基础/字符编码和字符集.md",
-    "基础知识/大端 vs. 小端模式.md",
-    "Tool/Yaml/Yaml 语法.md",
-    "运维相关/K8s/k8s 命令手册.md",
-    "运维相关/K8s/K8s简介与架构设计.md",
-    "运维相关/K8s/k8s端口类型与ip类型.md",
-    "运维相关/K8s/K8s暴露服务的三种方式.md",
-    "运维相关/K8s/k8s 资源对象.md"
+    "基础知识/大端 vs. 小端模式.md"
   ]
 }

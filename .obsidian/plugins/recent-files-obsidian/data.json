@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "BIO,NIO,AIO",
+      "path": "Language/Java/Java IO/BIO,NIO,AIO.md"
+    },
+    {
+      "basename": "Socket、ServerSocket",
+      "path": "Language/Java/Java IO/Socket、ServerSocket.md"
+    },
+    {
+      "basename": "Netty NIO简介",
+      "path": "Language/Java/Java IO/Netty NIO简介.md"
+    },
+    {
+      "basename": "Java IO介绍",
+      "path": "Language/Java/Java IO/Java IO介绍.md"
+    },
+    {
+      "basename": "HDFS",
+      "path": "Big Data/HDFS.md"
+    },
+    {
+      "basename": "架构设计方法",
+      "path": "Architect/架构设计方法.md"
+    },
+    {
       "basename": "Mysql 优化 explain",
       "path": "Database/Mysql/Mysql优化/Mysql 优化 explain.md"
     },
@@ -121,20 +145,8 @@
       "path": "Book Reading/设计模式GoF/设计模式.md"
     },
     {
-      "basename": "Netty NIO简介",
-      "path": "Language/Java/Java IO/Netty NIO简介.md"
-    },
-    {
       "basename": "Java NIO组件",
       "path": "Language/Java/Java IO/Java NIO组件.md"
-    },
-    {
-      "basename": "Socket、ServerSocket",
-      "path": "Language/Java/Java IO/Socket、ServerSocket.md"
-    },
-    {
-      "basename": "BIO,NIO,AIO",
-      "path": "Language/Java/Java IO/BIO,NIO,AIO.md"
     },
     {
       "basename": "socket和websocket",
@@ -187,18 +199,6 @@
     {
       "basename": "SpEL简介",
       "path": "Framework/Springboot/SpEL/SpEL简介.md"
-    },
-    {
-      "basename": "分代收集理论",
-      "path": "Language/Java/JVM/垃圾收集/分代收集理论.md"
-    },
-    {
-      "basename": "并发设计模式 Future、Callback、Promise",
-      "path": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md"
-    },
-    {
-      "basename": "Java IO模型",
-      "path": "Mindmap/Java IO模型.md"
     }
   ],
   "omittedPaths": [],
