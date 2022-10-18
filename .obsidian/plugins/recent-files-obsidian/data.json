@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Redis 简介",
+      "path": "Cache/Redis/Redis 简介.md"
+    },
+    {
+      "basename": "Stream 消息队列实践",
+      "path": "Cache/Redis/Stream 消息队列实践.md"
+    },
+    {
       "basename": "BIO,NIO,AIO",
       "path": "Language/Java/Java IO/BIO,NIO,AIO.md"
     },
@@ -165,10 +173,6 @@
       "path": "Message Queue/Redis Stream 实现消息队列.md"
     },
     {
-      "basename": "Stream 消息队列实践",
-      "path": "Cache/Redis/Stream 消息队列实践.md"
-    },
-    {
       "basename": "Vim键盘图",
       "path": "基础知识/Vim/Vim键盘图.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "SpringSecurity主要流程",
       "path": "Framework/Springboot/SpringSecurity主要流程.svg"
-    },
-    {
-      "basename": "SpEL简介",
-      "path": "Framework/Springboot/SpEL/SpEL简介.md"
     }
   ],
   "omittedPaths": [],
