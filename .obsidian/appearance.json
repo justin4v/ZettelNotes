@@ -3,5 +3,6 @@
   "theme": "moonstone",
   "cssTheme": "Blue Topaz",
   "translucency": false,
-  "baseFontSizeAction": false
+  "baseFontSizeAction": false,
+  "accentColor": ""
 }
