@@ -73,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -145,7 +144,7 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "1c50ff776bae7668",
+  "active": "b83fe008a809d9e9",
   "lastOpenFiles": [
     "Cache/Redis/Redis 简介.md",
     "Cache/Redis/Stream 消息队列实践.md",
