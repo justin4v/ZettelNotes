@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database/ElasticSearch/Kibana 查询语法.md",
+                "file": "日常记录/感悟记录/知识.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "76c6aa2689a71a8c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "日常记录/感悟记录/注意.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Database/ElasticSearch/Kibana 查询语法.md",
+                "file": "日常记录/感悟记录/注意.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Database/ElasticSearch/Kibana 查询语法.md"
+                "file": "日常记录/感悟记录/注意.md"
               }
             }
           },
@@ -144,17 +157,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "b83fe008a809d9e9",
+  "active": "76c6aa2689a71a8c",
   "lastOpenFiles": [
+    "日常记录/感悟记录/知识.md",
+    "日常记录/TODOs.md",
+    "日常记录/感悟记录/日常感悟列表.md",
+    "Database/ElasticSearch/Kibana 查询语法.md",
     "Cache/Redis/Redis 简介.md",
     "Cache/Redis/Stream 消息队列实践.md",
     "Language/Java/Java IO/BIO,NIO,AIO.md",
     "Language/Java/Java IO/Socket、ServerSocket.md",
     "Language/Java/Java IO/Netty NIO简介.md",
-    "Language/Java/Java IO/Java IO介绍.md",
-    "Big Data/HDFS.md",
-    "Architect/架构设计方法.md",
-    "Database/Mysql/Mysql优化/Mysql 优化 explain.md",
-    "Database/Mysql/SQL实践/如何设计统计数据表.md"
+    "Language/Java/Java IO/Java IO介绍.md"
   ]
 }

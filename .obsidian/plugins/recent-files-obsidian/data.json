@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "注意",
+      "path": "日常记录/感悟记录/注意.md"
+    },
+    {
+      "basename": "知识",
+      "path": "日常记录/感悟记录/知识.md"
+    },
+    {
+      "basename": "TODOs",
+      "path": "日常记录/TODOs.md"
+    },
+    {
+      "basename": "日常感悟列表",
+      "path": "日常记录/感悟记录/日常感悟列表.md"
+    },
+    {
       "basename": "Kibana 查询语法",
       "path": "Database/ElasticSearch/Kibana 查询语法.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "Springboot 启动扩展点",
       "path": "Framework/Springboot/Springboot 启动扩展点.md"
-    },
-    {
-      "basename": "消息队列设计精要",
-      "path": "Cache/消息队列设计精要.md"
-    },
-    {
-      "basename": "消息模型",
-      "path": "Message Queue/消息模型.md"
-    },
-    {
-      "basename": "Service中spec.type：nodeport和clusterIp",
-      "path": "运维相关/K8s/Service中spec.type：nodeport和clusterIp.md"
-    },
-    {
-      "basename": "SpringSecurity 简介",
-      "path": "Framework/Springboot/SpringSecurity 简介.md"
     }
   ],
   "omittedPaths": [],
