@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "日常记录/感悟记录/知识.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "76c6aa2689a71a8c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "日常记录/感悟记录/注意.md",
+                "file": "Database/Mysql/Mysql 虚列与JSON.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "kibana",
+                "query": "generate",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -86,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -106,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "日常记录/感悟记录/注意.md",
+                "file": "Database/Mysql/Mysql 虚列与JSON.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "日常记录/感悟记录/注意.md"
+                "file": "Database/Mysql/Mysql 虚列与JSON.md"
               }
             }
           },
@@ -157,9 +145,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "76c6aa2689a71a8c",
+  "active": "1c50ff776bae7668",
   "lastOpenFiles": [
     "日常记录/感悟记录/知识.md",
+    "日常记录/感悟记录/注意.md",
     "日常记录/TODOs.md",
     "日常记录/感悟记录/日常感悟列表.md",
     "Database/ElasticSearch/Kibana 查询语法.md",
@@ -167,7 +156,6 @@
     "Cache/Redis/Stream 消息队列实践.md",
     "Language/Java/Java IO/BIO,NIO,AIO.md",
     "Language/Java/Java IO/Socket、ServerSocket.md",
-    "Language/Java/Java IO/Netty NIO简介.md",
-    "Language/Java/Java IO/Java IO介绍.md"
+    "Language/Java/Java IO/Netty NIO简介.md"
   ]
 }
