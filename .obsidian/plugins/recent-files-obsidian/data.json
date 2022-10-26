@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "日志链路追踪",
+      "path": "Tool/logger/日志链路追踪.md"
+    },
+    {
       "basename": "Bash Notes",
       "path": "Script/shell/Bash Notes.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Redis Stream 实现消息队列",
       "path": "Message Queue/Redis Stream 实现消息队列.md"
-    },
-    {
-      "basename": "Vim键盘图",
-      "path": "基础知识/Vim/Vim键盘图.md"
     }
   ],
   "omittedPaths": [],
