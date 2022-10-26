@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Mysql 查询优化",
+      "path": "Database/Mysql/Mysql优化/Mysql 查询优化.md"
+    },
+    {
       "basename": "日志链路追踪",
       "path": "Tool/logger/日志链路追踪.md"
     },
@@ -131,10 +135,6 @@
     {
       "basename": "正则表达式",
       "path": "Tool/正则/正则表达式.md"
-    },
-    {
-      "basename": "Mysql 查询优化",
-      "path": "Database/Mysql/Mysql优化/Mysql 查询优化.md"
     },
     {
       "basename": "Mysql 转义符",
