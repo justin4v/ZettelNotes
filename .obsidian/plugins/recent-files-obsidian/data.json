@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "DDD思想和入门实践",
+      "path": "Design/DDD/DDD思想和入门实践.md"
+    },
+    {
       "basename": "Mysql 查询优化",
       "path": "Database/Mysql/Mysql优化/Mysql 查询优化.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "IO模型",
       "path": "OS/基础概念/IO模型.md"
-    },
-    {
-      "basename": "Redis Stream 实现消息队列",
-      "path": "Message Queue/Redis Stream 实现消息队列.md"
     }
   ],
   "omittedPaths": [],
