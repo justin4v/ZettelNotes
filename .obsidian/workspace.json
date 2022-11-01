@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Language/Java/JVM/内存管理/JVM内存结构.md",
+                "file": "Language/Java/工具/Thread Dump.md",
                 "mode": "preview",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "内存模型",
+                "query": "JVM内存",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/JVM/内存管理/JVM内存结构.md",
+                "file": "Language/Java/工具/Thread Dump.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/JVM/内存管理/JVM内存结构.md"
+                "file": "Language/Java/工具/Thread Dump.md"
               }
             }
           },
@@ -157,6 +157,7 @@
   },
   "active": "e667b38372f52db3",
   "lastOpenFiles": [
+    "Language/Java/JVM/内存管理/JVM内存结构.md",
     "Language/Java/JVM/Java 命令参数.md",
     "基础知识/编程基础/JSON path.md",
     "Design/DDD/DDD思想和入门实践.md",
@@ -165,7 +166,6 @@
     "Script/shell/Bash Notes.md",
     "Database/Mysql/Mysql 虚列与JSON.md",
     "日常记录/感悟记录/知识.md",
-    "日常记录/感悟记录/注意.md",
-    "日常记录/TODOs.md"
+    "日常记录/感悟记录/注意.md"
   ]
 }
