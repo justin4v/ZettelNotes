@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "多线程查询加速",
+      "path": "Database/多线程查询加速.md"
+    },
+    {
       "basename": "Thread Dump",
       "path": "Language/Java/工具/Thread Dump.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "设计模式如何解决设计问题",
       "path": "Book Reading/设计模式GoF/设计模式如何解决设计问题.md"
-    },
-    {
-      "basename": "编程核心概念",
-      "path": "基础知识/编程基础/编程核心概念.md"
     }
   ],
   "omittedPaths": [],
