@@ -5,6 +5,14 @@
       "path": "Database/多线程查询加速.md"
     },
     {
+      "basename": "POJO中使用包装类还是基础类",
+      "path": "Language/Java/基础/POJO中使用包装类还是基础类.md"
+    },
+    {
+      "basename": "逻辑&物理删除",
+      "path": "Database/逻辑&物理删除.md"
+    },
+    {
       "basename": "Thread Dump",
       "path": "Language/Java/工具/Thread Dump.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "Java 命令参数",
       "path": "Language/Java/JVM/Java 命令参数.md"
-    },
-    {
-      "basename": "POJO中使用包装类还是基础类",
-      "path": "Language/Java/基础/POJO中使用包装类还是基础类.md"
     },
     {
       "basename": "JSON path",
@@ -195,10 +199,6 @@
     {
       "basename": "动态 SQL",
       "path": "Database/Mybatis-plus/动态 SQL.md"
-    },
-    {
-      "basename": "设计模式如何解决设计问题",
-      "path": "Book Reading/设计模式GoF/设计模式如何解决设计问题.md"
     }
   ],
   "omittedPaths": [],
