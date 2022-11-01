@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e667b38372f52db3",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.3"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -142,10 +153,7 @@
     "width": 238,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "1c50ff776bae7668",
+  "active": "e667b38372f52db3",
   "lastOpenFiles": [
     "基础知识/编程基础/JSON path.md",
     "Design/DDD/DDD思想和入门实践.md",
