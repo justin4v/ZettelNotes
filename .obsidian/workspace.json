@@ -23,9 +23,11 @@
             "id": "e667b38372f52db3",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.0.3"
+                "file": "Language/Java/JVM/内存管理/JVM内存结构.md",
+                "mode": "preview",
+                "source": false
               }
             }
           }
@@ -59,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "包装",
+                "query": "内存模型",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -105,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Language/Java/基础/POJO中使用包装类还是基础类.md",
+                "file": "Language/Java/JVM/内存管理/JVM内存结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Language/Java/基础/POJO中使用包装类还是基础类.md"
+                "file": "Language/Java/JVM/内存管理/JVM内存结构.md"
               }
             }
           },
@@ -155,6 +157,7 @@
   },
   "active": "e667b38372f52db3",
   "lastOpenFiles": [
+    "Language/Java/JVM/Java 命令参数.md",
     "基础知识/编程基础/JSON path.md",
     "Design/DDD/DDD思想和入门实践.md",
     "Database/Mysql/Mysql优化/Mysql 查询优化.md",
@@ -163,7 +166,6 @@
     "Database/Mysql/Mysql 虚列与JSON.md",
     "日常记录/感悟记录/知识.md",
     "日常记录/感悟记录/注意.md",
-    "日常记录/TODOs.md",
-    "日常记录/感悟记录/日常感悟列表.md"
+    "日常记录/TODOs.md"
   ]
 }
