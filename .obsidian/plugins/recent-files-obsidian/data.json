@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "@Transactional",
+      "path": "Framework/Springboot/@Transactional.md"
+    },
+    {
       "basename": "并发设计模式 Future、Callback、Promise",
       "path": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "JVM变量存储",
       "path": "Language/Java/JVM/类加载机制/JVM变量存储.md"
-    },
-    {
-      "basename": "计算机科学问题的解决方法",
-      "path": "Design/计算机科学问题的解决方法.md"
     }
   ],
   "omittedPaths": [],

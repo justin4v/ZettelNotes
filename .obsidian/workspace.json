@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
+                "file": "Framework/Springboot/@Transactional.md",
                 "mode": "source",
                 "source": false
               }
@@ -72,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "callable",
+                "query": "事务",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
+                "file": "Framework/Springboot/@Transactional.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md"
+                "file": "Framework/Springboot/@Transactional.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "OS/并发编程/Java 多线程/并发设计模式 Future、Callback、Promise.md",
     "Database/多线程查询加速.md",
     "Language/Java/基础/POJO中使用包装类还是基础类.md",
     "Database/逻辑&物理删除.md",
@@ -176,7 +177,6 @@
     "Language/Java/JVM/Java 命令参数.md",
     "基础知识/编程基础/JSON path.md",
     "Design/DDD/DDD思想和入门实践.md",
-    "Database/Mysql/Mysql优化/Mysql 查询优化.md",
-    "Tool/logger/日志链路追踪.md"
+    "Database/Mysql/Mysql优化/Mysql 查询优化.md"
   ]
 }
