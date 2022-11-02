@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "BATCH 脚本",
+      "path": "Script/batch/BATCH 脚本.md"
+    },
+    {
+      "basename": "Bash Notes",
+      "path": "Script/shell/Bash Notes.md"
+    },
+    {
       "basename": "@Transactional",
       "path": "Framework/Springboot/@Transactional.md"
     },
@@ -47,10 +55,6 @@
     {
       "basename": "日志链路追踪",
       "path": "Tool/logger/日志链路追踪.md"
-    },
-    {
-      "basename": "Bash Notes",
-      "path": "Script/shell/Bash Notes.md"
     },
     {
       "basename": "Mysql 虚列与JSON",
@@ -195,10 +199,6 @@
     {
       "basename": "分布式中可用性与一致性",
       "path": "Distribute System/分布式中可用性与一致性.md"
-    },
-    {
-      "basename": "JVM变量存储",
-      "path": "Language/Java/JVM/类加载机制/JVM变量存储.md"
     }
   ],
   "omittedPaths": [],
