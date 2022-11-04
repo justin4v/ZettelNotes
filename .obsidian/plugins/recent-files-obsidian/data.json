@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "DICOM消息服务简介",
+      "path": "Medical/DICOM/DICOM消息服务简介.md"
+    },
+    {
       "basename": "BATCH 脚本",
       "path": "Script/batch/BATCH 脚本.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "两阶段锁",
       "path": "Database/Mysql/事务与锁/两阶段锁.md"
-    },
-    {
-      "basename": "分布式中可用性与一致性",
-      "path": "Distribute System/分布式中可用性与一致性.md"
     }
   ],
   "omittedPaths": [],
