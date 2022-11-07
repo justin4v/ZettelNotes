@@ -1,3 +1,4 @@
+#Mybatis #Principle
 # Mybatis 原理
 
 ## 示例源代码
@@ -59,8 +60,6 @@ Person person = personDao.queryPersonById(1l);
 
 调用 openSessionFromDataSource -> configuration.newExecutor 获得executor -> new MtSqlSession(configuration, executor) 得到sqlSession 返回。
 
-
-
 newExecutor 过程：
 
 ```
@@ -90,8 +89,6 @@ public Object pluginAll(Object target){
 }
 ```
 
-
-
 ExecutorLogPlugin 中 plugin
 
 ```
@@ -111,11 +108,7 @@ public static Object wrap(Object target,MtInterceptor interceptor){
 
 该方法生成一个 **由 MtPlugin 作为handler（调用 代理接口方法时 实际调用 MtPlugin 中 invoke方法），实现 MtExecutor 接口的 代理对象 [ new MtPlugin(target,interceptor) ]**  
 
-**new MtPlugin(target,interceptor)** 创建 MtPlugin 对象，**interceptor参数为当前对象 ExecutorLogPlugin** **target为目标 （executor）**
-
-返回
-
-
+**new MtPlugin(target,interceptor)** 创建 MtPlugin 对象，**interceptor参数为当前对象 ExecutorLogPlugin** **target为目标 （executor）** 返回
 
 ### 第5步 sqlSession.getMapper(PersonDao.class)
 
@@ -161,14 +154,7 @@ public <T> T getMapper(Class<T> clazz){
 
    最后执行 SQL语句
 
-
-
-
-
 ## 其他补充
-
-
-
 Mapper执行的过程是通过Executor、StatementHandler、ParameterHandler和ResultHandler来完成数据库操作和结果返回的，理解他们是编写插件的关键：
 
 - **Executor**：执行器，由它统一调度其他三个对象来执行对应的SQL；
