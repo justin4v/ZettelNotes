@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Sql 预编译",
+      "path": "Database/Sql 预编译.md"
+    },
+    {
       "basename": "Mybatis 使用",
       "path": "Database/Mybatis 使用.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Mysql 转义符",
       "path": "Database/Mysql/Mysql 转义符.md"
-    },
-    {
-      "basename": "问题收集",
-      "path": "基础知识/网络编程/问题收集.md"
     }
   ],
   "omittedPaths": [],
