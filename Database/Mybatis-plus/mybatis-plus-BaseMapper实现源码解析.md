@@ -1,3 +1,4 @@
+
 # Mybatis-plus 
 ## BaseMapper 实现源码
 
@@ -27,13 +28,11 @@ SqlMethod(String method, String desc, String sql)
 
 1. AbstractMethod：抽象的注入方法类，用于初始化时想向mapper自动注入方法。
 2. Model\<T extends Model\<?\>\> ：ActiveRecord 模式，AR模式下实体即可调用相应的CRUD操作方法。AR使用的**前提**是：必须存在对应的原始mapper并继承**baseMapper**并且可以使用。因为实际上还是调用BaseMapper的方法。
-3. ServiceImpl<M extends BaseMapper<T>, T> implements IService<T> 存在于 mybatis-plus-extension jar中提供的**通用 Service CRUD 封装接口 IService的实现**
+3. ServiceImpl\<M extends BaseMapper\<T\>, T\> implements IService\<T\>  存在于 mybatis-plus-extension jar中提供的 **通用 Service CRUD 封装接口 IService的实现**
 
 以上调用的目的是 **获取CRUD方法的命名空间（mapper的全限定名，签名）** 以便于在特定mapper上执行方法。
 
-
-
-### 获取SQL的调用
+###  获取SQL的调用
 
 获取SQL的调用 ```getsql``` 主要发生在**（注入）生成 MappedStatement** 时，mybatis-plus-core 的 injector.method中。
 
@@ -68,8 +67,6 @@ public class Delete extends AbstractMethod {
 **Delete.injectMappedStatement --> AbstractMethod.inject --> AbstractSqlInjector.inspectInject --> MybatisMapperAnnotationBuilder.parse --> MapperRegistry.addMapper --> MybatisConfiguration.addMapper**
 
 MybatisConfiguration 的初始化 是从 **MybatisXMLConfigBuilder** 构造 （这里使用自己的 **MybatisConfiguration 而不是 mybatis 包中的 Configuration**）
-
-
 
 ## 总结
 
