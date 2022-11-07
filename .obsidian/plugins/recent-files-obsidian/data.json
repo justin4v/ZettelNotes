@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Sql 预编译",
-      "path": "Database/Sql 预编译.md"
+      "basename": "mybatis-plus-BaseMapper实现源码解析",
+      "path": "Database/Mybatis-plus/mybatis-plus-BaseMapper实现源码解析.md"
     },
     {
       "basename": "Mybatis 使用",
       "path": "Database/Mybatis 使用.md"
+    },
+    {
+      "basename": "Sql 预编译",
+      "path": "Database/Sql 预编译.md"
     },
     {
       "basename": "Mybatis XML 语句映射",
@@ -195,10 +199,6 @@
     {
       "basename": "正则表达式",
       "path": "Tool/正则/正则表达式.md"
-    },
-    {
-      "basename": "Mysql 转义符",
-      "path": "Database/Mysql/Mysql 转义符.md"
     }
   ],
   "omittedPaths": [],
