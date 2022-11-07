@@ -2,7 +2,7 @@
 
 ## 示例源代码
 
-```
+```java
 MtConfiguration configuration = new MtConfiguration("mybatis-config.properties");
 MtSqlSessionFactoryBuilder sqlSessionFactoryBuilder = new MtSqlSessionFactoryBuilder(configuration);
 MtSqlSessionFactory sqlSessionFactory = sqlSessionFactoryBuilder.build();

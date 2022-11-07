@@ -66,7 +66,8 @@ public class Delete extends AbstractMethod {
 graph TD
 A[MybatisConfiguration.addMapper]-->B[MapperRegistry.addMapper]
 B-->C[MybatisMapperAnnotationBuilder.parse]
-C-->D[AbstractMethod.inject]
+C-->F[AbstractSqlInjector.inspectInject]
+F-->D[AbstractMethod.inject]
 D-->E[Delete.injectMappedStatement]
 ```
 
