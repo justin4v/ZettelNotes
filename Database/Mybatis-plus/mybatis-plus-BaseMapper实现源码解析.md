@@ -62,6 +62,14 @@ public class Delete extends AbstractMethod {
 ```
 
 调用链如下：
+```mermaid
+graph LR
+A[Delete.injectMappedStatement]-->B[AbstractMethod.inject]
+B-->C[MybatisMapperAnnotationBuilder.parse]
+C-->D[MapperRegistry.addMapper]
+D-->E[]
+```
+
 
 **Delete.injectMappedStatement --> AbstractMethod.inject --> AbstractSqlInjector.inspectInject --> MybatisMapperAnnotationBuilder.parse --> MapperRegistry.addMapper --> MybatisConfiguration.addMapper**
 
