@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Mybatis 使用",
+      "path": "Database/Mybatis 使用.md"
+    },
+    {
+      "basename": "Mybatis XML 语句映射",
+      "path": "Database/Mybatis-plus/Mybatis XML 语句映射.md"
+    },
+    {
       "basename": "DICOM消息服务简介",
       "path": "Medical/DICOM/DICOM消息服务简介.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "问题收集",
       "path": "基础知识/网络编程/问题收集.md"
-    },
-    {
-      "basename": "Stream流式编程简介",
-      "path": "Language/Java/Stream/Stream流式编程简介.md"
-    },
-    {
-      "basename": "两阶段锁",
-      "path": "Database/Mysql/事务与锁/两阶段锁.md"
     }
   ],
   "omittedPaths": [],
