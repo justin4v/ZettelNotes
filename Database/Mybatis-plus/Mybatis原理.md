@@ -40,19 +40,13 @@ Person person = personDao.queryPersonById(1l);
 
 其中 解析加载plugin 是 interceptorChain.addInterceptor(class) 。 class从配置文件中读取，通过反射获得对象。本代码示例中为 ExecutorLogPlugin（ implements MtInterceptor）
 
-
-
 ### 第2步 MtSqlSessionFactoryBuilder
 
 通过configuration 获得 SqlSessionFactoryBuilder
 
-
-
 ### 第3步 sqlSessionFactoryBuilder.build
 
 建造者模式 构建 MtSqlSessionFactory
-
-
 
 ### 第4步 sqlSessionFactory.openSession
 
@@ -183,9 +177,6 @@ public interface Interceptor {
 - intercept：它将直接覆盖你所拦截的对象。有个参数Invocation对象，通过该对象，可以反射调度原来对象的方法；
 - plugin：target是被拦截的对象，它的作用是给被拦截对象生成一个代理对象；
 - setProperties：允许在plugin元素中配置所需参数，该方法在插件初始化的时候会被调用一次；
-
-
-
 
 Plugin提供了静态方法wrap方法，它会根据插件的签名配置，使用JDK动态代理的方法，生成一个代理类，当四大对象执行方法时，会调用Plugin的invoke方法，如果方法包含在声明的签名里，就会调用自定义插件的intercept方法，传入Invocation对象。
 

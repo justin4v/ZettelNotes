@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Thread Dump",
+      "path": "Language/Java/工具/Thread Dump.md"
+    },
+    {
       "basename": "Mybatis原理",
       "path": "Database/Mybatis-plus/Mybatis原理.md"
     },
@@ -51,10 +55,6 @@
     {
       "basename": "逻辑&物理删除",
       "path": "Database/逻辑&物理删除.md"
-    },
-    {
-      "basename": "Thread Dump",
-      "path": "Language/Java/工具/Thread Dump.md"
     },
     {
       "basename": "JVM内存结构",
