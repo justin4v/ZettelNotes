@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Interceptor",
+      "path": "Database/Mybatis-plus/Interceptor.md"
+    },
+    {
+      "basename": "乐观锁以及问题",
+      "path": "Database/Mybatis-plus/乐观锁以及问题.md"
+    },
+    {
+      "basename": "动态 SQL",
+      "path": "Database/Mybatis-plus/动态 SQL.md"
+    },
+    {
       "basename": "Thread Dump",
       "path": "Language/Java/工具/Thread Dump.md"
+    },
+    {
+      "basename": "逻辑&物理删除",
+      "path": "Database/逻辑&物理删除.md"
     },
     {
       "basename": "Mybatis原理",
@@ -51,10 +67,6 @@
     {
       "basename": "POJO中使用包装类还是基础类",
       "path": "Language/Java/基础/POJO中使用包装类还是基础类.md"
-    },
-    {
-      "basename": "逻辑&物理删除",
-      "path": "Database/逻辑&物理删除.md"
     },
     {
       "basename": "JVM内存结构",
@@ -187,18 +199,6 @@
     {
       "basename": "Docker镜像与容器",
       "path": "运维相关/Docker/Docker镜像与容器.md"
-    },
-    {
-      "basename": "docker 常用命令",
-      "path": "运维相关/docker 常用命令.md"
-    },
-    {
-      "basename": "Markdown 图形语法",
-      "path": "基础知识/markdown/Markdown 图形语法.md"
-    },
-    {
-      "basename": "Markdown 公式手册",
-      "path": "基础知识/markdown/Markdown 公式手册.md"
     }
   ],
   "omittedPaths": [],
