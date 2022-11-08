@@ -5,6 +5,14 @@
       "path": "Tool/JDK工具/线上问题排查示例.md"
     },
     {
+      "basename": "Java Memory Model简介",
+      "path": "Language/Java/JMM/Java Memory Model简介.md"
+    },
+    {
+      "basename": "Thread Dump",
+      "path": "Language/Java/工具/Thread Dump.md"
+    },
+    {
       "basename": "Interceptor",
       "path": "Database/Mybatis-plus/Interceptor.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "动态 SQL",
       "path": "Database/Mybatis-plus/动态 SQL.md"
-    },
-    {
-      "basename": "Thread Dump",
-      "path": "Language/Java/工具/Thread Dump.md"
     },
     {
       "basename": "逻辑&物理删除",
@@ -195,10 +199,6 @@
     {
       "basename": "Docker引擎",
       "path": "运维相关/Docker/Docker引擎.md"
-    },
-    {
-      "basename": "Docker基础",
-      "path": "运维相关/Docker/Docker基础.md"
     }
   ],
   "omittedPaths": [],

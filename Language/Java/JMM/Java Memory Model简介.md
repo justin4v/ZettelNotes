@@ -1,3 +1,4 @@
+#JVM #JMM 
 # 定义
 ## 内存模型
 - 给定一个程序和该程序的执行轨迹，**内存模型描述了该执行轨迹是否是该程序的一次合法执行**。A memory model describes, given a program and an execution trace of that program, whether the execution trace is a legal execution of the program. 

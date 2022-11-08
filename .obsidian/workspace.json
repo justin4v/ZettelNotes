@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Tool/JDK工具/线上问题排查示例.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "jvm",
+                "query": "tag:#JVM",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -169,15 +169,15 @@
   },
   "active": "1c50ff776bae7668",
   "lastOpenFiles": [
+    "Language/Java/JMM/Java Memory Model简介.md",
+    "Tool/JDK工具/线上问题排查示例.md",
+    "Language/Java/工具/Thread Dump.md",
     "Database/Mybatis-plus/Interceptor.md",
     "Database/Mybatis-plus/乐观锁以及问题.md",
     "Database/Mybatis-plus/动态 SQL.md",
-    "Language/Java/工具/Thread Dump.md",
     "Database/逻辑&物理删除.md",
     "Database/Mybatis-plus/Mybatis原理.md",
     "Database/Mybatis-plus/Mybatis XML 语句映射.md",
-    "Database/Mybatis-plus/mybatis-plus-BaseMapper实现源码解析.md",
-    "Database/Mybatis 使用.md",
-    "Database/Sql 预编译.md"
+    "Database/Mybatis-plus/mybatis-plus-BaseMapper实现源码解析.md"
   ]
 }
