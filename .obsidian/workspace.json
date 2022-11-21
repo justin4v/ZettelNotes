@@ -11,12 +11,8 @@
             "id": "1c50ff776bae7668",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tool/JDK工具/线上问题排查示例.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -103,7 +99,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "556fe6a48d657f05",
@@ -119,7 +116,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tool/JDK工具/线上问题排查示例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,9 +142,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Tool/JDK工具/线上问题排查示例.md"
-              }
+              "state": {}
             }
           },
           {
@@ -167,10 +161,10 @@
     "width": 238,
     "collapsed": true
   },
-  "active": "1c50ff776bae7668",
+  "active": "f9c60a5916b5869d",
   "lastOpenFiles": [
-    "Language/Java/JMM/Java Memory Model简介.md",
     "Tool/JDK工具/线上问题排查示例.md",
+    "Language/Java/JMM/Java Memory Model简介.md",
     "Language/Java/工具/Thread Dump.md",
     "Database/Mybatis-plus/Interceptor.md",
     "Database/Mybatis-plus/乐观锁以及问题.md",
